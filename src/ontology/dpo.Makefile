@@ -4,11 +4,12 @@
 ## changes here rather than in the main Makefile
 FBDVPURL=http://purl.obolibrary.org/obo/FBdv_
 
-imports/fbdv_filter_seed.txt: $(SRC) seed.txt #$(ONTOLOGYTERMS) #prepare_patterns
-	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/object-properties.sparql $@.tmp &&\
-	grep -Eo '($(FBDVPURL))[^[:space:]"]+' seed.txt | sort | uniq > $@.t.tmp &&\
-	cat $@.tmp $@.t.tmp | sort | uniq > $@ &&\
-	rm $@.tmp $@.t.tmp
+imports/fbdv_filter_seed.txt: $(SRC) #$(ONTOLOGYTERMS) #prepare_patterns
+	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/object-properties.sparql $@_prop.tmp &&\
+	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/terms.sparql $@_fbdv.tmp &&\
+	grep -Eo '($(FBDVPURL))[^[:space:]"]+' $@_fbdv.tmp | sort | uniq > $@_fbdv_red.tmp &&\
+	cat $@_fbdv_red.tmp $@_prop.tmp | sort | uniq > $@ &&\
+	rm $@_prop.tmp $@_fbdv.tmp $@_fbdv_red.tmp 
 	
 
 imports/fbdv_import.owl: mirror/fbdv.owl imports/fbdv_terms_combined.txt imports/fbdv_filter_seed.txt
