@@ -1,0 +1,45 @@
+pattern_name: lethal_during
+pattern_iri: http://purl.obolibrary.org/obo/fbcv/patterns/lethal_during.yaml
+
+classes:
+  organism: "FBbt:0000000:"
+  population of Drosophila: "FBcv:0006003"
+  
+relations:
+  inheres in: "RO:0002351"
+  has age: "FBcv:0008000"  # TO be added to RO?
+  substage of: "FBdv:00018001"
+
+dataProperties:
+  has_increased_mortality_rate: "RO:0002029"
+
+vars:
+  stage: "'FBdv:00005259'"
+
+name:
+  text: "lethal - all die before end of %s"
+  vars:
+   - stage
+
+def:
+  text: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the %
+  vars:
+    - stage
+
+equivalentTo:
+  text: >
+    inheres_in some 
+      ('population of Drosophila'
+        and (
+            has_member some 
+              (organism and (has_age some ('substage of' some %s )
+            ))
+        and (
+          has_member only
+             (organism and ('has age' some ('substage of' some %s )
+           )))
+           )
+     and (has_increased_mortality_rate some xsd:short[>= 98])
+  vars:
+    - stage
+    - stage

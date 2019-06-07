@@ -24,7 +24,7 @@ The editors version is [dpo-edit.owl](dpo-edit.owl)
 
 [../../dpo.owl](../../dpo.owl) is the release version
 
-To edit, open the file in Protege. First make sure you have the repository cloned, see [the GitHub project](https://github.com/FlyBase/drosophila-phenotype-ontology) for details.
+To edit, open the file in Protege. First make sure you have the repository cloned, see [the GitHub project](https://github.com/FlyBase/flybase-controlled-vocabulary) for details.
 
 You should discuss the git workflow you should use with the maintainer
 of this repo, who should document it here. If you are the maintainer,
@@ -149,8 +149,8 @@ Finally type:
 
 IMMEDIATELY AFTERWARDS (do *not* make further modifications) go here:
 
- * https://github.com/FlyBase/drosophila-phenotype-ontology/releases
- * https://github.com/FlyBase/drosophila-phenotype-ontology/releases/new
+ * https://github.com/FlyBase/flybase-controlled-vocabulary/releases
+ * https://github.com/FlyBase/flybase-controlled-vocabulary/releases/new
 
 __IMPORTANT__: The value of the "Tag version" field MUST be
 
@@ -182,12 +182,12 @@ For questions on this contact Chris Mungall or email obo-admin AT obofoundry.org
 
 # Travis Continuous Integration System
 
-Check the build status here: [![Build Status](https://travis-ci.org/FlyBase/drosophila-phenotype-ontology.svg?branch=master)](https://travis-ci.org/FlyBase/drosophila-phenotype-ontology)
+Check the build status here: [![Build Status](https://travis-ci.org/FlyBase/flybase-controlled-vocabulary.svg?branch=master)](https://travis-ci.org/FlyBase/flybase-controlled-vocabulary)
 
 Note: if you have only just created this project you will need to authorize travis for this repo.
 
  1. Go to [https://travis-ci.org/profile/FlyBase](https://travis-ci.org/profile/FlyBase)
  2. click the "Sync account" button
- 3. Click the tick symbol next to drosophila-phenotype-ontology
+ 3. Click the tick symbol next to flybase-controlled-vocabulary
 
 Travis builds should now be activated

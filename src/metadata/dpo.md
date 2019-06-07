@@ -1,34 +1,34 @@
 ---
 layout: ontology_detail
 id: dpo
-title: Drosophila Phenotype Ontology
+title: FlyBase Controlled Vocabulary
 jobs:
-  - id: https://travis-ci.org/FlyBase/drosophila-phenotype-ontology
+  - id: https://travis-ci.org/FlyBase/flybase-controlled-vocabulary
     type: travis-ci
 build:
-  checkout: git clone https://github.com/FlyBase/drosophila-phenotype-ontology.git
+  checkout: git clone https://github.com/FlyBase/flybase-controlled-vocabulary.git
   system: git
   path: "."
 contact:
   email: 
   label: 
   github: 
-description: Drosophila Phenotype Ontology is an ontology...
+description: FlyBase Controlled Vocabulary is an ontology...
 domain: stuff
-homepage: https://github.com/FlyBase/drosophila-phenotype-ontology
+homepage: https://github.com/FlyBase/flybase-controlled-vocabulary
 products:
   - id: dpo.owl
-    name: "Drosophila Phenotype Ontology main release in OWL format"
+    name: "FlyBase Controlled Vocabulary main release in OWL format"
   - id: dpo.obo
-    name: "Drosophila Phenotype Ontology additional release in OBO format"
+    name: "FlyBase Controlled Vocabulary additional release in OBO format"
   - id: dpo.json
-    name: "Drosophila Phenotype Ontology additional release in OBOJSon format"
+    name: "FlyBase Controlled Vocabulary additional release in OBOJSon format"
   - id: dpo/dpo-base.owl
-    name: "Drosophila Phenotype Ontology main release in OWL format"
+    name: "FlyBase Controlled Vocabulary main release in OWL format"
   - id: dpo/dpo-base.obo
-    name: "Drosophila Phenotype Ontology additional release in OBO format"
+    name: "FlyBase Controlled Vocabulary additional release in OBO format"
   - id: dpo/dpo-base.json
-    name: "Drosophila Phenotype Ontology additional release in OBOJSon format"
+    name: "FlyBase Controlled Vocabulary additional release in OBOJSon format"
 dependencies:
 - id: fbdv
 - id: fbbt
@@ -37,7 +37,7 @@ dependencies:
 - id: chebi
 - id: pato
 
-tracker: https://github.com/FlyBase/drosophila-phenotype-ontology/issues
+tracker: https://github.com/FlyBase/flybase-controlled-vocabulary/issues
 license:
   url: http://creativecommons.org/licenses/by/3.0/
   label: CC-BY
