@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/dpo
+
+idspace: DPO
+base_url: /obo/dpo
+
+products:
+- dpo.owl: https://raw.githubusercontent.com/FlyBase/drosophila-phenotype-ontology/master/dpo.owl
+- dpo.obo: https://raw.githubusercontent.com/FlyBase/drosophila-phenotype-ontology/master/dpo.obo
+
+term_browser: ontobee
+example_terms:
+- dpo_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/FlyBase/drosophila-phenotype-ontology/v
+
+- prefix: /tracker/
+  replacement: https://github.com/FlyBase/drosophila-phenotype-ontology/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/DPO?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/FlyBase/drosophila-phenotype-ontology/master/
