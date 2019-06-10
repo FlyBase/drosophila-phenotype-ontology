@@ -60,7 +60,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  fbdv fbbt go ro chebi pato
+IMPORTS =  fbdv fbbt cl pco caro bfo go ro chebi pato
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_FILES = $(foreach n,$(IMPORT_ROOTS), $(foreach f,$(FORMATS), $(n).$(f)))
@@ -188,7 +188,7 @@ ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/`date +%Y-%m-%d`/$@.owl
 OTHER_SRC = $(PATTERNDIR)/definitions.owl
 
 
-$(ONTOLOGYTERMS): $(SRC) all_imports
+$(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
 	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/dpo_terms.sparql $@
 
  
@@ -221,6 +221,7 @@ $(ONT)-non-classified.owl: $(SRC) $(OTHER_SRC)
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 # foo-simple: (edit->reason,relax,reduce,drop imports, drop every axiom which contains an entity outside the "namespaces of interest")
 # drop every axiom: filter --term-file keep_terms.txt --trim true
+#		remove --select imports --trim false \
 
 simple_seed.txt: $(SRC) $(ONTOLOGYTERMS)
 	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/simple-seed.sparql $@.tmp &&\
@@ -248,7 +249,7 @@ $(ONT)-simple.owl: $(SRC) simple_seed.txt $(OTHER_SRC) $(ONTOLOGYTERMS)
 
 
 seed.txt: $(SRC) prepare_patterns $(PATTERNDIR)/all_pattern_terms.txt
-	@if [ $(IMP) = true ]; then $(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/terms.sparql $@.tmp &&\
+	@if [ $(IMP) = true ]; then $(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/terms.sparql $@.tmp &&\
 	cat $@.tmp $(PATTERNDIR)/all_pattern_terms.txt | sort | uniq >  $@; fi
 
 
@@ -299,6 +300,46 @@ mirror/fbbt.trigger: $(SRC)
 
 mirror/fbbt.owl: mirror/fbbt.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/fbbt.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: cl
+## Copy of cl is re-downloaded whenever source changes
+mirror/cl.trigger: $(SRC)
+
+mirror/cl.owl: mirror/cl.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/cl.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: pco
+## Copy of pco is re-downloaded whenever source changes
+mirror/pco.trigger: $(SRC)
+
+mirror/pco.owl: mirror/pco.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/pco.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: caro
+## Copy of caro is re-downloaded whenever source changes
+mirror/caro.trigger: $(SRC)
+
+mirror/caro.owl: mirror/caro.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/caro.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: bfo
+## Copy of bfo is re-downloaded whenever source changes
+mirror/bfo.trigger: $(SRC)
+
+mirror/bfo.owl: mirror/bfo.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/bfo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
