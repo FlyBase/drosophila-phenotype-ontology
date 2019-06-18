@@ -1,0 +1,28 @@
+pattern_name: dpoAbnormalEntityORpartOfEntity
+pattern_iri: http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalEntityORpartOfEntity.yaml
+description: "Any unspecified abnormality of a few alternative entities or parts of an entity."
+
+classes:
+  thing: owl:Thing
+  abnormal: PATO:0000460
+
+relations: 
+  inheres_in_part_of: RO:0002314
+  inheres_in: RO:0000052
+  has_modifier: RO:0002573
+  has_part: BFO:0000051
+  part_of: BFO:0000050
+  
+vars:
+  entity: "'thing'"
+  entity2: "'thing'"
+  entity3: "'thing'"
+  quality: "'thing'"
+
+equivalentTo:
+  text: "%s and ('inheres_in' some (%s or (%s and ('part_of' some %s)))) and ('has_modifier' some 'abnormal')"
+  vars:
+    - quality
+    - entity
+    - entity2
+    - entity3
