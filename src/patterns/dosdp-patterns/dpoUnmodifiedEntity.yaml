@@ -1,0 +1,23 @@
+pattern_name: dpoUnmodifiedEntity
+pattern_iri: http://purl.obolibrary.org/obo/dpo/patterns/dpoUnmodifiedEntity.yaml
+description: "Any unspecified abnormality of an entity."
+
+classes:
+  thing: owl:Thing
+  abnormal: PATO:0000460
+
+relations: 
+  inheres_in_part_of: RO:0002314
+  inheres_in: RO:0000052
+  has_modifier: RO:0002573
+  has_part: BFO:0000051
+  
+vars:
+  entity: "'thing'"
+  quality: "'thing'"
+
+equivalentTo:
+  text: "%s and ('inheres_in' some %s)"
+  vars:
+    - quality
+    - entity
