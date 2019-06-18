@@ -242,9 +242,9 @@ Declaration(Class(obo:FBcv_0006005))
 Declaration(Class(obo:FBcv_0006006))
 Declaration(Class(obo:FBcv_0006007))
 Declaration(ObjectProperty(obo:FBcv_0008000))
+Declaration(ObjectProperty(obo:RO_0002503))
 Declaration(ObjectProperty(obo:RO_0002573))
 Declaration(ObjectProperty(fbcv:has_role))
-Declaration(ObjectProperty(fbcv:towards))
 Declaration(AnnotationProperty(FBcv:camcur))
 Declaration(AnnotationProperty(:fbcvsubset_mgiribbons))
 Declaration(AnnotationProperty(fbcv:BRAIN_NAME_ABV))
@@ -503,12 +503,6 @@ ObjectPropertyRange(obo:FBcv_0008000 obo:FBdv_00005259)
 AnnotationAssertion(oboInOwl:id fbcv:has_role "has_role"^^xsd:string)
 AnnotationAssertion(rdfs:label fbcv:has_role "has role"^^xsd:string)
 
-# Object Property: fbcv:towards (towards)
-
-AnnotationAssertion(oboInOwl:id fbcv:towards "towards"^^xsd:string)
-AnnotationAssertion(rdfs:comment fbcv:towards "temporary placeholder - may be placed in OBO_REL; with relational qualities, the additional argument is the 'towards' argument; eg sensitivity towards chlorine. Relation binding a relational quality or disposition to the relevant type of entity."^^xsd:string)
-AnnotationAssertion(rdfs:label fbcv:towards "towards"^^xsd:string)
-
 
 
 
@@ -713,7 +707,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000359 "reduced cell numb
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000359 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000359 "FBcv:0000359"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000359 "decreased cell number"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000359 ObjectIntersectionOf(obo:PATO_0002001 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00100313) ObjectSomeValuesFrom(fbcv:towards obo:CL_0000000)))
+EquivalentClasses(obo:FBcv_0000359 ObjectIntersectionOf(obo:PATO_0002001 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00100313) ObjectSomeValuesFrom(obo:RO_0002503 obo:CL_0000000)))
 SubClassOf(obo:FBcv_0000359 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000360 (decreased cell size)
@@ -743,7 +737,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000362 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000362 "FBcv:0000362"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:FBcv_0000362 "This phenotype is not necessarily accompanied by overgrowth of a tissue - there may be more cells in an otherwise normal volume of tissue. It is not necessarily due to an increase in cell growth -it may be the result of an increase in the division rate at normal growth rates.  It may not even be due to an increase in the cell division rate - a reduced rate of cell death while the division rate is normal could also achieve it."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000362 "increased cell number"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000362 ObjectIntersectionOf(obo:PATO_0002002 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00100313) ObjectSomeValuesFrom(fbcv:towards obo:CL_0000000)))
+EquivalentClasses(obo:FBcv_0000362 ObjectIntersectionOf(obo:PATO_0002002 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00100313) ObjectSomeValuesFrom(obo:RO_0002503 obo:CL_0000000)))
 SubClassOf(obo:FBcv_0000362 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000363 (increased cell size)
@@ -1857,7 +1851,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000709 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000709 "FBcv:0000709"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000709 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000709 "cell number defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000709 ObjectIntersectionOf(obo:PATO_0002083 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00100313) ObjectSomeValuesFrom(fbcv:towards obo:CL_0000000)))
+EquivalentClasses(obo:FBcv_0000709 ObjectIntersectionOf(obo:PATO_0002083 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00100313) ObjectSomeValuesFrom(obo:RO_0002503 obo:CL_0000000)))
 SubClassOf(obo:FBcv_0000709 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000713 (jumpless)
