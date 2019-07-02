@@ -242,9 +242,9 @@ Declaration(Class(obo:FBcv_0006005))
 Declaration(Class(obo:FBcv_0006006))
 Declaration(Class(obo:FBcv_0006007))
 Declaration(ObjectProperty(obo:FBcv_0008000))
+Declaration(ObjectProperty(obo:RO_0002503))
+Declaration(ObjectProperty(obo:RO_0002573))
 Declaration(ObjectProperty(fbcv:has_role))
-Declaration(ObjectProperty(fbcv:qualifier))
-Declaration(ObjectProperty(fbcv:towards))
 Declaration(AnnotationProperty(FBcv:camcur))
 Declaration(AnnotationProperty(:fbcvsubset_mgiribbons))
 Declaration(AnnotationProperty(fbcv:BRAIN_NAME_ABV))
@@ -503,18 +503,6 @@ ObjectPropertyRange(obo:FBcv_0008000 obo:FBdv_00005259)
 AnnotationAssertion(oboInOwl:id fbcv:has_role "has_role"^^xsd:string)
 AnnotationAssertion(rdfs:label fbcv:has_role "has role"^^xsd:string)
 
-# Object Property: fbcv:qualifier (qualifier)
-
-AnnotationAssertion(oboInOwl:id fbcv:qualifier "qualifier"^^xsd:string)
-AnnotationAssertion(rdfs:comment fbcv:qualifier "temporary placeholder - this means that Obol could not infer the correct relation"^^xsd:string)
-AnnotationAssertion(rdfs:label fbcv:qualifier "qualifier"^^xsd:string)
-
-# Object Property: fbcv:towards (towards)
-
-AnnotationAssertion(oboInOwl:id fbcv:towards "towards"^^xsd:string)
-AnnotationAssertion(rdfs:comment fbcv:towards "temporary placeholder - may be placed in OBO_REL; with relational qualities, the additional argument is the 'towards' argument; eg sensitivity towards chlorine. Relation binding a relational quality or disposition to the relevant type of entity."^^xsd:string)
-AnnotationAssertion(rdfs:label fbcv:towards "towards"^^xsd:string)
-
 
 
 
@@ -529,7 +517,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000002 "thermotaxis behav
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000002 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000002 "FBcv:0000002"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000002 "thermotaxis behavior defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000002 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0043052) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000002 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0043052) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000002 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000006 (male semi-fertile)
@@ -576,7 +564,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000324 "phenotypic_class"
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) oboInOwl:hasRelatedSynonym obo:FBcv_0000324 "dorsal-ventral polarity"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000324 "FBcv:0000324"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000324 "dorsal/ventral axis specification defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000324 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0009950) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000324 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0009950) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000324 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000325 (neurogenic phenotype)
@@ -680,7 +668,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000355 "eye colour defect
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000355 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000355 "FBcv:0000355"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000355 "eye color defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000355 ObjectIntersectionOf(obo:PATO_0000014 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00004508) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000355 ObjectIntersectionOf(obo:PATO_0000014 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00004508) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000355 obo:FBcv_0000354)
 
 # Class: obo:FBcv_0000356 (body color defective)
@@ -690,7 +678,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000356 "body colour defec
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000356 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000356 "FBcv:0000356"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000356 "body color defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000356 ObjectIntersectionOf(obo:PATO_0000014 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00000001) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000356 ObjectIntersectionOf(obo:PATO_0000014 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00000001) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000356 obo:FBcv_0000354)
 
 # Class: obo:FBcv_0000357 (size defective)
@@ -700,7 +688,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000357 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000357 "FBcv:0000357"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000357 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000357 "size defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000357 ObjectIntersectionOf(obo:PATO_0000117 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00007001) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000357 ObjectIntersectionOf(obo:PATO_0000117 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00007001) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000357 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000358 (small body)
@@ -709,7 +697,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000358 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000358 "FBcv:0000358"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000358 "small body"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000358 ObjectIntersectionOf(obo:PATO_0000587 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00000001) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000358 ObjectIntersectionOf(obo:PATO_0000587 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00000001) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000358 obo:FBcv_0000665)
 
 # Class: obo:FBcv_0000359 (decreased cell number)
@@ -719,7 +707,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000359 "reduced cell numb
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000359 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000359 "FBcv:0000359"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000359 "decreased cell number"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000359 ObjectIntersectionOf(obo:PATO_0002001 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00100313) ObjectSomeValuesFrom(fbcv:towards obo:CL_0000000)))
+EquivalentClasses(obo:FBcv_0000359 ObjectIntersectionOf(obo:PATO_0002001 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00100313) ObjectSomeValuesFrom(obo:RO_0002503 obo:CL_0000000)))
 SubClassOf(obo:FBcv_0000359 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000360 (decreased cell size)
@@ -749,7 +737,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000362 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000362 "FBcv:0000362"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:FBcv_0000362 "This phenotype is not necessarily accompanied by overgrowth of a tissue - there may be more cells in an otherwise normal volume of tissue. It is not necessarily due to an increase in cell growth -it may be the result of an increase in the division rate at normal growth rates.  It may not even be due to an increase in the cell division rate - a reduced rate of cell death while the division rate is normal could also achieve it."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000362 "increased cell number"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000362 ObjectIntersectionOf(obo:PATO_0002002 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00100313) ObjectSomeValuesFrom(fbcv:towards obo:CL_0000000)))
+EquivalentClasses(obo:FBcv_0000362 ObjectIntersectionOf(obo:PATO_0002002 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00100313) ObjectSomeValuesFrom(obo:RO_0002503 obo:CL_0000000)))
 SubClassOf(obo:FBcv_0000362 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000363 (increased cell size)
@@ -954,7 +942,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000384 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000384 "FBcv:0000384"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000384 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000384 "aging defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000384 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007568) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000384 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007568) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000384 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000385 (short lived)
@@ -986,7 +974,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FBcv_0000387 "behavioral"^^xs
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000387 "FBcv:0000387"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000387 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000387 "behavior defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000387 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007610) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000387 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007610) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000387 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000388 (gravitaxis defective)
@@ -999,7 +987,7 @@ AnnotationAssertion(oboInOwl:id obo:FBcv_0000388 "FBcv:0000388"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000388 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:comment obo:FBcv_0000388 "Note, this term should not be used when flies have climbing defects purely as a consequence of locomotion defects, use 'locomotor behavior defective' instead.")
 AnnotationAssertion(rdfs:label obo:FBcv_0000388 "gravitaxis defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000388 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0048060) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000388 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0048060) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000388 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000389 (paralytic)
@@ -1019,7 +1007,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000390 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000390 "FBcv:0000390"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000390 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000390 "hypoactive"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000390 ObjectIntersectionOf(obo:PATO_0000381 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0050879) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000390 ObjectIntersectionOf(obo:PATO_0000381 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0050879) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000390 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000391 (bang sensitive)
@@ -1038,7 +1026,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000392 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000392 "FBcv:0000392"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000392 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000392 "hyperactive"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000392 ObjectIntersectionOf(obo:PATO_0000380 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0050879) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000392 ObjectIntersectionOf(obo:PATO_0000380 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0050879) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000392 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000393 (pain response defective)
@@ -1047,7 +1035,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000393 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000393 "FBcv:0000393"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000393 "pain response defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000393 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0048265) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000393 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0048265) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000393 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000394 (circadian rhythm defective)
@@ -1057,7 +1045,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000394 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000394 "FBcv:0000394"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000394 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000394 "circadian rhythm defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000394 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007623) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000394 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007623) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000394 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000395 (locomotor rhythm defective)
@@ -1066,7 +1054,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000395 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000395 "FBcv:0000395"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000395 "locomotor rhythm defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000395 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0045475) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000395 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0045475) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000395 obo:FBcv_0000394)
 
 # Class: obo:FBcv_0000396 (eclosion rhythm defective)
@@ -1075,7 +1063,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000396 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000396 "FBcv:0000396"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000396 "eclosion rhythm defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000396 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0008062) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000396 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0008062) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000396 obo:FBcv_0000670)
 
 # Class: obo:FBcv_0000397 (learning defective)
@@ -1084,7 +1072,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000397 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000397 "FBcv:0000397"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000397 "learning defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000397 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007612) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000397 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007612) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000397 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000398 (memory defective)
@@ -1093,7 +1081,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000398 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000398 "FBcv:0000398"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000398 "memory defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000398 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007613) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000398 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007613) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000398 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000399 (courtship behavior defective)
@@ -1102,7 +1090,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000399 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000399 "FBcv:0000399"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000399 "courtship behavior defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000399 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:GO_0007619 ObjectIntersectionOf(obo:GO_0007610 ObjectSomeValuesFrom(obo:BFO_0000050 obo:GO_0007619)))) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000399 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:GO_0007619 ObjectIntersectionOf(obo:GO_0007610 ObjectSomeValuesFrom(obo:BFO_0000050 obo:GO_0007619)))) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000399 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000400 (mating defective)
@@ -1112,7 +1100,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000400 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000400 "FBcv:0000400"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000400 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000400 "mating defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000400 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:GO_0007618 ObjectSomeValuesFrom(obo:BFO_0000050 obo:GO_0007618))) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000400 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:GO_0007618 ObjectSomeValuesFrom(obo:BFO_0000050 obo:GO_0007618))) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000400 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000401 (mating rhythm defective)
@@ -1121,7 +1109,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000401 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000401 "FBcv:0000401"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000401 "mating rhythm defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000401 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0035648) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000401 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0035648) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000401 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000402 (song defective)
@@ -1132,7 +1120,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:SM"^^xsd:string) oboInOwl
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000402 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000402 "FBcv:0000402"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000402 "song defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000402 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0045433) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000402 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0045433) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000402 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000403 (chemosensitive behavior defective)
@@ -1142,7 +1130,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000403 "chemosensitive be
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000403 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000403 "FBcv:0000403"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000403 "chemosensitive behavior defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000403 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007635) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000403 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007635) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000403 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000404 (smell perception defective)
@@ -1152,7 +1140,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000404 "olfaction defecti
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000404 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000404 "FBcv:0000404"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000404 "smell perception defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000404 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007608) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000404 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007608) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000404 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000405 (taste perception defective)
@@ -1163,7 +1151,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000405 "taste defective"^
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000405 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000405 "FBcv:0000405"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000405 "taste perception defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000405 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0050909) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000405 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0050909) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000405 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000406 (tarsal response defective)
@@ -1181,7 +1169,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000407 "phenotypic_class"
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FBcv_0000407 "auditory system defective"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000407 "FBcv:0000407"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000407 "auditory perception defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000407 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007605) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000407 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007605) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000407 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000408 (stress response defective)
@@ -1192,7 +1180,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000408 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000408 "FBcv:0000408"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000408 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000408 "stress response defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000408 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0006950) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000408 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0006950) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000408 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000409 (osmotic stress response defective)
@@ -1201,7 +1189,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000409 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000409 "FBcv:0000409"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000409 "osmotic stress response defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000409 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0006970) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000409 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0006970) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000409 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000410 (heat stress response defective)
@@ -1210,7 +1198,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000410 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000410 "FBcv:0000410"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000410 "heat stress response defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000410 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0009408) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000410 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0009408) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000410 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000411 (visual behavior defective)
@@ -1220,7 +1208,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000411 "visual behaviour 
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000411 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000411 "FBcv:0000411"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000411 "visual behavior defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000411 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007632) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000411 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007632) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000411 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000412 (optomotor response defective)
@@ -1230,7 +1218,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000412 "optomotor behavio
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000412 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000412 "FBcv:0000412"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000412 "optomotor response defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000412 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007634) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000412 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007634) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000412 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000413 (phototaxis defective)
@@ -1241,7 +1229,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FBcv_0000413 "phototaxis beha
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000413 "FBcv:0000413"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000413 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000413 "phototaxis defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000413 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0042331) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000413 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0042331) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000413 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000414 (locomotor behavior defective)
@@ -1251,7 +1239,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000414 "locomotor behavio
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000414 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000414 "FBcv:0000414"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000414 "locomotor behavior defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000414 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007626) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000414 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007626) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000414 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000415 (jumping defective)
@@ -1281,7 +1269,7 @@ AnnotationAssertion(oboInOwl:id obo:FBcv_0000417 "FBcv:0000417"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000417 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:comment obo:FBcv_0000417 "This term is agnostic as to the causes of defects in flight. An animal's flight may be defective for mechanical, behavioral or sensory reasons."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000417 "flight defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000417 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0060361) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000417 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0060361) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000417 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000418 (flightless)
@@ -1291,7 +1279,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000418 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000418 "FBcv:0000418"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:FBcv_0000418 "This term is agnostic as to the causes of flightlessness. An animal may be flightless for mechanical or behavioral reasons."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000418 "flightless"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000418 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0060361) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000462)))
+EquivalentClasses(obo:FBcv_0000418 ObjectIntersectionOf(obo:PATO_0000462 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0060361) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000418 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000419 (feeding behavior defective)
@@ -1301,7 +1289,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000419 "feeding behaviour
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000419 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000419 "FBcv:0000419"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000419 "feeding behavior defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000419 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007631) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000419 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007631) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000419 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000420 (grooming behavior defective)
@@ -1311,7 +1299,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000420 "grooming behaviou
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000420 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000420 "FBcv:0000420"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000420 "grooming behavior defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000420 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007625) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000420 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007625) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000420 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000421 (touch response defective)
@@ -1330,7 +1318,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000422 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000422 "FBcv:0000422"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000422 "photoperiod response variant"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000422 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0043153) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000422 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0043153) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000422 obo:FBcv_0000387)
 
 # Class: obo:FBcv_0000423 (DNA repair defective)
@@ -1339,7 +1327,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000423 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000423 "FBcv:0000423"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000423 "DNA repair defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000423 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0006281) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000423 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0006281) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000423 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000424 (cell death defective)
@@ -1352,7 +1340,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000424 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000424 "FBcv:0000424"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000424 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000424 "cell death defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000424 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:GO_0008219 obo:GO_0010941)) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000424 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:GO_0008219 obo:GO_0010941)) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000424 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000425 (increased cell death)
@@ -1383,7 +1371,7 @@ AnnotationAssertion(oboInOwl:id obo:FBcv_0000427 "FBcv:0000427"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000427 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:comment obo:FBcv_0000427 "Note that defects in cell size are not necessarily the result of defects in cell growth. A change in the rate of cell division in the absence of any change in cell growth rate can result in smaller or larger cells."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000427 "cell growth defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000427 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0016049) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000427 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0016049) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000427 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000428 (cell size defective)
@@ -1393,7 +1381,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000428 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000428 "FBcv:0000428"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000428 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000428 "cell size defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000428 ObjectIntersectionOf(obo:PATO_0000117 ObjectSomeValuesFrom(obo:RO_0000052 obo:CL_0000000) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000428 ObjectIntersectionOf(obo:PATO_0000117 ObjectSomeValuesFrom(obo:RO_0000052 obo:CL_0000000) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000428 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000429 (cell shape defective)
@@ -1403,7 +1391,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000429 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000429 "FBcv:0000429"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000429 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000429 "cell shape defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000429 ObjectIntersectionOf(obo:PATO_0000052 ObjectSomeValuesFrom(obo:RO_0000052 obo:CL_0000000) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000429 ObjectIntersectionOf(obo:PATO_0000052 ObjectSomeValuesFrom(obo:RO_0000052 obo:CL_0000000) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000429 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000430 (cell polarity defective)
@@ -1413,7 +1401,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000430 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000430 "FBcv:0000430"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000430 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000430 "cell polarity defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000430 ObjectIntersectionOf(obo:PATO_0001769 ObjectSomeValuesFrom(obo:RO_0000052 obo:CL_0000000) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000430 ObjectIntersectionOf(obo:PATO_0001769 ObjectSomeValuesFrom(obo:RO_0000052 obo:CL_0000000) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000430 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000431 (meiotic cell cycle defective)
@@ -1423,7 +1411,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000431 "phenotypic_class"
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FBcv_0000431 "meiotic"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000431 "FBcv:0000431"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000431 "meiotic cell cycle defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000431 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0051321) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000431 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0051321) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000431 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000432 (mitotic cell cycle defective)
@@ -1433,7 +1421,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000432 "phenotypic_class"
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FBcv_0000432 "mitotic"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000432 "FBcv:0000432"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000432 "mitotic cell cycle defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000432 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0000278) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000432 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0000278) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000432 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000433 (cytokinesis defective)
@@ -1442,7 +1430,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000433 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000433 "FBcv:0000433"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000433 "cytokinesis defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000433 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0000910) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000433 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0000910) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000433 obo:FBcv_0000671)
 
 # Class: obo:FBcv_0000434 (neurophysiology defective)
@@ -1461,7 +1449,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000435 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000435 "FBcv:0000435"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000435 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000435 "neuroanatomy defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000435 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00005093) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000435 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00005093) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000435 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000436 (sex-determination defective)
@@ -1471,7 +1459,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000436 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000436 "FBcv:0000436"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000436 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000436 "sex-determination defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000436 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007530) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000436 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007530) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000436 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000437 (dosage compensation defective)
@@ -1585,7 +1573,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000448 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000448 "FBcv:0000448"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000448 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000448 "immune response defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000448 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0006955) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000448 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0006955) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000448 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000449 (planar polarity defective)
@@ -1597,7 +1585,7 @@ AnnotationAssertion(oboInOwl:id obo:FBcv_0000449 "FBcv:0000449"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000449 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:comment obo:FBcv_0000449 "For apical-basal polarity phenotypes of epithelia, the appropriate term is 'cell polarity defective'."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000449 "planar polarity defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000449 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0001736) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000449 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0001736) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000449 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000450 (developmental rate defective)
@@ -1612,7 +1600,7 @@ EquivalentClasses(obo:FBcv_0000450 ObjectIntersectionOf(obo:PATO_0000161 ObjectS
 SubClassOf(obo:FBcv_0000450 obo:FBcv_0001347)
 SubClassOf(obo:FBcv_0000450 obo:PATO_0000161)
 SubClassOf(obo:FBcv_0000450 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0032502))
-SubClassOf(obo:FBcv_0000450 ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460))
+SubClassOf(obo:FBcv_0000450 ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460))
 
 # Class: obo:FBcv_0000451 (wound healing defective)
 
@@ -1620,7 +1608,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:bf"^^xsd:string) Annotati
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000451 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000451 "FBcv:0000451"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000451 "wound healing defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000451 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0042060) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000451 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0042060) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000451 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000665 (body size defective)
@@ -1629,7 +1617,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000665 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000665 "FBcv:0000665"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000665 "body size defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000665 ObjectIntersectionOf(obo:PATO_0000117 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00000001) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000665 ObjectIntersectionOf(obo:PATO_0000117 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00000001) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000665 obo:FBcv_0000354)
 
 # Class: obo:FBcv_0000668 (cell adhesion defective)
@@ -1639,7 +1627,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000668 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000668 "FBcv:0000668"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000668 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000668 "cell adhesion defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000668 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007155) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000668 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007155) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000668 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000669 (hatching behavior defective)
@@ -1649,7 +1637,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000669 "hatching behaviou
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000669 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000669 "FBcv:0000669"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000669 "hatching behavior defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000669 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0035187) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000669 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0035187) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000669 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000670 (eclosion defective)
@@ -1659,7 +1647,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000670 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000670 "FBcv:0000670"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000670 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000670 "eclosion defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000670 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007562) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000670 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007562) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000670 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000671 (cell cycle defective)
@@ -1669,7 +1657,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000671 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000671 "FBcv:0000671"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000671 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000671 "cell cycle defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000671 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007049) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000671 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007049) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000671 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000672 (endomitotic cell cycle defective)
@@ -1679,7 +1667,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000672 "endocycle defecti
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000672 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000672 "FBcv:0000672"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000672 "endomitotic cell cycle defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000672 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007113) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000672 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007113) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000672 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000679 (circadian behavior defective)
@@ -1690,7 +1678,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0000679 "2009-11-30T11:06:35
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000679 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000679 "FBcv:0000679"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000679 "circadian behavior defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000679 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0048512) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000679 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0048512) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000679 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000680 (proboscis extension reflex defective)
@@ -1699,7 +1687,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000680 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000680 "FBcv:0000680"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000680 "proboscis extension reflex defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000680 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007637) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000680 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007637) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000680 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000681 (sensory perception defective)
@@ -1711,7 +1699,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000681 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000681 "FBcv:0000681"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000681 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000681 "sensory perception defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000681 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007600) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000681 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007600) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000681 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000682 (touch perception defective)
@@ -1721,7 +1709,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000682 "phenotypic_class"
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FBcv_0000682 "touch perception defective"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000682 "FBcv:0000682"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000682 "touch perception defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000682 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0050975) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000682 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0050975) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000682 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000683 (temperature response defective)
@@ -1733,7 +1721,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000683 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000683 "FBcv:0000683"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000683 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000683 "temperature response defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000683 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0009266) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000683 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0009266) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000683 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000684 (cold stress response defective)
@@ -1744,7 +1732,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0000684 "2010-02-23T02:11:27
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000684 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000684 "FBcv:0000684"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000684 "cold stress response defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000684 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0009409) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000684 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0009409) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000684 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000686 (axis specification defective)
@@ -1755,7 +1743,7 @@ AnnotationAssertion(oboInOwl:id obo:FBcv_0000686 "FBcv:0000686"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000686 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:comment obo:FBcv_0000686 "This phenotypic class does not encompass planar polarity."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000686 "axis specification defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000686 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0009798) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000686 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0009798) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000686 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000698 (embryonic/larval segmentation phenotype)
@@ -1822,7 +1810,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000705 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000705 "FBcv:0000705"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000705 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000705 "sleep defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000705 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0030431) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000705 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0030431) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000705 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000706 (diapause defective)
@@ -1833,7 +1821,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0000706 "2010-09-20T12:06:28
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000706 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000706 "FBcv:0000706"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000706 "diapause defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000706 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0055115) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000706 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0055115) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000706 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000707 (reproductive diapause defective)
@@ -1844,7 +1832,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0000707 "2010-09-20T12:21:29
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000707 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000707 "FBcv:0000707"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000707 "reproductive diapause defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000707 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0055116) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000707 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0055116) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000707 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000708 (starvation stress response defective)
@@ -1853,7 +1841,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000708 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000708 "FBcv:0000708"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000708 "starvation stress response defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000708 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0042594) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000708 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0042594) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000708 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000709 (cell number defective)
@@ -1863,7 +1851,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000709 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000709 "FBcv:0000709"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000709 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000709 "cell number defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000709 ObjectIntersectionOf(obo:PATO_0002083 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00100313) ObjectSomeValuesFrom(fbcv:towards obo:CL_0000000)))
+EquivalentClasses(obo:FBcv_0000709 ObjectIntersectionOf(obo:PATO_0002083 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00100313) ObjectSomeValuesFrom(obo:RO_0002503 obo:CL_0000000)))
 SubClassOf(obo:FBcv_0000709 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000713 (jumpless)
@@ -1883,7 +1871,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000716 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000716 "FBcv:0000716"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000716 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0000716 "cell migration defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000716 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0016477) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000716 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0016477) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000716 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000717 (increased cell growth)
@@ -1923,7 +1911,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0000720 "2011-03-11T08:03:28
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000720 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000720 "FBcv:0000720"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000720 "jump response defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000720 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007630) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000720 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007630) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000720 obo:FBcv_0000415)
 
 # Class: obo:FBcv_0000721 (mating behavior defective)
@@ -1932,7 +1920,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000721 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000721 "FBcv:0000721"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000721 "mating behavior defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000721 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:GO_0007617 ObjectIntersectionOf(obo:GO_0007610 ObjectSomeValuesFrom(obo:BFO_0000050 obo:GO_0007617)))) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000721 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:GO_0007617 ObjectIntersectionOf(obo:GO_0007610 ObjectSomeValuesFrom(obo:BFO_0000050 obo:GO_0007617)))) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000721 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000723 (neoplasia)
@@ -1962,7 +1950,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000725 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000725 "FBcv:0000725"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000725 "oxidative stress response defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000725 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0006979) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000725 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0006979) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000725 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000734 (terminal phenotype)
@@ -2000,7 +1988,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0001324 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0001324 "FBcv:0001324"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0001324 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0001324 "endocytosis defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0001324 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0006897) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0001324 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0006897) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0001324 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0001325 (exocytosis defective)
@@ -2009,7 +1997,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0001325 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0001325 "FBcv:0001325"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0001325 "fbcvsubset_mgiribbons")
 AnnotationAssertion(rdfs:label obo:FBcv_0001325 "exocytosis defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0001325 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0006887) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0001325 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0006887) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0001325 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0001347 (phenotype)
@@ -2021,7 +2009,7 @@ AnnotationAssertion(oboInOwl:id obo:FBcv_0001347 "FBcv:0001347"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0001347 "do_not_annotate")
 AnnotationAssertion(rdfs:comment obo:FBcv_0001347 "The subclasses of this term classify Drosophila phenotypes into different common categories. They have been chosen by FlyBase to reflect phenotype terms most often reported by Drosophila researchers in the published literature."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0001347 "phenotype"^^xsd:string)
-EquivalentClasses(obo:FBcv_0001347 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0001347 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0001347 obo:FBcv_0000347)
 SubClassOf(obo:FBcv_0001347 obo:PATO_0000001)
 
@@ -2397,7 +2385,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:MMC"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0004000 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0004000 "FBcv:0004000"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0004000 "visual perception defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0004000 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0050953) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0004000 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0050953) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0004000 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0006000 (copulation defective)
@@ -2406,7 +2394,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:TEMJ"^^xsd:string) obo:IA
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0006000 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0006000 "FBcv:0006000"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0006000 "copulation defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0006000 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007620) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0006000 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0007620) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0006000 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0006001 (increased fecundity)
@@ -2440,7 +2428,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0006004 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0006004 "FBcv:0006004"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:FBcv_0006004 "This term should only be used to report defects specifically in oviposition, as opposed to an overall loss of fertility. If a difference in \"oviposition rate\" is measured by authors as a proxy for sterility/fertility, it would be better to use the terms \"sterile\", \"semi-sterile\", or \"semi-fertile\", as appropriate."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0006004 "oviposition defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0006004 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0018991) ObjectSomeValuesFrom(fbcv:qualifier obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0006004 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 obo:GO_0018991) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0006004 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0006005 (increased occurrence of cell division)
