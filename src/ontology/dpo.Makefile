@@ -50,6 +50,20 @@ original_patterns: $(PATTERNDIR)/definitions_original.owl
 tmp/all_defined_classes.txt: $(SRC)
 	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dpo-equivalent-classes.sparql $@.tmp
 	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
+	
+tmp/lethal_terms.txt: $(SRC)
+	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dpo-lethal.sparql $@.tmp
+	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
+	
+tmp/lethal_terms_tsv.txt: $(SRC)
+	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dpo-lethal-tsv.sparql $@.tmp
+	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
+	
+# $(ROBOT) remove --input $< --select imports \
+
+tmp/lethal_module.owl: $(SRC) tmp/lethal_terms.txt
+	$(ROBOT) extract --input $< -T tmp/lethal_terms.txt --force true --imports exclude --method STAR \
+		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@;
 
 tmp/all_patternised_classes.txt:
 	$(ROBOT) query --use-graphs false -f csv -i $(PATTERNDIR)/definitions_original.owl --query ../sparql/dpo-equivalent-classes.sparql $@.tmp
@@ -61,3 +75,19 @@ tmp/remaining_classes.txt: tmp/all_patternised_classes.txt tmp/all_defined_class
 tmp/remaining_definitions.owl: $(SRC) tmp/remaining_classes.txt
 	$(ROBOT) filter -i $< -T tmp/remaining_classes.txt --axioms "equivalent annotation" --trim false -o $@
 
+$(ONT)-full-hermit.owl: $(SRC)
+	$(ROBOT) merge --input $< \
+		reason --reasoner hermit \
+		relax \
+		reduce -r ELK \
+		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
+
+$(ONT)-full-elk.owl: $(SRC)
+	$(ROBOT) merge --input $< \
+		reason --reasoner hermit \
+		relax \
+		reduce -r ELK \
+		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
+
+tmp/hermitvelk.txt: $(ONT)-full-elk.owl $(ONT)-full-hermit.owl
+	$(ROBOT) diff --left $(ONT)-full-elk.owl --right $(ONT)-full-hermit.owl --output $@

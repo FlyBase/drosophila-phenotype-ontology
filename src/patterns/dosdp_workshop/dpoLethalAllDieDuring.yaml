@@ -1,0 +1,39 @@
+pattern_name: dpoLethalAllDieDuring
+pattern_iri: http://purl.obolibrary.org/obo/fbcv/patterns/dpoLethalAllDieDuring.yaml
+
+classes:
+  multicellular organism: CARO:0000012
+  organism: FBbt:0000000
+  population of Drosophila: FBcv:0006003
+  stage: FBdv:00005259
+  larval stage: FBdv:00005336
+  
+relations:
+  inheres_in: RO:0002351
+  has_age: FBcv:0008000
+  substage_of: FBdv:00018001
+  has_member: RO:0002351
+  preceded_by: BFO:0000062
+  has_increased_mortality_rate: RO:0002029
+
+vars:
+  stage: "'stage'"
+
+name:
+  text: "lethal - all die before end of %s"
+  vars:
+   - stage
+
+def:
+  text: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the %s."
+  vars:
+    - stage
+
+equivalentTo:
+  text: "('inheres_in' some 
+('population of Drosophila' and ('has_member' some 
+('multicellular organism' and (has_age some ('substage_of' some %s)))) and ('has_member' only 
+('multicellular organism' and (has_age some ('substage_of' some %s))))))"
+  vars:
+    - stage
+    - stage

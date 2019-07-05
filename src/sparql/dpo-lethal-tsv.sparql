@@ -1,0 +1,18 @@
+prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix obo: <http://purl.obolibrary.org/obo/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?term ?stage WHERE 
+{
+  { ?term <http://www.geneontology.org/formats/oboInOwl#inSubset> ?subset .
+    ?term rdf:type owl:Class .
+    ?term owl:equivalentClass [ owl:intersectionOf (
+      [ rdf:type owl:Restriction ;
+        owl:onProperty obo:RO_0000052 ;
+        owl:someValuesFrom ?stage
+      ])]
+  }
+  FILTER((STR(?subset)="lethal_phase") && isIRI(?term) && (regex(str(?term), UCASE("dpo_")) || regex(str(?term), "http://purl.obolibrary.org/obo/FBcv_") || regex(str(?term), "http://purl.obolibrary.org/obo/fbcv_")))
+}
