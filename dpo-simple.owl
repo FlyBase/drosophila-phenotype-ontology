@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo/dpo-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2019-06-10/dpo-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2019-07-06/dpo-simple.owl"/>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase_miscellaneous_CV</oboInOwl:default-namespace>
     </owl:Ontology>
     
@@ -26,39 +26,15 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000179 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000179"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000180 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000180"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000114"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
     
 
 
@@ -68,33 +44,9 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000589 -->
+    <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000589"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000600 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000600"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000602 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000602"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0010000 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0010000"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002604 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002604"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000232"/>
     
 
 
@@ -129,12 +81,6 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
     
 
 
@@ -206,31 +152,30 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0002503 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002503"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002573 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002573">
+        <obo:IAO_0000115>A relation that holds between an attribute or a qualifier and another attribute.</obo:IAO_0000115>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/20064205"/>
+        <obo:IAO_0000232>This relation is intended to be used in combination with PATO, to be able to refine PATO quality classes using modifiers such as &apos;abnormal&apos; and &apos;normal&apos;. It has yet to be formally aligned into an ontological framework; it&apos;s not clear what the ontological status of the &quot;modifiers&quot; are.</obo:IAO_0000232>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <rdfs:label>has modifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/fbcv#has_role -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/fbcv#has_role">
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_role</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has role</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/fbcv#qualifier -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/fbcv#qualifier">
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qualifier</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temporary placeholder - this means that Obol could not infer the correct relation</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qualifier</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/fbcv#towards -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/fbcv#towards">
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">towards</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temporary placeholder - may be placed in OBO_REL; with relational qualities, the additional argument is the &apos;towards&apos; argument; eg sensitivity towards chlorine. Relation binding a relational quality or disposition to the relevant type of entity.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">towards</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -243,65 +188,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000027 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000027">
-        <obo:BFO_0000179>object-aggregate</obo:BFO_0000179>
-        <obo:BFO_0000180>ObjectAggregate</obo:BFO_0000180>
-        <obo:IAO_0000112 xml:lang="en">a collection of cells in a blood biobank.</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">a swarm of bees is an aggregate of members who are linked together through natural bonds</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">a symphony orchestra</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">an organization is an aggregate whose member parts have roles of specific types (for example in a jazz band, a chess club, a football team)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">defined by fiat: the aggregate of members of an organization</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">defined through physical attachment: the aggregate of atoms in a lump of granite</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">defined through physical containment: the aggregate of molecules of carbon dioxide in a sealed container</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">defined via attributive delimitations such as: the patients in this hospital</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the aggregate of bearings in a constant velocity axle joint</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the aggregate of blood cells in your body</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the nitrogen atoms in the atmosphere</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">the restaurants in Palo Alto</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">your collection of Meissen ceramic plates.</obo:IAO_0000112>
-        <obo:IAO_0000116>An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects </obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: object aggregates may gain and lose parts while remaining numerically identical (one and the same individual) over time. This holds both for aggregates whose membership is determined naturally (the aggregate of cells in your body) and aggregates determined by fiat (a baseball team, a congressional committee).</obo:IAO_0000116>
-        <obo:IAO_0000119>ISBN:978-3-938793-98-5pp124-158#Thomas Bittner and Barry Smith, &apos;A Theory of Granular Partitions&apos;, in K. Munn and B. Smith (eds.), Applied Ontology: An Introduction, Frankfurt/Lancaster: ontos, 2008, 125-158.</obo:IAO_0000119>
-        <obo:IAO_0000600 xml:lang="en">b is an object aggregate means: b is a material entity consisting exactly of a plurality of objects as member_parts at all times at which b exists. (axiom label in BFO2 Reference: [025-004])</obo:IAO_0000600>
-        <obo:IAO_0000602>(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] </obo:IAO_0000602>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
-        <rdfs:label xml:lang="en">object aggregate</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
-        <owl:annotatedTarget>An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/0000011"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
-        <owl:annotatedTarget>An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/0000301"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000119"/>
-        <owl:annotatedTarget>ISBN:978-3-938793-98-5pp124-158#Thomas Bittner and Barry Smith, &apos;A Theory of Granular Partitions&apos;, in K. Munn and B. Smith (eds.), Applied Ontology: An Introduction, Frankfurt/Lancaster: ontos, 2008, 125-158.</owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/0000300"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000600"/>
-        <owl:annotatedTarget xml:lang="en">b is an object aggregate means: b is a material entity consisting exactly of a plurality of objects as member_parts at all times at which b exists. (axiom label in BFO2 Reference: [025-004])</owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/025-004"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
-        <owl:annotatedTarget>(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/025-004"/>
-    </owl:Axiom>
     
 
 
@@ -329,7 +215,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000375"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000376"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001761"/>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000006</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male semi-fertile</rdfs:label>
@@ -342,7 +227,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000375"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000377"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001760"/>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000007</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female semi-fertile</rdfs:label>
@@ -445,7 +329,6 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0000347 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000347">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000347</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic class</rdfs:label>
@@ -476,7 +359,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000349">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000719"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is survival to mature adulthood, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000349</oboInOwl:id>
@@ -502,6 +384,7 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-viable</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000350</oboInOwl:id>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">partially lethal - majority live</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -520,6 +403,7 @@
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000351</oboInOwl:id>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note on usage: lethal is appropriate in cases where escaper adults are very rare. The lethal phase prior to becoming a mature adult may be further specified using children terms which specify stage.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lethal</rdfs:label>
     </owl:Class>
@@ -541,6 +425,7 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-lethal</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000352</oboInOwl:id>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stages during which there is significant death prior to mature adulthood can be indicated using one or more stage qualifiers.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">partially lethal - majority die</rdfs:label>
     </owl:Class>
@@ -559,7 +444,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000353">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000718"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is a failure of mutant cells to survive.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000353</oboInOwl:id>
@@ -599,7 +483,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000355">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000354"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000014"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in eye color compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eye colour defective</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -619,7 +502,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000356">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000354"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000014"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is a defect in body color compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body colour defective</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -639,7 +521,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000357">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000117"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is a defect in the size of the whole body or some body part compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000357</oboInOwl:id>
@@ -659,7 +540,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000358">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000665"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000587"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in body size compared to identically raised wild-type controls.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000358</oboInOwl:id>
@@ -678,7 +558,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000359">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000709"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002001"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in the number of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type. This phenotype is not necessarily accompanied by decreased growth - there may be fewer cells in an otherwise normal volume of tissue.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reduced cell number</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -698,7 +577,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000360">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000428"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000587"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in the size of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type. This phenotype is not necessarily accompanied by decreased growth of a tissue - there may be more cells in an otherwise normal volume of tissue.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reduced cell size</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -719,7 +597,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000361">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000665"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000586"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in body size compared to identically raised wild-type controls.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000361</oboInOwl:id>
@@ -738,7 +615,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000362">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000709"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002002"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in the number of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000362</oboInOwl:id>
@@ -758,7 +634,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000363">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000428"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000586"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in the size of cells compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000363</oboInOwl:id>
@@ -778,7 +653,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000364">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000956"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is the inability to produce a zygote.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000364</oboInOwl:id>
@@ -818,7 +692,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000366">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000364"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000892"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is the inability of females to mate and produce fertilized offspring.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000366</oboInOwl:id>
@@ -838,7 +711,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000367">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000365"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001763"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is a reduction in the proportion of fertilized eggs produced by females to below 50% of wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000367</oboInOwl:id>
@@ -913,7 +785,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000371">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000365"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001762"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is a reduction in the proportion of fertilized eggs produced by males to below 50% of wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000371</oboInOwl:id>
@@ -969,7 +840,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000374">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000955"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is the ability to mate and as a result produce fertilized eggs.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000374</oboInOwl:id>
@@ -1010,7 +880,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000376">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000374"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000891"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is the ability of males to mate and as a result produce fertilized eggs.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000376</oboInOwl:id>
@@ -1030,7 +899,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000377">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000374"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000888"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is the ability of females to mate and as a result produce fertilized eggs.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000377</oboInOwl:id>
@@ -1050,7 +918,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000378">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001862"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype in which all offspring are sterile. Typically, this is due to maternal effect sterility resulting from defects in pole cell development.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000378</oboInOwl:id>
@@ -1144,7 +1011,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000383">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000422"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is the inability to synthesize some organic compound that can be synthesized by wild-type animals, and that is required for normal growth and/or development.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000383</oboInOwl:id>
@@ -1186,6 +1052,7 @@
         <oboInOwl:hasExactSynonym>increased adult mortality</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000385</oboInOwl:id>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">short lived</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1257,7 +1124,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000389">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001558"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a disposition to paralysis under conditions that do not cause paralysis in a wild-type animal.  Paralysis is defined as an inability to exhibit `multicellular organismal movement` (GO:0050879)</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000389</oboInOwl:id>
@@ -1277,7 +1143,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000390">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000381"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype consisting of decreased frequency of `multicellular organismal movement` (GO:0050879) compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000390</oboInOwl:id>
@@ -1322,7 +1187,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000392">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000380"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype consisting of increased frequency of `multicellular organismal movement` (GO:0050879) compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000392</oboInOwl:id>
@@ -1793,7 +1657,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000416">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000414"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000770"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a lack of normal co-ordination in locomotor activity.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000416</oboInOwl:id>
@@ -2028,7 +1891,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000428">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000117"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in the size of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000428</oboInOwl:id>
@@ -2048,7 +1910,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000429">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000052"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in the shape (PATO:0000052) of some cell compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000429</oboInOwl:id>
@@ -2068,7 +1929,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000430">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001769"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in the asymmetric distribution of components within a cell. For example an epithelial cell is &apos;cell polarity defective&apos; if it lacks the normal asymmetric distribution of proteins or cell components such as junctions or villi along its apical-basal axis.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000430</oboInOwl:id>
@@ -2200,7 +2060,6 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0000437 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000437">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <oboInOwl:consider rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000436</oboInOwl:consider>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000437</oboInOwl:id>
@@ -2233,7 +2092,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000439">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001552"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decreased sensitivity (compared to wild-type) to the toxic effects of some specified chemical. The phrase &apos;toxic effects&apos; here refers to reversible effects such as inebriation and sedation as well as sustained damage, developmental defects and death.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000439</oboInOwl:id>
@@ -2253,7 +2111,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000440">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001551"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increased sensitivity (compared to wild-type) to the toxic effects of some specified chemical. The phrase &apos;toxic effects&apos; here refers to reversible effects such as inebriation and sedation as well as sustained damage, developmental defects and death.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000440</oboInOwl:id>
@@ -2273,7 +2130,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000441">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001552"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decreased tendency for radiation exposure to cause toxic effects.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000441</oboInOwl:id>
@@ -2293,7 +2149,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000442">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001551"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increased tendency for radiation exposure to cause toxic effects.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000442</oboInOwl:id>
@@ -2333,7 +2188,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000444">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000357"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000362"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000644"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in size of a tissue or organ due to increased numbers of cells, where the affected tissue or organ maintains its normal form.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyperplastic</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -2450,7 +2304,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000450">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000161"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a change in the rate of some developmental process (GO:0032502) taking place prior to mature adulthood (defined as adult stage A3), compared to wild-type. Note, developmental processes include stages in development of the whole animal (e.g.- larval development) as well as specific sub-processes, such as dorsal closure.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000450</oboInOwl:id>
@@ -2939,7 +2792,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000709">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002083"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase or decrease in the number of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type. This phenotype is not necessarily accompanied by defects in cell growth - there may be a greater or lesser number of cells in an otherwise normal volume of tissue.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000709</oboInOwl:id>
@@ -2998,7 +2850,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000717">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000427"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000912"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in the rate of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000717</oboInOwl:id>
@@ -3017,7 +2868,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000718">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000427"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000911"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an decrease in the rate of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000718</oboInOwl:id>
@@ -3036,7 +2886,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000719">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000357"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001623"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in size of an initially normally sized organ or tissue due to wasting away of cells.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">djs93</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-03-10T05:59:04Z</oboInOwl:creation_date>
@@ -3098,8 +2947,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000723">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000357"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000362"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000586"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002011"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that consists of abnormal growth of a tissue or organ due to increased numbers of cells, but in which the affected tissue or organ does not maintain its normal form.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000723</oboInOwl:id>
@@ -3119,7 +2966,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000724">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000357"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000359"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000645"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a reduction in size of an organ or tissue compared to wild-type due to reduced numbers of cells being produced during its development or growth.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000724</oboInOwl:id>
@@ -3177,7 +3023,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000791">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000384"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000911"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype in which the aging process (GO:0007568) is slower than in wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000791</oboInOwl:id>
@@ -3196,7 +3041,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000792">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000384"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000912"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype in which the aging process (GO:0007568) is accelerated compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000792</oboInOwl:id>
@@ -3270,6 +3114,7 @@
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages prior to eclosion from the pupal case (the end of the P-stage).</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>lethal - all die before end of pharate adult stage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:comment>As the P-Stage and the &apos;pharate adult stage&apos; have the same end,  there is no need for a seprate term for &apos;lethal - all die before end of pharate adult stage.</rdfs:comment>
         <rdfs:label xml:lang="en">lethal - all die before end of P-stage</rdfs:label>
     </owl:Class>
@@ -3288,6 +3133,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die before end of first instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3306,6 +3152,7 @@
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>lethal - all die before end of third instar larval stage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:comment>As the larval stage and third instar larval stage have the same end,  there is no need for a separate term for &apos;lethal - all die before end of third instar larval stage&apos;.</rdfs:comment>
         <rdfs:label xml:lang="en">lethal - all die before end of larval stage</rdfs:label>
     </owl:Class>
@@ -3324,6 +3171,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die before end of second instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3342,6 +3190,7 @@
         <obo:IAO_0000115>A phenotype that is an increase in the rate of death in a population at any stage of life (during development or adulthood), over the rate seen in a wild type control population. </obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased mortality</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3359,6 +3208,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during P-stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3376,6 +3226,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during first instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3393,6 +3244,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3410,6 +3262,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during second instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3427,6 +3280,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during third instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3444,6 +3298,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during P-stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3461,6 +3316,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during first instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3478,6 +3334,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3495,6 +3352,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during second instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3512,6 +3370,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during third instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3529,6 +3388,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of some significant proportion of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">partially lethal</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3547,6 +3407,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased mortality during development</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3564,6 +3425,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during P-stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3581,6 +3443,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during first instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3598,6 +3461,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during second instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3615,6 +3479,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3632,6 +3497,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during third instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3649,6 +3515,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during pharate adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3666,6 +3533,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die before end of prepupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3683,6 +3551,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die before end of pupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3700,6 +3569,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during pupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3717,6 +3587,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during prepupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3734,6 +3605,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die before end of embryonic stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3751,6 +3623,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during embryonic stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3768,6 +3641,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during pupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3785,6 +3659,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during prepupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3802,6 +3677,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during pharate adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3819,6 +3695,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:comment>This term is agnostic about whether any survive to adulthood.</rdfs:comment>
         <rdfs:label xml:lang="en">majority die during embryonic stage</rdfs:label>
     </owl:Class>
@@ -3837,6 +3714,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during pharate adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3854,6 +3732,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during pupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3871,6 +3750,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during prepupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3888,6 +3768,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during embryonic stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3905,6 +3786,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during immature adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3922,6 +3804,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during immature adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3939,6 +3822,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of some significant number of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during immature adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3990,7 +3874,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0006001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001695"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in the number of gametes produced.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0006001</oboInOwl:id>
@@ -4009,7 +3892,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0006002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001696"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in the number of gametes produced.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0006002</oboInOwl:id>
@@ -4027,7 +3909,6 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0006003 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0006003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000001"/>
         <rdfs:label xml:lang="en">population of Drosophila</rdfs:label>
     </owl:Class>
     
@@ -4056,7 +3937,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0006005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002051"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is an increased occurrence of cell division (GO:0051301). &apos;cell division&apos; is defined as &apos;$sub_GO:0051301&apos;.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0006005</oboInOwl:id>
@@ -4076,7 +3956,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0006006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002052"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is a decreased occurrence of cell division (GO:0051301). &apos;cell division&apos; is defined as &apos;$sub_GO:0051301&apos;.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0006006</oboInOwl:id>
@@ -4095,863 +3974,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0006007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0006007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
         <rdfs:label xml:lang="en">population of cells</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000001">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities</obo:IAO_0000115>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities.</obo:IAO_0000115>
-        <obo:IAO_0000589>quality (PATO)</obo:IAO_0000589>
-        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000072</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trait</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000001</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000014 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000014">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A composite chromatic quality composed of hue, saturation and intensity parts.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000020</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colour</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relative color</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000014</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">color</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000014"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A composite chromatic quality composed of hue, saturation and intensity parts.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000052 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000052">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A morphological quality inhering in a bearer by virtue of the bearer&apos;s ratios of distances between its features (points, edges, surfaces and also holes etc).</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001647</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relational shape quality</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000052</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shapes are invariant on size transformations. Shapes can be subdivided into 2D and 3D shapes, We can also make a distinction between shapes of complete self-connected objects, and shapes of parts of objects.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shape</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000052"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A morphological quality inhering in a bearer by virtue of the bearer&apos;s ratios of distances between its features (points, edges, surfaces and also holes etc).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000117 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000117">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A morphology quality inhering in a bearer by virtue of the bearer&apos;s physical magnitude.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000117</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#scalar_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">size</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000117"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A morphology quality inhering in a bearer by virtue of the bearer&apos;s physical magnitude.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WordNet:WordNet</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000161 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000161">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality of a single process inhering in a bearer by virtue of the bearer&apos;s occurrence per unit time.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000161</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#scalar_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rate</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000161"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality of a single process inhering in a bearer by virtue of the bearer&apos;s occurrence per unit time.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:melissa</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000380 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000380">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000912"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A frequency which is relatively high.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000381"/>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high frequency</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">frequent</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000380</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#mpath_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased frequency</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000380"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A frequency which is relatively high.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000381 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000381">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000911"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A frequency which is relatively low.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000380"/>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low frequency</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infrequent</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000381</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#mpath_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased frequency</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000381"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A frequency which is relatively low.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000422 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000422">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A nutritional quality inhering in a bearer by virtue of the bearer&apos;s inability to synthesize a particular organic compound required for its growth.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000423"/>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000422</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">auxotrophic</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000422"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A nutritional quality inhering in a bearer by virtue of the bearer&apos;s inability to synthesize a particular organic compound required for its growth.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Auxotrophic</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000586 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000586">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000117"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A size quality which is relatively high.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000587"/>
-        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001202</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">big</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enlarged</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">expanded</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">great</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">large</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000586</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased size</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000586"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A size quality which is relatively high.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000587 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000587">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000117"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A size quality which is relatively low.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000586"/>
-        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypoplasia</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">underdeveloped</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reduced</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">small</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tiny</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000587</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased size</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000587"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A size quality which is relatively low.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000644 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000644">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000586"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A increased size quality inhering in an organ or tissue by virtue of the bearer&apos;s exhibiting increased number of cells.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000645"/>
-        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000943</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyperplasia</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">overdeveloped</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000644</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#mpath_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyperplastic</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000644"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A increased size quality inhering in an organ or tissue by virtue of the bearer&apos;s exhibiting increased number of cells.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Hyperplastic</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000645 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000645">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000587"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A decreased size quality inhering in a bearer by virtue of the bearer&apos;s exhibiting reduced number of cells within an organ or tissue.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000644"/>
-        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000942</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypoplasia</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">underdeveloped</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000645</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#mpath_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypoplastic</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000645"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A decreased size quality inhering in a bearer by virtue of the bearer&apos;s exhibiting reduced number of cells within an organ or tissue.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000718 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000718">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A viability quality inhering in a population by virtue of the bearer&apos;s long term survival inability.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000718</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lethal (sensu genetics)</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000718"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A viability quality inhering in a population by virtue of the bearer&apos;s long term survival inability.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000719 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000719">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A viability quality inhering in a bearer or a population by virtue of the bearer&apos;s ability to survive or the long term survival ability of a given population.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000719</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">viable</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000719"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A viability quality inhering in a bearer or a population by virtue of the bearer&apos;s ability to survive or the long term survival ability of a given population.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000770 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000770">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A coordination quality of inhering in a bearer by virtue of the bearer&apos;s lacking skillful and effective interaction of movement.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000769"/>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000770</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uncoordinated</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000770"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A coordination quality of inhering in a bearer by virtue of the bearer&apos;s lacking skillful and effective interaction of movement.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000888 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000888">
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0000892"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A female fertility quality inhering in a female by virtue of the bearer&apos;s disposition to initiate, sustain, or support reproduction.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000892"/>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000888</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female fertile</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000888"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A female fertility quality inhering in a female by virtue of the bearer&apos;s disposition to initiate, sustain, or support reproduction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000891 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000891">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A male fertility quality inhering in a male by virtue of the bearer&apos;s being capable of initiating, sustaining, or supporting reproduction.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000890"/>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000891</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male fertile</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000891"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A male fertility quality inhering in a male by virtue of the bearer&apos;s being capable of initiating, sustaining, or supporting reproduction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000892 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000892">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000956"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A female fertility quality inhering in a female by virtue of the bearer&apos;s being incapable of initiating, sustaining, or supporting reproduction.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000888"/>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female infertile</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000892</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female sterile</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000892"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A female fertility quality inhering in a female by virtue of the bearer&apos;s being incapable of initiating, sustaining, or supporting reproduction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000911 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000911">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000161"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rate which is relatively low.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000912"/>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">slow rate</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000911</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#mpath_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased rate</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000911"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rate which is relatively low.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000912 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000912">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000161"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rate which is relatively high.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000911"/>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fast rate</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high rate</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000912</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#mpath_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased rate</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000912"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rate which is relatively high.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000955 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000955">
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0000956"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fertility quality inhering in a bearer by virtue of the bearer&apos;s being capable of initiating, sustaining, or supporting reproduction.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000956"/>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000955</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fertile</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000955"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fertility quality inhering in a bearer by virtue of the bearer&apos;s being capable of initiating, sustaining, or supporting reproduction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000956 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000956">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fertility quality inhering in a bearer by virtue of the bearer&apos;s being incapable of initiating, sustaining, or supporting reproduction.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000955"/>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000956</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sterile</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000956"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fertility quality inhering in a bearer by virtue of the bearer&apos;s being incapable of initiating, sustaining, or supporting reproduction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001551 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001551">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sensitivity of a process which is higher than normal or average.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001552"/>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high sensitivity of occurrent</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased sensitivity of occurrent</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001551</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#relational_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased sensitivity of a process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001551"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sensitivity of a process which is higher than normal or average.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001552 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001552">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sensitivity of a process which is lower than normal or average.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001551"/>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased sensitivity of occurrent</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low sensitivity of occurrent</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001552</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#relational_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased sensitivity of a process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001552"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sensitivity of a process which is lower than normal or average.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001558 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001558">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality of a process inhering in a bearer by virtue of the bearer&apos;s lacking a processual part as specified by the additional entity.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001558</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#relational_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lacking processual parts</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001558"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality of a process inhering in a bearer by virtue of the bearer&apos;s lacking a processual part as specified by the additional entity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001623 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001623">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000587"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A size quality inhering in a bearer by virtue of a part or parts of the bearer&apos;s being decreased in size due to reduction in tissue mass through wasting.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atrophic</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001623</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#mpath_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atrophied</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001623"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A size quality inhering in a bearer by virtue of a part or parts of the bearer&apos;s being decreased in size due to reduction in tissue mass through wasting.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wiikipedia:Wasting</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Atrophy</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001695 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001695">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fecundity which is relatively high.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001696"/>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high fecundity</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001695</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased fecundity</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001695"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fecundity which is relatively high.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001696 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001696">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fecundity which is relatively low.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001695"/>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low fecundity</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001696</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased fecundity</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001696"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fecundity which is relatively low.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001760 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001760">
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001763"/>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001760</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female semi-fertile</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001761 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001761">
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001762"/>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001761</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male semi-fertile</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001762 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001762">
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001761"/>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001762</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male semi-sterile</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001763 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001763">
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001760"/>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001763</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female semi-sterile</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001769 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001769">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A positional quality inhering in a bearer by virtue of the bearer&apos;s location of features or characteristics along an axis.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular polarity</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001769</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positional polarity</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001769"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A positional quality inhering in a bearer by virtue of the bearer&apos;s location of features or characteristics along an axis.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001769"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular polarity</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001862 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001862">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fertility quality inhering in a bearer by virtue of the bearer&apos;s disposition to make its offspring sterile.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grandchildless</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001862</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lack of fertility in offspring</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001862"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fertility quality inhering in a bearer by virtue of the bearer&apos;s disposition to make its offspring sterile.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0002001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002001">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The bearer of this quality has_part &lt; n AND has_part &gt; 0 of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part. Formally: If a bearer entity e has fewer parts of type X at time t, then the number of instances x of X at t such that x part_of e is &lt; n, where n is either the normal number for comparable entities, or n is stated explicitly.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0002002"/>
-        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001569</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased number of</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has decreased number of</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has fewer physical parts of type</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0002001</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#relational_slim"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example: [E=hand Q=has_fewer_parts_of_type E2=digit] - applies to an organism that has no less fingers than is normal for organisms of that type.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has fewer parts of type</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The bearer of this quality has_part &lt; n AND has_part &gt; 0 of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part. Formally: If a bearer entity e has fewer parts of type X at time t, then the number of instances x of X at t such that x part_of e is &lt; n, where n is either the normal number for comparable entities, or n is stated explicitly.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0002002 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002083"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The bearer of this quality has_part &gt; n of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0002001"/>
-        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001560</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has extra parts of</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has increased number of</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">having extra physical parts</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">having supernumerary physical parts</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased number of</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0002002</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#relational_slim"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In polydactyly, the bearer of the quality is the hand, and the entity type being counted is &apos;finger&apos;. In EQ syntax, E=hand, Q=&lt;this&gt; E2=finger.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has extra parts of type</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002002"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The bearer of this quality has_part &gt; n of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0002011 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002011">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A structural quality which is held by a bearer when the latter&apos;s disposition the presence of abnormally proliferating masses of cells.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tumorous</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0002011</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#disposition_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#mpath_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neoplastic</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002011"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A structural quality which is held by a bearer when the latter&apos;s disposition the presence of abnormally proliferating masses of cells.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0002051 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002051">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An occurrence which is relatively high.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0002052"/>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Gkoutos</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-03-26T11:10:11Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased incidence</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0002051</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased occurrence</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002051"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An occurrence which is relatively high.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0002052 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002052">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An occurrence which is relatively low.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0002051"/>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Gkoutos</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-03-26T11:12:35Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased incidence</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0002052</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased occurrence</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002052"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An occurrence which is relatively low.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0002083 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002083">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Having extra or fewer parts.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Gkoutos</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-09-21T10:41:58Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0002083</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#relational_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered number of</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002083"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Having extra or fewer parts.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PCO_0000001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000001">
-        <obo:IAO_0000112 xml:lang="en"></obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">This a general term that can include every organism of a species living in an area or any subset of them.  Subclasses can be more specific as needed.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">A collection of organisms, all of the same species, that live in the same place.</obo:IAO_0000115>
-        <obo:IAO_0000119>ISBN:0878932739</obo:IAO_0000119>
-        <rdfs:comment xml:lang="en">It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. &apos;Community&apos;, as often used to describe a group of humans, is a type of population. 
-
-Classes for population already  exist in IDO (&apos;organism population&apos;, IDO_0000509) and OBI (&apos;population&apos;, OBI_0000181). The definitions should be standardized across OBO Foundry ontologies and only one term used.</rdfs:comment>
-        <rdfs:label xml:lang="en">population of organisms</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

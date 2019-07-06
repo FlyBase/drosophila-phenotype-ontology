@@ -84,7 +84,7 @@ $(ONT)-full-hermit.owl: $(SRC)
 
 $(ONT)-full-elk.owl: $(SRC)
 	$(ROBOT) merge --input $< \
-		reason --reasoner hermit \
+		reason --reasoner elk \
 		relax \
 		reduce -r ELK \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@

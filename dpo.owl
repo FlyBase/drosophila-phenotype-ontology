@@ -18,7 +18,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:oboInOwl1="ttp://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2019-06-10"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2019-07-06"/>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase_miscellaneous_CV</oboInOwl:default-namespace>
     </owl:Ontology>
     
@@ -467,6 +467,15 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/fbcv#larval_OF">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">larval olfactory system</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/fbcv#lethal_phase -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/fbcv#lethal_phase">
+        <rdfs:comment>lethal phase terms</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -2718,7 +2727,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002432"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>c executes activity in d if and only if c enables p and p occurs_in d.  Assuming no action at a distance by gene products, if a gene product enables (is capable of) a process that occurs in some structure, it must have at least some part in that structure.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:cjm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:cjm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:dos</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2914,6 +2923,12 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <rdfs:label>depends on</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/BFO_0000169"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002503 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002503"/>
     
 
 
@@ -3370,26 +3385,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/fbcv#has_role">
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_role</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has role</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/fbcv#qualifier -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/fbcv#qualifier">
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qualifier</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temporary placeholder - this means that Obol could not infer the correct relation</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qualifier</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/fbcv#towards -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/fbcv#towards">
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">towards</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temporary placeholder - may be placed in OBO_REL; with relational qualities, the additional argument is the &apos;towards&apos; argument; eg sensitivity towards chlorine. Relation binding a relational quality or disposition to the relevant type of entity.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">towards</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -8664,7 +8659,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043052"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -8797,7 +8792,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0009950"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -9050,6 +9045,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-viable</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000350</oboInOwl:id>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">partially lethal - majority live</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -9185,6 +9181,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000351</oboInOwl:id>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note on usage: lethal is appropriate in cases where escaper adults are very rare. The lethal phase prior to becoming a mature adult may be further specified using children terms which specify stage.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lethal</rdfs:label>
     </owl:Class>
@@ -9326,6 +9323,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-lethal</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000352</oboInOwl:id>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stages during which there is significant death prior to mature adulthood can be indicated using one or more stage qualifiers.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">partially lethal - majority die</rdfs:label>
     </owl:Class>
@@ -9409,7 +9407,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00004508"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -9450,7 +9448,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00000001"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -9491,7 +9489,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00007001"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -9532,7 +9530,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00000001"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -9566,7 +9564,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00100313"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#towards"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002503"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -9663,7 +9661,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00100313"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#towards"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002503"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -10249,7 +10247,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007568"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -10402,6 +10400,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasExactSynonym>increased adult mortality</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000385</oboInOwl:id>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">short lived</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -10444,7 +10443,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -10480,7 +10479,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0048060"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -10560,7 +10559,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050879"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -10626,7 +10625,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050879"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -10667,7 +10666,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0048265"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -10706,7 +10705,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007623"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -10746,7 +10745,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0045475"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -10786,7 +10785,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0008062"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -10826,7 +10825,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007612"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -10865,7 +10864,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007613"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -10919,7 +10918,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -10983,7 +10982,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11033,7 +11032,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0035648"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11074,7 +11073,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0045433"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11130,7 +11129,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007635"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11170,7 +11169,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007608"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11210,7 +11209,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050909"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11269,7 +11268,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007605"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11309,7 +11308,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006950"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11350,7 +11349,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006970"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11389,7 +11388,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0009408"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11429,7 +11428,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007632"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11469,7 +11468,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007634"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11509,7 +11508,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0042331"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11550,7 +11549,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007626"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11645,7 +11644,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0060361"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11681,25 +11680,20 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000462"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0060361"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000462"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000417"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000462"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000462"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is the absence of flight (GO:0060361). &apos;flight&apos; is defined as: &apos;$sub_GO:0060361&apos;</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000418</oboInOwl:id>
@@ -11727,7 +11721,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007631"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11767,7 +11761,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007625"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11827,7 +11821,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043153"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11866,7 +11860,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006281"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -11912,7 +11906,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12002,7 +11996,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016049"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12043,7 +12037,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12084,7 +12078,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12125,7 +12119,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12166,7 +12160,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0051321"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12206,7 +12200,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0000278"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12246,7 +12240,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0000910"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12304,7 +12298,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00005093"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12344,7 +12338,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007530"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12661,7 +12655,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006955"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12701,7 +12695,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0001736"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12801,7 +12795,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0042060"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12841,7 +12835,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00000001"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12881,7 +12875,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007155"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12921,7 +12915,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0035187"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -12961,7 +12955,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007562"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13001,7 +12995,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007049"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13041,7 +13035,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007113"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13081,7 +13075,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0048512"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13123,7 +13117,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007637"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13162,7 +13156,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007600"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13204,7 +13198,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050975"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13244,7 +13238,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0009266"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13286,7 +13280,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0009409"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13328,7 +13322,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0009798"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13484,7 +13478,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0030431"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13526,7 +13520,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0055115"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13567,7 +13561,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0055116"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13608,7 +13602,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0042594"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13647,7 +13641,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00100313"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#towards"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002503"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13663,7 +13657,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#towards"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002503"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -13714,7 +13708,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016477"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13852,7 +13846,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007630"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -13910,7 +13904,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -14006,7 +14000,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006979"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -14125,7 +14119,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006897"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -14165,7 +14159,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006887"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -14194,7 +14188,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -14203,7 +14197,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000347"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -14348,6 +14342,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages prior to eclosion from the pupal case (the end of the P-stage).</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>lethal - all die before end of pharate adult stage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:comment>As the P-Stage and the &apos;pharate adult stage&apos; have the same end,  there is no need for a seprate term for &apos;lethal - all die before end of pharate adult stage.</rdfs:comment>
         <rdfs:label xml:lang="en">lethal - all die before end of P-stage</rdfs:label>
     </owl:Class>
@@ -14483,6 +14478,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die before end of first instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14618,6 +14614,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>lethal - all die before end of third instar larval stage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:comment>As the larval stage and third instar larval stage have the same end,  there is no need for a separate term for &apos;lethal - all die before end of third instar larval stage&apos;.</rdfs:comment>
         <rdfs:label xml:lang="en">lethal - all die before end of larval stage</rdfs:label>
     </owl:Class>
@@ -14753,6 +14750,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die before end of second instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14800,6 +14798,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115>A phenotype that is an increase in the rate of death in a population at any stage of life (during development or adulthood), over the rate seen in a wild type control population. </obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased mortality</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14934,6 +14933,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during P-stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -15068,6 +15068,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during first instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -15202,6 +15203,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -15336,6 +15338,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during second instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -15470,6 +15473,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during third instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -15604,6 +15608,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during P-stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -15738,6 +15743,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during first instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -15872,6 +15878,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16006,6 +16013,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during second instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16140,6 +16148,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during third instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16277,6 +16286,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of some significant proportion of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">partially lethal</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16412,6 +16422,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased mortality during development</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16546,6 +16557,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during P-stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16680,6 +16692,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during first instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16814,6 +16827,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during second instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16948,6 +16962,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17082,6 +17097,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during third instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17216,6 +17232,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during pharate adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17350,6 +17367,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die before end of prepupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17484,6 +17502,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die before end of pupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17618,6 +17637,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during pupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17752,6 +17772,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during prepupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17886,6 +17907,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die before end of embryonic stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18020,6 +18042,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during embryonic stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18226,6 +18249,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during pupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18360,6 +18384,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during prepupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18494,6 +18519,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during pharate adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18628,6 +18654,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:comment>This term is agnostic about whether any survive to adulthood.</rdfs:comment>
         <rdfs:label xml:lang="en">majority die during embryonic stage</rdfs:label>
     </owl:Class>
@@ -18763,6 +18790,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during pharate adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18897,6 +18925,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during pupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -19031,6 +19060,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during prepupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -19165,6 +19195,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during embryonic stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -19299,6 +19330,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">lethal - all die during immature adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -19433,6 +19465,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">majority die during immature adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -19567,6 +19600,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of some significant number of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">some die during immature adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -19590,7 +19624,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050953"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -19629,7 +19663,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007620"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -19770,7 +19804,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0018991"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/fbcv#qualifier"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -24982,7 +25016,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016477"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The controlled self-propelled movement of a cell from one site to a destination guided by molecular cues. Cell migration is a central process in the development and maintenance of multicellular organisms.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:cjm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:cjm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ems</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pf</oboInOwl:hasDbXref>

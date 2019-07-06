@@ -25,7 +25,7 @@ OBO_FORMAT_OPTIONS =
 SPARQL_VALIDATION_CHECKS =  equivalent-classes trailing-whitespace owldef-self-reference xref-syntax nolabels
 SPARQL_EXPORTS =            basic-report class-count-by-prefix edges xrefs obsoletes synonyms
 
-TODAY   := $(shell date +%Y-%m-%d)
+TODAY   ?= $(shell date +%Y-%m-%d)
 DOSDP_SCHEMA=                http:// # change to PURL when ready.
 PATTERN_TESTER=              simple_pattern_tester.py
 DOSDPT=                      dosdp-tools
@@ -36,7 +36,7 @@ PATTERN_RELEASE_FILES=       $(PATTERNDIR)/definitions.owl $(PATTERNDIR)/pattern
 FORMATS = $(sort  owl obo json owl)
 FORMATS_INCL_TSV = $(sort $(FORMAT) tsv)
 RELEASE_ARTEFACTS = $(sort  base simple non-classified full base full)
- 
+
 # ----------------------------------------
 # Top-level targets
 # ----------------------------------------
@@ -70,11 +70,11 @@ IMPORT_FILES = $(foreach n,$(IMPORT_ROOTS), $(foreach f,$(FORMATS), $(n).$(f)))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
 
 all_imports: $(IMPORT_FILES)
- 
+
 all_imports_owl: $(foreach n,$(IMPORT_ROOTS), $(n).owl)
- 
+
 all_imports_obo: $(foreach n,$(IMPORT_ROOTS), $(n).obo)
- 
+
 all_imports_json: $(foreach n,$(IMPORT_ROOTS), $(n).json)
 
 
@@ -183,7 +183,7 @@ $(ONT).json: $(ONT)-full.owl
 # Initiating Step: Reason over source
 # ----------------------------------------
 
-ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/`date +%Y-%m-%d`/$@.owl
+ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/$(TODAY)/$@.owl
 
 # by default we use ELK to perform a reason-relax-reduce chain
 # after that we annotate the ontology with the release versionInfo
@@ -194,11 +194,11 @@ OTHER_SRC = $(PATTERNDIR)/definitions.owl
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
 	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/dpo_terms.sparql $@
 
- 
 
- 
 
- 
+
+
+
 
 
 
@@ -224,7 +224,7 @@ $(ONT)-non-classified.owl: $(SRC) $(OTHER_SRC)
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 # foo-simple: (edit->reason,relax,reduce,drop imports, drop every axiom which contains an entity outside the "namespaces of interest")
 # drop every axiom: filter --term-file keep_terms.txt --trim true
-#		remove --select imports --trim false \
+#	remove --select imports --trim false \
 
 simple_seed.txt: $(SRC) $(ONTOLOGYTERMS)
 	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/simple-seed.sparql $@.tmp &&\
@@ -232,13 +232,13 @@ simple_seed.txt: $(SRC) $(ONTOLOGYTERMS)
 	echo "http://www.geneontology.org/formats/oboInOwl#SubsetProperty" >> $@ &&\
 	echo "http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty" >> $@
 
-$(ONT)-simple.owl: $(SRC) simple_seed.txt $(OTHER_SRC) $(ONTOLOGYTERMS)
-	$(ROBOT) merge --input $< $(patsubst %, -i %, $(OTHER_SRC)) --collapse-import-closure true \
+$(ONT)-simple.owl: $(SRC) simple_seed.txt $(OTHER_SRC)
+	$(ROBOT) merge --input $< $(patsubst %, -i %, $(OTHER_SRC)) \
 		reason --reasoner ELK \
 		relax \
 		remove --axioms equivalent \
 		relax \
-		filter --term-file simple_seed.txt --trim true --select "annotations ontology anonymous parents object-properties self" --preserve-structure false \
+		filter --term-file simple_seed.txt --select "annotations ontology anonymous object-properties self" --trim true --signature true \
 		reduce -r ELK \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 
@@ -509,7 +509,7 @@ $(PATTERNDIR)/data/default/%.ofn: $(PATTERNDIR)/data/default/%.tsv $(PATTERNDIR)
 # Generating the seed file from all the TSVs
 $(PATTERNDIR)/all_pattern_terms.txt: $(pattern_term_lists_default)   $(PATTERNDIR)/pattern_owl_seed.txt
 	cat $^ | sort | uniq > $@
-	
+
 $(PATTERNDIR)/pattern_owl_seed.txt: $(PATTERNDIR)/pattern.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/terms.sparql $@; fi
 
@@ -517,7 +517,7 @@ $(PATTERNDIR)/data/default/%.txt: $(PATTERNDIR)/dosdp-patterns/%.yaml $(PATTERND
 	dosdp-tools terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@
 
 .PHONY: prepare_patterns
-prepare_patterns:	
+prepare_patterns:
 	touch $(pattern_term_lists_default)   &&\
   touch $(individual_patterns_default)  
 
@@ -525,8 +525,3 @@ prepare_patterns:
 
 
 include dpo.Makefile
-
-
-
-
-

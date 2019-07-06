@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2019-06-10
+data-version: releases/2019-07-06
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -13,6 +13,7 @@ subsetdef: fbcvsubset_mgiribbons ""
 subsetdef: FlyTed "Testis slim"
 subsetdef: FT_new "FlyTed temp subset for edit tracking purposes"
 subsetdef: larval_OF "larval olfactory system"
+subsetdef: lethal_phase "lethal phase terms"
 subsetdef: RD "terms for rd test ontology"
 subsetdef: relational_slim "Relational slim: types of quality that require an additional entity in order to exist"
 subsetdef: value_slim "Value slim"
@@ -1984,7 +1985,7 @@ synonym: "thermotaxis behaviour defective" EXACT []
 is_a: FBcv:0000683 ! temperature response defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0043052 ! thermotaxis
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0043052 ! thermotaxis
 
 [Term]
@@ -2033,7 +2034,7 @@ synonym: "dorsal-ventral polarity" RELATED [FBC:DOS]
 is_a: FBcv:0000686 ! axis specification defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0009950 ! dorsal/ventral axis specification
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0009950 ! dorsal/ventral axis specification
 
 [Term]
@@ -2079,6 +2080,7 @@ id: FBcv:0000350
 name: partially lethal - majority live
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of some significant proportion of animals in that population, but less that half, prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012)." [FBC:DOS]
+subset: lethal_phase
 synonym: "semi-viable" EXACT []
 is_a: FBcv:0000349 ! viable
 is_a: FBcv:0001347 ! phenotype
@@ -2089,6 +2091,7 @@ name: lethal
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012)." [FBC:DOS, FBC:KM]
 comment: Note on usage: lethal is appropriate in cases where escaper adults are very rare. The lethal phase prior to becoming a mature adult may be further specified using children terms which specify stage.
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -2097,6 +2100,7 @@ name: partially lethal - majority die
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a majority of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012)." [FBC:DOS, FBC:KM, FBC:NB]
 comment: Stages during which there is significant death prior to mature adulthood can be indicated using one or more stage qualifiers.
+subset: lethal_phase
 synonym: "semi-lethal" EXACT []
 is_a: FBcv:0001347 ! phenotype
 
@@ -2131,7 +2135,7 @@ is_a: FBcv:0000354 ! visible
 is_a: PATO:0000014 ! color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in FBbt:00004508 ! eye
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in FBbt:00004508 ! eye
 
 [Term]
@@ -2144,7 +2148,7 @@ is_a: FBcv:0000354 ! visible
 is_a: PATO:0000014 ! color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in FBbt:00000001 ! organism
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in FBbt:00000001 ! organism
 
 [Term]
@@ -2157,7 +2161,7 @@ is_a: FBcv:0001347 ! phenotype
 is_a: PATO:0000117 ! size
 intersection_of: PATO:0000117 ! size
 intersection_of: inheres_in FBbt:00007001 ! anatomical structure
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in FBbt:00007001 ! anatomical structure
 
 [Term]
@@ -2169,7 +2173,7 @@ is_a: FBcv:0000665 ! body size defective
 is_a: PATO:0000587 ! decreased size
 intersection_of: PATO:0000587 ! decreased size
 intersection_of: inheres_in FBbt:00000001 ! organism
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 
 [Term]
 id: FBcv:0000359
@@ -2181,7 +2185,7 @@ is_a: FBcv:0000709 ! cell number defective
 is_a: PATO:0002001 ! has fewer parts of type
 intersection_of: PATO:0002001 ! has fewer parts of type
 intersection_of: inheres_in FBbt:00100313 ! multicellular structure
-intersection_of: towards CL:0000000 ! cell
+intersection_of: RO:0002503 CL:0000000 ! cell
 
 [Term]
 id: FBcv:0000360
@@ -2215,7 +2219,7 @@ is_a: FBcv:0000709 ! cell number defective
 is_a: PATO:0002002 ! has extra parts of type
 intersection_of: PATO:0002002 ! has extra parts of type
 intersection_of: inheres_in FBbt:00100313 ! multicellular structure
-intersection_of: towards CL:0000000 ! cell
+intersection_of: RO:0002503 CL:0000000 ! cell
 
 [Term]
 id: FBcv:0000363
@@ -2426,7 +2430,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007568 ! aging
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007568 ! aging
 
 [Term]
@@ -2434,6 +2438,7 @@ id: FBcv:0000385
 name: short lived
 namespace: phenotypic_class
 def: "Phenotype that is a shorter adult life-span than wild-type." [FBC:DOS]
+subset: lethal_phase
 synonym: "increased adult mortality" EXACT []
 is_a: FBcv:0001347 ! phenotype
 
@@ -2456,7 +2461,7 @@ synonym: "behavioural" EXACT []
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007610 ! behavior
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007610 ! behavior
 
 [Term]
@@ -2471,7 +2476,7 @@ synonym: "gravitaxis behavior defective" RELATED []
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0048060 ! negative gravitaxis
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0048060 ! negative gravitaxis
 
 [Term]
@@ -2496,7 +2501,7 @@ is_a: FBcv:0001347 ! phenotype
 is_a: PATO:0000381 ! decreased frequency
 intersection_of: PATO:0000381 ! decreased frequency
 intersection_of: inheres_in GO:0050879 ! multicellular organismal movement
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0050879 ! multicellular organismal movement
 
 [Term]
@@ -2517,7 +2522,7 @@ is_a: FBcv:0001347 ! phenotype
 is_a: PATO:0000380 ! increased frequency
 intersection_of: PATO:0000380 ! increased frequency
 intersection_of: inheres_in GO:0050879 ! multicellular organismal movement
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0050879 ! multicellular organismal movement
 
 [Term]
@@ -2528,7 +2533,7 @@ def: "Phenotype that is a defect in response to pain (GO:0048265). 'response to 
 is_a: FBcv:0000408 ! stress response defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0048265 ! response to pain
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0048265 ! response to pain
 
 [Term]
@@ -2540,7 +2545,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007623 ! circadian rhythm
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007623 ! circadian rhythm
 
 [Term]
@@ -2552,7 +2557,7 @@ is_a: FBcv:0000414 ! locomotor behavior defective
 is_a: FBcv:0000679 ! circadian behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0045475 ! locomotor rhythm
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0045475 ! locomotor rhythm
 
 [Term]
@@ -2564,7 +2569,7 @@ is_a: FBcv:0000670 ! eclosion defective
 is_a: FBcv:0000679 ! circadian behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0008062 ! eclosion rhythm
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0008062 ! eclosion rhythm
 
 [Term]
@@ -2575,7 +2580,7 @@ def: "Phenotype that is a defect in learning (GO:0007612). 'learning' is defined
 is_a: FBcv:0000387 ! behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007612 ! learning
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007612 ! learning
 
 [Term]
@@ -2586,7 +2591,7 @@ def: "Phenotype that is a defect in memory (GO:0007613). 'memory' is defined as:
 is_a: FBcv:0000387 ! behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007613 ! memory
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007613 ! memory
 
 [Term]
@@ -2614,7 +2619,7 @@ is_a: FBcv:0000679 ! circadian behavior defective
 is_a: FBcv:0000721 ! mating behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0035648 ! circadian mating behavior
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0035648 ! circadian mating behavior
 
 [Term]
@@ -2630,7 +2635,7 @@ is_a: FBcv:0000400 ! mating defective
 is_a: FBcv:0000721 ! mating behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0045433 ! male courtship behavior, veined wing generated song production
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0045433 ! male courtship behavior, veined wing generated song production
 
 [Term]
@@ -2642,7 +2647,7 @@ synonym: "chemosensitive behaviour defective" EXACT []
 is_a: FBcv:0000387 ! behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007635 ! chemosensory behavior
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007635 ! chemosensory behavior
 
 [Term]
@@ -2654,7 +2659,7 @@ synonym: "olfaction defective" EXACT []
 is_a: FBcv:0000681 ! sensory perception defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007608 ! sensory perception of smell
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007608 ! sensory perception of smell
 
 [Term]
@@ -2667,7 +2672,7 @@ synonym: "taste defective" EXACT []
 is_a: FBcv:0000681 ! sensory perception defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0050909 ! sensory perception of taste
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0050909 ! sensory perception of taste
 
 [Term]
@@ -2686,7 +2691,7 @@ synonym: "auditory system defective" RELATED []
 is_a: FBcv:0000681 ! sensory perception defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007605 ! sensory perception of sound
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007605 ! sensory perception of sound
 
 [Term]
@@ -2699,7 +2704,7 @@ synonym: "environmental stress response defective" NARROW []
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0006950 ! response to stress
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0006950 ! response to stress
 
 [Term]
@@ -2710,7 +2715,7 @@ def: "Phenotype that is a defect in response to osmotic stress (GO:0006970). 're
 is_a: FBcv:0000408 ! stress response defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0006970 ! response to osmotic stress
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0006970 ! response to osmotic stress
 
 [Term]
@@ -2722,7 +2727,7 @@ is_a: FBcv:0000408 ! stress response defective
 is_a: FBcv:0000683 ! temperature response defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0009408 ! response to heat
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0009408 ! response to heat
 
 [Term]
@@ -2734,7 +2739,7 @@ synonym: "visual behaviour defective" EXACT []
 is_a: FBcv:0000387 ! behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007632 ! visual behavior
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007632 ! visual behavior
 
 [Term]
@@ -2746,7 +2751,7 @@ synonym: "optomotor behaviour defective" EXACT []
 is_a: FBcv:0000411 ! visual behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007634 ! optokinetic behavior
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007634 ! optokinetic behavior
 
 [Term]
@@ -2759,7 +2764,7 @@ synonym: "phototaxis behaviour defective" RELATED []
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0042331 ! phototaxis
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0042331 ! phototaxis
 
 [Term]
@@ -2771,7 +2776,7 @@ synonym: "locomotor behaviour defective" EXACT []
 is_a: FBcv:0000387 ! behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007626 ! locomotory behavior
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007626 ! locomotory behavior
 
 [Term]
@@ -2804,7 +2809,7 @@ synonym: "flight behaviour defective" NARROW []
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0060361 ! flight
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0060361 ! flight
 
 [Term]
@@ -2814,10 +2819,10 @@ namespace: phenotypic_class
 def: "Phenotype that is the absence of flight (GO:0060361). 'flight' is defined as: '$sub_GO:0060361'" [FBC:DOS]
 comment: This term is agnostic as to the causes of flightlessness. An animal may be flightless for mechanical or behavioral reasons.
 is_a: FBcv:0000417 ! flight defective
-intersection_of: PATO:0000001 ! quality
+is_a: PATO:0000462 ! absent
+intersection_of: PATO:0000462 ! absent
 intersection_of: inheres_in GO:0060361 ! flight
-intersection_of: qualifier PATO:0000462 ! absent
-relationship: qualifier PATO:0000462 ! absent
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 
 [Term]
 id: FBcv:0000419
@@ -2828,7 +2833,7 @@ synonym: "feeding behaviour defective" EXACT []
 is_a: FBcv:0000387 ! behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007631 ! feeding behavior
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007631 ! feeding behavior
 
 [Term]
@@ -2840,7 +2845,7 @@ synonym: "grooming behaviour defective" EXACT []
 is_a: FBcv:0000387 ! behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007625 ! grooming behavior
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007625 ! grooming behavior
 
 [Term]
@@ -2860,7 +2865,7 @@ def: "Phenotype that is a defect in entrainment of circadian clock by photoperio
 is_a: FBcv:0000387 ! behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0043153 ! entrainment of circadian clock by photoperiod
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0043153 ! entrainment of circadian clock by photoperiod
 
 [Term]
@@ -2871,7 +2876,7 @@ def: "Phenotype that is a defect in DNA repair (GO:0006281). 'DNA repair' is def
 is_a: FBcv:0000408 ! stress response defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0006281 ! DNA repair
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0006281 ! DNA repair
 
 [Term]
@@ -2913,7 +2918,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0016049 ! cell growth
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0016049 ! cell growth
 
 [Term]
@@ -2926,7 +2931,7 @@ is_a: FBcv:0001347 ! phenotype
 is_a: PATO:0000117 ! size
 intersection_of: PATO:0000117 ! size
 intersection_of: inheres_in CL:0000000 ! cell
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in CL:0000000 ! cell
 
 [Term]
@@ -2939,7 +2944,7 @@ is_a: FBcv:0001347 ! phenotype
 is_a: PATO:0000052 ! shape
 intersection_of: PATO:0000052 ! shape
 intersection_of: inheres_in CL:0000000 ! cell
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in CL:0000000 ! cell
 
 [Term]
@@ -2952,7 +2957,7 @@ is_a: FBcv:0001347 ! phenotype
 is_a: PATO:0001769 ! positional polarity
 intersection_of: PATO:0001769 ! positional polarity
 intersection_of: inheres_in CL:0000000 ! cell
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in CL:0000000 ! cell
 
 [Term]
@@ -2964,7 +2969,7 @@ synonym: "meiotic" RELATED []
 is_a: FBcv:0000671 ! cell cycle defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0051321 ! meiotic cell cycle
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0051321 ! meiotic cell cycle
 
 [Term]
@@ -2976,7 +2981,7 @@ synonym: "mitotic" RELATED []
 is_a: FBcv:0000671 ! cell cycle defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0000278 ! mitotic cell cycle
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0000278 ! mitotic cell cycle
 
 [Term]
@@ -2987,7 +2992,7 @@ def: "Phenotype that is a defect in cytokinesis (GO:0000910). 'cytokinesis' is d
 is_a: FBcv:0000671 ! cell cycle defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0000910 ! cytokinesis
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0000910 ! cytokinesis
 
 [Term]
@@ -3007,7 +3012,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in FBbt:00005093 ! nervous system
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in FBbt:00005093 ! nervous system
 
 [Term]
@@ -3019,7 +3024,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007530 ! sex determination
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007530 ! sex determination
 
 [Term]
@@ -3135,7 +3140,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0006955 ! immune response
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0006955 ! immune response
 
 [Term]
@@ -3149,7 +3154,7 @@ synonym: "tissue polarity defective" BROAD []
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0001736 ! establishment of planar polarity
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0001736 ! establishment of planar polarity
 
 [Term]
@@ -3170,7 +3175,7 @@ def: "Phenotype that is a defect in wound healing (GO:0042060). 'wound healing' 
 is_a: FBcv:0000408 ! stress response defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0042060 ! wound healing
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0042060 ! wound healing
 
 [Term]
@@ -3182,7 +3187,7 @@ is_a: FBcv:0000354 ! visible
 is_a: FBcv:0000357 ! size defective
 intersection_of: PATO:0000117 ! size
 intersection_of: inheres_in FBbt:00000001 ! organism
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in FBbt:00000001 ! organism
 
 [Term]
@@ -3194,7 +3199,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007155 ! cell adhesion
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007155 ! cell adhesion
 
 [Term]
@@ -3206,7 +3211,7 @@ synonym: "hatching behaviour defective" EXACT []
 is_a: FBcv:0000387 ! behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0035187 ! hatching behavior
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0035187 ! hatching behavior
 
 [Term]
@@ -3218,7 +3223,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007562 ! eclosion
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007562 ! eclosion
 
 [Term]
@@ -3230,7 +3235,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007049 ! cell cycle
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007049 ! cell cycle
 
 [Term]
@@ -3242,7 +3247,7 @@ synonym: "endocycle defective" EXACT []
 is_a: FBcv:0000432 ! mitotic cell cycle defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007113 ! endomitotic cell cycle
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007113 ! endomitotic cell cycle
 
 [Term]
@@ -3254,7 +3259,7 @@ is_a: FBcv:0000387 ! behavior defective
 is_a: FBcv:0000394 ! circadian rhythm defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0048512 ! circadian behavior
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0048512 ! circadian behavior
 created_by: djs93
 creation_date: 2009-11-30T11:06:35Z
@@ -3267,7 +3272,7 @@ def: "Phenotype that is a defect in proboscis extension reflex (GO:0007637). 'pr
 is_a: FBcv:0000403 ! chemosensitive behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007637 ! proboscis extension reflex
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007637 ! proboscis extension reflex
 
 [Term]
@@ -3279,7 +3284,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007600 ! sensory perception
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007600 ! sensory perception
 created_by: djs93
 creation_date: 2010-02-23T12:28:26Z
@@ -3293,7 +3298,7 @@ synonym: "touch perception defective" RELATED []
 is_a: FBcv:0000681 ! sensory perception defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0050975 ! sensory perception of touch
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0050975 ! sensory perception of touch
 
 [Term]
@@ -3305,7 +3310,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0009266 ! response to temperature stimulus
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0009266 ! response to temperature stimulus
 created_by: djs93
 creation_date: 2010-02-23T12:51:02Z
@@ -3319,7 +3324,7 @@ is_a: FBcv:0000408 ! stress response defective
 is_a: FBcv:0000683 ! temperature response defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0009409 ! response to cold
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0009409 ! response to cold
 created_by: djs93
 creation_date: 2010-02-23T02:11:27Z
@@ -3334,7 +3339,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0009798 ! axis specification
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0009798 ! axis specification
 
 [Term]
@@ -3395,7 +3400,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0030431 ! sleep
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0030431 ! sleep
 created_by: djs93
 creation_date: 2010-09-20T12:06:13Z
@@ -3408,7 +3413,7 @@ def: "Phenotype that is a defect in entry into diapause (GO:0055115). 'entry int
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0055115 ! entry into diapause
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0055115 ! entry into diapause
 created_by: djs93
 creation_date: 2010-09-20T12:06:28Z
@@ -3421,7 +3426,7 @@ def: "Phenotype that is a defect in entry into reproductive diapause (GO:0055116
 is_a: FBcv:0000706 ! diapause defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0055116 ! entry into reproductive diapause
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0055116 ! entry into reproductive diapause
 created_by: djs93
 creation_date: 2010-09-20T12:21:29Z
@@ -3434,7 +3439,7 @@ def: "Phenotype that is a defect in response to starvation (GO:0042594). 'respon
 is_a: FBcv:0000408 ! stress response defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0042594 ! response to starvation
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0042594 ! response to starvation
 
 [Term]
@@ -3447,9 +3452,9 @@ is_a: FBcv:0001347 ! phenotype
 is_a: PATO:0002083 ! altered number of
 intersection_of: PATO:0002083 ! altered number of
 intersection_of: inheres_in FBbt:00100313 ! multicellular structure
-intersection_of: towards CL:0000000 ! cell
+intersection_of: RO:0002503 CL:0000000 ! cell
 relationship: inheres_in FBbt:00100313 ! multicellular structure
-relationship: towards CL:0000000 ! cell
+relationship: RO:0002503 CL:0000000 ! cell
 
 [Term]
 id: FBcv:0000713
@@ -3469,7 +3474,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0016477 ! cell migration
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0016477 ! cell migration
 
 [Term]
@@ -3514,7 +3519,7 @@ is_a: FBcv:0000414 ! locomotor behavior defective
 is_a: FBcv:0000415 ! jumping defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007630 ! jump response
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007630 ! jump response
 created_by: djs93
 creation_date: 2011-03-11T08:03:28Z
@@ -3554,7 +3559,7 @@ def: "Phenotype that is a defect in response to oxidative stress (GO:0006979). '
 is_a: FBcv:0000408 ! stress response defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0006979 ! response to oxidative stress
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0006979 ! response to oxidative stress
 
 [Term]
@@ -3595,7 +3600,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0006897 ! endocytosis
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0006897 ! endocytosis
 
 [Term]
@@ -3606,7 +3611,7 @@ subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0006887 ! exocytosis
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0006887 ! exocytosis
 
 [Term]
@@ -3619,8 +3624,8 @@ subset: do_not_annotate
 synonym: "phenotypic class" EXACT []
 is_a: FBcv:0000347 ! phenotypic class
 intersection_of: PATO:0000001 ! quality
-intersection_of: qualifier PATO:0000460 ! abnormal
-relationship: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
+relationship: RO:0002573 PATO:0000460 ! has modifier abnormal
 
 [Term]
 id: FBcv:0002000
@@ -3628,6 +3633,7 @@ name: lethal - all die before end of P-stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages prior to eclosion from the pupal case (the end of the P-stage)." [FBC:DOS]
 comment: As the P-Stage and the 'pharate adult stage' have the same end,  there is no need for a seprate term for 'lethal - all die before end of pharate adult stage.
+subset: lethal_phase
 synonym: "lethal - all die before end of pharate adult stage" EXACT []
 is_a: FBcv:0001347 ! phenotype
 
@@ -3636,6 +3642,7 @@ id: FBcv:0002001
 name: lethal - all die before end of first instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the first instar larval stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3644,6 +3651,7 @@ name: lethal - all die before end of larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the larval stage." [FBC:DOS]
 comment: As the larval stage and third instar larval stage have the same end,  there is no need for a separate term for 'lethal - all die before end of third instar larval stage'.
+subset: lethal_phase
 synonym: "lethal - all die before end of third instar larval stage" EXACT []
 is_a: FBcv:0001347 ! phenotype
 
@@ -3652,6 +3660,7 @@ id: FBcv:0002003
 name: lethal - all die before end of second instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the second instar larval stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3660,6 +3669,7 @@ name: increased mortality
 namespace: phenotypic_class
 def: "A phenotype that is an increase in the rate of death in a population at any stage of life (during development or adulthood), over the rate seen in a wild type control population. " [FBC:DOS]
 subset: fbcvsubset_mgiribbons
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 relationship: inheres_in FBcv:0006003 ! population of Drosophila
 
@@ -3668,6 +3678,7 @@ id: FBcv:0002005
 name: lethal - all die during P-stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the P-stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3675,6 +3686,7 @@ id: FBcv:0002006
 name: lethal - all die during first instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the first instar larval stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3682,6 +3694,7 @@ id: FBcv:0002007
 name: lethal - all die during larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the larval stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3689,6 +3702,7 @@ id: FBcv:0002008
 name: lethal - all die during second instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the second instar larval stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3696,6 +3710,7 @@ id: FBcv:0002009
 name: lethal - all die during third instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the third instar larval stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3703,6 +3718,7 @@ id: FBcv:0002010
 name: majority die during P-stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the P-stage." [] {comment="FBC:DOS"}
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3710,6 +3726,7 @@ id: FBcv:0002011
 name: majority die during first instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the first instar larval stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3717,6 +3734,7 @@ id: FBcv:0002012
 name: majority die during larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the larval stage." [] {comment="FBC:DOS"}
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3724,6 +3742,7 @@ id: FBcv:0002013
 name: majority die during second instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the second instar larval stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3731,6 +3750,7 @@ id: FBcv:0002014
 name: majority die during third instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the third instar larval stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3738,6 +3758,7 @@ id: FBcv:0002015
 name: partially lethal
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of some significant proportion of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012)." [FBC:DOS, FBC:KM]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3745,6 +3766,7 @@ id: FBcv:0002019
 name: increased mortality during development
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012)." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3752,6 +3774,7 @@ id: FBcv:0002020
 name: some die during P-stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the P-stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3759,6 +3782,7 @@ id: FBcv:0002021
 name: some die during first instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the first instar larval stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3766,6 +3790,7 @@ id: FBcv:0002022
 name: some die during second instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the second instar larval stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3773,6 +3798,7 @@ id: FBcv:0002023
 name: some die during larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the larval stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3780,6 +3806,7 @@ id: FBcv:0002024
 name: some die during third instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the third instar larval stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3787,6 +3814,7 @@ id: FBcv:0002025
 name: lethal - all die during pharate adult stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the pharate adult stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3794,6 +3822,7 @@ id: FBcv:0002026
 name: lethal - all die before end of prepupal stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the prepupal stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3801,6 +3830,7 @@ id: FBcv:0002027
 name: lethal - all die before end of pupal stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the pupal stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3808,6 +3838,7 @@ id: FBcv:0002030
 name: lethal - all die during pupal stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the pupal stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3815,6 +3846,7 @@ id: FBcv:0002031
 name: lethal - all die during prepupal stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the prepupal stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3822,6 +3854,7 @@ id: FBcv:0002032
 name: lethal - all die before end of embryonic stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the embryonic stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3829,6 +3862,7 @@ id: FBcv:0002033
 name: lethal - all die during embryonic stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the embryonic stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3836,6 +3870,7 @@ id: FBcv:0002034
 name: majority die during pupal stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the pupal stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3843,6 +3878,7 @@ id: FBcv:0002035
 name: majority die during prepupal stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the prepupal stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3850,6 +3886,7 @@ id: FBcv:0002036
 name: majority die during pharate adult stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the pharate adult stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3858,6 +3895,7 @@ name: majority die during embryonic stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the embryonic stage." [FBC:DOS]
 comment: This term is agnostic about whether any survive to adulthood.
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3865,6 +3903,7 @@ id: FBcv:0002038
 name: some die during pharate adult stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the pharate adult stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3872,6 +3911,7 @@ id: FBcv:0002039
 name: some die during pupal stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the pupal stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3879,6 +3919,7 @@ id: FBcv:0002040
 name: some die during prepupal stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the prepupal stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3886,6 +3927,7 @@ id: FBcv:0002041
 name: some die during embryonic stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the embryonic stage." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3893,6 +3935,7 @@ id: FBcv:0002042
 name: lethal - all die during immature adult stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012))." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3900,6 +3943,7 @@ id: FBcv:0002050
 name: majority die during immature adult stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012))." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3907,6 +3951,7 @@ id: FBcv:0002051
 name: some die during immature adult stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of some significant number of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012))." [FBC:DOS]
+subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -3917,7 +3962,7 @@ def: "Phenotype that is a defect in sensory perception of light stimulus (GO:005
 is_a: FBcv:0000681 ! sensory perception defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0050953 ! sensory perception of light stimulus
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0050953 ! sensory perception of light stimulus
 
 [Term]
@@ -3928,7 +3973,7 @@ def: "Phenotype that is a defect in copulation (GO:0007620). 'copulation' is def
 is_a: FBcv:0000400 ! mating defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0007620 ! copulation
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0007620 ! copulation
 
 [Term]
@@ -3971,7 +4016,7 @@ comment: This term should only be used to report defects specifically in oviposi
 is_a: FBcv:0000387 ! behavior defective
 intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0018991 ! oviposition
-intersection_of: qualifier PATO:0000460 ! abnormal
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 relationship: inheres_in GO:0018991 ! oviposition
 
 [Term]
@@ -11432,7 +11477,7 @@ def: "x actively participates in y if and only if x participates in y and x real
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "agent in" xsd:string
-is_a: participates_in ! participates_in
+is_a: participates_in ! participates in
 inverse_of: RO:0002218 ! has active participant
 
 [Typedef]
@@ -11674,7 +11719,7 @@ subset: ro-eco
 subset: RO:0002259
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates_in
+is_a: participates_in ! participates in
 
 [Typedef]
 id: RO:0002354
@@ -12541,7 +12586,7 @@ subset: RO:0002259
 xref: RO:0002352
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates_in
+is_a: participates_in ! participates in
 
 [Typedef]
 id: involved_in
@@ -12757,11 +12802,6 @@ is_transitive: true
 is_a: RO:0002222 ! temporally related to
 
 [Typedef]
-id: qualifier
-name: qualifier
-comment: temporary placeholder - this means that Obol could not infer the correct relation
-
-[Typedef]
 id: reciprocal_of
 name: reciprocal_of
 namespace: quality
@@ -12829,9 +12869,4 @@ property_value: IAO:0000118 "io" xsd:string
 domain: BFO:0000003 ! occurrent
 range: BFO:0000003 ! occurrent
 is_a: RO:0002222 ! temporally related to
-
-[Typedef]
-id: towards
-name: towards
-comment: temporary placeholder - may be placed in OBO_REL; with relational qualities, the additional argument is the 'towards' argument; eg sensitivity towards chlorine. Relation binding a relational quality or disposition to the relevant type of entity.
 

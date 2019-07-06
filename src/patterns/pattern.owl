@@ -8,9 +8,6 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 Ontology(<urn:unnamed:ontology#ont1>
 
-Declaration(Class(<http://purl.obolibrary.org/obo/CARO_0000012>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FBcv_0006003>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FBdv_00005259>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000460>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001062>))
@@ -18,16 +15,11 @@ Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalEntity
 Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoIIpreceded.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoIItowards.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoUnmodifiedEntity.yaml>))
-Declaration(Class(<http://purl.obolibrary.org/obo/fbcv/patterns/dpoLethalAllDieBeforeEndOf.yaml>))
-Declaration(Class(<http://purl.obolibrary.org/obo/fbcv/patterns/dpoLethalAllDieDuring.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns/abnormalAnatomicalEntity.yaml>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000062>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/FBcv_0008000>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/FBdv_00018001>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002314>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002351>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002503>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002573>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
@@ -59,20 +51,6 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/dpo/patterns/dpoIItowards.yaml
 
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/dpo/patterns/dpoUnmodifiedEntity.yaml> "dpoUnmodifiedEntity"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/dpo/patterns/dpoUnmodifiedEntity.yaml> ObjectIntersectionOf(owl:Thing ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> owl:Thing)))
-
-# Class: <http://purl.obolibrary.org/obo/fbcv/patterns/dpoLethalAllDieBeforeEndOf.yaml> (lethal - all die before end of 'stage')
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/fbcv/patterns/dpoLethalAllDieBeforeEndOf.yaml> "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the 'stage'."^^xsd:string)
-AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/fbcv/patterns/dpoLethalAllDieBeforeEndOf.yaml> "dpoLethalAllDieBeforeEndOf"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/fbcv/patterns/dpoLethalAllDieBeforeEndOf.yaml> "lethal - all die before end of 'stage'"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/fbcv/patterns/dpoLethalAllDieBeforeEndOf.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBcv_0006003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CARO_0000012> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBcv_0008000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000062> <http://purl.obolibrary.org/obo/FBdv_00005259>)))) ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CARO_0000012> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBcv_0008000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000062> <http://purl.obolibrary.org/obo/FBdv_00005259>)))))))
-
-# Class: <http://purl.obolibrary.org/obo/fbcv/patterns/dpoLethalAllDieDuring.yaml> (lethal - all die before end of 'stage')
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/fbcv/patterns/dpoLethalAllDieDuring.yaml> "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the 'stage'."^^xsd:string)
-AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/fbcv/patterns/dpoLethalAllDieDuring.yaml> "dpoLethalAllDieDuring"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/fbcv/patterns/dpoLethalAllDieDuring.yaml> "lethal - all die before end of 'stage'"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/fbcv/patterns/dpoLethalAllDieDuring.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBcv_0006003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CARO_0000012> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBcv_0008000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBdv_00018001> <http://purl.obolibrary.org/obo/FBdv_00005259>)))) ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CARO_0000012> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBcv_0008000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FBdv_00018001> <http://purl.obolibrary.org/obo/FBdv_00005259>)))))))
 
 # Class: <http://purl.obolibrary.org/obo/upheno/patterns/abnormalAnatomicalEntity.yaml> (abnormal 'anatomical entity')
 

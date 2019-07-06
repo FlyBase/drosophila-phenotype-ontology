@@ -11,9 +11,16 @@ Ontology(<urn:unnamed:ontology#ont1>
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000460>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001062>))
+Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalEntity.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoIIpreceded.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoIItowards.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoUnmodifiedEntity.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns/abnormalAnatomicalEntity.yaml>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000062>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002314>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002503>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002573>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
@@ -24,6 +31,26 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 ############################
 #   Classes
 ############################
+
+# Class: <http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalEntity.yaml> (<http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalEntity.yaml>)
+
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalEntity.yaml> "dpoAbnormalEntity"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalEntity.yaml> ObjectIntersectionOf(owl:Thing ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> owl:Thing) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>)))
+
+# Class: <http://purl.obolibrary.org/obo/dpo/patterns/dpoIIpreceded.yaml> (<http://purl.obolibrary.org/obo/dpo/patterns/dpoIIpreceded.yaml>)
+
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/dpo/patterns/dpoIIpreceded.yaml> "dpoIIpreceded"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/dpo/patterns/dpoIIpreceded.yaml> ObjectIntersectionOf(owl:Thing ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(owl:Thing ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000062> owl:Thing)))))
+
+# Class: <http://purl.obolibrary.org/obo/dpo/patterns/dpoIItowards.yaml> (<http://purl.obolibrary.org/obo/dpo/patterns/dpoIItowards.yaml>)
+
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/dpo/patterns/dpoIItowards.yaml> "dpoIItowards"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/dpo/patterns/dpoIItowards.yaml> ObjectIntersectionOf(owl:Thing ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> owl:Thing) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002503> owl:Thing)))
+
+# Class: <http://purl.obolibrary.org/obo/dpo/patterns/dpoUnmodifiedEntity.yaml> (<http://purl.obolibrary.org/obo/dpo/patterns/dpoUnmodifiedEntity.yaml>)
+
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/dpo/patterns/dpoUnmodifiedEntity.yaml> "dpoUnmodifiedEntity"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/dpo/patterns/dpoUnmodifiedEntity.yaml> ObjectIntersectionOf(owl:Thing ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> owl:Thing)))
 
 # Class: <http://purl.obolibrary.org/obo/upheno/patterns/abnormalAnatomicalEntity.yaml> (abnormal 'anatomical entity')
 
