@@ -105,7 +105,7 @@ all_patterns: $(PATTERN_FILES)
 ## -- dosdp pattern targets --
 ##
 
-OBO_REPORT = $(ONT)-edit-obo-report
+OBO_REPORT = $(SRC)-obo-report
 REPORTS = $(OBO_REPORT)
 REPORT_FILES = $(patsubst %, $(REPORTDIR)/%.tsv, $(REPORTS))
 
@@ -441,7 +441,7 @@ sparql_test: $(SRC)
 # ----------------------------------------
 # ROBOT report
 # ----------------------------------------
-reports/%-obo-report.tsv: %.owl
+reports/%-obo-report.tsv: %
 	$(ROBOT) report -i $< --fail-on $(REPORT_FAIL_ON) -o $@
 
 # ----------------------------------------
