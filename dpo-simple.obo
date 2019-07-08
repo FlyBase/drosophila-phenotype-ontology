@@ -101,7 +101,6 @@ def: "A phenotype of a population that is the death of all animals in that popul
 comment: Note on usage: lethal is appropriate in cases where escaper adults are very rare. The lethal phase prior to becoming a mature adult may be further specified using children terms which specify stage.
 subset: lethal_phase
 is_a: FBcv:0002019 ! increased mortality during development
-is_a: FBcv:0002027 ! lethal - all die before end of pupal stage
 
 [Term]
 id: FBcv:0000352
@@ -1256,7 +1255,7 @@ def: "A phenotype of a population that is the death of all animals in that popul
 comment: As the P-Stage and the 'pharate adult stage' have the same end,  there is no need for a seprate term for 'lethal - all die before end of pharate adult stage.
 subset: lethal_phase
 synonym: "lethal - all die before end of pharate adult stage" EXACT []
-is_a: FBcv:0002027 ! lethal - all die before end of pupal stage
+is_a: FBcv:0002004 ! increased mortality
 
 [Term]
 id: FBcv:0002001
@@ -1264,7 +1263,7 @@ name: lethal - all die before end of first instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the first instar larval stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002032 ! lethal - all die before end of embryonic stage
+is_a: FBcv:0002004 ! increased mortality
 
 [Term]
 id: FBcv:0002002
@@ -1274,7 +1273,7 @@ def: "A phenotype of a population that is the death of all animals in that popul
 comment: As the larval stage and third instar larval stage have the same end,  there is no need for a separate term for 'lethal - all die before end of third instar larval stage'.
 subset: lethal_phase
 synonym: "lethal - all die before end of third instar larval stage" EXACT []
-is_a: FBcv:0002003 ! lethal - all die before end of second instar larval stage
+is_a: FBcv:0002004 ! increased mortality
 
 [Term]
 id: FBcv:0002003
@@ -1282,7 +1281,7 @@ name: lethal - all die before end of second instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the second instar larval stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002001 ! lethal - all die before end of first instar larval stage
+is_a: FBcv:0002004 ! increased mortality
 
 [Term]
 id: FBcv:0002004
@@ -1299,7 +1298,6 @@ name: lethal - all die during P-stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the P-stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002003 ! lethal - all die before end of second instar larval stage
 is_a: FBcv:0002010 ! majority die during P-stage
 
 [Term]
@@ -1327,7 +1325,6 @@ def: "A phenotype of a population that is the death of all animals in that popul
 subset: lethal_phase
 is_a: FBcv:0002007 ! lethal - all die during larval stage
 is_a: FBcv:0002013 ! majority die during second instar larval stage
-is_a: FBcv:0002032 ! lethal - all die before end of embryonic stage
 
 [Term]
 id: FBcv:0002009
@@ -1335,7 +1332,6 @@ name: lethal - all die during third instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the third instar larval stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002001 ! lethal - all die before end of first instar larval stage
 is_a: FBcv:0002007 ! lethal - all die during larval stage
 is_a: FBcv:0002014 ! majority die during third instar larval stage
 
@@ -1445,7 +1441,6 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the pharate adult stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0002005 ! lethal - all die during P-stage
-is_a: FBcv:0002026 ! lethal - all die before end of prepupal stage
 is_a: FBcv:0002036 ! majority die during pharate adult stage
 
 [Term]
@@ -1454,7 +1449,7 @@ name: lethal - all die before end of prepupal stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the prepupal stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002002 ! lethal - all die before end of larval stage
+is_a: FBcv:0002004 ! increased mortality
 
 [Term]
 id: FBcv:0002027
@@ -1462,7 +1457,7 @@ name: lethal - all die before end of pupal stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the pupal stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002026 ! lethal - all die before end of prepupal stage
+is_a: FBcv:0002004 ! increased mortality
 
 [Term]
 id: FBcv:0002030
@@ -1470,7 +1465,6 @@ name: lethal - all die during pupal stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the pupal stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002002 ! lethal - all die before end of larval stage
 is_a: FBcv:0002005 ! lethal - all die during P-stage
 is_a: FBcv:0002034 ! majority die during pupal stage
 
@@ -1573,7 +1567,6 @@ name: lethal - all die during immature adult stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012))." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002027 ! lethal - all die before end of pupal stage
 is_a: FBcv:0002050 ! majority die during immature adult stage
 
 [Term]

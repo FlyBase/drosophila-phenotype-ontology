@@ -5,20 +5,21 @@
 FBDVPURL=http://purl.obolibrary.org/obo/FBdv_
 #OTHER_SRC:= $(OTHER_SRC) components/lethal_class_hierarchy.owl
 
-imports/fbdv_filter_seed.txt: $(SRC) #$(ONTOLOGYTERMS) #prepare_patterns
-	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/object-properties.sparql $@_prop.tmp &&\
-	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/terms.sparql $@_fbdv.tmp &&\
-	grep -Eo '($(FBDVPURL))[^[:space:]"]+' $@_fbdv.tmp | sort | uniq > $@_fbdv_red.tmp &&\
-	cat $@_fbdv_red.tmp $@_prop.tmp | sort | uniq > $@ &&\
-	rm $@_prop.tmp $@_fbdv.tmp $@_fbdv_red.tmp 
+#imports/fbdv_filter_seed.txt: $(SRC) #$(ONTOLOGYTERMS) #prepare_patterns
+#	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/object-properties.sparql $@_prop.tmp &&\
+#	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/terms.sparql $@_fbdv.tmp &&\
+#	grep -Eo '($(FBDVPURL))[^[:space:]"]+' $@_fbdv.tmp | sort | uniq > $@_fbdv_red.tmp &&\
+#	cat $@_fbdv_red.tmp $@_prop.tmp | sort | uniq > $@ &&\
+#	rm $@_prop.tmp $@_fbdv.tmp $@_fbdv_red.tmp 
 
-imports/fbdv_import.owl: mirror/fbdv.owl imports/fbdv_terms_combined.txt imports/fbdv_filter_seed.txt
-	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T imports/fbdv_terms_combined.txt --method BOT \
-		filter --term-file imports/fbdv_filter_seed.txt --trim true --select "annotations anonymous parents self" --preserve-structure false \
-		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-.PRECIOUS: imports/fbdv_import.owl
+#imports/fbdv_import.owl: mirror/fbdv.owl imports/fbdv_terms_combined.txt imports/fbdv_filter_seed.txt
+#	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T imports/fbdv_terms_combined.txt --method BOT \
+#		filter --term-file imports/fbdv_filter_seed.txt --trim true --select "annotations anonymous parents self" --preserve-structure false \
+#		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+#.PRECIOUS: imports/fbdv_import.owl
 
 components/lethal_class_hierarchy.owl: $(SRC) tmp/lethal_terms.txt
+	rm $@ && touch $@
 	$(ROBOT) merge --input $< \
 		convert --output tmp/edit.owx
 	Konclude classification -i tmp/edit.owx -o tmp/konclude-edit.owx
@@ -136,3 +137,22 @@ reports/chado_load_check_simple.txt: $(ONT)-simple.obo install_flybase_scripts
 all_reports: all_reports_onestep $(REPORT_FILES)
 
 prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
+	
+# Simple is overwritten to strip out duplicate names and definitions.
+
+simple: $(SRC)
+	$(ROBOT) merge --input $< $(patsubst %, -i %, $(OTHER_SRC)) \
+		reason --reasoner ELK \
+		relax \
+		remove --axioms equivalent \
+		relax \
+		filter --term-file simple_seed.txt --select "annotations ontology anonymous object-properties self" --trim true \
+		reduce -r ELK \
+		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl dpo-simple.obo
+
+$(ONT)-simple.obo: $(ONT)-simple.owl
+	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
+	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
+	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\nname[:]/def:/g; print' > $@
+	#../scripts/auto_def_sub.pl  oort/$@ > $@
+	rm -f $@.tmp.obo $@.tmp
