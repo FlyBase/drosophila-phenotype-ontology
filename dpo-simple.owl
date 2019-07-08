@@ -32,6 +32,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
@@ -154,7 +160,13 @@
 
     <!-- http://purl.obolibrary.org/obo/RO_0002503 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002503"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002503">
+        <obo:IAO_0000115>q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2</obo:IAO_0000115>
+        <obo:IAO_0000116>This relation is provided in order to support the use of relational qualities such as &apos;concentration of&apos;; for example, the concentration of C in V is a quality that inheres in V, but pertains to C.</obo:IAO_0000116>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/20064205"/>
+        <rdfs:label>towards</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -379,7 +391,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000350">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000349"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002015"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of some significant proportion of animals in that population, but less that half, prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-viable</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -399,7 +411,8 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0000351 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000351">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002019"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002027"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000351</oboInOwl:id>
@@ -420,7 +433,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0000352 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000352">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002015"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a majority of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-lethal</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -1047,7 +1060,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0000385 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0000385">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a shorter adult life-span than wild-type.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>increased adult mortality</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -3110,7 +3123,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002000">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002027"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages prior to eclosion from the pupal case (the end of the P-stage).</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>lethal - all die before end of pharate adult stage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
@@ -3130,7 +3143,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002032"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3148,7 +3161,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002003"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>lethal - all die before end of third instar larval stage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
@@ -3168,7 +3181,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002003 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002001"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3205,7 +3218,8 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002005 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002010"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3223,7 +3237,8 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002007"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002011"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3241,7 +3256,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002012"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3259,7 +3274,9 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002008 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002008">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002007"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002013"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002032"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3277,7 +3294,9 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002009 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002007"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002014"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3295,7 +3314,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002020"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3313,7 +3332,8 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002012"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002021"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3331,7 +3351,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002012 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002012">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002023"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3349,7 +3369,8 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002013 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002012"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002022"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3367,7 +3388,8 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002014">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002012"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002024"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3385,7 +3407,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002015 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002015">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002019"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of some significant proportion of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3404,7 +3426,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002019 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002019">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3422,7 +3444,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002020 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002020">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3440,7 +3462,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002021 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002021">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002023"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3458,7 +3480,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002022 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002022">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002023"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3476,7 +3498,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002023 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002023">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3494,7 +3516,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002024 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002024">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002023"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3512,7 +3534,9 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002025 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002025">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002026"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002036"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3530,7 +3554,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002026 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002026">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002002"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3548,7 +3572,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002027 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002027">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002026"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3566,7 +3590,9 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002030 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002030">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002002"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002034"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3584,7 +3610,8 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002031 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002031">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002035"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3602,7 +3629,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002032 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002032">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3620,7 +3647,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002033 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002033">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002037"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3638,7 +3665,8 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002034 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002034">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002010"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002039"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3656,7 +3684,8 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002035">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002010"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002040"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3674,7 +3703,8 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002036 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002036">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002010"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002038"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3692,7 +3722,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002037 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002037">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002041"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3711,7 +3741,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002038 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002038">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002020"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3729,7 +3759,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002039 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002039">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002020"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3747,7 +3777,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002040 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002040">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002020"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3765,7 +3795,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002041 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002041">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3783,7 +3813,8 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002042 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002042">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002027"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002050"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3801,7 +3832,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002050 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002050">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002051"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
@@ -3819,7 +3850,7 @@
     <!-- http://purl.obolibrary.org/obo/FBcv_0002051 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0002051">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of some significant number of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>

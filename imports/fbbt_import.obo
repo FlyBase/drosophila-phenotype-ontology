@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2019-06-10/imports/fbbt_import.owl
+data-version: dpo/releases/2019-07-08/imports/fbbt_import.owl
 ontology: dpo/imports/fbbt_import
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/FBbt_00001727>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FBbt_00003004>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002131>))\n\n\nDisjointClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002131> <http://purl.obolibrary.org/obo/FBbt_00001727>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002131> <http://purl.obolibrary.org/obo/FBbt_00003004>))\n)
 
@@ -1285,6 +1285,18 @@ created_by: djs93
 creation_date: 2010-11-02T02:25:04Z
 
 [Term]
+id: FBbt:00100317
+name: gland
+namespace: fly_anatomy.ontology
+def: "Any multicellular structure (FBbt:00100313) that capable of some secretion (GO:0046903)." [FBC:auto_generated_definition]
+is_a: FBbt:00100313 ! multicellular structure
+intersection_of: FBbt:00100313 ! multicellular structure
+intersection_of: capable_of GO:0046903 ! secretion
+relationship: capable_of GO:0046903 ! secretion
+created_by: djs93
+creation_date: 2010-11-02T05:39:45Z
+
+[Term]
 id: FBbt:00100318
 name: somatic cell
 namespace: fly_anatomy.ontology
@@ -1365,6 +1377,32 @@ synonym: "organ system process" EXACT []
 is_a: GO:0032501 ! multicellular organismal process
 
 [Term]
+id: GO:0005575
+name: cellular_component
+namespace: fly_anatomy.ontology
+def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao-1337158144]
+synonym: "cell or subcellular entity" EXACT []
+synonym: "cellular component" EXACT []
+synonym: "subcellular entity" RELATED [NIF_Subcellular:nlx_subcell_100315]
+
+[Term]
+id: GO:0005623
+name: cell
+namespace: fly_anatomy.ontology
+def: "The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." [GOC:go_curators]
+is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0006810
+name: transport
+namespace: fly_anatomy.ontology
+def: "The directed movement of substances (such as macromolecules, small molecules, ions) or cellular components (such as complexes and organelles) into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter, pore or motor protein." [GOC:dos, GOC:dph, GOC:jl, GOC:mah]
+synonym: "single-organism transport" RELATED []
+synonym: "small molecule transport" NARROW []
+synonym: "solute:solute exchange" NARROW []
+is_a: GO:0051234 ! establishment of localization
+
+[Term]
 id: GO:0006950
 name: response to stress
 namespace: fly_anatomy.ontology
@@ -1372,6 +1410,28 @@ def: "Any process that results in a change in state or activity of a cell or an 
 synonym: "response to abiotic stress" RELATED []
 synonym: "response to biotic stress" RELATED []
 is_a: GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0007154
+name: cell communication
+namespace: fly_anatomy.ontology
+def: "Any process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:mah]
+is_a: GO:0009987 ! cellular process
+
+[Term]
+id: GO:0007165
+name: signal transduction
+namespace: fly_anatomy.ontology
+def: "The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell." [GOC:go_curators, GOC:mtg_signaling_feb11]
+synonym: "signaling cascade" NARROW []
+synonym: "signaling pathway" RELATED []
+synonym: "signalling cascade" NARROW []
+synonym: "signalling pathway" RELATED [GOC:mah]
+is_a: GO:0009987 ! cellular process
+is_a: GO:0050794 ! regulation of cellular process
+relationship: part_of GO:0007154 ! cell communication
+relationship: part_of GO:0023052 ! signaling
+relationship: part_of GO:0051716 ! cellular response to stimulus
 
 [Term]
 id: GO:0007275
@@ -1644,6 +1704,18 @@ synonym: "single organism process" RELATED []
 synonym: "single-organism process" RELATED []
 
 [Term]
+id: GO:0008152
+name: metabolic process
+namespace: fly_anatomy.ontology
+def: "The chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances. Metabolic processes typically transform small molecules, but also include macromolecular processes such as DNA repair and replication, and protein synthesis and degradation." [GOC:go_curators, ISBN:0198547684]
+synonym: "metabolic process resulting in cell growth" NARROW []
+synonym: "metabolism" EXACT []
+synonym: "metabolism resulting in cell growth" NARROW []
+synonym: "multicellular organism metabolic process" NARROW []
+synonym: "single-organism metabolic process" RELATED []
+is_a: GO:0008150 ! biological_process
+
+[Term]
 id: GO:0008344
 name: adult locomotory behavior
 namespace: fly_anatomy.ontology
@@ -1757,11 +1829,147 @@ is_a: GO:0009605 ! response to external stimulus
 is_a: GO:0042752 ! regulation of circadian rhythm
 
 [Term]
+id: GO:0009892
+name: negative regulation of metabolic process
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism." [GOC:go_curators]
+synonym: "down regulation of metabolic process" EXACT []
+synonym: "down-regulation of metabolic process" EXACT []
+synonym: "downregulation of metabolic process" EXACT []
+synonym: "inhibition of metabolic process" NARROW []
+synonym: "inhibition of organismal metabolic process" NARROW []
+synonym: "negative regulation of metabolism" EXACT []
+synonym: "negative regulation of multicellular organismal metabolic process" NARROW []
+synonym: "negative regulation of organismal metabolism" EXACT []
+is_a: GO:0019222 ! regulation of metabolic process
+is_a: GO:0048519 ! negative regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0008152 ! metabolic process
+relationship: RO:0002212 GO:0008152 ! metabolic process
+
+[Term]
+id: GO:0009893
+name: positive regulation of metabolic process
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism." [GOC:go_curators]
+synonym: "activation of metabolic process" NARROW []
+synonym: "positive regulation of metabolism" EXACT []
+synonym: "positive regulation of multicellular organismal metabolic process" NARROW []
+synonym: "positive regulation of organismal metabolism" NARROW []
+synonym: "stimulation of metabolic process" NARROW []
+synonym: "stimulation of organismal metabolic process" NARROW []
+synonym: "up regulation of metabolic process" EXACT []
+synonym: "up-regulation of metabolic process" EXACT []
+synonym: "up-regulation of organismal metabolic process" NARROW []
+synonym: "upregulation of metabolic process" EXACT []
+is_a: GO:0019222 ! regulation of metabolic process
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0008152 ! metabolic process
+relationship: RO:0002213 GO:0008152 ! metabolic process
+
+[Term]
+id: GO:0009966
+name: regulation of signal transduction
+namespace: fly_anatomy.ontology
+def: "Any process that modulates the frequency, rate or extent of signal transduction." [GOC:sm]
+synonym: "regulation of signaling pathway" RELATED []
+synonym: "regulation of signalling pathway" RELATED [GOC:mah]
+is_a: GO:0010646 ! regulation of cell communication
+is_a: GO:0023051 ! regulation of signaling
+is_a: GO:0048583 ! regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0007165 ! signal transduction
+relationship: RO:0002211 GO:0007165 ! signal transduction
+
+[Term]
+id: GO:0009967
+name: positive regulation of signal transduction
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of signal transduction." [GOC:sm]
+synonym: "activation of signal transduction" NARROW []
+synonym: "positive regulation of signaling pathway" RELATED []
+synonym: "positive regulation of signalling pathway" RELATED [GOC:mah]
+synonym: "stimulation of signal transduction" NARROW []
+synonym: "up regulation of signal transduction" EXACT []
+synonym: "up-regulation of signal transduction" EXACT []
+synonym: "upregulation of signal transduction" EXACT []
+is_a: GO:0009966 ! regulation of signal transduction
+is_a: GO:0010647 ! positive regulation of cell communication
+is_a: GO:0023056 ! positive regulation of signaling
+is_a: GO:0048584 ! positive regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007165 ! signal transduction
+relationship: RO:0002213 GO:0007165 ! signal transduction
+
+[Term]
+id: GO:0009968
+name: negative regulation of signal transduction
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of signal transduction." [GOC:sm]
+synonym: "down regulation of signal transduction" EXACT []
+synonym: "down-regulation of signal transduction" EXACT []
+synonym: "downregulation of signal transduction" EXACT []
+synonym: "inhibition of signal transduction" NARROW []
+synonym: "negative regulation of signaling pathway" RELATED []
+synonym: "negative regulation of signalling pathway" RELATED [GOC:mah]
+is_a: GO:0009966 ! regulation of signal transduction
+is_a: GO:0010648 ! negative regulation of cell communication
+is_a: GO:0023057 ! negative regulation of signaling
+is_a: GO:0048585 ! negative regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007165 ! signal transduction
+relationship: RO:0002212 GO:0007165 ! signal transduction
+
+[Term]
+id: GO:0009987
+name: cellular process
+namespace: fly_anatomy.ontology
+def: "Any process that is carried out at the cellular level, but not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." [GOC:go_curators, GOC:isa_complete]
+synonym: "cell growth and/or maintenance" NARROW []
+synonym: "cell physiology" EXACT []
+synonym: "cellular physiological process" EXACT []
+synonym: "single-organism cellular process" RELATED []
+is_a: GO:0008150 ! biological_process
+
+[Term]
 id: GO:0009991
 name: response to extracellular stimulus
 namespace: fly_anatomy.ontology
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an extracellular stimulus." [GOC:go_curators]
 is_a: GO:0009605 ! response to external stimulus
+
+[Term]
+id: GO:0010646
+name: regulation of cell communication
+namespace: fly_anatomy.ontology
+def: "Any process that modulates the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:dph, GOC:tb]
+is_a: GO:0050794 ! regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0007154 ! cell communication
+relationship: RO:0002211 GO:0007154 ! cell communication
+
+[Term]
+id: GO:0010647
+name: positive regulation of cell communication
+namespace: fly_anatomy.ontology
+def: "Any process that increases the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:dph, GOC:tb]
+is_a: GO:0010646 ! regulation of cell communication
+is_a: GO:0048522 ! positive regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007154 ! cell communication
+relationship: RO:0002213 GO:0007154 ! cell communication
+
+[Term]
+id: GO:0010648
+name: negative regulation of cell communication
+namespace: fly_anatomy.ontology
+def: "Any process that decreases the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:dph, GOC:tb]
+is_a: GO:0010646 ! regulation of cell communication
+is_a: GO:0048523 ! negative regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007154 ! cell communication
+relationship: RO:0002212 GO:0007154 ! cell communication
 
 [Term]
 id: GO:0016545
@@ -1789,12 +1997,37 @@ intersection_of: part_of GO:0000003 ! reproduction
 relationship: part_of GO:0000003 ! reproduction
 
 [Term]
+id: GO:0019222
+name: regulation of metabolic process
+namespace: fly_anatomy.ontology
+def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism." [GOC:go_curators]
+synonym: "regulation of metabolism" EXACT []
+synonym: "regulation of multicellular organismal metabolic process" NARROW []
+synonym: "regulation of organismal metabolic process" NARROW [GOC:tb]
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0008152 ! metabolic process
+relationship: RO:0002211 GO:0008152 ! metabolic process
+
+[Term]
 id: GO:0019953
 name: sexual reproduction
 namespace: fly_anatomy.ontology
 def: "A reproduction process that creates a new organism by combining the genetic material of two gametes, which may come from two organisms or from a single organism, in the case of self-fertilizing hermaphrodites, e.g. C. elegans, or self-fertilization in plants. It occurs both in eukaryotes and prokaryotes: in multicellular eukaryotic organisms, an individual is created anew; in prokaryotes, the initial cell has additional or transformed genetic material. In a process called genetic recombination, genetic material (DNA) originating from two gametes join up so that homologous sequences are aligned with each other, and this is followed by exchange of genetic information. After the new recombinant chromosome is formed, it is passed on to progeny." [GOC:jl, GOC:kmv, GOC:krc, GOC:tb, http://en.wikipedia.org/wiki/Sexual_reproduction, ISBN:0387520546]
 is_a: GO:0000003 ! reproduction
 is_a: GO:0044703 ! multi-organism reproductive process
+
+[Term]
+id: GO:0022412
+name: cellular process involved in reproduction in multicellular organism
+namespace: fly_anatomy.ontology
+def: "A process, occurring at the cellular level, that is involved in the reproductive function of a multicellular organism." [GOC:isa_complete]
+synonym: "reproductive cellular process in multicellular organism" EXACT [GOC:curators]
+is_a: GO:0009987 ! cellular process
+is_a: GO:0022414 ! reproductive process
+intersection_of: GO:0009987 ! cellular process
+intersection_of: part_of GO:0032504 ! multicellular organism reproduction
+relationship: part_of GO:0032504 ! multicellular organism reproduction
 
 [Term]
 id: GO:0022414
@@ -1806,6 +2039,56 @@ is_a: GO:0008150 ! biological_process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: part_of GO:0000003 ! reproduction
 relationship: part_of GO:0000003 ! reproduction
+
+[Term]
+id: GO:0023051
+name: regulation of signaling
+namespace: fly_anatomy.ontology
+def: "Any process that modulates the frequency, rate or extent of a signaling process." [GOC:mtg_signal]
+synonym: "regulation of signaling process" RELATED [GOC:bf]
+synonym: "regulation of signalling process" RELATED [GOC:mah]
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0023052 ! signaling
+relationship: RO:0002211 GO:0023052 ! signaling
+
+[Term]
+id: GO:0023052
+name: signaling
+namespace: fly_anatomy.ontology
+def: "The entirety of a process in which information is transmitted within a biological system. This process begins with an active signal and ends when a cellular response has been triggered." [GOC:mtg_signal, GOC:mtg_signaling_feb11, GOC:signaling]
+synonym: "biological signaling" EXACT []
+synonym: "signaling process" EXACT []
+synonym: "signalling" EXACT []
+synonym: "signalling process" RELATED [GOC:mah]
+synonym: "single organism signaling" RELATED []
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0023056
+name: positive regulation of signaling
+namespace: fly_anatomy.ontology
+def: "Any process that activates, maintains or increases the frequency, rate or extent of a signaling process." [GOC:mtg_signal]
+synonym: "positive regulation of signaling process" RELATED [GOC:bf]
+synonym: "positive regulation of signalling process" EXACT [GOC:mah]
+is_a: GO:0023051 ! regulation of signaling
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0023052 ! signaling
+relationship: RO:0002213 GO:0023052 ! signaling
+
+[Term]
+id: GO:0023057
+name: negative regulation of signaling
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a signaling process." [GOC:mtg_signal]
+synonym: "negative regulation of signaling process" RELATED [GOC:bf]
+synonym: "negative regulation of signalling process" RELATED [GOC:mah]
+is_a: GO:0023051 ! regulation of signaling
+is_a: GO:0048519 ! negative regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0023052 ! signaling
+relationship: RO:0002212 GO:0023052 ! signaling
 
 [Term]
 id: GO:0030431
@@ -1841,6 +2124,41 @@ intersection_of: RO:0002211 GO:0050877 ! nervous system process
 relationship: RO:0002211 GO:0050877 ! nervous system process
 
 [Term]
+id: GO:0031645
+name: negative regulation of neurological system process
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a neurophysiological process." [GOC:dph, GOC:mah, GOC:tb]
+synonym: "down regulation of neurological process" EXACT []
+synonym: "down-regulation of neurological process" EXACT []
+synonym: "downregulation of neurological process" EXACT []
+synonym: "inhibition of neurological process" NARROW []
+synonym: "negative regulation of neurological process" EXACT [GOC:dph, GOC:tb]
+synonym: "negative regulation of neurophysiological process" EXACT []
+is_a: GO:0031644 ! regulation of neurological system process
+is_a: GO:0051241 ! negative regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0050877 ! nervous system process
+relationship: RO:0002212 GO:0050877 ! nervous system process
+
+[Term]
+id: GO:0031646
+name: positive regulation of neurological system process
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of a neurophysiological process." [GOC:dph, GOC:mah, GOC:tb]
+synonym: "activation of neurological process" NARROW []
+synonym: "positive regulation of neurological process" EXACT [GOC:dph, GOC:tb]
+synonym: "positive regulation of neurophysiological process" EXACT []
+synonym: "stimulation of neurological process" NARROW []
+synonym: "up regulation of neurological process" EXACT []
+synonym: "up-regulation of neurological process" EXACT []
+synonym: "upregulation of neurological process" EXACT []
+is_a: GO:0031644 ! regulation of neurological system process
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0050877 ! nervous system process
+relationship: RO:0002213 GO:0050877 ! nervous system process
+
+[Term]
 id: GO:0031667
 name: response to nutrient levels
 namespace: fly_anatomy.ontology
@@ -1869,6 +2187,37 @@ intersection_of: RO:0002211 GO:0009605 ! response to external stimulus
 relationship: RO:0002211 GO:0009605 ! response to external stimulus
 
 [Term]
+id: GO:0032102
+name: negative regulation of response to external stimulus
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a response to an external stimulus." [GOC:mah]
+synonym: "down regulation of response to external stimulus" EXACT []
+synonym: "down-regulation of response to external stimulus" EXACT []
+synonym: "downregulation of response to external stimulus" EXACT []
+synonym: "inhibition of response to external stimulus" NARROW []
+is_a: GO:0032101 ! regulation of response to external stimulus
+is_a: GO:0048585 ! negative regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0009605 ! response to external stimulus
+relationship: RO:0002212 GO:0009605 ! response to external stimulus
+
+[Term]
+id: GO:0032103
+name: positive regulation of response to external stimulus
+namespace: fly_anatomy.ontology
+def: "Any process that activates, maintains or increases the rate of a response to an external stimulus." [GOC:mah]
+synonym: "activation of response to external stimulus" NARROW []
+synonym: "stimulation of response to external stimulus" NARROW []
+synonym: "up regulation of response to external stimulus" EXACT []
+synonym: "up-regulation of response to external stimulus" EXACT []
+synonym: "upregulation of response to external stimulus" EXACT []
+is_a: GO:0032101 ! regulation of response to external stimulus
+is_a: GO:0048584 ! positive regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0009605 ! response to external stimulus
+relationship: RO:0002213 GO:0009605 ! response to external stimulus
+
+[Term]
 id: GO:0032104
 name: regulation of response to extracellular stimulus
 namespace: fly_anatomy.ontology
@@ -1879,6 +2228,37 @@ intersection_of: RO:0002211 GO:0009991 ! response to extracellular stimulus
 relationship: RO:0002211 GO:0009991 ! response to extracellular stimulus
 
 [Term]
+id: GO:0032105
+name: negative regulation of response to extracellular stimulus
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a response to an extracellular stimulus." [GOC:mah]
+synonym: "down regulation of response to extracellular stimulus" EXACT []
+synonym: "down-regulation of response to extracellular stimulus" EXACT []
+synonym: "downregulation of response to extracellular stimulus" EXACT []
+synonym: "inhibition of response to extracellular stimulus" NARROW []
+is_a: GO:0032102 ! negative regulation of response to external stimulus
+is_a: GO:0032104 ! regulation of response to extracellular stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0009991 ! response to extracellular stimulus
+relationship: RO:0002212 GO:0009991 ! response to extracellular stimulus
+
+[Term]
+id: GO:0032106
+name: positive regulation of response to extracellular stimulus
+namespace: fly_anatomy.ontology
+def: "Any process that activates, maintains or increases the rate of a response to an extracellular stimulus." [GOC:mah]
+synonym: "activation of response to extracellular stimulus" NARROW []
+synonym: "stimulation of response to extracellular stimulus" NARROW []
+synonym: "up regulation of response to extracellular stimulus" EXACT []
+synonym: "up-regulation of response to extracellular stimulus" EXACT []
+synonym: "upregulation of response to extracellular stimulus" EXACT []
+is_a: GO:0032103 ! positive regulation of response to external stimulus
+is_a: GO:0032104 ! regulation of response to extracellular stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0009991 ! response to extracellular stimulus
+relationship: RO:0002213 GO:0009991 ! response to extracellular stimulus
+
+[Term]
 id: GO:0032107
 name: regulation of response to nutrient levels
 namespace: fly_anatomy.ontology
@@ -1887,6 +2267,37 @@ is_a: GO:0032104 ! regulation of response to extracellular stimulus
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0031667 ! response to nutrient levels
 relationship: RO:0002211 GO:0031667 ! response to nutrient levels
+
+[Term]
+id: GO:0032108
+name: negative regulation of response to nutrient levels
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a response to nutrient levels." [GOC:mah]
+synonym: "down regulation of response to nutrient levels" EXACT []
+synonym: "down-regulation of response to nutrient levels" EXACT []
+synonym: "downregulation of response to nutrient levels" EXACT []
+synonym: "inhibition of response to nutrient levels" NARROW []
+is_a: GO:0032105 ! negative regulation of response to extracellular stimulus
+is_a: GO:0032107 ! regulation of response to nutrient levels
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0031667 ! response to nutrient levels
+relationship: RO:0002212 GO:0031667 ! response to nutrient levels
+
+[Term]
+id: GO:0032109
+name: positive regulation of response to nutrient levels
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of a response to nutrient levels." [GOC:mah]
+synonym: "activation of response to nutrient levels" NARROW []
+synonym: "stimulation of response to nutrient levels" NARROW []
+synonym: "up regulation of response to nutrient levels" EXACT []
+synonym: "up-regulation of response to nutrient levels" EXACT []
+synonym: "upregulation of response to nutrient levels" EXACT []
+is_a: GO:0032106 ! positive regulation of response to extracellular stimulus
+is_a: GO:0032107 ! regulation of response to nutrient levels
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0031667 ! response to nutrient levels
+relationship: RO:0002213 GO:0031667 ! response to nutrient levels
 
 [Term]
 id: GO:0032501
@@ -1915,6 +2326,26 @@ is_a: GO:0000003 ! reproduction
 is_a: GO:0032501 ! multicellular organismal process
 
 [Term]
+id: GO:0032879
+name: regulation of localization
+namespace: fly_anatomy.ontology
+def: "Any process that modulates the frequency, rate or extent of any process in which a cell, a substance, or a cellular entity is transported to, or maintained in, a specific location." [GOC:mah]
+synonym: "regulation of localisation" EXACT [GOC:mah]
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0051179 ! localization
+relationship: RO:0002211 GO:0051179 ! localization
+
+[Term]
+id: GO:0032940
+name: secretion by cell
+namespace: fly_anatomy.ontology
+def: "The controlled release of a substance by a cell." [GOC:mah]
+synonym: "cellular secretion" EXACT []
+is_a: GO:0009987 ! cellular process
+is_a: GO:0046903 ! secretion
+
+[Term]
 id: GO:0033555
 name: multicellular organismal response to stress
 namespace: fly_anatomy.ontology
@@ -1938,6 +2369,37 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0040011 ! locomotion
 relationship: RO:0002211 GO:0040011 ! locomotion
+
+[Term]
+id: GO:0040013
+name: negative regulation of locomotion
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of locomotion of a cell or organism." [GOC:go_curators]
+synonym: "down regulation of locomotion" EXACT []
+synonym: "down-regulation of locomotion" EXACT []
+synonym: "downregulation of locomotion" EXACT []
+synonym: "inhibition of locomotion" NARROW []
+is_a: GO:0040012 ! regulation of locomotion
+is_a: GO:0048519 ! negative regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0040011 ! locomotion
+relationship: RO:0002212 GO:0040011 ! locomotion
+
+[Term]
+id: GO:0040017
+name: positive regulation of locomotion
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of locomotion of a cell or organism." [GOC:go_curators]
+synonym: "activation of locomotion" NARROW []
+synonym: "stimulation of locomotion" NARROW []
+synonym: "up regulation of locomotion" EXACT []
+synonym: "up-regulation of locomotion" EXACT []
+synonym: "upregulation of locomotion" EXACT []
+is_a: GO:0040012 ! regulation of locomotion
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0040011 ! locomotion
+relationship: RO:0002213 GO:0040011 ! locomotion
 
 [Term]
 id: GO:0042221
@@ -1983,6 +2445,37 @@ intersection_of: RO:0002211 GO:0007623 ! circadian rhythm
 relationship: RO:0002211 GO:0007623 ! circadian rhythm
 
 [Term]
+id: GO:0042753
+name: positive regulation of circadian rhythm
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of a circadian rhythm behavior." [GOC:go_curators]
+synonym: "activation of circadian rhythm" NARROW []
+synonym: "stimulation of circadian rhythm" NARROW []
+synonym: "up regulation of circadian rhythm" EXACT []
+synonym: "up-regulation of circadian rhythm" EXACT []
+synonym: "upregulation of circadian rhythm" EXACT []
+is_a: GO:0042752 ! regulation of circadian rhythm
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007623 ! circadian rhythm
+relationship: RO:0002213 GO:0007623 ! circadian rhythm
+
+[Term]
+id: GO:0042754
+name: negative regulation of circadian rhythm
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a circadian rhythm behavior." [GOC:go_curators]
+synonym: "down regulation of circadian rhythm" EXACT []
+synonym: "down-regulation of circadian rhythm" EXACT []
+synonym: "downregulation of circadian rhythm" EXACT []
+synonym: "inhibition of circadian rhythm" NARROW []
+is_a: GO:0042752 ! regulation of circadian rhythm
+is_a: GO:0048519 ! negative regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007623 ! circadian rhythm
+relationship: RO:0002212 GO:0007623 ! circadian rhythm
+
+[Term]
 id: GO:0043153
 name: entrainment of circadian clock by photoperiod
 namespace: fly_anatomy.ontology
@@ -2002,6 +2495,28 @@ intersection_of: RO:0002211 GO:0051704 ! multi-organism process
 relationship: RO:0002211 GO:0051704 ! multi-organism process
 
 [Term]
+id: GO:0043901
+name: negative regulation of multi-organism process
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species." [GOC:jl]
+is_a: GO:0043900 ! regulation of multi-organism process
+is_a: GO:0048519 ! negative regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0051704 ! multi-organism process
+relationship: RO:0002212 GO:0051704 ! multi-organism process
+
+[Term]
+id: GO:0043902
+name: positive regulation of multi-organism process
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species." [GOC:jl]
+is_a: GO:0043900 ! regulation of multi-organism process
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0051704 ! multi-organism process
+relationship: RO:0002213 GO:0051704 ! multi-organism process
+
+[Term]
 id: GO:0044057
 name: regulation of system process
 namespace: fly_anatomy.ontology
@@ -2010,6 +2525,26 @@ is_a: GO:0051239 ! regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0003008 ! system process
 relationship: RO:0002211 GO:0003008 ! system process
+
+[Term]
+id: GO:0044238
+name: primary metabolic process
+namespace: fly_anatomy.ontology
+def: "The chemical reactions and pathways involving those compounds which are formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism." [GOC:go_curators, http://www.metacyc.org]
+synonym: "primary metabolism" EXACT []
+is_a: GO:0008152 ! metabolic process
+
+[Term]
+id: GO:0044464
+name: cell part
+namespace: fly_anatomy.ontology
+def: "Any constituent part of a cell, the basic structural and functional unit of all organisms." [GOC:jl]
+synonym: "cellular subcomponent" EXACT [NIF_Subcellular:sao628508602]
+synonym: "protoplast" RELATED [GOC:mah]
+is_a: GO:0005575 ! cellular_component
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0005623 ! cell
+relationship: part_of GO:0005623 ! cell
 
 [Term]
 id: GO:0044703
@@ -2029,6 +2564,46 @@ synonym: "male courtship behaviour, song production" BROAD []
 synonym: "male courtship behaviour, veined wing generated song production" EXACT []
 is_a: GO:0008049 ! male courtship behavior
 relationship: part_of GO:0016545 ! male courtship behavior, veined wing vibration
+
+[Term]
+id: GO:0045804
+name: negative regulation of eclosion
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of eclosion." [GOC:go_curators]
+synonym: "down regulation of eclosion" EXACT []
+synonym: "down-regulation of eclosion" EXACT []
+synonym: "downregulation of eclosion" EXACT []
+synonym: "inhibition of eclosion" NARROW []
+is_a: GO:0007563 ! regulation of eclosion
+is_a: GO:0051093 ! negative regulation of developmental process
+is_a: GO:0051241 ! negative regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007562 ! eclosion
+relationship: RO:0002212 GO:0007562 ! eclosion
+
+[Term]
+id: GO:0045805
+name: positive regulation of eclosion
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of eclosion." [GOC:go_curators]
+synonym: "activation of eclosion" NARROW []
+synonym: "stimulation of eclosion" NARROW []
+synonym: "up regulation of eclosion" EXACT []
+synonym: "up-regulation of eclosion" EXACT []
+synonym: "upregulation of eclosion" EXACT []
+is_a: GO:0007563 ! regulation of eclosion
+is_a: GO:0051094 ! positive regulation of developmental process
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007562 ! eclosion
+relationship: RO:0002213 GO:0007562 ! eclosion
+
+[Term]
+id: GO:0046903
+name: secretion
+namespace: fly_anatomy.ontology
+def: "The controlled release of a substance by a cell or a tissue." [GOC:ai]
+is_a: GO:0006810 ! transport
 
 [Term]
 id: GO:0048060
@@ -2079,6 +2654,101 @@ is_a: GO:0007622 ! rhythmic behavior
 is_a: GO:0007623 ! circadian rhythm
 
 [Term]
+id: GO:0048518
+name: positive regulation of biological process
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of a biological process. Biological processes are regulated by many means; examples include the control of gene expression, protein modification or interaction with a protein or substrate molecule." [GOC:jid]
+synonym: "activation of biological process" NARROW []
+synonym: "positive regulation of physiological process" EXACT []
+synonym: "stimulation of biological process" NARROW []
+synonym: "up regulation of biological process" EXACT []
+synonym: "up-regulation of biological process" EXACT []
+synonym: "upregulation of biological process" EXACT []
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0008150 ! biological_process
+relationship: RO:0002213 GO:0008150 ! biological_process
+
+[Term]
+id: GO:0048519
+name: negative regulation of biological process
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a biological process. Biological processes are regulated by many means; examples include the control of gene expression, protein modification or interaction with a protein or substrate molecule." [GOC:jid]
+synonym: "down regulation of biological process" EXACT []
+synonym: "down-regulation of biological process" EXACT []
+synonym: "downregulation of biological process" EXACT []
+synonym: "inhibition of biological process" NARROW []
+synonym: "negative regulation of physiological process" EXACT []
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0008150 ! biological_process
+relationship: RO:0002212 GO:0008150 ! biological_process
+
+[Term]
+id: GO:0048520
+name: positive regulation of behavior
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of behavior, the internally coordinated responses (actions or inactions) of whole living organisms (individuals or groups) to internal or external stimuli." [GOC:jid, GOC:pr]
+synonym: "activation of behavior" NARROW []
+synonym: "stimulation of behavior" NARROW []
+synonym: "up regulation of behavior" EXACT []
+synonym: "up-regulation of behavior" EXACT []
+synonym: "upregulation of behavior" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0050795 ! regulation of behavior
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007610 ! behavior
+relationship: RO:0002213 GO:0007610 ! behavior
+
+[Term]
+id: GO:0048521
+name: negative regulation of behavior
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of behavior, the internally coordinated responses (actions or inactions) of whole living organisms (individuals or groups) to internal or external stimuli." [GOC:jid, GOC:pr]
+synonym: "down regulation of behavior" EXACT []
+synonym: "down-regulation of behavior" EXACT []
+synonym: "downregulation of behavior" EXACT []
+synonym: "inhibition of behavior" NARROW []
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0050795 ! regulation of behavior
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007610 ! behavior
+relationship: RO:0002212 GO:0007610 ! behavior
+
+[Term]
+id: GO:0048522
+name: positive regulation of cellular process
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of a cellular process, any of those that are carried out at the cellular level, but are not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." [GOC:jid]
+synonym: "activation of cellular process" NARROW []
+synonym: "positive regulation of cellular physiological process" EXACT []
+synonym: "stimulation of cellular process" NARROW []
+synonym: "up regulation of cellular process" EXACT []
+synonym: "up-regulation of cellular process" EXACT []
+synonym: "upregulation of cellular process" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0050794 ! regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0009987 ! cellular process
+relationship: RO:0002213 GO:0009987 ! cellular process
+
+[Term]
+id: GO:0048523
+name: negative regulation of cellular process
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a cellular process, any of those that are carried out at the cellular level, but are not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." [GOC:jid]
+synonym: "down regulation of cellular process" EXACT []
+synonym: "down-regulation of cellular process" EXACT []
+synonym: "downregulation of cellular process" EXACT []
+synonym: "inhibition of cellular process" NARROW []
+synonym: "negative regulation of cellular physiological process" EXACT []
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0050794 ! regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0009987 ! cellular process
+relationship: RO:0002212 GO:0009987 ! cellular process
+
+[Term]
 id: GO:0048583
 name: regulation of response to stimulus
 namespace: fly_anatomy.ontology
@@ -2087,6 +2757,37 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0050896 ! response to stimulus
 relationship: RO:0002211 GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0048584
+name: positive regulation of response to stimulus
+namespace: fly_anatomy.ontology
+def: "Any process that activates, maintains or increases the rate of a response to a stimulus. Response to stimulus is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus." [GOC:jid]
+synonym: "activation of response to stimulus" NARROW []
+synonym: "stimulation of response to stimulus" NARROW []
+synonym: "up regulation of response to stimulus" EXACT []
+synonym: "up-regulation of response to stimulus" EXACT []
+synonym: "upregulation of response to stimulus" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0048583 ! regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0050896 ! response to stimulus
+relationship: RO:0002213 GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0048585
+name: negative regulation of response to stimulus
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a response to a stimulus. Response to stimulus is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus." [GOC:jid]
+synonym: "down regulation of response to stimulus" EXACT []
+synonym: "down-regulation of response to stimulus" EXACT []
+synonym: "downregulation of response to stimulus" EXACT []
+synonym: "inhibition of response to stimulus" NARROW []
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0048583 ! regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0050896 ! response to stimulus
+relationship: RO:0002212 GO:0050896 ! response to stimulus
 
 [Term]
 id: GO:0048609
@@ -2126,6 +2827,17 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0032502 ! developmental process
 relationship: RO:0002211 GO:0032502 ! developmental process
+
+[Term]
+id: GO:0050794
+name: regulation of cellular process
+namespace: fly_anatomy.ontology
+def: "Any process that modulates the frequency, rate or extent of a cellular process, any of those that are carried out at the cellular level, but are not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." [GOC:go_curators]
+synonym: "regulation of cellular physiological process" EXACT []
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0009987 ! cellular process
+relationship: RO:0002211 GO:0009987 ! cellular process
 
 [Term]
 id: GO:0050795
@@ -2253,6 +2965,142 @@ synonym: "tactition" EXACT []
 is_a: GO:0050954 ! sensory perception of mechanical stimulus
 
 [Term]
+id: GO:0051046
+name: regulation of secretion
+namespace: fly_anatomy.ontology
+def: "Any process that modulates the frequency, rate or extent of the controlled release of a substance from a cell or a tissue." [GOC:ai]
+is_a: GO:0051049 ! regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0046903 ! secretion
+relationship: RO:0002211 GO:0046903 ! secretion
+
+[Term]
+id: GO:0051047
+name: positive regulation of secretion
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of the controlled release of a substance from a cell or a tissue." [GOC:ai]
+synonym: "activation of secretion" NARROW []
+synonym: "stimulation of secretion" NARROW []
+synonym: "up regulation of secretion" EXACT []
+synonym: "up-regulation of secretion" EXACT []
+synonym: "upregulation of secretion" EXACT []
+is_a: GO:0051046 ! regulation of secretion
+is_a: GO:0051050 ! positive regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0046903 ! secretion
+relationship: RO:0002213 GO:0046903 ! secretion
+
+[Term]
+id: GO:0051048
+name: negative regulation of secretion
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the controlled release of a substance from a cell or a tissue." [GOC:ai]
+synonym: "down regulation of secretion" EXACT []
+synonym: "down-regulation of secretion" EXACT []
+synonym: "downregulation of secretion" EXACT []
+synonym: "inhibition of secretion" NARROW []
+is_a: GO:0051046 ! regulation of secretion
+is_a: GO:0051051 ! negative regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0046903 ! secretion
+relationship: RO:0002212 GO:0046903 ! secretion
+
+[Term]
+id: GO:0051049
+name: regulation of transport
+namespace: fly_anatomy.ontology
+def: "Any process that modulates the frequency, rate or extent of the directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+is_a: GO:0032879 ! regulation of localization
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0006810 ! transport
+relationship: RO:0002211 GO:0006810 ! transport
+
+[Term]
+id: GO:0051050
+name: positive regulation of transport
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of the directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+synonym: "activation of transport" NARROW []
+synonym: "stimulation of transport" NARROW []
+synonym: "up regulation of transport" EXACT []
+synonym: "up-regulation of transport" EXACT []
+synonym: "upregulation of transport" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0051049 ! regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0006810 ! transport
+relationship: RO:0002213 GO:0006810 ! transport
+
+[Term]
+id: GO:0051051
+name: negative regulation of transport
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+synonym: "down regulation of transport" EXACT []
+synonym: "down-regulation of transport" EXACT []
+synonym: "downregulation of transport" EXACT []
+synonym: "inhibition of transport" NARROW []
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0051049 ! regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0006810 ! transport
+relationship: RO:0002212 GO:0006810 ! transport
+
+[Term]
+id: GO:0051093
+name: negative regulation of developmental process
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents or reduces the rate or extent of development, the biological process whose specific outcome is the progression of an organism over time from an initial condition (e.g. a zygote, or a young adult) to a later condition (e.g. a multicellular animal or an aged adult)." [GOC:ai]
+synonym: "down regulation of developmental process" EXACT []
+synonym: "down-regulation of developmental process" EXACT []
+synonym: "downregulation of developmental process" EXACT []
+synonym: "inhibition of developmental process" NARROW []
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0050793 ! regulation of developmental process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0032502 ! developmental process
+relationship: RO:0002212 GO:0032502 ! developmental process
+
+[Term]
+id: GO:0051094
+name: positive regulation of developmental process
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the rate or extent of development, the biological process whose specific outcome is the progression of an organism over time from an initial condition (e.g. a zygote, or a young adult) to a later condition (e.g. a multicellular animal or an aged adult)." [GOC:ai]
+synonym: "activation of developmental process" NARROW []
+synonym: "stimulation of developmental process" NARROW []
+synonym: "up regulation of developmental process" EXACT []
+synonym: "up-regulation of developmental process" EXACT []
+synonym: "upregulation of developmental process" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0050793 ! regulation of developmental process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0032502 ! developmental process
+relationship: RO:0002213 GO:0032502 ! developmental process
+
+[Term]
+id: GO:0051179
+name: localization
+namespace: fly_anatomy.ontology
+def: "Any process in which a cell, a substance, or a cellular entity, such as a protein complex or organelle, is transported, tethered to or otherwise maintained in a specific location. In the case of substances, localization may also be achieved via selective degradation." [GOC:ai, GOC:dos]
+synonym: "establishment and maintenance of cellular component location" NARROW []
+synonym: "establishment and maintenance of localization" EXACT []
+synonym: "establishment and maintenance of position" EXACT []
+synonym: "establishment and maintenance of substance location" NARROW []
+synonym: "establishment and maintenance of substrate location" NARROW []
+synonym: "localisation" EXACT [GOC:mah]
+synonym: "single organism localization" RELATED [GOC:TermGenie]
+synonym: "single-organism localization" RELATED []
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0051234
+name: establishment of localization
+namespace: fly_anatomy.ontology
+def: "Any process that localizes a substance or cellular component. This may occur via movement, tethering or selective degradation." [GOC:ai, GOC:dos]
+synonym: "establishment of localisation" EXACT [GOC:mah]
+is_a: GO:0051179 ! localization
+
+[Term]
 id: GO:0051239
 name: regulation of multicellular organismal process
 namespace: fly_anatomy.ontology
@@ -2261,6 +3109,37 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0032501 ! multicellular organismal process
 relationship: RO:0002211 GO:0032501 ! multicellular organismal process
+
+[Term]
+id: GO:0051240
+name: positive regulation of multicellular organismal process
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of an organismal process, any of the processes pertinent to the function of an organism above the cellular level; includes the integrated processes of tissues and organs." [GOC:ai]
+synonym: "activation of multicellular organismal process" NARROW []
+synonym: "stimulation of multicellular organismal process" NARROW []
+synonym: "up regulation of multicellular organismal process" EXACT []
+synonym: "up-regulation of multicellular organismal process" EXACT []
+synonym: "upregulation of multicellular organismal process" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0051239 ! regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0032501 ! multicellular organismal process
+relationship: RO:0002213 GO:0032501 ! multicellular organismal process
+
+[Term]
+id: GO:0051241
+name: negative regulation of multicellular organismal process
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of an organismal process, the processes pertinent to the function of an organism above the cellular level; includes the integrated processes of tissues and organs." [GOC:ai]
+synonym: "down regulation of multicellular organismal process" EXACT []
+synonym: "down-regulation of multicellular organismal process" EXACT []
+synonym: "downregulation of multicellular organismal process" EXACT []
+synonym: "inhibition of multicellular organismal process" NARROW []
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0051239 ! regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0032501 ! multicellular organismal process
+relationship: RO:0002212 GO:0032501 ! multicellular organismal process
 
 [Term]
 id: GO:0051606
@@ -2273,6 +3152,36 @@ synonym: "stimulus sensing" RELATED []
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
+id: GO:0051641
+name: cellular localization
+namespace: fly_anatomy.ontology
+def: "A cellular localization process whereby a substance or cellular entity, such as a protein complex or organelle, is transported to, and/or maintained in, a specific location within a cell including the localization of substances or cellular entities to the cell membrane." [GOC:tb, GOC:vw]
+synonym: "cellular localisation" EXACT [GOC:mah]
+synonym: "establishment and maintenance of cellular localization" EXACT []
+synonym: "establishment and maintenance of localization in cell or cell membrane" EXACT []
+synonym: "intracellular localization" NARROW []
+synonym: "localization within cell" NARROW []
+synonym: "single organism cellular localization" EXACT [GOC:TermGenie]
+synonym: "single-organism cellular localization" RELATED []
+is_a: GO:0051179 ! localization
+
+[Term]
+id: GO:0051649
+name: establishment of localization in cell
+namespace: fly_anatomy.ontology
+def: "Any process, occuring in a cell, that localizes a substance or cellular component. This may occur via movement, tethering or selective degradation." [GOC:ai, GOC:dos, GOC:dph, GOC:tb]
+synonym: "establishment of cellular localization" RELATED [GOC:dph, GOC:tb]
+synonym: "establishment of intracellular localization" NARROW []
+synonym: "establishment of localisation in cell" EXACT [GOC:mah]
+synonym: "establishment of localization within cell" NARROW []
+synonym: "positioning within cell" NARROW []
+is_a: GO:0051234 ! establishment of localization
+intersection_of: GO:0051234 ! establishment of localization
+intersection_of: BFO:0000066 GO:0005623 ! cell
+relationship: BFO:0000066 GO:0005623 ! cell
+relationship: part_of GO:0051641 ! cellular localization
+
+[Term]
 id: GO:0051704
 name: multi-organism process
 namespace: fly_anatomy.ontology
@@ -2281,6 +3190,14 @@ synonym: "interaction between organisms" EXACT []
 synonym: "physiological interaction between organisms" EXACT []
 synonym: "physiological interaction with other organism" EXACT []
 is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0051716
+name: cellular response to stimulus
+namespace: fly_anatomy.ontology
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus. The process begins with detection of the stimulus by a cell and ends with a change in state or activity or the cell." [GOC:bf, GOC:jl]
+is_a: GO:0009987 ! cellular process
+is_a: GO:0050896 ! response to stimulus
 
 [Term]
 id: GO:0051780
@@ -2327,6 +3244,17 @@ intersection_of: RO:0002211 GO:0007631 ! feeding behavior
 relationship: RO:0002211 GO:0007631 ! feeding behavior
 
 [Term]
+id: GO:0060341
+name: regulation of cellular localization
+namespace: fly_anatomy.ontology
+def: "Any process that modulates the frequency, rate or extent of a process in which a cell, a substance, or a cellular entity is transported to, or maintained in a specific location within or in the membrane of a cell." [GOC:dph, GOC:tb]
+synonym: "regulation of cellular localisation" EXACT [GOC:mah]
+is_a: GO:0032879 ! regulation of localization
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0051641 ! cellular localization
+relationship: RO:0002211 GO:0051641 ! cellular localization
+
+[Term]
 id: GO:0065007
 name: biological regulation
 namespace: fly_anatomy.ontology
@@ -2340,6 +3268,26 @@ name: organism emergence from protective structure
 namespace: fly_anatomy.ontology
 def: "The developmental process in which an organism emerges from a surrounding protective structure such as an egg or pupa case." [GOC:mah]
 is_a: GO:0032501 ! multicellular organismal process
+
+[Term]
+id: GO:0071704
+name: organic substance metabolic process
+namespace: fly_anatomy.ontology
+def: "The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon." [CHEBI:50860, GOC:mah]
+synonym: "organic molecular entity metabolic process" EXACT []
+synonym: "organic molecular entity metabolism" EXACT []
+synonym: "organic substance metabolism" EXACT []
+is_a: GO:0008152 ! metabolic process
+
+[Term]
+id: GO:0080090
+name: regulation of primary metabolic process
+namespace: fly_anatomy.ontology
+def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism involving those compounds formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism." [PMID:19211694]
+is_a: GO:0019222 ! regulation of metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0044238 ! primary metabolic process
+relationship: RO:0002211 GO:0044238 ! primary metabolic process
 
 [Term]
 id: GO:0080134
@@ -2363,6 +3311,30 @@ intersection_of: RO:0002211 GO:0031987 ! locomotion involved in locomotory behav
 relationship: RO:0002211 GO:0031987 ! locomotion involved in locomotory behavior
 
 [Term]
+id: GO:0090326
+name: positive regulation of locomotion involved in locomotory behavior
+namespace: fly_anatomy.ontology
+def: "Any process that increases the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement." [GOC:dph, GOC:kmv, GOC:tb]
+is_a: GO:0040017 ! positive regulation of locomotion
+is_a: GO:0048520 ! positive regulation of behavior
+is_a: GO:0090325 ! regulation of locomotion involved in locomotory behavior
+intersection_of: GO:0050789 ! regulation of biological process
+intersection_of: RO:0002213 GO:0031987 ! locomotion involved in locomotory behavior
+relationship: RO:0002213 GO:0031987 ! locomotion involved in locomotory behavior
+
+[Term]
+id: GO:0090327
+name: negative regulation of locomotion involved in locomotory behavior
+namespace: fly_anatomy.ontology
+def: "Any process that decreases the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement." [GOC:dph, GOC:kmv, GOC:tb]
+is_a: GO:0040013 ! negative regulation of locomotion
+is_a: GO:0048521 ! negative regulation of behavior
+is_a: GO:0090325 ! regulation of locomotion involved in locomotory behavior
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0031987 ! locomotion involved in locomotory behavior
+relationship: RO:0002212 GO:0031987 ! locomotion involved in locomotory behavior
+
+[Term]
 id: GO:1902435
 name: regulation of male mating behavior
 namespace: fly_anatomy.ontology
@@ -2374,6 +3346,96 @@ is_a: GO:2000241 ! regulation of reproductive process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0060179 ! male mating behavior
 relationship: RO:0002211 GO:0060179 ! male mating behavior
+
+[Term]
+id: GO:1902436
+name: negative regulation of male mating behavior
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of male mating behavior." [GOC:TermGenie, PMID:24089208]
+synonym: "down regulation of male mating behavior" EXACT [GOC:TermGenie]
+synonym: "down-regulation of male mating behavior" EXACT [GOC:TermGenie]
+synonym: "downregulation of male mating behavior" EXACT [GOC:TermGenie]
+synonym: "inhibition of male mating behavior" NARROW [GOC:TermGenie]
+is_a: GO:0043901 ! negative regulation of multi-organism process
+is_a: GO:0048521 ! negative regulation of behavior
+is_a: GO:0051241 ! negative regulation of multicellular organismal process
+is_a: GO:1902435 ! regulation of male mating behavior
+is_a: GO:2000242 ! negative regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0060179 ! male mating behavior
+relationship: RO:0002212 GO:0060179 ! male mating behavior
+
+[Term]
+id: GO:1902437
+name: positive regulation of male mating behavior
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of male mating behavior." [GOC:TermGenie, PMID:24089208]
+synonym: "activation of male mating behavior" NARROW [GOC:TermGenie]
+synonym: "up regulation of male mating behavior" EXACT [GOC:TermGenie]
+synonym: "up-regulation of male mating behavior" EXACT [GOC:TermGenie]
+synonym: "upregulation of male mating behavior" EXACT [GOC:TermGenie]
+is_a: GO:0043902 ! positive regulation of multi-organism process
+is_a: GO:0048520 ! positive regulation of behavior
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+is_a: GO:1902435 ! regulation of male mating behavior
+is_a: GO:2000243 ! positive regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0060179 ! male mating behavior
+relationship: RO:0002213 GO:0060179 ! male mating behavior
+
+[Term]
+id: GO:1903530
+name: regulation of secretion by cell
+namespace: fly_anatomy.ontology
+def: "Any process that modulates the frequency, rate or extent of secretion by cell." [GO_REF:0000058, GOC:pm, GOC:TermGenie, PMID:12130530]
+synonym: "regulation of cellular secretion" EXACT [GOC:TermGenie]
+is_a: GO:0050794 ! regulation of cellular process
+is_a: GO:0051046 ! regulation of secretion
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0032940 ! secretion by cell
+relationship: RO:0002211 GO:0032940 ! secretion by cell
+
+[Term]
+id: GO:1903531
+name: negative regulation of secretion by cell
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of secretion by cell." [GO_REF:0000058, GOC:pm, GOC:TermGenie, PMID:12130530]
+synonym: "down regulation of cellular secretion" EXACT [GOC:TermGenie]
+synonym: "down regulation of secretion by cell" EXACT [GOC:TermGenie]
+synonym: "down-regulation of cellular secretion" EXACT [GOC:TermGenie]
+synonym: "down-regulation of secretion by cell" EXACT [GOC:TermGenie]
+synonym: "downregulation of cellular secretion" EXACT [GOC:TermGenie]
+synonym: "downregulation of secretion by cell" EXACT [GOC:TermGenie]
+synonym: "inhibition of cellular secretion" NARROW [GOC:TermGenie]
+synonym: "inhibition of secretion by cell" NARROW [GOC:TermGenie]
+synonym: "negative regulation of cellular secretion" EXACT [GOC:TermGenie]
+is_a: GO:0048523 ! negative regulation of cellular process
+is_a: GO:0051048 ! negative regulation of secretion
+is_a: GO:1903530 ! regulation of secretion by cell
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0032940 ! secretion by cell
+relationship: RO:0002212 GO:0032940 ! secretion by cell
+
+[Term]
+id: GO:1903532
+name: positive regulation of secretion by cell
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of secretion by cell." [GO_REF:0000058, GOC:pm, GOC:TermGenie, PMID:12130530]
+synonym: "activation of cellular secretion" NARROW [GOC:TermGenie]
+synonym: "activation of secretion by cell" NARROW [GOC:TermGenie]
+synonym: "positive regulation of cellular secretion" EXACT [GOC:TermGenie]
+synonym: "up regulation of cellular secretion" EXACT [GOC:TermGenie]
+synonym: "up regulation of secretion by cell" EXACT [GOC:TermGenie]
+synonym: "up-regulation of cellular secretion" EXACT [GOC:TermGenie]
+synonym: "up-regulation of secretion by cell" EXACT [GOC:TermGenie]
+synonym: "upregulation of cellular secretion" EXACT [GOC:TermGenie]
+synonym: "upregulation of secretion by cell" EXACT [GOC:TermGenie]
+is_a: GO:0048522 ! positive regulation of cellular process
+is_a: GO:0051047 ! positive regulation of secretion
+is_a: GO:1903530 ! regulation of secretion by cell
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0032940 ! secretion by cell
+relationship: RO:0002213 GO:0032940 ! secretion by cell
 
 [Term]
 id: GO:2000026
@@ -2397,6 +3459,60 @@ intersection_of: RO:0002211 GO:0022414 ! reproductive process
 relationship: RO:0002211 GO:0022414 ! reproductive process
 
 [Term]
+id: GO:2000242
+name: negative regulation of reproductive process
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of reproductive process." [GOC:mah]
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:2000241 ! regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0022414 ! reproductive process
+relationship: RO:0002212 GO:0022414 ! reproductive process
+
+[Term]
+id: GO:2000243
+name: positive regulation of reproductive process
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of reproductive process." [GOC:mah]
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:2000241 ! regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0022414 ! reproductive process
+relationship: RO:0002213 GO:0022414 ! reproductive process
+
+[Term]
+id: GO:2000252
+name: negative regulation of feeding behavior
+namespace: fly_anatomy.ontology
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of feeding behavior." [GOC:obol]
+synonym: "negative regulation of behavioral response to food" EXACT [GOC:obol]
+synonym: "negative regulation of behavioural response to food" EXACT [GOC:obol]
+synonym: "negative regulation of drinking" RELATED [GOC:obol]
+synonym: "negative regulation of eating" RELATED [GOC:obol]
+synonym: "negative regulation of feeding behaviour" EXACT [GOC:obol]
+is_a: GO:0048521 ! negative regulation of behavior
+is_a: GO:0060259 ! regulation of feeding behavior
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007631 ! feeding behavior
+relationship: RO:0002212 GO:0007631 ! feeding behavior
+
+[Term]
+id: GO:2000253
+name: positive regulation of feeding behavior
+namespace: fly_anatomy.ontology
+def: "Any process that activates or increases the frequency, rate or extent of feeding behavior." [GOC:obol]
+synonym: "positive regulation of behavioral response to food" EXACT [GOC:obol]
+synonym: "positive regulation of behavioural response to food" EXACT [GOC:obol]
+synonym: "positive regulation of drinking" RELATED [GOC:obol]
+synonym: "positive regulation of eating" RELATED [GOC:obol]
+synonym: "positive regulation of feeding behaviour" EXACT [GOC:obol]
+is_a: GO:0048520 ! positive regulation of behavior
+is_a: GO:0060259 ! regulation of feeding behavior
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007631 ! feeding behavior
+relationship: RO:0002213 GO:0007631 ! feeding behavior
+
+[Term]
 id: GO:2000821
 name: regulation of grooming behavior
 namespace: fly_anatomy.ontology
@@ -2414,10 +3530,58 @@ namespace: fly_anatomy.ontology
 def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
 synonym: "trait" EXACT []
 
+[Term]
+id: PATO:0000051
+name: morphology
+namespace: fly_anatomy.ontology
+def: "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure." [PATOC:GVG]
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0000141
+name: structure
+namespace: fly_anatomy.ontology
+def: "A morphology quality inhering in a bearer by virtue of the bearer's relative position, shape, arrangements and connectivity of an organism's various parts; the pattern underlying its form." [PATOC:GVG]
+synonym: "conformation" BROAD [VT:1000738]
+synonym: "relational structural quality" EXACT []
+is_a: PATO:0000051 ! morphology
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+namespace: fly_anatomy.ontology
+def: "A quality which inheres in a continuant." [PATOC:GVG]
+synonym: "monadic quality of a continuant" EXACT []
+synonym: "monadic quality of an object" NARROW []
+synonym: "monadic quality of continuant" NARROW []
+synonym: "multiply inhering quality of a physical entity" EXACT []
+synonym: "quality of a continuant" EXACT []
+synonym: "quality of a single physical entity" EXACT []
+synonym: "quality of an object" EXACT []
+synonym: "quality of continuant" EXACT []
+is_a: PATO:0000001 ! quality
+
+[Typedef]
+id: BFO:0000066
+namespace: fly_anatomy.ontology
+holds_over_chain: part_of BFO:0000066
+transitive_over: part_of ! part of
+
 [Typedef]
 id: RO:0002211
 namespace: fly_anatomy.ontology
 is_transitive: true
+
+[Typedef]
+id: RO:0002212
+namespace: fly_anatomy.ontology
+is_a: RO:0002211
+
+[Typedef]
+id: RO:0002213
+namespace: fly_anatomy.ontology
+holds_over_chain: RO:0002212 RO:0002212
+is_a: RO:0002211
 
 [Typedef]
 id: capable_of
@@ -2443,6 +3607,20 @@ holds_over_chain: capable_of part_of
 expand_expression_to: "BFO_0000053 some (BFO_0000054 only (BFO_0000050 some ?Y))" []
 
 [Typedef]
+id: contained_in
+name: contained_in
+namespace: fly_anatomy.ontology
+xref: RO:0001018
+holds_over_chain: located_in part_of
+
+[Typedef]
+id: dc-creator
+name: creator
+namespace: fly_anatomy.ontology
+xref: http://purl.org/dc/elements/1.1/creator
+is_metadata_tag: true
+
+[Typedef]
 id: develops_from
 name: develops_from
 namespace: fly_anatomy.ontology
@@ -2465,6 +3643,12 @@ namespace: fly_anatomy.ontology
 def: "A relationship between a dependent continuant, for example a quality such as color, and an independent continuant, such as an eye." []
 comment: Example red (PATO) inheres_in some eye (FBbt).
 xref: RO:0000052
+
+[Typedef]
+id: located_in
+name: located_in
+namespace: fly_anatomy.ontology
+xref: RO:0001025
 
 [Typedef]
 id: overlaps

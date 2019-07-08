@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2019-06-10/imports/pato_import.owl
+data-version: dpo/releases/2019-07-08/imports/pato_import.owl
 ontology: dpo/imports/pato_import
 
 [Term]
@@ -115,6 +115,16 @@ def: "A morphology quality inhering in a bearer by virtue of the bearer's physic
 subset: attribute_slim
 subset: scalar_slim
 is_a: PATO:0000051 ! morphology
+
+[Term]
+id: PATO:0000125
+name: mass
+namespace: quality
+def: "A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter." [PATOC:GVG]
+subset: attribute_slim
+subset: relational_slim
+subset: scalar_slim
+is_a: PATO:0001018 ! physical quality
 
 [Term]
 id: PATO:0000140
@@ -661,6 +671,36 @@ subset: value_slim
 is_a: PATO:0001564 ! extra or missing processual parts
 
 [Term]
+id: PATO:0001562
+name: decreased mass
+namespace: quality
+alt_id: PATO:0000579
+def: "A mass which is lower than normal or average." [PATO:GVG]
+subset: value_slim
+synonym: "low mass" EXACT []
+synonym: "small mass" EXACT []
+is_a: PATO:0000125 ! mass
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0000125 ! mass
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0001563
+
+[Term]
+id: PATO:0001563
+name: increased mass
+namespace: quality
+alt_id: PATO:0000578
+def: "A mass which is higher than normal or average." [PATO:GVG]
+subset: value_slim
+synonym: "high mass" EXACT []
+synonym: "large mass" EXACT []
+is_a: PATO:0000125 ! mass
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0000125 ! mass
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0001562
+
+[Term]
 id: PATO:0001564
 name: extra or missing processual parts
 namespace: quality
@@ -1004,6 +1044,15 @@ created_by: George Gkoutos
 creation_date: 2009-09-21T10:41:58Z
 
 [Term]
+id: PATO:0002266
+name: 3-D shape
+namespace: quality
+def: "A shape that inheres in a 3 dimensional entity." [PATOC:OREGON]
+is_a: PATO:0000052 ! shape
+created_by: george
+creation_date: 2010-10-05T12:31:16Z
+
+[Term]
 id: PATO:0002290
 name: aplastic/hypoplastic
 namespace: quality
@@ -1098,6 +1147,25 @@ subset: attribute_slim
 is_a: PATO:0002062 ! physical quality of a process
 created_by: George Gkoutos
 creation_date: 2011-11-22T01:12:28Z
+
+[Term]
+id: PATO:0010000
+name: maximally connected
+namespace: quality
+def: "A structural quality inhering in the bearer by virtue of the bearer consisting of a single, maximally connected structure." [GOC:dos]
+comment: What counts as maximally connected may be relative to some specification of granularity.
+is_a: PATO:0000141 ! structure
+created_by: davidos
+creation_date: 2014-12-12T08:41:11Z
+
+[Term]
+id: PATO:0010001
+name: disconnected
+namespace: quality
+def: "A structural quality inhering in the bearer by virtue of the bearer consisting of multiple structures lacking any physical connection to each other." [GOC:dos]
+is_a: PATO:0000141 ! structure
+created_by: davidos
+creation_date: 2014-12-12T08:43:17Z
 
 [Typedef]
 id: decreased_in_magnitude_relative_to
