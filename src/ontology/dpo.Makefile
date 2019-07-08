@@ -3,6 +3,7 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 FBDVPURL=http://purl.obolibrary.org/obo/FBdv_
+#OTHER_SRC:= $(OTHER_SRC) components/lethal_class_hierarchy.owl
 
 imports/fbdv_filter_seed.txt: $(SRC) #$(ONTOLOGYTERMS) #prepare_patterns
 	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/object-properties.sparql $@_prop.tmp &&\
@@ -10,7 +11,6 @@ imports/fbdv_filter_seed.txt: $(SRC) #$(ONTOLOGYTERMS) #prepare_patterns
 	grep -Eo '($(FBDVPURL))[^[:space:]"]+' $@_fbdv.tmp | sort | uniq > $@_fbdv_red.tmp &&\
 	cat $@_fbdv_red.tmp $@_prop.tmp | sort | uniq > $@ &&\
 	rm $@_prop.tmp $@_fbdv.tmp $@_fbdv_red.tmp 
-	
 
 imports/fbdv_import.owl: mirror/fbdv.owl imports/fbdv_terms_combined.txt imports/fbdv_filter_seed.txt
 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T imports/fbdv_terms_combined.txt --method BOT \
@@ -18,6 +18,12 @@ imports/fbdv_import.owl: mirror/fbdv.owl imports/fbdv_terms_combined.txt imports
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/fbdv_import.owl
 
+components/lethal_class_hierarchy.owl: $(SRC) tmp/lethal_terms.txt
+	$(ROBOT) merge --input $< \
+		convert --output tmp/edit.owx
+	Konclude classification -i tmp/edit.owx -o tmp/konclude-edit.owx
+	$(ROBOT) filter -i tmp/konclude-edit.owx -T tmp/lethal_terms.txt --trim false \
+	annotate --ontology-iri $(ONTBASE)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 
 ###############################################################
 ########### Manage ORIGINAL DOSDP patterns! ###################
@@ -91,3 +97,37 @@ $(ONT)-full-elk.owl: $(SRC)
 
 tmp/hermitvelk.txt: $(ONT)-full-elk.owl $(ONT)-full-hermit.owl
 	$(ROBOT) diff --left $(ONT)-full-elk.owl --right $(ONT)-full-hermit.owl --output $@
+
+######################################################
+### Code for generating additional FlyBase reports ###
+######################################################
+
+REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt reports/onto_metrics_calc.txt reports/chado_load_check_simple.txt
+
+SIMPLE_PURL =	http://purl.obolibrary.org/obo/fbcv/dpo-simple.obo
+LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
+
+$(LAST_DEPLOYED_SIMPLE):
+	wget -O $@ $(SIMPLE_PURL)
+
+flybase_script_base=https://raw.githubusercontent.com/FlyBase/drosophila-anatomy-developmental-ontology/master/tools/release_and_checking_scripts/releases/
+onto_metrics_calc=$(flybase_script_base)onto_metrics_calc.pl
+chado_load_checks=$(flybase_script_base)chado_load_checks.pl
+obo_track_new=$(flybase_script_base)obo_track_new.pl
+
+install_flybase_scripts:
+	cp ../scripts/OboModel.pm /usr/local/lib/perl5/site_perl
+	wget -O ../scripts/onto_metrics_calc.pl $(onto_metrics_calc) && chmod +x ../scripts/onto_metrics_calc.pl
+	wget -O ../scripts/chado_load_checks.pl $(chado_load_checks) && chmod +x ../scripts/chado_load_checks.pl
+	wget -O ../scripts/obo_track_new.pl $(obo_track_new) && chmod +x ../scripts/obo_track_new.pl
+
+reports/obo_track_new_simple.txt: $(LAST_DEPLOYED_SIMPLE) install_flybase_scripts $(ONT)-simple.obo
+	echo "Comparing with: "$(SIMPLE_PURL) && ../scripts/obo_track_new.pl $(LAST_DEPLOYED_SIMPLE) $(ONT)-simple.obo > $@
+	
+reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
+	../scripts/onto_metrics_calc.pl 'phenotypic_class' $(ONT)-simple.obo > $@
+	
+reports/chado_load_check_simple.txt: $(ONT)-simple.obo install_flybase_scripts
+	../scripts/chado_load_checks.pl $(ONT)-simple.obo > $@
+
+all_reports: all_reports_onestep $(REPORT_FILES)
