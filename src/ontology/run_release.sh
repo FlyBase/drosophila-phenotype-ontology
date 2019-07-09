@@ -1,7 +1,7 @@
 # Running the DPO release pipeline
 
-# 1. First, lets make sure the ODK is up to date
-docker pull obolibrary/odkfull
+# 1. First, lets make sure the ODK is up to date (I comment this out because I use even newer version)
+#docker pull obolibrary/odkfull
 
 # 2. Next lets run the preprocessing. This involves creating creating the definitions (essentially substitution of the ones containing the $sub_GO:001 macro)
 # This process results in an updated source file dpo-edit-release.owl

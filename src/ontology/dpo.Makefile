@@ -93,7 +93,7 @@ tmp/lethal_module.owl: $(SRC) tmp/lethal_terms.txt
 ### Code for generating additional FlyBase reports ###
 ######################################################
 
-REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt reports/onto_metrics_calc.txt #reports/chado_load_check_simple.txt
+REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt reports/onto_metrics_calc.txt reports/robot_simple_diff.txt #reports/chado_load_check_simple.txt
 
 SIMPLE_PURL =	http://purl.obolibrary.org/obo/fbcv/dpo-simple.obo
 LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
@@ -150,12 +150,9 @@ auto_generated_definitions_seed.txt: $(SRC)
 	cat $@.tmp | sort | uniq >  $@
 	rm -f $@.tmp
 
-auto_generated_definitions.tsv: $(SRC) auto_generated_definitions_seed.txt
+auto_generated_definitions.owl: $(SRC) auto_generated_definitions_seed.txt
 	$(ROBOT) merge --input $(SRC) --output tmp/merged.owl &&\
 	java -jar ../scripts/eq-writer.jar tmp/merged.owl auto_generated_definitions_seed.txt sub_external $@ NA
-
-auto_generated_definitions.owl: auto_generated_definitions.tsv
-	$(ROBOT) template --template $< --prefix "iao: http://purl.obolibrary.org/obo/IAO_" --ontology-iri $(ONTBASE)/$@ --output $@
 
 dpo_pre_release: dpo-edit.owl auto_generated_definitions.owl
 	cp dpo-edit.owl dpo-edit-release.owl
