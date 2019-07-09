@@ -244,11 +244,8 @@ Declaration(Class(obo:FBcv_0006005))
 Declaration(Class(obo:FBcv_0006006))
 Declaration(Class(obo:FBcv_0006007))
 Declaration(ObjectProperty(obo:FBcv_0008000))
-Declaration(ObjectProperty(obo:RO_0002503))
-Declaration(ObjectProperty(obo:RO_0002573))
 Declaration(ObjectProperty(fbcv:has_role))
 Declaration(AnnotationProperty(FBcv:camcur))
-Declaration(AnnotationProperty(:fbcvsubset_mgiribbons))
 Declaration(AnnotationProperty(fbcv:BRAIN_NAME_ABV))
 Declaration(AnnotationProperty(fbcv:BRAND_NAME))
 Declaration(AnnotationProperty(fbcv:EmbDevSlim))
@@ -268,10 +265,10 @@ Declaration(AnnotationProperty(fbcv:camcur))
 Declaration(AnnotationProperty(fbcv:cell_quality))
 Declaration(AnnotationProperty(fbcv:cur))
 Declaration(AnnotationProperty(fbcv:deprecated))
-Declaration(AnnotationProperty(fbcv:larval_OF))
-Declaration(AnnotationProperty(fbcv:lethal_phase))
 Declaration(AnnotationProperty(fbcv:do_not_annotate))
 Declaration(AnnotationProperty(fbcv:fbcvsubset_mgiribbons))
+Declaration(AnnotationProperty(fbcv:larval_OF))
+Declaration(AnnotationProperty(fbcv:lethal_phase))
 Declaration(AnnotationProperty(fbcv:relational_slim))
 Declaration(AnnotationProperty(fbcv:systematic_synonym))
 Declaration(AnnotationProperty(fbcv:value_slim))
@@ -311,10 +308,6 @@ AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition"^^xsd:string)
 
 AnnotationAssertion(rdfs:label FBcv:camcur "camcur"@en)
 SubAnnotationPropertyOf(FBcv:camcur oboInOwl:SubsetProperty)
-
-# Annotation Property: :fbcvsubset_mgiribbons (:fbcvsubset_mgiribbons)
-
-SubAnnotationPropertyOf(:fbcvsubset_mgiribbons oboInOwl:SubsetProperty)
 
 # Annotation Property: fbcv:BRAIN_NAME_ABV (BrainName official abbreviation)
 
@@ -410,6 +403,16 @@ SubAnnotationPropertyOf(fbcv:cur oboInOwl:SubsetProperty)
 
 AnnotationAssertion(rdfs:comment fbcv:deprecated "warning of impending obsoletion"^^xsd:string)
 SubAnnotationPropertyOf(fbcv:deprecated oboInOwl:SubsetProperty)
+
+# Annotation Property: fbcv:do_not_annotate (fbcv:do_not_annotate)
+
+AnnotationAssertion(rdfs:comment fbcv:do_not_annotate "do not annotate")
+SubAnnotationPropertyOf(fbcv:do_not_annotate oboInOwl:SubsetProperty)
+
+# Annotation Property: fbcv:fbcvsubset_mgiribbons (fbcv:fbcvsubset_mgiribbons)
+
+AnnotationAssertion(rdfs:comment fbcv:fbcvsubset_mgiribbons "fbcvsubset_mgiribbons")
+SubAnnotationPropertyOf(fbcv:fbcvsubset_mgiribbons oboInOwl:SubsetProperty)
 
 # Annotation Property: fbcv:larval_OF (fbcv:larval_OF)
 
@@ -1094,7 +1097,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000399 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000399 "FBcv:0000399"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000399 "courtship behavior defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000399 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:GO_0007619 ObjectIntersectionOf(obo:GO_0007610 ObjectSomeValuesFrom(obo:BFO_0000050 obo:GO_0007619)))) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000399 ObjectIntersectionOf(obo:BFO_0000019 ObjectSomeValuesFrom(obo:RO_0002314 obo:GO_0007619) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000399 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000400 (mating defective)
@@ -1104,7 +1107,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000400 "phenotypic_class"
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000400 "FBcv:0000400"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000400 fbcv:fbcvsubset_mgiribbons)
 AnnotationAssertion(rdfs:label obo:FBcv_0000400 "mating defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000400 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:GO_0007618 ObjectSomeValuesFrom(obo:BFO_0000050 obo:GO_0007618))) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000400 ObjectIntersectionOf(obo:BFO_0000019 ObjectSomeValuesFrom(obo:RO_0002314 obo:GO_0007618) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000400 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000401 (mating rhythm defective)
@@ -1924,7 +1927,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000721 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000721 "FBcv:0000721"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000721 "mating behavior defective"^^xsd:string)
-EquivalentClasses(obo:FBcv_0000721 ObjectIntersectionOf(obo:PATO_0000001 ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:GO_0007617 ObjectIntersectionOf(obo:GO_0007610 ObjectSomeValuesFrom(obo:BFO_0000050 obo:GO_0007617)))) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
+EquivalentClasses(obo:FBcv_0000721 ObjectIntersectionOf(obo:BFO_0000019 ObjectSomeValuesFrom(obo:RO_0002314 obo:GO_0007617) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460)))
 SubClassOf(obo:FBcv_0000721 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000723 (neoplasia)
