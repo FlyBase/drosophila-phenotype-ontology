@@ -115,12 +115,14 @@ flybase_script_base=https://raw.githubusercontent.com/FlyBase/drosophila-anatomy
 onto_metrics_calc=$(flybase_script_base)onto_metrics_calc.pl
 chado_load_checks=$(flybase_script_base)chado_load_checks.pl
 obo_track_new=$(flybase_script_base)obo_track_new.pl
+auto_def_sub=$(flybase_script_base)auto_def_sub.pl
 
 install_flybase_scripts:
 	cp ../scripts/OboModel.pm /usr/local/lib/perl5/site_perl
 	wget -O ../scripts/onto_metrics_calc.pl $(onto_metrics_calc) && chmod +x ../scripts/onto_metrics_calc.pl
 	#wget -O ../scripts/chado_load_checks.pl $(chado_load_checks) && chmod +x ../scripts/chado_load_checks.pl
 	wget -O ../scripts/obo_track_new.pl $(obo_track_new) && chmod +x ../scripts/obo_track_new.pl
+	wget -O ../scripts/auto_def_sub.pl $(auto_def_sub) && chmod +x ../scripts/auto_def_sub.pl
 
 reports/obo_track_new_simple.txt: $(LAST_DEPLOYED_SIMPLE) install_flybase_scripts $(ONT)-simple.obo
 	echo "Comparing with: "$(SIMPLE_PURL) && ../scripts/obo_track_new.pl $(LAST_DEPLOYED_SIMPLE) $(ONT)-simple.obo > $@
@@ -137,10 +139,20 @@ reports/chado_load_check_simple.txt: $(ONT)-simple.obo install_flybase_scripts
 all_reports: all_reports_onestep $(REPORT_FILES)
 
 prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
+	rsync -R $(ASSETS) $(RELEASEDIR) &&\
+  mkdir -p $(RELEASEDIR)/patterns &&\
+  cp $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
+  echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on github"
 	
 # Simple is overwritten to strip out duplicate names and definitions.
 
-simple: $(SRC)
+tmp/dpo-simple-merged.obo: $(SRC) install_flybase_scripts
+	$(ROBOT) merge --input $< $(patsubst %, -i %, $(OTHER_SRC)) convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@
+
+tmp/dpo-simple-defs.obo: tmp/dpo-simple-merged.obo
+	../scripts/auto_def_sub.pl $< > $@
+
+simple: tmp/dpo-simple-defs.obo
 	$(ROBOT) merge --input $< $(patsubst %, -i %, $(OTHER_SRC)) \
 		reason --reasoner ELK \
 		relax \
@@ -148,11 +160,10 @@ simple: $(SRC)
 		relax \
 		filter --term-file simple_seed.txt --select "annotations ontology anonymous object-properties self" --trim true \
 		reduce -r ELK \
-		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl dpo-simple.obo
+		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl dpo-simple.owl
 
-$(ONT)-simple.obo: $(ONT)-simple.owl
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
+simple_obo: simple install_flybase_scripts
+	$(ROBOT) convert --input dpo-simple.owl --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
 	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
-	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\nname[:]/def:/g; print' > $@
-	#../scripts/auto_def_sub.pl  oort/$@ > $@
-	rm -f $@.tmp.obo $@.tmp
+	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\nname[:]/def:/g; print' > dpo-simple.obo.x
+	../scripts/auto_def_sub.pl dpo-simple.obo.x > dpo-simple.obo
