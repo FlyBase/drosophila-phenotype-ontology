@@ -54,10 +54,25 @@ prepare_patterns_orig:
 
 original_patterns: $(PATTERNDIR)/definitions_original.owl
 
+tmp/all_patternised_classes.txt:
+	$(ROBOT) query --use-graphs false -f csv -i $(PATTERNDIR)/definitions_original.owl --query ../sparql/dpo-equivalent-classes.sparql $@.tmp
+	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
+
 tmp/all_defined_classes.txt: $(SRC)
 	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dpo-equivalent-classes.sparql $@.tmp
 	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
 	
+tmp/remaining_classes.txt: tmp/all_patternised_classes.txt tmp/all_defined_classes.txt
+	comm -13 $^ > $@
+
+tmp/remaining_definitions.owl: $(SRC) tmp/remaining_classes.txt
+	$(ROBOT) filter -i $< -T tmp/remaining_classes.txt --axioms "equivalent annotation" --trim false -o $@
+
+
+############################################################
+### Code for generating class hierarchy for lethal terms ###
+############################################################
+
 tmp/lethal_terms.txt: $(SRC)
 	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dpo-lethal.sparql $@.tmp
 	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
@@ -72,32 +87,7 @@ tmp/lethal_module.owl: $(SRC) tmp/lethal_terms.txt
 	$(ROBOT) extract --input $< -T tmp/lethal_terms.txt --force true --imports exclude --method STAR \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@;
 
-tmp/all_patternised_classes.txt:
-	$(ROBOT) query --use-graphs false -f csv -i $(PATTERNDIR)/definitions_original.owl --query ../sparql/dpo-equivalent-classes.sparql $@.tmp
-	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
 
-tmp/remaining_classes.txt: tmp/all_patternised_classes.txt tmp/all_defined_classes.txt
-	comm -13 $^ > $@
-
-tmp/remaining_definitions.owl: $(SRC) tmp/remaining_classes.txt
-	$(ROBOT) filter -i $< -T tmp/remaining_classes.txt --axioms "equivalent annotation" --trim false -o $@
-
-$(ONT)-full-hermit.owl: $(SRC)
-	$(ROBOT) merge --input $< \
-		reason --reasoner hermit \
-		relax \
-		reduce -r ELK \
-		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
-
-$(ONT)-full-elk.owl: $(SRC)
-	$(ROBOT) merge --input $< \
-		reason --reasoner elk \
-		relax \
-		reduce -r ELK \
-		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
-
-tmp/hermitvelk.txt: $(ONT)-full-elk.owl $(ONT)-full-hermit.owl
-	$(ROBOT) diff --left $(ONT)-full-elk.owl --right $(ONT)-full-hermit.owl --output $@
 
 ######################################################
 ### Code for generating additional FlyBase reports ###
@@ -146,24 +136,29 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 	
 # Simple is overwritten to strip out duplicate names and definitions.
 
-tmp/dpo-simple-merged.obo: $(SRC) install_flybase_scripts
-	$(ROBOT) merge --input $< $(patsubst %, -i %, $(OTHER_SRC)) convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@
-
-tmp/dpo-simple-defs.obo: tmp/dpo-simple-merged.obo
-	../scripts/auto_def_sub.pl $< > $@
-
-simple: tmp/dpo-simple-defs.obo
-	$(ROBOT) merge --input $< $(patsubst %, -i %, $(OTHER_SRC)) \
-		reason --reasoner ELK \
-		relax \
-		remove --axioms equivalent \
-		relax \
-		filter --term-file simple_seed.txt --select "annotations ontology anonymous object-properties self" --trim true \
-		reduce -r ELK \
-		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl dpo-simple.owl
-
-simple_obo: simple install_flybase_scripts
+simple_obo:
 	$(ROBOT) convert --input dpo-simple.owl --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
 	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
-	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\nname[:]/def:/g; print' > dpo-simple.obo.x
-	../scripts/auto_def_sub.pl dpo-simple.obo.x > dpo-simple.obo
+	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\nname[:]/def:/g; print' > dpo-simple.obo
+
+#####################################################################################
+### Regenerate placeholder definitions                                            ###
+#####################################################################################
+
+auto_generated_definitions_seed.txt: $(SRC)
+	$(ROBOT) query --use-graphs false -f csv -i $(SRC) --query ../sparql/classes-with-placeholder-definitions.sparql $@.tmp &&\
+	cat $@.tmp | sort | uniq >  $@
+	rm -f $@.tmp
+
+auto_generated_definitions.tsv: $(SRC) auto_generated_definitions_seed.txt
+	$(ROBOT) merge --input $(SRC) --output tmp/merged.owl &&\
+	java -jar ../scripts/eq-writer.jar tmp/merged.owl auto_generated_definitions_seed.txt sub_external $@ NA
+
+auto_generated_definitions.owl: auto_generated_definitions.tsv
+	$(ROBOT) template --template $< --prefix "iao: http://purl.obolibrary.org/obo/IAO_" --ontology-iri $(ONTBASE)/$@ --output $@
+
+dpo_pre_release: dpo-edit.owl auto_generated_definitions.owl
+	cp dpo-edit.owl dpo-edit-release.owl
+	sed -i '/sub_/d' ./dpo-edit-release.owl
+	$(ROBOT) merge -i dpo-edit-release.owl -i auto_generated_definitions.owl --collapse-import-closure false -o dpo-edit-release.ofn && mv dpo-edit-release.ofn dpo-edit-release.owl
+	echo "Preprocessing done. mMake sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
