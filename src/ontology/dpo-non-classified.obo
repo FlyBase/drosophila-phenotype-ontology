@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2019-07-08/dpo-non-classified.owl
+data-version: dpo/releases/2019-07-09/dpo-non-classified.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -8,8 +8,9 @@ subsetdef: camcur "camcur"
 subsetdef: cell_quality "cell_quality"
 subsetdef: cur "cur"
 subsetdef: deprecated "warning of impending obsoletion"
+subsetdef: do_not_annotate "do not annotate"
 subsetdef: EmbDevSlim "EmbDevSlim"
-subsetdef: fbcvsubset_mgiribbons ""
+subsetdef: fbcvsubset_mgiribbons "fbcvsubset_mgiribbons"
 subsetdef: FlyTed "Testis slim"
 subsetdef: FT_new "FlyTed temp subset for edit tracking purposes"
 subsetdef: larval_OF "larval olfactory system"
@@ -2708,6 +2709,9 @@ name: courtship behavior defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in courtship behavior (GO:0007619). 'courtship behavior' is defined as: '$sub_GO:0007619'" [FBC:DOS]
 is_a: FBcv:0001347 ! phenotype
+intersection_of: PATO:0000001 ! quality
+intersection_of: RO:0002314 GO:0007619 ! inheres in part of courtship behavior
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 
 [Term]
 id: FBcv:0000400
@@ -2716,6 +2720,9 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in mating (GO:0007618). 'mating' is defined as: '$sub_GO:0007618'" [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
+intersection_of: PATO:0000001 ! quality
+intersection_of: RO:0002314 GO:0007618 ! inheres in part of mating
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 
 [Term]
 id: FBcv:0000401
@@ -3561,6 +3568,9 @@ name: mating behavior defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in mating behavior (GO:0007617). 'mating behavior' is defined as: '$sub_GO:0007617'" [FBC:DOS]
 is_a: FBcv:0001347 ! phenotype
+intersection_of: PATO:0000001 ! quality
+intersection_of: RO:0002314 GO:0007617 ! inheres in part of mating behavior
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 
 [Term]
 id: FBcv:0000723
@@ -14146,8 +14156,8 @@ def: "x actively participates in y if and only if x participates in y and x real
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "agent in" xsd:string
-is_a: participates_in ! participates in
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
+is_a: participates_in ! participates_in
 inverse_of: RO:0002218 ! has active participant
 
 [Typedef]
@@ -15508,7 +15518,7 @@ subset: RO:0002259
 xref: RO:0002352
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
 
 [Typedef]
 id: involved_in
@@ -15627,7 +15637,7 @@ xref: RO:0002353
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_transitive: false
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
 
 [Typedef]
 id: overlaps

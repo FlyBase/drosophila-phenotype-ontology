@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2019-07-08/dpo-base.owl
+data-version: dpo/releases/2019-07-09/dpo-base.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -8,8 +8,9 @@ subsetdef: camcur "camcur"
 subsetdef: cell_quality "cell_quality"
 subsetdef: cur "cur"
 subsetdef: deprecated "warning of impending obsoletion"
+subsetdef: do_not_annotate "do not annotate"
 subsetdef: EmbDevSlim "EmbDevSlim"
-subsetdef: fbcvsubset_mgiribbons ""
+subsetdef: fbcvsubset_mgiribbons "fbcvsubset_mgiribbons"
 subsetdef: FlyTed "Testis slim"
 subsetdef: FT_new "FlyTed temp subset for edit tracking purposes"
 subsetdef: larval_OF "larval olfactory system"
@@ -601,6 +602,9 @@ name: courtship behavior defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in courtship behavior (GO:0007619). 'courtship behavior' is defined as: '$sub_GO:0007619'" [FBC:DOS]
 is_a: FBcv:0001347 ! phenotype
+intersection_of: PATO:0000001
+intersection_of: RO:0002314 GO:0007619
+intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000400
@@ -609,6 +613,9 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in mating (GO:0007618). 'mating' is defined as: '$sub_GO:0007618'" [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
+intersection_of: PATO:0000001
+intersection_of: RO:0002314 GO:0007618
+intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000401
@@ -1454,6 +1461,9 @@ name: mating behavior defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in mating behavior (GO:0007617). 'mating behavior' is defined as: '$sub_GO:0007617'" [FBC:DOS]
 is_a: FBcv:0001347 ! phenotype
+intersection_of: PATO:0000001
+intersection_of: RO:0002314 GO:0007617
+intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000723

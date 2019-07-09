@@ -1,5 +1,8 @@
 format-version: 1.2
-data-version: dpo/releases/2019-07-08/dpo-simple.owl
+data-version: dpo/releases/2019-07-09/dpo-simple.owl
+subsetdef: do_not_annotate "do not annotate"
+subsetdef: fbcvsubset_mgiribbons "fbcvsubset_mgiribbons"
+subsetdef: lethal_phase "lethal phase terms"
 default-namespace: FlyBase_miscellaneous_CV
 ontology: dpo/dpo-simple
 
@@ -484,7 +487,7 @@ id: FBcv:0000399
 name: courtship behavior defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in courtship behavior (GO:0007619). 'courtship behavior' is defined as: '$sub_GO:0007619'" [FBC:DOS]
-is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0000721 ! mating behavior defective
 
 [Term]
 id: FBcv:0000400
@@ -499,7 +502,6 @@ id: FBcv:0000401
 name: mating rhythm defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in circadian mating behavior (GO:0035648). 'circadian mating behavior' is defined as: '$sub_GO:0035648'" [FBC:DOS]
-is_a: FBcv:0000400 ! mating defective
 is_a: FBcv:0000679 ! circadian behavior defective
 is_a: FBcv:0000721 ! mating behavior defective
 
@@ -512,8 +514,6 @@ synonym: "singing defective" EXACT [FBC:SM]
 synonym: "song production defective" EXACT [FBC:SM]
 is_a: FBcv:0000387 ! behavior defective
 is_a: FBcv:0000399 ! courtship behavior defective
-is_a: FBcv:0000400 ! mating defective
-is_a: FBcv:0000721 ! mating behavior defective
 
 [Term]
 id: FBcv:0000403
@@ -1173,7 +1173,7 @@ id: FBcv:0000721
 name: mating behavior defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in mating behavior (GO:0007617). 'mating behavior' is defined as: '$sub_GO:0007617'" [FBC:DOS]
-is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0000400 ! mating defective
 
 [Term]
 id: FBcv:0000723
@@ -1255,7 +1255,7 @@ def: "A phenotype of a population that is the death of all animals in that popul
 comment: As the P-Stage and the 'pharate adult stage' have the same end,  there is no need for a seprate term for 'lethal - all die before end of pharate adult stage.
 subset: lethal_phase
 synonym: "lethal - all die before end of pharate adult stage" EXACT []
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0000351 ! lethal
 
 [Term]
 id: FBcv:0002001
@@ -1263,7 +1263,7 @@ name: lethal - all die before end of first instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the first instar larval stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002003 ! lethal - all die before end of second instar larval stage
 
 [Term]
 id: FBcv:0002002
@@ -1273,7 +1273,7 @@ def: "A phenotype of a population that is the death of all animals in that popul
 comment: As the larval stage and third instar larval stage have the same end,  there is no need for a separate term for 'lethal - all die before end of third instar larval stage'.
 subset: lethal_phase
 synonym: "lethal - all die before end of third instar larval stage" EXACT []
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002026 ! lethal - all die before end of prepupal stage
 
 [Term]
 id: FBcv:0002003
@@ -1281,7 +1281,7 @@ name: lethal - all die before end of second instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the second instar larval stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002002 ! lethal - all die before end of larval stage
 
 [Term]
 id: FBcv:0002004
@@ -1298,6 +1298,7 @@ name: lethal - all die during P-stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the P-stage." [FBC:DOS]
 subset: lethal_phase
+is_a: FBcv:0002000 ! lethal - all die before end of P-stage
 is_a: FBcv:0002010 ! majority die during P-stage
 
 [Term]
@@ -1306,6 +1307,7 @@ name: lethal - all die during first instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the first instar larval stage." [FBC:DOS]
 subset: lethal_phase
+is_a: FBcv:0002001 ! lethal - all die before end of first instar larval stage
 is_a: FBcv:0002007 ! lethal - all die during larval stage
 is_a: FBcv:0002011 ! majority die during first instar larval stage
 
@@ -1315,6 +1317,7 @@ name: lethal - all die during larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the larval stage." [FBC:DOS]
 subset: lethal_phase
+is_a: FBcv:0002002 ! lethal - all die before end of larval stage
 is_a: FBcv:0002012 ! majority die during larval stage
 
 [Term]
@@ -1323,6 +1326,7 @@ name: lethal - all die during second instar larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the second instar larval stage." [FBC:DOS]
 subset: lethal_phase
+is_a: FBcv:0002003 ! lethal - all die before end of second instar larval stage
 is_a: FBcv:0002007 ! lethal - all die during larval stage
 is_a: FBcv:0002013 ! majority die during second instar larval stage
 
@@ -1400,7 +1404,7 @@ name: some die during P-stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the P-stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002019 ! increased mortality during development
 
 [Term]
 id: FBcv:0002021
@@ -1424,7 +1428,7 @@ name: some die during larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the larval stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002019 ! increased mortality during development
 
 [Term]
 id: FBcv:0002024
@@ -1449,7 +1453,7 @@ name: lethal - all die before end of prepupal stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the prepupal stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002027 ! lethal - all die before end of pupal stage
 
 [Term]
 id: FBcv:0002027
@@ -1457,7 +1461,7 @@ name: lethal - all die before end of pupal stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the pupal stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002000 ! lethal - all die before end of P-stage
 
 [Term]
 id: FBcv:0002030
@@ -1466,6 +1470,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the pupal stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0002005 ! lethal - all die during P-stage
+is_a: FBcv:0002027 ! lethal - all die before end of pupal stage
 is_a: FBcv:0002034 ! majority die during pupal stage
 
 [Term]
@@ -1475,6 +1480,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the prepupal stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0002005 ! lethal - all die during P-stage
+is_a: FBcv:0002026 ! lethal - all die before end of prepupal stage
 is_a: FBcv:0002035 ! majority die during prepupal stage
 
 [Term]
@@ -1483,7 +1489,7 @@ name: lethal - all die before end of embryonic stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the embryonic stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002001 ! lethal - all die before end of first instar larval stage
 
 [Term]
 id: FBcv:0002033
@@ -1491,6 +1497,7 @@ name: lethal - all die during embryonic stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the embryonic stage." [FBC:DOS]
 subset: lethal_phase
+is_a: FBcv:0002032 ! lethal - all die before end of embryonic stage
 is_a: FBcv:0002037 ! majority die during embryonic stage
 
 [Term]
@@ -1559,7 +1566,7 @@ name: some die during embryonic stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the embryonic stage." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002019 ! increased mortality during development
 
 [Term]
 id: FBcv:0002042
@@ -1567,6 +1574,7 @@ name: lethal - all die during immature adult stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012))." [FBC:DOS]
 subset: lethal_phase
+is_a: FBcv:0000351 ! lethal
 is_a: FBcv:0002050 ! majority die during immature adult stage
 
 [Term]
@@ -1583,7 +1591,7 @@ name: some die during immature adult stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of some significant number of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012))." [FBC:DOS]
 subset: lethal_phase
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002019 ! increased mortality during development
 
 [Term]
 id: FBcv:0004000
@@ -1649,23 +1657,6 @@ name: population of cells
 id: FBcv:0008000
 name: has_age
 is_functional: true
-
-[Typedef]
-id: RO:0002503
-name: towards
-def: "q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2" []
-property_value: IAO:0000116 "This relation is provided in order to support the use of relational qualities such as 'concentration of'; for example, the concentration of C in V is a quality that inheres in V, but pertains to C." xsd:string
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
-
-[Typedef]
-id: RO:0002573
-name: has modifier
-def: "A relation that holds between an attribute or a qualifier and another attribute." []
-subset: ro-eco
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
-property_value: IAO:0000232 "This relation is intended to be used in combination with PATO, to be able to refine PATO quality classes using modifiers such as 'abnormal' and 'normal'. It has yet to be formally aligned into an ontological framework; it's not clear what the ontological status of the \"modifiers\" are." xsd:string
 
 [Typedef]
 id: has_role

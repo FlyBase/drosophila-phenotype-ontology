@@ -2,7 +2,6 @@
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/dpo.owl#"
      xml:base="http://purl.obolibrary.org/obo/dpo.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:dpo="http://purl.obolibrary.org/obo/dpo.owl#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -21,7 +20,7 @@
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
      xmlns:oboInOwl1="ttp://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2019-07-08"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2019-07-09"/>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase_miscellaneous_CV</oboInOwl:default-namespace>
     </owl:Ontology>
     
@@ -465,14 +464,6 @@ Where we have an annotation assertion
     
 
 
-    <!-- http://purl.obolibrary.org/obo/dpo.owl#fbcvsubset_mgiribbons -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/dpo.owl#fbcvsubset_mgiribbons">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/fbcv#BRAIN_NAME_ABV -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/fbcv#BRAIN_NAME_ABV">
@@ -639,6 +630,24 @@ Where we have an annotation assertion
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/fbcv#deprecated">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">warning of impending obsoletion</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/fbcv#do_not_annotate -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/fbcv#do_not_annotate">
+        <rdfs:comment>do not annotate</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons">
+        <rdfs:comment>fbcvsubset_mgiribbons</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -971,6 +980,12 @@ Where we have an annotation assertion
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#remark -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#remark"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#saved-by -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#saved-by"/>
@@ -1061,6 +1076,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BFO:0000050</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBO_REL:part_of</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">external</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
@@ -1149,6 +1165,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000118 xml:lang="en">is preceded by</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">preceded_by</obo:IAO_0000118>
         <dc:source>http://www.obofoundry.org/ro/#OBO_REL:preceded_by</dc:source>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">djs93</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-10-09T10:00:53Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BFO:0000062</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBO_REL:preceded_by</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is preceded by</oboInOwl:hasExactSynonym>
@@ -1775,7 +1793,9 @@ range: spatial region or site (immaterial continuant)
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase_development_CV</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immediately_preceded_by</oboInOwl:id>
+        <oboInOwl:id>starts_at_end_of</oboInOwl:id>
         <oboInOwl:shorthand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immediately_preceded_by</oboInOwl:shorthand>
+        <oboInOwl:shorthand>starts_at_end_of</oboInOwl:shorthand>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Same as starts_at_end_of</rdfs:comment>
         <rdfs:comment xml:lang="en">X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)</rdfs:comment>
         <rdfs:label xml:lang="en">immediately preceded by</rdfs:label>
@@ -9805,7 +9825,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">variegation</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000008</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modifier of variegation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -9830,7 +9850,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is the partial or full transformation of one or more segments (FBbt:00000003) or segmental appendages from one identity to another. For example, in antennapedia an antenna is partially or fully transformed into a leg.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000316</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homeotic</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -9897,7 +9917,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-09-13T02:42:10Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000325</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Typically this is caused by and expansion of the population of neuroblasts at the expense of prospective epidermis, both of which originate in the ventral ectoderm.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neurogenic phenotype</rdfs:label>
     </owl:Class>
@@ -9965,7 +9985,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is survival to mature adulthood, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000349</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note, this term should not be used with the qualifier &apos;partially&apos;. Use semi-viable or semi-lethal instead.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">viable</rdfs:label>
     </owl:Class>
@@ -10107,7 +10127,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-viable</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000350</oboInOwl:id>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">partially lethal - majority live</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -10243,7 +10263,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000351</oboInOwl:id>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note on usage: lethal is appropriate in cases where escaper adults are very rare. The lethal phase prior to becoming a mature adult may be further specified using children terms which specify stage.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lethal</rdfs:label>
     </owl:Class>
@@ -10385,7 +10405,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-lethal</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000352</oboInOwl:id>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stages during which there is significant death prior to mature adulthood can be indicated using one or more stage qualifiers.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">partially lethal - majority die</rdfs:label>
     </owl:Class>
@@ -10425,7 +10445,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is a failure of mutant cells to survive.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000353</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Typically, this phenotype is assayed in clones of cells.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell lethal</rdfs:label>
     </owl:Class>
@@ -10445,7 +10465,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A post-embryonic, macroscopic, anatomical phenotype.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000354</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visible</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -10568,7 +10588,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is a defect in the size of the whole body or some body part compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000357</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">size defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -10802,7 +10822,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is the inability to produce a zygote.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000364</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The cause of sterility may be physical or behavioral. Note, this term should not be used with the qualifier &apos;partially&apos;. Use semi-sterile or semi-fertile instead.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sterile</rdfs:label>
     </owl:Class>
@@ -10822,7 +10842,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is a reduction in the proportion of fertilized eggs produced to below 50% of wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000365</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-sterile</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11055,7 +11075,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is the ability to mate and as a result produce fertilized eggs.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000374</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note, this term should not be used with the qualifier &apos;partially&apos;. Use semi-sterile or semi-fertile instead.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fertile</rdfs:label>
     </owl:Class>
@@ -11076,7 +11096,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a reduction in the proportion of fertilized eggs produced to, but only to &gt; 50% of wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000375</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-fertile</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11175,7 +11195,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype in which all offspring are sterile. Typically, this is due to maternal effect sterility resulting from defects in pole cell development.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000378</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grandchildless</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11325,7 +11345,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in aging (GO:0007568). &apos;aging&apos; is defined as: &apos;$sub_GO:0007568&apos;</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000384</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aging defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11462,7 +11482,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasExactSynonym>increased adult mortality</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000385</oboInOwl:id>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">short lived</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11481,7 +11501,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a longer adult life-span than wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000386</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long lived</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11523,7 +11543,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">behavioral</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000387</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">behavior defective</rdfs:label>
     </owl:Class>
     
@@ -11559,7 +11579,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geotaxis behaviour defective</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gravitaxis behavior defective</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000388</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:comment>Note, this term should not be used when flies have climbing defects purely as a consequence of locomotion defects, use &apos;locomotor behavior defective&apos; instead.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gravitaxis defective</rdfs:label>
     </owl:Class>
@@ -11597,7 +11617,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a disposition to paralysis under conditions that do not cause paralysis in a wild-type animal.  Paralysis is defined as an inability to exhibit `multicellular organismal movement` (GO:0050879)</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000389</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paralytic</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11638,7 +11658,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype consisting of decreased frequency of `multicellular organismal movement` (GO:0050879) compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000390</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypoactive</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11704,7 +11724,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype consisting of increased frequency of `multicellular organismal movement` (GO:0050879) compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000392</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyperactive</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11783,7 +11803,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in circadian rhythm (GO:0007623). &apos;circadian rhythm&apos; is defined as: &apos;$sub_GO:0007623&apos;</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000394</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">circadian rhythm defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11961,23 +11981,8 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0007619"/>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0007610"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007619"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007619"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
@@ -11986,26 +11991,11 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000721"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0007619"/>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0007610"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007619"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007619"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in courtship behavior (GO:0007619). &apos;courtship behavior&apos; is defined as: &apos;$sub_GO:0007619&apos;</obo:IAO_0000115>
@@ -12030,18 +12020,8 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0007618"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007618"/>
-                                    </owl:Restriction>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007618"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
@@ -12053,24 +12033,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0007618"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007618"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007618"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in mating (GO:0007618). &apos;mating&apos; is defined as: &apos;$sub_GO:0007618&apos;</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000400</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mating defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -12100,7 +12070,6 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000400"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000679"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000721"/>
         <rdfs:subClassOf>
@@ -12143,8 +12112,6 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000387"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000399"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000400"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000721"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -12387,7 +12354,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">environmental stress response defective</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000408</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stress response defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -12587,7 +12554,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phototaxis behaviour defective</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000413</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phototaxis defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -12646,7 +12613,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a reduced ability to jump or a reduced jump response. This may be due to neurological or muscular defects.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000415</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jumping defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -12723,7 +12690,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flight behaviour defective</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000417</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This term is agnostic as to the causes of defects in flight. An animal&apos;s flight may be defective for mechanical, behavioral or sensory reasons.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flight defective</rdfs:label>
     </owl:Class>
@@ -12994,7 +12961,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">programmed cell death defective</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000424</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell death defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13074,7 +13041,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in cell growth (GO:0016049). &apos;cell growth&apos; is defined as: &apos;$sub_GO:0016049&apos;</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000427</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that defects in cell size are not necessarily the result of defects in cell growth. A change in the rate of cell division in the absence of any change in cell growth rate can result in smaller or larger cells.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell growth defective</rdfs:label>
     </owl:Class>
@@ -13116,7 +13083,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in the size of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000428</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell size defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13157,7 +13124,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in the shape (PATO:0000052) of some cell compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000429</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell shape defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13198,7 +13165,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in the asymmetric distribution of components within a cell. For example an epithelial cell is &apos;cell polarity defective&apos; if it lacks the normal asymmetric distribution of proteins or cell components such as junctions or villi along its apical-basal axis.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000430</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell polarity defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13336,7 +13303,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in the electrophysiological properties of some class of neurons, muscles or anatomical structure of the nervous system. Examples of these phenotypes at the neuron class level include defects in spontaneous or evoked excitatory junction potential. Examples at a more gross anatomical level include abnormal retinal electrophysiology (e.g.- measured by an electroretinogram).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000434</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neurophysiology defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13376,7 +13343,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in nervous system (FBbt:00005093). &apos;nervous system&apos; is defined as: &apos;$sub_FBbt:00005093&apos;</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000435</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neuroanatomy defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13416,7 +13383,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in sex determination (GO:0007530). &apos;sex determination&apos; is defined as: &apos;$sub_GO:0007530&apos;</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000436</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sex-determination defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13485,7 +13452,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decreased sensitivity (compared to wild-type) to the toxic effects of some specified chemical. The phrase &apos;toxic effects&apos; here refers to reversible effects such as inebriation and sedation as well as sustained damage, developmental defects and death.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000439</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical resistant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13522,7 +13489,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increased sensitivity (compared to wild-type) to the toxic effects of some specified chemical. The phrase &apos;toxic effects&apos; here refers to reversible effects such as inebriation and sedation as well as sustained damage, developmental defects and death.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000440</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical sensitive</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13559,7 +13526,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decreased tendency for radiation exposure to cause toxic effects.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000441</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation resistant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13596,7 +13563,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increased tendency for radiation exposure to cause toxic effects.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000442</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation sensitive</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13733,7 +13700,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in immune response (GO:0006955). &apos;immune response&apos; is defined as: &apos;$sub_GO:0006955&apos;</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000448</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immune response defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13774,7 +13741,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tissue polarity defective</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000449</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For apical-basal polarity phenotypes of epithelia, the appropriate term is &apos;cell polarity defective&apos;.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">planar polarity defective</rdfs:label>
     </owl:Class>
@@ -13832,7 +13799,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a change in the rate of some developmental process (GO:0032502) taking place prior to mature adulthood (defined as adult stage A3), compared to wild-type. Note, developmental processes include stages in development of the whole animal (e.g.- larval development) as well as specific sub-processes, such as dorsal closure.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000450</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A more complete formalization would require a clause specifying stage. It might be possible to do this in OWL using the same system as we are using for lethal phase.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developmental rate defective</rdfs:label>
     </owl:Class>
@@ -13953,7 +13920,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in cell adhesion (GO:0007155). &apos;cell adhesion&apos; is defined as: &apos;$sub_GO:0007155&apos;</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000668</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell adhesion defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14033,7 +14000,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in eclosion (GO:0007562). &apos;eclosion&apos; is defined as: &apos;$sub_GO:0007562&apos;</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000670</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eclosion defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14073,7 +14040,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in cell cycle (GO:0007049). &apos;cell cycle&apos; is defined as: &apos;$sub_GO:0007049&apos;</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000671</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell cycle defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14236,7 +14203,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-02-23T12:28:26Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000681</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sensory perception defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14318,7 +14285,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-02-23T12:51:02Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000683</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temperature response defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14400,7 +14367,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in axis specification (GO:0009798). &apos;axis specification&apos; is defined as: &apos;$sub_GO:0009798&apos;</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000686</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This phenotypic class does not encompass planar polarity.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">axis specification defective</rdfs:label>
     </owl:Class>
@@ -14420,7 +14387,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is a disruption in the wild-type pattern of segments or parasegments of the embryo or larva.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000698</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commonly assayed on the basis of phenotypic effects on segmentally repeated cuticular patterns.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">embryonic/larval segmentation phenotype</rdfs:label>
     </owl:Class>
@@ -14558,7 +14525,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-09-20T12:06:13Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000705</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sleep defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14726,7 +14693,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase or decrease in the number of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type. This phenotype is not necessarily accompanied by defects in cell growth - there may be a greater or lesser number of cells in an otherwise normal volume of tissue.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000709</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell number defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14786,7 +14753,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in cell migration (GO:0016477). &apos;cell migration&apos; is defined as: &apos;$sub_GO:0016477&apos;</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000716</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell migration defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14947,23 +14914,8 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0007617"/>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0007610"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007617"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007617"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
@@ -14972,26 +14924,11 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000400"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0007617"/>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0007610"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007617"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007617"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in mating behavior (GO:0007617). &apos;mating behavior&apos; is defined as: &apos;$sub_GO:0007617&apos;</obo:IAO_0000115>
@@ -15197,7 +15134,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in endocytosis (GO:0006897). &apos;endocytosis&apos; is defined as: &apos;$sub_GO:0006897&apos;</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0001324</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">endocytosis defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -15236,7 +15173,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0001325</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exocytosis defective</rdfs:label>
     </owl:Class>
     
@@ -15267,7 +15204,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic class</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0001347</oboInOwl:id>
-        <oboInOwl:inSubset>do_not_annotate</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#do_not_annotate"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The subclasses of this term classify Drosophila phenotypes into different common categories. They have been chosen by FlyBase to reflect phenotype terms most often reported by Drosophila researchers in the published literature.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotype</rdfs:label>
     </owl:Class>
@@ -15350,7 +15287,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000351"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -15404,7 +15341,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages prior to eclosion from the pupal case (the end of the P-stage).</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>lethal - all die before end of pharate adult stage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:comment>As the P-Stage and the &apos;pharate adult stage&apos; have the same end,  there is no need for a seprate term for &apos;lethal - all die before end of pharate adult stage.</rdfs:comment>
         <rdfs:label xml:lang="en">lethal - all die before end of P-stage</rdfs:label>
     </owl:Class>
@@ -15487,7 +15424,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002003"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -15540,7 +15477,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die before end of first instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -15622,7 +15559,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002026"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -15676,7 +15613,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>lethal - all die before end of third instar larval stage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:comment>As the larval stage and third instar larval stage have the same end,  there is no need for a separate term for &apos;lethal - all die before end of third instar larval stage&apos;.</rdfs:comment>
         <rdfs:label xml:lang="en">lethal - all die before end of larval stage</rdfs:label>
     </owl:Class>
@@ -15759,7 +15696,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002002"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -15812,7 +15749,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die before end of second instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -15859,8 +15796,8 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype that is an increase in the rate of death in a population at any stage of life (during development or adulthood), over the rate seen in a wild type control population. </obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased mortality</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -15942,6 +15879,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002000"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002010"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -15995,7 +15933,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during P-stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16077,6 +16015,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002001"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002007"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002011"/>
         <rdfs:subClassOf>
@@ -16131,7 +16070,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during first instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16213,6 +16152,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002002"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002012"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -16266,7 +16206,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16348,6 +16288,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002003"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002007"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002013"/>
         <rdfs:subClassOf>
@@ -16402,7 +16343,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during second instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16538,7 +16479,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during third instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16673,7 +16614,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during P-stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16809,7 +16750,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during first instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -16944,7 +16885,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17080,7 +17021,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during second instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17216,7 +17157,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during third instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17354,7 +17295,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of some significant proportion of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">partially lethal</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17490,7 +17431,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased mortality during development</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17572,7 +17513,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002019"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -17625,7 +17566,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during P-stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17760,7 +17701,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during first instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17895,7 +17836,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during second instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17977,7 +17918,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002019"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -18030,7 +17971,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18165,7 +18106,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during third instar larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18301,7 +18242,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during pharate adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18383,7 +18324,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -18436,7 +18377,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die before end of prepupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18518,7 +18459,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002000"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -18571,7 +18512,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die before end of pupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18654,6 +18595,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002027"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002034"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -18707,7 +18649,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during pupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18790,6 +18732,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002026"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002035"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -18843,7 +18786,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during prepupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18925,7 +18868,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -18978,7 +18921,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die before end of embryonic stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -19060,6 +19003,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002032"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002037"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -19113,7 +19057,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during embryonic stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -19321,7 +19265,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during pupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -19457,7 +19401,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during prepupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -19593,7 +19537,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during pharate adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -19728,7 +19672,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:comment>This term is agnostic about whether any survive to adulthood.</rdfs:comment>
         <rdfs:label xml:lang="en">majority die during embryonic stage</rdfs:label>
     </owl:Class>
@@ -19864,7 +19808,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during pharate adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -19999,7 +19943,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during pupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -20134,7 +20078,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during prepupal stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -20216,7 +20160,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002019"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -20269,7 +20213,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during embryonic stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -20351,6 +20295,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000351"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002050"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -20404,7 +20349,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during immature adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -20539,7 +20484,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during immature adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -20621,7 +20566,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002019"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -20674,7 +20619,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A phenotype of a population that is the death of some significant number of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
-        <oboInOwl:inSubset>lethal_phase</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during immature adult stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -20931,7 +20876,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is an increased occurrence of cell division (GO:0051301). &apos;cell division&apos; is defined as &apos;$sub_GO:0051301&apos;.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0006005</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased occurrence of cell division</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -20968,7 +20913,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is a decreased occurrence of cell division (GO:0051301). &apos;cell division&apos; is defined as &apos;$sub_GO:0051301&apos;.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0006006</oboInOwl:id>
-        <oboInOwl:inSubset>fbcvsubset_mgiribbons</oboInOwl:inSubset>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased occurrence of cell division</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -22035,6 +21980,18 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005288"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005336"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005337"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The stage of the Drosophila life-cycle from fertilization to hatching.</obo:IAO_0000115>
@@ -23186,6 +23143,18 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007018"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005342"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The stage of the Drosophila life-cycle from hatching to the beginning of puparium formation.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase_development_CV</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBdv:00005336</oboInOwl:id>
@@ -23235,6 +23204,12 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007018"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005338"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The first larval instar begins at hatching and ends at the first larval molt. Anterior spiracles are not yet present; posterior spiracles have two openings each. Salivary glands are very small and all cells are uniform in size. Mouth hooks typically have one tooth. Duration at 25 degrees C: approximately 25 hours (24-49 hours after egg laying; 0-25 hours after hatching).</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L1</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first instar larva</oboInOwl:hasExactSynonym>
@@ -23268,6 +23243,12 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005337"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005339"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The second larval instar begins at the first larval molt and ends at the second larval molt. Larvae are actively feeding and crawling in the food. Distinct anterior spiracles are present as enlargements at the end of the tracheal trunk, but not open to the outside; posterior spiracles have three openings each, and four groups of small unbranched hairs. The salivary glands extend to the first abdominal segment, and have cells that are uniform in size. Mouth hooks typically have two or three teeth. Duration at 25 degrees C: approximately 23 hours (49-72 hours after egg laying; 25-48 hours after hatching).</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L2</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">second instar larva</oboInOwl:hasExactSynonym>
@@ -23299,6 +23280,18 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005338"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005342"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The third larval instar begins at the second larval molt and ends at puparium formation. Anterior spiracles are open to the outside; posterior spiracles have three openings each, and four groups of large branched hairs. The salivary glands extend to the second abdominal segment, with cells larger in the posterior than in the anterior of the gland. Mouth hooks typically have 9-12 teeth. About 24 hours before pupariation (at 25 degree C), larvae stop feeding and climb away from their food. Duration at 25 degrees C: approximately 48 hours (72-120 hours after egg laying; 48-96 hours after hatching).</obo:IAO_0000115>
@@ -23418,6 +23411,12 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005349"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The prepupal stage begins at puparium formation and ends when larval/pupal apolysis is complete, as indicated by the completion of imaginal head sac eversion and the expulsion of the oral armature of the larva. Duration at 25 degrees C: approximately 12 hours. (120-132.2 hours after egg laying; 0-12.2 hours after puparium formation).</obo:IAO_0000115>
@@ -23729,6 +23728,12 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005342"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00006011"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pupal stage starts once larval/pupal apolysis is complete as indicated by the expulsion of the larval armature. Early in this stage, the legs and wings reach full extension along the abdomen. The stage ends when the pupal cuticle separates from the underlying epidermis (pupal/adult apolysis), and the eye cup becomes yellow at its periphery. Duration at 25 degrees C: approximately 32 hours. (132.2-164.3 hours after egg laying; 12.2-44.3 hours after puparium formation).</obo:IAO_0000115>
@@ -24600,6 +24605,12 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005371"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Newly eclosed adult stage. Animal free of pupal case. Runs rapidly to find site for wing expansion. Wings are folded back and black against a very pale abdomen.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBdv:00005373</oboInOwl:hasAlternativeId>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase_development_CV</oboInOwl:hasOBONamespace>
@@ -24631,6 +24642,12 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005370"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00006012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stage, shortly after eclosion, during which the wings expand. During wing expansion, the abdomen pulsates and the hind legs stroke the wings vigorously for several minutes at a time. The stage ends when the wings are folded down over the abdomen, which has become broader and shorter, and the wing cuticle has lost its folds. The stage lasts around 15 minutes at 25&apos;C.</obo:IAO_0000115>
@@ -24672,6 +24689,24 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005354"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005369"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005370"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007025"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The developing adult after pupal-adult apolysis, i.e.- from stage P8 (when yellow eye color first becomes visible through the pupal case), to eclosion. Duration at 25 degrees C: approximately 55.7 hours (164.3-220 hours after egg laying; 44.3-100 hours after puparium formation).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase_development_CV</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBdv:00006011</oboInOwl:id>
@@ -24703,6 +24738,12 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005371"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007026"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adult stage immediately after wing expansion, during which tanning of the cuticle is completed. This stage lasts approximately 45 minutes at 25&apos;C.</obo:IAO_0000115>
@@ -24748,6 +24789,24 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005369"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005370"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007025"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The stage of the Drosophila life-cycle from the formation of the puparium (beginning of the prepupal stage) to eclosion.</obo:IAO_0000115>
@@ -25244,6 +25303,12 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007026"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The developmental stage that lasts from eclosion of the adult from the pupal case until tanning is complete (the end of adult stage A3).</obo:IAO_0000115>
@@ -48000,23 +48065,23 @@ This interpretation is *not* the same as an at-all-times relation
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0003000">
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">produces</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">produces</rdfs:label>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">produces</oboInOwl:id>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix.</obo:IAO_0000115>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that this definition doesn&apos;t quite distinguish the output of a transformation process from a production process, which is related to the identity/granularity issue.</rdfs:comment>
-        <oboInOwl:shorthand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">produces</oboInOwl:shorthand>
-        <obo:IAO_0000117>Melissa Haendel</obo:IAO_0000117>
         <rdfs:label xml:lang="en">produces</rdfs:label>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000117>Melissa Haendel</obo:IAO_0000117>
+        <oboInOwl:shorthand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">produces</oboInOwl:shorthand>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RO:0003000</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0003001">
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <obo:IAO_0000115>a produced_by b iff some process that occurs_in b has_output a.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">produced_by</rdfs:label>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">produced_by</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">produced_by</rdfs:label>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RO:0003001</oboInOwl:hasDbXref>
         <obo:IAO_0000117>Melissa Haendel</obo:IAO_0000117>

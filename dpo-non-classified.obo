@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2019-07-08/dpo-non-classified.owl
+data-version: dpo/releases/2019-07-09/dpo-non-classified.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -8,8 +8,9 @@ subsetdef: camcur "camcur"
 subsetdef: cell_quality "cell_quality"
 subsetdef: cur "cur"
 subsetdef: deprecated "warning of impending obsoletion"
+subsetdef: do_not_annotate "do not annotate"
 subsetdef: EmbDevSlim "EmbDevSlim"
-subsetdef: fbcvsubset_mgiribbons ""
+subsetdef: fbcvsubset_mgiribbons "fbcvsubset_mgiribbons"
 subsetdef: FlyTed "Testis slim"
 subsetdef: FT_new "FlyTed temp subset for edit tracking purposes"
 subsetdef: larval_OF "larval olfactory system"
@@ -2708,6 +2709,9 @@ name: courtship behavior defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in courtship behavior (GO:0007619). 'courtship behavior' is defined as: '$sub_GO:0007619'" [FBC:DOS]
 is_a: FBcv:0001347 ! phenotype
+intersection_of: PATO:0000001 ! quality
+intersection_of: RO:0002314 GO:0007619 ! inheres in part of courtship behavior
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 
 [Term]
 id: FBcv:0000400
@@ -2716,6 +2720,9 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in mating (GO:0007618). 'mating' is defined as: '$sub_GO:0007618'" [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
+intersection_of: PATO:0000001 ! quality
+intersection_of: RO:0002314 GO:0007618 ! inheres in part of mating
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 
 [Term]
 id: FBcv:0000401
@@ -3561,6 +3568,9 @@ name: mating behavior defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in mating behavior (GO:0007617). 'mating behavior' is defined as: '$sub_GO:0007617'" [FBC:DOS]
 is_a: FBcv:0001347 ! phenotype
+intersection_of: PATO:0000001 ! quality
+intersection_of: RO:0002314 GO:0007617 ! inheres in part of mating behavior
+intersection_of: RO:0002573 PATO:0000460 ! has modifier abnormal
 
 [Term]
 id: FBcv:0000723
@@ -3660,8 +3670,8 @@ def: "A phenotype of a population that is the death of all animals in that popul
 comment: As the P-Stage and the 'pharate adult stage' have the same end,  there is no need for a seprate term for 'lethal - all die before end of pharate adult stage.
 subset: lethal_phase
 synonym: "lethal - all die before end of pharate adult stage" EXACT []
+is_a: FBcv:0000351 ! lethal
 is_a: FBcv:0001347 ! phenotype
-is_a: FBcv:0002004 ! increased mortality
 
 [Term]
 id: FBcv:0002001
@@ -3670,7 +3680,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the first instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002003 ! lethal - all die before end of second instar larval stage
 
 [Term]
 id: FBcv:0002002
@@ -3681,7 +3691,7 @@ comment: As the larval stage and third instar larval stage have the same end,  t
 subset: lethal_phase
 synonym: "lethal - all die before end of third instar larval stage" EXACT []
 is_a: FBcv:0001347 ! phenotype
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002026 ! lethal - all die before end of prepupal stage
 
 [Term]
 id: FBcv:0002003
@@ -3690,7 +3700,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the second instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002002 ! lethal - all die before end of larval stage
 
 [Term]
 id: FBcv:0002004
@@ -3708,6 +3718,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the P-stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002000 ! lethal - all die before end of P-stage
 is_a: FBcv:0002010 ! majority die during P-stage
 
 [Term]
@@ -3717,6 +3728,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the first instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002001 ! lethal - all die before end of first instar larval stage
 is_a: FBcv:0002007 ! lethal - all die during larval stage
 is_a: FBcv:0002011 ! majority die during first instar larval stage
 
@@ -3727,6 +3739,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002002 ! lethal - all die before end of larval stage
 is_a: FBcv:0002012 ! majority die during larval stage
 
 [Term]
@@ -3736,6 +3749,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the second instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002003 ! lethal - all die before end of second instar larval stage
 is_a: FBcv:0002007 ! lethal - all die during larval stage
 is_a: FBcv:0002013 ! majority die during second instar larval stage
 
@@ -3822,7 +3836,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the P-stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002019 ! increased mortality during development
 
 [Term]
 id: FBcv:0002021
@@ -3849,7 +3863,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002019 ! increased mortality during development
 
 [Term]
 id: FBcv:0002024
@@ -3877,7 +3891,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the prepupal stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002027 ! lethal - all die before end of pupal stage
 
 [Term]
 id: FBcv:0002027
@@ -3886,7 +3900,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the pupal stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002000 ! lethal - all die before end of P-stage
 
 [Term]
 id: FBcv:0002030
@@ -3896,6 +3910,7 @@ def: "A phenotype of a population that is the death of all animals in that popul
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 is_a: FBcv:0002005 ! lethal - all die during P-stage
+is_a: FBcv:0002027 ! lethal - all die before end of pupal stage
 is_a: FBcv:0002034 ! majority die during pupal stage
 
 [Term]
@@ -3906,6 +3921,7 @@ def: "A phenotype of a population that is the death of all animals in that popul
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 is_a: FBcv:0002005 ! lethal - all die during P-stage
+is_a: FBcv:0002026 ! lethal - all die before end of prepupal stage
 is_a: FBcv:0002035 ! majority die during prepupal stage
 
 [Term]
@@ -3915,7 +3931,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the embryonic stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002001 ! lethal - all die before end of first instar larval stage
 
 [Term]
 id: FBcv:0002033
@@ -3924,6 +3940,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the embryonic stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002032 ! lethal - all die before end of embryonic stage
 is_a: FBcv:0002037 ! majority die during embryonic stage
 
 [Term]
@@ -4000,7 +4017,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the embryonic stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002019 ! increased mortality during development
 
 [Term]
 id: FBcv:0002042
@@ -4008,6 +4025,7 @@ name: lethal - all die during immature adult stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012))." [FBC:DOS]
 subset: lethal_phase
+is_a: FBcv:0000351 ! lethal
 is_a: FBcv:0001347 ! phenotype
 is_a: FBcv:0002050 ! majority die during immature adult stage
 
@@ -4027,7 +4045,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of some significant number of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012))." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
-is_a: FBcv:0002004 ! increased mortality
+is_a: FBcv:0002019 ! increased mortality during development
 
 [Term]
 id: FBcv:0004000
@@ -4449,6 +4467,8 @@ namespace: FlyBase_development_CV
 def: "The stage of the Drosophila life-cycle from fertilization to hatching." [FBC:DOS]
 comment: Temporal ordering number - 20.
 is_a: FBdv:00007012 ! life stage
+relationship: ends_at_start_of FBdv:00005336 ! larval stage
+relationship: ends_at_start_of FBdv:00005337 ! first instar larval stage
 relationship: immediately_preceded_by FBdv:00005288 ! fertilized egg stage
 
 [Term]
@@ -4807,6 +4827,8 @@ namespace: FlyBase_development_CV
 def: "The stage of the Drosophila life-cycle from hatching to the beginning of puparium formation." [FBC:DOS]
 comment: Temporal ordering number - 400.
 is_a: FBdv:00007012 ! life stage
+relationship: ends_at_start_of FBdv:00005342 ! prepupal stage
+relationship: ends_at_start_of FBdv:00007001 ! P-stage
 relationship: immediately_preceded_by FBdv:00005289 ! embryonic stage
 relationship: immediately_preceded_by FBdv:00005335 ! embryonic stage 17
 relationship: immediately_preceded_by FBdv:00007018 ! embryonic stage 17(iv)
@@ -4820,6 +4842,7 @@ comment: Temporal ordering number - 410.
 synonym: "first instar larva" EXACT []
 synonym: "L1" EXACT []
 is_a: FBdv:00007012 ! life stage
+relationship: ends_at_start_of FBdv:00005338 ! second instar larval stage
 relationship: immediately_preceded_by FBdv:00005289 ! embryonic stage
 relationship: immediately_preceded_by FBdv:00005333 ! late embryonic stage
 relationship: immediately_preceded_by FBdv:00005335 ! embryonic stage 17
@@ -4835,6 +4858,7 @@ comment: Temporal ordering number - 420.
 synonym: "L2" EXACT []
 synonym: "second instar larva" EXACT []
 is_a: FBdv:00007012 ! life stage
+relationship: ends_at_start_of FBdv:00005339 ! third instar larval stage
 relationship: immediately_preceded_by FBdv:00005337 ! first instar larval stage
 relationship: part_of FBdv:00005336 ! larval stage
 
@@ -4847,6 +4871,8 @@ comment: Temporal ordering number - 430.
 synonym: "L3" EXACT []
 synonym: "third instar larva" RELATED []
 is_a: FBdv:00007012 ! life stage
+relationship: ends_at_start_of FBdv:00005342 ! prepupal stage
+relationship: ends_at_start_of FBdv:00007001 ! P-stage
 relationship: immediately_preceded_by FBdv:00005338 ! second instar larval stage
 relationship: part_of FBdv:00005336 ! larval stage
 
@@ -4883,6 +4909,7 @@ namespace: FlyBase_development_CV
 def: "The prepupal stage begins at puparium formation and ends when larval/pupal apolysis is complete, as indicated by the completion of imaginal head sac eversion and the expulsion of the oral armature of the larva. Duration at 25 degrees C: approximately 12 hours. (120-132.2 hours after egg laying; 0-12.2 hours after puparium formation)." [FlyBase:FBrf0036849, FlyBase:FBrf0048355]
 comment: Temporal ordering number - 500.
 is_a: FBdv:00007012 ! life stage
+relationship: ends_at_start_of FBdv:00005349 ! pupal stage
 relationship: immediately_preceded_by FBdv:00005336 ! larval stage
 relationship: immediately_preceded_by FBdv:00005339 ! third instar larval stage
 relationship: immediately_preceded_by FBdv:00007005 ! third instar larval stage L2
@@ -4975,6 +5002,7 @@ def: "The pupal stage starts once larval/pupal apolysis is complete as indicated
 comment: Temporal ordering number - 570. DISAMBIGUATION: In Drosophila lab vernacular, the term 'pupal stage' is often used to refer to the entire period from formation of the puparium to eclosion. However, this does not correspond to the standard usage of 'pupal stage' for Cyclorrhaphous flies (for discussion see: FBrf0087128). Briefly: formation of the puparium (hardening of the larval cuticle) marks the beginning of the pre-pupal stage. The pupal stage begins following pupal/larval apolysis - detachment of the larval epidermis from the puparium. In Drosophila, the outward sign of the completion of apolysis is the eversion of the head and expulsion of the larval mouthparts (FBrf0036849). We use P-stage to refer to the stage from pupariation to eclosion, and restrict pupal stage to its standard usage.
 synonym: "phanerocephalic pupa" EXACT [FlyBase:FBrf0036849]
 is_a: FBdv:00007012 ! life stage
+relationship: ends_at_start_of FBdv:00006011 ! pharate adult stage
 relationship: immediately_preceded_by FBdv:00005342 ! prepupal stage
 relationship: part_of FBdv:00007001 ! P-stage
 
@@ -5226,6 +5254,7 @@ def: "Newly eclosed adult stage. Animal free of pupal case. Runs rapidly to find
 comment: Temporal ordering number - 785.  The time at which eclosed flies settle down for wing expansion can vary greatly.  If they fail to find a suitable site then expansion can be delayed by several hours.
 synonym: "adult stage I" RELATED []
 is_a: FBdv:00005259 ! developmental stage
+relationship: ends_at_start_of FBdv:00005371 ! adult stage A2
 relationship: immediately_preceded_by FBdv:00005368 ! pharate adult stage P15(ii)
 relationship: immediately_preceded_by FBdv:00006011 ! pharate adult stage
 relationship: immediately_preceded_by FBdv:00007001 ! P-stage
@@ -5240,6 +5269,7 @@ def: "Stage, shortly after eclosion, during which the wings expand. During wing 
 comment: Temporal ordering number - 790.
 synonym: "adult stage II" RELATED []
 is_a: FBdv:00005259 ! developmental stage
+relationship: ends_at_start_of FBdv:00006012 ! adult stage A3
 relationship: immediately_preceded_by FBdv:00005370 ! adult stage A1
 relationship: part_of FBdv:00007025 ! immature adult stage
 
@@ -5250,6 +5280,9 @@ namespace: FlyBase_development_CV
 def: "The developing adult after pupal-adult apolysis, i.e.- from stage P8 (when yellow eye color first becomes visible through the pupal case), to eclosion. Duration at 25 degrees C: approximately 55.7 hours (164.3-220 hours after egg laying; 44.3-100 hours after puparium formation)." [FlyBase:FBrf0036849, FlyBase:FBrf0048355, FlyBase:FBrf0049147]
 comment: Temporal ordering number - 625.
 is_a: FBdv:00007012 ! life stage
+relationship: ends_at_start_of FBdv:00005369 ! adult stage
+relationship: ends_at_start_of FBdv:00005370 ! adult stage A1
+relationship: ends_at_start_of FBdv:00007025 ! immature adult stage
 relationship: immediately_preceded_by FBdv:00005349 ! pupal stage
 relationship: immediately_preceded_by FBdv:00005354 ! pupal stage P7
 relationship: part_of FBdv:00007001 ! P-stage
@@ -5263,6 +5296,7 @@ def: "Adult stage immediately after wing expansion, during which tanning of the 
 comment: Temporal ordering number - 800.
 synonym: "adult stage III" RELATED []
 is_a: FBdv:00005259 ! developmental stage
+relationship: ends_at_start_of FBdv:00007026 ! mature adult stage
 relationship: immediately_preceded_by FBdv:00005371 ! adult stage A2
 relationship: part_of FBdv:00007025 ! immature adult stage
 
@@ -5275,6 +5309,9 @@ comment: Temporal ordering number - 490. DISAMBIGUATION: In Drosophila lab verna
 synonym: "metamorphosis" BROAD []
 synonym: "pupal stage" RELATED []
 is_a: FBdv:00007012 ! life stage
+relationship: ends_at_start_of FBdv:00005369 ! adult stage
+relationship: ends_at_start_of FBdv:00005370 ! adult stage A1
+relationship: ends_at_start_of FBdv:00007025 ! immature adult stage
 relationship: immediately_preceded_by FBdv:00005336 ! larval stage
 relationship: immediately_preceded_by FBdv:00005339 ! third instar larval stage
 relationship: immediately_preceded_by FBdv:00007005 ! third instar larval stage L2
@@ -5457,6 +5494,7 @@ namespace: FlyBase_development_CV
 def: "The developmental stage that lasts from eclosion of the adult from the pupal case until tanning is complete (the end of adult stage A3)." [FBC:DOS]
 comment: Temporal ordering number - 782.
 is_a: FBdv:00007012 ! life stage
+relationship: ends_at_start_of FBdv:00007026 ! mature adult stage
 relationship: immediately_preceded_by FBdv:00006011 ! pharate adult stage
 relationship: immediately_preceded_by FBdv:00007001 ! P-stage
 relationship: part_of FBdv:00007075 ! day 0 of adulthood
@@ -15634,6 +15672,7 @@ namespace: relationship
 namespace: uberon
 def: "a core relation that holds between a part and its whole" []
 comment: Creating this relation as a temporary fix, pending adding the axiom occurent_part_of subpropertyof happens_during to RO
+synonym: "part_of" EXACT []
 xref: BFO:0000050
 xref: FBdv:00018001
 xref: OBO_REL:part_of
@@ -15735,6 +15774,8 @@ holds_over_chain: starts_during preceded_by
 is_transitive: true
 is_a: RO:0002086 ! ends after
 inverse_of: precedes ! precedes
+created_by: djs93
+creation_date: 2009-10-09T10:00:53Z
 
 [Typedef]
 id: precedes
