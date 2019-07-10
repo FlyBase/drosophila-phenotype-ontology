@@ -136,10 +136,10 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 	
 # Simple is overwritten to strip out duplicate names and definitions.
 
-simple_obo:
-	$(ROBOT) convert --input dpo-simple.owl --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
-	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\nname[:]/def:/g; print' > dpo-simple.obo
+#simple_obo:
+#	$(ROBOT) convert --input dpo-simple.owl --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
+#	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
+#	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\nname[:]/def:/g; print' > dpo-simple.obo
 
 #####################################################################################
 ### Regenerate placeholder definitions                                            ###

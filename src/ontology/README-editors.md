@@ -199,7 +199,7 @@ To run the DPO release pipeline, you can simply run the following:
 
 ```
 cd src/ontology
-sh run.sh make prepare_release
+sh run_release.sh
 ```
 
-This will generate all relevant release files and copy them to the top level of the GitHub directory. Note that all customisation of the DPO pipeline is captured in `dpo.Makefile`. This is the only place where adjustments to the DPO pipeline should be made. 
+This will generate all relevant release files and copy them to the top level of the GitHub directory. Note that all customisation of the DPO pipeline is captured in `dpo.Makefile`. This is the only place where adjustments to the DPO pipeline should be made.  You can find additional documentation in the run_release.sh file.
