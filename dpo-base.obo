@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2019-07-09/dpo-base.owl
+data-version: dpo/releases/2019-07-10/dpo-base.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -1460,6 +1460,7 @@ id: FBcv:0000721
 name: mating behavior defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in mating behavior (GO:0007617). 'mating behavior' is defined as: 'The behavioral interactions between organisms for the purpose of mating, or sexual reproduction resulting in the formation of zygotes.'" [FBC:DOS]
+is_a: FBcv:0000387 ! behavior defective
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001
 intersection_of: RO:0002314 GO:0007617
@@ -1644,7 +1645,7 @@ is_a: FBcv:0001347 ! phenotype
 id: FBcv:0002010
 name: majority die during P-stage
 namespace: phenotypic_class
-def: "A phenotype of a population that is the death of the majority of animals in that population during the P-stage." [] {comment="FBC:DOS"}
+def: "A phenotype of a population that is the death of the majority of animals in that population during the P-stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 
@@ -1660,7 +1661,7 @@ is_a: FBcv:0001347 ! phenotype
 id: FBcv:0002012
 name: majority die during larval stage
 namespace: phenotypic_class
-def: "A phenotype of a population that is the death of the majority of animals in that population during the larval stage." [] {comment="FBC:DOS"}
+def: "A phenotype of a population that is the death of the majority of animals in that population during the larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 

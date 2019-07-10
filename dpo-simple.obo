@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2019-07-09/dpo-simple.owl
+data-version: dpo/releases/2019-07-10/dpo-simple.owl
 subsetdef: do_not_annotate "do not annotate"
 subsetdef: fbcvsubset_mgiribbons "fbcvsubset_mgiribbons"
 subsetdef: lethal_phase "lethal phase terms"
@@ -512,7 +512,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in male courtship behavior, veined wing generated song production (GO:0045433). This is defined as 'The process during wing vibration where the male insect produces a species-specific acoustic signal called a love song.'" [FBC:DOS]
 synonym: "singing defective" EXACT [FBC:SM]
 synonym: "song production defective" EXACT [FBC:SM]
-is_a: FBcv:0000387 ! behavior defective
 is_a: FBcv:0000399 ! courtship behavior defective
 
 [Term]
@@ -1173,6 +1172,7 @@ id: FBcv:0000721
 name: mating behavior defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in mating behavior (GO:0007617). 'mating behavior' is defined as: 'The behavioral interactions between organisms for the purpose of mating, or sexual reproduction resulting in the formation of zygotes.'" [FBC:DOS]
+is_a: FBcv:0000387 ! behavior defective
 is_a: FBcv:0000400 ! mating defective
 
 [Term]
@@ -1343,7 +1343,7 @@ is_a: FBcv:0002014 ! majority die during third instar larval stage
 id: FBcv:0002010
 name: majority die during P-stage
 namespace: phenotypic_class
-def: "A phenotype of a population that is the death of the majority of animals in that population during the P-stage." [] {comment="FBC:DOS"}
+def: "A phenotype of a population that is the death of the majority of animals in that population during the P-stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0002020 ! some die during P-stage
 
@@ -1360,7 +1360,7 @@ is_a: FBcv:0002021 ! some die during first instar larval stage
 id: FBcv:0002012
 name: majority die during larval stage
 namespace: phenotypic_class
-def: "A phenotype of a population that is the death of the majority of animals in that population during the larval stage." [] {comment="FBC:DOS"}
+def: "A phenotype of a population that is the death of the majority of animals in that population during the larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0002023 ! some die during larval stage
 

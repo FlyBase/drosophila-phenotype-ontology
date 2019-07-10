@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2019-07-09/dpo-non-classified.owl
+data-version: dpo/releases/2019-07-10/dpo-non-classified.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -3567,6 +3567,7 @@ id: FBcv:0000721
 name: mating behavior defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in mating behavior (GO:0007617). 'mating behavior' is defined as: 'The behavioral interactions between organisms for the purpose of mating, or sexual reproduction resulting in the formation of zygotes.'" [FBC:DOS]
+is_a: FBcv:0000387 ! behavior defective
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
 intersection_of: RO:0002314 GO:0007617 ! inheres in part of mating behavior
@@ -3767,7 +3768,7 @@ is_a: FBcv:0002014 ! majority die during third instar larval stage
 id: FBcv:0002010
 name: majority die during P-stage
 namespace: phenotypic_class
-def: "A phenotype of a population that is the death of the majority of animals in that population during the P-stage." [] {comment="FBC:DOS"}
+def: "A phenotype of a population that is the death of the majority of animals in that population during the P-stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 is_a: FBcv:0002020 ! some die during P-stage
@@ -3786,7 +3787,7 @@ is_a: FBcv:0002021 ! some die during first instar larval stage
 id: FBcv:0002012
 name: majority die during larval stage
 namespace: phenotypic_class
-def: "A phenotype of a population that is the death of the majority of animals in that population during the larval stage." [] {comment="FBC:DOS"}
+def: "A phenotype of a population that is the death of the majority of animals in that population during the larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
 is_a: FBcv:0002023 ! some die during larval stage
@@ -14156,8 +14157,8 @@ def: "x actively participates in y if and only if x participates in y and x real
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "agent in" xsd:string
-is_a: participates_in ! participates in
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
+is_a: participates_in ! participates_in
 inverse_of: RO:0002218 ! has active participant
 
 [Typedef]
@@ -15518,7 +15519,7 @@ subset: RO:0002259
 xref: RO:0002352
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
 
 [Typedef]
 id: involved_in
@@ -15637,7 +15638,7 @@ xref: RO:0002353
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_transitive: false
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
 
 [Typedef]
 id: overlaps
