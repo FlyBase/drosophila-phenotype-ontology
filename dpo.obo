@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2019-07-10
+data-version: releases/2019-07-11
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -2190,6 +2190,7 @@ relationship: inheres_in GO:0043052 ! thermotaxis
 id: FBcv:0000006
 name: male semi-fertile
 namespace: phenotypic_class
+def: "Any male semi fertile that inheres in some organism (FBbt:00000001)" []
 is_a: FBcv:0000375 ! semi-fertile
 is_a: FBcv:0000376 ! male fertile
 is_a: PATO:0001761 ! male semi-fertile
@@ -2200,6 +2201,7 @@ intersection_of: inheres_in FBbt:00000001 ! organism
 id: FBcv:0000007
 name: female semi-fertile
 namespace: phenotypic_class
+def: "Any female semi fertile that inheres in some organism (FBbt:00000001)" []
 is_a: FBcv:0000375 ! semi-fertile
 is_a: FBcv:0000377 ! female fertile
 is_a: PATO:0001760 ! female semi-fertile
@@ -2652,6 +2654,7 @@ is_a: FBcv:0001347 ! phenotype
 id: FBcv:0000387
 name: behavior defective
 namespace: phenotypic_class
+def: "Phenotype that is a defect in behavior (GO:0007610). 'behavior' is defined as: 'The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity.'" []
 subset: fbcvsubset_mgiribbons
 synonym: "behavioral" RELATED []
 synonym: "behaviour defective" EXACT []
@@ -3814,6 +3817,7 @@ relationship: inheres_in GO:0006897 ! endocytosis
 id: FBcv:0001325
 name: exocytosis defective
 namespace: phenotypic_class
+def: "Phenotype that is a defect in exocytosis (GO:0006887). 'exocytosis' is defined as: 'A process of secretion by a cell that results in the release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle. Exocytosis can occur either by full fusion, when the vesicle collapses into the plasma membrane, or by a kiss-and-run mechanism that involves the formation of a transient contact, a pore, between a granule (for exemple of chromaffin cells) and the plasma membrane. The latter process most of the time leads to only partial secretion of the granule content. Exocytosis begins with steps that prepare vesicles for fusion with the membrane (tethering and docking) and ends when molecules are secreted from the cell.'" []
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 intersection_of: PATO:0000001 ! quality
@@ -14295,8 +14299,8 @@ def: "x actively participates in y if and only if x participates in y and x real
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "agent in" xsd:string
-is_a: participates_in ! participates in
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
+is_a: participates_in ! participates_in
 inverse_of: RO:0002218 ! has active participant
 
 [Typedef]
@@ -15657,7 +15661,7 @@ subset: RO:0002259
 xref: RO:0002352
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
 
 [Typedef]
 id: involved_in
@@ -15776,7 +15780,7 @@ xref: RO:0002353
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_transitive: false
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
 
 [Typedef]
 id: overlaps

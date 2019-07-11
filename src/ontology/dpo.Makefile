@@ -144,18 +144,32 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 #####################################################################################
 ### Regenerate placeholder definitions                                            ###
 #####################################################################################
+# There are two types of definitions that FBCV uses: "." (DOT-) definitions are those for which the formal 
+# definition is translated into a human readable definitions. "$sub_" (SUB-) definitions are those that have 
+# special placeholder string to substitute in definitions from external ontologies, mostly CHEBI
 
-auto_generated_definitions_seed.txt: $(SRC)
+tmp/auto_generated_definitions_seed_dot.txt: $(SRC)
+	$(ROBOT) query --use-graphs false -f csv -i $(SRC) --query ../sparql/dot-definitions.sparql $@.tmp &&\
+	cat $@.tmp | sort | uniq >  $@
+	rm -f $@.tmp
+	
+tmp/auto_generated_definitions_seed_sub.txt: $(SRC)
 	$(ROBOT) query --use-graphs false -f csv -i $(SRC) --query ../sparql/classes-with-placeholder-definitions.sparql $@.tmp &&\
 	cat $@.tmp | sort | uniq >  $@
 	rm -f $@.tmp
 
-auto_generated_definitions.owl: $(SRC) auto_generated_definitions_seed.txt
-	$(ROBOT) merge --input $(SRC) --output tmp/merged.owl &&\
-	java -jar ../scripts/eq-writer.jar tmp/merged.owl auto_generated_definitions_seed.txt sub_external $@ NA
+tmp/merged-source-pre.owl: $(SRC)
+	$(ROBOT) merge -i $(SRC) -i mirror/chebi.owl --output $@
 
-dpo_pre_release: dpo-edit.owl auto_generated_definitions.owl
-	cp dpo-edit.owl dpo-edit-release.owl
-	sed -i '/sub_/d' ./dpo-edit-release.owl
-	$(ROBOT) merge -i dpo-edit-release.owl -i auto_generated_definitions.owl --collapse-import-closure false -o dpo-edit-release.ofn && mv dpo-edit-release.ofn dpo-edit-release.owl
-	echo "Preprocessing done. mMake sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
+tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_dot.txt
+	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_dot.txt flybase $@ NA
+
+tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_sub.txt
+	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA
+
+pre_release: $(ONT)-edit.owl tmp/auto_generated_definitions_dot.owl tmp/auto_generated_definitions_sub.owl
+	cp $(ONT)-edit.owl tmp/$(ONT)-edit-release.owl
+	sed -i '/AnnotationAssertion[(]obo[:]IAO[_]0000115.*\"[.]\"/d' tmp/$(ONT)-edit-release.owl
+	sed -i '/sub_/d' tmp/$(ONT)-edit-release.owl
+	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_dot.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $(ONT)-edit-release.ofn && mv $(ONT)-edit-release.ofn $(ONT)-edit-release.owl
+	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"

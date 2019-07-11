@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2019-07-10/dpo-simple.owl
+data-version: dpo/releases/2019-07-11/dpo-simple.owl
 subsetdef: do_not_annotate "do not annotate"
 subsetdef: fbcvsubset_mgiribbons "fbcvsubset_mgiribbons"
 subsetdef: lethal_phase "lethal phase terms"
@@ -18,6 +18,7 @@ is_a: FBcv:0000683 ! temperature response defective
 id: FBcv:0000006
 name: male semi-fertile
 namespace: phenotypic_class
+def: "Any male semi fertile that inheres in some organism (FBbt:00000001)" []
 is_a: FBcv:0000375 ! semi-fertile
 is_a: FBcv:0000376 ! male fertile
 
@@ -25,6 +26,7 @@ is_a: FBcv:0000376 ! male fertile
 id: FBcv:0000007
 name: female semi-fertile
 namespace: phenotypic_class
+def: "Any female semi fertile that inheres in some organism (FBbt:00000001)" []
 is_a: FBcv:0000375 ! semi-fertile
 is_a: FBcv:0000377 ! female fertile
 
@@ -388,6 +390,7 @@ is_a: FBcv:0001347 ! phenotype
 id: FBcv:0000387
 name: behavior defective
 namespace: phenotypic_class
+def: "Phenotype that is a defect in behavior (GO:0007610). 'behavior' is defined as: 'The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity.'" []
 subset: fbcvsubset_mgiribbons
 synonym: "behavioral" RELATED []
 synonym: "behaviour defective" EXACT []
@@ -1234,6 +1237,7 @@ is_a: FBcv:0001347 ! phenotype
 id: FBcv:0001325
 name: exocytosis defective
 namespace: phenotypic_class
+def: "Phenotype that is a defect in exocytosis (GO:0006887). 'exocytosis' is defined as: 'A process of secretion by a cell that results in the release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle. Exocytosis can occur either by full fusion, when the vesicle collapses into the plasma membrane, or by a kiss-and-run mechanism that involves the formation of a transient contact, a pore, between a granule (for exemple of chromaffin cells) and the plasma membrane. The latter process most of the time leads to only partial secretion of the granule content. Exocytosis begins with steps that prepare vesicles for fusion with the membrane (tethering and docking) and ends when molecules are secreted from the cell.'" []
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 
