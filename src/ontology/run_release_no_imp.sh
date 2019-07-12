@@ -11,4 +11,4 @@ sh run.sh make pre_release -B
 # This process generates everything from the simple and basic releases to the various flybase reports
 # All deviations from the standard OBO process can be found in the dpo.Makefile file
 echo "CURRENTLY IMP=FALSE SWITCH THIS AFTER DEV IS DONE"
-sh run.sh make SRC=dpo-edit-release.owl prepare_release -B
+sh run.sh make SRC=dpo-edit-release.owl IMP=false prepare_release -B

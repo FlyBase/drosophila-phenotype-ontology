@@ -14,5 +14,5 @@ SELECT DISTINCT ?term ?stage WHERE
         owl:someValuesFrom ?stage
       ])]
   }
-  FILTER((STR(?subset)="lethal_phase") && isIRI(?term) && (regex(str(?term), UCASE("dpo_")) || regex(str(?term), "http://purl.obolibrary.org/obo/FBcv_") || regex(str(?term), "http://purl.obolibrary.org/obo/fbcv_")))
+  FILTER(regex(STR(?subset), "lethal_phase") && isIRI(?term) && (regex(str(?term), UCASE("dpo_")) || regex(str(?term), "http://purl.obolibrary.org/obo/FBcv_") || regex(str(?term), "http://purl.obolibrary.org/obo/fbcv_")))
 }

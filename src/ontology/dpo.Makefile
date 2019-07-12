@@ -81,7 +81,7 @@ tmp/remaining_definitions.owl: $(SRC) tmp/remaining_classes.txt
 tmp/lethal_terms.txt: $(SRC)
 	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dpo-lethal.sparql $@.tmp
 	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
-	
+
 tmp/lethal_terms_tsv.txt: $(SRC)
 	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dpo-lethal-tsv.sparql $@.tmp
 	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
