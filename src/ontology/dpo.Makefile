@@ -170,7 +170,7 @@ tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_gener
 	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_dot.txt flybase $@ NA
 
 tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_sub.txt
-	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA
+	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA source_xref
 
 pre_release: $(ONT)-edit.owl tmp/auto_generated_definitions_dot.owl tmp/auto_generated_definitions_sub.owl
 	cp $(ONT)-edit.owl tmp/$(ONT)-edit-release.owl
