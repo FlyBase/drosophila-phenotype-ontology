@@ -52,6 +52,11 @@ prepare_patterns_orig:
 	touch $(pattern_term_lists_original) &&\
 	touch $(individual_patterns_original)
 
+$(PATTERNDIR)/data/to_do/%.ofn: $(PATTERNDIR)/data/to_do/%.tsv $(PATTERNDIR)/dosdp-patterns/%.yaml $(SRC)
+	dosdp-tools generate --catalog=catalog-v001.xml --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true --outfile=$@
+
+test_xref_pattern: $(PATTERNDIR)/data/to_do/dpoAbnormalEntityTestXref.ofn
+
 original_patterns: $(PATTERNDIR)/definitions_original.owl
 
 tmp/all_patternised_classes.txt:
