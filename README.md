@@ -3,7 +3,7 @@
 
 # Drosophila Phenotype Ontology
 
-This ontology... YOUR DESCRIPTION HERE
+This ontology organises the domain of Drosophila phenotypes. It was previously maintained as part of the FlyBase controlled vocabulary, but has been officially releases as a separate project since 25 July 2019. Older releases can still be accessed [here](https://github.com/FlyBase/flybase-controlled-vocabulary/tree/master/releases). 
 
 More information can be found at http://obofoundry.org/ontology/dpo
 

@@ -2,7 +2,7 @@
 ## 
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
-FBDVPURL=http://purl.obolibrary.org/obo/FBdv_
+#FBDVPURL=http://purl.obolibrary.org/obo/FBdv_
 #OTHER_SRC:= $(OTHER_SRC) components/lethal_class_hierarchy.owl
 
 #imports/fbdv_filter_seed.txt: $(SRC) #$(ONTOLOGYTERMS) #prepare_patterns
@@ -17,14 +17,6 @@ FBDVPURL=http://purl.obolibrary.org/obo/FBdv_
 #		filter --term-file imports/fbdv_filter_seed.txt --trim true --select "annotations anonymous parents self" --preserve-structure false \
 #		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 #.PRECIOUS: imports/fbdv_import.owl
-
-components/lethal_class_hierarchy.owl: $(SRC) tmp/lethal_terms.txt
-	rm $@ && touch $@
-	$(ROBOT) merge --input $< \
-		convert --output tmp/edit.owx
-	Konclude classification -i tmp/edit.owx -o tmp/konclude-edit.owx
-	$(ROBOT) filter -i tmp/konclude-edit.owx -T tmp/lethal_terms.txt --trim false \
-	annotate --ontology-iri $(ONTBASE)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 
 ###############################################################
 ########### Manage ORIGINAL DOSDP patterns! ###################
@@ -82,23 +74,28 @@ tmp/lethal_terms.txt: $(SRC)
 	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dpo-lethal.sparql $@.tmp
 	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
 
-tmp/lethal_terms_tsv.txt: $(SRC)
-	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dpo-lethal-tsv.sparql $@.tmp
-	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
-	
+#tmp/lethal_terms_tsv.txt: $(SRC)
+#	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dpo-lethal-tsv.sparql $@.tmp
+#	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp	
 # $(ROBOT) remove --input $< --select imports \
 
-tmp/lethal_module.owl: $(SRC) tmp/lethal_terms.txt
-	$(ROBOT) extract --input $< -T tmp/lethal_terms.txt --force true --imports exclude --method STAR \
-		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@;
+#tmp/lethal_module.owl: $(SRC) tmp/lethal_terms.txt
+#	$(ROBOT) extract --input $< -T tmp/lethal_terms.txt --force true --imports exclude --method STAR \
+#		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@;
 
-
+components/lethal_class_hierarchy.owl: $(SRC) tmp/lethal_terms.txt
+	rm $@ && touch $@
+	$(ROBOT) merge --input $< \
+		convert --output tmp/edit.owx
+	Konclude classification -i tmp/edit.owx -o tmp/konclude-edit.owx
+	$(ROBOT) filter -i tmp/konclude-edit.owx -T tmp/lethal_terms.txt --trim false \
+	annotate --ontology-iri $(ONTBASE)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 
 ######################################################
 ### Code for generating additional FlyBase reports ###
 ######################################################
 
-REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt reports/onto_metrics_calc.txt reports/robot_simple_diff.txt #reports/chado_load_check_simple.txt
+REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt reports/onto_metrics_calc.txt reports/robot_simple_diff.txt reports/chado_load_check_simple.txt
 
 SIMPLE_PURL =	http://purl.obolibrary.org/obo/fbcv/dpo-simple.obo
 LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
@@ -172,7 +169,7 @@ tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_gener
 tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_sub.txt
 	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA source_xref
 
-pre_release: $(ONT)-edit.owl tmp/auto_generated_definitions_dot.owl tmp/auto_generated_definitions_sub.owl
+pre_release: $(ONT)-edit.owl tmp/auto_generated_definitions_dot.owl tmp/auto_generated_definitions_sub.owl components/lethal_class_hierarchy.owl
 	cp $(ONT)-edit.owl tmp/$(ONT)-edit-release.owl
 	sed -i '/AnnotationAssertion[(]obo[:]IAO[_]0000115.*\"[.]\"/d' tmp/$(ONT)-edit-release.owl
 	sed -i '/sub_/d' tmp/$(ONT)-edit-release.owl
