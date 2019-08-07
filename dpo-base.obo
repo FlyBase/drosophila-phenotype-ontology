@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: dpo/releases/2019-07-25/dpo-base.owl
-date: 25:07:2019 09:44
+data-version: dpo/releases/2019-08-07/dpo-base.owl
+date: 07:08:2019 15:23
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -28,7 +28,7 @@ synonymtypedef: INN "INN"
 synonymtypedef: IUPAC_NAME "IUPAC NAME"
 synonymtypedef: SMILES "SMILES"
 synonymtypedef: systematic_synonym "Systematic synonym" EXACT
-default-namespace: FlyBase_miscellaneous_CV
+default-namespace: FlyBase miscellaneous CV
 ontology: dpo/dpo-base
 
 [Term]
@@ -46,7 +46,7 @@ intersection_of: RO:0002573 PATO:0000460
 id: FBcv:0000006
 name: male semi-fertile
 namespace: phenotypic_class
-def: "Any male semi fertile that inheres in some organism (FBbt:00000001)." []
+def: "Any male semi-fertile (PATO:0001761) that inheres in some organism (FBbt:00000001)." []
 is_a: FBcv:0000375 ! semi-fertile
 is_a: FBcv:0000376 ! male fertile
 intersection_of: PATO:0001761
@@ -56,7 +56,7 @@ intersection_of: RO:0000052 FBbt:00000001
 id: FBcv:0000007
 name: female semi-fertile
 namespace: phenotypic_class
-def: "Any female semi fertile that inheres in some organism (FBbt:00000001)." []
+def: "Any female semi-fertile (PATO:0001760) that inheres in some organism (FBbt:00000001)." []
 is_a: FBcv:0000375 ! semi-fertile
 is_a: FBcv:0000377 ! female fertile
 intersection_of: PATO:0001760
@@ -1601,7 +1601,7 @@ is_a: FBcv:0001347 ! phenotype
 id: FBcv:0002004
 name: increased mortality
 namespace: phenotypic_class
-def: "A phenotype that is an increase in the rate of death in a population at any stage of life (during development or adulthood), over the rate seen in a wild type control population. " [FBC:DOS]
+def: "A phenotype that is an increase in the rate of death in a population at any stage of life (during development or adulthood), over the rate seen in a wild type control population." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype

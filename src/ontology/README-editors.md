@@ -195,11 +195,22 @@ Travis builds should now be activated
 
 # Updated DPO pipeline
 
+Before running the pipeline make sure you have the latest version of ODK:
+
+```
+docker pull obolibrary/odkfull
+```
+
 To run the DPO release pipeline, you can simply run the following:
+
+```
+cd src/ontology
+sh run_release_no_imp.sh
+```
+
+This will generate all relevant release files (without recreating imports) and copy them to the top level of the GitHub directory. Note that all customisation of the DPO pipeline is captured in `dpo.Makefile`. This is the only place where adjustments to the DPO pipeline should be made.  You can find additional documentation in the run_release.sh file. If you want to do a full release including imports, run:
 
 ```
 cd src/ontology
 sh run_release.sh
 ```
-
-This will generate all relevant release files and copy them to the top level of the GitHub directory. Note that all customisation of the DPO pipeline is captured in `dpo.Makefile`. This is the only place where adjustments to the DPO pipeline should be made.  You can find additional documentation in the run_release.sh file.
