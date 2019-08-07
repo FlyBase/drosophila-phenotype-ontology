@@ -90,6 +90,9 @@ components/lethal_class_hierarchy.owl: $(SRC) tmp/lethal_terms.txt
 	Konclude classification -i tmp/edit.owx -o tmp/konclude-edit.owx
 	$(ROBOT) filter -i tmp/konclude-edit.owx -T tmp/lethal_terms.txt --trim false \
 	annotate --ontology-iri $(ONTBASE)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
+	
+kon:
+	sh classify_lethal_phenotypes.sh
 
 ######################################################
 ### Code for generating additional FlyBase reports ###
