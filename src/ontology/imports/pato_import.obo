@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2019-07-08/imports/pato_import.owl
+data-version: dpo/releases/2019-08-07/imports/pato_import.owl
 ontology: dpo/imports/pato_import
 
 [Term]
@@ -237,7 +237,7 @@ is_a: PATO:0000044 ! frequency
 is_a: PATO:0000912 ! increased rate
 intersection_of: PATO:0000044 ! frequency
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0000381
+relationship: is_opposite_of PATO:0000381 ! decreased frequency
 
 [Term]
 id: PATO:0000381
@@ -252,7 +252,7 @@ is_a: PATO:0000044 ! frequency
 is_a: PATO:0000911 ! decreased rate
 intersection_of: PATO:0000044 ! frequency
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0000380
+relationship: is_opposite_of PATO:0000380 ! increased frequency
 
 [Term]
 id: PATO:0000422
@@ -262,7 +262,17 @@ def: "A nutritional quality inhering in a bearer by virtue of the bearer's inabi
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0000056 ! trophic quality
-property_value: RO:0002604 PATO:0000423
+relationship: is_opposite_of PATO:0000423 ! prototrophic
+
+[Term]
+id: PATO:0000423
+name: prototrophic
+namespace: quality
+def: "A nutritional quality inhering in a bearer by virtue of the bearer's ability to synthesize a particular organic compound required for its growth." [Wikipedia:http\://en.wikipedia.org/wiki/Prototrophic]
+subset: disposition_slim
+subset: value_slim
+is_a: PATO:0000056 ! trophic quality
+relationship: is_opposite_of PATO:0000422 ! auxotrophic
 
 [Term]
 id: PATO:0000460
@@ -277,7 +287,7 @@ synonym: "atypia" RELATED []
 synonym: "atypical" RELATED []
 synonym: "defective" RELATED []
 is_a: PATO:0000069 ! deviation(from_normal)
-property_value: RO:0002604 PATO:0000461
+relationship: is_opposite_of PATO:0000461 ! normal
 
 [Term]
 id: PATO:0000461
@@ -289,7 +299,7 @@ subset: mpath_slim
 subset: value_slim
 synonym: "average" RELATED []
 is_a: PATO:0000069 ! deviation(from_normal)
-property_value: RO:0002604 PATO:0000460
+relationship: is_opposite_of PATO:0000460 ! abnormal
 
 [Term]
 id: PATO:0000462
@@ -305,9 +315,9 @@ synonym: "absence" EXACT []
 synonym: "absent from organism" EXACT []
 is_a: PATO:0000070 ! amount
 disjoint_from: PATO:0000467 ! present
+relationship: is_opposite_of PATO:0000467 ! present
 relationship: reciprocal_of PATO:0001558 ! lacking processual parts
 relationship: reciprocal_of PATO:0002000 ! lacks all parts of type
-property_value: RO:0002604 PATO:0000467
 
 [Term]
 id: PATO:0000467
@@ -318,7 +328,7 @@ subset: absent_slim
 subset: value_slim
 synonym: "present in organism" RELATED []
 is_a: PATO:0000070 ! amount
-property_value: RO:0002604 PATO:0000462
+relationship: is_opposite_of PATO:0000462 ! absent
 
 [Term]
 id: PATO:0000470
@@ -337,7 +347,7 @@ is_a: PATO:0000467 ! present
 is_a: PATO:0002300 ! increased quality
 intersection_of: PATO:0000070 ! amount
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001997
+relationship: is_opposite_of PATO:0001997 ! decreased amount
 
 [Term]
 id: PATO:0000586
@@ -355,7 +365,7 @@ is_a: PATO:0000117 ! size
 is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0000117 ! size
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0000587
+relationship: is_opposite_of PATO:0000587 ! decreased size
 
 [Term]
 id: PATO:0000587
@@ -372,7 +382,7 @@ is_a: PATO:0000117 ! size
 is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0000117 ! size
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0000586
+relationship: is_opposite_of PATO:0000586 ! increased size
 
 [Term]
 id: PATO:0000644
@@ -385,7 +395,7 @@ subset: value_slim
 synonym: "hyperplasia" EXACT []
 synonym: "overdeveloped" RELATED []
 is_a: PATO:0000586 ! increased size
-property_value: RO:0002604 PATO:0000645
+relationship: is_opposite_of PATO:0000645 ! hypoplastic
 
 [Term]
 id: PATO:0000645
@@ -399,7 +409,7 @@ synonym: "hypoplasia" EXACT []
 synonym: "underdeveloped" RELATED []
 is_a: PATO:0000587 ! decreased size
 is_a: PATO:0002290 ! aplastic/hypoplastic
-property_value: RO:0002604 PATO:0000644
+relationship: is_opposite_of PATO:0000644 ! hyperplastic
 
 [Term]
 id: PATO:0000718
@@ -420,6 +430,17 @@ subset: value_slim
 is_a: PATO:0000169 ! viability
 
 [Term]
+id: PATO:0000769
+name: coordinated
+namespace: quality
+def: "A coordination quality of inhering in a bearer by virtue of the bearer's having skillful and effective interaction of movement." [PATOC:GVG]
+subset: disposition_slim
+subset: value_slim
+is_a: PATO:0000188 ! coordination
+disjoint_from: PATO:0000770 ! uncoordinated
+relationship: is_opposite_of PATO:0000770 ! uncoordinated
+
+[Term]
 id: PATO:0000770
 name: uncoordinated
 namespace: quality
@@ -427,7 +448,7 @@ def: "A coordination quality of inhering in a bearer by virtue of the bearer's l
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0000188 ! coordination
-property_value: RO:0002604 PATO:0000769
+relationship: is_opposite_of PATO:0000769 ! coordinated
 
 [Term]
 id: PATO:0000888
@@ -438,7 +459,19 @@ subset: disposition_slim
 subset: value_slim
 is_a: PATO:0000277 ! female fertility
 disjoint_from: PATO:0000892 ! female sterile
-property_value: RO:0002604 PATO:0000892
+relationship: is_opposite_of PATO:0000892 ! female sterile
+
+[Term]
+id: PATO:0000890
+name: male sterile
+namespace: quality
+def: "A male fertility quality inhering in a male by virtue of the bearer's being incapable of initiating, sustaining, or supporting reproduction." [PATOC:GVG]
+subset: disposition_slim
+subset: value_slim
+synonym: "male infertile" RELATED []
+is_a: PATO:0000956 ! sterile
+disjoint_from: PATO:0000891 ! male fertile
+relationship: is_opposite_of PATO:0000891 ! male fertile
 
 [Term]
 id: PATO:0000891
@@ -448,7 +481,7 @@ def: "A male fertility quality inhering in a male by virtue of the bearer's bein
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0000279 ! male fertility
-property_value: RO:0002604 PATO:0000890
+relationship: is_opposite_of PATO:0000890 ! male sterile
 
 [Term]
 id: PATO:0000892
@@ -459,7 +492,7 @@ subset: disposition_slim
 subset: value_slim
 synonym: "female infertile" RELATED []
 is_a: PATO:0000956 ! sterile
-property_value: RO:0002604 PATO:0000888
+relationship: is_opposite_of PATO:0000888 ! female fertile
 
 [Term]
 id: PATO:0000911
@@ -473,7 +506,7 @@ is_a: PATO:0000161 ! rate
 is_a: PATO:0002302 ! decreased process quality
 intersection_of: PATO:0000161 ! rate
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0000912
+relationship: is_opposite_of PATO:0000912 ! increased rate
 
 [Term]
 id: PATO:0000912
@@ -488,7 +521,7 @@ is_a: PATO:0000161 ! rate
 is_a: PATO:0002304 ! increased process quality
 intersection_of: PATO:0000161 ! rate
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0000911
+relationship: is_opposite_of PATO:0000911 ! decreased rate
 
 [Term]
 id: PATO:0000955
@@ -499,7 +532,7 @@ subset: disposition_slim
 subset: value_slim
 is_a: PATO:0000274 ! fertility
 disjoint_from: PATO:0000956 ! sterile
-property_value: RO:0002604 PATO:0000956
+relationship: is_opposite_of PATO:0000956 ! sterile
 
 [Term]
 id: PATO:0000956
@@ -509,7 +542,7 @@ def: "A fertility quality inhering in a bearer by virtue of the bearer's being i
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0000274 ! fertility
-property_value: RO:0002604 PATO:0000955
+relationship: is_opposite_of PATO:0000955 ! fertile
 
 [Term]
 id: PATO:0001018
@@ -600,7 +633,7 @@ is_a: PATO:0000140 ! position
 is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0000140 ! position
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001476
+relationship: is_opposite_of PATO:0001476 ! decreased position
 
 [Term]
 id: PATO:0001476
@@ -613,7 +646,7 @@ is_a: PATO:0000140 ! position
 is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0000140 ! position
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001475
+relationship: is_opposite_of PATO:0001475 ! increased position
 
 [Term]
 id: PATO:0001551
@@ -628,7 +661,7 @@ is_a: PATO:0001457 ! sensitivity of a process
 is_a: PATO:0002304 ! increased process quality
 intersection_of: PATO:0001457 ! sensitivity of a process
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001552
+relationship: is_opposite_of PATO:0001552 ! decreased sensitivity of a process
 
 [Term]
 id: PATO:0001552
@@ -643,7 +676,7 @@ is_a: PATO:0001457 ! sensitivity of a process
 is_a: PATO:0002302 ! decreased process quality
 intersection_of: PATO:0001457 ! sensitivity of a process
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001551
+relationship: is_opposite_of PATO:0001551 ! increased sensitivity of a process
 
 [Term]
 id: PATO:0001555
@@ -683,7 +716,7 @@ is_a: PATO:0000125 ! mass
 is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0000125 ! mass
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001563
+relationship: is_opposite_of PATO:0001563 ! increased mass
 
 [Term]
 id: PATO:0001563
@@ -698,7 +731,7 @@ is_a: PATO:0000125 ! mass
 is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0000125 ! mass
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001562
+relationship: is_opposite_of PATO:0001562 ! decreased mass
 
 [Term]
 id: PATO:0001564
@@ -730,7 +763,7 @@ is_a: PATO:0000273 ! fecundity
 is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0000273 ! fecundity
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001696
+relationship: is_opposite_of PATO:0001696 ! decreased fecundity
 
 [Term]
 id: PATO:0001696
@@ -744,7 +777,7 @@ is_a: PATO:0000273 ! fecundity
 is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0000273 ! fecundity
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001695
+relationship: is_opposite_of PATO:0001695 ! increased fecundity
 
 [Term]
 id: PATO:0001739
@@ -761,7 +794,7 @@ namespace: quality
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0001767 ! semi-fertile
-property_value: RO:0002604 PATO:0001763
+relationship: is_opposite_of PATO:0001763 ! female semi-sterile
 
 [Term]
 id: PATO:0001761
@@ -770,7 +803,7 @@ namespace: quality
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0001767 ! semi-fertile
-property_value: RO:0002604 PATO:0001762
+relationship: is_opposite_of PATO:0001762 ! male semi-sterile
 
 [Term]
 id: PATO:0001762
@@ -779,7 +812,7 @@ namespace: quality
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0000279 ! male fertility
-property_value: RO:0002604 PATO:0001761
+relationship: is_opposite_of PATO:0001761 ! male semi-fertile
 
 [Term]
 id: PATO:0001763
@@ -788,7 +821,7 @@ namespace: quality
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0000277 ! female fertility
-property_value: RO:0002604 PATO:0001760
+relationship: is_opposite_of PATO:0001760 ! female semi-fertile
 
 [Term]
 id: PATO:0001767
@@ -819,7 +852,7 @@ is_a: PATO:0000888 ! female fertile
 is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0000888 ! female fertile
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001831
+relationship: is_opposite_of PATO:0001831 ! increased female fertility
 
 [Term]
 id: PATO:0001831
@@ -833,7 +866,7 @@ is_a: PATO:0000888 ! female fertile
 is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0000888 ! female fertile
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001830
+relationship: is_opposite_of PATO:0001830 ! decreased female fertility
 
 [Term]
 id: PATO:0001832
@@ -847,7 +880,7 @@ is_a: PATO:0000891 ! male fertile
 is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0000891 ! male fertile
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001833
+relationship: is_opposite_of PATO:0001833 ! decreased male fertility
 
 [Term]
 id: PATO:0001833
@@ -861,7 +894,7 @@ is_a: PATO:0000891 ! male fertile
 is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0000891 ! male fertile
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001832
+relationship: is_opposite_of PATO:0001832 ! increased male fertility
 
 [Term]
 id: PATO:0001834
@@ -875,7 +908,7 @@ is_a: PATO:0000955 ! fertile
 is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0000955 ! fertile
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001835
+relationship: is_opposite_of PATO:0001835 ! increased fertility
 
 [Term]
 id: PATO:0001835
@@ -889,7 +922,35 @@ is_a: PATO:0000955 ! fertile
 is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0000955 ! fertile
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0001834
+relationship: is_opposite_of PATO:0001834 ! decreased fertility
+
+[Term]
+id: PATO:0001859
+name: increased coordination
+namespace: quality
+def: "A coordination which is relatively high." [PATOC:GVG]
+subset: disposition_slim
+subset: value_slim
+synonym: "high coordination" EXACT []
+is_a: PATO:0000769 ! coordinated
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0000769 ! coordinated
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001860 ! decreased coordination
+
+[Term]
+id: PATO:0001860
+name: decreased coordination
+namespace: quality
+def: "A coordination which is relatively low." [PATOC:GVG]
+subset: disposition_slim
+subset: value_slim
+synonym: "low coordination" EXACT []
+is_a: PATO:0000769 ! coordinated
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0000769 ! coordinated
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001859 ! increased coordination
 
 [Term]
 id: PATO:0001862
@@ -900,6 +961,23 @@ subset: disposition_slim
 subset: value_slim
 synonym: "grandchildless" RELATED []
 is_a: PATO:0000274 ! fertility
+
+[Term]
+id: PATO:0001992
+name: cellularity
+namespace: quality
+def: "An organismal quality inhering in a bearer by virtue of the bearer's consisting cells." [PATOC:GVG]
+subset: attribute_slim
+subset: scalar_slim
+is_a: PATO:0001995 ! organismal quality
+
+[Term]
+id: PATO:0001993
+name: multicellular
+namespace: quality
+def: "A cellularity quality inhering in a bearer by virtue of the bearer's consisting of more than one cell." [PATOC:GVG]
+subset: value_slim
+is_a: PATO:0001992 ! cellularity
 
 [Term]
 id: PATO:0001995
@@ -925,7 +1003,7 @@ is_a: PATO:0000467 ! present
 is_a: PATO:0002301 ! decreased quality
 intersection_of: PATO:0000070 ! amount
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0000470
+relationship: is_opposite_of PATO:0000470 ! increased amount
 
 [Term]
 id: PATO:0001999
@@ -963,7 +1041,7 @@ is_a: PATO:0001999 ! lacks parts or has fewer parts of type
 is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0001999 ! lacks parts or has fewer parts of type
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002002
+relationship: is_opposite_of PATO:0002002 ! has extra parts of type
 
 [Term]
 id: PATO:0002002
@@ -982,7 +1060,7 @@ is_a: PATO:0002083 ! altered number of
 is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0002083 ! altered number of
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002001
+relationship: is_opposite_of PATO:0002001 ! has fewer parts of type
 
 [Term]
 id: PATO:0002011
@@ -1005,7 +1083,7 @@ is_a: PATO:0000057 ! occurrence
 is_a: PATO:0002304 ! increased process quality
 intersection_of: PATO:0000057 ! occurrence
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002052
+relationship: is_opposite_of PATO:0002052 ! decreased occurrence
 created_by: George Gkoutos
 creation_date: 2009-03-26T11:10:11Z
 
@@ -1019,7 +1097,7 @@ is_a: PATO:0000057 ! occurrence
 is_a: PATO:0002302 ! decreased process quality
 intersection_of: PATO:0000057 ! occurrence
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002051
+relationship: is_opposite_of PATO:0002051 ! increased occurrence
 created_by: George Gkoutos
 creation_date: 2009-03-26T11:12:35Z
 
@@ -1069,7 +1147,7 @@ is_a: PATO:0000069 ! deviation(from_normal)
 intersection_of: PATO:0000001 ! quality
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002301
+relationship: is_opposite_of PATO:0002301 ! decreased quality
 created_by: George Gkoutos
 creation_date: 2011-06-16T06:39:43Z
 
@@ -1082,7 +1160,7 @@ is_a: PATO:0000069 ! deviation(from_normal)
 intersection_of: PATO:0000001 ! quality
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002300
+relationship: is_opposite_of PATO:0002300 ! increased quality
 created_by: George Gkoutos
 creation_date: 2011-06-16T06:40:15Z
 
@@ -1095,7 +1173,7 @@ is_a: PATO:0001236 ! process quality
 is_a: PATO:0002301 ! decreased quality
 intersection_of: PATO:0001236 ! process quality
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002304
+relationship: is_opposite_of PATO:0002304 ! increased process quality
 created_by: George Gkoutos
 creation_date: 2011-06-16T06:50:59Z
 
@@ -1108,7 +1186,7 @@ is_a: PATO:0001241 ! physical object quality
 is_a: PATO:0002301 ! decreased quality
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002305
+relationship: is_opposite_of PATO:0002305 ! increased object quality
 created_by: George Gkoutos
 creation_date: 2011-06-16T06:51:54Z
 
@@ -1121,7 +1199,7 @@ is_a: PATO:0001236 ! process quality
 is_a: PATO:0002300 ! increased quality
 intersection_of: PATO:0001236 ! process quality
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002302
+relationship: is_opposite_of PATO:0002302 ! decreased process quality
 created_by: George Gkoutos
 creation_date: 2011-06-16T06:53:08Z
 
@@ -1134,7 +1212,7 @@ is_a: PATO:0001241 ! physical object quality
 is_a: PATO:0002300 ! increased quality
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002303
+relationship: is_opposite_of PATO:0002303 ! decreased object quality
 created_by: George Gkoutos
 creation_date: 2011-06-16T06:54:01Z
 
@@ -1204,6 +1282,14 @@ domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
 is_transitive: true
 is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
+
+[Typedef]
+id: is_opposite_of
+name: is opposite of
+namespace: quality
+xref: RO:0002604
+is_metadata_tag: true
+is_class_level: true
 
 [Typedef]
 id: part_of
