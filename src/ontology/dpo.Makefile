@@ -121,7 +121,7 @@ install_flybase_scripts:
 reports/obo_track_new_simple.txt: $(LAST_DEPLOYED_SIMPLE) install_flybase_scripts $(ONT)-simple.obo
 	echo "Comparing with: "$(SIMPLE_PURL) && ../scripts/obo_track_new.pl $(LAST_DEPLOYED_SIMPLE) $(ONT)-simple.obo > $@
 
-reports/robot_simple_diff.txt: $(ONT)-simple.obo
+reports/robot_simple_diff.txt: $(ONT)-simple.obo $(LAST_DEPLOYED_SIMPLE)
 	$(ROBOT) diff --left $(ONT)-simple.obo --right $(LAST_DEPLOYED_SIMPLE) --output $@
 	
 reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
@@ -171,7 +171,7 @@ tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_gener
 tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_sub.txt
 	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA source_xref
 
-pre_release: $(ONT)-edit.owl tmp/auto_generated_definitions_dot.owl tmp/auto_generated_definitions_sub.owl components/lethal_class_hierarchy.owl
+pre_release: $(ONT)-edit.owl all_imports tmp/auto_generated_definitions_dot.owl tmp/auto_generated_definitions_sub.owl #components/lethal_class_hierarchy.owl
 	cp $(ONT)-edit.owl tmp/$(ONT)-edit-release.owl
 	sed -i '/AnnotationAssertion[(]obo[:]IAO[_]0000115.*\"[.]\"/d' tmp/$(ONT)-edit-release.owl
 	sed -i '/sub_/d' tmp/$(ONT)-edit-release.owl
