@@ -1,0 +1,1 @@
+Konclude classification -i tmp/edit.owx -o tmp/konclude-edit.owx

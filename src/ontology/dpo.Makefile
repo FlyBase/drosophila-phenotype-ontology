@@ -65,6 +65,26 @@ tmp/remaining_classes.txt: tmp/all_patternised_classes.txt tmp/all_defined_class
 tmp/remaining_definitions.owl: $(SRC) tmp/remaining_classes.txt
 	$(ROBOT) filter -i $< -T tmp/remaining_classes.txt --axioms "equivalent annotation" --trim false -o $@
 
+######################################################
+### Overwriting some default aretfacts ###
+######################################################
+
+# Simple is overwritten to strip out duplicate names and definitions.
+$(ONT)-simple.obo: $(ONT)-simple.owl
+	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
+	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
+	sed -i '/subset[:] ro[-]eco/d' $@.tmp &&\
+	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
+	rm -f $@.tmp.obo $@.tmp
+
+# We want the OBO release to be based on the simple release. It needs to be annotated however in the way map releases (fbbt.owl) are annotated.
+$(ONT).obo: $(ONT)-simple.owl
+	$(ROBOT)  annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
+	convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
+	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
+	sed -i '/subset[:] ro[-]eco/d' $@.tmp &&\
+	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
+	rm -f $@.tmp.obo $@.tmp
 
 ############################################################
 ### Code for generating class hierarchy for lethal terms ###
@@ -90,6 +110,9 @@ components/lethal_class_hierarchy.owl: $(SRC) tmp/lethal_terms.txt
 	Konclude classification -i tmp/edit.owx -o tmp/konclude-edit.owx
 	$(ROBOT) filter -i tmp/konclude-edit.owx -T tmp/lethal_terms.txt --trim false \
 	annotate --ontology-iri $(ONTBASE)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
+	
+kon:
+	sh classify_lethal_phenotypes.sh
 
 ######################################################
 ### Code for generating additional FlyBase reports ###
@@ -121,7 +144,7 @@ install_flybase_scripts:
 reports/obo_track_new_simple.txt: $(LAST_DEPLOYED_SIMPLE) install_flybase_scripts $(ONT)-simple.obo
 	echo "Comparing with: "$(SIMPLE_PURL) && ../scripts/obo_track_new.pl $(LAST_DEPLOYED_SIMPLE) $(ONT)-simple.obo > $@
 
-reports/robot_simple_diff.txt: $(ONT)-simple.obo
+reports/robot_simple_diff.txt: $(ONT)-simple.obo $(LAST_DEPLOYED_SIMPLE)
 	$(ROBOT) diff --left $(ONT)-simple.obo --right $(LAST_DEPLOYED_SIMPLE) --output $@
 	
 reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
@@ -166,12 +189,12 @@ tmp/merged-source-pre.owl: $(SRC)
 	$(ROBOT) merge -i $(SRC) -i mirror/chebi.owl --output $@
 
 tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_dot.txt
-	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_dot.txt flybase $@ NA
+	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_dot.txt flybase $@ NA add_dot_refs
 
 tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_sub.txt
 	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA source_xref
 
-pre_release: $(ONT)-edit.owl tmp/auto_generated_definitions_dot.owl tmp/auto_generated_definitions_sub.owl components/lethal_class_hierarchy.owl
+pre_release: $(ONT)-edit.owl all_imports tmp/auto_generated_definitions_dot.owl tmp/auto_generated_definitions_sub.owl #components/lethal_class_hierarchy.owl
 	cp $(ONT)-edit.owl tmp/$(ONT)-edit-release.owl
 	sed -i '/AnnotationAssertion[(]obo[:]IAO[_]0000115.*\"[.]\"/d' tmp/$(ONT)-edit-release.owl
 	sed -i '/sub_/d' tmp/$(ONT)-edit-release.owl
