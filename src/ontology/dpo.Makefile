@@ -65,6 +65,26 @@ tmp/remaining_classes.txt: tmp/all_patternised_classes.txt tmp/all_defined_class
 tmp/remaining_definitions.owl: $(SRC) tmp/remaining_classes.txt
 	$(ROBOT) filter -i $< -T tmp/remaining_classes.txt --axioms "equivalent annotation" --trim false -o $@
 
+######################################################
+### Overwriting some default aretfacts ###
+######################################################
+
+# Simple is overwritten to strip out duplicate names and definitions.
+$(ONT)-simple.obo: $(ONT)-simple.owl
+	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
+	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
+	sed -i '/subset[:] ro[-]eco/d' $@.tmp &&\
+	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
+	rm -f $@.tmp.obo $@.tmp
+
+# We want the OBO release to be based on the simple release. It needs to be annotated however in the way map releases (fbbt.owl) are annotated.
+$(ONT).obo: $(ONT)-simple.owl
+	$(ROBOT)  annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
+	convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
+	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
+	sed -i '/subset[:] ro[-]eco/d' $@.tmp &&\
+	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
+	rm -f $@.tmp.obo $@.tmp
 
 ############################################################
 ### Code for generating class hierarchy for lethal terms ###
