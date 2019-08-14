@@ -1,5 +1,21 @@
 format-version: 1.2
-data-version: dpo/releases/2019-08-07/imports/fbdv_import.owl
+data-version: dpo/releases/2019-08-14/imports/fbdv_import.owl
+subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
+subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
+subsetdef: goslim_agr "AGR slim"
+subsetdef: goslim_aspergillus "Aspergillus GO slim"
+subsetdef: goslim_candida "Candida GO slim"
+subsetdef: goslim_chembl "ChEMBL protein targets summary"
+subsetdef: goslim_flybase_ribbon "FlyBase Drosophila GO ribbon slim"
+subsetdef: goslim_generic "Generic GO slim"
+subsetdef: goslim_metagenomics "Metagenomics GO slim"
+subsetdef: goslim_mouse "Mouse GO slim"
+subsetdef: goslim_pir "PIR GO slim"
+subsetdef: goslim_plant "Plant GO slim"
+subsetdef: goslim_pombe "Fission yeast GO slim"
+subsetdef: goslim_yeast "Yeast GO slim"
+subsetdef: ro-eco ""
+subsetdef: RO:0002259 ""
 ontology: dpo/imports/fbdv_import
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000015>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0003674>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0008150>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0016301>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0048018>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000066>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000056>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002013>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002014>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002015>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002018>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002019>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002025>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002131>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002180>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002211>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002212>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002213>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002215>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002233>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002234>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002327>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002331>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002333>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002352>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002404>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002411>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002418>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002447>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002448>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002449>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002450>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002481>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002566>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002578>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002629>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002630>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0003000>))\nDeclaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>))\n\n\n\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/BFO_0000002> (continuant)\n\nDisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000003>))\n\n# Class: <http://purl.obolibrary.org/obo/BFO_0000003> (occurrent)\n\nDisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000002>))\n\n# Class: <http://purl.obolibrary.org/obo/GO_0016301> (kinase activity)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0016301> ObjectHasSelf(<http://purl.obolibrary.org/obo/RO_0002481>))\n\n\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002566> <http://purl.obolibrary.org/obo/BFO_0000040>) ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/BFO_0000015>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/BFO_0000015>)))))\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002448>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002411> <http://purl.obolibrary.org/obo/RO_0002233>) <http://purl.obolibrary.org/obo/RO_0002566>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002411> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002566>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002629> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002450>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002630> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002449>)\nSubObjectPropertyOf(ObjectPropertyChain(ObjectInverseOf(<http://purl.obolibrary.org/obo/BFO_0000066>) <http://purl.obolibrary.org/obo/RO_0002234>) <http://purl.obolibrary.org/obo/RO_0003000>)\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002180> Variable(<urn:swrl#w>) Variable(<urn:swrl#p>)) ClassAtom(<http://purl.obolibrary.org/obo/BFO_0000015> Variable(<urn:swrl#w>)) ClassAtom(<http://purl.obolibrary.org/obo/BFO_0000015> Variable(<urn:swrl#p>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002018> Variable(<urn:swrl#w>) Variable(<urn:swrl#p>))))\nDLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> \"true\"^^xsd:boolean) Annotation(rdfs:comment \"MF(X)-directly_regulates->MF(Y)-enabled_by->GP(Z) => MF(Y)-has_input->GP(Y) e.g. if 'protein kinase activity'(X) directly_regulates 'protein binding activity (Y)and this is enabled by GP(Z) then X has_input Z\"^^xsd:string) Annotation(rdfs:label \"infer input from direct reg\"^^xsd:string) Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<http://purl.obolibrary.org/obo/ro.owl#z>) Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>) Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0003674> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0003674> Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>) Variable(<http://purl.obolibrary.org/obo/ro.owl#z>))))\nDLSafeRule(Annotation(rdfs:comment \"GP(X)-enables->MF(Y)-has_part->MF(Z) => GP(X) enables MF(Z),\ne.g.  if GP X enables ATPase coupled transporter activity' and 'ATPase coupled transporter activity' has_part 'ATPase activity' then GP(X) enables 'ATPase activity'\") Annotation(rdfs:label \"enabling an MF enables its parts\") Body(ClassAtom(<http://purl.obolibrary.org/obo/GO_0003674> Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000051> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nDLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> \"true\"^^xsd:boolean) Annotation(rdfs:comment \"GP(X)-enables->MF(Y)-part_of->BP(Z) => GP(X) involved_in BP(Z) e.g. if X enables 'protein kinase activity' and Y 'part of' 'signal tranduction' then X involved in 'signal transduction'\"^^xsd:string) Annotation(rdfs:label \"involved in BP\"^^xsd:string) Body(ClassAtom(<http://purl.obolibrary.org/obo/GO_0008150> Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002331> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#a1>) Variable(<urn:swrl#a2>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0016301> Variable(<urn:swrl#a1>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#a1>) Variable(<urn:swrl#g1>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#a2>) Variable(<urn:swrl#g2>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002447> Variable(<urn:swrl#g1>) Variable(<urn:swrl#g2>))))\nDLSafeRule(Annotation(rdfs:label \"From ligand activity to has_ligand\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#z>) Variable(<urn:swrl#x>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0048018> Variable(<urn:swrl#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002019> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>))))\nDLSafeRule(Annotation(rdfs:comment \"This rule is dubious: added as a quick fix for expected inference in GO-CAM.  The problem is most acute for transmembrane proteins, such as receptors or cell adhesion molecules, which have some subfunctions inside the cell (e.g. kinase activity) and some subfunctions outside (e.g. ligand binding).  Correct annotation of where these functions occurs leads to incorrect inference about the location of the whole protein.  This should probably be weakened to \\\"... -> overlaps\\\"\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000066> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nDLSafeRule(Annotation(rdfs:comment \"If a molecular function (X) has a regulatory subfunction, then any gene product which is an input to that subfunction has an activity that directly_regulates X.  Note:  this is intended for cases where the regaultory subfunction is protein binding, so it could be tightened with an additional clause to specify this.\") Annotation(rdfs:label \"inferring direct reg edge from input to regulatory subfunction\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002352> Variable(<urn:swrl#B>) Variable(<urn:swrl#C>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#A>) Variable(<urn:swrl#B>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002013> Variable(<urn:swrl#D>) Variable(<urn:swrl#C>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#A>) Variable(<urn:swrl#D>))))\nDLSafeRule(Annotation(rdfs:label \"inferring direct neg reg edge from input to regulatory subfunction\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002352> Variable(<urn:swrl#B>) Variable(<urn:swrl#C>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#A>) Variable(<urn:swrl#B>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002014> Variable(<urn:swrl#D>) Variable(<urn:swrl#C>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002630> Variable(<urn:swrl#A>) Variable(<urn:swrl#D>))))\nDLSafeRule(Annotation(rdfs:label \"inferring direct positive reg edge from input to regulatory subfunction\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002352> Variable(<urn:swrl#B>) Variable(<urn:swrl#C>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#A>) Variable(<urn:swrl#B>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002015> Variable(<urn:swrl#D>) Variable(<urn:swrl#C>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002629> Variable(<urn:swrl#A>) Variable(<urn:swrl#D>))))\nDLSafeRule(Annotation(rdfs:label \"From has_ligand to ligand activity\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002019> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ClassAtom(<http://purl.obolibrary.org/obo/GO_0048018> Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#z>) Variable(<urn:swrl#x>))))\nDLSafeRule(Annotation(rdfs:label \"effector input is compound function input\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<urn:swrl#eff>) Variable(<urn:swrl#in>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<urn:swrl#mf>) Variable(<urn:swrl#in>))))\nDLSafeRule(Annotation(rdfs:label \"Input of effector is input of its parent MF\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<urn:swrl#mf>) Variable(<urn:swrl#in>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<urn:swrl#eff>) Variable(<urn:swrl#in>))))\nDLSafeRule(Annotation(rdfs:comment \"if effector directly regulates X,  its parent MF directly regulates X\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#mf>) Variable(<urn:swrl#mf2>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#eff>) Variable(<urn:swrl#mf2>))))\nDLSafeRule(Annotation(rdfs:comment \"if effector directly positively regulates X,  its parent MF directly positively regulates X\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002629> Variable(<urn:swrl#mf>) Variable(<urn:swrl#mf2>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002629> Variable(<urn:swrl#eff>) Variable(<urn:swrl#mf2>))))\nDLSafeRule(Annotation(rdfs:label \"if effector directly negatively regulates X,  its parent MF directly negatively regulates X\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002630> Variable(<urn:swrl#mf>) Variable(<urn:swrl#mf2>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002630> Variable(<urn:swrl#eff>) Variable(<urn:swrl#mf2>))))\nDLSafeRule(Annotation(rdfs:label \"'causally downstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties).\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002404> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002131> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ClassAtom(owl:Nothing Variable(<urn:swrl#x>)) ClassAtom(owl:Nothing Variable(<urn:swrl#y>))))\nDLSafeRule(Annotation(rdfs:label \"'causally upstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties).\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002411> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002131> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ClassAtom(owl:Nothing Variable(<urn:swrl#x>)) ClassAtom(owl:Nothing Variable(<urn:swrl#y>))))\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002213> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002213> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nAnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/RO_0002432> \"\")\n)
 
@@ -21,6 +37,8 @@ id: BFO:0000004
 name: independent continuant
 def: "A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything." []
 is_a: BFO:0000002 ! continuant
+disjoint_from: BFO:0000020 ! specifically dependent continuant
+disjoint_from: BFO:0000031 ! generically dependent continuant
 relationship: part_of BFO:0000004 ! independent continuant
 
 [Term]
@@ -28,6 +46,35 @@ id: BFO:0000015
 name: process
 def: "An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t." []
 is_a: BFO:0000003 ! occurrent
+
+[Term]
+id: BFO:0000017
+name: realizable entity
+def: "A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances." []
+is_a: BFO:0000020 ! specifically dependent continuant
+disjoint_from: BFO:0000019 ! quality
+relationship: part_of BFO:0000017 ! realizable entity
+
+[Term]
+id: BFO:0000019
+name: quality
+is_a: BFO:0000020 ! specifically dependent continuant
+relationship: part_of BFO:0000019 ! quality
+
+[Term]
+id: BFO:0000020
+name: specifically dependent continuant
+def: "A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same." []
+is_a: BFO:0000002 ! continuant
+disjoint_from: BFO:0000031 ! generically dependent continuant
+relationship: part_of BFO:0000020 ! specifically dependent continuant
+
+[Term]
+id: BFO:0000031
+name: generically dependent continuant
+def: "A continuant that is dependent on one or other independent continuant bearers. For every instance of A requires some instance of (an independent continuant type) B but which instance of B serves can change from time to time." []
+is_a: BFO:0000002 ! continuant
+relationship: part_of BFO:0000031 ! generically dependent continuant
 
 [Term]
 id: BFO:0000040
@@ -63,7 +110,7 @@ def: "A collective term for stages 1-4." [FBC:DOS]
 comment: Temporal ordering number - 25.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005288 ! fertilized egg stage
-relationship: part_of FBdv:00005289 ! embryonic stage
+relationship: substage_of FBdv:00005289 ! embryonic stage
 
 [Term]
 id: FBdv:00004450
@@ -74,7 +121,7 @@ comment: Temporal ordering number - 300.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005324 ! embryonic stage 10
 relationship: immediately_preceded_by FBdv:00014201 ! early extended germ band stage
-relationship: part_of FBdv:00005321 ! extended germ band stage
+relationship: substage_of FBdv:00005321 ! extended germ band stage
 
 [Term]
 id: FBdv:00004886
@@ -102,7 +149,7 @@ namespace: FlyBase_development_CV
 def: "Earliest stage of ovarian cyst development - lasts while the 16 cell cyst is within the germarium (region 3)." [FlyBase:FBrf0021038, FlyBase:FBrf0034074, FlyBase:FBrf0064777]
 comment: Temporal ordering number - 10010.
 is_a: FBdv:00005259 ! developmental stage
-relationship: part_of FBdv:00004886 ! oogenesis
+relationship: substage_of FBdv:00004886 ! oogenesis
 
 [Term]
 id: FBdv:00005262
@@ -112,7 +159,7 @@ def: "Oogenesis stage that begins when the cyst leaves the germarium (from this 
 comment: Temporal ordering number - 10020.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005261 ! oogenesis stage S1
-relationship: part_of FBdv:00004886 ! oogenesis
+relationship: substage_of FBdv:00004886 ! oogenesis
 
 [Term]
 id: FBdv:00005263
@@ -122,7 +169,7 @@ def: "Oogenesis stage that begins when the oocyte chromosomes condense into a ka
 comment: Temporal ordering number - 10030.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005262 ! oogenesis stage S2
-relationship: part_of FBdv:00004886 ! oogenesis
+relationship: substage_of FBdv:00004886 ! oogenesis
 
 [Term]
 id: FBdv:00005264
@@ -132,7 +179,7 @@ def: "Oogenesis stage that begins when the nurse cells chromosomes become bulbou
 comment: Temporal ordering number - 10040.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005263 ! oogenesis stage S3
-relationship: part_of FBdv:00004886 ! oogenesis
+relationship: substage_of FBdv:00004886 ! oogenesis
 
 [Term]
 id: FBdv:00005265
@@ -142,7 +189,7 @@ def: "Oogenesis stage that begins when nurse cell chromosomes are no longer bulb
 comment: Temporal ordering number - 10050.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005264 ! oogenesis stage S4
-relationship: part_of FBdv:00004886 ! oogenesis
+relationship: substage_of FBdv:00004886 ! oogenesis
 
 [Term]
 id: FBdv:00005266
@@ -152,7 +199,7 @@ def: "Oogenesis stage during which follicle cell division ceases." [FlyBase:FBrf
 comment: Temporal ordering number - 10060.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005265 ! oogenesis stage S5
-relationship: part_of FBdv:00004886 ! oogenesis
+relationship: substage_of FBdv:00004886 ! oogenesis
 
 [Term]
 id: FBdv:00005267
@@ -162,7 +209,7 @@ def: "Oogenesis stage during which polyploidation and enlargement of follicle ce
 comment: Temporal ordering number - 10070.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005266 ! oogenesis stage S6
-relationship: part_of FBdv:00004886 ! oogenesis
+relationship: substage_of FBdv:00004886 ! oogenesis
 
 [Term]
 id: FBdv:00005268
@@ -172,7 +219,7 @@ def: "Oogenesis stage which begins when yolk first appears in the oocyte. Follic
 comment: Temporal ordering number - 10080.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005267 ! oogenesis stage S7
-relationship: part_of FBdv:00004886 ! oogenesis
+relationship: substage_of FBdv:00004886 ! oogenesis
 
 [Term]
 id: FBdv:00005269
@@ -182,7 +229,7 @@ def: "Oogenesis stage that begins when the border cells begin to migrate. During
 comment: Temporal ordering number - 10090.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005268 ! oogenesis stage S8
-relationship: part_of FBdv:00004886 ! oogenesis
+relationship: substage_of FBdv:00004886 ! oogenesis
 
 [Term]
 id: FBdv:00005270
@@ -192,7 +239,7 @@ def: "Oogenesis stage that begins when all the oocyte associated follicular epit
 comment: Temporal ordering number - 10100.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005269 ! oogenesis stage S9
-relationship: part_of FBdv:00004886 ! oogenesis
+relationship: substage_of FBdv:00004886 ! oogenesis
 
 [Term]
 id: FBdv:00005271
@@ -202,7 +249,7 @@ def: "Oogenesis stage which begins when all the oocyte associated follicular epi
 comment: Temporal ordering number - 10110.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005269 ! oogenesis stage S9
-relationship: part_of FBdv:00005270 ! oogenesis stage S10
+relationship: substage_of FBdv:00005270 ! oogenesis stage S10
 
 [Term]
 id: FBdv:00005272
@@ -212,7 +259,7 @@ def: "Oogenesis stage that begins when the centripetal follicle cells begin to m
 comment: Temporal ordering number - 10120.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005271 ! oogenesis stage S10A
-relationship: part_of FBdv:00005270 ! oogenesis stage S10
+relationship: substage_of FBdv:00005270 ! oogenesis stage S10
 
 [Term]
 id: FBdv:00005273
@@ -223,7 +270,7 @@ comment: Temporal ordering number - 10130.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005270 ! oogenesis stage S10
 relationship: immediately_preceded_by FBdv:00005272 ! oogenesis stage S10B
-relationship: part_of FBdv:00004886 ! oogenesis
+relationship: substage_of FBdv:00004886 ! oogenesis
 
 [Term]
 id: FBdv:00005274
@@ -233,7 +280,7 @@ def: "Oogenesis stage that begins when dying nurse cells form an anterior cap to
 comment: Temporal ordering number - 10160.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005273 ! oogenesis stage S11
-relationship: part_of FBdv:00004886 ! oogenesis
+relationship: substage_of FBdv:00004886 ! oogenesis
 
 [Term]
 id: FBdv:00005275
@@ -243,7 +290,7 @@ def: "Innermost chorionic layer and endochondrion begin to form in the anterior 
 comment: Temporal ordering number - 10170.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005273 ! oogenesis stage S11
-relationship: part_of FBdv:00005274 ! oogenesis stage S12
+relationship: substage_of FBdv:00005274 ! oogenesis stage S12
 
 [Term]
 id: FBdv:00005276
@@ -253,7 +300,7 @@ def: "Secretion of innermost chorionic layer and endochondrion begins in the mai
 comment: Temporal ordering number - 10180.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005275 ! oogenesis stage S12A
-relationship: part_of FBdv:00005274 ! oogenesis stage S12
+relationship: substage_of FBdv:00005274 ! oogenesis stage S12
 
 [Term]
 id: FBdv:00005277
@@ -263,7 +310,7 @@ def: "Formation of specialized endochondrion structures in the anterior of the f
 comment: Temporal ordering number - 10190.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005276 ! oogenesis stage S12B
-relationship: part_of FBdv:00005274 ! oogenesis stage S12
+relationship: substage_of FBdv:00005274 ! oogenesis stage S12
 
 [Term]
 id: FBdv:00005278
@@ -274,7 +321,7 @@ comment: Temporal ordering number - 10200.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005274 ! oogenesis stage S12
 relationship: immediately_preceded_by FBdv:00005277 ! oogenesis stage S12C
-relationship: part_of FBdv:00004886 ! oogenesis
+relationship: substage_of FBdv:00004886 ! oogenesis
 
 [Term]
 id: FBdv:00005279
@@ -284,7 +331,7 @@ def: "Oogenesis stage during which 12-15 nurse cell nuclei remain at the anterio
 comment: Temporal ordering number - 10210. An alternative division of stage 13 into two sub-stages, A and B, has been defined on the basis of chorion development (see FBrf0043885). This ontology uses an alternative subdivision based on nurse cell nucleus number and oocyte meiosis, as the former at least, is easier to score than chorion ultrastructure.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005277 ! oogenesis stage S12C
-relationship: part_of FBdv:00005278 ! oogenesis stage S13
+relationship: substage_of FBdv:00005278 ! oogenesis stage S13
 
 [Term]
 id: FBdv:00005280
@@ -294,7 +341,7 @@ def: "Oogenesis stage during which 9-11 nurse cell nuclei remain at the anterior
 comment: Temporal ordering number - 10220. An alternative division of stage 13 into two sub-stages, A and B, has been defined on the basis of chorion development (see FBrf0043885). This ontology uses an alternative subdivision based on nurse cell nucleus number and oocyte meiosis, as the former at least, is easier to score than chorion ultrastructure.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005279 ! oogenesis stage S13A
-relationship: part_of FBdv:00005278 ! oogenesis stage S13
+relationship: substage_of FBdv:00005278 ! oogenesis stage S13
 
 [Term]
 id: FBdv:00005281
@@ -304,7 +351,7 @@ def: "Oogenesis stage during which only 7-8 nurse cell nuclei remain at the ante
 comment: Temporal ordering number - 10230.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005280 ! oogenesis stage S13B
-relationship: part_of FBdv:00005278 ! oogenesis stage S13
+relationship: substage_of FBdv:00005278 ! oogenesis stage S13
 
 [Term]
 id: FBdv:00005282
@@ -314,7 +361,7 @@ def: "Oogenesis stage during which only 5-6 nurse cell nuclei remain at the ante
 comment: Temporal ordering number - 10240.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005281 ! oogenesis stage S13C
-relationship: part_of FBdv:00005278 ! oogenesis stage S13
+relationship: substage_of FBdv:00005278 ! oogenesis stage S13
 
 [Term]
 id: FBdv:00005283
@@ -325,7 +372,7 @@ comment: Temporal ordering number - 10260.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005278 ! oogenesis stage S13
 relationship: immediately_preceded_by FBdv:00005282 ! oogenesis stage S13D
-relationship: part_of FBdv:00004886 ! oogenesis
+relationship: substage_of FBdv:00004886 ! oogenesis
 
 [Term]
 id: FBdv:00005284
@@ -335,7 +382,7 @@ def: "Secretion and formation of the outer endochorionic network by throughout t
 comment: Temporal ordering number - 10270.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005282 ! oogenesis stage S13D
-relationship: part_of FBdv:00005283 ! oogenesis stage S14
+relationship: substage_of FBdv:00005283 ! oogenesis stage S14
 
 [Term]
 id: FBdv:00005285
@@ -345,7 +392,7 @@ def: "Secretion of the exochorion begins and ends." [FlyBase:FBrf0021038, FlyBas
 comment: Temporal ordering number - 10280.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005284 ! oogenesis stage S14A
-relationship: part_of FBdv:00005283 ! oogenesis stage S14
+relationship: substage_of FBdv:00005283 ! oogenesis stage S14
 
 [Term]
 id: FBdv:00005286
@@ -363,7 +410,7 @@ comment: Temporal ordering number - 10300.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005283 ! oogenesis stage S14
 relationship: immediately_preceded_by FBdv:00005285 ! oogenesis stage S14B
-relationship: part_of FBdv:00005286 ! egg stage
+relationship: substage_of FBdv:00005286 ! egg stage
 
 [Term]
 id: FBdv:00005288
@@ -372,7 +419,7 @@ namespace: FlyBase_development_CV
 comment: Temporal ordering number - 10.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005287 ! unfertilized egg stage
-relationship: part_of FBdv:00005286 ! egg stage
+relationship: substage_of FBdv:00005286 ! egg stage
 
 [Term]
 id: FBdv:00005289
@@ -392,7 +439,7 @@ comment: Temporal ordering number - 30.
 synonym: "pre-blastoderm" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005288 ! fertilized egg stage
-relationship: part_of FBdv:00000054 ! cleavage stage
+relationship: substage_of FBdv:00000054 ! cleavage stage
 
 [Term]
 id: FBdv:00005291
@@ -402,7 +449,7 @@ def: "The embryonic stage that lasts from the end of fertilization to the end of
 comment: Temporal ordering number - 40.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005288 ! fertilized egg stage
-relationship: part_of FBdv:00005290 ! pre-blastoderm stage
+relationship: substage_of FBdv:00005290 ! pre-blastoderm stage
 
 [Term]
 id: FBdv:00005292
@@ -412,7 +459,7 @@ def: "The first mitotic cell cycle of embryogenesis. This occurs synchronously a
 comment: Temporal ordering number - 50.
 is_a: FBdv:00007011 ! embryonic cycle
 relationship: immediately_preceded_by FBdv:00005288 ! fertilized egg stage
-relationship: part_of FBdv:00005291 ! embryonic stage 1
+relationship: substage_of FBdv:00005291 ! embryonic stage 1
 
 [Term]
 id: FBdv:00005293
@@ -422,7 +469,7 @@ def: "Nuclear divisions 3-8. The egg cytoplasm contracts producing a clear separ
 comment: Temporal ordering number - 70.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005291 ! embryonic stage 1
-relationship: part_of FBdv:00005290 ! pre-blastoderm stage
+relationship: substage_of FBdv:00005290 ! pre-blastoderm stage
 
 [Term]
 id: FBdv:00005294
@@ -432,7 +479,7 @@ def: "The second mitotic cell cycle of embryogenesis. This occurs synchronously 
 comment: Temporal ordering number - 60.
 is_a: FBdv:00007011 ! embryonic cycle
 relationship: immediately_preceded_by FBdv:00005292 ! embryonic cycle 1
-relationship: part_of FBdv:00005293 ! embryonic stage 2
+relationship: substage_of FBdv:00005293 ! embryonic stage 2
 
 [Term]
 id: FBdv:00005295
@@ -443,7 +490,7 @@ comment: Temporal ordering number - 80.
 is_a: FBdv:00007011 ! embryonic cycle
 relationship: immediately_preceded_by FBdv:00005291 ! embryonic stage 1
 relationship: immediately_preceded_by FBdv:00005294 ! embryonic cycle 2
-relationship: part_of FBdv:00005293 ! embryonic stage 2
+relationship: substage_of FBdv:00005293 ! embryonic stage 2
 
 [Term]
 id: FBdv:00005296
@@ -453,7 +500,7 @@ def: "The fourth mitotic cell cycle of embryogenesis. This occurs synchronously 
 comment: Temporal ordering number - 90.
 is_a: FBdv:00007011 ! embryonic cycle
 relationship: immediately_preceded_by FBdv:00005295 ! embryonic cycle 3
-relationship: part_of FBdv:00005293 ! embryonic stage 2
+relationship: substage_of FBdv:00005293 ! embryonic stage 2
 
 [Term]
 id: FBdv:00005297
@@ -463,7 +510,7 @@ def: "The fifth mitotic cell cycle of embryogenesis. This occurs synchronously a
 comment: Temporal ordering number - 100.
 is_a: FBdv:00007011 ! embryonic cycle
 relationship: immediately_preceded_by FBdv:00005296 ! embryonic cycle 4
-relationship: part_of FBdv:00005293 ! embryonic stage 2
+relationship: substage_of FBdv:00005293 ! embryonic stage 2
 
 [Term]
 id: FBdv:00005298
@@ -473,7 +520,7 @@ def: "The sixth mitotic cell cycle of embryogenesis. This occurs synchronously a
 comment: Temporal ordering number - 110.
 is_a: FBdv:00007011 ! embryonic cycle
 relationship: immediately_preceded_by FBdv:00005297 ! embryonic cycle 5
-relationship: part_of FBdv:00005293 ! embryonic stage 2
+relationship: substage_of FBdv:00005293 ! embryonic stage 2
 
 [Term]
 id: FBdv:00005299
@@ -483,7 +530,7 @@ def: "The seventh mitotic cell cycle of embryogenesis. This occurs synchronously
 comment: Temporal ordering number - 120.
 is_a: FBdv:00007011 ! embryonic cycle
 relationship: immediately_preceded_by FBdv:00005298 ! embryonic cycle 6
-relationship: part_of FBdv:00005293 ! embryonic stage 2
+relationship: substage_of FBdv:00005293 ! embryonic stage 2
 
 [Term]
 id: FBdv:00005300
@@ -493,7 +540,7 @@ def: "The eighth mitotic cell cycle of embryogenesis. This occurs synchronously 
 comment: Temporal ordering number - 130.
 is_a: FBdv:00007011 ! embryonic cycle
 relationship: immediately_preceded_by FBdv:00005299 ! embryonic cycle 7
-relationship: part_of FBdv:00005293 ! embryonic stage 2
+relationship: substage_of FBdv:00005293 ! embryonic stage 2
 
 [Term]
 id: FBdv:00005301
@@ -504,7 +551,7 @@ comment: Temporal ordering number - 140.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005293 ! embryonic stage 2
 relationship: immediately_preceded_by FBdv:00005300 ! embryonic cycle 8
-relationship: part_of FBdv:00005290 ! pre-blastoderm stage
+relationship: substage_of FBdv:00005290 ! pre-blastoderm stage
 
 [Term]
 id: FBdv:00005302
@@ -515,7 +562,7 @@ comment: Temporal ordering number - 150.
 is_a: FBdv:00007011 ! embryonic cycle
 relationship: immediately_preceded_by FBdv:00005293 ! embryonic stage 2
 relationship: immediately_preceded_by FBdv:00005300 ! embryonic cycle 8
-relationship: part_of FBdv:00005301 ! embryonic stage 3
+relationship: substage_of FBdv:00005301 ! embryonic stage 3
 
 [Term]
 id: FBdv:00005304
@@ -527,7 +574,7 @@ synonym: "blastoderm" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005290 ! pre-blastoderm stage
 relationship: immediately_preceded_by FBdv:00005301 ! embryonic stage 3
-relationship: part_of FBdv:00005289 ! embryonic stage
+relationship: substage_of FBdv:00005289 ! embryonic stage
 
 [Term]
 id: FBdv:00005306
@@ -541,7 +588,7 @@ is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005290 ! pre-blastoderm stage
 relationship: immediately_preceded_by FBdv:00005301 ! embryonic stage 3
 relationship: immediately_preceded_by FBdv:00005302 ! embryonic cycle 9
-relationship: part_of FBdv:00005304 ! blastoderm stage
+relationship: substage_of FBdv:00005304 ! blastoderm stage
 
 [Term]
 id: FBdv:00005311
@@ -554,7 +601,7 @@ synonym: "cellular blastoderm stage" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00000054 ! cleavage stage
 relationship: immediately_preceded_by FBdv:00005306 ! embryonic stage 4
-relationship: part_of FBdv:00005304 ! blastoderm stage
+relationship: substage_of FBdv:00005304 ! blastoderm stage
 
 [Term]
 id: FBdv:00005317
@@ -566,7 +613,7 @@ synonym: "gastrula" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005304 ! blastoderm stage
 relationship: immediately_preceded_by FBdv:00005311 ! embryonic stage 5
-relationship: part_of FBdv:00005289 ! embryonic stage
+relationship: substage_of FBdv:00005289 ! embryonic stage
 
 [Term]
 id: FBdv:00005318
@@ -577,7 +624,7 @@ comment: Temporal ordering number - 230.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005304 ! blastoderm stage
 relationship: immediately_preceded_by FBdv:00005311 ! embryonic stage 5
-relationship: part_of FBdv:00005317 ! gastrula stage
+relationship: substage_of FBdv:00005317 ! gastrula stage
 
 [Term]
 id: FBdv:00005319
@@ -587,7 +634,7 @@ def: "Stage 7 begins when the pole cells have adopted a dorsal (horizontal) posi
 comment: Temporal ordering number - 240.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005318 ! embryonic stage 6
-relationship: part_of FBdv:00005317 ! gastrula stage
+relationship: substage_of FBdv:00005317 ! gastrula stage
 
 [Term]
 id: FBdv:00005321
@@ -598,7 +645,7 @@ comment: Temporal ordering number - 260.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005317 ! gastrula stage
 relationship: immediately_preceded_by FBdv:00005322 ! embryonic stage 8
-relationship: part_of FBdv:00005289 ! embryonic stage
+relationship: substage_of FBdv:00005289 ! embryonic stage
 
 [Term]
 id: FBdv:00005322
@@ -609,7 +656,7 @@ comment: Temporal ordering number - 250.
 synonym: "rapidly extending germ band stage" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005319 ! embryonic stage 7
-relationship: part_of FBdv:00005317 ! gastrula stage
+relationship: substage_of FBdv:00005317 ! gastrula stage
 
 [Term]
 id: FBdv:00005323
@@ -620,7 +667,7 @@ comment: Temporal ordering number - 280.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005317 ! gastrula stage
 relationship: immediately_preceded_by FBdv:00005322 ! embryonic stage 8
-relationship: part_of FBdv:00014201 ! early extended germ band stage
+relationship: substage_of FBdv:00014201 ! early extended germ band stage
 
 [Term]
 id: FBdv:00005324
@@ -630,7 +677,7 @@ def: "Stage 10 begins with the appearance of the stomodeal invagination, slightl
 comment: Temporal ordering number - 290.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005323 ! embryonic stage 9
-relationship: part_of FBdv:00014201 ! early extended germ band stage
+relationship: substage_of FBdv:00014201 ! early extended germ band stage
 
 [Term]
 id: FBdv:00005325
@@ -641,7 +688,7 @@ comment: Temporal ordering number - 310.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005324 ! embryonic stage 10
 relationship: immediately_preceded_by FBdv:00014201 ! early extended germ band stage
-relationship: part_of FBdv:00004450 ! late extended germ band stage
+relationship: substage_of FBdv:00004450 ! late extended germ band stage
 
 [Term]
 id: FBdv:00005327
@@ -652,7 +699,7 @@ comment: Temporal ordering number - 320.
 synonym: "retracting germ band stage" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005325 ! embryonic stage 11
-relationship: part_of FBdv:00004450 ! late extended germ band stage
+relationship: substage_of FBdv:00004450 ! late extended germ band stage
 
 [Term]
 id: FBdv:00005328
@@ -665,7 +712,7 @@ is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00004450 ! late extended germ band stage
 relationship: immediately_preceded_by FBdv:00005321 ! extended germ band stage
 relationship: immediately_preceded_by FBdv:00005327 ! embryonic stage 12
-relationship: part_of FBdv:00005331 ! dorsal closure stage
+relationship: substage_of FBdv:00005331 ! dorsal closure stage
 
 [Term]
 id: FBdv:00005330
@@ -676,7 +723,7 @@ comment: Temporal ordering number - 350.
 synonym: "head involution stage" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005328 ! embryonic stage 13
-relationship: part_of FBdv:00005331 ! dorsal closure stage
+relationship: substage_of FBdv:00005331 ! dorsal closure stage
 
 [Term]
 id: FBdv:00005331
@@ -688,7 +735,7 @@ is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00004450 ! late extended germ band stage
 relationship: immediately_preceded_by FBdv:00005321 ! extended germ band stage
 relationship: immediately_preceded_by FBdv:00005327 ! embryonic stage 12
-relationship: part_of FBdv:00005289 ! embryonic stage
+relationship: substage_of FBdv:00005289 ! embryonic stage
 
 [Term]
 id: FBdv:00005332
@@ -698,7 +745,7 @@ def: "Stage 15 begins with the appearance of the second midgut constriction. Dur
 comment: Temporal ordering number - 360.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005330 ! embryonic stage 14
-relationship: part_of FBdv:00005331 ! dorsal closure stage
+relationship: substage_of FBdv:00005331 ! dorsal closure stage
 
 [Term]
 id: FBdv:00005333
@@ -709,7 +756,7 @@ comment: Temporal ordering number - 370.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005331 ! dorsal closure stage
 relationship: immediately_preceded_by FBdv:00005332 ! embryonic stage 15
-relationship: part_of FBdv:00005289 ! embryonic stage
+relationship: substage_of FBdv:00005289 ! embryonic stage
 
 [Term]
 id: FBdv:00005334
@@ -720,7 +767,7 @@ comment: Temporal ordering number - 380.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005331 ! dorsal closure stage
 relationship: immediately_preceded_by FBdv:00005332 ! embryonic stage 15
-relationship: part_of FBdv:00005333 ! late embryonic stage
+relationship: substage_of FBdv:00005333 ! late embryonic stage
 
 [Term]
 id: FBdv:00005335
@@ -730,7 +777,7 @@ def: "Stage 17 begins when the dorsal ridge (frontal sac) has overgrown the tip 
 comment: Temporal ordering number - 390.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005334 ! embryonic stage 16
-relationship: part_of FBdv:00005333 ! late embryonic stage
+relationship: substage_of FBdv:00005333 ! late embryonic stage
 
 [Term]
 id: FBdv:00005336
@@ -756,7 +803,7 @@ relationship: immediately_preceded_by FBdv:00005289 ! embryonic stage
 relationship: immediately_preceded_by FBdv:00005333 ! late embryonic stage
 relationship: immediately_preceded_by FBdv:00005335 ! embryonic stage 17
 relationship: immediately_preceded_by FBdv:00007018 ! embryonic stage 17(iv)
-relationship: part_of FBdv:00005336 ! larval stage
+relationship: substage_of FBdv:00005336 ! larval stage
 
 [Term]
 id: FBdv:00005338
@@ -768,7 +815,7 @@ synonym: "L2" EXACT []
 synonym: "second instar larva" EXACT []
 is_a: FBdv:00007012 ! life stage
 relationship: immediately_preceded_by FBdv:00005337 ! first instar larval stage
-relationship: part_of FBdv:00005336 ! larval stage
+relationship: substage_of FBdv:00005336 ! larval stage
 
 [Term]
 id: FBdv:00005339
@@ -780,7 +827,7 @@ synonym: "L3" EXACT []
 synonym: "third instar larva" RELATED []
 is_a: FBdv:00007012 ! life stage
 relationship: immediately_preceded_by FBdv:00005338 ! second instar larval stage
-relationship: part_of FBdv:00005336 ! larval stage
+relationship: substage_of FBdv:00005336 ! larval stage
 
 [Term]
 id: FBdv:00005340
@@ -790,7 +837,7 @@ def: "Third instar larva prior to the wandering stage (approximately the first 2
 comment: Temporal ordering number - 440.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005338 ! second instar larval stage
-relationship: part_of FBdv:00005339 ! third instar larval stage
+relationship: substage_of FBdv:00005339 ! third instar larval stage
 created_by: david
 creation_date: 2008-11-13T11:51:56Z
 
@@ -804,7 +851,7 @@ synonym: "late third instar" BROAD []
 synonym: "post-feeding larva" BROAD []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005340 ! early third instar larval stage
-relationship: part_of FBdv:00007007 ! late third instar larval stage
+relationship: substage_of FBdv:00007007 ! late third instar larval stage
 created_by: david
 creation_date: 2008-11-13T11:55:46Z
 
@@ -819,7 +866,7 @@ relationship: immediately_preceded_by FBdv:00005336 ! larval stage
 relationship: immediately_preceded_by FBdv:00005339 ! third instar larval stage
 relationship: immediately_preceded_by FBdv:00007005 ! third instar larval stage L2
 relationship: immediately_preceded_by FBdv:00007007 ! late third instar larval stage
-relationship: part_of FBdv:00007001 ! P-stage
+relationship: substage_of FBdv:00007001 ! P-stage
 
 [Term]
 id: FBdv:00005343
@@ -837,7 +884,7 @@ relationship: immediately_preceded_by FBdv:00005336 ! larval stage
 relationship: immediately_preceded_by FBdv:00005339 ! third instar larval stage
 relationship: immediately_preceded_by FBdv:00007005 ! third instar larval stage L2
 relationship: immediately_preceded_by FBdv:00007007 ! late third instar larval stage
-relationship: part_of FBdv:00005342 ! prepupal stage
+relationship: substage_of FBdv:00005342 ! prepupal stage
 
 [Term]
 id: FBdv:00005344
@@ -849,7 +896,7 @@ synonym: "brown puparium stage" EXACT [FlyBase:FBrf0036849]
 synonym: "pupal stage P2" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005343 ! prepupal stage P1
-relationship: part_of FBdv:00005342 ! prepupal stage
+relationship: substage_of FBdv:00005342 ! prepupal stage
 
 [Term]
 id: FBdv:00005345
@@ -861,7 +908,7 @@ synonym: "bubble prepupa stage" EXACT [FlyBase:FBrf0036849]
 synonym: "pupal stage P3" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005344 ! prepupal stage P2
-relationship: part_of FBdv:00005342 ! prepupal stage
+relationship: substage_of FBdv:00005342 ! prepupal stage
 
 [Term]
 id: FBdv:00005346
@@ -873,7 +920,7 @@ synonym: "cryptocephalic pupa" EXACT [FlyBase:FBrf0036849]
 synonym: "pupal stage P4" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005345 ! prepupal stage P3
-relationship: part_of FBdv:00005342 ! prepupal stage
+relationship: substage_of FBdv:00005342 ! prepupal stage
 
 [Term]
 id: FBdv:00005347
@@ -885,7 +932,7 @@ synonym: "buoyant stage" EXACT [FlyBase:FBrf0036849]
 synonym: "pupal stage P4(i)" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005345 ! prepupal stage P3
-relationship: part_of FBdv:00005346 ! prepupal stage P4
+relationship: substage_of FBdv:00005346 ! prepupal stage P4
 
 [Term]
 id: FBdv:00005348
@@ -897,7 +944,7 @@ synonym: "moving bubble stage" EXACT [FlyBase:FBrf0036849]
 synonym: "pupal stage P4(ii)" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005347 ! prepupal stage P4(i)
-relationship: part_of FBdv:00005346 ! prepupal stage P4
+relationship: substage_of FBdv:00005346 ! prepupal stage P4
 
 [Term]
 id: FBdv:00005349
@@ -908,7 +955,7 @@ comment: Temporal ordering number - 570. DISAMBIGUATION: In Drosophila lab verna
 synonym: "phanerocephalic pupa" EXACT [FlyBase:FBrf0036849]
 is_a: FBdv:00007012 ! life stage
 relationship: immediately_preceded_by FBdv:00005342 ! prepupal stage
-relationship: part_of FBdv:00007001 ! P-stage
+relationship: substage_of FBdv:00007001 ! P-stage
 
 [Term]
 id: FBdv:00005350
@@ -920,7 +967,7 @@ is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005342 ! prepupal stage
 relationship: immediately_preceded_by FBdv:00005346 ! prepupal stage P4
 relationship: immediately_preceded_by FBdv:00005348 ! prepupal stage P4(ii)
-relationship: part_of FBdv:00005349 ! pupal stage
+relationship: substage_of FBdv:00005349 ! pupal stage
 
 [Term]
 id: FBdv:00005351
@@ -932,7 +979,7 @@ synonym: "Malpighian tubules migrating" EXACT [FlyBase:FBrf0036849]
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005346 ! prepupal stage P4
 relationship: immediately_preceded_by FBdv:00005348 ! prepupal stage P4(ii)
-relationship: part_of FBdv:00005350 ! pupal stage P5
+relationship: substage_of FBdv:00005350 ! pupal stage P5
 
 [Term]
 id: FBdv:00005352
@@ -943,7 +990,7 @@ comment: Temporal ordering number - 600.
 synonym: "white Malpighian tubules stage" EXACT [FlyBase:FBrf0036849]
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005351 ! pupal stage P5(i)
-relationship: part_of FBdv:00005350 ! pupal stage P5
+relationship: substage_of FBdv:00005350 ! pupal stage P5
 
 [Term]
 id: FBdv:00005353
@@ -955,7 +1002,7 @@ synonym: "green Malpighian tubules stage" EXACT [FlyBase:FBrf0036849]
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005350 ! pupal stage P5
 relationship: immediately_preceded_by FBdv:00005352 ! pupal stage P5(ii)
-relationship: part_of FBdv:00005349 ! pupal stage
+relationship: substage_of FBdv:00005349 ! pupal stage
 
 [Term]
 id: FBdv:00005354
@@ -966,7 +1013,7 @@ comment: Temporal ordering number - 620.
 synonym: "yellow body stage" EXACT [FlyBase:FBrf0036849]
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005353 ! pupal stage P6
-relationship: part_of FBdv:00005349 ! pupal stage
+relationship: substage_of FBdv:00005349 ! pupal stage
 
 [Term]
 id: FBdv:00005355
@@ -979,7 +1026,7 @@ synonym: "yellow-eyed stage" EXACT [FlyBase:FBrf0036849]
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005349 ! pupal stage
 relationship: immediately_preceded_by FBdv:00005354 ! pupal stage P7
-relationship: part_of FBdv:00006011 ! pharate adult stage
+relationship: substage_of FBdv:00006011 ! pharate adult stage
 
 [Term]
 id: FBdv:00005356
@@ -991,7 +1038,7 @@ synonym: "amber-eyed stage" EXACT [FlyBase:FBrf0036849]
 synonym: "pupal stage P9" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005355 ! pharate adult stage P8
-relationship: part_of FBdv:00006011 ! pharate adult stage
+relationship: substage_of FBdv:00006011 ! pharate adult stage
 
 [Term]
 id: FBdv:00005357
@@ -1003,7 +1050,7 @@ synonym: "pupal stage P10" EXACT []
 synonym: "red-eye bald stage" EXACT [FlyBase:FBrf0036849]
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005356 ! pharate adult stage P9
-relationship: part_of FBdv:00006011 ! pharate adult stage
+relationship: substage_of FBdv:00006011 ! pharate adult stage
 
 [Term]
 id: FBdv:00005358
@@ -1014,7 +1061,7 @@ comment: Temporal ordering number - 660.
 synonym: "pupal stage P11" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005357 ! pharate adult stage P10
-relationship: part_of FBdv:00006011 ! pharate adult stage
+relationship: substage_of FBdv:00006011 ! pharate adult stage
 
 [Term]
 id: FBdv:00005359
@@ -1026,7 +1073,7 @@ synonym: "head bristles stage" EXACT [FlyBase:FBrf0036849]
 synonym: "pupal stage P11(i)" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005357 ! pharate adult stage P10
-relationship: part_of FBdv:00005358 ! pharate adult stage P11
+relationship: substage_of FBdv:00005358 ! pharate adult stage P11
 
 [Term]
 id: FBdv:00005360
@@ -1038,7 +1085,7 @@ synonym: "pupal stage P11(ii)" EXACT []
 synonym: "thoracic bristles stage" EXACT [FlyBase:FBrf0036849]
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005359 ! pharate adult stage P11(i)
-relationship: part_of FBdv:00005358 ! pharate adult stage P11
+relationship: substage_of FBdv:00005358 ! pharate adult stage P11
 
 [Term]
 id: FBdv:00005361
@@ -1050,7 +1097,7 @@ synonym: "pupal stage P12" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005358 ! pharate adult stage P11
 relationship: immediately_preceded_by FBdv:00005360 ! pharate adult stage P11(ii)
-relationship: part_of FBdv:00006011 ! pharate adult stage
+relationship: substage_of FBdv:00006011 ! pharate adult stage
 
 [Term]
 id: FBdv:00005362
@@ -1063,7 +1110,7 @@ synonym: "wing tips grey stage" EXACT [FlyBase:FBrf0036849]
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005358 ! pharate adult stage P11
 relationship: immediately_preceded_by FBdv:00005360 ! pharate adult stage P11(ii)
-relationship: part_of FBdv:00005361 ! pharate adult stage P12
+relationship: substage_of FBdv:00005361 ! pharate adult stage P12
 
 [Term]
 id: FBdv:00005363
@@ -1075,7 +1122,7 @@ synonym: "pupal stage P12(ii)" EXACT []
 synonym: "wings grey stage" EXACT [FlyBase:FBrf0036849]
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005362 ! pharate adult stage P12(i)
-relationship: part_of FBdv:00005361 ! pharate adult stage P12
+relationship: substage_of FBdv:00005361 ! pharate adult stage P12
 
 [Term]
 id: FBdv:00005364
@@ -1088,7 +1135,7 @@ synonym: "wings black stage" EXACT [FlyBase:FBrf0036849]
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005361 ! pharate adult stage P12
 relationship: immediately_preceded_by FBdv:00005363 ! pharate adult stage P12(ii)
-relationship: part_of FBdv:00006011 ! pharate adult stage
+relationship: substage_of FBdv:00006011 ! pharate adult stage
 
 [Term]
 id: FBdv:00005365
@@ -1100,7 +1147,7 @@ synonym: "mature bristles stage" EXACT [FlyBase:FBrf0036849]
 synonym: "pupal stage P14" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005364 ! pharate adult stage P13
-relationship: part_of FBdv:00006011 ! pharate adult stage
+relationship: substage_of FBdv:00006011 ! pharate adult stage
 
 [Term]
 id: FBdv:00005366
@@ -1111,7 +1158,7 @@ comment: Temporal ordering number - 740.
 synonym: "pupal stage P15" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005365 ! pharate adult stage P14
-relationship: part_of FBdv:00006011 ! pharate adult stage
+relationship: substage_of FBdv:00006011 ! pharate adult stage
 
 [Term]
 id: FBdv:00005367
@@ -1123,7 +1170,7 @@ synonym: "meconium stage" EXACT [FlyBase:FBrf0036849]
 synonym: "pupal stage P15(i)" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005365 ! pharate adult stage P14
-relationship: part_of FBdv:00005366 ! pharate adult stage P15
+relationship: substage_of FBdv:00005366 ! pharate adult stage P15
 
 [Term]
 id: FBdv:00005368
@@ -1135,7 +1182,7 @@ synonym: "eclosion stage" EXACT [FlyBase:FBrf0036849]
 synonym: "pupal stage P15(ii)" EXACT []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005367 ! pharate adult stage P15(i)
-relationship: part_of FBdv:00005366 ! pharate adult stage P15
+relationship: substage_of FBdv:00005366 ! pharate adult stage P15
 
 [Term]
 id: FBdv:00005369
@@ -1161,7 +1208,7 @@ is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005368 ! pharate adult stage P15(ii)
 relationship: immediately_preceded_by FBdv:00006011 ! pharate adult stage
 relationship: immediately_preceded_by FBdv:00007001 ! P-stage
-relationship: part_of FBdv:00007025 ! immature adult stage
+relationship: substage_of FBdv:00007025 ! immature adult stage
 
 [Term]
 id: FBdv:00005371
@@ -1173,7 +1220,7 @@ comment: Temporal ordering number - 790.
 synonym: "adult stage II" RELATED []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005370 ! adult stage A1
-relationship: part_of FBdv:00007025 ! immature adult stage
+relationship: substage_of FBdv:00007025 ! immature adult stage
 
 [Term]
 id: FBdv:00006011
@@ -1184,7 +1231,7 @@ comment: Temporal ordering number - 625.
 is_a: FBdv:00007012 ! life stage
 relationship: immediately_preceded_by FBdv:00005349 ! pupal stage
 relationship: immediately_preceded_by FBdv:00005354 ! pupal stage P7
-relationship: part_of FBdv:00007001 ! P-stage
+relationship: substage_of FBdv:00007001 ! P-stage
 
 [Term]
 id: FBdv:00006012
@@ -1196,7 +1243,7 @@ comment: Temporal ordering number - 800.
 synonym: "adult stage III" RELATED []
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005371 ! adult stage A2
-relationship: part_of FBdv:00007025 ! immature adult stage
+relationship: substage_of FBdv:00007025 ! immature adult stage
 
 [Term]
 id: FBdv:00007001
@@ -1223,7 +1270,7 @@ comment: Temporal ordering number - 470.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005341 ! wandering third instar larval stage
 relationship: immediately_preceded_by FBdv:00007021 ! third instar - cleared gut stage
-relationship: part_of FBdv:00007007 ! late third instar larval stage
+relationship: substage_of FBdv:00007007 ! late third instar larval stage
 
 [Term]
 id: FBdv:00007005
@@ -1235,7 +1282,7 @@ synonym: "spiracles everted larva" EXACT [FlyBase:FBrf0036849]
 synonym: "white prepupa" RELATED [FlyBase:FBrf0036849]
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00007004 ! third instar larval stage L1
-relationship: part_of FBdv:00007007 ! late third instar larval stage
+relationship: substage_of FBdv:00007007 ! late third instar larval stage
 
 [Term]
 id: FBdv:00007007
@@ -1245,7 +1292,7 @@ def: "Third instar larva from the beginning of wandering to the beginning of pup
 comment: Temporal ordering number - 450.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005340 ! early third instar larval stage
-relationship: part_of FBdv:00005339 ! third instar larval stage
+relationship: substage_of FBdv:00005339 ! third instar larval stage
 created_by: david
 creation_date: 2008-12-11T01:19:53Z
 
@@ -1275,7 +1322,7 @@ namespace: FlyBase_development_CV
 def: "A temporal subdivision of a Drosophila life, delimited by major transitions in the circumstances of the organism, such as: fertilization; hatching; pupal ecdysis; eclosion." [FBC:DOS]
 synonym: "life cycle stage" EXACT []
 is_a: FBdv:00005259 ! developmental stage
-relationship: part_of FBdv:00000000 ! Drosophila life
+relationship: substage_of FBdv:00000000 ! Drosophila life
 created_by: djs93
 creation_date: 2009-10-01T05:59:22Z
 
@@ -1305,7 +1352,7 @@ def: "The first two hours of embryonic stage 17 at 25'C. (Approximately 16-18 ho
 comment: Temporal ordering number - 391. Should not be used to stage embryos whose development is at temperatures other than 25'C.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005334 ! embryonic stage 16
-relationship: part_of FBdv:00005335 ! embryonic stage 17
+relationship: substage_of FBdv:00005335 ! embryonic stage 17
 created_by: djs93
 creation_date: 2011-04-26T11:57:15Z
 
@@ -1317,7 +1364,7 @@ def: "Hours 2-4 of embryonic stage 17 at 25'C. (Approximately 18-20 hours at 25'
 comment: Temporal ordering number - 392. Should not be used to stage embryos whose development is at temperatures other than 25'C.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00007015 ! embryonic stage 17(i)
-relationship: part_of FBdv:00005335 ! embryonic stage 17
+relationship: substage_of FBdv:00005335 ! embryonic stage 17
 created_by: djs93
 creation_date: 2011-04-26T12:00:15Z
 
@@ -1329,7 +1376,7 @@ def: "Hours 4-6 of embryonic stage 17 at 25'C. (Approximately 20-22 hours at 25'
 comment: Temporal ordering number - 393. Should not be used to stage embryos whose development is at temperatures other than 25'C.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00007016 ! embryonic stage 17(ii)
-relationship: part_of FBdv:00005335 ! embryonic stage 17
+relationship: substage_of FBdv:00005335 ! embryonic stage 17
 created_by: djs93
 creation_date: 2011-04-26T12:01:18Z
 
@@ -1341,7 +1388,7 @@ def: "Hours 6-8 (the last two hours) of embryonic stage 17 at 25'C. (Approximate
 comment: Temporal ordering number - 394. Should not be used to stage embryos whose development is at temperatures other than 25'C.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00007017 ! embryonic stage 17(iii)
-relationship: part_of FBdv:00005335 ! embryonic stage 17
+relationship: substage_of FBdv:00005335 ! embryonic stage 17
 created_by: djs93
 creation_date: 2011-04-26T12:03:14Z
 
@@ -1353,7 +1400,7 @@ def: "The substage of the wandering third instar larval stage, prior to the begi
 comment: Temporal ordering number - 462. This is commonly assayed by adding 0.5% bromophenol blue to the food and looking for wandering third instar larvae with the same color guts (dark blue) as feeding larvae (Andres and Thummel, 1994). Larvae at this stage are in chromosomal puff stage 1 (Andres and Thummel, 1994).
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005340 ! early third instar larval stage
-relationship: part_of FBdv:00005341 ! wandering third instar larval stage
+relationship: substage_of FBdv:00005341 ! wandering third instar larval stage
 
 [Term]
 id: FBdv:00007020
@@ -1363,7 +1410,7 @@ def: "The substage of the wandering third instar larval stage when the larva has
 comment: Temporal ordering number - 465. This is commonly assayed by adding 0.5% bromophenol blue to the food and looking for wandering third instar larvae with lighter colored guts (light blue) than feeding larvae (Andres and Thummel, 1994). Larvae at this stage are mainly in chromosomal puff stages 2-7 (Andres and Thummel, 1994).
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00007019 ! third instar - uncleared gut stage
-relationship: part_of FBdv:00005341 ! wandering third instar larval stage
+relationship: substage_of FBdv:00005341 ! wandering third instar larval stage
 
 [Term]
 id: FBdv:00007021
@@ -1373,7 +1420,7 @@ def: "The substage of the wandering third instar larval stage when the larva has
 comment: Temporal ordering number - 467. This is commonly assayed by adding 0.5% bromophenol blue to the food and looking for wandering third instar larvae with guts lacking any blue stain (Andres and Thummel, 1994). Larvae at this stage are mainly in chromosomal puff stages 7-9 and pupate within 1-6 hours (Andres and Thummel, 1994.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00007020 ! third instar - partially cleared gut stage
-relationship: part_of FBdv:00005341 ! wandering third instar larval stage
+relationship: substage_of FBdv:00005341 ! wandering third instar larval stage
 
 [Term]
 id: FBdv:00007024
@@ -1391,7 +1438,7 @@ comment: Temporal ordering number - 782.
 is_a: FBdv:00007012 ! life stage
 relationship: immediately_preceded_by FBdv:00006011 ! pharate adult stage
 relationship: immediately_preceded_by FBdv:00007001 ! P-stage
-relationship: part_of FBdv:00007075 ! day 0 of adulthood
+relationship: substage_of FBdv:00007075 ! day 0 of adulthood
 created_by: djs93
 creation_date: 2013-01-08T20:06:59Z
 
@@ -1417,7 +1464,7 @@ relationship: immediately_preceded_by FBdv:00005366 ! pharate adult stage P15
 relationship: immediately_preceded_by FBdv:00005368 ! pharate adult stage P15(ii)
 relationship: immediately_preceded_by FBdv:00006011 ! pharate adult stage
 relationship: immediately_preceded_by FBdv:00007001 ! P-stage
-relationship: part_of FBdv:00005369 ! adult stage
+relationship: substage_of FBdv:00005369 ! adult stage
 
 [Term]
 id: FBdv:00014201
@@ -1428,7 +1475,7 @@ comment: Temporal ordering number - 270.
 is_a: FBdv:00005259 ! developmental stage
 relationship: immediately_preceded_by FBdv:00005317 ! gastrula stage
 relationship: immediately_preceded_by FBdv:00005322 ! embryonic stage 8
-relationship: part_of FBdv:00005321 ! extended germ band stage
+relationship: substage_of FBdv:00005321 ! extended germ band stage
 
 [Term]
 id: GO:0000278
@@ -1874,6 +1921,18 @@ synonym: "single-organism cellular process" RELATED []
 is_a: GO:0008150 ! biological_process
 created_by: janelomax
 creation_date: 2012-12-11T16:56:55Z
+
+[Term]
+id: GO:0010469
+name: regulation of signaling receptor activity
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of a signaling receptor activity. Receptor activity is when a molecule combines with an extracellular or intracellular messenger to initiate a change in cell activity." [GOC:dph, GOC:tb]
+synonym: "regulation of receptor activity" BROAD []
+is_a: GO:0009966 ! regulation of signal transduction
+is_a: GO:0065009 ! regulation of molecular function
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0038023 ! signaling receptor activity
+relationship: regulates GO:0038023 ! signaling receptor activity
 
 [Term]
 id: GO:0010562
@@ -2331,7 +2390,23 @@ relationship: positively_regulates GO:0016301 ! kinase activity
 
 [Term]
 id: GO:0038023
+name: signaling receptor activity
+namespace: molecular_function
 alt_id: GO:0004872
+alt_id: GO:0019041
+def: "Receiving a signal and transmitting it in the cell to initiate a change in cell activity. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response." [GOC:bf, GOC:signaling]
+subset: goslim_agr
+subset: goslim_chembl
+subset: goslim_flybase_ribbon
+subset: goslim_metagenomics
+subset: goslim_mouse
+subset: goslim_pir
+subset: goslim_plant
+synonym: "receptor activity" BROAD []
+synonym: "receptor activity involved in signal transduction" EXACT [GOC:bf]
+is_a: GO:0060089 ! molecular transducer activity
+created_by: rfoulger
+creation_date: 2011-08-01T02:45:27Z
 
 [Term]
 id: GO:0040019
@@ -3229,6 +3304,15 @@ intersection_of: positively_regulates GO:0000280 ! nuclear division
 relationship: positively_regulates GO:0000280 ! nuclear division
 
 [Term]
+id: GO:0060089
+name: molecular transducer activity
+namespace: molecular_function
+def: "A compound molecular function in which an effector function is controlled by one or more regulatory components." [GOC:dos, GOC:pdt]
+subset: gocheck_do_not_manually_annotate
+subset: goslim_pir
+is_a: GO:0003674 ! molecular_function
+
+[Term]
 id: GO:0065007
 name: biological regulation
 namespace: biological_process
@@ -3379,6 +3463,33 @@ created_by: tanyaberardini
 creation_date: 2010-08-05T11:25:59Z
 
 [Term]
+id: GO:2000272
+name: negative regulation of signaling receptor activity
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of a signaling receptor activity." [GOC:obol]
+synonym: "negative regulation of receptor activity" BROAD []
+is_a: GO:0010469 ! regulation of signaling receptor activity
+is_a: GO:0044092 ! negative regulation of molecular function
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0038023 ! signaling receptor activity
+relationship: negatively_regulates GO:0038023 ! signaling receptor activity
+created_by: rfoulger
+creation_date: 2010-12-02T09:28:47Z
+
+[Term]
+id: GO:2000273
+name: positive regulation of signaling receptor activity
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of signaling receptor activity." [GOC:obol]
+is_a: GO:0010469 ! regulation of signaling receptor activity
+is_a: GO:0044093 ! positive regulation of molecular function
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0038023 ! signaling receptor activity
+relationship: positively_regulates GO:0038023 ! signaling receptor activity
+created_by: rfoulger
+creation_date: 2010-12-02T09:28:50Z
+
+[Term]
 id: RO:0002532
 name: sequentially ordered entity
 def: "Any entity that is ordered in discrete units along a linear axis." []
@@ -3405,22 +3516,6 @@ holds_over_chain: happens_during BFO:0000063
 holds_over_chain: part_of BFO:0000063
 is_transitive: true
 is_a: RO:0002222 ! temporally related to
-
-[Typedef]
-id: BFO:0000066
-name: occurs in
-def: "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
-comment: Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant
-property_value: IAO:0000111 "occurs in" xsd:string
-property_value: IAO:0000118 "occurs_in" xsd:string
-property_value: IAO:0000118 "unfolds in" xsd:string
-property_value: IAO:0000118 "unfolds_in" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-domain: BFO:0000003 ! occurrent
-range: BFO:0000004 ! independent continuant
-holds_over_chain: part_of BFO:0000066
-inverse_of: BFO:0000067 ! contains process
-transitive_over: part_of ! part of
 
 [Typedef]
 id: BFO:0000067
@@ -3457,15 +3552,6 @@ property_value: IAO:0000118 "has_participant" xsd:string
 domain: BFO:0000003 ! occurrent
 range: BFO:0000002 ! continuant
 holds_over_chain: has_part RO:0000057
-
-[Typedef]
-id: RO:0002012
-name: occurent part of
-def: "A part of relation that applies only between occurents." []
-domain: BFO:0000003 ! occurrent
-range: BFO:0000003 ! occurrent
-is_a: part_of ! part of
-is_a: RO:0002418 ! causally upstream of or within
 
 [Typedef]
 id: RO:0002013
@@ -4104,7 +4190,7 @@ synonym: "enables activity in" EXACT []
 property_value: IAO:0000112 "A protein that enables activity in a cytosol." xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "executes activity in" xsd:string
-holds_over_chain: RO:0002327 BFO:0000066 {http://purl.obolibrary.org/obo/RO_0002581="true"}
+holds_over_chain: RO:0002327 occurs_in {http://purl.obolibrary.org/obo/RO_0002581="true"}
 is_a: overlaps ! overlaps
 is_a: RO:0002328 ! functionally related to
 
@@ -4185,7 +4271,7 @@ subset: ro-eco
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 domain: BFO:0000003 ! occurrent
 range: BFO:0000004 ! independent continuant
-holds_over_chain: has_part BFO:0000066 {http://purl.obolibrary.org/obo/RO_0002581="true"}
+holds_over_chain: has_part occurs_in {http://purl.obolibrary.org/obo/RO_0002581="true"}
 
 [Typedef]
 id: RO:0002481
@@ -4503,6 +4589,7 @@ creation_date: 2018-03-13T23:55:19Z
 
 [Typedef]
 id: ends_at_start_of
+name: ends_at_start_of
 name: immediately precedes
 namespace: FlyBase_development_CV
 comment: X immediately_precedes_Y iff: end(X) simultaneous_with start(Y)
@@ -4543,6 +4630,7 @@ is_a: ends_during ! ends_during
 [Typedef]
 id: has_part
 name: has part
+name: has_part
 namespace: external
 namespace: relationship
 def: "a core relation that holds between a whole and its part" []
@@ -4565,7 +4653,6 @@ id: immediately_preceded_by
 name: immediately preceded by
 name: immediately_preceded_by
 namespace: FlyBase_development_CV
-comment: Same as starts_at_end_of
 comment: X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)
 xref: RO:0002087
 property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
@@ -4588,6 +4675,36 @@ is_a: RO:0002305 ! causally upstream of, negative effect
 inverse_of: RO:0002335 ! negatively regulated by
 
 [Typedef]
+id: occurent_part_of
+name: occurent part of
+name: occurent_part_of
+namespace: FlyBase_development_CV
+def: "A part of relation that applies only between occurents." []
+xref: RO:0002012
+domain: BFO:0000003 ! occurrent
+range: BFO:0000003 ! occurrent
+is_a: part_of ! part of
+is_a: RO:0002418 ! causally upstream of or within
+
+[Typedef]
+id: occurs_in
+name: occurs in
+namespace: external
+def: "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
+comment: Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant
+xref: BFO:0000066
+property_value: IAO:0000111 "occurs in" xsd:string
+property_value: IAO:0000118 "occurs_in" xsd:string
+property_value: IAO:0000118 "unfolds in" xsd:string
+property_value: IAO:0000118 "unfolds_in" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+domain: BFO:0000003 ! occurrent
+range: BFO:0000004 ! independent continuant
+holds_over_chain: part_of occurs_in
+inverse_of: BFO:0000067 ! contains process
+transitive_over: part_of ! part of
+
+[Typedef]
 id: overlaps
 name: overlaps
 namespace: FlyBase_development_CV
@@ -4605,13 +4722,9 @@ expand_expression_to: "http://purl.obolibrary.org/obo/BFO_0000051 some (http://p
 [Typedef]
 id: part_of
 name: part of
-name: substage of
 namespace: external
-namespace: FlyBase_development_CV
 def: "a core relation that holds between a part and its whole" []
-comment: Creating this relation as a temporary fix, pending adding the axiom occurent_part_of subpropertyof happens_during to RO
 xref: BFO:0000050
-xref: FBdv:00018001
 property_value: IAO:0000111 "is part of" xsd:string
 property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string
 property_value: IAO:0000112 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
@@ -4632,10 +4745,7 @@ property_value: seeAlso http://ontologydesignpatterns.org/wiki/Community:Parts_a
 property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartOf
 property_value: seeAlso http://www.obofoundry.org/ro/#OBO_REL:part_of xsd:string
 is_transitive: true
-is_transitive: true
-is_a: happens_during ! happens during
 is_a: overlaps ! overlaps
-is_a: RO:0002012 ! occurent part of
 inverse_of: has_part ! has part
 
 [Typedef]
@@ -4658,7 +4768,7 @@ inverse_of: RO:0002336 ! positively regulated by
 id: preceded_by
 name: preceded by
 name: preceded_by
-namespace: FlyBase_development_CV
+namespace: relationship
 def: "x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." []
 subset: ro-eco
 xref: BFO:0000062
@@ -4713,4 +4823,14 @@ property_value: IAO:0000118 "io" xsd:string
 domain: BFO:0000003 ! occurrent
 range: BFO:0000003 ! occurrent
 is_a: RO:0002222 ! temporally related to
+
+[Typedef]
+id: substage_of
+name: substage of
+namespace: relationship
+comment: Creating this relation as a temporary fix, pending adding the axiom occurent_part_of subpropertyof happens_during to RO
+xref: FBdv:00018001
+is_transitive: true
+is_a: happens_during ! happens during
+is_a: occurent_part_of ! occurent part of
 

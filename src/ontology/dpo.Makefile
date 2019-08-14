@@ -114,13 +114,20 @@ components/lethal_class_hierarchy.owl: $(SRC) tmp/lethal_terms.txt
 kon:
 	sh classify_lethal_phenotypes.sh
 
+fbdv-test.owl:
+	$(ROBOT) extract -i mirror/fbdv.owl -T imports/fbdv_terms_combined.txt --force true --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@
+		#convert --check false -f obo -o $@.tmp.obo && mv $@.tmp.obo $@;
+		
+
 ######################################################
 ### Code for generating additional FlyBase reports ###
 ######################################################
 
 REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt reports/onto_metrics_calc.txt reports/robot_simple_diff.txt reports/chado_load_check_simple.txt
 
-SIMPLE_PURL =	http://purl.obolibrary.org/obo/dpo/dpo-simple.obo
+SIMPLE_PURL = http://purl.obolibrary.org/obo/dpo/dpo-simple.obo
 LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
 
 $(LAST_DEPLOYED_SIMPLE):
