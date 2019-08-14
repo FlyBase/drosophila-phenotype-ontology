@@ -120,7 +120,7 @@ kon:
 
 REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt reports/onto_metrics_calc.txt reports/robot_simple_diff.txt reports/chado_load_check_simple.txt
 
-SIMPLE_PURL =	http://purl.obolibrary.org/obo/dpo/dpo-simple.obo
+SIMPLE_PURL = http://purl.obolibrary.org/obo/dpo/dpo-simple.obo
 LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
 
 $(LAST_DEPLOYED_SIMPLE):

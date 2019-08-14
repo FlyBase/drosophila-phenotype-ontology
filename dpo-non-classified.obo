@@ -1,23 +1,51 @@
 format-version: 1.2
-data-version: dpo/releases/2019-08-08/dpo-non-classified.owl
-date: 08:08:2019 11:47
+data-version: dpo/releases/2019-08-14/dpo-non-classified.owl
+date: 14:08:2019 08:31
+subsetdef: 3_STAR "Manually annotated by ChEBI Team"
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
 subsetdef: camcur ""
 subsetdef: camcur "camcur"
 subsetdef: cell_quality "cell_quality"
+subsetdef: core "CARO2 core class"
 subsetdef: cur "cur"
 subsetdef: deprecated "warning of impending obsoletion"
+subsetdef: disposition_slim "Disposition slim"
 subsetdef: do_not_annotate "do not annotate"
 subsetdef: EmbDevSlim "EmbDevSlim"
+subsetdef: FB_gloss "terms for FlyBase glossary page"
+subsetdef: fbbtsubset_mgiribbons "MGI ribbon terms"
 subsetdef: fbcvsubset_mgiribbons "fbcvsubset_mgiribbons"
 subsetdef: FlyTed "Testis slim"
 subsetdef: FT_new "FlyTed temp subset for edit tracking purposes"
+subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
+subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
+subsetdef: goslim_agr "AGR slim"
+subsetdef: goslim_aspergillus "Aspergillus GO slim"
+subsetdef: goslim_candida "Candida GO slim"
+subsetdef: goslim_chembl "ChEMBL protein targets summary"
+subsetdef: goslim_flybase_ribbon "FlyBase Drosophila GO ribbon slim"
+subsetdef: goslim_generic "Generic GO slim"
+subsetdef: goslim_metagenomics "Metagenomics GO slim"
+subsetdef: goslim_mouse "Mouse GO slim"
+subsetdef: goslim_pir "PIR GO slim"
+subsetdef: goslim_plant "Plant GO slim"
+subsetdef: goslim_pombe "Fission yeast GO slim"
+subsetdef: goslim_yeast "Yeast GO slim"
+subsetdef: hidden_assertion "Stanza contains hidden assertion."
+subsetdef: hpo_slim "Human phenotype slim"
 subsetdef: larval_OF "larval olfactory system"
 subsetdef: lethal_phase "lethal phase terms"
+subsetdef: mpath_slim "Pathology slim"
+subsetdef: plus "CARO2 plus class"
 subsetdef: RD "terms for rd test ontology"
 subsetdef: relational_slim "Relational slim: types of quality that require an additional entity in order to exist"
+subsetdef: ro-eco ""
+subsetdef: RO:0002259 ""
+subsetdef: scalar_slim "Scalar slim"
+subsetdef: ubprop:upper_level "abstract upper-level terms not directly useful for analysis"
+subsetdef: upper_level "abstract upper-level terms not directly useful for analysis"
 subsetdef: value_slim "Value slim"
 synonymtypedef: BRAIN_NAME_ABV "BrainName official abbreviation"
 synonymtypedef: BRAND_NAME "BRAND NAME"
@@ -14181,15 +14209,6 @@ is_a: inheres_in ! inheres in
 inverse_of: has_quality ! has quality
 
 [Typedef]
-id: RO:0002012
-name: occurent part of
-def: "A part of relation that applies only between occurents." []
-domain: BFO:0000003 ! occurrent
-range: BFO:0000003 ! occurrent
-is_a: part_of ! part_of
-is_a: RO:0002418 ! causally upstream of or within
-
-[Typedef]
 id: RO:0002013
 name: has regulatory component activity
 def: "A 'has regulatory component activity' B if A and B are GO molecular functions (GO_0003674), A has_component B and A is regulated by B." []
@@ -15435,6 +15454,7 @@ is_metadata_tag: true
 
 [Typedef]
 id: ends_at_start_of
+name: ends_at_start_of
 name: immediately precedes
 namespace: FlyBase_development_CV
 comment: X immediately_precedes_Y iff: end(X) simultaneous_with start(Y)
@@ -15646,7 +15666,6 @@ name: immediately_preceded_by
 namespace: FlyBase_development_CV
 namespace: uberon
 def: "X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)" []
-comment: Same as starts_at_end_of
 comment: X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)
 synonym: "directly preceded by" EXACT []
 synonym: "is directly preceded by" EXACT []
@@ -15797,6 +15816,18 @@ is_a: RO:0002305 ! causally upstream of, negative effect
 inverse_of: RO:0002335 ! negatively regulated by
 
 [Typedef]
+id: occurent_part_of
+name: occurent part of
+name: occurent_part_of
+namespace: FlyBase_development_CV
+def: "A part of relation that applies only between occurents." []
+xref: RO:0002012
+domain: BFO:0000003 ! occurrent
+range: BFO:0000003 ! occurrent
+is_a: part_of ! part_of
+is_a: RO:0002418 ! causally upstream of or within
+
+[Typedef]
 id: occurs_in
 name: occurs in
 namespace: external
@@ -15857,7 +15888,6 @@ name: part of
 name: part_of
 name: substage of
 namespace: external
-namespace: FlyBase_development_CV
 namespace: protein
 namespace: quality
 namespace: relationship
@@ -15891,8 +15921,8 @@ property_value: seeAlso http://www.obofoundry.org/ro/#OBO_REL:part_of xsd:string
 is_transitive: true
 is_transitive: true
 is_a: happens_during ! happens during
+is_a: occurent_part_of ! occurent_part_of
 is_a: overlaps ! overlaps
-is_a: RO:0002012 ! occurent part of
 inverse_of: has_part ! has_part
 
 [Typedef]
@@ -15944,7 +15974,7 @@ inverse_of: RO:0002336 ! positively regulated by
 id: preceded_by
 name: preceded by
 name: preceded_by
-namespace: FlyBase_development_CV
+namespace: relationship
 namespace: uberon
 def: "x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." []
 def: "X preceded_by Y iff: end(Y) before_or_simultaneous_with start(X)" []
