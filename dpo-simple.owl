@@ -10,8 +10,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo/dpo-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2019-08-08/dpo-simple.owl"/>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">08:08:2019 11:46</oboInOwl:date>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2019-08-14/dpo-simple.owl"/>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14:08:2019 13:04</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase miscellaneous CV</oboInOwl:default-namespace>
     </owl:Ontology>
     
@@ -203,6 +203,12 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#is_cyclic -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_cyclic"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
@@ -223,6 +229,7 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <obo:IAO_0000111 xml:lang="en">is part of</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">my brain is part of my body (continuant parthood, two material entities)</obo:IAO_0000112>
@@ -244,23 +251,66 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BFO:0000050</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBO_REL:part_of</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">external</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relationship</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>protein</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>relationship</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</oboInOwl:id>
         <oboInOwl:shorthand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</oboInOwl:shorthand>
+        <rdfs:label>part of</rdfs:label>
         <rdfs:label xml:lang="en">part of</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part of</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
         <rdfs:seeAlso>http://www.obofoundry.org/ro/#OBO_REL:part_of</rdfs:seeAlso>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <obo:IAO_0000111 xml:lang="en">has part</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">my body has part my brain (continuant parthood, two material entities)</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this year has part this day (occurrent parthood)</obo:IAO_0000112>
+        <obo:IAO_0000115>Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">a core relation that holds between a whole and its part</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
+
+A continuant cannot have an occurrent as part: use &apos;participates in&apos;. An occurrent cannot have a continuant as part: use &apos;has participant&apos;. An immaterial entity cannot have a material entity as part: use &apos;location of&apos;. An independent continuant cannot have a specifically dependent continuant as part: use &apos;bearer of&apos;. A specifically dependent continuant cannot have an independent continuant as part: use &apos;inheres in&apos;.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_part</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/BFO"/>
+        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <oboInOwl:hasDbXref>BFO:0000051</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OBO_REL:has_part</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>protein</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>relationship</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>has_part</oboInOwl:id>
+        <oboInOwl:is_cyclic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</oboInOwl:is_cyclic>
+        <oboInOwl:shorthand>has_part</oboInOwl:shorthand>
+        <rdfs:comment>We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality &apos;swollen&apos; necessarily comes with the qualities of &apos;protruding&apos; and &apos;increased size&apos;.</rdfs:comment>
+        <rdfs:label>has part</rdfs:label>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+        <rdfs:label>has_part</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -274,13 +324,13 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         </owl:propertyChainAxiom>
         <obo:IAO_0000111 xml:lang="en">precedes</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) &lt;= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BFO:0000063</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">precedes</oboInOwl:id>
+        <oboInOwl:hasDbXref>BFO:0000063</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>precedes</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <oboInOwl:shorthand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">precedes</oboInOwl:shorthand>
+        <oboInOwl:shorthand>precedes</oboInOwl:shorthand>
+        <rdfs:label>precedes</rdfs:label>
         <rdfs:label xml:lang="en">precedes</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">precedes</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -299,12 +349,12 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/FBdv_00018001">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBdv:00018001</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase_development_CV</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</oboInOwl:id>
-        <oboInOwl:shorthand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</oboInOwl:shorthand>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creating this relation as a temporary fix, pending adding the axiom occurent_part_of subpropertyof happens_during to RO</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">substage of</rdfs:label>
+        <oboInOwl:hasDbXref>FBdv:00018001</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>relationship</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>substage_of</oboInOwl:id>
+        <oboInOwl:shorthand>substage_of</oboInOwl:shorthand>
+        <rdfs:comment>Creating this relation as a temporary fix, pending adding the axiom occurent_part_of subpropertyof happens_during to RO</rdfs:comment>
+        <rdfs:label>substage of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -316,18 +366,18 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <obo:IAO_0000111 xml:lang="en">inheres in</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">this fragility inheres in this vase</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">this red color inheres in this apple</obo:IAO_0000112>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship between a dependent continuant, for example a quality such as color, and an independent continuant, such as an eye.</obo:IAO_0000115>
+        <obo:IAO_0000115>A relationship between a dependent continuant, for example a quality such as color, and an independent continuant, such as an eye.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">A dependent inheres in its bearer at all times for which the dependent exists.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">inheres_in</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RO:0000052</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inheres_in</oboInOwl:id>
-        <oboInOwl:shorthand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inheres_in</oboInOwl:shorthand>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example red (PATO) inheres_in some eye (FBbt).</rdfs:comment>
+        <oboInOwl:hasDbXref>RO:0000052</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>inheres_in</oboInOwl:id>
+        <oboInOwl:shorthand>inheres_in</oboInOwl:shorthand>
+        <rdfs:comment>Example red (PATO) inheres_in some eye (FBbt).</rdfs:comment>
         <rdfs:label xml:lang="en">inheres in</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inheres_in</rdfs:label>
+        <rdfs:label>inheres_in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -357,16 +407,17 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <!-- http://purl.obolibrary.org/obo/RO_0002351 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002351">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <obo:IAO_0000115>has member is a mereological relation between a collection and an item.</obo:IAO_0000115>
         <obo:IAO_0000119>SIO</obo:IAO_0000119>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RO:0002351</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_member</oboInOwl:id>
-        <oboInOwl:shorthand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_member</oboInOwl:shorthand>
+        <oboInOwl:hasDbXref>RO:0002351</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>has_member</oboInOwl:id>
+        <oboInOwl:shorthand>has_member</oboInOwl:shorthand>
+        <rdfs:label>has member</rdfs:label>
         <rdfs:label xml:lang="en">has member</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has member</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -431,8 +482,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in thermotaxis (GO:0043052). &apos;thermotaxis&apos; is defined as: &apos;The directed movement of a motile cell or organism in response to a temperature gradient. Movement may be towards either a higher or lower temperature.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:cab1</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WB_REF:cgc467</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:cab1</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WB_REF:cgc467</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -476,14 +527,14 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000008"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genotype g1 is a modifier of variegation if, and only if, some genotype g2 has a variegated phenotype and the degree of variegation caused by g1g2 is significantly different from that caused by g2 alone.</owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">variegation</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000008"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">variegation</owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genotype g1 is a modifier of variegation if, and only if, some genotype g2 has a variegated phenotype and the degree of variegation caused by g1g2 is significantly different from that caused by g2 alone.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -1334,8 +1385,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in behavior (GO:0007610). &apos;behavior&apos; is defined as: &apos;The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ems</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0395448956</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:20160973</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0395448956</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:20160973</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1460,9 +1511,9 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:10203867</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:12723742</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:12843304</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Pain</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:12723742</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:12843304</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wikipedia:Pain</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1523,7 +1574,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in eclosion rhythm (GO:0008062). &apos;eclosion rhythm&apos; is defined as: &apos;The timing of the emergence of the adult fly from its pupal case, which usually occurs at dawn.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:11715043</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:11715043</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1542,7 +1593,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in learning (GO:0007612). &apos;learning&apos; is defined as: &apos;Any process in an organism in which a relatively long-lasting adaptive behavioral change occurs as the result of experience.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0721662544</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -1563,8 +1614,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in memory (GO:0007613). &apos;memory&apos; is defined as: &apos;The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.onelook.com/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.onelook.com/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1605,7 +1656,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in mating (GO:0007618). &apos;mating&apos; is defined as: &apos;The pairwise union of individuals for the purpose of sexual reproduction, ultimately resulting in the formation of zygotes.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0387520546</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0387520546</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1626,9 +1677,9 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in circadian mating behavior (GO:0035648). &apos;circadian mating behavior&apos; is defined as: &apos;The fluctuation in mating behavior that occurs over an approximately 24 hour cycle.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bf</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:dos</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:11470898</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:17276917</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:11470898</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:17276917</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1649,8 +1700,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in male courtship behavior, veined wing generated song production (GO:0045433). This is defined as &apos;The process during wing vibration where the male insect produces a species-specific acoustic signal called a love song.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_sensu</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:11092827</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_sensu</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:11092827</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000402"/>
@@ -1703,7 +1754,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in sensory perception of smell (GO:0007608). &apos;sensory perception of smell&apos; is defined as: &apos;The series of events required for an organism to receive an olfactory stimulus, convert it to a molecular signal, and recognize and characterize the signal. Olfaction involves the detection of chemical composition of an organism&apos;s ambient medium by chemoreceptors. This is a neurological process.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.onelook.com/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.onelook.com/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1725,7 +1776,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in sensory perception of taste (GO:0050909). &apos;sensory perception of taste&apos; is defined as: &apos;The series of events required for an organism to receive a gustatory stimulus, convert it to a molecular signal, and recognize and characterize the signal. Gustation involves the direct detection of chemical composition, usually through contact with chemoreceptor cells. This is a neurological process.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.onelook.com/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.onelook.com/</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2083,7 +2134,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in DNA repair (GO:0006281). &apos;DNA repair&apos; is defined as: &apos;The process of restoring DNA after damage. Genomes are subject to damage by chemical and physical agents in the environment (e.g. UV and ionizing radiations, chemical mutagens, fungal and bacterial toxins, etc.) and by free radicals or alkylating agents endogenously generated in metabolism. DNA is also damaged because of errors during its replication. A variety of different DNA repair pathways have been reported that include direct reversal, base excision repair, nucleotide excision repair, photoreactivation, bypass, double-strand break repair pathway, and mismatch repair pathway.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:11563486</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:11563486</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2265,7 +2316,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0815316194</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome:69278</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:69278</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2284,7 +2335,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in cytokinesis (GO:0000910). &apos;cytokinesis&apos; is defined as: &apos;The division of the cytoplasm and the plasma membrane of a cell and its partitioning into two daughter cells.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_cell_cycle</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_cell_cycle</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2628,7 +2679,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in wound healing (GO:0042060). &apos;wound healing&apos; is defined as: &apos;The series of events that restore integrity to a damaged tissue, following an injury.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bf</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:15269788</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:15269788</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2668,7 +2719,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in cell adhesion (GO:0007155). &apos;cell adhesion&apos; is defined as: &apos;The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hb</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pf</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2689,7 +2740,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in hatching behavior (GO:0035187). &apos;hatching behavior&apos; is defined as: &apos;The specific behavior of an organism during the emergence from an egg shell. In Drosophila for example, the larva swings its head reiteratively through a semicircular arc, using its mouth hooks to tear apart the chorion in front of it and thus free itself from within the egg shell.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:10436051</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:10436051</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2710,9 +2761,9 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in eclosion (GO:0007562). &apos;eclosion&apos; is defined as: &apos;The emergence of an adult insect from a pupa case.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dgh</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:dos</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198600461</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0198600461</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2733,7 +2784,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in cell cycle (GO:0007049). &apos;cell cycle&apos; is defined as: &apos;The progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events. Canonically, the cell cycle comprises the replication and segregation of genetic material followed by the division of the cell, but in endocycles or syncytial cells nuclear replication or nuclear division may not be followed by cell division.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_cell_cycle</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_cell_cycle</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2754,8 +2805,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in endomitotic cell cycle (GO:0007113). &apos;endomitotic cell cycle&apos; is defined as: &apos;A mitotic cell cycle in which chromosomes are replicated and sister chromatids separate, but spindle formation, nuclear membrane breakdown and nuclear division do not occur, resulting in an increased number of chromosomes in the cell.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:dos</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:expert_vm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:expert_vm</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2797,7 +2848,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000680"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in proboscis extension reflex (GO:0007637). &apos;proboscis extension reflex&apos; is defined as: &apos;The extension, through direct muscle actions, of the proboscis (the trunk-like extension of the mouthparts on the adult external head) in response to a sugar stimulus.&apos;</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FB:FBrf0044924</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FB:FBrf0044924</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -3067,7 +3118,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in entry into diapause (GO:0055115). &apos;entry into diapause&apos; is defined as: &apos;The dormancy process that results in entry into diapause. Diapause is a neurohormonally mediated, dynamic state of low metabolic activity. Associated characteristics of this form of dormancy include reduced morphogenesis, increased resistance to environmental extremes, and altered or reduced behavioral activity. Full expression develops in a species-specific manner, usually in response to a number of environmental stimuli that precede unfavorable conditions. Once diapause has begun, metabolic activity is suppressed even if conditions favorable for development prevail. Once initiated, only certain stimuli are capable of releasing the organism from this state, and this characteristic is essential in distinguishing diapause from hibernation.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ds</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ds</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -3090,7 +3141,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in entry into reproductive diapause (GO:0055116). &apos;entry into reproductive diapause&apos; is defined as: &apos;The dormancy process that results in entry into reproductive diapause. Reproductive diapause is a form of diapause where the organism itself will remain fully active, including feeding and other routine activities, but the reproductive organs experience a tissue-specific reduction in metabolism, with characteristic triggering and releasing stimuli.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ds</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ds</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -3173,8 +3224,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:cjm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ems</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pf</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Cell_migration</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Cell_migration</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3332,7 +3383,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in response to oxidative stress (GO:0006979). &apos;response to oxidative stress&apos; is defined as: &apos;Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of oxidative stress, a state often resulting from exposure to high levels of reactive oxygen species, e.g. superoxide anions, hydrogen peroxide (H2O2), and hydroxyl radicals.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:12115731</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:12115731</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3410,7 +3461,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0716731363</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0716731363</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3430,8 +3481,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in exocytosis (GO:0006887). &apos;exocytosis&apos; is defined as: &apos;A process of secretion by a cell that results in the release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle. Exocytosis can occur either by full fusion, when the vesicle collapses into the plasma membrane, or by a kiss-and-run mechanism that involves the formation of a transient contact, a pore, between a granule (for exemple of chromaffin cells) and the plasma membrane. The latter process most of the time leads to only partial secretion of the granule content. Exocytosis begins with steps that prepare vesicles for fusion with the membrane (tethering and docking) and ends when molecules are secreted from the cell.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0716731363</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22323285</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0716731363</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:22323285</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4327,7 +4378,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is an increased occurrence of cell division (GO:0051301). &apos;cell division&apos; is defined as &apos;The process resulting in division and partitioning of components of a cell to form more cells; may or may not be accompanied by the physical separation of a cell into distinct, individually membrane-bounded daughter cells.&apos;.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:TEMJ</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:di</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:di</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -4349,7 +4400,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is a decreased occurrence of cell division (GO:0051301). &apos;cell division&apos; is defined as &apos;The process resulting in division and partitioning of components of a cell to form more cells; may or may not be accompanied by the physical separation of a cell into distinct, individually membrane-bounded daughter cells.&apos;.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:TEMJ</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:di</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:di</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
     </owl:Axiom>
