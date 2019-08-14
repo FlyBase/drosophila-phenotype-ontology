@@ -1,0 +1,31 @@
+pattern_name: dpoFertilityAndViabilityOfWholeOrganism
+pattern_iri: http://purl.obolibrary.org/obo/dpo/patterns/dpoFertilityAndViabilityOfWholeOrganism.yaml
+description: "Fertility and viability of whole organism that are neither completely normal nor abnormal."
+
+classes:
+  organismal quality: PATO:0001995
+  abnormal: PATO:0000460
+  organism: FBbt:00000001
+
+relations: 
+  inheres_in: RO:0000052
+  has_modifier: RO:0002573
+  has_part: BFO:0000051
+  
+vars:
+  quality: "'organismal quality'"
+
+name:
+  text: "%s organism"
+  vars:
+   - quality
+
+def:
+  text: "%s organism."
+  vars:
+    - quality
+
+equivalentTo:
+  text: "'has_part' some (%s and ('inheres_in' some 'organism'))"
+  vars:
+    - quality

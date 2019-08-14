@@ -8,14 +8,18 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 Ontology(<urn:unnamed:ontology#ont1>
 
+Declaration(Class(<http://purl.obolibrary.org/obo/FBdv_00005259>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008150>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0032502>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0000313>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000161>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000460>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001236>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001062>))
 Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalEntity.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalEntityIIPO.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalRateOfDevelopmentBeforeStage.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoIIpreceded.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoIItowards.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoUnmodifiedEntity.yaml>))
@@ -54,6 +58,13 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalEntityIIPO.yaml> "dpoAbnormalEntityIIPO"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalEntityIIPO.yaml> "abnormal 'thing'"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalEntityIIPO.yaml> ObjectIntersectionOf(owl:Thing ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002314> owl:Thing) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>)))
+
+# Class: <http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalRateOfDevelopmentBeforeStage.yaml> (abnormal 'developmental process' in 'stage')
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalRateOfDevelopmentBeforeStage.yaml> "Abnormality of 'developmental process'."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalRateOfDevelopmentBeforeStage.yaml> "dpoAbnormalRateOfDevelopmentBeforeStage"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalRateOfDevelopmentBeforeStage.yaml> "abnormal 'developmental process' in 'stage'"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalRateOfDevelopmentBeforeStage.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000161> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0032502> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000062> <http://purl.obolibrary.org/obo/FBdv_00005259>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
 
 # Class: <http://purl.obolibrary.org/obo/dpo/patterns/dpoIIpreceded.yaml> (abnormal 'thing')
 
