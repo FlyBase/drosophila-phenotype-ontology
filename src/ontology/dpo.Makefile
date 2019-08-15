@@ -207,3 +207,16 @@ pre_release: $(ONT)-edit.owl all_imports tmp/auto_generated_definitions_dot.owl 
 	sed -i '/sub_/d' tmp/$(ONT)-edit-release.owl
 	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_dot.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $(ONT)-edit-release.ofn && mv $(ONT)-edit-release.ofn $(ONT)-edit-release.owl
 	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
+	
+
+########################
+##    TRAVIS       #####
+########################
+
+obo_qc_%:
+	$(ROBOT) report -i $* --profile qc-profile.txt --fail-on ERROR --print 5 -o $@.txt
+
+obo_qc: obo_qc_$(ONT).obo obo_qc_$(ONT).owl
+
+flybase_qc: odkversion obo_qc
+	$(ROBOT) reason --input $(ONT)-full.owl --reasoner ELK  --equivalent-classes-allowed asserted-only --output test.owl && rm test.owl && echo "Success"
