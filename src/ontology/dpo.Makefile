@@ -215,7 +215,9 @@ obo_qc_%:
 
 obo_qc: obo_qc_$(ONT).obo obo_qc_$(ONT).owl
 
-flybase_qc: odkversion obo_qc
-	$(ROBOT) merge -i $(ONT)-full.owl -i components/qc_equivalent_assertions.owl \
-		reason --reasoner ELK  --equivalent-classes-allowed asserted-only --output test.owl &&\
+flybase_qc.owl: odkversion obo_qc
+	$(ROBOT) merge -i $(ONT)-full.owl -i components/qc_equivalent_assertions.owl -o $@
+
+flybase_qc: flybase_qc.owl
+	$(ROBOT) reason -i $< --reasoner ELK  --equivalent-classes-allowed asserted-only -o test.owl &&\
 	rm test.owl && echo "Success"
