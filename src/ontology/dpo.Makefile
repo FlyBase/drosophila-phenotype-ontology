@@ -110,16 +110,6 @@ components/lethal_class_hierarchy.owl: $(SRC) tmp/lethal_terms.txt
 	Konclude classification -i tmp/edit.owx -o tmp/konclude-edit.owx
 	$(ROBOT) filter -i tmp/konclude-edit.owx -T tmp/lethal_terms.txt --trim false \
 	annotate --ontology-iri $(ONTBASE)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
-	
-kon:
-	sh classify_lethal_phenotypes.sh
-
-fbdv-test.owl:
-	$(ROBOT) extract -i mirror/fbdv.owl -T imports/fbdv_terms_combined.txt --force true --method BOT \
-		query --update ../sparql/inject-subset-declaration.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@
-		#convert --check false -f obo -o $@.tmp.obo && mv $@.tmp.obo $@;
-		
 
 ######################################################
 ### Code for generating additional FlyBase reports ###
@@ -226,4 +216,6 @@ obo_qc_%:
 obo_qc: obo_qc_$(ONT).obo obo_qc_$(ONT).owl
 
 flybase_qc: odkversion obo_qc
-	$(ROBOT) reason --input $(ONT)-full.owl --reasoner ELK  --equivalent-classes-allowed asserted-only --output test.owl && rm test.owl && echo "Success"
+	$(ROBOT) merge -i $(ONT)-full.owl -i components/qc_equivalent_assertions.owl \
+		reason --reasoner ELK  --equivalent-classes-allowed asserted-only --output test.owl &&\
+	rm test.owl && echo "Success"
