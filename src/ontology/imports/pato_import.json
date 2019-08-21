@@ -493,6 +493,16 @@
       "type" : "PROPERTY",
       "lbl" : "reciprocal_of"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#correlates_with",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "correlates_with"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000014",
       "meta" : {
         "definition" : {
@@ -1844,6 +1854,27 @@
       "type" : "CLASS",
       "lbl" : "increased male fertility"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0002247",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality inhering in a bearer by virtue of the bearer's having or lacking of substances produced by living organisms that have a color resulting from selective color absorption.",
+          "xrefs" : [ "url:http://en.wikipedia.org/wiki/Biological_pigment" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim", "http://purl.obolibrary.org/obo/pato#scalar_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "george"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2010-08-09T04:14:00Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "degree of pigmentation"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/pato#abnormal_slim",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -2797,11 +2828,11 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001832",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000891"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001832",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000891"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000769",
       "pred" : "is_a",
@@ -2975,9 +3006,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002304"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0002247",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000141"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001835",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0002247",
+      "pred" : "http://purl.obolibrary.org/obo/pato#correlates_with",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000277",
       "pred" : "is_a",
@@ -3207,13 +3246,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000587"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001562",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000125"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002011",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000141"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001562",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000125"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000462",
       "pred" : "http://purl.obolibrary.org/obo/pato#reciprocal_of",
@@ -3296,21 +3335,21 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/dpo/releases/2019-08-14/imports/pato_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/dpo/releases/2019-08-21/imports/pato_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ {
-      "definedClassId" : "http://purl.obolibrary.org/obo/PATO_0000586",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/PATO_0000117" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to",
-        "fillerId" : "http://purl.obolibrary.org/obo/PATO_0000461"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/PATO_0001833",
       "genusIds" : [ "http://purl.obolibrary.org/obo/PATO_0000891" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to",
+        "fillerId" : "http://purl.obolibrary.org/obo/PATO_0000461"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/PATO_0000586",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/PATO_0000117" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to",
         "fillerId" : "http://purl.obolibrary.org/obo/PATO_0000461"
       } ]
     }, {
