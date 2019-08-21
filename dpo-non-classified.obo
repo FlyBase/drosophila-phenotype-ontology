@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: dpo/releases/2019-08-14/dpo-non-classified.owl
-date: 14:08:2019 13:04
+data-version: dpo/releases/2019-08-21/dpo-non-classified.owl
+date: 21:08:2019 14:00
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
@@ -13855,6 +13855,18 @@ created_by: George Gkoutos
 creation_date: 2009-09-21T10:41:58Z
 
 [Term]
+id: PATO:0002247
+name: degree of pigmentation
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's having or lacking of substances produced by living organisms that have a color resulting from selective color absorption." [url:http\://en.wikipedia.org/wiki/Biological_pigment]
+subset: attribute_slim
+subset: scalar_slim
+is_a: PATO:0000141 ! structure
+relationship: correlates_with PATO:0000014 ! color
+created_by: george
+creation_date: 2010-08-09T04:14:00Z
+
+[Term]
 id: PATO:0002266
 name: 3-D shape
 namespace: quality
@@ -14146,6 +14158,7 @@ property_value: IAO:0000119 http://www.jbiomedsem.com/content/4/1/43 xsd:string
 
 [Term]
 id: Subset
+name: subset_oio
 is_a: IAO:0000102 ! data about an ontology part
 
 [Term]
@@ -15323,6 +15336,11 @@ property_value: IAO:0000111 "site of" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Typedef]
+id: correlates_with
+name: correlates_with
+namespace: quality
+
+[Typedef]
 id: curator_notes
 name: curator note
 name: curator notes
@@ -16110,7 +16128,7 @@ comment: Creating this relation as a temporary fix, pending adding the axiom occ
 xref: FBdv:00018001
 is_transitive: true
 is_a: happens_during ! happens during
-is_a: occurent_part_of ! occurent part of
+is_a: occurent_part_of ! occurent_part_of
 
 [Typedef]
 id: transitively_connected_to

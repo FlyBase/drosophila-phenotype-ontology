@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2019-08-14/imports/pato_import.owl
+data-version: dpo/releases/2019-08-21/imports/pato_import.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -1131,6 +1131,18 @@ created_by: George Gkoutos
 creation_date: 2009-09-21T10:41:58Z
 
 [Term]
+id: PATO:0002247
+name: degree of pigmentation
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's having or lacking of substances produced by living organisms that have a color resulting from selective color absorption." [url:http\://en.wikipedia.org/wiki/Biological_pigment]
+subset: attribute_slim
+subset: scalar_slim
+is_a: PATO:0000141 ! structure
+relationship: correlates_with PATO:0000014 ! color
+created_by: george
+creation_date: 2010-08-09T04:14:00Z
+
+[Term]
 id: PATO:0002266
 name: 3-D shape
 namespace: quality
@@ -1253,6 +1265,11 @@ def: "A structural quality inhering in the bearer by virtue of the bearer consis
 is_a: PATO:0000141 ! structure
 created_by: davidos
 creation_date: 2014-12-12T08:43:17Z
+
+[Typedef]
+id: correlates_with
+name: correlates_with
+namespace: quality
 
 [Typedef]
 id: decreased_in_magnitude_relative_to
