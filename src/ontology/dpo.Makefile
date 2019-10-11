@@ -65,6 +65,18 @@ tmp/remaining_classes.txt: tmp/all_patternised_classes.txt tmp/all_defined_class
 tmp/remaining_definitions.owl: $(SRC) tmp/remaining_classes.txt
 	$(ROBOT) filter -i $< -T tmp/remaining_classes.txt --axioms "equivalent annotation" --trim false -o $@
 
+#######################################################
+##### Code for removing patternised classes ###########
+#######################################################
+
+patternised_classes.txt: .FORCE
+	$(ROBOT) query -f csv -i ../patterns/definitions.owl --query ../sparql/dpo_terms.sparql $@
+	sed -i 's/http[:][/][/]purl.obolibrary.org[/]obo[/]//g' $@
+	sed -i '/^[^F]/d' $@
+
+remove_patternised_classes: $(SRC) patternised_classes.txt
+	sed -i -r "/^EquivalentClasses[(][<].*($(shell cat patternised_classes.txt | xargs | sed -e 's/ /\|/g'))/d" mp-edit.owl
+
 ######################################################
 ### Overwriting some default aretfacts ###
 ######################################################
@@ -183,7 +195,7 @@ tmp/auto_generated_definitions_seed_sub.txt: $(SRC)
 	rm -f $@.tmp
 
 mirror/chebi.owl: mirror/chebi.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then wget --no-passive-ftp http://purl.obolibrary.org/obo/chebi.owl.gz -O mirror/chebi.owl.gz && $(ROBOT) convert -i mirror/chebi.owl.gz -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then wget http://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl.gz -O mirror/chebi.owl.gz && $(ROBOT) convert -i mirror/chebi.owl.gz -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 
 tmp/merged-source-pre.owl: $(SRC) mirror/chebi.owl
