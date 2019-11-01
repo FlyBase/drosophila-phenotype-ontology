@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2019-08-21/imports/go_import.owl
+data-version: dpo/releases/2019-10-29/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -227,6 +227,7 @@ id: GO:0003824
 name: catalytic activity
 namespace: molecular_function
 def: "Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic." [GOC:vw, ISBN:0198506732]
+subset: goslim_agr
 subset: goslim_chembl
 subset: goslim_flybase_ribbon
 subset: goslim_metagenomics
@@ -292,7 +293,7 @@ id: GO:0005575
 name: cellular_component
 namespace: cellular_component
 alt_id: GO:0008372
-def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao-1337158144]
+def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao1337158144]
 comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
 subset: goslim_aspergillus
 subset: goslim_candida
@@ -305,7 +306,6 @@ subset: goslim_yeast
 synonym: "cell or subcellular entity" EXACT []
 synonym: "cellular component" EXACT []
 synonym: "subcellular entity" RELATED [NIF_Subcellular:nlx_subcell_100315]
-xref: NIF_Subcellular:sao-1337158144
 xref: NIF_Subcellular:sao1337158144
 
 [Term]
@@ -950,7 +950,7 @@ relationship: part_of GO:0019953 ! sexual reproduction
 id: GO:0007619
 name: courtship behavior
 namespace: biological_process
-def: "The behavioral interactions between organisms for the purpose of attracting sexual partners." [GOC:ai, GOC:dph]
+def: "The behavior of an organism for the purpose of attracting sexual partners." [GOC:ai, GOC:dph]
 synonym: "courtship behaviour" EXACT []
 is_a: GO:0007617 ! mating behavior
 
@@ -1076,8 +1076,8 @@ namespace: biological_process
 alt_id: GO:0016542
 def: "The behavior of a male, for the purpose of attracting a sexual partner. An example of this process is found in Drosophila melanogaster." [GOC:mtg_sensu, GOC:pr]
 synonym: "male courtship behaviour" EXACT []
+is_a: GO:0007619 ! courtship behavior
 is_a: GO:0060179 ! male mating behavior
-relationship: part_of GO:0007619 ! courtship behavior
 
 [Term]
 id: GO:0008062
@@ -1838,7 +1838,6 @@ id: GO:0016740
 name: transferase activity
 namespace: molecular_function
 def: "Catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2." [ISBN:0198506732]
-subset: goslim_agr
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -3264,19 +3263,17 @@ relationship: part_of GO:0019012 ! virion
 
 [Term]
 id: GO:0044464
-name: cell part
+name: obsolete cell part
 namespace: cellular_component
-def: "Any constituent part of a cell, the basic structural and functional unit of all organisms." [GOC:jl]
+def: "OBSOLETE. Any constituent part of a cell, the basic structural and functional unit of all organisms." [GOC:jl]
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "cellular subcomponent" EXACT [NIF_Subcellular:sao628508602]
 synonym: "protoplast" RELATED [GOC:mah]
 xref: NIF_Subcellular:sao628508602
-is_a: GO:0005575 ! cellular_component
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: part_of GO:0005623 ! cell
-relationship: part_of GO:0005623 ! cell
+is_obsolete: true
+consider: CL:0000000
 
 [Term]
 id: GO:0044703
@@ -4163,7 +4160,6 @@ namespace: biological_process
 alt_id: GO:0050791
 def: "Any process that modulates the frequency, rate or extent of a biological process. Biological processes are regulated by many means; examples include the control of gene expression, protein modification or interaction with a protein or substrate molecule." [GOC:ai, GOC:go_curators]
 subset: gocheck_do_not_annotate
-subset: goslim_agr
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_pir
@@ -5353,7 +5349,6 @@ name: regulation of molecular function
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding." [GOC:isa_complete]
 subset: gocheck_do_not_annotate
-subset: goslim_agr
 subset: goslim_pir
 subset: goslim_plant
 synonym: "regulation of a molecular function" EXACT []
