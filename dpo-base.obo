@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: dpo/releases/2019-08-21/dpo-base.owl
-date: 21:08:2019 14:00
+data-version: dpo/releases/2019-11-12/dpo-base.owl
+date: 12:11:2019 11:17
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -38,29 +38,22 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in thermotaxis (GO:0043052). 'thermotaxis' is defined as: 'The directed movement of a motile cell or organism in response to a temperature gradient. Movement may be towards either a higher or lower temperature.'" [FBC:DOS, GOC:cab1, WB_REF:cgc467]
 synonym: "thermotaxis behaviour defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0043052
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000006
 name: male semi-fertile
 namespace: phenotypic_class
-def: "Any male semi-fertile (PATO:0001761) that inheres in some organism (FBbt:00000001)." []
+def: "Phenotype of males that is a reduction in the proportion of fertilized eggs produced, but only to > 50% of wild-type." []
 is_a: FBcv:0000375 ! semi-fertile
 is_a: FBcv:0000376 ! male fertile
-intersection_of: PATO:0001761
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0000007
 name: female semi-fertile
 namespace: phenotypic_class
-def: "Any female semi-fertile (PATO:0001760) that inheres in some organism (FBbt:00000001)." []
+def: "Phenotype of females that is a reduction in the proportion of fertilized eggs produced, but only to > 50% of wild-type." []
 is_a: FBcv:0000375 ! semi-fertile
 is_a: FBcv:0000377 ! female fertile
-intersection_of: PATO:0001760
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0000008
@@ -86,9 +79,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in dorsal/ventral axis specification (GO:0009950). 'dorsal/ventral axis specification' is defined as: 'The establishment, maintenance and elaboration of the dorsal/ventral axis. The dorsal/ventral axis is defined by a line that runs orthogonal to both the anterior/posterior and left/right axes. The dorsal end is defined by the upper or back side of an organism. The ventral end is defined by the lower or front side of an organism.'" [FBC:DOS, GOC:dph, GOC:go_curators, GOC:tb]
 synonym: "dorsal-ventral polarity" RELATED [FBC:DOS]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0009950
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000325
@@ -105,7 +95,7 @@ creation_date: 2011-09-13T02:42:10Z
 id: FBcv:0000347
 name: phenotypic class
 namespace: phenotypic_class
-is_a: PATO:0000001
+is_a: BFO:0000020
 
 [Term]
 id: FBcv:0000348
@@ -123,8 +113,6 @@ def: "A phenotype that is survival to mature adulthood, where mature is defined 
 comment: Note, this term should not be used with the qualifier 'partially'. Use semi-viable or semi-lethal instead.
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0000347 ! phenotypic class
-intersection_of: PATO:0000719
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0000350
@@ -163,8 +151,6 @@ def: "A phenotype that is a failure of mutant cells to survive." [FBC:DOS]
 comment: Typically, this phenotype is assayed in clones of cells.
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000718
-intersection_of: RO:0000052 CL:0000000
 
 [Term]
 id: FBcv:0000354
@@ -181,9 +167,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in eye color compared to wild-type." [FBC:DOS]
 synonym: "eye colour defective" EXACT []
 is_a: FBcv:0000354 ! visible
-intersection_of: PATO:0000014
-intersection_of: RO:0000052 FBbt:00004508
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000356
@@ -192,9 +175,6 @@ namespace: phenotypic_class
 def: "A phenotype that is a defect in body color compared to wild-type." [FBC:DOS]
 synonym: "body colour defective" EXACT []
 is_a: FBcv:0000354 ! visible
-intersection_of: PATO:0000014
-intersection_of: RO:0000052 FBbt:00000001
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000357
@@ -203,9 +183,6 @@ namespace: phenotypic_class
 def: "A phenotype that is a defect in the size of the whole body or some body part compared to wild-type." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000117
-intersection_of: RO:0000052 FBbt:00007001
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000358
@@ -213,9 +190,6 @@ name: small body
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in body size compared to identically raised wild-type controls." [FBC:DOS]
 is_a: FBcv:0000665 ! body size defective
-intersection_of: PATO:0000587
-intersection_of: RO:0000052 FBbt:00000001
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000359
@@ -224,9 +198,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a decrease in the number of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type. This phenotype is not necessarily accompanied by decreased growth - there may be fewer cells in an otherwise normal volume of tissue." [FBC:DOS]
 synonym: "reduced cell number" EXACT []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0002001
-intersection_of: RO:0000052 FBbt:00100313
-intersection_of: RO:0002503 CL:0000000
 
 [Term]
 id: FBcv:0000360
@@ -236,8 +207,6 @@ def: "Phenotype that is a decrease in the size of cells in a whole animal or in 
 comment: Note that defects in cell size are not necessarily the result of defects in cell growth. A change in the rate of cell division in the absence of any change in cell growth rate can result in smaller or larger cells.
 synonym: "reduced cell size" EXACT []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000587
-intersection_of: RO:0000052 CL:0000000
 
 [Term]
 id: FBcv:0000361
@@ -245,8 +214,6 @@ name: large body
 namespace: phenotypic_class
 def: "Phenotype that is an increase in body size compared to identically raised wild-type controls." [FBC:DOS]
 is_a: FBcv:0000665 ! body size defective
-intersection_of: PATO:0000586
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0000362
@@ -255,9 +222,6 @@ namespace: phenotypic_class
 def: "Phenotype that is an increase in the number of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type." [FBC:DOS]
 comment: This phenotype is not necessarily accompanied by overgrowth of a tissue - there may be more cells in an otherwise normal volume of tissue. It is not necessarily due to an increase in cell growth -it may be the result of an increase in the division rate at normal growth rates.  It may not even be due to an increase in the cell division rate - a reduced rate of cell death while the division rate is normal could also achieve it.
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0002002
-intersection_of: RO:0000052 FBbt:00100313
-intersection_of: RO:0002503 CL:0000000
 
 [Term]
 id: FBcv:0000363
@@ -266,8 +230,6 @@ namespace: phenotypic_class
 def: "Phenotype that is an increase in the size of cells compared to wild-type." [FBC:DOS]
 comment: May be due to an increase in the cell growth rate or to a reduced rate of cell division along with a normal rate of cell growth.
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000586
-intersection_of: RO:0000052 CL:0000000
 
 [Term]
 id: FBcv:0000364
@@ -277,8 +239,6 @@ def: "A phenotype that is the inability to produce a zygote." [FBC:DOS]
 comment: The cause of sterility may be physical or behavioral. Note, this term should not be used with the qualifier 'partially'. Use semi-sterile or semi-fertile instead.
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000956
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0000365
@@ -295,8 +255,6 @@ namespace: phenotypic_class
 def: "A phenotype that is the inability of females to mate and produce fertilized offspring." [FBC:DOS]
 comment: The cause of sterility may be physical or behavioral. Note: this term should not be used with the qualifier 'partially' - use semi-sterile or semi-fertile instead.
 is_a: FBcv:0000364 ! sterile
-intersection_of: PATO:0000892
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0000367
@@ -304,8 +262,6 @@ name: female semi-sterile
 namespace: phenotypic_class
 def: "A phenotype that is a reduction in the proportion of fertilized eggs produced by females to below 50% of wild-type." [FBC:DOS]
 is_a: FBcv:0000365 ! semi-sterile
-intersection_of: PATO:0001763
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0000368
@@ -336,8 +292,6 @@ name: male semi-sterile
 namespace: phenotypic_class
 def: "A phenotype that is a reduction in the proportion of fertilized eggs produced by males to below 50% of wild-type." [FBC:DOS]
 is_a: FBcv:0000365 ! semi-sterile
-intersection_of: PATO:0001762
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0000372
@@ -362,14 +316,12 @@ def: "A phenotype that is the ability to mate and as a result produce fertilized
 comment: Note, this term should not be used with the qualifier 'partially'. Use semi-sterile or semi-fertile instead.
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0000347 ! phenotypic class
-intersection_of: PATO:0000955
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0000375
 name: semi-fertile
 namespace: phenotypic_class
-def: "Phenotype that is a reduction in the proportion of fertilized eggs produced to, but only to > 50% of wild-type." [FBC:DOS]
+def: "Phenotype that is a reduction in the proportion of fertilized eggs produced, but only to > 50% of wild-type." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0000374 ! fertile
 is_a: FBcv:0001347 ! phenotype
@@ -381,8 +333,6 @@ namespace: phenotypic_class
 def: "A phenotype that is the ability of males to mate and as a result produce fertilized eggs." [FBC:DOS]
 comment: Note - this term should not be used with the qualifier 'partially' - use male semi-sterile or male semi-fertile instead.
 is_a: FBcv:0000374 ! fertile
-intersection_of: PATO:0000891
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0000377
@@ -391,8 +341,6 @@ namespace: phenotypic_class
 def: "A phenotype that is the ability of females to mate and as a result produce fertilized eggs." [FBC:DOS]
 comment: Note - this term should not be used with the qualifier 'partially' - use female semi-sterile or female semi-fertile instead.
 is_a: FBcv:0000374 ! fertile
-intersection_of: PATO:0000888
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0000378
@@ -401,8 +349,6 @@ namespace: phenotypic_class
 def: "A phenotype in which all offspring are sterile. Typically, this is due to maternal effect sterility resulting from defects in pole cell development." [ISBN:978-0-87969-321-3]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0001862
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0000379
@@ -440,8 +386,6 @@ name: auxotroph
 namespace: phenotypic_class
 def: "A phenotype that is the inability to synthesize some organic compound that can be synthesized by wild-type animals, and that is required for normal growth and/or development." [http://en.wikipedia.org/wiki/Auxotrophic]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000422
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0000384
@@ -450,9 +394,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in aging (GO:0007568). 'aging' is defined as: 'A developmental process that is a deterioration and loss of function over time. Aging includes loss of functions such as resistance to disease, homeostasis, and fertility, as well as wear and tear. Aging includes cellular senescence, but is more inclusive. May precede death and may succeed developmental maturation (GO:0021700).'" [GOC:PO_curators]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007568
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000385
@@ -481,9 +422,6 @@ synonym: "behavioral" RELATED []
 synonym: "behaviour defective" EXACT []
 synonym: "behavioural" EXACT []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007610
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000388
@@ -495,9 +433,6 @@ subset: fbcvsubset_mgiribbons
 synonym: "geotaxis behaviour defective" RELATED []
 synonym: "gravitaxis behavior defective" RELATED []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0048060
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000389
@@ -506,8 +441,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a disposition to paralysis under conditions that do not cause paralysis in a wild-type animal.  Paralysis is defined as an inability to exhibit `multicellular organismal movement` (GO:0050879)" [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0001558
-intersection_of: RO:0000052 GO:0050879
 
 [Term]
 id: FBcv:0000390
@@ -516,9 +449,6 @@ namespace: phenotypic_class
 def: "A phenotype consisting of decreased frequency of `multicellular organismal movement` (GO:0050879) compared to wild-type." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000381
-intersection_of: RO:0000052 GO:0050879
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000391
@@ -535,9 +465,6 @@ namespace: phenotypic_class
 def: "A phenotype consisting of increased frequency of `multicellular organismal movement` (GO:0050879) compared to wild-type." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000380
-intersection_of: RO:0000052 GO:0050879
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000393
@@ -545,9 +472,6 @@ name: pain response defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in response to pain (GO:0048265). 'response to pain' is defined as: 'Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a pain stimulus. Pain stimuli cause activation of nociceptors, peripheral receptors for pain, include receptors which are sensitive to painful mechanical stimuli, extreme heat or cold, and chemical stimuli.'" [FBC:DOS, GOC:jid, PMID:10203867, PMID:12723742, PMID:12843304, Wikipedia:Pain]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0048265
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000394
@@ -556,9 +480,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in circadian rhythm (GO:0007623). 'circadian rhythm' is defined as: 'Any biological process in an organism that recurs with a regularity of approximately 24 hours.'" [FBC:DOS, GOC:bf, GOC:go_curators]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007623
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000395
@@ -566,9 +487,6 @@ name: locomotor rhythm defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in locomotor rhythm (GO:0045475). 'locomotor rhythm' is defined as: 'The rhythm of the locomotor activity of an organism during its 24 hour activity cycle.'" [FBC:DOS, GOC:go_curators]
 is_a: FBcv:0000394 ! circadian rhythm defective
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0045475
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000396
@@ -576,9 +494,6 @@ name: eclosion rhythm defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in eclosion rhythm (GO:0008062). 'eclosion rhythm' is defined as: 'The timing of the emergence of the adult fly from its pupal case, which usually occurs at dawn.'" [FBC:DOS, PMID:11715043]
 is_a: FBcv:0000670 ! eclosion defective
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0008062
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000397
@@ -586,9 +501,6 @@ name: learning defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in learning (GO:0007612). 'learning' is defined as: 'Any process in an organism in which a relatively long-lasting adaptive behavioral change occurs as the result of experience.'" [FBC:DOS, ISBN:0582227089, ISBN:0721662544]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007612
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000398
@@ -596,19 +508,13 @@ name: memory defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in memory (GO:0007613). 'memory' is defined as: 'The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).'" [FBC:DOS, GOC:curators, http://www.onelook.com/, ISBN:0582227089]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007613
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000399
 name: courtship behavior defective
 namespace: phenotypic_class
-def: "Phenotype that is a defect in courtship behavior (GO:0007619). 'courtship behavior' is defined as: 'The behavioral interactions between organisms for the purpose of attracting sexual partners.'" [FBC:DOS, GOC:ai, GOC:dph]
+def: "Phenotype that is a defect in courtship behavior (GO:0007619). 'courtship behavior' is defined as: 'The behavior of an organism for the purpose of attracting sexual partners.'" [FBC:DOS, GOC:ai, GOC:dph]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0002314 GO:0007619
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000400
@@ -617,9 +523,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in mating (GO:0007618). 'mating' is defined as: 'The pairwise union of individuals for the purpose of sexual reproduction, ultimately resulting in the formation of zygotes.'" [FBC:DOS, GOC:jl, ISBN:0387520546]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0002314 GO:0007618
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000401
@@ -627,9 +530,6 @@ name: mating rhythm defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in circadian mating behavior (GO:0035648). 'circadian mating behavior' is defined as: 'The fluctuation in mating behavior that occurs over an approximately 24 hour cycle.'" [FBC:DOS, GOC:bf, GOC:dos, PMID:11470898, PMID:17276917]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0035648
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000402
@@ -639,9 +539,6 @@ def: "Phenotype that is a defect in male courtship behavior, veined wing generat
 synonym: "singing defective" EXACT [FBC:SM]
 synonym: "song production defective" EXACT [FBC:SM]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0045433
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000403
@@ -650,9 +547,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in chemosensory behavior (GO:0007635). 'chemosensory behavior' is defined as: 'Behavior that is dependent upon the sensation of chemicals.'.'" [FBC:DOS, GOC:go_curators]
 synonym: "chemosensitive behaviour defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007635
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000404
@@ -661,9 +555,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in sensory perception of smell (GO:0007608). 'sensory perception of smell' is defined as: 'The series of events required for an organism to receive an olfactory stimulus, convert it to a molecular signal, and recognize and characterize the signal. Olfaction involves the detection of chemical composition of an organism's ambient medium by chemoreceptors. This is a neurological process.'" [FBC:DOS, GOC:ai, http://www.onelook.com/]
 synonym: "olfaction defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007608
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000405
@@ -673,9 +564,6 @@ def: "Phenotype that is a defect in sensory perception of taste (GO:0050909). 's
 synonym: "gustation defective" EXACT []
 synonym: "taste defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0050909
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000406
@@ -691,9 +579,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in sensory perception of sound (GO:0007605). 'sensory perception of sound' is defined as: 'The series of events required for an organism to receive an auditory stimulus, convert it to a molecular signal, and recognize and characterize the signal. Sonic stimuli are detected in the form of vibrations and are processed to form a sound.'" [FBC:DOS, GOC:ai]
 synonym: "auditory system defective" RELATED []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007605
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000408
@@ -703,9 +588,6 @@ def: "Phenotype that is a defect in response to stress (GO:0006950). 'response t
 subset: fbcvsubset_mgiribbons
 synonym: "environmental stress response defective" NARROW []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0006950
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000409
@@ -713,9 +595,6 @@ name: osmotic stress response defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in response to osmotic stress (GO:0006970). 'response to osmotic stress' is defined as: 'Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating an increase or decrease in the concentration of solutes outside the organism or cell.'" [FBC:DOS, GOC:jl]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0006970
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000410
@@ -723,9 +602,6 @@ name: heat stress response defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in response to heat (GO:0009408). 'response to heat' is defined as: 'Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a heat stimulus, a temperature stimulus above the optimal temperature for that organism.'" [FBC:DOS, GOC:lr]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0009408
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000411
@@ -734,9 +610,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in visual behavior (GO:0007632). 'visual behavior' is defined as: 'The behavior of an organism in response to a visual stimulus.'" [FBC:DOS, GOC:jid, GOC:pr]
 synonym: "visual behaviour defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007632
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000412
@@ -745,9 +618,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in optomotor response: a motor response during flight or walking that serves to stabilize both image formation on the retina and locomotor course." [FBC:DOS]
 synonym: "optomotor behaviour defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007634
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000413
@@ -757,9 +627,6 @@ def: "Phenotype that is a defect in phototaxis (GO:0042331). 'phototaxis' is def
 subset: fbcvsubset_mgiribbons
 synonym: "phototaxis behaviour defective" RELATED []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0042331
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000414
@@ -768,9 +635,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in locomotory behavior (GO:0007626). 'locomotory behavior' is defined as: 'The specific movement from place to place of an organism in response to external or internal stimuli. Locomotion of a whole organism in a manner dependent upon some combination of that organism's internal state and external conditions.'" [FBC:DOS, GOC:dph]
 synonym: "locomotor behaviour defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007626
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000415
@@ -786,8 +650,6 @@ name: uncoordinated
 namespace: phenotypic_class
 def: "Phenotype that is a lack of normal co-ordination in locomotor activity." [FBC:DOS]
 is_a: FBcv:0000414 ! locomotor behavior defective
-intersection_of: PATO:0000770
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0000417
@@ -798,9 +660,6 @@ comment: This term is agnostic as to the causes of defects in flight. An animal'
 subset: fbcvsubset_mgiribbons
 synonym: "flight behaviour defective" NARROW []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0060361
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000418
@@ -808,10 +667,7 @@ name: flightless
 namespace: phenotypic_class
 def: "Phenotype that is the absence of flight (GO:0060361). 'flight' is defined as: 'Self-propelled movement of an organism from one location to another through the air, usually by means of active wing movement.'" [FBC:DOS, GOC:dph]
 comment: This term is agnostic as to the causes of flightlessness. An animal may be flightless for mechanical or behavioral reasons.
-is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000462
-intersection_of: RO:0000052 GO:0060361
-intersection_of: RO:0002573 PATO:0000460
+is_a: FBcv:0000417 ! flight defective
 
 [Term]
 id: FBcv:0000419
@@ -820,9 +676,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in feeding behavior (GO:0007631). 'feeding behavior' is defined as: 'Behavior associated with the intake of food.'" [FBC:DOS, GOC:mah]
 synonym: "feeding behaviour defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007631
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000420
@@ -831,9 +684,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in grooming behavior (GO:0007625). 'grooming behavior' is defined as: 'The specific behavior of an organism relating to grooming, cleaning and brushing to remove dirt and parasites.'" [FBC:DOS, GOC:jl, GOC:pr]
 synonym: "grooming behaviour defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007625
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000421
@@ -850,9 +700,6 @@ name: photoperiod response variant
 namespace: phenotypic_class
 def: "Phenotype that is a defect in entrainment of circadian clock by photoperiod (GO:0043153), which is defined as: 'The synchronization of a circadian rhythm to photoperiod, the intermittent cycle of light (day) and dark (night).'" [FBC:DOS, GOC:jl]
 is_a: FBcv:0000387 ! behavior defective
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0043153
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000423
@@ -860,9 +707,6 @@ name: DNA repair defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in DNA repair (GO:0006281). 'DNA repair' is defined as: 'The process of restoring DNA after damage. Genomes are subject to damage by chemical and physical agents in the environment (e.g. UV and ionizing radiations, chemical mutagens, fungal and bacterial toxins, etc.) and by free radicals or alkylating agents endogenously generated in metabolism. DNA is also damaged because of errors during its replication. A variety of different DNA repair pathways have been reported that include direct reversal, base excision repair, nucleotide excision repair, photoreactivation, bypass, double-strand break repair pathway, and mismatch repair pathway.'" [FBC:DOS, PMID:11563486]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0006281
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000424
@@ -901,9 +745,6 @@ def: "Phenotype that is a defect in cell growth (GO:0016049). 'cell growth' is d
 comment: Note that defects in cell size are not necessarily the result of defects in cell growth. A change in the rate of cell division in the absence of any change in cell growth rate can result in smaller or larger cells.
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0016049
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000428
@@ -912,9 +753,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in the size of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000117
-intersection_of: RO:0000052 CL:0000000
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000429
@@ -923,9 +761,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in the shape (PATO:0000052) of some cell compared to wild-type." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000052
-intersection_of: RO:0000052 CL:0000000
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000430
@@ -934,9 +769,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in the asymmetric distribution of components within a cell. For example an epithelial cell is 'cell polarity defective' if it lacks the normal asymmetric distribution of proteins or cell components such as junctions or villi along its apical-basal axis." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0001769
-intersection_of: RO:0000052 CL:0000000
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000431
@@ -945,9 +777,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in meiotic cell cycle (GO:0051321). 'meiotic cell cycle' is defined as: 'Progression through the phases of the meiotic cell cycle, in which canonically a cell replicates to produce four offspring with half the chromosomal content of the progenitor cell via two nuclear divisions.'" [FBC:DOS, GOC:ai]
 synonym: "meiotic" RELATED []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0051321
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000432
@@ -956,9 +785,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in mitotic cell cycle (GO:0000278). 'mitotic cell cycle' is defined as: 'Progression through the phases of the mitotic cell cycle, the most common eukaryotic cell cycle, which canonically comprises four successive phases called G1, S, G2, and M and includes replication of the genome and the subsequent segregation of chromosomes into daughter cells. In some variant cell cycles nuclear replication or nuclear division may not be followed by cell division, or G1 and G2 phases may be absent.'" [FBC:DOS, GOC:mah, ISBN:0815316194, Reactome:69278]
 synonym: "mitotic" RELATED []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0000278
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000433
@@ -966,9 +792,6 @@ name: cytokinesis defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in cytokinesis (GO:0000910). 'cytokinesis' is defined as: 'The division of the cytoplasm and the plasma membrane of a cell and its partitioning into two daughter cells.'" [FBC:DOS, GOC:mtg_cell_cycle]
 is_a: FBcv:0000671 ! cell cycle defective
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0000910
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000434
@@ -985,9 +808,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in nervous system (FBbt:00005093). 'nervous system' is defined as: 'All the nerve centers and nerve fibers in the central, visceral and peripheral nervous systems.'" [FBC:DOS, FlyBase:FBrf0166419]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 FBbt:00005093
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000436
@@ -996,9 +816,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in sex determination (GO:0007530). 'sex determination' is defined as: 'Any process that establishes and transmits the specification of sexual status of an individual organism.'" [FBC:DOS, ISBN:0198506732]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007530
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000437
@@ -1022,8 +839,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a decreased sensitivity (compared to wild-type) to the toxic effects of some specified chemical. The phrase 'toxic effects' here refers to reversible effects such as inebriation and sedation as well as sustained damage, developmental defects and death." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0001552
-intersection_of: RO:0000052 GO:0042221
 
 [Term]
 id: FBcv:0000440
@@ -1032,8 +847,6 @@ namespace: phenotypic_class
 def: "Phenotype that is an increased sensitivity (compared to wild-type) to the toxic effects of some specified chemical. The phrase 'toxic effects' here refers to reversible effects such as inebriation and sedation as well as sustained damage, developmental defects and death." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0001551
-intersection_of: RO:0000052 GO:0042221
 
 [Term]
 id: FBcv:0000441
@@ -1042,8 +855,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a decreased tendency for radiation exposure to cause toxic effects." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0001552
-intersection_of: RO:0000052 GO:0009314
 
 [Term]
 id: FBcv:0000442
@@ -1052,8 +863,6 @@ namespace: phenotypic_class
 def: "Phenotype that is an increased tendency for radiation exposure to cause toxic effects." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0001551
-intersection_of: RO:0000052 GO:0009314
 
 [Term]
 id: FBcv:0000443
@@ -1071,8 +880,6 @@ def: "Phenotype that is an increase in size of a tissue or organ due to increase
 synonym: "hyperplastic" EXACT []
 is_a: FBcv:0000357 ! size defective
 is_a: FBcv:0000362 ! increased cell number
-is_a: PATO:0000644
-relationship: RO:0000052 FBbt:00100313
 
 [Term]
 id: FBcv:0000445
@@ -1104,9 +911,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in immune response (GO:0006955). 'immune response' is defined as: 'Any immune system process that functions in the calibrated response of an organism to a potential internal or invasive threat.'" [FBC:DOS, GO_REF:0000022, GOC:add, GOC:mtg_15nov05]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0006955
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000449
@@ -1117,9 +921,6 @@ comment: For apical-basal polarity phenotypes of epithelia, the appropriate term
 subset: fbcvsubset_mgiribbons
 synonym: "tissue polarity defective" BROAD []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0001736
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000450
@@ -1129,9 +930,6 @@ def: "Phenotype that is a change in the rate of some developmental process (GO:0
 comment: A more complete formalization would require a clause specifying stage. It might be possible to do this in OWL using the same system as we are using for lethal phase.
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-is_a: PATO:0000161
-relationship: RO:0000052 GO:0032502
-relationship: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000451
@@ -1139,9 +937,6 @@ name: wound healing defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in wound healing (GO:0042060). 'wound healing' is defined as: 'The series of events that restore integrity to a damaged tissue, following an injury.'" [GOC:bf, PMID:15269788]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0042060
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000665
@@ -1149,9 +944,6 @@ name: body size defective
 namespace: phenotypic_class
 def: "Phenotype that is an abnormality in body size compared to wild-type animals raised under the same conditions as the animals exhibiting the phenotype." [FBC:DOS]
 is_a: FBcv:0000354 ! visible
-intersection_of: PATO:0000117
-intersection_of: RO:0000052 FBbt:00000001
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000668
@@ -1160,9 +952,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in cell adhesion (GO:0007155). 'cell adhesion' is defined as: 'The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.'" [FBC:DOS, GOC:hb, GOC:pf]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007155
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000669
@@ -1171,9 +960,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in hatching behavior (GO:0035187). 'hatching behavior' is defined as: 'The specific behavior of an organism during the emergence from an egg shell. In Drosophila for example, the larva swings its head reiteratively through a semicircular arc, using its mouth hooks to tear apart the chorion in front of it and thus free itself from within the egg shell.'" [FBC:DOS, GOC:pr, PMID:10436051]
 synonym: "hatching behaviour defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0035187
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000670
@@ -1182,9 +968,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in eclosion (GO:0007562). 'eclosion' is defined as: 'The emergence of an adult insect from a pupa case.'" [FBC:DOS, GOC:dgh, GOC:dos, GOC:mah, ISBN:0198600461]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007562
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000671
@@ -1193,9 +976,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in cell cycle (GO:0007049). 'cell cycle' is defined as: 'The progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events. Canonically, the cell cycle comprises the replication and segregation of genetic material followed by the division of the cell, but in endocycles or syncytial cells nuclear replication or nuclear division may not be followed by cell division.'" [FBC:DOS, GOC:go_curators, GOC:mtg_cell_cycle]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007049
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000672
@@ -1204,9 +984,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in endomitotic cell cycle (GO:0007113). 'endomitotic cell cycle' is defined as: 'A mitotic cell cycle in which chromosomes are replicated and sister chromatids separate, but spindle formation, nuclear membrane breakdown and nuclear division do not occur, resulting in an increased number of chromosomes in the cell.'" [FBC:DOS, GOC:curators, GOC:dos, GOC:expert_vm]
 synonym: "endocycle defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007113
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000679
@@ -1214,9 +991,6 @@ name: circadian behavior defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in circadian behavior (GO:0048512). 'circadian behavior' is defined as: 'The specific behavior of an organism that recurs with a regularity of approximately 24 hours.'" [FBC:DOS, GOC:bf, GOC:go_curators, GOC:pr]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0048512
-intersection_of: RO:0002573 PATO:0000460
 created_by: djs93
 creation_date: 2009-11-30T11:06:35Z
 
@@ -1226,9 +1000,6 @@ name: proboscis extension reflex defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in proboscis extension reflex (GO:0007637). 'proboscis extension reflex' is defined as: 'The extension, through direct muscle actions, of the proboscis (the trunk-like extension of the mouthparts on the adult external head) in response to a sugar stimulus.'" [FB:FBrf0044924, FBC:DOS, GOC:jid]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007637
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000681
@@ -1237,9 +1008,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in sensory perception (GO:0007600). 'sensory perception' is defined as: 'The series of events required for an organism to receive a sensory stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process.'" [FBC:DOS, GOC:ai, GOC:dph]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007600
-intersection_of: RO:0002573 PATO:0000460
 created_by: djs93
 creation_date: 2010-02-23T12:28:26Z
 
@@ -1250,9 +1018,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in sensory perception of touch (GO:0050975). 'sensory perception of touch' is defined as: 'The series of events required for an organism to receive a touch stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process. The perception of touch in animals is mediated by mechanoreceptors in the skin and mucous membranes and is the sense by which contact with objects gives evidence as to certain of their qualities. Different types of touch can be perceived (for example, light, coarse, pressure and tickling) and the stimulus may be external or internal (e.g. the feeling of a full stomach).'" [FBC:DOS, GOC:ai]
 synonym: "touch perception defective" RELATED []
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0050975
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000683
@@ -1261,9 +1026,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in response to temperature stimulus (GO:0009266). 'response to temperature stimulus' is defined as: 'Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a temperature stimulus.'" [FBC:DOS, GOC:hb]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0009266
-intersection_of: RO:0002573 PATO:0000460
 created_by: djs93
 creation_date: 2010-02-23T12:51:02Z
 
@@ -1273,9 +1035,6 @@ name: cold stress response defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in response to cold (GO:0009409). 'response to cold' is defined as: 'Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a cold stimulus, a temperature stimulus below the optimal temperature for that organism.'" [FBC:DOS, GOC:lr]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0009409
-intersection_of: RO:0002573 PATO:0000460
 created_by: djs93
 creation_date: 2010-02-23T02:11:27Z
 
@@ -1287,9 +1046,6 @@ def: "Phenotype that is a defect in axis specification (GO:0009798). 'axis speci
 comment: This phenotypic class does not encompass planar polarity.
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0009798
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000698
@@ -1347,9 +1103,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in sleep (GO:0030431). 'sleep' is defined as: 'Any process in which an organism enters and maintains a periodic, readily reversible state of reduced awareness and metabolic activity. Usually accompanied by physical relaxation, the onset of sleep in humans and other mammals is marked by a change in the electrical activity of the brain.'" [FBC:DOS, ISBN:0192800981]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0030431
-intersection_of: RO:0002573 PATO:0000460
 created_by: djs93
 creation_date: 2010-09-20T12:06:13Z
 
@@ -1359,9 +1112,6 @@ name: diapause defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in entry into diapause (GO:0055115). 'entry into diapause' is defined as: 'The dormancy process that results in entry into diapause. Diapause is a neurohormonally mediated, dynamic state of low metabolic activity. Associated characteristics of this form of dormancy include reduced morphogenesis, increased resistance to environmental extremes, and altered or reduced behavioral activity. Full expression develops in a species-specific manner, usually in response to a number of environmental stimuli that precede unfavorable conditions. Once diapause has begun, metabolic activity is suppressed even if conditions favorable for development prevail. Once initiated, only certain stimuli are capable of releasing the organism from this state, and this characteristic is essential in distinguishing diapause from hibernation.'" [FBC:DOS, GOC:ds, GOC:jid, GOC:mah]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0055115
-intersection_of: RO:0002573 PATO:0000460
 created_by: djs93
 creation_date: 2010-09-20T12:06:28Z
 
@@ -1371,9 +1121,6 @@ name: reproductive diapause defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in entry into reproductive diapause (GO:0055116). 'entry into reproductive diapause' is defined as: 'The dormancy process that results in entry into reproductive diapause. Reproductive diapause is a form of diapause where the organism itself will remain fully active, including feeding and other routine activities, but the reproductive organs experience a tissue-specific reduction in metabolism, with characteristic triggering and releasing stimuli.'" [FBC:DOS, GOC:ds, GOC:jid, GOC:mah]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0055116
-intersection_of: RO:0002573 PATO:0000460
 created_by: djs93
 creation_date: 2010-09-20T12:21:29Z
 
@@ -1383,9 +1130,6 @@ name: starvation stress response defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in response to starvation (GO:0042594). 'response to starvation' is defined as: 'Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a starvation stimulus, deprivation of nourishment.'" [FBC:DOS, GOC:go_curators]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0042594
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000709
@@ -1394,9 +1138,6 @@ namespace: phenotypic_class
 def: "Phenotype that is an increase or decrease in the number of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type. This phenotype is not necessarily accompanied by defects in cell growth - there may be a greater or lesser number of cells in an otherwise normal volume of tissue." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0002083
-intersection_of: RO:0000052 FBbt:00100313
-intersection_of: RO:0002503 CL:0000000
 
 [Term]
 id: FBcv:0000713
@@ -1414,9 +1155,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in cell migration (GO:0016477). 'cell migration' is defined as: 'The controlled self-propelled movement of a cell from one site to a destination guided by molecular cues. Cell migration is a central process in the development and maintenance of multicellular organisms.'" [FBC:DOS, GOC:cjm, GOC:dph, GOC:ems, GOC:pf, http://en.wikipedia.org/wiki/Cell_migration]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0016477
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000717
@@ -1424,8 +1162,6 @@ name: increased cell growth
 namespace: phenotypic_class
 def: "Phenotype that is an increase in the rate of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type." [FBC:DOS]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000912
-intersection_of: RO:0000052 GO:0016049
 
 [Term]
 id: FBcv:0000718
@@ -1433,8 +1169,6 @@ name: decreased cell growth
 namespace: phenotypic_class
 def: "Phenotype that is an decrease in the rate of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type." [FBC:DOS]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000911
-intersection_of: RO:0000052 GO:0016049
 
 [Term]
 id: FBcv:0000719
@@ -1442,8 +1176,6 @@ name: atrophy
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in size of an initially normally sized organ or tissue due to wasting away of cells." [FBC:DOS]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0001623
-intersection_of: RO:0000052 FBbt:00100313
 created_by: djs93
 creation_date: 2011-03-10T05:59:04Z
 
@@ -1453,9 +1185,6 @@ name: jump response defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect or in or absence of a jump response (GO:0007630). The jump response in Drosophila is a reflex escape response that can be triggered by a number of signals including odor and light. Standard assays are commonly used to test odor and light induced jump response." [FlyBase:FBrf0187887, FlyBase:FBrf0191819]
 is_a: FBcv:0000415 ! jumping defective
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007630
-intersection_of: RO:0002573 PATO:0000460
 created_by: djs93
 creation_date: 2011-03-11T08:03:28Z
 
@@ -1465,10 +1194,8 @@ name: mating behavior defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in mating behavior (GO:0007617). 'mating behavior' is defined as: 'The behavioral interactions between organisms for the purpose of mating, or sexual reproduction resulting in the formation of zygotes.'" [FBC:DOS, GOC:ai, GOC:dph]
 is_a: FBcv:0000387 ! behavior defective
+is_a: FBcv:0000400 ! mating defective
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0002314 GO:0007617
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000723
@@ -1477,7 +1204,6 @@ namespace: phenotypic_class
 def: "Phenotype that consists of abnormal growth of a tissue or organ due to increased numbers of cells, but in which the affected tissue or organ does not maintain its normal form." [FBC:DOS]
 is_a: FBcv:0000357 ! size defective
 is_a: FBcv:0000362 ! increased cell number
-is_a: PATO:0002011
 
 [Term]
 id: FBcv:0000724
@@ -1487,7 +1213,6 @@ def: "Phenotype that is a reduction in size of an organ or tissue compared to wi
 comment: This term should not be used where an organ or tissue is reduced in size due to the wasting away of existing cells.
 is_a: FBcv:0000357 ! size defective
 is_a: FBcv:0000359 ! decreased cell number
-is_a: PATO:0000645
 
 [Term]
 id: FBcv:0000725
@@ -1495,9 +1220,6 @@ name: oxidative stress response defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in response to oxidative stress (GO:0006979). 'response to oxidative stress' is defined as: 'Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of oxidative stress, a state often resulting from exposure to high levels of reactive oxygen species, e.g. superoxide anions, hydrogen peroxide (H2O2), and hydroxyl radicals.'" [FBC:DOS, GOC:jl, PMID:12115731]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0006979
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0000734
@@ -1514,8 +1236,6 @@ name: delayed aging
 namespace: phenotypic_class
 def: "A phenotype in which the aging process (GO:0007568) is slower than in wild-type." [FBC:DOC]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000911
-intersection_of: RO:0000052 GO:0007568
 
 [Term]
 id: FBcv:0000792
@@ -1523,8 +1243,6 @@ name: premature aging
 namespace: phenotypic_class
 def: "A phenotype in which the aging process (GO:0007568) is accelerated compared to wild-type." [FBC:DOC]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000912
-intersection_of: RO:0000052 GO:0007568
 
 [Term]
 id: FBcv:0001324
@@ -1533,9 +1251,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in endocytosis (GO:0006897). 'endocytosis' is defined as: 'A vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle.'" [FBC:DOS, GOC:mah, ISBN:0198506732, ISBN:0716731363]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0006897
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0001325
@@ -1544,9 +1259,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in exocytosis (GO:0006887). 'exocytosis' is defined as: 'A process of secretion by a cell that results in the release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle. Exocytosis can occur either by full fusion, when the vesicle collapses into the plasma membrane, or by a kiss-and-run mechanism that involves the formation of a transient contact, a pore, between a granule (for exemple of chromaffin cells) and the plasma membrane. The latter process most of the time leads to only partial secretion of the granule content. Exocytosis begins with steps that prepare vesicles for fusion with the membrane (tethering and docking) and ends when molecules are secreted from the cell.'" [GOC:mah, ISBN:0716731363, PMID:22323285]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0006887
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0001347
@@ -1557,9 +1269,6 @@ comment: The subclasses of this term classify Drosophila phenotypes into differe
 subset: do_not_annotate
 synonym: "phenotypic class" EXACT []
 is_a: FBcv:0000347 ! phenotypic class
-is_a: PATO:0000001
-intersection_of: PATO:0000001
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0002000
@@ -1893,9 +1602,6 @@ name: visual perception defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in sensory perception of light stimulus (GO:0050953). 'sensory perception of light stimulus' is defined as: 'The series of events required for an organism to receive a sensory light stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process.'" [FBC:MMC, GOC:ai]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0050953
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0006000
@@ -1903,9 +1609,6 @@ name: copulation defective
 namespace: phenotypic_class
 def: "Phenotype that is a defect in copulation (GO:0007620). 'copulation' is defined as: 'The act of sexual union between male and female, involving the transfer of sperm.'" [FBC:TEMJ, ISBN:0721662544]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0007620
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0006001
@@ -1913,8 +1616,6 @@ name: increased fecundity
 namespace: phenotypic_class
 def: "Phenotype that is an increase in the number of gametes produced." [FBC:TEMJ]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0001695
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0006002
@@ -1922,8 +1623,6 @@ name: decreased fecundity
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in the number of gametes produced." [FBC:TEMJ]
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0001696
-intersection_of: RO:0000052 FBbt:00000001
 
 [Term]
 id: FBcv:0006003
@@ -1940,9 +1639,6 @@ namespace: phenotypic_class
 def: "Phenotype that is a defect in oviposition (GO:0007620). 'oviposition' is defined as: 'The deposition of eggs (either fertilized or not) upon a surface or into a medium such as water.'." [FBC:TEMJ, GOC:ems]
 comment: This term should only be used to report defects specifically in oviposition, as opposed to an overall loss of fertility. If a difference in "oviposition rate" is measured by authors as a proxy for sterility/fertility, it would be better to use the terms "sterile", "semi-sterile", or "semi-fertile", as appropriate.
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0000001
-intersection_of: RO:0000052 GO:0018991
-intersection_of: RO:0002573 PATO:0000460
 
 [Term]
 id: FBcv:0006005
@@ -1951,8 +1647,6 @@ namespace: phenotypic_class
 def: "A phenotype that is an increased occurrence of cell division (GO:0051301). 'cell division' is defined as 'The process resulting in division and partitioning of components of a cell to form more cells; may or may not be accompanied by the physical separation of a cell into distinct, individually membrane-bounded daughter cells.'." [FBC:TEMJ, GOC:di, GOC:go_curators, GOC:pr]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0002051
-intersection_of: RO:0000052 GO:0051301
 
 [Term]
 id: FBcv:0006006
@@ -1961,8 +1655,6 @@ namespace: phenotypic_class
 def: "A phenotype that is a decreased occurrence of cell division (GO:0051301). 'cell division' is defined as 'The process resulting in division and partitioning of components of a cell to form more cells; may or may not be accompanied by the physical separation of a cell into distinct, individually membrane-bounded daughter cells.'." [FBC:TEMJ, GOC:di, GOC:go_curators, GOC:pr]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-intersection_of: PATO:0002052
-intersection_of: RO:0000052 GO:0051301
 
 [Term]
 id: FBcv:0006007
