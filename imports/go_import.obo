@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2019-11-12/imports/go_import.owl
+data-version: dpo/releases/2019-11-27/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -3398,6 +3398,16 @@ is_a: GO:0043170 ! macromolecule metabolic process
 is_a: GO:0044237 ! cellular metabolic process
 
 [Term]
+id: GO:0044422
+name: obsolete organelle part
+namespace: cellular_component
+def: "OBSOLETE. Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane." [GOC:jl]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_annotate
+is_obsolete: true
+consider: GO:0043226
+
+[Term]
 id: GO:0044423
 name: virion part
 namespace: cellular_component
@@ -3408,6 +3418,39 @@ is_a: GO:0005575 ! cellular_component
 intersection_of: GO:0005575 ! cellular_component
 intersection_of: part_of GO:0019012 ! virion
 relationship: part_of GO:0019012 ! virion
+
+[Term]
+id: GO:0044424
+name: obsolete intracellular part
+namespace: cellular_component
+def: "OBSOLETE. Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [GOC:jl]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_annotate
+is_obsolete: true
+consider: GO:0005622
+
+[Term]
+id: GO:0044428
+name: obsolete nuclear part
+namespace: cellular_component
+def: "OBSOLETE. Any constituent part of the nucleus, a membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated." [GOC:jl]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_annotate
+synonym: "nuclear subcomponent" EXACT [NIF_Subcellular:sao1499850686]
+synonym: "nucleus component" EXACT []
+xref: NIF_Subcellular:sao1499850686
+is_obsolete: true
+consider: GO:0005634
+
+[Term]
+id: GO:0044446
+name: obsolete intracellular organelle part
+namespace: cellular_component
+def: "OBSOLETE. A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane." [GOC:jl]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_annotate
+is_obsolete: true
+consider: GO:0043229
 
 [Term]
 id: GO:0044464

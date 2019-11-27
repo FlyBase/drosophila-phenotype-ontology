@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2019-11-12/imports/pato_import.owl
+data-version: dpo/releases/2019-11-27/imports/pato_import.owl
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
@@ -1253,6 +1253,16 @@ synonym: "cellular metabolism" EXACT []
 synonym: "intermediary metabolism" RELATED [GOC:mah]
 is_a: GO:0008152 ! metabolic process
 is_a: GO:0009987 ! cellular process
+
+[Term]
+id: GO:0044424
+name: obsolete intracellular part
+namespace: cellular_component
+def: "OBSOLETE. Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [GOC:jl]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_annotate
+is_obsolete: true
+consider: GO:0005622
 
 [Term]
 id: GO:0044464

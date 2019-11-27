@@ -3,6 +3,7 @@
      xml:base="http://purl.obolibrary.org/obo/dpo.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:go="http://purl.obolibrary.org/obo/go#"
+     xmlns:ns="http://creativecommons.org/ns#"
      xmlns:pr="http://purl.obolibrary.org/obo/pr#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -29,8 +30,16 @@
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
      xmlns:oboInOwl1="ttp://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2019-11-12/dpo.owl"/>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12:11:2019 11:16</oboInOwl:date>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2019-11-27/dpo.owl"/>
+        <ns:attributionURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dx.doi.org/10.1186/2041-1480-4-30</ns:attributionURL>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0002-1373-1705</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0002-7073-9172</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5948-3092</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-0027-0858</dc:creator>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontology for the description of Drosophila melanogaster phenotypes.</dc:description>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drosophila Phenotype Ontology (DPO)</dc:title>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/3.0/</terms:license>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27:11:2019 11:30</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase miscellaneous CV</oboInOwl:default-namespace>
     </owl:Ontology>
     
@@ -44,6 +53,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://creativecommons.org/ns#attributionURL -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#attributionURL"/>
     
 
 
@@ -1215,6 +1230,19 @@ Where we have an annotation assertion
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <oboInOwl:hasDbXref rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>dc-description</oboInOwl:id>
+        <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
+        <oboInOwl:shorthand>dc-description</oboInOwl:shorthand>
+        <rdfs:label>description</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source">
@@ -1228,9 +1256,21 @@ Where we have an annotation assertion
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
@@ -8229,7 +8269,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00002952"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The prepupa is the name given to the organism at the period of the life cycle that begins at puparium formation and ends when larval/pupal apolysis is complete, as indicated by the completion of imaginal head sac eversion and the expulsion of the oral armature of the larva. Duration at 25 degrees C is approximately 12 hours. It occurs 120-132.2 hours after egg laying, and is the period of 0-12.2 hours after puparium formation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8258,7 +8298,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00002953"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The pupa is the name given to the organism at the period of the life cycle that begins once larval/pupal apolysis is complete, as indicated by the expulsion of the larval armature. Early in this stage the legs and wings reach full extension along the abdomen. The stage ends when the pupal cuticle separates from the underlying epidermis (pupal/adult apolysis), and the eye cup becomes yellow at its periphery. The duration of this stage is approximately 32 hours at 25 degrees C, and spans from 132.2-164.3 hours after egg laying, or is the period of 12.2-44.3 hours after puparium formation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8287,7 +8327,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00003004"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9583,7 +9623,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00007001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Material anatomical entity that has inherent 3D shape, whose parts are all connected and that is generated by coordinated expression of the organism&apos;s own genome.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:MAH</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9609,7 +9649,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00007002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Anatomical structure that has as its parts a maximally connected cell compartment surrounded by a plasma membrane.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9631,7 +9671,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00007003"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Anatomical structure, that consists of similar cells and intercellular matrix, aggregated according to genetically determined spatial relationships.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9651,7 +9691,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00007005"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Portion of tissue, that consists of one or more layers of cells with distinct apical-basal polarity, connected to each other by cell junctions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9700,7 +9740,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00007009"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Anatomical structure that is a primary subdivision of whole organism. The mereological sum of these is the whole organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9722,7 +9762,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00007010"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Anatomical structure that has as its parts two or more portions of tissue of at least two different types and which, through specific morphogenetic processes, forms a single distinct structural unit demarcated by bona fide boundaries from other distinct structural units of different types.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10508,7 +10548,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_10000000"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Anatomical entity which is part_of Drosophila melanogaster.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11966,7 +12006,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in the number of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000362</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This phenotype is not necessarily accompanied by overgrowth of a tissue - there may be more cells in an otherwise normal volume of tissue. It is not necessarily due to an increase in cell growth -it may be the result of an increase in the division rate at normal growth rates.  It may not even be due to an increase in the cell division rate - a reduced rate of cell death while the division rate is normal could also achieve it.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This phenotype is not necessarily accompanied by overgrowth of a tissue - there may be more cells in an otherwise normal volume of tissue. It is not necessarily due to an increase in cell growth -it may be the result of an increase in the division rate at normal growth rates. It may not even be due to an increase in the cell division rate - a reduced rate of cell death while the division rate is normal could also achieve it.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased cell number</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13202,7 +13242,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a disposition to paralysis under conditions that do not cause paralysis in a wild-type animal.  Paralysis is defined as an inability to exhibit `multicellular organismal movement` (GO:0050879)</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a disposition to paralysis under conditions that do not cause paralysis in a wild-type animal. Paralysis is defined as an inability to exhibit `multicellular organismal movement` (GO:0050879)</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000389</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
@@ -13211,7 +13251,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000389"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a disposition to paralysis under conditions that do not cause paralysis in a wild-type animal.  Paralysis is defined as an inability to exhibit `multicellular organismal movement` (GO:0050879)</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a disposition to paralysis under conditions that do not cause paralysis in a wild-type animal. Paralysis is defined as an inability to exhibit `multicellular organismal movement` (GO:0050879)</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -14601,7 +14641,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in phototaxis (GO:0042331). &apos;phototaxis&apos; is defined as: &apos;The directed movement of a motile cell or organism in response to light.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0192800981</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0192800981</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14986,7 +15026,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasExactSynonym>touch sensitivity defective</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000421</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This phenotype is commonly assayed by scoring larval avoidance responses following stroking of the thoracic segments (see Kernan et al., 1994).  On its own, this is not sufficient evidence for a defect in sensory perception of touch, as motor defects can also cause this phenotype.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This phenotype is commonly assayed by scoring larval avoidance responses following stroking of the thoracic segments (see Kernan et al., 1994). On its own, this is not sufficient evidence for a defect in sensory perception of touch, as motor defects can also cause this phenotype.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">touch response defective</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -17422,7 +17462,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in sleep (GO:0030431). &apos;sleep&apos; is defined as: &apos;Any process in which an organism enters and maintains a periodic, readily reversible state of reduced awareness and metabolic activity. Usually accompanied by physical relaxation, the onset of sleep in humans and other mammals is marked by a change in the electrical activity of the brain.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0192800981</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0192800981</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -18649,7 +18689,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasExactSynonym>lethal - all die before end of pharate adult stage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
-        <rdfs:comment>As the P-Stage and the &apos;pharate adult stage&apos; have the same end,  there is no need for a seprate term for &apos;lethal - all die before end of pharate adult stage.</rdfs:comment>
+        <rdfs:comment>As the P-Stage and the &apos;pharate adult stage&apos; have the same end, there is no need for a separate term for &apos;lethal - all die before end of pharate adult stage.</rdfs:comment>
         <rdfs:label xml:lang="en">lethal - all die before end of P-stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -18975,7 +19015,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasExactSynonym>lethal - all die before end of third instar larval stage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
-        <rdfs:comment>As the larval stage and third instar larval stage have the same end,  there is no need for a separate term for &apos;lethal - all die before end of third instar larval stage&apos;.</rdfs:comment>
+        <rdfs:comment>As the larval stage and third instar larval stage have the same end, there is no need for a separate term for &apos;lethal - all die before end of third instar larval stage&apos;.</rdfs:comment>
         <rdfs:label xml:lang="en">lethal - all die before end of larval stage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -27951,7 +27991,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005342"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The prepupal stage begins at puparium formation and ends when larval/pupal apolysis is complete, as indicated by the completion of imaginal head sac eversion and the expulsion of the oral armature of the larva. Duration at 25 degrees C: approximately 12 hours. (120-132.2 hours after egg laying; 0-12.2 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -28006,32 +28046,32 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005343"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Extends from puparium formation through tanning of the pupal cuticle. Posterior spiracles and ridge between anterior spiracles tan orange. Wriggling stops completely. Puparium becomes brown to the unaided eye. Duration at 25 degrees C: approximately 20 minutes. (120-120.3 hours after egg laying; 0-0.3 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005343"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>puparium formation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005343"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>white puparium stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005343"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>pupal stage P0</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005343"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>white prepupa</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28064,14 +28104,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005344"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Male gonads become less distinct. Oral armature stops moving permanently. Dorsal medial abdominal contractions stop. Gas bubble becomes visible within abdomen. Duration at 25 degrees C: approximately 100 minutes. (120.3-122 hours after egg laying; 0.3-2 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005344"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>brown puparium stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28104,14 +28144,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005345"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Ridge of the operculum becomes distinct. Puparium begins to separate from underlying epidermis. Becomes positively buoyant. Duration at 25 degrees C: approximately 4 hours, 45 minutes. (122-126.75 hours after egg laying; 2-6.75 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005345"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>bubble prepupa stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28144,14 +28184,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005346"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Prepupal stage P4 begins as the lateral trunk trachea become obscured and ends when the imaginal head sac is everted and the oral armature of the larva is expelled. Duration at 25 degrees C: approximately 5 hours, 30 minutes. (126.75-132.2 hours after egg laying; 6.75-12.2 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005346"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>cryptocephalic pupa</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28184,14 +28224,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005347"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Lateral trunk tracheae become obscured. Dorsal medial abdominal contractions occur. Everted leg and wing discs become visible. Bubble appears in posterior of puparium, displacing the pupa anteriorly; abdominal bubble disappears. Duration at 25 degrees C: approximately 5 hours, 15 minutes. (126.75-132 hours after egg laying; 6.75-12 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005347"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>buoyant stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28224,14 +28264,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005348"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Bubble is displaced to anterior end of the puparium, and pupa withdraws to the posterior end. Imaginal head sac is everted and the oral armature of the larva is expelled. Duration at 25 degrees C: approximately 12 minutes. (132-132.2 hours after egg laying; 12-12.2 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005348"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>moving bubble stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28269,14 +28309,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005349"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The pupal stage starts once larval/pupal apolysis is complete as indicated by the expulsion of the larval armature. Early in this stage, the legs and wings reach full extension along the abdomen. The stage ends when the pupal cuticle separates from the underlying epidermis (pupal/adult apolysis), and the eye cup becomes yellow at its periphery. Duration at 25 degrees C: approximately 32 hours. (132.2-164.3 hours after egg laying; 12.2-44.3 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005349"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>phanerocephalic pupa</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28319,7 +28359,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005350"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Pupal stage P5 starts when the legs and wings reach full extension along the abdomen and ends as the Malpighian tubules become prominent and green. Duration at 25 degrees C: approximately 6 hours, 30 minutes. (132.2-138.7 hours after egg laying; 12.2-18.7 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -28358,14 +28398,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005351"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Legs and wings reach full extension along abdomen. Enlarged initial segments of anterior pair Malpighian tubules move from thorax into abdomen. Translucent patch that lacks adhering fat body cells becomes discernible in the middle of the eye region. Pair of white Malpighian tubules becomes visible dorsally in the abdomen. Duration at 25 degrees C: approximately 66 minutes. (132.2-133.3 hours after egg laying; 12.2-13.3 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005351"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Malpighian tubules migrating</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28397,14 +28437,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005352"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Malpighian tubules become prominent and green. Duration at 25 degrees C: approximately 5 hours, 25 minutes. (133.3-138.7 hours after egg laying; 13.3-18.7 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005352"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>white Malpighian tubules stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28442,14 +28482,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005353"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Dark green &apos;yellow body&apos; appears between the anterior ends of the two Malpighian tubule segments, mid-dorsally at the anterior of the abdomen. Duration at 25 degrees C: approximately 13 hours, 45 minutes. (138.7-152.4 hours after egg laying; 18.7-32.4 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005353"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>green Malpighian tubules stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28481,14 +28521,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005354"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The &apos;yellow body&apos; moves back between the Malpighian tubules. The transparent pupal cuticle separates from the underlying epidermis. Eye cup becomes yellow at its perimeter. Duration at 25 degrees C: approximately 12 hours. (152.4-164.3 hours after egg laying; 32.4-44.3 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005354"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>yellow body stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28527,14 +28567,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005355"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Pale yellow pigmentation spreads inwards across the eye. Eye color becomes bright yellow, then changes to amber. Duration at 25 degrees C: approximately 12 hours 20 minutes. (164.3-176.6 hours after egg laying; 44.3-56.6 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005355"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>yellow-eyed stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28567,14 +28607,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005356"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Eye color darkens to deep amber, then becomes pale pink. Duration at 25 degrees C: approximately 18 hours. (176.6-194.5 hours after egg laying; 56.6-74.5 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005356"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>amber-eyed stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28607,14 +28647,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005357"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Eyes become bright red. Orbital and ocellar bristles and vibrissae darken. Duration at 25 degrees C: approximately 6 minutes. (194.5-194.6 hours after egg laying; 74.5-74.6 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005357"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>red-eye bald stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28646,7 +28686,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005358"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Thoracic bristles become visible, and the tips of the wings turn grey. Duration at 25 degrees C: approximately 2 hours. (194.6-196.6 hours after egg laying; 74.6-76.6 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -28680,14 +28720,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005359"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Dorsal thoracic microchaetes and macrochaetes become visible. Duration at 25 degrees C: approximately 80 minutes (194.6-195.5 hours after egg laying; 74.6-75.9 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005359"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>head bristles stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28720,14 +28760,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005360"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Tips of folded wings become grey. Duration at 25 degrees C: approximately 45 minutes (195.5-196.6 hours after egg laying; 75.9-76.6 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005360"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>thoracic bristles stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28765,7 +28805,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005361"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Pharate adult stage P12 begins as the abdominal tergite bristles become visible, and ends as the wings darken to black. Duration at 25 degrees C: approximately 2 hours. (196.6-198.6 hours after egg laying; 76.6-78.6 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -28805,14 +28845,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005362"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Bristles of the abdominal tergites become visible, and the wings become grey. Duration at 25 degrees C: approximately 55 minutes. (196.6-197.5 hours after egg laying; 76.6-77.5 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005362"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>wing tips grey stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28845,14 +28885,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005363"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Sex combs darken in males. Wings darken to black. Duration at 25 degrees C: approximately 65 minutes. (197.5-198.6 hours after egg laying; 77.5-78.6 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005363"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>wings grey stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28891,14 +28931,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005364"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Tarsal bristles darken and claws become black. Duration at 25 degrees C: approximately 3 hours, 20 minutes. (198.6-201.9 hours after egg laying; 78.6-81.9 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005364"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>wings black stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28931,14 +28971,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005365"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The meconium appears dorsally at the posterior tip of the abdomen. Duration at 25 degrees C: approximately 9 hours, 30 minutes (201.9-211.5 hours after egg laying; 81.9-91.5 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005365"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>mature bristles stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28970,7 +29010,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005366"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Pharate adult stage P15 begins with the tanning of the tergites and ends with eclosion. Duration at 25 degrees C: approximately 8 hours, 30 minutes. (211.5-220 hours after egg laying; 91.5-100 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -29004,14 +29044,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005367"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Tanning of the tergites obscures the Malpighian tubules and the &apos;yellow body&apos;. Legs begin to twitch; fly is able to walk if puparium is removed prematurely. Ptilinum expands by hydrostatic pressure, opening the operculum. Duration at 25 degrees C: approximately 8 hours, 6 minutes. (211.5-219.6 hours after egg laying; 91.5-99.6 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005367"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>meconium stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -29044,14 +29084,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005368"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Stage which starts when the operculum opens and ends when eclosion is completed. Duration at 25 degrees C: approximately 24 minutes. (219.6-220 hours after egg laying; 99.6-100 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005368"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>eclosion stage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -29239,7 +29279,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00006011"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The developing adult after pupal-adult apolysis, i.e.- from stage P8 (when yellow eye color first becomes visible through the pupal case), to eclosion. Duration at 25 degrees C: approximately 55.7 hours (164.3-220 hours after egg laying; 44.3-100 hours after puparium formation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0049147</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -29382,7 +29422,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007004"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Stage which begins when wandering third instar larva stops crawling. The larva everts its anterior spiracles during this stage.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -29415,19 +29455,19 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007005"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The anterior spiracles are fully everted, with 7-9 finger-like projections. The body shortens, withdrawing three apparent abdominal segments and the larva sticks to its substrate.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007005"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>spiracles everted larva</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007005"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>white prepupa</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -35444,7 +35484,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0030431"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process in which an organism enters and maintains a periodic, readily reversible state of reduced awareness and metabolic activity. Usually accompanied by physical relaxation, the onset of sleep in humans and other mammals is marked by a change in the electrical activity of the brain.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ISBN:0192800981</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0192800981</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -37689,7 +37729,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The directed movement of a motile cell or organism in response to light.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0192800981</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0192800981</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -37929,7 +37969,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043085"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that activates or increases the activity of an enzyme.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:ebc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ebc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:vw</oboInOwl:hasDbXref>
@@ -37985,7 +38025,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043086"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that stops or reduces the activity of an enzyme.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:ebc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ebc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:vw</oboInOwl:hasDbXref>
@@ -38052,7 +38092,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043170"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>biopolymer metabolic process</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_chebi_dec09</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_chebi_dec09</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -38511,7 +38551,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044260"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>cellular biopolymer metabolic process</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_chebi_dec09</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_chebi_dec09</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -38538,16 +38578,26 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane.</obo:IAO_0000115>
+        <obo:IAO_0000115>OBSOLETE. Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane.</obo:IAO_0000115>
+        <oboInOwl:consider>GO:0043226</oboInOwl:consider>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0044422</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:comment>Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
+        <rdfs:label>obsolete organelle part</rdfs:label>
         <rdfs:label>organelle part</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044422"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044422"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>OBSOLETE. Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -38613,16 +38663,26 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.</obo:IAO_0000115>
+        <obo:IAO_0000115>OBSOLETE. Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.</obo:IAO_0000115>
+        <oboInOwl:consider>GO:0005622</oboInOwl:consider>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0044424</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:comment>Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
         <rdfs:label>intracellular part</rdfs:label>
+        <rdfs:label>obsolete intracellular part</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044424"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044424"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>OBSOLETE. Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -38650,6 +38710,8 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any constituent part of the nucleus, a membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated.</obo:IAO_0000115>
+        <obo:IAO_0000115>OBSOLETE. Any constituent part of the nucleus, a membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated.</obo:IAO_0000115>
+        <oboInOwl:consider>GO:0005634</oboInOwl:consider>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1499850686</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>nuclear subcomponent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>nucleus component</oboInOwl:hasExactSynonym>
@@ -38658,11 +38720,19 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:comment>Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
         <rdfs:label>nuclear part</rdfs:label>
+        <rdfs:label>obsolete nuclear part</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044428"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any constituent part of the nucleus, a membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044428"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>OBSOLETE. Any constituent part of the nucleus, a membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -38686,16 +38756,26 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane.</obo:IAO_0000115>
+        <obo:IAO_0000115>OBSOLETE. A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane.</obo:IAO_0000115>
+        <oboInOwl:consider>GO:0043229</oboInOwl:consider>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0044446</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:comment>Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
         <rdfs:label>intracellular organelle part</rdfs:label>
+        <rdfs:label>obsolete intracellular organelle part</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044446"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044446"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>OBSOLETE. A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -41165,7 +41245,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that modulates the activity of an enzyme.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:ebc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ebc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:vw</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -46765,7 +46845,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:kmv</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pmid:19164535</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>pmid:19164535</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1903034"/>
@@ -46821,7 +46901,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:kmv</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pmid:19164535</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>pmid:19164535</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1903035"/>
@@ -46925,7 +47005,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:kmv</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pmid:19164535</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>pmid:19164535</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1903036"/>
@@ -47796,7 +47876,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bhm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:25745997</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:25745997</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905330"/>
@@ -47853,7 +47933,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bhm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:25745997</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:25745997</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905331"/>
@@ -47958,7 +48038,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bhm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:25745997</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:25745997</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905332"/>
@@ -54345,16 +54425,16 @@ This interpretation is *not* the same as an at-all-times relation
         <obo:IAO_0000115>a produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix.</obo:IAO_0000115>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment>Note that this definition doesn&apos;t quite distinguish the output of a transformation process from a production process, which is related to the identity/granularity issue.</rdfs:comment>
-        <rdfs:label xml:lang="en">produces</rdfs:label>
-        <obo:IAO_0000117>Melissa Haendel</obo:IAO_0000117>
         <oboInOwl:shorthand>produces</oboInOwl:shorthand>
+        <obo:IAO_0000117>Melissa Haendel</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">produces</rdfs:label>
         <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:hasDbXref>RO:0003000</oboInOwl:hasDbXref>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0003001">
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <obo:IAO_0000115>a produced_by b iff some process that occurs_in b has_output a.</obo:IAO_0000115>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <oboInOwl:id>produced_by</oboInOwl:id>
         <rdfs:label>produced_by</rdfs:label>
         <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>

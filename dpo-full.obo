@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: dpo/releases/2019-11-12/dpo-full.owl
-date: 12:11:2019 11:16
+data-version: dpo/releases/2019-11-27/dpo-full.owl
+date: 27:11:2019 11:30
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
@@ -58,6 +58,14 @@ synonymtypedef: SMILES "SMILES"
 synonymtypedef: systematic_synonym "Systematic synonym" EXACT
 default-namespace: FlyBase miscellaneous CV
 ontology: dpo/dpo-full
+property_value: attributionURL http://dx.doi.org/10.1186/2041-1480-4-30 xsd:string
+property_value: dc-creator http://orcid.org/0000-0002-1373-1705 xsd:string
+property_value: dc-creator http://orcid.org/0000-0002-7073-9172 xsd:string
+property_value: dc-creator https://orcid.org/0000-0001-5948-3092 xsd:string
+property_value: dc-creator https://orcid.org/0000-0002-0027-0858 xsd:string
+property_value: dc-description "An ontology for the description of Drosophila melanogaster phenotypes." xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "Drosophila Phenotype Ontology (DPO)" xsd:string
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
 
 [Term]
 id: BFO:0000001
@@ -2526,7 +2534,7 @@ id: FBcv:0000362
 name: increased cell number
 namespace: phenotypic_class
 def: "Phenotype that is an increase in the number of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type." [FBC:DOS]
-comment: This phenotype is not necessarily accompanied by overgrowth of a tissue - there may be more cells in an otherwise normal volume of tissue. It is not necessarily due to an increase in cell growth -it may be the result of an increase in the division rate at normal growth rates.  It may not even be due to an increase in the cell division rate - a reduced rate of cell death while the division rate is normal could also achieve it.
+comment: This phenotype is not necessarily accompanied by overgrowth of a tissue - there may be more cells in an otherwise normal volume of tissue. It is not necessarily due to an increase in cell growth -it may be the result of an increase in the division rate at normal growth rates. It may not even be due to an increase in the cell division rate - a reduced rate of cell death while the division rate is normal could also achieve it.
 is_a: FBcv:0000709 ! cell number defective
 
 [Term]
@@ -2744,7 +2752,7 @@ is_a: FBcv:0001347 ! phenotype
 id: FBcv:0000389
 name: paralytic
 namespace: phenotypic_class
-def: "Phenotype that is a disposition to paralysis under conditions that do not cause paralysis in a wild-type animal.  Paralysis is defined as an inability to exhibit `multicellular organismal movement` (GO:0050879)" [FBC:DOS]
+def: "Phenotype that is a disposition to paralysis under conditions that do not cause paralysis in a wild-type animal. Paralysis is defined as an inability to exhibit `multicellular organismal movement` (GO:0050879)" [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 
@@ -3000,7 +3008,7 @@ id: FBcv:0000421
 name: touch response defective
 namespace: phenotypic_class
 def: "Phenotype that is reduction in or loss of a stereotypical behavioral response to touch." [FlyBase:FBrf0073546]
-comment: This phenotype is commonly assayed by scoring larval avoidance responses following stroking of the thoracic segments (see Kernan et al., 1994).  On its own, this is not sufficient evidence for a defect in sensory perception of touch, as motor defects can also cause this phenotype.
+comment: This phenotype is commonly assayed by scoring larval avoidance responses following stroking of the thoracic segments (see Kernan et al., 1994). On its own, this is not sufficient evidence for a defect in sensory perception of touch, as motor defects can also cause this phenotype.
 synonym: "touch sensitivity defective" EXACT []
 is_a: FBcv:0000387 ! behavior defective
 
@@ -3588,7 +3596,7 @@ id: FBcv:0002000
 name: lethal - all die before end of P-stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages prior to eclosion from the pupal case (the end of the P-stage)." [FBC:DOS]
-comment: As the P-Stage and the 'pharate adult stage' have the same end,  there is no need for a seprate term for 'lethal - all die before end of pharate adult stage.
+comment: As the P-Stage and the 'pharate adult stage' have the same end, there is no need for a separate term for 'lethal - all die before end of pharate adult stage.
 subset: lethal_phase
 synonym: "lethal - all die before end of pharate adult stage" EXACT []
 is_a: FBcv:0000351 ! lethal
@@ -3606,7 +3614,7 @@ id: FBcv:0002002
 name: lethal - all die before end of larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the larval stage." [FBC:DOS]
-comment: As the larval stage and third instar larval stage have the same end,  there is no need for a separate term for 'lethal - all die before end of third instar larval stage'.
+comment: As the larval stage and third instar larval stage have the same end, there is no need for a separate term for 'lethal - all die before end of third instar larval stage'.
 subset: lethal_phase
 synonym: "lethal - all die before end of third instar larval stage" EXACT []
 is_a: FBcv:0002026 ! lethal - all die before end of prepupal stage
@@ -8804,15 +8812,19 @@ is_a: GO:0044237 ! cellular metabolic process
 
 [Term]
 id: GO:0044422
+name: obsolete organelle part
 name: organelle part
 namespace: cellular_component
 def: "Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane." [GOC:jl]
+def: "OBSOLETE. Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane." [GOC:jl]
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_annotate
 is_a: GO:0005575 ! cellular_component
 intersection_of: GO:0005575 ! cellular_component
 intersection_of: part_of GO:0043226 ! organelle
 relationship: part_of GO:0043226 ! organelle
+is_obsolete: true
+consider: GO:0043226
 
 [Term]
 id: GO:0044423
@@ -8829,8 +8841,10 @@ relationship: part_of GO:0019012 ! virion
 [Term]
 id: GO:0044424
 name: intracellular part
+name: obsolete intracellular part
 namespace: cellular_component
 def: "Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [GOC:jl]
+def: "OBSOLETE. Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [GOC:jl]
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_annotate
 is_a: CARO:0000014 ! cell part
@@ -8838,12 +8852,16 @@ is_a: GO:0044464 ! obsolete cell part
 intersection_of: GO:0005575 ! cellular_component
 intersection_of: part_of GO:0005622 ! intracellular
 relationship: part_of GO:0005622 ! intracellular
+is_obsolete: true
+consider: GO:0005622
 
 [Term]
 id: GO:0044428
 name: nuclear part
+name: obsolete nuclear part
 namespace: cellular_component
 def: "Any constituent part of the nucleus, a membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated." [GOC:jl]
+def: "OBSOLETE. Any constituent part of the nucleus, a membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated." [GOC:jl]
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_annotate
 synonym: "nuclear subcomponent" EXACT [NIF_Subcellular:sao1499850686]
@@ -8853,17 +8871,23 @@ is_a: GO:0044446 ! intracellular organelle part
 intersection_of: GO:0005575 ! cellular_component
 intersection_of: part_of GO:0005634 ! nucleus
 relationship: part_of GO:0005634 ! nucleus
+is_obsolete: true
+consider: GO:0005634
 
 [Term]
 id: GO:0044446
 name: intracellular organelle part
+name: obsolete intracellular organelle part
 namespace: cellular_component
 def: "A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane." [GOC:jl]
+def: "OBSOLETE. A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane." [GOC:jl]
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_annotate
-is_a: GO:0044422 ! organelle part
+is_a: GO:0044422 ! obsolete organelle part
 is_a: GO:0044424 ! intracellular part
 relationship: part_of GO:0043229 ! intracellular organelle
+is_obsolete: true
+consider: GO:0043229
 
 [Term]
 id: GO:0044464
@@ -15548,6 +15572,13 @@ id: dc-creator
 name: creator
 namespace: uberon
 xref: http://purl.org/dc/elements/1.1/creator
+is_metadata_tag: true
+
+[Typedef]
+id: dc-description
+name: description
+namespace: uberon
+xref: http://purl.org/dc/elements/1.1/description
 is_metadata_tag: true
 
 [Typedef]

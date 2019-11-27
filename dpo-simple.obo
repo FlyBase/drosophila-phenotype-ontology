@@ -1,11 +1,19 @@
 format-version: 1.2
-data-version: dpo/releases/2019-11-12/dpo-simple.owl
-date: 12:11:2019 11:17
+data-version: dpo/releases/2019-11-27/dpo-simple.owl
+date: 27:11:2019 11:31
 subsetdef: do_not_annotate "do not annotate"
 subsetdef: fbcvsubset_mgiribbons "fbcvsubset_mgiribbons"
 subsetdef: lethal_phase "lethal phase terms"
 default-namespace: FlyBase miscellaneous CV
 ontology: dpo/dpo-simple
+property_value: attributionURL http://dx.doi.org/10.1186/2041-1480-4-30 xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-1373-1705 xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-7073-9172 xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0001-5948-3092 xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0002-0027-0858 xsd:string
+property_value: http://purl.org/dc/elements/1.1/description "An ontology for the description of Drosophila melanogaster phenotypes." xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "Drosophila Phenotype Ontology (DPO)" xsd:string
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
 
 [Term]
 id: FBcv:0000002
@@ -195,7 +203,7 @@ id: FBcv:0000362
 name: increased cell number
 namespace: phenotypic_class
 def: "Phenotype that is an increase in the number of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type." [FBC:DOS]
-comment: This phenotype is not necessarily accompanied by overgrowth of a tissue - there may be more cells in an otherwise normal volume of tissue. It is not necessarily due to an increase in cell growth -it may be the result of an increase in the division rate at normal growth rates.  It may not even be due to an increase in the cell division rate - a reduced rate of cell death while the division rate is normal could also achieve it.
+comment: This phenotype is not necessarily accompanied by overgrowth of a tissue - there may be more cells in an otherwise normal volume of tissue. It is not necessarily due to an increase in cell growth -it may be the result of an increase in the division rate at normal growth rates. It may not even be due to an increase in the cell division rate - a reduced rate of cell death while the division rate is normal could also achieve it.
 is_a: FBcv:0000709 ! cell number defective
 
 [Term]
@@ -413,7 +421,7 @@ is_a: FBcv:0001347 ! phenotype
 id: FBcv:0000389
 name: paralytic
 namespace: phenotypic_class
-def: "Phenotype that is a disposition to paralysis under conditions that do not cause paralysis in a wild-type animal.  Paralysis is defined as an inability to exhibit `multicellular organismal movement` (GO:0050879)" [FBC:DOS]
+def: "Phenotype that is a disposition to paralysis under conditions that do not cause paralysis in a wild-type animal. Paralysis is defined as an inability to exhibit `multicellular organismal movement` (GO:0050879)" [FBC:DOS]
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
 
@@ -669,7 +677,7 @@ id: FBcv:0000421
 name: touch response defective
 namespace: phenotypic_class
 def: "Phenotype that is reduction in or loss of a stereotypical behavioral response to touch." [FlyBase:FBrf0073546]
-comment: This phenotype is commonly assayed by scoring larval avoidance responses following stroking of the thoracic segments (see Kernan et al., 1994).  On its own, this is not sufficient evidence for a defect in sensory perception of touch, as motor defects can also cause this phenotype.
+comment: This phenotype is commonly assayed by scoring larval avoidance responses following stroking of the thoracic segments (see Kernan et al., 1994). On its own, this is not sufficient evidence for a defect in sensory perception of touch, as motor defects can also cause this phenotype.
 synonym: "touch sensitivity defective" EXACT []
 is_a: FBcv:0000387 ! behavior defective
 
@@ -1257,7 +1265,7 @@ id: FBcv:0002000
 name: lethal - all die before end of P-stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages prior to eclosion from the pupal case (the end of the P-stage)." [FBC:DOS]
-comment: As the P-Stage and the 'pharate adult stage' have the same end,  there is no need for a seprate term for 'lethal - all die before end of pharate adult stage.
+comment: As the P-Stage and the 'pharate adult stage' have the same end, there is no need for a separate term for 'lethal - all die before end of pharate adult stage.
 subset: lethal_phase
 synonym: "lethal - all die before end of pharate adult stage" EXACT []
 is_a: FBcv:0000351 ! lethal
@@ -1275,7 +1283,7 @@ id: FBcv:0002002
 name: lethal - all die before end of larval stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the larval stage." [FBC:DOS]
-comment: As the larval stage and third instar larval stage have the same end,  there is no need for a separate term for 'lethal - all die before end of third instar larval stage'.
+comment: As the larval stage and third instar larval stage have the same end, there is no need for a separate term for 'lethal - all die before end of third instar larval stage'.
 subset: lethal_phase
 synonym: "lethal - all die before end of third instar larval stage" EXACT []
 is_a: FBcv:0002026 ! lethal - all die before end of prepupal stage

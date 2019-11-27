@@ -18,7 +18,7 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo/imports/fbdv_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2019-11-12/imports/fbdv_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2019-11-27/imports/fbdv_import.owl"/>
     </owl:Ontology>
     
 
@@ -401,15 +401,33 @@ Where we have an annotation assertion
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
@@ -11020,7 +11038,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The biological process whose specific outcome is the progression of an anatomical structure from an initial condition to its mature state. This process begins with the formation of the structure and ends with the mature structure, whatever form that may be including its natural destruction. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:mtg_15jun06</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GO_REF:0000021</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000021</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
