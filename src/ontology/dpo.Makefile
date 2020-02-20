@@ -221,6 +221,9 @@ pre_release: $(ONT)-edit.owl all_imports tmp/auto_generated_definitions_dot.owl 
 
 obo_qc_%:
 	$(ROBOT) report -i $* --profile qc-profile.txt --fail-on ERROR --print 5 -o $@.txt
+	
+obo_qc_dpo.owl:
+	$(ROBOT) report -i $* --profile qc-profile.txt --fail-on None --print 5 -o $@.txt
 
 obo_qc: obo_qc_$(ONT).obo obo_qc_$(ONT).owl
 
