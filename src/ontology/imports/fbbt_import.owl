@@ -20,7 +20,7 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo/imports/fbbt_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2020-02-19/imports/fbbt_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2020-03-26/imports/fbbt_import.owl"/>
     </owl:Ontology>
     
 
@@ -66,7 +66,6 @@
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <rdfs:label>definition</rdfs:label>
-        <rdfs:label xml:lang="en">definition</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -122,6 +121,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000233 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412">
@@ -136,6 +141,12 @@
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000424">
         <rdfs:label xml:lang="en">expand expression to</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000425 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000425"/>
     
 
 
@@ -176,6 +187,21 @@
         <obo:IAO_0000115>An assertion that holds between an OWL Object Property and a temporal interpretation that elucidates how OWL Class Axioms that use this property are to be interpreted in a temporal context.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">temporal interpretation</rdfs:label>
         <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/oborel/obo-relations/wiki/ROAndTime</foaf:page>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002161 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002161">
+        <obo:IAO_0000112>tooth SubClassOf &apos;never in taxon&apos; value &apos;Aves&apos;</obo:IAO_0000112>
+        <obo:IAO_0000115>x never in taxon T if and only if T is a class, and x does not instantiate the class expression &quot;in taxon some T&quot;. Note that this is a shortcut relation, and should be used as a hasValue restriction in OWL.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/17921072"/>
+        <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/20973947"/>
+        <obo:IAO_0000425>?X DisjointWith RO_0002162 some ?Y </obo:IAO_0000425>
+        <rdfs:label>never in taxon</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://github.com/obophenotype/uberon/wiki/Taxon-constraints"/>
     </owl:AnnotationProperty>
     
 
@@ -586,6 +612,12 @@ Where we have an annotation assertion
     <!-- http://purl.org/dc/terms/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
@@ -1512,12 +1544,12 @@ range: spatial region or site (immaterial continuant)
     <!-- http://purl.obolibrary.org/obo/RO_0002217 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002217">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002218"/>
-        <obo:IAO_0000115>x actively participates in y if and only if x participates in y and x realizes some active role</obo:IAO_0000115>
+        <obo:IAO_0000115>OBSOLETE x actively participates in y if and only if x participates in y and x realizes some active role</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000118>agent in</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">actively participates in</rdfs:label>
+        <rdfs:comment>Obsoleted as the inverse property was obsoleted.</rdfs:comment>
+        <rdfs:label xml:lang="en">obsolete actively participates in</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -1880,7 +1912,7 @@ However, this is not possible in OWL. We instead make this relation a sub-relati
     <!-- http://purl.obolibrary.org/obo/RO_0002331 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002331">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002217"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002431"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002327"/>
@@ -2247,7 +2279,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002432"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>c executes activity in d if and only if c enables p and p occurs_in d.  Assuming no action at a distance by gene products, if a gene product enables (is capable of) a process that occurs in some structure, it must have at least some part in that structure.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:cjm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:cjm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2305,16 +2337,21 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002448">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002436"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002566"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0011002"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002327"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002211"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002333"/>
         </owl:propertyChainAxiom>
-        <obo:IAO_0000115>Holds between molecular entities A and B where A can physically interact with B and in doing so regulates a process that B is capable of.  For example, A and B may be gene products and binding of B by A regulates the kinase activity of B.</obo:IAO_0000115>
+        <obo:IAO_0000115>The entity A, immediately upstream of the entity B, has an activity that regulates an activity performed by B. For example, A and B may be gene products and binding of B by A regulates the kinase activity of B.
+
+A and B can be physically interacting but not necessarily. Immediately upstream means there are no intermediate entity between A and B.</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000117>Vasundra Touré</obo:IAO_0000117>
         <oboInOwl:hasExactSynonym>molecularly controls</oboInOwl:hasExactSynonym>
-        <rdfs:label>activity directly regulates activity of</rdfs:label>
+        <rdfs:label>directly regulates activity of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2323,16 +2360,20 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002449">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002448"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002327"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002630"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002333"/>
         </owl:propertyChainAxiom>
-        <obo:IAO_0000115>Holds between molecular entities A and B where A can physically interact with B and in doing so negatively regulates a process that B is capable of.  For example, A and B may be gene products and binding of B by A negatively regulates the kinase activity of B.</obo:IAO_0000115>
+        <obo:IAO_0000115>The entity A, immediately upstream of the entity B, has an activity that negatively regulates an activity performed by B. 
+For example, A and B may be gene products and binding of B by A negatively regulates the kinase activity of B.</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000118>inhibits</obo:IAO_0000118>
+        <obo:IAO_0000117>Vasundra Touré</obo:IAO_0000117>
+        <obo:IAO_0000118>directly inhibits</obo:IAO_0000118>
         <oboInOwl:hasExactSynonym>molecularly decreases activity of</oboInOwl:hasExactSynonym>
-        <rdfs:label>activity directly negatively regulates activity of</rdfs:label>
+        <rdfs:label>directly negatively regulates activity of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2341,16 +2382,20 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002450">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002448"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002327"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002629"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002333"/>
         </owl:propertyChainAxiom>
-        <obo:IAO_0000115>Holds between molecular entities A and B where A can physically interact with B and in doing so positively regulates a process that B is capable of.  For example, A and B may be gene products and binding of B by A positively regulates the kinase activity of B.</obo:IAO_0000115>
+        <obo:IAO_0000115>The entity A, immediately upstream of the entity B, has an activity that positively regulates an activity performed by B. 
+For example, A and B may be gene products and binding of B by A positively regulates the kinase activity of B.</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000118>activates</obo:IAO_0000118>
+        <obo:IAO_0000117>Vasundra Touré</obo:IAO_0000117>
+        <obo:IAO_0000118>directly activates</obo:IAO_0000118>
         <oboInOwl:hasExactSynonym>molecularly increases activity of</oboInOwl:hasExactSynonym>
-        <rdfs:label>activity directly positively regulates activity of</rdfs:label>
+        <rdfs:label>directly positively regulates activity of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2442,13 +2487,13 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002506">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002410"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <obo:IAO_0000116>The intent is that the process branch of the causal property hierarchy is primary (causal relations hold between occurrents/processes), and that the material branch is defined in terms of the process branch</obo:IAO_0000116>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
         <obo:IAO_0000232>Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect.</obo:IAO_0000232>
-        <rdfs:label>causal relation between material entities</rdfs:label>
+        <rdfs:label>causal relation between entities</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2573,7 +2618,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002566"/>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
-        <obo:IAO_0000589>causally influenced by (material entity to material entity)</obo:IAO_0000589>
+        <obo:IAO_0000589>causally influenced by (entity-centric)</obo:IAO_0000589>
         <rdfs:label>causally influenced by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2605,6 +2650,8 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002566">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002506"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002327"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002411"/>
@@ -2615,10 +2662,11 @@ Each of these 3 primitives can be composed to yield a cross-product of different
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002411"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002333"/>
         </owl:propertyChainAxiom>
-        <obo:IAO_0000115>Holds between materal entities a and b if the activity of a is causally upstream of the activity of b, or causally upstream of a an activity that modifies b</obo:IAO_0000115>
+        <obo:IAO_0000115>The entity or characteristic A is causally upstream of the entity or characteristic B, A having an effect on B. An entity corresponds to any biological type of entity as long as a mass is measurable. A characteristic corresponds to a particular specificity of an entity (e.g., phenotype, shape, size).</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000117>Vasundra Touré</obo:IAO_0000117>
         <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
-        <obo:IAO_0000589>causally influences (material entity to material entity)</obo:IAO_0000589>
+        <obo:IAO_0000589>causally influences (entity-centric)</obo:IAO_0000589>
         <rdfs:label>causally influences</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2940,6 +2988,19 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0011002 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0011002">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002566"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <obo:IAO_0000115>The entity A has an activity that regulates an activity of the entity B. For example, A and B are gene products where the catalytic activity of A regulates the kinase activity of B.</obo:IAO_0000115>
+        <obo:IAO_0000117>Vasundra Touré</obo:IAO_0000117>
+        <rdfs:label>regulates activity of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0040035 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0040035">
@@ -3193,17 +3254,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0000007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
         <rdfs:label>immaterial anatomical entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CARO_0000014 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0000014">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000003"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/caro.owl"/>
-        <obo:IAO_0000589>cell part (CARO)</obo:IAO_0000589>
-        <rdfs:label xml:lang="en">cell part</rdfs:label>
     </owl:Class>
     
 
@@ -4518,7 +4568,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00002952"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The prepupa is the name given to the organism at the period of the life cycle that begins at puparium formation and ends when larval/pupal apolysis is complete, as indicated by the completion of imaginal head sac eversion and the expulsion of the oral armature of the larva. Duration at 25 degrees C is approximately 12 hours. It occurs 120-132.2 hours after egg laying, and is the period of 0-12.2 hours after puparium formation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -4547,7 +4597,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00002953"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The pupa is the name given to the organism at the period of the life cycle that begins once larval/pupal apolysis is complete, as indicated by the expulsion of the larval armature. Early in this stage the legs and wings reach full extension along the abdomen. The stage ends when the pupal cuticle separates from the underlying epidermis (pupal/adult apolysis), and the eye cup becomes yellow at its periphery. The duration of this stage is approximately 32 hours at 25 degrees C, and spans from 132.2-164.3 hours after egg laying, or is the period of 12.2-44.3 hours after puparium formation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -4576,7 +4626,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00003004"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5158,7 +5208,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00005164"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Precursor cell that gives rise to an external sensory organ.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0111371</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0111371</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5867,7 +5917,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00007001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Material anatomical entity that has inherent 3D shape, whose parts are all connected and that is generated by coordinated expression of the organism&apos;s own genome.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:MAH</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -5893,7 +5943,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00007002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Anatomical structure that has as its parts a maximally connected cell compartment surrounded by a plasma membrane.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5915,7 +5965,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00007003"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Anatomical structure, that consists of similar cells and intercellular matrix, aggregated according to genetically determined spatial relationships.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5935,7 +5985,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00007005"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Portion of tissue, that consists of one or more layers of cells with distinct apical-basal polarity, connected to each other by cell junctions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5982,7 +6032,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00007009"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Anatomical structure that is a primary subdivision of whole organism. The mereological sum of these is the whole organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6004,7 +6054,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00007010"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Anatomical structure that has as its parts two or more portions of tissue of at least two different types and which, through specific morphogenetic processes, forms a single distinct structural unit demarcated by bona fide boundaries from other distinct structural units of different types.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6551,7 +6601,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047552"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>imaginal structure</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0053815</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0053815</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6789,7 +6839,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_10000000"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Anatomical entity which is part_of Drosophila melanogaster.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>CARO:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6848,7 +6898,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:isa_complete</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -6883,7 +6933,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A developmental process in which a progressive change in the state of some part of an organism specifically contributes to its ability to form offspring.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:isa_complete</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003006"/>
@@ -6915,7 +6965,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003008"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A multicellular organismal process carried out by any of the organs or tissues in an organ system. An organ system is a regularly interacting or interdependent group of organs or tissues that work together to carry out a biological objective.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_cardio</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_cardio</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7057,8 +7107,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <obo:IAO_0000115>Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules).</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0001948</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0045308</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:16.01</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:18.01.07</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-170835</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-170846</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>protein amino acid binding</oboInOwl:hasExactSynonym>
@@ -7203,7 +7251,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044464"/>
         <obo:IAO_0000115>A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated. In most cells, the nucleus contains all of the cell&apos;s chromosomes except the organellar chromosomes, and is the site of RNA synthesis and processing. In some species, or in specialized cell types, RNA metabolism or DNA replication may be absent.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
-        <oboInOwl:hasDbXref>MIPS_funcat:70.10</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1702920020</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Cell_nucleus</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>cell nucleus</oboInOwl:hasExactSynonym>
@@ -7268,7 +7315,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006796">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006793"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving the phosphate group, the anion or salt of any phosphoric acid.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:01.04</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>phosphate metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>phosphate metabolic process</oboInOwl:hasRelatedSynonym>
@@ -7294,7 +7340,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:hasAlternativeId>GO:0015457</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0015460</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044765</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:20</oboInOwl:hasDbXref>
         <oboInOwl:hasNarrowSynonym>small molecule transport</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>solute:solute exchange</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -7328,7 +7373,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006950">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050896"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:32.01</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>response to abiotic stress</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>response to biotic stress</oboInOwl:hasRelatedSynonym>
@@ -7359,8 +7403,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006950"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009628"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating an increase or decrease in the concentration of solutes outside the organism or cell.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:32.01.03</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.20.35.09.05</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>osmotic response</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>osmotic stress response</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -7423,7 +7465,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         </rdfs:subClassOf>
         <obo:IAO_0000115>The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0023033</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:30</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Signal_transduction</oboInOwl:hasDbXref>
         <oboInOwl:hasNarrowSynonym>signaling cascade</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>signalling cascade</oboInOwl:hasNarrowSynonym>
@@ -7462,7 +7503,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032501"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048856"/>
         <obo:IAO_0000115>The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult).</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:41</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0007275</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
@@ -7475,8 +7515,8 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ems</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:isa_complete</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ems</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -7502,7 +7542,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007562"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The emergence of an adult insect from a pupa case.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dgh</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:dgh</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0198600461</oboInOwl:hasDbXref>
@@ -7593,8 +7633,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007601">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050953"/>
         <obo:IAO_0000115>The series of events required for an organism to receive a visual stimulus, convert it to a molecular signal, and recognize and characterize the signal. Visual stimuli are detected in the form of photons and are processed to form an image.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.01.03</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.01.01</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Visual_perception</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>sense of sight</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>sensory visual perception</oboInOwl:hasExactSynonym>
@@ -7617,7 +7655,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007605">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050954"/>
         <obo:IAO_0000115>The series of events required for an organism to receive an auditory stimulus, convert it to a molecular signal, and recognize and characterize the signal. Sonic stimuli are detected in the form of vibrations and are processed to form a sound.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.01.03</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Hearing_(sense)</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>hearing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>perception of sound</oboInOwl:hasExactSynonym>
@@ -7658,7 +7695,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007608">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007606"/>
         <obo:IAO_0000115>The series of events required for an organism to receive an olfactory stimulus, convert it to a molecular signal, and recognize and characterize the signal. Olfaction involves the detection of chemical composition of an organism&apos;s ambient medium by chemoreceptors. This is a neurological process.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.01.13</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Olfaction</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>olfaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>scent perception</oboInOwl:hasExactSynonym>
@@ -7685,7 +7721,9 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <obo:IAO_0000115>The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity.</obo:IAO_0000115>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-20T14:06:08Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>GO:0023032</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044708</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044709</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>Wikipedia:Behavior</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>behavioral response to stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>behaviour</oboInOwl:hasExactSynonym>
@@ -7704,7 +7742,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ems</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ems</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0395448956</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:20160973</oboInOwl:hasDbXref>
@@ -7718,7 +7756,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050890"/>
         <obo:IAO_0000115>The acquisition and processing of information and/or the storage and retrieval of this information over time.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.03.04.01</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0007611</oboInOwl:id>
         <rdfs:label>learning or memory</rdfs:label>
@@ -7747,7 +7784,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007612"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process in an organism in which a relatively long-lasting adaptive behavioral change occurs as the result of experience.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0721662544</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -7768,7 +7805,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7991,13 +8028,32 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007631">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
         <obo:IAO_0000115>Behavior associated with the intake of food.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.03</oboInOwl:hasDbXref>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/18547</obo:IAO_0000233>
+        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-10-27T03:53:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>GO:0044366</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044367</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044368</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044369</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044370</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044371</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044372</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>Wikipedia:List_of_feeding_behaviours</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>behavioral response to food</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>behavioural response to food</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>feeding behaviour</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>drinking</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>eating</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding from phloem of other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding from plant phloem</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding from tissue of other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding from vascular tissue of another organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding from xylem of other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding on blood of other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding on or from other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding on plant sap</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>hematophagy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>injection of substance into other organism during feeding on blood of other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>taking of blood meal</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0007631</oboInOwl:id>
         <rdfs:comment>See also the biological process term &apos;behavior ; GO:0007610&apos;.</rdfs:comment>
@@ -8123,7 +8179,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008049"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The behavior of a male, for the purpose of attracting a sexual partner. An example of this process is found in Drosophila melanogaster.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_sensu</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_sensu</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8176,7 +8232,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:creation_date>2012-10-17T15:46:40Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044236</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044710</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:01</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Metabolism</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>metabolic process resulting in cell growth</oboInOwl:hasNarrowSynonym>
@@ -8229,7 +8284,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009266">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009628"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a temperature stimulus.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.09</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>response to thermal stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009266</oboInOwl:id>
@@ -8239,7 +8293,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009266"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a temperature stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8249,7 +8303,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009314">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009628"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an electromagnetic radiation stimulus. Electromagnetic radiation is a propagating wave in space with electric and magnetic components. These components oscillate at right angles to each other and to the direction of propagation.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:32.01.13</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>response to electromagnetic radiation stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>response to radiation stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -8272,9 +8325,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009416">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009314"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a light stimulus, electromagnetic radiation of wavelengths classified as infrared, visible or ultraviolet light.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.01</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.01.01</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.20.35.11</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009416</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
@@ -8285,7 +8335,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a light stimulus, electromagnetic radiation of wavelengths classified as infrared, visible or ultraviolet light.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8305,7 +8355,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009581"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The series of events in which an external stimulus is received by a cell and converted into a molecular signal.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8325,7 +8375,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009582"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The series of events in which an (non-living) abiotic stimulus is received by a cell and converted into a molecular signal.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8337,8 +8387,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009581"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009582"/>
         <obo:IAO_0000115>The series of events in which a light stimulus (in the form of photons) is received and converted into a molecular signal.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.01</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.20.35.11</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>detection of light</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>perception of light</oboInOwl:hasRelatedSynonym>
@@ -8379,7 +8427,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009605">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050896"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an external stimulus.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.20.35</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>response to environmental stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009605</oboInOwl:id>
@@ -8393,7 +8440,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009605"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an external stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8403,20 +8450,21 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009628">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050896"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an abiotic (not derived from living organisms) stimulus.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/16572</obo:IAO_0000233>
         <oboInOwl:hasNarrowSynonym>response to abiotic stress</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009628</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
-        <rdfs:comment>Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC. Changed definition as requested in https://github.com/geneontology/go-ontology/issues/16572.</rdfs:comment>
+        <rdfs:comment>Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
         <rdfs:label>response to abiotic stimulus</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009628"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an abiotic (not derived from living organisms) stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8426,8 +8474,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009629">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009628"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a gravitational stimulus.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.07</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.20.35.13</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>response to gravitational stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009629</oboInOwl:id>
@@ -8437,7 +8483,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009629"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a gravitational stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8753,7 +8799,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that is carried out at the cellular level, but not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:isa_complete</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9087,7 +9133,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016545"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The process during courtship where the male insect vibrates his wings. An example of this is found in Drosophila melanogaster.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_sensu</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_sensu</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:11092827</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9320,7 +9366,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:hasDbXref>GOC:krc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0387520546</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Sexual_reproduction</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wikipedia:Sexual_reproduction</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9357,7 +9403,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0022412"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A process, occurring at the cellular level, that is involved in the reproductive function of a multicellular organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:isa_complete</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9397,7 +9443,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A biological process that directly contributes to the process of producing new individuals by one or two organisms. The new individuals inherit some proportion of their genetic material from the parent or parents.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:isa_complete</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9647,7 +9693,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030545">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0098772"/>
         <obo:IAO_0000115>The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is changed.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:18.02.07</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0030545</oboInOwl:id>
         <rdfs:label>receptor regulator activity</rdfs:label>
@@ -10494,6 +10539,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032386"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048523"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -10534,6 +10580,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032386"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048522"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051050"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -10565,6 +10612,8 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0032501">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>Any biological process, occurring at the level of a multicellular organism, pertinent to its function.</obo:IAO_0000115>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4896"/>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T16:07:47Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044707</oboInOwl:hasAlternativeId>
@@ -10582,7 +10631,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedTarget>Any biological process, occurring at the level of a multicellular organism, pertinent to its function.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:isa_complete</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10610,7 +10659,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0032502"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A biological process whose specific outcome is the progression of an integrated living unit: an anatomical structure (which may be a subcellular structure, cell, tissue, or organ), or organism over time from an initial condition to a later condition.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:isa_complete</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10629,7 +10678,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0032504"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The biological process in which new individuals are produced by one or two multicellular organisms. The new individuals inherit some proportion of their genetic material from the parent or parents.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:isa_complete</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10922,7 +10971,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0040011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>Self-propelled movement of a cell or organism from one location to another.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:02.45.11</oboInOwl:hasDbXref>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_451864"/>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0040011</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
@@ -10934,7 +10983,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0040011"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Self-propelled movement of a cell or organism from one location to another.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dgh</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:dgh</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10969,7 +11018,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0040012"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of locomotion of a cell or organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ems</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ems</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11060,9 +11109,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042221">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050896"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a chemical stimulus.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.03</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.03.05</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.20.35.09</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>response to chemical stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>response to chemical substance</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -11405,7 +11451,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that activates or increases the activity of an enzyme.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0048554</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:18.02.01.01</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>positive regulation of enzyme activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>up regulation of enzyme activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>up-regulation of enzyme activity</oboInOwl:hasExactSynonym>
@@ -11961,7 +12006,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <!-- http://purl.obolibrary.org/obo/GO_0044464 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044464">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000014"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000003"/>
         <obo:IAO_0000115>OBSOLETE. Any constituent part of a cell, the basic structural and functional unit of all organisms.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
         <oboInOwl:consider>CL:0000000</oboInOwl:consider>
@@ -12041,7 +12086,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045433"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The process during wing vibration where the male insect produces a species-specific acoustic signal called a love song.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_sensu</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_sensu</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:11092827</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -12218,7 +12263,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0046903">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
         <obo:IAO_0000115>The controlled release of a substance by a cell or a tissue.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:20.09.16</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0046903</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
@@ -12249,6 +12293,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051641"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051649"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
@@ -12327,6 +12372,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands).</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/14220</obo:IAO_0000233>
         <oboInOwl:created_by>midori</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-09-13T04:51:59Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0071884</oboInOwl:hasAlternativeId>
@@ -12338,7 +12384,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:id>GO:0048018</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
-        <rdfs:comment>Definition discussed in https://github.com/geneontology/go-ontology/issues/14220</rdfs:comment>
         <rdfs:label>receptor ligand activity</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -12400,7 +12445,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The process during courtship where the male insect extends his wings. An example of this process is found in Drosophila melanogaster.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_sensu</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_sensu</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12434,7 +12479,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0048511">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>Any process pertinent to the generation and maintenance of rhythms in the physiology of an organism.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.11</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>rhythm</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0048511</oboInOwl:id>
@@ -12886,14 +12930,12 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
-        <rdfs:comment>This term was added by GO_REF:0000021.</rdfs:comment>
         <rdfs:label>anatomical structure development</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0048856"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The biological process whose specific outcome is the progression of an anatomical structure from an initial condition to its mature state. This process begins with the formation of the structure and ends with the mature structure, whatever form that may be including its natural destruction. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mtg_15jun06</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GO_REF:0000021</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -12964,7 +13006,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the activity of an enzyme.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0048552</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:18.02.01</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>regulation of enzyme activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>regulation of metalloenzyme activity</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -13097,7 +13138,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050877">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003008"/>
         <obo:IAO_0000115>A organ system process carried out by any of the organs or tissues of neurological system.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.03</oboInOwl:hasDbXref>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/13824</obo:IAO_0000233>
         <oboInOwl:hasExactSynonym>neurological system process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>neurophysiological process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -13108,7 +13149,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
-        <rdfs:comment>Discussion of class label and synonyms: https://github.com/geneontology/go-ontology/issues/13824</rdfs:comment>
         <rdfs:label>nervous system process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13116,7 +13156,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A organ system process carried out by any of the organs or tissues of neurological system.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_cardio</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_cardio</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13147,7 +13187,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus. The process begins with detection of the stimulus and ends with a change in state or activity or the cell or organism.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0051869</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>physiological response to stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0050896</oboInOwl:id>
@@ -13260,7 +13299,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050909">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007606"/>
         <obo:IAO_0000115>The series of events required for an organism to receive a gustatory stimulus, convert it to a molecular signal, and recognize and characterize the signal. Gustation involves the direct detection of chemical composition, usually through contact with chemoreceptor cells. This is a neurological process.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.01.11</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Taste</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>gustation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>sense of taste</oboInOwl:hasExactSynonym>
@@ -13366,7 +13404,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050975">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050954"/>
         <obo:IAO_0000115>The series of events required for an organism to receive a touch stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process. The perception of touch in animals is mediated by mechanoreceptors in the skin and mucous membranes and is the sense by which contact with objects gives evidence as to certain of their qualities. Different types of touch can be perceived (for example, light, coarse, pressure and tickling) and the stimulus may be external or internal (e.g. the feeling of a full stomach).</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.01.05</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Touch</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>perception of touch</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>tactile sense</oboInOwl:hasExactSynonym>
@@ -14173,7 +14210,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051606">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050896"/>
         <obo:IAO_0000115>The series of events in which a stimulus is received by a cell or organism and converted into a molecular signal.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>stimulus detection</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>perception of stimulus</oboInOwl:hasRelatedSynonym>
@@ -14186,7 +14222,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0051606"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The series of events in which a stimulus is received by a cell or organism and converted into a molecular signal.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:add</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:add</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
@@ -14197,6 +14233,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <!-- http://purl.obolibrary.org/obo/GO_0051641 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051641">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051179"/>
         <obo:IAO_0000115>A cellular localization process whereby a substance or cellular entity, such as a protein complex or organelle, is transported to, and/or maintained in, a specific location within a cell including the localization of substances or cellular entities to the cell membrane.</obo:IAO_0000115>
         <oboInOwl:created_by>jl</oboInOwl:created_by>
@@ -14239,28 +14276,11 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <!-- http://purl.obolibrary.org/obo/GO_0051649 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051649">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0051234"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005623"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051234"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0051641"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005623"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process, occuring in a cell, that localizes a substance or cellular component. This may occur via movement, tethering or selective degradation.</obo:IAO_0000115>
@@ -14525,6 +14545,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032879"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050794"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
@@ -14588,7 +14609,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that modulates a measurable attribute of any biological process, quality or function.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:isa_complete</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:vw</oboInOwl:hasDbXref>
@@ -14630,7 +14651,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0065009"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:isa_complete</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14673,7 +14694,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0071704"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:50860</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -16695,7 +16715,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0000069</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
-        <rdfs:label>deviation(from_normal)</rdfs:label>
+        <rdfs:label>deviation (from_normal)</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000069"/>
@@ -17566,63 +17586,6 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
         </swrl:head>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>From ligand activity to has_ligand</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002327"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002578"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#z"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#x"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/GO_0048018"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#z"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002019"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
         <rdfs:comment>This rule is dubious: added as a quick fix for expected inference in GO-CAM.  The problem is most acute for transmembrane proteins, such as receptors or cell adhesion molecules, which have some subfunctions inside the cell (e.g. kinase activity) and some subfunctions outside (e.g. ligand binding).  Correct annotation of where these functions occurs leads to incorrect inference about the location of the whole protein.  This should probably be weakened to &quot;... -&gt; overlaps&quot;</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
@@ -17839,63 +17802,6 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>From has_ligand to ligand activity</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002327"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002019"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#y"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0002578"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#z"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#x"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/GO_0048018"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#z"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
             </rdf:Description>
         </swrl:head>
     </rdf:Description>
