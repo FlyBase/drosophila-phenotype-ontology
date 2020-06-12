@@ -1398,6 +1398,26 @@
       "type" : "PROPERTY",
       "lbl" : "expand expression to"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000425",
+      "meta" : {
+        "definition" : {
+          "val" : "A macro expansion tag applied to an annotation property which can be expanded into a more detailed axiom.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Chris Mungall"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "expand assertion to"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "ObjectProperty: RO???\nLabel: spatially disjoint from\nAnnotations: expand_assertion_to \"DisjointClasses: (http://purl.obolibrary.org/obo/BFO_0000051 some ?X)  (http://purl.obolibrary.org/obo/BFO_0000051 some ?Y)\"\n"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "expand assertion to"
+    }, {
       "id" : "http://www.w3.org/2000/01/rdf-schema#label",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -1844,10 +1864,10 @@
           "val" : "(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] "
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "an organism"
+          "val" : "a molecule"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "a molecule"
+          "val" : "an organism"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
           "val" : "(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] "
@@ -2437,11 +2457,11 @@
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Need to add axiom to specify that it has at a mimum members of two different species, but not sure how to specify that. Can't say \"('has member' only ('member of' min 2 'species as a collection of organisms'))\"."
-        }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
           "val" : ""
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
+          "val" : "Need to add axiom to specify that it has at a mimum members of two different species, but not sure how to specify that. Can't say \"('has member' only ('member of' min 2 'species as a collection of organisms'))\"."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000123"
@@ -3359,7 +3379,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/dpo/releases/2020-03-26/imports/pco_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/dpo/releases/2020-06-12/imports/pco_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

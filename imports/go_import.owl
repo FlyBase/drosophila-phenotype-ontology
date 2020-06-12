@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/dpo/imports/go_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/dpo/imports/go_import.owl"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:go="http://purl.obolibrary.org/obo/go#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -11,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2020-03-26/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2020-06-12/imports/go_import.owl"/>
     </owl:Ontology>
     
 
@@ -207,18 +206,6 @@
         <rdfs:comment>Yeast GO slim</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/creator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/date -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
@@ -1044,14 +1031,14 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <rdfs:comment>Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code &quot;no data&quot; (ND), is used to indicate this. Despite its name, this is not a type of &apos;function&apos; in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.</rdfs:comment>
+        <rdfs:comment>Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this. Despite its name, this is not a type of &apos;function&apos; in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.</rdfs:comment>
         <rdfs:label>molecular_function</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1217,14 +1204,14 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <rdfs:comment>Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code &quot;no data&quot; (ND), is used to indicate this.</rdfs:comment>
+        <rdfs:comment>Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this.</rdfs:comment>
         <rdfs:label>cellular_component</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1337158144</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -1279,22 +1266,20 @@
     <!-- http://purl.obolibrary.org/obo/GO_0005623 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005623">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <obo:IAO_0000115>The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</obo:IAO_0000115>
+        <obo:IAO_0000115>OBSOLETE. The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</obo:IAO_0000115>
         <obo:IAO_0000589>cell and encapsulating structures</obo:IAO_0000589>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1813327414</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Cell_(biology)</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0005623</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
-        <rdfs:label>cell</rdfs:label>
+        <rdfs:comment>This term was obsoleted because it was redundant with the root class of the cell ontology, CL:0000000.</rdfs:comment>
+        <rdfs:label>obsolete cell</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005623"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</owl:annotatedTarget>
+        <owl:annotatedTarget>OBSOLETE. The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -1562,7 +1547,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006810">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051234"/>
         <obo:IAO_0000115>The directed movement of substances (such as macromolecules, small molecules, ions) or cellular components (such as complexes and organelles) into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter, pore or motor protein.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-12-13T16:25:32Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0015457</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0015460</oboInOwl:hasAlternativeId>
@@ -2047,7 +2032,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022610"/>
         <obo:IAO_0000115>The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.</obo:IAO_0000115>
-        <oboInOwl:created_by>davidos</oboInOwl:created_by>
+        <oboInOwl:created_by>dos</oboInOwl:created_by>
         <oboInOwl:creation_date>2014-04-15T15:59:10Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0098602</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>Wikipedia:Cell_adhesion</oboInOwl:hasDbXref>
@@ -2181,7 +2166,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_signaling_feb11</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_signaling_feb11</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
@@ -2535,7 +2520,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/GO_0032502"/>
         <obo:IAO_0000115>The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-20T14:06:08Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0023032</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044708</oboInOwl:hasAlternativeId>
@@ -2600,7 +2585,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007612"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process in an organism in which a relatively long-lasting adaptive behavioral change occurs as the result of experience.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0721662544</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2621,7 +2606,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2845,7 +2830,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
         <obo:IAO_0000115>Behavior associated with the intake of food.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/18547</obo:IAO_0000233>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-10-27T03:53:33Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044366</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044367</oboInOwl:hasAlternativeId>
@@ -3029,7 +3014,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008150">
         <obo:IAO_0000115>A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T15:05:24Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0000004</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0007582</oboInOwl:hasAlternativeId>
@@ -3050,14 +3035,14 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pombe"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <rdfs:comment>Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code &quot;no data&quot; (ND), is used to indicate this.</rdfs:comment>
+        <rdfs:comment>Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this.</rdfs:comment>
         <rdfs:label>biological_process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3067,7 +3052,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008152">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>The chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances. Metabolic processes typically transform small molecules, but also include macromolecular processes such as DNA repair and replication, and protein synthesis and degradation.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-10-17T15:46:40Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044236</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044710</oboInOwl:hasAlternativeId>
@@ -3245,7 +3230,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a light stimulus, electromagnetic radiation of wavelengths classified as infrared, visible or ultraviolet light.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3459,8 +3444,8 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582015952</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0697037754</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0709408862</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0697037754</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0709408862</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3999,7 +3984,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009987">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>Any process that is carried out at the cellular level, but not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-12-11T16:56:55Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0008151</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044763</oboInOwl:hasAlternativeId>
@@ -4594,7 +4579,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that decreases the rate, frequency or extent of a cellular process that is involved in the progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-04-27T09:53:22Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0010948</oboInOwl:id>
@@ -5067,7 +5052,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048609"/>
         <obo:IAO_0000115>The specific behavior of an organism that is associated with reproduction.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T16:01:37Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0033057</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044704</oboInOwl:hasAlternativeId>
@@ -5340,7 +5325,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A biological process that directly contributes to the process of producing new individuals by one or two organisms. The new individuals inherit some proportion of their genetic material from the parent or parents.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T15:56:06Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044702</oboInOwl:hasAlternativeId>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -5497,7 +5482,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0023052">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>The entirety of a process in which information is transmitted within a biological system. This process begins with an active signal and ends when a cellular response has been triggered.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-02-16T09:30:50Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0023046</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044700</oboInOwl:hasAlternativeId>
@@ -5521,7 +5506,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The entirety of a process in which information is transmitted within a biological system. This process begins with an active signal and ends when a cellular response has been triggered.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_signal</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_signaling_feb11</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_signaling_feb11</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:signaling</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -7123,7 +7108,7 @@
         <obo:IAO_0000115>Any biological process, occurring at the level of a multicellular organism, pertinent to its function.</obo:IAO_0000115>
         <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4896"/>
         <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T16:07:47Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044707</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0050874</oboInOwl:hasAlternativeId>
@@ -7151,7 +7136,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0032502">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>A biological process whose specific outcome is the progression of an integrated living unit: an anatomical structure (which may be a subcellular structure, cell, tissue, or organ), or organism over time from an initial condition to a later condition.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-12-19T12:21:31Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044767</oboInOwl:hasAlternativeId>
         <oboInOwl:hasNarrowSynonym>development</oboInOwl:hasNarrowSynonym>
@@ -7527,7 +7512,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The process in which a signal is passed on to downstream components within the cell, which become activated themselves to further propagate the signal and finally trigger a change in the function or state of the cell.</obo:IAO_0000115>
-        <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-05-14T01:14:37Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0007242</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0007243</oboInOwl:hasAlternativeId>
@@ -7553,13 +7538,13 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bf</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:signaling</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:3527303782</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:3527303782</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0035556"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>intracellular signaling chain</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ISBN:3527303782</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:3527303782</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0035556"/>
@@ -7588,7 +7573,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007617"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048512"/>
         <obo:IAO_0000115>The fluctuation in mating behavior that occurs over an approximately 24 hour cycle.</obo:IAO_0000115>
-        <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-01-25T10:20:05Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>circadian mating behaviour</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>circadian mating rhythm</oboInOwl:hasExactSynonym>
@@ -7625,7 +7610,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0038023">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0060089"/>
         <obo:IAO_0000115>Receiving a signal and transmitting it in the cell to initiate a change in cell activity. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response.</obo:IAO_0000115>
-        <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-08-01T02:45:27Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0004872</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0019041</oboInOwl:hasAlternativeId>
@@ -8146,7 +8131,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The directed movement of a motile cell or organism in response to an external stimulus.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0192801023</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0192801023</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8871,7 +8856,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that stops or reduces the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.</obo:IAO_0000115>
-        <oboInOwl:created_by>jane</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-04-21T04:07:27Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0044092</oboInOwl:id>
@@ -8908,7 +8893,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that activates or increases the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.</obo:IAO_0000115>
-        <oboInOwl:created_by>jane</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-04-21T04:11:06Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0044093</oboInOwl:id>
@@ -9173,7 +9158,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022414"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051704"/>
         <obo:IAO_0000115>A biological process that directly contributes to the process of producing new individuals, involving another organism.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T15:56:30Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0044703</oboInOwl:id>
@@ -10643,7 +10628,7 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115>The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands).</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/14220</obo:IAO_0000233>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-09-13T04:51:59Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0071884</oboInOwl:hasAlternativeId>
         <oboInOwl:hasBroadSynonym>receptor agonist activity</oboInOwl:hasBroadSynonym>
@@ -10662,7 +10647,7 @@
         <owl:annotatedTarget>The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:kv</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:molecular_function_refactoring</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0048018"/>
@@ -11670,6 +11655,28 @@
         <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of behavior, the internally coordinated responses (actions or inactions) of whole living organisms (individuals or groups) to internal or external stimuli.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0050839 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050839">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005515"/>
+        <obo:IAO_0000115>Interacting selectively and non-covalently with a cell adhesion molecule.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>CAM binding</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>adhesive extracellular matrix constituent</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>cell adhesion molecule activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>cell adhesion receptor activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0050839</oboInOwl:id>
+        <rdfs:label>cell adhesion molecule binding</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0050839"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Interacting selectively and non-covalently with a cell adhesion molecule.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14093,7 +14100,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0055115"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The dormancy process that results in entry into diapause. Diapause is a neurohormonally mediated, dynamic state of low metabolic activity. Associated characteristics of this form of dormancy include reduced morphogenesis, increased resistance to environmental extremes, and altered or reduced behavioral activity. Full expression develops in a species-specific manner, usually in response to a number of environmental stimuli that precede unfavorable conditions. Once diapause has begun, metabolic activity is suppressed even if conditions favorable for development prevail. Once initiated, only certain stimuli are capable of releasing the organism from this state, and this characteristic is essential in distinguishing diapause from hibernation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ds</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ds</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -14113,7 +14120,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0055116"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The dormancy process that results in entry into reproductive diapause. Reproductive diapause is a form of diapause where the organism itself will remain fully active, including feeding and other routine activities, but the reproductive organs experience a tissue-specific reduction in metabolism, with characteristic triggering and releasing stimuli.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ds</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ds</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -14156,7 +14163,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A compound molecular function in which an effector function is controlled by one or more regulatory components.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14428,7 +14435,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0061024">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016043"/>
         <obo:IAO_0000115>A process which results in the assembly, arrangement of constituent parts, or disassembly of a membrane. A membrane is a double layer of lipid molecules that encloses all cells, and, in eukaryotes, many organelles; may be a single or double lipid bilayer; also includes associated proteins.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-02-08T02:43:11Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0016044</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044802</oboInOwl:hasAlternativeId>
@@ -14473,7 +14480,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0061025">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0061024"/>
         <obo:IAO_0000115>The membrane organization process that joins two lipid bilayers to form a single membrane.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-02-08T02:48:06Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0006944</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044801</oboInOwl:hasAlternativeId>
@@ -14757,7 +14764,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071684">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032501"/>
         <obo:IAO_0000115>The developmental process in which an organism emerges from a surrounding protective structure such as an egg or pupa case.</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-02-19T04:23:55Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0071684</oboInOwl:id>
@@ -14777,7 +14784,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071704">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon.</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-08T03:32:18Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>organic molecular entity metabolic process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>organic molecular entity metabolism</oboInOwl:hasExactSynonym>
@@ -14800,7 +14807,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071840">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <obo:IAO_0000115>A process that results in the biosynthesis of constituent macromolecules, assembly, arrangement of constituent parts, or disassembly of a cellular component.</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-09-10T01:39:16Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0071841</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>cellular component organisation or biogenesis</oboInOwl:hasExactSynonym>
@@ -14855,7 +14862,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism involving those compounds formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism.</obo:IAO_0000115>
-        <oboInOwl:created_by>donghui</oboInOwl:created_by>
+        <oboInOwl:created_by>dhl</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-04-22T04:30:52Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0080090</oboInOwl:id>
@@ -14892,7 +14899,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of a response to stress. Response to stress is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).</obo:IAO_0000115>
-        <oboInOwl:created_by>donghui</oboInOwl:created_by>
+        <oboInOwl:created_by>dhl</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-05-06T04:51:28Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0080134</oboInOwl:id>
@@ -14932,7 +14939,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of a cellular response to stress. Cellular response to stress is a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating the organism is under stress. The stress is usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).</obo:IAO_0000115>
-        <oboInOwl:created_by>donghui</oboInOwl:created_by>
+        <oboInOwl:created_by>dhl</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-05-06T05:02:52Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0080135</oboInOwl:id>
@@ -14970,7 +14977,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that increases the rate, frequency or extent of a cellular process that is involved in the progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-09-09T11:39:52Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090068</oboInOwl:id>
@@ -14991,7 +14998,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0090148">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0061024"/>
         <obo:IAO_0000115>A process that is carried out at the cellular level which results in the separation of a single continuous membrane into two membranes.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-12-08T03:06:36Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>membrane scission</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -15015,7 +15022,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048284"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0061025"/>
         <obo:IAO_0000115>The joining of two lipid bilayers to form a single organelle membrane.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-12-11T11:44:58Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090174</oboInOwl:id>
@@ -15055,7 +15062,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the rate, frequency or extent of the establishment of planar polarity, the coordinated organization of groups of cells in a tissue, such that they all orient to similar coordinates.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-12-14T10:29:41Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090175</oboInOwl:id>
@@ -15095,7 +15102,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that increases the rate, frequency, or extent of the series of events that restore integrity to a damaged tissue, following an injury.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-22T02:12:03Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090303</oboInOwl:id>
@@ -15116,7 +15123,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006139"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043170"/>
         <obo:IAO_0000115>Any cellular metabolic process involving nucleic acids.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-04-07T10:18:47Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090304</oboInOwl:id>
@@ -15155,7 +15162,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-05-14T10:24:29Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090325</oboInOwl:id>
@@ -15196,7 +15203,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that increases the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-05-14T10:26:58Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090326</oboInOwl:id>
@@ -15237,7 +15244,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that decreases the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-05-14T10:26:58Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090327</oboInOwl:id>
@@ -15268,14 +15275,14 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005488"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050839"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007155"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>The binding by a cell-adhesion protein on the cell surface to an extracellular matrix component, to mediate adhesion of the cell to the external substrate or to another cell.</obo:IAO_0000115>
+        <obo:IAO_0000115>The binding by a cell-adhesion protein on a cell surface to an adhesion molecule on another cell surface, to mediate adhesion of the cell to the external substrate or to another cell.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>cell adhesion molecule</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>protein binding involved in cell adhesion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
@@ -15285,7 +15292,8 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0098631"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The binding by a cell-adhesion protein on the cell surface to an extracellular matrix component, to mediate adhesion of the cell to the external substrate or to another cell.</owl:annotatedTarget>
+        <owl:annotatedTarget>The binding by a cell-adhesion protein on a cell surface to an adhesion molecule on another cell surface, to mediate adhesion of the cell to the external substrate or to another cell.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:vw</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Cell_adhesion</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -18803,7 +18811,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of multicellular organismal development.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-08-05T11:25:59Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:2000026</oboInOwl:id>
@@ -18841,7 +18849,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of animal organ morphogenesis.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-08-05T11:26:27Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>regulation of histogenesis and organogenesis</oboInOwl:hasRelatedSynonym>
@@ -18886,7 +18894,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of cell motility.</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-10-01T09:41:21Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>regulation of cell locomotion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>regulation of movement of a cell</oboInOwl:hasExactSynonym>
@@ -18946,7 +18954,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that stops, prevents, or reduces the frequency, rate or extent of cell motility.</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-10-01T09:41:26Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>negative regulation of cell locomotion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>negative regulation of movement of a cell</oboInOwl:hasExactSynonym>
@@ -19006,7 +19014,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that activates or increases the frequency, rate or extent of cell motility.</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-10-01T09:41:30Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>positive regulation of cell locomotion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>positive regulation of movement of a cell</oboInOwl:hasExactSynonym>
@@ -19064,7 +19072,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of reproductive process.</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-11-10T02:44:02Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:2000241</oboInOwl:id>
@@ -19102,7 +19110,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that stops, prevents, or reduces the frequency, rate or extent of reproductive process.</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-11-10T02:44:05Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:2000242</oboInOwl:id>
@@ -19140,7 +19148,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that activates or increases the frequency, rate or extent of reproductive process.</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-11-10T02:44:08Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:2000243</oboInOwl:id>
@@ -19324,7 +19332,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that stops, prevents or reduces the frequency, rate or extent of a signaling receptor activity.</obo:IAO_0000115>
-        <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-12-02T09:28:47Z</oboInOwl:creation_date>
         <oboInOwl:hasBroadSynonym>negative regulation of receptor activity</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -19363,7 +19371,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that activates or increases the frequency, rate or extent of signaling receptor activity.</obo:IAO_0000115>
-        <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-12-02T09:28:50Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:2000273</oboInOwl:id>
