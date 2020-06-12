@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2020-03-26/imports/fbdv_import.owl
+data-version: dpo/releases/2020-06-12/imports/fbdv_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -1489,8 +1489,6 @@ subset: goslim_drosophila
 subset: goslim_generic
 subset: goslim_yeast
 synonym: "mitosis" RELATED []
-xref: MIPS_funcat:10.03.01
-xref: MIPS_funcat:10.03.01.01
 xref: Wikipedia:Mitosis
 is_a: GO:0007049 ! cell cycle
 intersection_of: GO:0007049 ! cell cycle
@@ -1504,8 +1502,6 @@ namespace: biological_process
 def: "The division of a cell nucleus into two nuclei, with DNA and other nuclear contents distributed between the daughter nuclei." [GOC:mah]
 subset: goslim_pir
 synonym: "karyokinesis" RELATED []
-xref: MIPS_funcat:10.03.04
-xref: MIPS_funcat:10.03.04.07
 is_a: GO:0048285 ! organelle fission
 
 [Term]
@@ -1514,7 +1510,7 @@ name: molecular_function
 namespace: molecular_function
 alt_id: GO:0005554
 def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process." [GOC:pdt]
-comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
+comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -1587,8 +1583,6 @@ subset: goslim_pir
 subset: goslim_plant
 synonym: "glycoprotein binding" NARROW []
 synonym: "protein amino acid binding" EXACT []
-xref: MIPS_funcat:16.01
-xref: MIPS_funcat:18.01.07
 xref: Reactome:R-HSA-170835 "An anchoring protein, ZFYVE9 (SARA), recruits SMAD2/3"
 xref: Reactome:R-HSA-170846 "TGFBR2 recruits TGFBR1"
 is_a: GO:0005488 ! binding
@@ -1609,7 +1603,6 @@ namespace: biological_process
 def: "The chemical reactions and pathways involving the phosphate group, the anion or salt of any phosphoric acid." [GOC:ai]
 synonym: "phosphate metabolic process" RELATED []
 synonym: "phosphate metabolism" EXACT []
-xref: MIPS_funcat:01.04
 is_a: GO:0006793 ! phosphorus metabolic process
 
 [Term]
@@ -1644,8 +1637,6 @@ subset: goslim_generic
 subset: goslim_pir
 subset: goslim_plant
 synonym: "cell-division cycle" EXACT []
-xref: MIPS_funcat:10
-xref: MIPS_funcat:10.03
 xref: Wikipedia:Cell_cycle
 is_a: GO:0009987 ! cellular process
 
@@ -1689,7 +1680,6 @@ synonym: "signaling cascade" NARROW []
 synonym: "signaling pathway" RELATED []
 synonym: "signalling cascade" NARROW []
 synonym: "signalling pathway" RELATED [GOC:mah]
-xref: MIPS_funcat:30
 xref: Wikipedia:Signal_transduction
 is_a: GO:0009987 ! cellular process
 is_a: GO:0050794 ! regulation of cellular process
@@ -1705,7 +1695,6 @@ def: "The biological process whose specific outcome is the progression of a mult
 comment: Note that this term was 'developmental process'.
 subset: goslim_chembl
 subset: goslim_plant
-xref: MIPS_funcat:41
 is_a: GO:0032501 ! multicellular organismal process
 is_a: GO:0048856 ! anatomical structure development
 
@@ -1733,7 +1722,7 @@ alt_id: GO:0000004
 alt_id: GO:0007582
 alt_id: GO:0044699
 def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
-comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -1749,7 +1738,7 @@ synonym: "single organism process" RELATED []
 synonym: "single-organism process" RELATED []
 xref: Wikipedia:Biological_process
 is_a: BFO:0000015 ! process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T15:05:24Z
 
 [Term]
@@ -1770,10 +1759,9 @@ synonym: "metabolism" EXACT []
 synonym: "metabolism resulting in cell growth" NARROW []
 synonym: "multicellular organism metabolic process" NARROW []
 synonym: "single-organism metabolic process" RELATED []
-xref: MIPS_funcat:01
 xref: Wikipedia:Metabolism
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-10-17T15:46:40Z
 
 [Term]
@@ -1922,7 +1910,7 @@ synonym: "cell physiology" EXACT []
 synonym: "cellular physiological process" EXACT []
 synonym: "single-organism cellular process" RELATED []
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-12-11T16:56:55Z
 
 [Term]
@@ -2037,7 +2025,7 @@ is_a: GO:0045786 ! negative regulation of cell cycle
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0022402 ! cell cycle process
 relationship: negatively_regulates GO:0022402 ! cell cycle process
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2009-04-27T09:53:22Z
 
 [Term]
@@ -2057,8 +2045,6 @@ synonym: "cellular component organisation at cellular level" EXACT [GOC:mah]
 synonym: "cellular component organisation in other organism" EXACT [GOC:mah]
 synonym: "cellular component organization at cellular level" EXACT []
 synonym: "cellular component organization in other organism" EXACT []
-xref: MIPS_funcat:42
-is_a: GO:0009987 ! cellular process
 is_a: GO:0071840 ! cellular component organization or biogenesis
 
 [Term]
@@ -2189,7 +2175,7 @@ synonym: "signalling" EXACT []
 synonym: "signalling process" RELATED [GOC:mah]
 synonym: "single organism signaling" RELATED []
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2010-02-16T09:30:50Z
 
 [Term]
@@ -2225,7 +2211,6 @@ id: GO:0030545
 name: receptor regulator activity
 namespace: molecular_function
 def: "The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is changed." [GOC:ceb]
-xref: MIPS_funcat:18.02.07
 is_a: GO:0098772 ! molecular function regulator
 
 [Term]
@@ -2327,7 +2312,7 @@ synonym: "single-multicellular organism process" RELATED []
 is_a: GO:0008150 ! biological_process
 property_value: RO:0002161 NCBITaxon:4896
 property_value: RO:0002161 NCBITaxon:4932
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T16:07:47Z
 
 [Term]
@@ -2343,7 +2328,7 @@ subset: goslim_pir
 synonym: "development" NARROW []
 synonym: "single-organism developmental process" RELATED []
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-12-19T12:21:31Z
 
 [Term]
@@ -2411,7 +2396,7 @@ subset: goslim_plant
 synonym: "receptor activity" BROAD []
 synonym: "receptor activity involved in signal transduction" EXACT [GOC:bf]
 is_a: GO:0060089 ! molecular transducer activity
-created_by: rfoulger
+created_by: bf
 creation_date: 2011-08-01T02:45:27Z
 
 [Term]
@@ -2491,7 +2476,6 @@ synonym: "up-regulation of enzyme activity" EXACT []
 synonym: "up-regulation of metalloenzyme activity" NARROW []
 synonym: "upregulation of enzyme activity" EXACT []
 synonym: "upregulation of metalloenzyme activity" NARROW []
-xref: MIPS_funcat:18.02.01.01
 is_a: GO:0044093 ! positive regulation of molecular function
 is_a: GO:0050790 ! regulation of catalytic activity
 intersection_of: GO:0008150 ! biological_process
@@ -2550,7 +2534,7 @@ is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0003674 ! molecular_function
 relationship: negatively_regulates GO:0003674 ! molecular_function
-created_by: jane
+created_by: jl
 creation_date: 2009-04-21T04:07:27Z
 
 [Term]
@@ -2562,7 +2546,7 @@ is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0003674 ! molecular_function
 relationship: positively_regulates GO:0003674 ! molecular_function
-created_by: jane
+created_by: jl
 creation_date: 2009-04-21T04:11:06Z
 
 [Term]
@@ -2795,7 +2779,6 @@ name: receptor ligand activity
 namespace: molecular_function
 alt_id: GO:0071884
 def: "The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands)." [GOC:kv, GOC:molecular_function_refactoring, GOC:pdt]
-comment: Definition discussed in https://github.com/geneontology/go-ontology/issues/14220
 subset: goslim_chembl
 subset: goslim_drosophila
 synonym: "receptor agonist activity" BROAD [GOC:molecular_function_refactoring]
@@ -2805,7 +2788,8 @@ synonym: "vitamin D receptor activator activity" NARROW []
 is_a: GO:0005102 ! signaling receptor binding
 is_a: GO:0030546 ! signaling receptor activator activity
 relationship: part_of GO:0007165 ! signal transduction
-created_by: midori
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/14220 xsd:anyURI
+created_by: mah
 creation_date: 2010-09-13T04:51:59Z
 
 [Term]
@@ -2970,7 +2954,6 @@ def: "Any process that modulates the activity of an enzyme." [GOC:ai, GOC:ebc, G
 subset: goslim_chembl
 synonym: "regulation of enzyme activity" EXACT []
 synonym: "regulation of metalloenzyme activity" NARROW []
-xref: MIPS_funcat:18.02.01
 is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0003824 ! catalytic activity
@@ -3011,7 +2994,6 @@ subset: goslim_flybase_ribbon
 subset: goslim_mouse
 subset: goslim_pir
 synonym: "physiological response to stimulus" EXACT []
-xref: MIPS_funcat:34.11
 is_a: GO:0008150 ! biological_process
 
 [Term]
@@ -3352,8 +3334,8 @@ subset: goslim_metagenomics
 synonym: "cellular component organisation or biogenesis" EXACT [GOC:mah]
 synonym: "cellular component organisation or biogenesis at cellular level" EXACT [GOC:mah]
 synonym: "cellular component organization or biogenesis at cellular level" EXACT []
-is_a: GO:0008150 ! biological_process
-created_by: midori
+is_a: GO:0009987 ! cellular process
+created_by: mah
 creation_date: 2010-09-10T01:39:16Z
 
 [Term]
@@ -3366,7 +3348,7 @@ is_a: GO:0045787 ! positive regulation of cell cycle
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0022402 ! cell cycle process
 relationship: positively_regulates GO:0022402 ! cell cycle process
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2009-09-09T11:39:52Z
 
 [Term]
@@ -3463,7 +3445,7 @@ is_a: GO:0051239 ! regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0007275 ! multicellular organism development
 relationship: regulates GO:0007275 ! multicellular organism development
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2010-08-05T11:25:59Z
 
 [Term]
@@ -3477,7 +3459,7 @@ is_a: GO:0044092 ! negative regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0038023 ! signaling receptor activity
 relationship: negatively_regulates GO:0038023 ! signaling receptor activity
-created_by: rfoulger
+created_by: bf
 creation_date: 2010-12-02T09:28:47Z
 
 [Term]
@@ -3490,7 +3472,7 @@ is_a: GO:0044093 ! positive regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0038023 ! signaling receptor activity
 relationship: positively_regulates GO:0038023 ! signaling receptor activity
-created_by: rfoulger
+created_by: bf
 creation_date: 2010-12-02T09:28:50Z
 
 [Term]
@@ -4858,5 +4840,5 @@ comment: Creating this relation as a temporary fix, pending adding the axiom occ
 xref: FBdv:00018001
 is_transitive: true
 is_a: happens_during ! happens during
-is_a: occurent_part_of ! occurent_part_of
+is_a: occurent_part_of ! occurent part of
 

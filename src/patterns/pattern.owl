@@ -8,6 +8,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 Ontology(<urn:unnamed:ontology#ont1>
 
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CARO_0010004>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24431>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00000001>))
@@ -130,7 +132,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalShapeOfPhysicalEntity.yaml> "abnormalShapeOfPhysicalEntity"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalShapeOfPhysicalEntity.yaml> "abnormally shaped 'entity'"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalShapeOfPhysicalEntity.yaml> "abnormal shape of 'entity' "^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalShapeOfPhysicalEntity.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000052> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> owl:Thing) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalShapeOfPhysicalEntity.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000052> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/BFO_0000002>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
 
 # Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalSizeOfAnatomicalEntity.yaml> (abnormal size of 'anatomical entity')
 
@@ -176,7 +178,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedResistanceOfWholeOrganismToEntity.yaml> "abnormallyDecreasedResistanceOfWholeOrganismToEntity.yaml"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedResistanceOfWholeOrganismToEntity.yaml> "increased sensitivity of organism to 'entity'"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedResistanceOfWholeOrganismToEntity.yaml> "decreased resistance of organism to 'entity'"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedResistanceOfWholeOrganismToEntity.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001651> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CARO_0010004>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002503> owl:Thing) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedResistanceOfWholeOrganismToEntity.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001651> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CARO_0010004>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002503> <http://purl.obolibrary.org/obo/BFO_0000001>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
 
 # Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyDecreasedSizeOfAnatomicalEntity.yaml> (decreased size of the 'anatomical entity')
 
@@ -222,7 +224,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedResistanceOfWholeOrganismToEntity.yaml> "abnormallyIncreasedResistanceOfWholeOrganismToEntity.yaml"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedResistanceOfWholeOrganismToEntity.yaml> "decreased sensitivity of organism to 'entity'"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedResistanceOfWholeOrganismToEntity.yaml> "increased resistance of organism to 'entity'"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedResistanceOfWholeOrganismToEntity.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001650> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CARO_0010004>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002503> owl:Thing) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
+EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedResistanceOfWholeOrganismToEntity.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001650> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CARO_0010004>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002503> <http://purl.obolibrary.org/obo/BFO_0000001>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
 
 # Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncreasedSizeOfAnatomicalEntity.yaml> (increased size of the 'anatomical entity')
 

@@ -18,7 +18,7 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo/imports/fbdv_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2020-03-26/imports/fbdv_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2020-06-12/imports/fbdv_import.owl"/>
     </owl:Ontology>
     
 
@@ -119,6 +119,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000233 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412">
@@ -136,6 +142,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000425 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000425"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000589 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000589">
@@ -150,6 +162,12 @@
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000600">
         <rdfs:label xml:lang="en">elucidation</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000700 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000700"/>
     
 
 
@@ -173,7 +191,16 @@
 
     <!-- http://purl.obolibrary.org/obo/RO_0002161 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002161"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002161">
+        <obo:IAO_0000112>tooth SubClassOf &apos;never in taxon&apos; value &apos;Aves&apos;</obo:IAO_0000112>
+        <obo:IAO_0000115>x never in taxon T if and only if T is a class, and x does not instantiate the class expression &quot;in taxon some T&quot;. Note that this is a shortcut relation, and should be used as a hasValue restriction in OWL.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/17921072"/>
+        <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/20973947"/>
+        <obo:IAO_0000425>?X DisjointWith RO_0002162 some ?Y </obo:IAO_0000425>
+        <rdfs:label>never in taxon</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://github.com/obophenotype/uberon/wiki/Taxon-constraints"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -7327,8 +7354,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         </rdfs:subClassOf>
         <obo:IAO_0000115>Progression through the phases of the mitotic cell cycle, the most common eukaryotic cell cycle, which canonically comprises four successive phases called G1, S, G2, and M and includes replication of the genome and the subsequent segregation of chromosomes into daughter cells. In some variant cell cycles nuclear replication or nuclear division may not be followed by cell division, or G1 and G2 phases may be absent.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0007067</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:10.03.01</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:10.03.01.01</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Mitosis</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>mitosis</oboInOwl:hasRelatedSynonym>
@@ -7355,8 +7380,6 @@ For example, A and B may be gene products and binding of B by A positively regul
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0000280">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048285"/>
         <obo:IAO_0000115>The division of a cell nucleus into two nuclei, with DNA and other nuclear contents distributed between the daughter nuclei.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:10.03.04</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:10.03.04.07</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>karyokinesis</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0000280</oboInOwl:id>
@@ -7390,7 +7413,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <rdfs:comment>Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code &quot;no data&quot; (ND), is used to indicate this. Despite its name, this is not a type of &apos;function&apos; in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.</rdfs:comment>
+        <rdfs:comment>Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this. Despite its name, this is not a type of &apos;function&apos; in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.</rdfs:comment>
         <rdfs:label>molecular_function</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -7509,8 +7532,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         <obo:IAO_0000115>Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules).</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0001948</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0045308</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:16.01</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:18.01.07</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-170835</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-170846</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>protein amino acid binding</oboInOwl:hasExactSynonym>
@@ -7571,7 +7592,6 @@ For example, A and B may be gene products and binding of B by A positively regul
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006796">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006793"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving the phosphate group, the anion or salt of any phosphoric acid.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:01.04</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>phosphate metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>phosphate metabolic process</oboInOwl:hasRelatedSynonym>
@@ -7634,8 +7654,6 @@ For example, A and B may be gene products and binding of B by A positively regul
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007049">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <obo:IAO_0000115>The progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events. Canonically, the cell cycle comprises the replication and segregation of genetic material followed by the division of the cell, but in endocycles or syncytial cells nuclear replication or nuclear division may not be followed by cell division.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:10</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:10.03</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Cell_cycle</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>cell-division cycle</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -7745,7 +7763,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         </rdfs:subClassOf>
         <obo:IAO_0000115>The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0023033</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:30</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Signal_transduction</oboInOwl:hasDbXref>
         <oboInOwl:hasNarrowSynonym>signaling cascade</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>signalling cascade</oboInOwl:hasNarrowSynonym>
@@ -7784,7 +7801,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032501"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048856"/>
         <obo:IAO_0000115>The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult).</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:41</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0007275</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
@@ -7859,7 +7875,7 @@ For example, A and B may be gene products and binding of B by A positively regul
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008150">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <obo:IAO_0000115>A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T15:05:24Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0000004</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0007582</oboInOwl:hasAlternativeId>
@@ -7880,7 +7896,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pombe"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <rdfs:comment>Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code &quot;no data&quot; (ND), is used to indicate this.</rdfs:comment>
+        <rdfs:comment>Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this.</rdfs:comment>
         <rdfs:label>biological_process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -7897,11 +7913,10 @@ For example, A and B may be gene products and binding of B by A positively regul
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008152">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>The chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances. Metabolic processes typically transform small molecules, but also include macromolecular processes such as DNA repair and replication, and protein synthesis and degradation.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-10-17T15:46:40Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044236</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044710</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:01</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Metabolism</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>metabolic process resulting in cell growth</oboInOwl:hasNarrowSynonym>
@@ -8255,7 +8270,7 @@ For example, A and B may be gene products and binding of B by A positively regul
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009987">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>Any process that is carried out at the cellular level, but not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-12-11T16:56:55Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0008151</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044763</oboInOwl:hasAlternativeId>
@@ -8662,7 +8677,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that decreases the rate, frequency or extent of a cellular process that is involved in the progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-04-27T09:53:22Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0010948</oboInOwl:id>
@@ -8681,12 +8696,10 @@ For example, A and B may be gene products and binding of B by A positively regul
     <!-- http://purl.obolibrary.org/obo/GO_0016043 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016043">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071840"/>
         <obo:IAO_0000115>A process that results in the assembly, arrangement of constituent parts, or disassembly of a cellular component.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0044235</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0071842</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:42</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>cell organisation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>cellular component organisation at cellular level</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>cellular component organisation in other organism</oboInOwl:hasExactSynonym>
@@ -9061,7 +9074,7 @@ For example, A and B may be gene products and binding of B by A positively regul
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0023052">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>The entirety of a process in which information is transmitted within a biological system. This process begins with an active signal and ends when a cellular response has been triggered.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-02-16T09:30:50Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0023046</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044700</oboInOwl:hasAlternativeId>
@@ -9204,7 +9217,6 @@ For example, A and B may be gene products and binding of B by A positively regul
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030545">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0098772"/>
         <obo:IAO_0000115>The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is changed.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:18.02.07</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0030545</oboInOwl:id>
         <rdfs:label>receptor regulator activity</rdfs:label>
@@ -9447,7 +9459,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <obo:IAO_0000115>Any biological process, occurring at the level of a multicellular organism, pertinent to its function.</obo:IAO_0000115>
         <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4896"/>
         <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T16:07:47Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044707</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0050874</oboInOwl:hasAlternativeId>
@@ -9475,7 +9487,7 @@ For example, A and B may be gene products and binding of B by A positively regul
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0032502">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>A biological process whose specific outcome is the progression of an integrated living unit: an anatomical structure (which may be a subcellular structure, cell, tissue, or organ), or organism over time from an initial condition to a later condition.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-12-19T12:21:31Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044767</oboInOwl:hasAlternativeId>
         <oboInOwl:hasNarrowSynonym>development</oboInOwl:hasNarrowSynonym>
@@ -9636,7 +9648,7 @@ For example, A and B may be gene products and binding of B by A positively regul
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0038023">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0060089"/>
         <obo:IAO_0000115>Receiving a signal and transmitting it in the cell to initiate a change in cell activity. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response.</obo:IAO_0000115>
-        <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-08-01T02:45:27Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0004872</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0019041</oboInOwl:hasAlternativeId>
@@ -9852,7 +9864,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that activates or increases the activity of an enzyme.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0048554</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:18.02.01.01</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>positive regulation of enzyme activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>up regulation of enzyme activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>up-regulation of enzyme activity</oboInOwl:hasExactSynonym>
@@ -10037,7 +10048,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that stops or reduces the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.</obo:IAO_0000115>
-        <oboInOwl:created_by>jane</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-04-21T04:07:27Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0044092</oboInOwl:id>
@@ -10047,7 +10058,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044092"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that stops or reduces the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GO:jl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10074,7 +10085,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that activates or increases the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.</obo:IAO_0000115>
-        <oboInOwl:created_by>jane</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-04-21T04:11:06Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0044093</oboInOwl:id>
@@ -10084,7 +10095,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044093"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that activates or increases the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GO:jl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10719,7 +10730,8 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands).</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/14220</obo:IAO_0000233>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-09-13T04:51:59Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0071884</oboInOwl:hasAlternativeId>
         <oboInOwl:hasBroadSynonym>receptor agonist activity</oboInOwl:hasBroadSynonym>
@@ -10730,7 +10742,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:id>GO:0048018</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
-        <rdfs:comment>Definition discussed in https://github.com/geneontology/go-ontology/issues/14220</rdfs:comment>
         <rdfs:label>receptor ligand activity</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11149,7 +11160,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the activity of an enzyme.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0048552</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:18.02.01</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>regulation of enzyme activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>regulation of metalloenzyme activity</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -11246,7 +11256,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus. The process begins with detection of the stimulus and ends with a change in state or activity or the cell or organism.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0051869</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>physiological response to stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0050896</oboInOwl:id>
@@ -12178,9 +12187,9 @@ For example, A and B may be gene products and binding of B by A positively regul
     <!-- http://purl.obolibrary.org/obo/GO_0071840 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071840">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <obo:IAO_0000115>A process that results in the biosynthesis of constituent macromolecules, assembly, arrangement of constituent parts, or disassembly of a cellular component.</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-09-10T01:39:16Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0071841</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>cellular component organisation or biogenesis</oboInOwl:hasExactSynonym>
@@ -12236,7 +12245,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that increases the rate, frequency or extent of a cellular process that is involved in the progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-09-09T11:39:52Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090068</oboInOwl:id>
@@ -12561,7 +12570,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of multicellular organismal development.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-08-05T11:25:59Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:2000026</oboInOwl:id>
@@ -12599,7 +12608,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that stops, prevents or reduces the frequency, rate or extent of a signaling receptor activity.</obo:IAO_0000115>
-        <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-12-02T09:28:47Z</oboInOwl:creation_date>
         <oboInOwl:hasBroadSynonym>negative regulation of receptor activity</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -12638,7 +12647,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that activates or increases the frequency, rate or extent of signaling receptor activity.</obo:IAO_0000115>
-        <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-12-02T09:28:50Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:2000273</oboInOwl:id>

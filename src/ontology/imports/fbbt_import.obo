@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2020-03-26/imports/fbbt_import.owl
+data-version: dpo/releases/2020-06-12/imports/fbbt_import.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: attribute_slim "Attribute slim"
 subsetdef: cell_quality "cell_quality"
@@ -1176,7 +1176,6 @@ subset: FB_gloss
 subset: larval_OF
 xref: CARO:0000013
 xref: CL:0000000
-xref: GO:0005623
 is_a: FBbt:00007001 ! anatomical structure
 disjoint_from: FBbt:00100313 ! multicellular structure
 
@@ -1586,7 +1585,7 @@ name: molecular_function
 namespace: molecular_function
 alt_id: GO:0005554
 def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process." [GOC:pdt]
-comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
+comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -1669,7 +1668,7 @@ name: cellular_component
 namespace: cellular_component
 alt_id: GO:0008372
 def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao1337158144]
-comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -1702,16 +1701,14 @@ is_a: GO:0005575 ! cellular_component
 
 [Term]
 id: GO:0005623
-name: cell
+name: obsolete cell
 namespace: cellular_component
-def: "The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." [GOC:go_curators]
-subset: goslim_chembl
-subset: goslim_generic
-subset: goslim_plant
+def: "OBSOLETE. The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." [GOC:go_curators]
+comment: This term was obsoleted because it was redundant with the root class of the cell ontology, CL:0000000.
 xref: NIF_Subcellular:sao1813327414
 xref: Wikipedia:Cell_(biology)
-is_a: GO:0005575 ! cellular_component
 property_value: IAO:0000589 "cell and encapsulating structures" xsd:string
+is_obsolete: true
 
 [Term]
 id: GO:0005634
@@ -1777,7 +1774,7 @@ synonym: "single-organism transport" RELATED []
 synonym: "small molecule transport" NARROW []
 synonym: "solute:solute exchange" NARROW []
 is_a: GO:0051234 ! establishment of localization
-created_by: janelomax
+created_by: jl
 creation_date: 2012-12-13T16:25:32Z
 
 [Term]
@@ -1952,7 +1949,7 @@ synonym: "single-organism behavior" RELATED []
 xref: Wikipedia:Behavior
 is_a: GO:0050896 ! response to stimulus
 disjoint_from: GO:0032502 ! developmental process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-20T14:06:08Z
 
 [Term]
@@ -2097,8 +2094,8 @@ synonym: "injection of substance into other organism during feeding on blood of 
 synonym: "taking of blood meal" NARROW []
 xref: Wikipedia:List_of_feeding_behaviours
 is_a: GO:0007610 ! behavior
-property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/18547 xsd:anyURI
-created_by: janelomax
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/18547 xsd:anyURI
+created_by: jl
 creation_date: 2011-10-27T03:53:33Z
 
 [Term]
@@ -2161,7 +2158,7 @@ alt_id: GO:0000004
 alt_id: GO:0007582
 alt_id: GO:0044699
 def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
-comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -2177,7 +2174,7 @@ synonym: "single organism process" RELATED []
 synonym: "single-organism process" RELATED []
 xref: Wikipedia:Biological_process
 is_a: BFO:0000015 ! process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T15:05:24Z
 
 [Term]
@@ -2200,7 +2197,7 @@ synonym: "multicellular organism metabolic process" NARROW []
 synonym: "single-organism metabolic process" RELATED []
 xref: Wikipedia:Metabolism
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-10-17T15:46:40Z
 
 [Term]
@@ -2299,7 +2296,7 @@ subset: goslim_metagenomics
 subset: goslim_plant
 synonym: "response to abiotic stress" NARROW []
 is_a: GO:0050896 ! response to stimulus
-property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/16572 xsd:anyURI
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/16572 xsd:anyURI
 
 [Term]
 id: GO:0009629
@@ -2441,7 +2438,7 @@ synonym: "cell physiology" EXACT []
 synonym: "cellular physiological process" EXACT []
 synonym: "single-organism cellular process" RELATED []
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-12-11T16:56:55Z
 
 [Term]
@@ -2602,7 +2599,7 @@ is_a: GO:0007610 ! behavior
 is_a: GO:0048609 ! multicellular organismal reproductive process
 intersection_of: GO:0007610 ! behavior
 intersection_of: part_of GO:0000003 ! reproduction
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T16:01:37Z
 
 [Term]
@@ -2664,7 +2661,7 @@ is_a: GO:0008150 ! biological_process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: part_of GO:0000003 ! reproduction
 relationship: part_of GO:0000003 ! reproduction
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T15:56:06Z
 
 [Term]
@@ -2699,7 +2696,7 @@ synonym: "signalling" EXACT []
 synonym: "signalling process" RELATED [GOC:mah]
 synonym: "single organism signaling" RELATED []
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2010-02-16T09:30:50Z
 
 [Term]
@@ -3101,7 +3098,7 @@ synonym: "single-multicellular organism process" RELATED []
 is_a: GO:0008150 ! biological_process
 property_value: RO:0002161 NCBITaxon:4896
 property_value: RO:0002161 NCBITaxon:4932
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T16:07:47Z
 
 [Term]
@@ -3117,7 +3114,7 @@ subset: goslim_pir
 synonym: "development" NARROW []
 synonym: "single-organism developmental process" RELATED []
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-12-19T12:21:31Z
 
 [Term]
@@ -3213,7 +3210,7 @@ is_a: GO:0007165 ! signal transduction
 intersection_of: GO:0007165 ! signal transduction
 intersection_of: occurs_in GO:0005622 ! intracellular
 relationship: occurs_in GO:0005622 ! intracellular
-created_by: rfoulger
+created_by: bf
 creation_date: 2010-05-14T01:14:37Z
 
 [Term]
@@ -3234,7 +3231,7 @@ subset: goslim_plant
 synonym: "receptor activity" BROAD []
 synonym: "receptor activity involved in signal transduction" EXACT [GOC:bf]
 is_a: GO:0060089 ! molecular transducer activity
-created_by: rfoulger
+created_by: bf
 creation_date: 2011-08-01T02:45:27Z
 
 [Term]
@@ -3584,7 +3581,7 @@ is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0003674 ! molecular_function
 relationship: negatively_regulates GO:0003674 ! molecular_function
-created_by: jane
+created_by: jl
 creation_date: 2009-04-21T04:07:27Z
 
 [Term]
@@ -3596,7 +3593,7 @@ is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0003674 ! molecular_function
 relationship: positively_regulates GO:0003674 ! molecular_function
-created_by: jane
+created_by: jl
 creation_date: 2009-04-21T04:11:06Z
 
 [Term]
@@ -3642,7 +3639,7 @@ namespace: biological_process
 def: "A biological process that directly contributes to the process of producing new individuals, involving another organism." [GOC:jl]
 is_a: GO:0022414 ! reproductive process
 is_a: GO:0051704 ! multi-organism process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T15:56:30Z
 
 [Term]
@@ -3772,8 +3769,8 @@ synonym: "vitamin D receptor activator activity" NARROW []
 is_a: GO:0005102 ! signaling receptor binding
 is_a: GO:0030546 ! signaling receptor activator activity
 relationship: part_of GO:0007165 ! signal transduction
-property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/14220 xsd:anyURI
-created_by: midori
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/14220 xsd:anyURI
+created_by: mah
 creation_date: 2010-09-13T04:51:59Z
 
 [Term]
@@ -4073,7 +4070,7 @@ synonym: "neurological system process" EXACT []
 synonym: "neurophysiological process" EXACT []
 synonym: "pan-neural process" RELATED []
 is_a: GO:0003008 ! system process
-property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/13824 xsd:anyURI
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/13824 xsd:anyURI
 
 [Term]
 id: GO:0050890
@@ -4647,7 +4644,7 @@ name: organism emergence from protective structure
 namespace: biological_process
 def: "The developmental process in which an organism emerges from a surrounding protective structure such as an egg or pupa case." [GOC:mah]
 is_a: GO:0032501 ! multicellular organismal process
-created_by: midori
+created_by: mah
 creation_date: 2010-02-19T04:23:55Z
 
 [Term]
@@ -4659,7 +4656,7 @@ synonym: "organic molecular entity metabolic process" EXACT []
 synonym: "organic molecular entity metabolism" EXACT []
 synonym: "organic substance metabolism" EXACT []
 is_a: GO:0008152 ! metabolic process
-created_by: midori
+created_by: mah
 creation_date: 2010-03-08T03:32:18Z
 
 [Term]
@@ -4671,7 +4668,7 @@ is_a: GO:0019222 ! regulation of metabolic process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0044238 ! primary metabolic process
 relationship: regulates GO:0044238 ! primary metabolic process
-created_by: donghui
+created_by: dhl
 creation_date: 2009-04-22T04:30:52Z
 
 [Term]
@@ -4685,7 +4682,7 @@ is_a: GO:0048583 ! regulation of response to stimulus
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0006950 ! response to stress
 relationship: regulates GO:0006950 ! response to stress
-created_by: donghui
+created_by: dhl
 creation_date: 2009-05-06T04:51:28Z
 
 [Term]
@@ -4698,7 +4695,7 @@ is_a: GO:0050795 ! regulation of behavior
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0031987 ! locomotion involved in locomotory behavior
 relationship: regulates GO:0031987 ! locomotion involved in locomotory behavior
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2010-05-14T10:24:29Z
 
 [Term]
@@ -4712,7 +4709,7 @@ is_a: GO:0090325 ! regulation of locomotion involved in locomotory behavior
 intersection_of: GO:0050789 ! regulation of biological process
 intersection_of: positively_regulates GO:0031987 ! locomotion involved in locomotory behavior
 relationship: positively_regulates GO:0031987 ! locomotion involved in locomotory behavior
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2010-05-14T10:26:58Z
 
 [Term]
@@ -4726,7 +4723,7 @@ is_a: GO:0090325 ! regulation of locomotion involved in locomotory behavior
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0031987 ! locomotion involved in locomotory behavior
 relationship: negatively_regulates GO:0031987 ! locomotion involved in locomotory behavior
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2010-05-14T10:26:58Z
 
 [Term]
@@ -5049,7 +5046,7 @@ is_a: GO:0051239 ! regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0007275 ! multicellular organism development
 relationship: regulates GO:0007275 ! multicellular organism development
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2010-08-05T11:25:59Z
 
 [Term]
@@ -5061,7 +5058,7 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0022414 ! reproductive process
 relationship: regulates GO:0022414 ! reproductive process
-created_by: midori
+created_by: mah
 creation_date: 2010-11-10T02:44:02Z
 
 [Term]
@@ -5074,7 +5071,7 @@ is_a: GO:2000241 ! regulation of reproductive process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0022414 ! reproductive process
 relationship: negatively_regulates GO:0022414 ! reproductive process
-created_by: midori
+created_by: mah
 creation_date: 2010-11-10T02:44:05Z
 
 [Term]
@@ -5087,7 +5084,7 @@ is_a: GO:2000241 ! regulation of reproductive process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0022414 ! reproductive process
 relationship: positively_regulates GO:0022414 ! reproductive process
-created_by: midori
+created_by: mah
 creation_date: 2010-11-10T02:44:08Z
 
 [Term]
@@ -5137,7 +5134,7 @@ is_a: GO:0044092 ! negative regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0038023 ! signaling receptor activity
 relationship: negatively_regulates GO:0038023 ! signaling receptor activity
-created_by: rfoulger
+created_by: bf
 creation_date: 2010-12-02T09:28:47Z
 
 [Term]
@@ -5150,7 +5147,7 @@ is_a: GO:0044093 ! positive regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0038023 ! signaling receptor activity
 relationship: positively_regulates GO:0038023 ! signaling receptor activity
-created_by: rfoulger
+created_by: bf
 creation_date: 2010-12-02T09:28:50Z
 
 [Term]
@@ -6769,4 +6766,12 @@ property_value: seeAlso Ontology:extensions
 domain: GO:0008150 ! biological_process
 range: CARO:0000003 ! connected anatomical structure
 is_a: RO:0002324 ! developmentally related to
+
+[Typedef]
+id: term_tracker_item
+name: term tracker item
+namespace: external
+xref: IAO:0000233
+is_metadata_tag: true
+is_class_level: true
 

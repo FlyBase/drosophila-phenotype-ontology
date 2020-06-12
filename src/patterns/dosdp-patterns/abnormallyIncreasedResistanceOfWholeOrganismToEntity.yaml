@@ -3,13 +3,13 @@ pattern_iri: http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormallyIncrea
 description: "A phenotype in which an organism shows increased resistance to something, for example radition."
 
 contributors:
-  - https://orcid.org/0000-0002-7356-1779
-
+- https://orcid.org/0000-0002-7356-1779
+- https://orcid.org/0000-0002-3528-5267
 classes:
   increased resistance to: PATO:0001650
   abnormal: PATO:0000460
   cellular organism: CARO:0010004
-  entity: owl:Thing
+  entity: BFO:0000001
 
 relations:
   inheres_in: RO:0000052
@@ -26,20 +26,20 @@ vars:
 name:
   text: "increased resistance of organism to %s"
   vars:
-    - entity
+  - entity
 
 annotations:
 - annotationProperty: exact_synonym
   text: "decreased sensitivity of organism to %s"
   vars:
-    - entity
+  - entity
 
 def:
   text: "Increased resistance of organism to %s."
   vars:
-    - entity
+  - entity
 
 equivalentTo:
   text: "'has_part' some ('increased resistance to' and ('inheres_in' some 'cellular organism') and ('towards' some %s) and ('has_modifier' some 'abnormal'))"
   vars:
-    - entity
+  - entity

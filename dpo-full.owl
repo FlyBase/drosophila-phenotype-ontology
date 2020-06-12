@@ -30,8 +30,9 @@
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
      xmlns:oboInOwl1="ttp://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo/dpo-full.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2020-03-26/dpo-full.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2020-06-12/dpo-full.owl"/>
         <ns:attributionURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dx.doi.org/10.1186/2041-1480-4-30</ns:attributionURL>
+        <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000347"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0002-1373-1705</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0002-7073-9172</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5948-3092</dc:creator>
@@ -39,7 +40,7 @@
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontology for the description of Drosophila melanogaster phenotypes.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drosophila Phenotype Ontology (DPO)</dc:title>
         <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/3.0/</terms:license>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26:03:2020 15:02</oboInOwl:date>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12:06:2020 08:58</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase miscellaneous CV</oboInOwl:default-namespace>
     </owl:Ontology>
     
@@ -317,7 +318,17 @@ Annotations: IAO_0000424 &quot;http://purl.obolibrary.org/obo/BFO_0000051 some (
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000425 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000425"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000425">
+        <obo:IAO_0000111 xml:lang="en">expand assertion to</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">ObjectProperty: RO???
+Label: spatially disjoint from
+Annotations: expand_assertion_to &quot;DisjointClasses: (http://purl.obolibrary.org/obo/BFO_0000051 some ?X)  (http://purl.obolibrary.org/obo/BFO_0000051 some ?Y)&quot;
+</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A macro expansion tag applied to an annotation property which can be expanded into a more detailed axiom.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Chris Mungall</obo:IAO_0000117>
+        <rdfs:label>expand assertion to</rdfs:label>
+        <rdfs:label xml:lang="en">expand assertion to</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -375,6 +386,12 @@ Annotations: IAO_0000424 &quot;http://purl.obolibrary.org/obo/BFO_0000051 some (
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <rdfs:label xml:lang="en">has associated axiom(fol)</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000700 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000700"/>
     
 
 
@@ -8590,13 +8607,13 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00005168"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Sensory organ that has external structures that detect mechanical or chemical stimuli.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0064796</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0064796</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00005168"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>es</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0064796</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0064796</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9285,7 +9302,6 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000115>Anatomical structure that has as its parts a maximally connected cell compartment surrounded by a plasma membrane.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>CARO:0000013</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>CL:0000000</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GO:0005623</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBbt:00007002</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbbt#FB_gloss"/>
@@ -9956,7 +9972,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047552"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>imaginal structure</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0053815</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0053815</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17167,7 +17183,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in entry into diapause (GO:0055115). &apos;entry into diapause&apos; is defined as: &apos;The dormancy process that results in entry into diapause. Diapause is a neurohormonally mediated, dynamic state of low metabolic activity. Associated characteristics of this form of dormancy include reduced morphogenesis, increased resistance to environmental extremes, and altered or reduced behavioral activity. Full expression develops in a species-specific manner, usually in response to a number of environmental stimuli that precede unfavorable conditions. Once diapause has begun, metabolic activity is suppressed even if conditions favorable for development prevail. Once initiated, only certain stimuli are capable of releasing the organism from this state, and this characteristic is essential in distinguishing diapause from hibernation.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ds</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ds</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -17230,7 +17246,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in entry into reproductive diapause (GO:0055116). &apos;entry into reproductive diapause&apos; is defined as: &apos;The dormancy process that results in entry into reproductive diapause. Reproductive diapause is a form of diapause where the organism itself will remain fully active, including feeding and other routine activities, but the reproductive organs experience a tissue-specific reduction in metabolism, with characteristic triggering and releasing stimuli.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ds</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ds</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -18062,7 +18078,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0716731363</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0716731363</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -18122,7 +18138,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a defect in exocytosis (GO:0006887). &apos;exocytosis&apos; is defined as: &apos;A process of secretion by a cell that results in the release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle. Exocytosis can occur either by full fusion, when the vesicle collapses into the plasma membrane, or by a kiss-and-run mechanism that involves the formation of a transient contact, a pore, between a granule (for exemple of chromaffin cells) and the plasma membrane. The latter process most of the time leads to only partial secretion of the granule content. Exocytosis begins with steps that prepare vesicles for fusion with the membrane (tethering and docking) and ends when molecules are secreted from the cell.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0716731363</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0716731363</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:22323285</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -30167,13 +30183,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
         <rdfs:comment>Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code &quot;no data&quot; (ND), is used to indicate this. Despite its name, this is not a type of &apos;function&apos; in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.</rdfs:comment>
+        <rdfs:comment>Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this. Despite its name, this is not a type of &apos;function&apos; in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.</rdfs:comment>
         <rdfs:label>molecular_function</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -30246,7 +30263,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Interacting selectively and non-covalently with one or more specific sites on a receptor molecule, a macromolecule that undergoes combination with a hormone, neurotransmitter, drug or intracellular messenger to initiate a change in cell function.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bf</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ceb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ceb</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -30271,7 +30288,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005488"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The selective, non-covalent, often stoichiometric, interaction of a molecule with one or more specific sites on another molecule.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ceb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ceb</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -30345,13 +30362,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
         <rdfs:comment>Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. Note that when this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code ND, no data, is used to indicate this.</rdfs:comment>
         <rdfs:comment>Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code &quot;no data&quot; (ND), is used to indicate this.</rdfs:comment>
+        <rdfs:comment>Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this.</rdfs:comment>
         <rdfs:label>cellular_component</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1337158144</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -30414,6 +30432,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005623">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000013"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+        <obo:IAO_0000115>OBSOLETE. The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</obo:IAO_0000115>
         <obo:IAO_0000115>The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</obo:IAO_0000115>
         <obo:IAO_0000589>cell and encapsulating structures</obo:IAO_0000589>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1813327414</oboInOwl:hasDbXref>
@@ -30423,8 +30442,17 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
+        <rdfs:comment>This term was obsoleted because it was redundant with the root class of the cell ontology, CL:0000000.</rdfs:comment>
         <rdfs:label>cell</rdfs:label>
+        <rdfs:label>obsolete cell</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005623"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>OBSOLETE. The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005623"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -30706,6 +30734,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051234"/>
         <obo:IAO_0000115>The directed movement of substances (such as macromolecules, small molecules, ions) or cellular components (such as complexes and organelles) into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter, pore or motor protein.</obo:IAO_0000115>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-12-13T16:25:32Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0015457</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0015460</oboInOwl:hasAlternativeId>
@@ -30766,7 +30795,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A process of secretion by a cell that results in the release of intracellular molecules (e.g. hormones, matrix proteins) contained within a membrane-bounded vesicle. Exocytosis can occur either by full fusion, when the vesicle collapses into the plasma membrane, or by a kiss-and-run mechanism that involves the formation of a transient contact, a pore, between a granule (for exemple of chromaffin cells) and the plasma membrane. The latter process most of the time leads to only partial secretion of the granule content. Exocytosis begins with steps that prepare vesicles for fusion with the membrane (tethering and docking) and ends when molecules are secreted from the cell.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0716731363</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0716731363</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:22323285</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -30809,7 +30838,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedTarget>A vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0716731363</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0716731363</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31200,6 +31229,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022610"/>
         <obo:IAO_0000115>The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.</obo:IAO_0000115>
         <oboInOwl:created_by>davidos</oboInOwl:created_by>
+        <oboInOwl:created_by>dos</oboInOwl:created_by>
         <oboInOwl:creation_date>2014-04-15T15:59:10Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0098602</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>MIPS_funcat:34.07</oboInOwl:hasDbXref>
@@ -31695,6 +31725,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/GO_0032502"/>
         <obo:IAO_0000115>The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity.</obo:IAO_0000115>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-20T14:06:08Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0023032</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044708</oboInOwl:hasAlternativeId>
@@ -32005,7 +32036,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
         <obo:IAO_0000115>Behavior associated with the intake of food.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/18547</obo:IAO_0000233>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-10-27T03:53:33Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044366</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044367</oboInOwl:hasAlternativeId>
@@ -32195,6 +32226,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:IAO_0000118>physiological process</obo:IAO_0000118>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T15:05:24Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0000004</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0007582</oboInOwl:hasAlternativeId>
@@ -32217,6 +32249,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
         <rdfs:comment>Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. Note that when this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code ND, no data, is used to indicate this.</rdfs:comment>
         <rdfs:comment>Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code &quot;no data&quot; (ND), is used to indicate this.</rdfs:comment>
+        <rdfs:comment>Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/go.owl"/>
         <rdfs:label>biological_process</rdfs:label>
     </owl:Class>
@@ -32224,7 +32257,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -32235,6 +32268,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>The chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances. Metabolic processes typically transform small molecules, but also include macromolecular processes such as DNA repair and replication, and protein synthesis and degradation.</obo:IAO_0000115>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-10-17T15:46:40Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044236</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044710</oboInOwl:hasAlternativeId>
@@ -33060,7 +33094,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009966"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of signal transduction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:sm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:sm</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009966"/>
@@ -33112,7 +33146,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009967"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that activates or increases the frequency, rate or extent of signal transduction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:sm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:sm</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009967"/>
@@ -33163,7 +33197,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009968"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that stops, prevents, or reduces the frequency, rate or extent of signal transduction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:sm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:sm</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009968"/>
@@ -33180,6 +33214,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>Any process that is carried out at the cellular level, but not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level.</obo:IAO_0000115>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-12-11T16:56:55Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0008151</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044763</oboInOwl:hasAlternativeId>
@@ -33775,6 +33810,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that decreases the rate, frequency or extent of a cellular process that is involved in the progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events.</obo:IAO_0000115>
         <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-04-27T09:53:22Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0010948</oboInOwl:id>
@@ -34258,6 +34294,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048609"/>
         <obo:IAO_0000115>The specific behavior of an organism that is associated with reproduction.</obo:IAO_0000115>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T16:01:37Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0033057</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044704</oboInOwl:hasAlternativeId>
@@ -34531,6 +34568,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>A biological process that directly contributes to the process of producing new individuals by one or two organisms. The new individuals inherit some proportion of their genetic material from the parent or parents.</obo:IAO_0000115>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T15:56:06Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044702</oboInOwl:hasAlternativeId>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -34688,6 +34726,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>The entirety of a process in which information is transmitted within a biological system. This process begins with an active signal and ends when a cellular response has been triggered.</obo:IAO_0000115>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-02-16T09:30:50Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0023046</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044700</oboInOwl:hasAlternativeId>
@@ -35157,7 +35196,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0030545"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is changed.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ceb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ceb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -35176,7 +35215,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0030546"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is increased.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ceb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ceb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -36315,6 +36354,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4896"/>
         <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T16:07:47Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044707</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0050874</oboInOwl:hasAlternativeId>
@@ -36343,6 +36383,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>A biological process whose specific outcome is the progression of an integrated living unit: an anatomical structure (which may be a subcellular structure, cell, tissue, or organ), or organism over time from an initial condition to a later condition.</obo:IAO_0000115>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-12-19T12:21:31Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044767</oboInOwl:hasAlternativeId>
         <oboInOwl:hasNarrowSynonym>development</oboInOwl:hasNarrowSynonym>
@@ -36718,6 +36759,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The process in which a signal is passed on to downstream components within the cell, which become activated themselves to further propagate the signal and finally trigger a change in the function or state of the cell.</obo:IAO_0000115>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-05-14T01:14:37Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0007242</oboInOwl:hasAlternativeId>
@@ -36779,7 +36821,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007617"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048512"/>
         <obo:IAO_0000115>The fluctuation in mating behavior that occurs over an approximately 24 hour cycle.</obo:IAO_0000115>
-        <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-01-25T10:20:05Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>circadian mating behaviour</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>circadian mating rhythm</oboInOwl:hasExactSynonym>
@@ -36816,6 +36858,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0038023">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0060089"/>
         <obo:IAO_0000115>Receiving a signal and transmitting it in the cell to initiate a change in cell activity. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response.</obo:IAO_0000115>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
         <oboInOwl:creation_date>2011-08-01T02:45:27Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0004872</oboInOwl:hasAlternativeId>
@@ -37605,7 +37648,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043085"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that activates or increases the activity of an enzyme.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ebc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ebc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:vw</oboInOwl:hasDbXref>
@@ -37661,7 +37704,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043086"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that stops or reduces the activity of an enzyme.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ebc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ebc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:vw</oboInOwl:hasDbXref>
@@ -38068,6 +38111,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that stops or reduces the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.</obo:IAO_0000115>
         <oboInOwl:created_by>jane</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-04-21T04:07:27Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0044092</oboInOwl:id>
@@ -38105,6 +38149,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that activates or increases the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.</obo:IAO_0000115>
         <oboInOwl:created_by>jane</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-04-21T04:11:06Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0044093</oboInOwl:id>
@@ -38373,6 +38418,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051704"/>
         <obo:IAO_0000115>A biological process that directly contributes to the process of producing new individuals, involving another organism.</obo:IAO_0000115>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T15:56:30Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0044703</oboInOwl:id>
@@ -39843,6 +39889,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands).</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/14220</obo:IAO_0000233>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:created_by>midori</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-09-13T04:51:59Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0071884</oboInOwl:hasAlternativeId>
@@ -39863,7 +39910,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedTarget>The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:kv</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:molecular_function_refactoring</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0048018"/>
@@ -40762,7 +40809,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that modulates the activity of an enzyme.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ebc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ebc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:vw</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -40873,6 +40920,28 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of behavior, the internally coordinated responses (actions or inactions) of whole living organisms (individuals or groups) to internal or external stimuli.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0050839 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050839">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005515"/>
+        <obo:IAO_0000115>Interacting selectively and non-covalently with a cell adhesion molecule.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>CAM binding</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>adhesive extracellular matrix constituent</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>cell adhesion molecule activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>cell adhesion receptor activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0050839</oboInOwl:id>
+        <rdfs:label>cell adhesion molecule binding</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0050839"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Interacting selectively and non-covalently with a cell adhesion molecule.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -43321,7 +43390,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0055115"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The dormancy process that results in entry into diapause. Diapause is a neurohormonally mediated, dynamic state of low metabolic activity. Associated characteristics of this form of dormancy include reduced morphogenesis, increased resistance to environmental extremes, and altered or reduced behavioral activity. Full expression develops in a species-specific manner, usually in response to a number of environmental stimuli that precede unfavorable conditions. Once diapause has begun, metabolic activity is suppressed even if conditions favorable for development prevail. Once initiated, only certain stimuli are capable of releasing the organism from this state, and this characteristic is essential in distinguishing diapause from hibernation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ds</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ds</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -43341,7 +43410,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0055116"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The dormancy process that results in entry into reproductive diapause. Reproductive diapause is a form of diapause where the organism itself will remain fully active, including feeding and other routine activities, but the reproductive organs experience a tissue-specific reduction in metabolism, with characteristic triggering and releasing stimuli.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ds</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ds</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -43384,7 +43453,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A compound molecular function in which an effector function is controlled by one or more regulatory components.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -43657,6 +43726,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016043"/>
         <obo:IAO_0000115>A process which results in the assembly, arrangement of constituent parts, or disassembly of a membrane. A membrane is a double layer of lipid molecules that encloses all cells, and, in eukaryotes, many organelles; may be a single or double lipid bilayer; also includes associated proteins.</obo:IAO_0000115>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-02-08T02:43:11Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0016044</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044802</oboInOwl:hasAlternativeId>
@@ -43701,7 +43771,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0061025">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0061024"/>
         <obo:IAO_0000115>The membrane organization process that joins two lipid bilayers to form a single membrane.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-02-08T02:48:06Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0006944</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044801</oboInOwl:hasAlternativeId>
@@ -43985,7 +44055,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071684">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032501"/>
         <obo:IAO_0000115>The developmental process in which an organism emerges from a surrounding protective structure such as an egg or pupa case.</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-02-19T04:23:55Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0071684</oboInOwl:id>
@@ -44005,6 +44075,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071704">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon.</obo:IAO_0000115>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:created_by>midori</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-08T03:32:18Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>organic molecular entity metabolic process</oboInOwl:hasExactSynonym>
@@ -44028,6 +44099,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071840">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <obo:IAO_0000115>A process that results in the biosynthesis of constituent macromolecules, assembly, arrangement of constituent parts, or disassembly of a cellular component.</obo:IAO_0000115>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:created_by>midori</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-09-10T01:39:16Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0071841</oboInOwl:hasAlternativeId>
@@ -44083,6 +44155,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism involving those compounds formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism.</obo:IAO_0000115>
+        <oboInOwl:created_by>dhl</oboInOwl:created_by>
         <oboInOwl:created_by>donghui</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-04-22T04:30:52Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -44120,6 +44193,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of a response to stress. Response to stress is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).</obo:IAO_0000115>
+        <oboInOwl:created_by>dhl</oboInOwl:created_by>
         <oboInOwl:created_by>donghui</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-05-06T04:51:28Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -44160,6 +44234,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of a cellular response to stress. Cellular response to stress is a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating the organism is under stress. The stress is usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).</obo:IAO_0000115>
+        <oboInOwl:created_by>dhl</oboInOwl:created_by>
         <oboInOwl:created_by>donghui</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-05-06T05:02:52Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -44199,6 +44274,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that increases the rate, frequency or extent of a cellular process that is involved in the progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events.</obo:IAO_0000115>
         <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-09-09T11:39:52Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090068</oboInOwl:id>
@@ -44219,7 +44295,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0090148">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0061024"/>
         <obo:IAO_0000115>A process that is carried out at the cellular level which results in the separation of a single continuous membrane into two membranes.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-12-08T03:06:36Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>membrane scission</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -44243,7 +44319,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048284"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0061025"/>
         <obo:IAO_0000115>The joining of two lipid bilayers to form a single organelle membrane.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-12-11T11:44:58Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090174</oboInOwl:id>
@@ -44283,7 +44359,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the rate, frequency or extent of the establishment of planar polarity, the coordinated organization of groups of cells in a tissue, such that they all orient to similar coordinates.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-12-14T10:29:41Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090175</oboInOwl:id>
@@ -44324,6 +44400,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that increases the rate, frequency, or extent of the series of events that restore integrity to a damaged tissue, following an injury.</obo:IAO_0000115>
         <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-22T02:12:03Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090303</oboInOwl:id>
@@ -44345,6 +44422,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043170"/>
         <obo:IAO_0000115>Any cellular metabolic process involving nucleic acids.</obo:IAO_0000115>
         <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-04-07T10:18:47Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090304</oboInOwl:id>
@@ -44383,7 +44461,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-05-14T10:24:29Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090325</oboInOwl:id>
@@ -44424,7 +44502,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that increases the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-05-14T10:26:58Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090326</oboInOwl:id>
@@ -44465,7 +44543,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that decreases the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement.</obo:IAO_0000115>
-        <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-05-14T10:26:58Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0090327</oboInOwl:id>
@@ -44496,13 +44574,14 @@ MH: sexual subtypes should probably be logically defined based on sexual process
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005488"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050839"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007155"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115>The binding by a cell-adhesion protein on a cell surface to an adhesion molecule on another cell surface, to mediate adhesion of the cell to the external substrate or to another cell.</obo:IAO_0000115>
         <obo:IAO_0000115>The binding by a cell-adhesion protein on the cell surface to an extracellular matrix component, to mediate adhesion of the cell to the external substrate or to another cell.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>cell adhesion molecule</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>protein binding involved in cell adhesion</oboInOwl:hasExactSynonym>
@@ -44510,6 +44589,13 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:id>GO:0098631</oboInOwl:id>
         <rdfs:label>cell adhesion mediator activity</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0098631"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The binding by a cell-adhesion protein on a cell surface to an adhesion molecule on another cell surface, to mediate adhesion of the cell to the external substrate or to another cell.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:vw</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wikipedia:Cell_adhesion</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0098631"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -46682,7 +46768,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:12130530</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:12130530</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1903530"/>
@@ -46739,7 +46825,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:12130530</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:12130530</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1903531"/>
@@ -46844,7 +46930,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:12130530</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:12130530</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1903532"/>
@@ -48032,6 +48118,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of multicellular organismal development.</obo:IAO_0000115>
         <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-08-05T11:25:59Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:2000026</oboInOwl:id>
@@ -48070,6 +48157,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of animal organ morphogenesis.</obo:IAO_0000115>
         <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
+        <oboInOwl:created_by>tb</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-08-05T11:26:27Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>regulation of histogenesis and organogenesis</oboInOwl:hasRelatedSynonym>
@@ -48114,6 +48202,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of cell motility.</obo:IAO_0000115>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:created_by>midori</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-10-01T09:41:21Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>regulation of cell locomotion</oboInOwl:hasExactSynonym>
@@ -48174,6 +48263,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that stops, prevents, or reduces the frequency, rate or extent of cell motility.</obo:IAO_0000115>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:created_by>midori</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-10-01T09:41:26Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>negative regulation of cell locomotion</oboInOwl:hasExactSynonym>
@@ -48234,6 +48324,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that activates or increases the frequency, rate or extent of cell motility.</obo:IAO_0000115>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:created_by>midori</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-10-01T09:41:30Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>positive regulation of cell locomotion</oboInOwl:hasExactSynonym>
@@ -48292,6 +48383,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of reproductive process.</obo:IAO_0000115>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:created_by>midori</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-11-10T02:44:02Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -48330,6 +48422,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that stops, prevents, or reduces the frequency, rate or extent of reproductive process.</obo:IAO_0000115>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:created_by>midori</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-11-10T02:44:05Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -48368,6 +48461,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that activates or increases the frequency, rate or extent of reproductive process.</obo:IAO_0000115>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:created_by>midori</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-11-10T02:44:08Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -48552,6 +48646,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that stops, prevents or reduces the frequency, rate or extent of a signaling receptor activity.</obo:IAO_0000115>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-12-02T09:28:47Z</oboInOwl:creation_date>
         <oboInOwl:hasBroadSynonym>negative regulation of receptor activity</oboInOwl:hasBroadSynonym>
@@ -48591,6 +48686,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that activates or increases the frequency, rate or extent of signaling receptor activity.</obo:IAO_0000115>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
         <oboInOwl:created_by>rfoulger</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-12-02T09:28:50Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -50353,7 +50449,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000117"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A morphology quality inhering in a bearer by virtue of the bearer&apos;s physical magnitude.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WordNet:WordNet</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WordNet:WordNet</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -51563,7 +51659,7 @@ MH: sexual subtypes should probably be logically defined based on sexual process
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001434"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An organismal quality inhering in a bearer by virtue of the bearer&apos;s ability to produce new life or offspring.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WordNet:WordNet</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>WordNet:WordNet</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -53824,26 +53920,26 @@ This interpretation is *not* the same as an at-all-times relation
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0003000">
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <rdfs:label>produces</rdfs:label>
         <oboInOwl:id>produces</oboInOwl:id>
+        <rdfs:label>produces</rdfs:label>
         <obo:IAO_0000115>a produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix.</obo:IAO_0000115>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment>Note that this definition doesn&apos;t quite distinguish the output of a transformation process from a production process, which is related to the identity/granularity issue.</rdfs:comment>
         <oboInOwl:shorthand>produces</oboInOwl:shorthand>
-        <rdfs:label xml:lang="en">produces</rdfs:label>
         <obo:IAO_0000117>Melissa Haendel</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">produces</rdfs:label>
         <oboInOwl:hasDbXref>RO:0003000</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0003001">
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <obo:IAO_0000115>a produced_by b iff some process that occurs_in b has_output a.</obo:IAO_0000115>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label>produced_by</rdfs:label>
         <oboInOwl:id>produced_by</oboInOwl:id>
         <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasDbXref>RO:0003001</oboInOwl:hasDbXref>
         <obo:IAO_0000117>Melissa Haendel</obo:IAO_0000117>
+        <oboInOwl:hasDbXref>RO:0003001</oboInOwl:hasDbXref>
         <oboInOwl:shorthand>produced_by</oboInOwl:shorthand>
         <rdfs:label xml:lang="en">produced by</rdfs:label>
     </rdf:Description>
