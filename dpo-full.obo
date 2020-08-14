@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: dpo/releases/2020-06-12/dpo-full.owl
-date: 12:06:2020 08:58
+data-version: dpo/releases/2020-08-14/dpo-full.owl
+date: 14:08:2020 09:26
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
@@ -6423,7 +6423,7 @@ is_a: GO:0032501 ! multicellular organismal process
 id: GO:0007634
 name: optokinetic behavior
 namespace: biological_process
-def: "The behavior of an organism pertaining to movement of the eyes and of objects in the visual field, as in nystagmus." [GOC:jid, GOC:pr, http://www.mercksource.com]
+def: "The behavior of an organism pertaining to movement of the eyes and of objects in the visual field, as in nystagmus." [GOC:jid, GOC:pr]
 synonym: "optokinetic behaviour" EXACT []
 is_a: GO:0007632 ! visual behavior
 
@@ -14564,8 +14564,8 @@ comment: Obsoleted as the inverse property was obsoleted.
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "agent in" xsd:string
-is_a: participates_in ! participates in
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
+is_a: participates_in ! participates_in
 inverse_of: RO:0002218 ! has active participant
 is_obsolete: true
 
@@ -15450,6 +15450,7 @@ creation_date: 2018-09-26T01:08:58Z
 [Typedef]
 id: bearer_of
 name: bearer of
+name: bearer_of
 namespace: fly_anatomy.ontology
 namespace: uberon
 def: "a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence" []
@@ -15865,7 +15866,7 @@ property_value: example_of_usage "this apple has quality this red color" xsd:str
 property_value: IAO:0000118 "has_quality" xsd:string
 range: BFO:0000019 ! quality
 is_transitive: false
-is_a: bearer_of ! bearer of
+is_a: bearer_of ! bearer_of
 
 [Typedef]
 id: has_role
@@ -15916,7 +15917,7 @@ property_value: IAO:0000111 "inheres in" xsd:string
 property_value: IAO:0000118 "inheres_in" xsd:string
 property_value: RO:0001900 RO:0001901
 is_a: RO:0002314 ! inheres in part of
-inverse_of: bearer_of ! bearer of
+inverse_of: bearer_of ! bearer_of
 
 [Typedef]
 id: input_of
@@ -15928,7 +15929,7 @@ subset: RO:0002259
 xref: RO:0002352
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
 
 [Typedef]
 id: involved_in
@@ -15943,7 +15944,7 @@ property_value: IAO:0000118 "enables part of" xsd:string
 property_value: seeAlso Involved:in
 holds_over_chain: RO:0002327 part_of
 is_transitive: false
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
 is_a: RO:0002217 ! obsolete actively participates in
 is_a: RO:0002431 ! involved in or involved in regulation of
 transitive_over: part_of ! part_of
@@ -16087,7 +16088,7 @@ xref: RO:0002353
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_transitive: false
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
 
 [Typedef]
 id: overlaps
@@ -16288,6 +16289,7 @@ holds_over_chain: RO:0002578 RO:0002578
 is_transitive: true
 is_a: RO:0002411 ! causally upstream of
 inverse_of: RO:0002334 ! regulated by
+transitive_over: RO:0002025 ! has effector activity
 
 [Typedef]
 id: results_in_developmental_progression_of
@@ -16335,7 +16337,7 @@ comment: Creating this relation as a temporary fix, pending adding the axiom occ
 xref: FBdv:00018001
 is_transitive: true
 is_a: happens_during ! happens during
-is_a: occurent_part_of ! occurent part of
+is_a: occurent_part_of ! occurent_part_of
 
 [Typedef]
 id: term_tracker_item
