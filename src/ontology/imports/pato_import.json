@@ -320,15 +320,6 @@
       "type" : "PROPERTY",
       "lbl" : "correlates_with"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#cell_quality",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "cell_quality"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0005622",
       "meta" : {
         "definition" : {
@@ -494,6 +485,7 @@
           "val" : "A quality which inheres in an process.",
           "xrefs" : [ "PATOC:GVG" ]
         },
+        "comments" : [ "See comments of relational quality of a physical entity." ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "relational quality of occurrent",
@@ -520,9 +512,6 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "PATO:0001240"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "See comments of relational quality of a physical entity."
         } ]
       },
       "type" : "CLASS",
@@ -730,24 +719,6 @@
       "type" : "CLASS",
       "lbl" : "temporal distribution quality"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#disposition_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Disposition slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#relational_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Relational slim: types of quality that require an additional entity in order to exist"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000718",
       "meta" : {
         "definition" : {
@@ -804,12 +775,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002022",
       "meta" : {
+        "comments" : [ "Process(P2) is directly regulated by process(P1) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "dos"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Process(P2) is directly regulated by process(P1) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2017-09-17T13:52:24Z"
@@ -946,15 +915,13 @@
           "val" : "A 'has effector activity' B if A and B are GO molecular functions (GO_0003674),  A 'has component activity' B and B is the effector (output function) of B.  Each compound function has only one effector activity.",
           "xrefs" : [ "GOC:dos" ]
         },
+        "comments" : [ "This relation is designed for constructing compound molecular functions, typically in combination with one or more regulatory component activity relations." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "dos"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2017-09-22T14:14:36Z"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This relation is designed for constructing compound molecular functions, typically in combination with one or more regulatory component activity relations."
         } ]
       },
       "type" : "PROPERTY",
@@ -1036,6 +1003,7 @@
           "val" : "A quality which inheres in a continuant.",
           "xrefs" : [ "PATOC:GVG" ]
         },
+        "comments" : [ "Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles." ],
         "xrefs" : [ {
           "val" : "snap:Quality"
         } ],
@@ -1073,9 +1041,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
         }, {
@@ -1110,12 +1075,10 @@
           "val" : "A relationship that holds between a GO molecular function and a component of that molecular function that positively regulates the activity of the whole.  More formally, A 'has regulatory component activity' B iff :A and B are GO molecular functions (GO_0003674), A has_component B and A is positively regulated by B.",
           "xrefs" : [ ]
         },
+        "comments" : [ "By convention GO molecular functions are classified by their effector function and internal regulatory functions are treated as components.  So, for example calmodulin has a protein binding activity that has positive regulatory component activity calcium binding activity. Receptor tyrosine kinase activity is a tyrosine kinase activity that has positive regulatory component 'ligand binding'." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2017-05-24T09:31:17Z"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "By convention GO molecular functions are classified by their effector function and internal regulatory functions are treated as components.  So, for example calmodulin has a protein binding activity that has positive regulatory component activity calcium binding activity. Receptor tyrosine kinase activity is a tyrosine kinase activity that has positive regulatory component 'ligand binding'."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "dos"
@@ -1130,6 +1093,7 @@
           "val" : "Candidate definition: x developmentally related to y if and only if there exists some developmental process (GO:0032502) p such that x and y both participates in p, and x is the output of p and y is the input of p",
           "xrefs" : [ ]
         },
+        "comments" : [ "This relation groups together various other developmental relations. It is fairly generic, encompassing induction, developmental contribution and direct and transitive develops from" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "false"
@@ -1142,9 +1106,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This relation groups together various other developmental relations. It is fairly generic, encompassing induction, developmental contribution and direct and transitive develops from"
         } ]
       },
       "type" : "PROPERTY",
@@ -1167,15 +1128,13 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002017",
       "meta" : {
+        "comments" : [ "A 'has component activity' B if A is A and B are molecular functions (GO_0003674) and A has_component B." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "dos"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2017-05-24T09:44:33Z"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "A 'has component activity' B if A is A and B are molecular functions (GO_0003674) and A has_component B."
         } ]
       },
       "type" : "PROPERTY",
@@ -1322,12 +1281,10 @@
           "val" : "A relationship that holds between a GO molecular function and a component of that molecular function that negatively regulates the activity of the whole.  More formally, A 'has regulatory component activity' B iff :A and B are GO molecular functions (GO_0003674), A has_component B and A is negatively regulated by B.",
           "xrefs" : [ ]
         },
+        "comments" : [ "By convention GO molecular functions are classified by their effector function.  Internal regulatory functions are treated as components.  For example, NMDA glutmate receptor activity is a cation channel activity with positive regulatory component 'glutamate binding' and negative regulatory components including 'zinc binding' and 'magnesium binding'." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "dos"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "By convention GO molecular functions are classified by their effector function.  Internal regulatory functions are treated as components.  For example, NMDA glutmate receptor activity is a cation channel activity with positive regulatory component 'glutamate binding' and negative regulatory components including 'zinc binding' and 'magnesium binding'."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2017-05-24T09:31:01Z"
@@ -1442,15 +1399,6 @@
       "type" : "CLASS",
       "lbl" : "increased resistance to"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#value_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Value slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0002062",
       "meta" : {
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
@@ -1494,12 +1442,10 @@
           "val" : "A structural quality inhering in the bearer by virtue of the bearer consisting of a single, maximally connected structure.",
           "xrefs" : [ "GOC:dos" ]
         },
+        "comments" : [ "What counts as maximally connected may be relative to some specification of granularity." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "davidos"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "What counts as maximally connected may be relative to some specification of granularity."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -1599,15 +1545,6 @@
       },
       "type" : "PROPERTY",
       "lbl" : "has part that occurs in"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#attribute_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Attribute slim"
-        } ]
-      },
-      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002352",
       "meta" : {
@@ -1792,15 +1729,6 @@
       "type" : "PROPERTY",
       "lbl" : "capable of regulating"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#abnormal_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Abnormal/normal slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000467",
       "meta" : {
         "definition" : {
@@ -1927,12 +1855,10 @@
           "val" : "q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
           "xrefs" : [ "PATOC:CJM" ]
         },
+        "comments" : [ "This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'."
         } ]
       },
       "type" : "PROPERTY",
@@ -2030,6 +1956,7 @@
           "val" : "A quality denoting the lack of an entity.",
           "xrefs" : [ "thefreedictionary.:thefreedictionary." ]
         },
+        "comments" : [ "See documentation here: http://code.google.com/p/phenotype-ontologies/wiki/ModelingOfAbsence" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#absent_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -2049,9 +1976,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/RO_0002604",
           "val" : "http://purl.obolibrary.org/obo/PATO_0000467"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "See documentation here: http://code.google.com/p/phenotype-ontologies/wiki/ModelingOfAbsence"
         } ]
       },
       "type" : "CLASS",
@@ -2138,15 +2062,6 @@
       "type" : "CLASS",
       "lbl" : "increased sensitivity of a process"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#scalar_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Scalar slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0002083",
       "meta" : {
         "definition" : {
@@ -2168,15 +2083,6 @@
       "type" : "CLASS",
       "lbl" : "altered number of"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#hpo_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Human phenotype slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002584",
       "meta" : {
         "definition" : {
@@ -2196,6 +2102,7 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002222",
       "meta" : {
+        "comments" : [ "A relation that holds between two occurrents. This is a grouping relation that collects together all the Allen relations." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -2209,9 +2116,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "A relation that holds between two occurrents. This is a grouping relation that collects together all the Allen relations."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
@@ -2663,6 +2567,7 @@
           "val" : "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome).",
           "xrefs" : [ "GOC:pdt", "NIF_Subcellular:sao1337158144" ]
         },
+        "comments" : [ "Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_candida", "http://purl.obolibrary.org/obo/go#goslim_generic", "http://purl.obolibrary.org/obo/go#goslim_yeast" ],
         "xrefs" : [ {
           "val" : "NIF_Subcellular:sao1337158144"
@@ -2686,9 +2591,6 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "cellular_component"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this."
         } ]
       },
       "type" : "CLASS",
@@ -3157,12 +3059,10 @@
           "val" : "x develops from y if and only if either (a) x directly develops from y or (b) there exists some z such that x directly develops from z and z develops from y",
           "xrefs" : [ ]
         },
+        "comments" : [ "This is the transitive form of the develops from relation" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "David Osumi-Sutherland"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This is the transitive form of the develops from relation"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
@@ -3316,15 +3216,13 @@
           "val" : "a core relation that holds between a whole and its part",
           "xrefs" : [ ]
         },
+        "comments" : [ "We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'." ],
         "xrefs" : [ {
           "val" : "BFO:0000051"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."
@@ -3384,12 +3282,10 @@
           "val" : "q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e.",
           "xrefs" : [ "PATOC:CJM" ]
         },
+        "comments" : [ "There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality."
         } ]
       },
       "type" : "PROPERTY",
@@ -3821,15 +3717,13 @@
           "val" : "c executes activity in d if and only if c enables p and p occurs_in d.  Assuming no action at a distance by gene products, if a gene product enables (is capable of) a process that occurs in some structure, it must have at least some part in that structure.",
           "xrefs" : [ "GOC:cjm", "GOC:dos" ]
         },
+        "comments" : [ "" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "enables activity in",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : ""
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "executes activity in"
         }, {
@@ -3865,15 +3759,13 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002305",
       "meta" : {
+        "comments" : [ "holds between x and y if and only if x is causally upstream of y and the progression of x decreases the frequency, rate or extent of y" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/RO_0004050",
           "val" : "http://purl.obolibrary.org/obo/RO_0002411"
         }, {
           "pred" : "http://purl.org/dc/terms/creator",
           "val" : "cjm"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "holds between x and y if and only if x is causally upstream of y and the progression of x decreases the frequency, rate or extent of y"
         } ]
       },
       "type" : "PROPERTY",
@@ -3903,6 +3795,7 @@
           "val" : "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.",
           "xrefs" : [ "GOC:pdt" ]
         },
+        "comments" : [ "Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_generic", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_yeast", "http://purl.obolibrary.org/obo/go#goslim_pombe", "http://purl.obolibrary.org/obo/go#goslim_candida" ],
         "xrefs" : [ {
           "val" : "Wikipedia:Biological_process"
@@ -3936,9 +3829,6 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "GO:0044699"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "GO:0000004"
@@ -4017,12 +3907,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002304",
       "meta" : {
+        "comments" : [ "holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/creator",
           "val" : "cjm"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/RO_0004049",
           "val" : "http://purl.obolibrary.org/obo/RO_0002411"
@@ -4310,6 +4198,7 @@
           "val" : "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t",
           "xrefs" : [ ]
         },
+        "comments" : [ "Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "occurs_in"
@@ -4325,9 +4214,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "unfolds_in"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant"
         } ]
       },
       "type" : "PROPERTY",
@@ -4339,12 +4225,10 @@
           "val" : "[copied from inverse property 'occurs in'] b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t",
           "xrefs" : [ ]
         },
+        "comments" : [ "Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
           "val" : "http://purl.obolibrary.org/obo/bfo.owl"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "site of"
@@ -4459,6 +4343,7 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002090",
       "meta" : {
+        "comments" : [ "X immediately_precedes_Y iff: end(X) simultaneous_with start(Y)" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/RO_0002575",
@@ -4466,9 +4351,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "David Osumi-Sutherland"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "X immediately_precedes_Y iff: end(X) simultaneous_with start(Y)"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "ends_at_start_of"
@@ -4710,15 +4592,6 @@
       "type" : "PROPERTY",
       "lbl" : "in_subset"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#mpath_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Pathology slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000004",
       "meta" : {
         "definition" : {
@@ -4731,13 +4604,11 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002086",
       "meta" : {
+        "comments" : [ "X ends_after Y iff: end(Y) before_or_simultaneous_with end(X)" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "David Osumi-Sutherland"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "X ends_after Y iff: end(Y) before_or_simultaneous_with end(X)"
         } ]
       },
       "type" : "PROPERTY",
@@ -4745,12 +4616,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002087",
       "meta" : {
+        "comments" : [ "X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "starts_at_end_of"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "David Osumi-Sutherland"
@@ -4780,6 +4649,7 @@
           "val" : "A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).",
           "xrefs" : [ "PATOC:GVG" ]
         },
+        "comments" : [ "Shapes are invariant on size transformations. Shapes can be subdivided into 2D and 3D shapes, We can also make a distinction between shapes of complete self-connected objects, and shapes of parts of objects." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -4792,9 +4662,6 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "PATO:0001647"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Shapes are invariant on size transformations. Shapes can be subdivided into 2D and 3D shapes, We can also make a distinction between shapes of complete self-connected objects, and shapes of parts of objects."
         } ]
       },
       "type" : "CLASS",
@@ -5114,6 +4981,7 @@
           "val" : "A quality of physical entities inhering in a bearer by virtue of the bearer's lacking a physical part as specified by the additional entity.",
           "xrefs" : [ "PATOC:CJM" ]
         },
+        "comments" : [ "Example: [E=organism Q=lacks_all_parts_of_type E2=Wing] - applies to an organism. A relational quality in which the bearer entity has no parts of the specified type. The bearer of this quality has_part = 0 of the indicated entity type, where a comparable organism usually has at least 1 part of the same type. Note that the bearer of the quality is the whole, not the part. Formally: If a bearer entity e lacks all parts of type X at time t, then there exists no instances x of X at t such that x part_of e that has no wings, where wings are normally present in that organism type. In OWL this is equivalent to a restriction on the OBO_REL:has_part relation with cardinality=0, i.e has_part 0 E2." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim" ],
         "xrefs" : [ {
           "val" : "OBO_REL:lacks_part"
@@ -5124,9 +4992,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Example: [E=organism Q=lacks_all_parts_of_type E2=Wing] - applies to an organism. A relational quality in which the bearer entity has no parts of the specified type. The bearer of this quality has_part = 0 of the indicated entity type, where a comparable organism usually has at least 1 part of the same type. Note that the bearer of the quality is the whole, not the part. Formally: If a bearer entity e lacks all parts of type X at time t, then there exists no instances x of X at t such that x part_of e that has no wings, where wings are normally present in that organism type. In OWL this is equivalent to a restriction on the OBO_REL:has_part relation with cardinality=0, i.e has_part 0 E2."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
         }, {
@@ -5219,6 +5084,7 @@
           "val" : "The bearer of this quality has_part < n AND has_part > 0 of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part. Formally: If a bearer entity e has fewer parts of type X at time t, then the number of instances x of X at t such that x part_of e is < n, where n is either the normal number for comparable entities, or n is stated explicitly.",
           "xrefs" : [ "PATOC:CJM" ]
         },
+        "comments" : [ "Example: [E=hand Q=has_fewer_parts_of_type E2=digit] - applies to an organism that has no less fingers than is normal for organisms of that type." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -5234,9 +5100,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Example: [E=hand Q=has_fewer_parts_of_type E2=digit] - applies to an organism that has no less fingers than is normal for organisms of that type."
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/RO_0002604",
           "val" : "http://purl.obolibrary.org/obo/PATO_0002002"
         }, {
@@ -5252,12 +5115,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000068",
       "meta" : {
+        "comments" : [ "TODO: define this or obsolete it and move children somewhere else." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "TODO: define this or obsolete it and move children somewhere else."
         } ]
       },
       "type" : "CLASS",
@@ -5337,6 +5198,7 @@
           "val" : "The bearer of this quality has_part > n of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part.",
           "xrefs" : [ "PATOC:CJM" ]
         },
+        "comments" : [ "In polydactyly, the bearer of the quality is the hand, and the entity type being counted is 'finger'. In EQ syntax, E=hand, Q=<this> E2=finger." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -5366,9 +5228,6 @@
           "pred" : "http://purl.obolibrary.org/obo/RO_0002604",
           "val" : "http://purl.obolibrary.org/obo/PATO_0002001"
         }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "In polydactyly, the bearer of the quality is the hand, and the entity type being counted is 'finger'. In EQ syntax, E=hand, Q=<this> E2=finger."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
         } ]
@@ -5382,12 +5241,10 @@
           "val" : "q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
           "xrefs" : [ "PATOC:CJM" ]
         },
+        "comments" : [ "This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'."
         } ]
       },
       "type" : "PROPERTY",
@@ -5454,15 +5311,6 @@
       },
       "type" : "PROPERTY",
       "lbl" : "has component"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#absent_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Absent/present slim"
-        } ]
-      },
-      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0002011",
       "meta" : {
@@ -5554,6 +5402,7 @@
           "val" : "The number of entities of this type that are part of the whole organism.",
           "xrefs" : [ "PATOC:GVG" ]
         },
+        "comments" : [ "This term was originally named \"presence\". It has been renamed to reduce ambiguity. Consider annotating with the reciprocal relation,PATO:0001555, has_number_of. For example, rather than E=fin ray Q=count in organism C=10, say E=organism Q=has number of E2= fin ray C=10." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
@@ -5585,9 +5434,6 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "PATO:0001226"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term was originally named \"presence\". It has been renamed to reduce ambiguity. Consider annotating with the reciprocal relation,PATO:0001555, has_number_of. For example, rather than E=fin ray Q=count in organism C=10, say E=organism Q=has number of E2= fin ray C=10."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "PATO:0000053"
@@ -5744,13 +5590,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000273"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001178",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001046"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002334",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002427"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001178",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001046"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001997",
       "pred" : "is_a",
@@ -6220,13 +6066,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001236"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001834",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002481",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002564"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001834",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002428",
       "pred" : "subPropertyOf",
@@ -6320,13 +6166,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000044"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0000467",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000070"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002404",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002427"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0000467",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000070"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0000056",
       "pred" : "inverseOf",
@@ -6444,13 +6290,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000161"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002014",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002013"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000063",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002222"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002014",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002013"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002428",
       "pred" : "subPropertyOf",
@@ -6476,13 +6322,13 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002213"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001563",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000125"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0004035",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0004033"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001563",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000125"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001696",
       "pred" : "is_a",
@@ -6728,13 +6574,13 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002211"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001695",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000273"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002352",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0000056"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001695",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000273"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000051",
       "pred" : "is_a",
@@ -6816,13 +6662,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000056"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0000470",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000467"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002432",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002328"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0000470",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000467"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002486",
       "pred" : "is_a",
@@ -6876,13 +6722,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000956"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0000645",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000587"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002629",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002578"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0000645",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000587"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0004031",
       "pred" : "subPropertyOf",
@@ -6904,13 +6750,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CARO_0000000"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0000719",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000169"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002596",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002500"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0000719",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000169"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001475",
       "pred" : "is_a",
@@ -6965,7 +6811,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/dpo/releases/2020-08-14/imports/pato_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/dpo/releases/2020-10-20/imports/pato_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ {
@@ -7274,21 +7120,21 @@
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "allValuesFromEdges" : [ {
-        "sub" : "http://purl.obolibrary.org/obo/BFO_0000004",
+        "sub" : "http://purl.obolibrary.org/obo/BFO_0000003",
         "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-        "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
+        "obj" : "http://purl.obolibrary.org/obo/BFO_0000003"
       }, {
         "sub" : "http://purl.obolibrary.org/obo/BFO_0000002",
         "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
         "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
       }, {
+        "sub" : "http://purl.obolibrary.org/obo/BFO_0000004",
+        "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+        "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
+      }, {
         "sub" : "http://purl.obolibrary.org/obo/BFO_0000019",
         "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
         "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
-      }, {
-        "sub" : "http://purl.obolibrary.org/obo/BFO_0000003",
-        "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-        "obj" : "http://purl.obolibrary.org/obo/BFO_0000003"
       }, {
         "sub" : "http://purl.obolibrary.org/obo/BFO_0000020",
         "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",

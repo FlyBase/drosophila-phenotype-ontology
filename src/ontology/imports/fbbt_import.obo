@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2020-08-14/imports/fbbt_import.owl
+data-version: dpo/releases/2020-10-20/imports/fbbt_import.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: attribute_slim "Attribute slim"
 subsetdef: cell_quality "cell_quality"
@@ -1023,7 +1023,7 @@ relationship: develops_from FBbt:00005331 ! dorsal closure embryo
 id: FBbt:00005413
 name: anlage in statu nascendi
 namespace: fly_anatomy.ontology
-def: "\"anlagen in statu nascendi\" are domains that do not yet coincide 1:1 with a later organ. Anlagen in statu nascendi are typically defined for the early blastoderm by the expression domains of genes which, in the late blastoderm or later, are expressed in specific anlagen, but initially come on in larger domains." [FlyBase:FBrf0155831, FlyBase:FBrf0178740]
+def: "Domain that does not yet coincide 1:1 with a later organ. Anlagen in statu nascendi are typically defined for the early blastoderm by the expression domains of genes which, in the late blastoderm or later, are expressed in specific anlagen, but initially come on in larger domains." [FlyBase:FBrf0155831, FlyBase:FBrf0178740]
 subset: cur
 subset: EmbDevSlim
 synonym: "A0" RELATED []
@@ -1682,20 +1682,22 @@ xref: NIF_Subcellular:sao1337158144
 
 [Term]
 id: GO:0005622
-name: intracellular
+name: intracellular anatomical structure
 namespace: cellular_component
-def: "The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
+def: "A component of a cell contained within (but not including) the plasma membrane. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
 subset: gocheck_do_not_annotate
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_metagenomics
 subset: goslim_plant
 synonym: "internal to cell" EXACT []
+synonym: "intracellular" EXACT []
 synonym: "nucleocytoplasm" RELATED [GOC:mah]
 synonym: "protoplasm" EXACT []
 synonym: "protoplast" RELATED [GOC:mah]
 xref: Wikipedia:Intracellular
-is_a: GO:0005575 ! cellular_component
+is_a: GO:0110165 ! cellular anatomical entity
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/17776 xsd:anyURI
 
 [Term]
 id: GO:0005623
@@ -3205,8 +3207,8 @@ synonym: "signal transduction via intracellular signaling cascade" RELATED []
 synonym: "signal transmission via intracellular cascade" NARROW []
 is_a: GO:0007165 ! signal transduction
 intersection_of: GO:0007165 ! signal transduction
-intersection_of: occurs_in GO:0005622 ! intracellular
-relationship: occurs_in GO:0005622 ! intracellular
+intersection_of: occurs_in GO:0005622 ! intracellular anatomical structure
+relationship: occurs_in GO:0005622 ! intracellular anatomical structure
 created_by: bf
 creation_date: 2010-05-14T01:14:37Z
 
@@ -3493,8 +3495,8 @@ def: "Organized structure of distinctive morphology and function, occurring with
 subset: goslim_pir
 is_a: GO:0043226 ! organelle
 intersection_of: GO:0043226 ! organelle
-intersection_of: part_of GO:0005622 ! intracellular
-relationship: part_of GO:0005622 ! intracellular
+intersection_of: part_of GO:0005622 ! intracellular anatomical structure
+relationship: part_of GO:0005622 ! intracellular anatomical structure
 
 [Term]
 id: GO:0043231
@@ -3677,7 +3679,6 @@ synonym: "up regulation of eclosion" EXACT []
 synonym: "up-regulation of eclosion" EXACT []
 synonym: "upregulation of eclosion" EXACT []
 is_a: GO:0007563 ! regulation of eclosion
-is_a: GO:0051094 ! positive regulation of developmental process
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0007562 ! eclosion
@@ -3736,8 +3737,8 @@ is_a: GO:0006810 ! transport
 is_a: GO:0051641 ! cellular localization
 is_a: GO:0051649 ! establishment of localization in cell
 intersection_of: GO:0006810 ! transport
-intersection_of: occurs_in GO:0005622 ! intracellular
-relationship: occurs_in GO:0005622 ! intracellular
+intersection_of: occurs_in GO:0005622 ! intracellular anatomical structure
+relationship: occurs_in GO:0005622 ! intracellular anatomical structure
 created_by: jl
 creation_date: 2013-12-18T14:04:50Z
 
@@ -4805,9 +4806,7 @@ id: GO:1902435
 name: regulation of male mating behavior
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of male mating behavior." [GOC:TermGenie, PMID:24089208]
-is_a: GO:0043900 ! regulation of multi-organism process
 is_a: GO:0050795 ! regulation of behavior
-is_a: GO:0051239 ! regulation of multicellular organismal process
 is_a: GO:2000241 ! regulation of reproductive process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0060179 ! male mating behavior
@@ -4824,7 +4823,6 @@ synonym: "down regulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "down-regulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "downregulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "inhibition of male mating behavior" NARROW [GOC:TermGenie]
-is_a: GO:0043901 ! negative regulation of multi-organism process
 is_a: GO:0048521 ! negative regulation of behavior
 is_a: GO:0051241 ! negative regulation of multicellular organismal process
 is_a: GO:1902435 ! regulation of male mating behavior
@@ -4844,7 +4842,6 @@ synonym: "activation of male mating behavior" NARROW [GOC:TermGenie]
 synonym: "up regulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "up-regulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "upregulation of male mating behavior" EXACT [GOC:TermGenie]
-is_a: GO:0043902 ! positive regulation of multi-organism process
 is_a: GO:0048520 ! positive regulation of behavior
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
 is_a: GO:1902435 ! regulation of male mating behavior
