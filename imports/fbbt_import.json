@@ -15,15 +15,6 @@
       "type" : "CLASS",
       "lbl" : "regulation of cell communication"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/go#goslim_generic",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Generic GO slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/FBbt_00007016",
       "meta" : {
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#larval_OF", "http://purl.obolibrary.org/obo/fbbt#cur" ],
@@ -358,15 +349,6 @@
       "type" : "CLASS",
       "lbl" : "developing material anatomical entity"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/go#goslim_metagenomics",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Metagenomics GO slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000001",
       "meta" : {
         "definition" : {
@@ -557,11 +539,9 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/FBbt_00005290",
       "meta" : {
+        "comments" : [ "DEPRECATION WARNING" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#deprecated" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "DEPRECATION WARNING"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
         } ]
@@ -575,11 +555,9 @@
           "val" : "Nuclear divisions 1 and 2. Duration at 25 degrees C: approximately 25 minutes (0-25 minutes after egg laying).",
           "xrefs" : [ "FlyBase:FBrf0089570" ]
         },
+        "comments" : [ "DEPRECATION WARNING" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#deprecated" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "DEPRECATION WARNING"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
         } ]
@@ -739,13 +717,11 @@
           "val" : "Nuclear divisions 3-8. The egg cytoplasm contracts producing a clear separation from the vitelline membrane and empty spaces at the anterior and posterior. The cleavage nuclei migrate towards the periphery. Duration at 25 degrees C approximately 40 minutes (25-65 minutes AEL).",
           "xrefs" : [ "FlyBase:FBrf0089570" ]
         },
+        "comments" : [ "DEPRECATION WARNING" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#deprecated" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "DEPRECATION WARNING"
         } ]
       },
       "type" : "CLASS",
@@ -757,13 +733,11 @@
           "val" : "a produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix.",
           "xrefs" : [ ]
         },
+        "comments" : [ "Note that this definition doesn't quite distinguish the output of a transformation process from a production process, which is related to the identity/granularity issue." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Melissa Haendel"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this definition doesn't quite distinguish the output of a transformation process from a production process, which is related to the identity/granularity issue."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
@@ -975,15 +949,6 @@
       "type" : "CLASS",
       "lbl" : "embryonic primordium of adult eye"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/go#goslim_plant",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Plant GO slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0031323",
       "meta" : {
         "definition" : {
@@ -1061,15 +1026,6 @@
       },
       "type" : "CLASS",
       "lbl" : "regulation of binding"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/fbbt#deprecated",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "warning of impending obsoletion"
-        } ]
-      },
-      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0051099",
       "meta" : {
@@ -1191,15 +1147,13 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002022",
       "meta" : {
+        "comments" : [ "Process(P2) is directly regulated by process(P1) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2017-09-17T13:52:24Z"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "dos"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Process(P2) is directly regulated by process(P1) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2."
         } ]
       },
       "type" : "PROPERTY",
@@ -1335,10 +1289,8 @@
           "val" : "A 'has effector activity' B if A and B are GO molecular functions (GO_0003674),  A 'has component activity' B and B is the effector (output function) of B.  Each compound function has only one effector activity.",
           "xrefs" : [ "GOC:dos" ]
         },
+        "comments" : [ "This relation is designed for constructing compound molecular functions, typically in combination with one or more regulatory component activity relations." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This relation is designed for constructing compound molecular functions, typically in combination with one or more regulatory component activity relations."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "dos"
         }, {
@@ -1447,6 +1399,7 @@
           "val" : "A quality which inheres in a continuant.",
           "xrefs" : [ "PATOC:GVG" ]
         },
+        "comments" : [ "Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles." ],
         "xrefs" : [ {
           "val" : "snap:Quality"
         } ],
@@ -1490,9 +1443,6 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "PATO:0001238"
         }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
         } ]
@@ -1506,15 +1456,13 @@
           "val" : "A relationship that holds between a GO molecular function and a component of that molecular function that positively regulates the activity of the whole.  More formally, A 'has regulatory component activity' B iff :A and B are GO molecular functions (GO_0003674), A has_component B and A is positively regulated by B.",
           "xrefs" : [ ]
         },
+        "comments" : [ "By convention GO molecular functions are classified by their effector function and internal regulatory functions are treated as components.  So, for example calmodulin has a protein binding activity that has positive regulatory component activity calcium binding activity. Receptor tyrosine kinase activity is a tyrosine kinase activity that has positive regulatory component 'ligand binding'." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2017-05-24T09:31:17Z"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "dos"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "By convention GO molecular functions are classified by their effector function and internal regulatory functions are treated as components.  So, for example calmodulin has a protein binding activity that has positive regulatory component activity calcium binding activity. Receptor tyrosine kinase activity is a tyrosine kinase activity that has positive regulatory component 'ligand binding'."
         } ]
       },
       "type" : "PROPERTY",
@@ -1526,12 +1474,10 @@
           "val" : "Candidate definition: x developmentally related to y if and only if there exists some developmental process (GO:0032502) p such that x and y both participates in p, and x is the output of p and y is the input of p",
           "xrefs" : [ ]
         },
+        "comments" : [ "This relation groups together various other developmental relations. It is fairly generic, encompassing induction, developmental contribution and direct and transitive develops from" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This relation groups together various other developmental relations. It is fairly generic, encompassing induction, developmental contribution and direct and transitive develops from"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "false"
@@ -1548,15 +1494,13 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002017",
       "meta" : {
+        "comments" : [ "A 'has component activity' B if A is A and B are molecular functions (GO_0003674) and A has_component B." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "dos"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2017-05-24T09:44:33Z"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "A 'has component activity' B if A is A and B are molecular functions (GO_0003674) and A has_component B."
         } ]
       },
       "type" : "PROPERTY",
@@ -1735,15 +1679,6 @@
       "type" : "PROPERTY",
       "lbl" : "has developmental contribution from"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/go#goslim_pombe",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Fission yeast GO slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002013",
       "meta" : {
         "definition" : {
@@ -1812,10 +1747,8 @@
           "val" : "A relationship that holds between a GO molecular function and a component of that molecular function that negatively regulates the activity of the whole.  More formally, A 'has regulatory component activity' B iff :A and B are GO molecular functions (GO_0003674), A has_component B and A is negatively regulated by B.",
           "xrefs" : [ ]
         },
+        "comments" : [ "By convention GO molecular functions are classified by their effector function.  Internal regulatory functions are treated as components.  For example, NMDA glutmate receptor activity is a cation channel activity with positive regulatory component 'glutamate binding' and negative regulatory components including 'zinc binding' and 'magnesium binding'." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "By convention GO molecular functions are classified by their effector function.  Internal regulatory functions are treated as components.  For example, NMDA glutmate receptor activity is a cation channel activity with positive regulatory component 'glutamate binding' and negative regulatory components including 'zinc binding' and 'magnesium binding'."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2017-05-24T09:31:01Z"
         }, {
@@ -1875,6 +1808,7 @@
           "val" : "OBSOLETE. Any constituent part of a cell, the basic structural and functional unit of all organisms.",
           "xrefs" : [ "GOC:jl" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate", "http://purl.obolibrary.org/obo/go#goslim_pir" ],
         "xrefs" : [ {
           "val" : "NIF_Subcellular:sao628508602"
@@ -1889,9 +1823,6 @@
           "xrefs" : [ "NIF_Subcellular:sao628508602" ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2002/07/owl#deprecated",
-          "val" : "true"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
           "val" : "http://purl.obolibrary.org/obo/go.owl"
         }, {
@@ -1900,10 +1831,8 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
           "val" : "CL:0000000"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
-        } ]
+        } ],
+        "deprecated" : true
       },
       "type" : "CLASS",
       "lbl" : "cell part"
@@ -2210,15 +2139,6 @@
       "type" : "PROPERTY",
       "lbl" : "is kinase activity"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/go#goslim_agr",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "AGR slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0050909",
       "meta" : {
         "definition" : {
@@ -2388,21 +2308,13 @@
       "type" : "PROPERTY",
       "lbl" : "elucidation"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#attribute_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Attribute slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0009628",
       "meta" : {
         "definition" : {
           "val" : "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an abiotic (not derived from living organisms) stimulus.",
           "xrefs" : [ "GOC:hb" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate" ],
         "synonyms" : [ {
           "pred" : "hasNarrowSynonym",
@@ -2412,9 +2324,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
           "val" : "https://github.com/geneontology/go-ontology/issues/16572"
@@ -2716,15 +2625,6 @@
       },
       "type" : "PROPERTY",
       "lbl" : "capable of regulating"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#abnormal_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Abnormal/normal slim"
-        } ]
-      },
-      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002597",
       "meta" : {
@@ -3146,15 +3046,6 @@
       "type" : "CLASS",
       "lbl" : "receptor regulator activity"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#hpo_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Human phenotype slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0030546",
       "meta" : {
         "definition" : {
@@ -3180,6 +3071,7 @@
           "val" : "The selective, non-covalent, often stoichiometric, interaction of a molecule with one or more specific sites on another molecule.",
           "xrefs" : [ "GOC:ceb", "GOC:mah", "ISBN:0198506732" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct, manual gene product annotation. Please choose a more specific child term, or request a new one if no suitable term is available. For ligands that bind to signal transducing receptors, consider the molecular function term 'receptor binding ; GO:0005102' and its children." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate" ],
         "xrefs" : [ {
           "val" : "Wikipedia:Binding_(molecular)"
@@ -3190,9 +3082,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct, manual gene product annotation. Please choose a more specific child term, or request a new one if no suitable term is available. For ligands that bind to signal transducing receptors, consider the molecular function term 'receptor binding ; GO:0005102' and its children."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "molecular_function"
         } ]
@@ -3219,15 +3108,6 @@
       },
       "type" : "CLASS",
       "lbl" : "anatomical structure development"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Term not to be used for direct annotation"
-        } ]
-      },
-      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002584",
       "meta" : {
@@ -3261,6 +3141,7 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002222",
       "meta" : {
+        "comments" : [ "A relation that holds between two occurrents. This is a grouping relation that collects together all the Allen relations." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -3268,9 +3149,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
           "val" : "Do not use this relation directly. It is ended as a grouping for relations between occurrents involving the relative timing of their starts and ends."
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "A relation that holds between two occurrents. This is a grouping relation that collects together all the Allen relations."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
@@ -3299,15 +3177,6 @@
       "type" : "CLASS",
       "lbl" : "trunk ectoderm"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/fbbt#hidden_assertion",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Stanza contains hidden assertion."
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002581",
       "meta" : {
         "definition" : {
@@ -3334,19 +3203,15 @@
           "val" : "OBSOLETE x actively participates in y if and only if x participates in y and x realizes some active role",
           "xrefs" : [ ]
         },
+        "comments" : [ "Obsoleted as the inverse property was obsoleted." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2002/07/owl#deprecated",
-          "val" : "true"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "agent in"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Obsoleted as the inverse property was obsoleted."
-        } ]
+        } ],
+        "deprecated" : true
       },
       "type" : "PROPERTY",
       "lbl" : "obsolete actively participates in"
@@ -3377,9 +3242,6 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "This may be obsoleted and replaced by the original 'has agent' relation"
         }, {
-          "pred" : "http://www.w3.org/2002/07/owl#deprecated",
-          "val" : "true"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "has agent"
         }, {
@@ -3391,7 +3253,8 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
-        } ]
+        } ],
+        "deprecated" : true
       },
       "type" : "PROPERTY",
       "lbl" : "obsolete has active participant"
@@ -3746,6 +3609,7 @@
           "val" : "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an external stimulus.",
           "xrefs" : [ "GOC:hb" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate", "http://purl.obolibrary.org/obo/go#goslim_drosophila", "http://purl.obolibrary.org/obo/go#goslim_plant" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -3753,9 +3617,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -4063,10 +3924,8 @@
           "val" : "R is homemorphic for C iff (1) there exists some x,y such that x R y, and x and y instantiate C and (2) for all x, if x is an instance of C, and there exists some y some such that x R y, then it follows that y is an instance of C.",
           "xrefs" : [ ]
         },
+        "comments" : [ "R homeomorphic-for C expands to: C SubClassOf R only C. Additionally, for any class D that is disjoint with C, we can also expand to C DisjointWith R some D, D DisjointWith R some C." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "R homeomorphic-for C expands to: C SubClassOf R only C. Additionally, for any class D that is disjoint with C, we can also expand to C DisjointWith R some D, D DisjointWith R some C."
-        }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
           "val" : "https://github.com/oborel/obo-relations/issues/164"
         }, {
@@ -4249,13 +4108,11 @@
           "val" : "x develops from y if and only if either (a) x directly develops from y or (b) there exists some z such that x directly develops from z and z develops from y",
           "xrefs" : [ ]
         },
+        "comments" : [ "This is the transitive form of the develops from relation" ],
         "xrefs" : [ {
           "val" : "RO:0002202"
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This is the transitive form of the develops from relation"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
         }, {
@@ -4474,6 +4331,10 @@
       },
       "type" : "PROPERTY",
       "lbl" : "example of usage"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000231",
+      "type" : "PROPERTY",
+      "lbl" : "has obsolescence reason"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000232",
       "meta" : {
@@ -4932,6 +4793,7 @@
           "val" : "A collective term for stages 13-15.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "DEPRECATION WARNING" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#deprecated" ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
@@ -4943,9 +4805,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "DEPRECATION WARNING"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
         } ]
@@ -4996,13 +4855,11 @@
           "val" : "A collective term for stages 16 and 17.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "DEPRECATION WARNING" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#deprecated" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "DEPRECATION WARNING"
         } ]
       },
       "type" : "CLASS",
@@ -5014,6 +4871,7 @@
           "val" : "c executes activity in d if and only if c enables p and p occurs_in d.  Assuming no action at a distance by gene products, if a gene product enables (is capable of) a process that occurs in some structure, it must have at least some part in that structure.",
           "xrefs" : [ "GOC:cjm", "GOC:dos" ]
         },
+        "comments" : [ "" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "enables activity in",
@@ -5025,9 +4883,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "Chris Mungall"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : ""
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
           "val" : "A protein that enables activity in a cytosol."
@@ -5075,6 +4930,7 @@
           "val" : "The chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances. Metabolic processes typically transform small molecules, but also include macromolecular processes such as DNA repair and replication, and protein synthesis and degradation.",
           "xrefs" : [ "GOC:go_curators", "ISBN:0198547684" ]
         },
+        "comments" : [ "Note that metabolic processes do not include single functions or processes such as protein-protein interactions, protein-nucleic acids, nor receptor-ligand interactions." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate", "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_pir" ],
         "xrefs" : [ {
           "val" : "Wikipedia:Metabolism"
@@ -5101,9 +4957,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that metabolic processes do not include single functions or processes such as protein-protein interactions, protein-nucleic acids, nor receptor-ligand interactions."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "GO:0044710"
         }, {
@@ -5157,12 +5010,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002305",
       "meta" : {
+        "comments" : [ "holds between x and y if and only if x is causally upstream of y and the progression of x decreases the frequency, rate or extent of y" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/RO_0004050",
           "val" : "http://purl.obolibrary.org/obo/RO_0002411"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "holds between x and y if and only if x is causally upstream of y and the progression of x decreases the frequency, rate or extent of y"
         }, {
           "pred" : "http://purl.org/dc/terms/creator",
           "val" : "cjm"
@@ -5195,6 +5046,7 @@
           "val" : "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.",
           "xrefs" : [ "GOC:pdt" ]
         },
+        "comments" : [ "Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_yeast", "http://purl.obolibrary.org/obo/go#goslim_generic", "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_pombe", "http://purl.obolibrary.org/obo/go#goslim_candida" ],
         "xrefs" : [ {
           "val" : "Wikipedia:Biological_process"
@@ -5225,9 +5077,6 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "GO:0044699"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -5420,12 +5269,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002304",
       "meta" : {
+        "comments" : [ "holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/creator",
           "val" : "cjm"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/RO_0004049",
           "val" : "http://purl.obolibrary.org/obo/RO_0002411"
@@ -5700,15 +5547,6 @@
       "type" : "CLASS",
       "lbl" : "positive regulation of locomotion"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/fbbt#cur",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "cur"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0003824",
       "meta" : {
         "definition" : {
@@ -5846,11 +5684,9 @@
           "val" : "The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult).",
           "xrefs" : [ "GOC:dph", "GOC:ems", "GOC:isa_complete", "GOC:tb" ]
         },
+        "comments" : [ "Note that this term was 'developmental process'." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_chembl" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term was 'developmental process'."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -5902,13 +5738,11 @@
           "val" : "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "Note - the relationship of this class to the nervous system is overlap. This allows for sense organ components that function in the transduction of sensory signals but that are not considered to be part of the nervous system to be part of sensory systems." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#expressionslim_flybase_ribbon" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note - the relationship of this class to the nervous system is overlap. This allows for sense organ components that function in the transduction of sensory signals but that are not considered to be part of the nervous system to be part of sensory systems."
         } ]
       },
       "type" : "CLASS",
@@ -6582,6 +6416,7 @@
           "val" : "The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell.",
           "xrefs" : [ "GOC:go_curators", "GOC:mtg_signaling_feb11" ]
         },
+        "comments" : [ "Note that signal transduction is defined broadly to include a ligand interacting with a receptor, downstream signaling steps and a response being triggered. A change in form of the signal in every step is not necessary. Note that in many cases the end of this process is regulation of the initiation of transcription. Note that specific transcription factors may be annotated to this term, but core/general transcription machinery such as RNA polymerase should not." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_candida", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_generic" ],
         "xrefs" : [ {
           "val" : "Wikipedia:Signal_transduction"
@@ -6604,9 +6439,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that signal transduction is defined broadly to include a ligand interacting with a receptor, downstream signaling steps and a response being triggered. A change in form of the signal in every step is not necessary. Note that in many cases the end of this process is regulation of the initiation of transcription. Note that specific transcription factors may be annotated to this term, but core/general transcription machinery such as RNA polymerase should not."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         }, {
@@ -6770,12 +6602,27 @@
       "type" : "CLASS",
       "lbl" : "regulation of response to extracellular stimulus"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0033555",
+      "meta" : {
+        "definition" : {
+          "val" : "Any process that results in a change in state or activity of a multicellular organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating the organism is under stress. The stress is usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).",
+          "xrefs" : [ "GOC:mah" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "biological_process"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "multicellular organismal response to stress"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0032103",
       "meta" : {
         "definition" : {
           "val" : "Any process that activates, maintains or increases the rate of a response to an external stimulus.",
           "xrefs" : [ "GOC:mah" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -6799,9 +6646,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -6809,26 +6653,13 @@
       "type" : "CLASS",
       "lbl" : "positive regulation of response to external stimulus"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/GO_0033555",
-      "meta" : {
-        "definition" : {
-          "val" : "Any process that results in a change in state or activity of a multicellular organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating the organism is under stress. The stress is usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).",
-          "xrefs" : [ "GOC:mah" ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "biological_process"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "multicellular organismal response to stress"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0032102",
       "meta" : {
         "definition" : {
           "val" : "Any process that stops, prevents, or reduces the frequency, rate or extent of a response to an external stimulus.",
           "xrefs" : [ "GOC:mah" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -6848,9 +6679,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -6864,13 +6692,11 @@
           "val" : "Any process that modulates the frequency, rate or extent of a response to an external stimulus.",
           "xrefs" : [ "GOC:mah" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
         } ]
       },
       "type" : "CLASS",
@@ -7096,6 +6922,7 @@
           "val" : "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a chemical stimulus.",
           "xrefs" : [ "GOC:jl" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_drosophila", "http://purl.obolibrary.org/obo/go#goslim_yeast", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate", "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_candida" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -7107,9 +6934,6 @@
           "xrefs" : [ "GOC:dos" ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -7143,6 +6967,7 @@
           "val" : "Locomotory behavior in a fully developed and mature organism.",
           "xrefs" : [ "GOC:ai" ]
         },
+        "comments" : [ "See also the biological process term 'locomotory behavior ; GO:0007626'." ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "adult locomotory behaviour",
@@ -7151,22 +6976,10 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "See also the biological process term 'locomotory behavior ; GO:0007626'."
         } ]
       },
       "type" : "CLASS",
       "lbl" : "adult locomotory behavior"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/go#goslim_chembl",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "ChEMBL protein targets summary"
-        } ]
-      },
-      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002506",
       "meta" : {
@@ -7227,6 +7040,7 @@
           "val" : "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an electromagnetic radiation stimulus. Electromagnetic radiation is a propagating wave in space with electric and magnetic components. These components oscillate at right angles to each other and to the direction of propagation.",
           "xrefs" : [ "GOC:jl", "Wikipedia:Electromagnetic_radiation" ]
         },
+        "comments" : [ "Note that 'radiation' refers to electromagnetic radiation of any wavelength." ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "response to radiation stimulus",
@@ -7237,9 +7051,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that 'radiation' refers to electromagnetic radiation of any wavelength."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -7436,15 +7247,6 @@
       "type" : "CLASS",
       "lbl" : "auditory system"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/fbbt#FB_gloss",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "terms for FlyBase glossary page"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/CARO_0010000",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -7471,6 +7273,7 @@
           "val" : "Any process that stops, prevents, or reduces the frequency, rate or extent of a response to a stimulus. Response to stimulus is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus.",
           "xrefs" : [ "GOC:jid" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -7492,9 +7295,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
         } ]
       },
       "type" : "CLASS",
@@ -7506,6 +7306,7 @@
           "val" : "Any process that activates, maintains or increases the rate of a response to a stimulus. Response to stimulus is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus.",
           "xrefs" : [ "GOC:jid" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate" ],
         "synonyms" : [ {
           "pred" : "hasNarrowSynonym",
@@ -7531,9 +7332,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
         } ]
       },
       "type" : "CLASS",
@@ -7545,11 +7343,9 @@
           "val" : "Any process that modulates the frequency, rate or extent of a response to a stimulus. Response to stimulus is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus.",
           "xrefs" : [ "GOC:jid" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -7586,6 +7382,7 @@
           "val" : "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process.",
           "xrefs" : [ "GOC:pdt" ]
         },
+        "comments" : [ "Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_candida", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_generic", "http://purl.obolibrary.org/obo/go#goslim_yeast", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_chembl" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -7601,31 +7398,10 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "molecular_function"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex."
         } ]
       },
       "type" : "CLASS",
       "lbl" : "molecular_function"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/go#goslim_aspergillus",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Aspergillus GO slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/fbbt#larval_OF",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "larval olfactory system"
-        } ]
-      },
-      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_1902533",
       "meta" : {
@@ -8055,13 +7831,11 @@
           "val" : "A collective term for stages 1-4.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "DEPRECATION WARNING" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#deprecated" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "DEPRECATION WARNING"
         } ]
       },
       "type" : "CLASS",
@@ -8114,12 +7888,10 @@
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2002/07/owl#deprecated",
-          "val" : "true"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
           "val" : "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect."
-        } ]
+        } ],
+        "deprecated" : true
       },
       "type" : "PROPERTY",
       "lbl" : "obsolete related via dependence to"
@@ -8218,19 +7990,10 @@
       "type" : "CLASS",
       "lbl" : "regulation of behavior"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#cell_quality",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "cell_quality"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0005622",
       "meta" : {
         "definition" : {
-          "val" : "The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.",
+          "val" : "A component of a cell contained within (but not including) the plasma membrane. In eukaryotes it includes the nucleus and cytoplasm.",
           "xrefs" : [ "ISBN:0198506732" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_generic", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_chembl" ],
@@ -8238,6 +8001,10 @@
           "val" : "Wikipedia:Intracellular"
         } ],
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "intracellular",
+          "xrefs" : [ ]
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "protoplasm",
           "xrefs" : [ ]
@@ -8257,10 +8024,13 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "cellular_component"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/17776"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "intracellular"
+      "lbl" : "intracellular anatomical structure"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0005623",
       "meta" : {
@@ -8268,6 +8038,7 @@
           "val" : "OBSOLETE. The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.",
           "xrefs" : [ "GOC:go_curators" ]
         },
+        "comments" : [ "This term was obsoleted because it was redundant with the root class of the cell ontology, CL:0000000." ],
         "xrefs" : [ {
           "val" : "NIF_Subcellular:sao1813327414"
         }, {
@@ -8277,15 +8048,10 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "cellular_component"
         }, {
-          "pred" : "http://www.w3.org/2002/07/owl#deprecated",
-          "val" : "true"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000589",
           "val" : "cell and encapsulating structures"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term was obsoleted because it was redundant with the root class of the cell ontology, CL:0000000."
-        } ]
+        } ],
+        "deprecated" : true
       },
       "type" : "CLASS",
       "lbl" : "obsolete cell"
@@ -8311,6 +8077,7 @@
           "val" : "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).",
           "xrefs" : [ "GOC:mah" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_candida", "http://purl.obolibrary.org/obo/go#goslim_drosophila", "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate", "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_generic" ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
@@ -8322,9 +8089,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -8955,6 +8719,7 @@
           "val" : "The directed movement of substances (such as macromolecules, small molecules, ions) or cellular components (such as complexes and organelles) into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter, pore or motor protein.",
           "xrefs" : [ "GOC:dos", "GOC:dph", "GOC:jl", "GOC:mah" ]
         },
+        "comments" : [ "Note that this term should not be used for direct annotation. It should be possible to make a more specific annotation to one of the children of this term, for e.g. to transmembrane transport, to microtubule-based transport or to vesicle-mediated transport." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_generic", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_candida" ],
         "synonyms" : [ {
           "pred" : "hasNarrowSynonym",
@@ -8985,9 +8750,6 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "jl"
         }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term should not be used for direct annotation. It should be possible to make a more specific annotation to one of the children of this term, for e.g. to transmembrane transport, to microtubule-based transport or to vesicle-mediated transport."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "GO:0044765"
         } ]
@@ -9001,12 +8763,10 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000231",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000227"
         }, {
-          "pred" : "http://www.w3.org/2002/07/owl#deprecated",
-          "val" : "true"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
           "val" : "http://purl.obolibrary.org/obo/GO_0038023"
-        } ]
+        } ],
+        "deprecated" : true
       },
       "type" : "CLASS"
     }, {
@@ -9407,15 +9167,6 @@
       "type" : "CLASS",
       "lbl" : "proneural cluster"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/go#goslim_mouse",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Mouse GO slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0051780",
       "meta" : {
         "definition" : {
@@ -9521,6 +9272,7 @@
           "val" : "Stage 5 begins when cellularization starts. Near the end of this stage the pole cells begin to migrate dorsally and ventral midline cells acquire an irregular, wavy appearance. Stage 5 ends when ventral furrow formation becomes apparent. Duration at 25 degrees C: approximately 40 minutes (130-170 minutes after egg laying).",
           "xrefs" : [ "FBC:DOS", "FBC:MA", "FlyBase:FBrf0089570" ]
         },
+        "comments" : [ "DEPRECATION WARNING" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#deprecated" ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
@@ -9530,9 +9282,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "DEPRECATION WARNING"
         } ]
       },
       "type" : "CLASS",
@@ -9593,11 +9342,9 @@
           "val" : "Nuclear division 10-13. Polar buds divide twice and become tightly grouped at the posterior pole by the end of this stage. Nuclei visible at the rim of the embryo. Stage 4 ends with the beginning of cellularization. Duration at 25 degrees C: approximately 50 minutes (80-130 minutes after egg laying).",
           "xrefs" : [ "FlyBase:FBrf0089570" ]
         },
+        "comments" : [ "DEPRECATION WARNING" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#deprecated" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "DEPRECATION WARNING"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
         } ]
@@ -9611,13 +9358,11 @@
           "val" : "A blastoderm embryo prior to cellularization (corresponds to embryonic stages 3 and 4).",
           "xrefs" : [ "FBC:DOS", "FBC:GG" ]
         },
+        "comments" : [ "DEPRECATION WARNING" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#cur", "http://purl.obolibrary.org/obo/fbbt#deprecated" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "DEPRECATION WARNING"
         } ]
       },
       "type" : "CLASS",
@@ -9678,11 +9423,9 @@
           "val" : "Nuclear division 9. The cleavage nuclei complete there migration to the periphery. Polar buds form at the posterior pole and divide once. Duration at 25 degrees C: approximately 15 minutes (65-80 minutes after egg laying).",
           "xrefs" : [ "FlyBase:FBrf0089570" ]
         },
+        "comments" : [ "DEPRECATION WARNING" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#deprecated" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "DEPRECATION WARNING"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
         } ]
@@ -9720,13 +9463,11 @@
           "val" : "A collective term for stages 3-5.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "DEPRECATION WARNING" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#deprecated" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "DEPRECATION WARNING"
         } ]
       },
       "type" : "CLASS",
@@ -9766,24 +9507,6 @@
       },
       "type" : "CLASS",
       "lbl" : "adult tagma"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Term not to be used for direct manual annotation"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#value_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Value slim"
-        } ]
-      },
-      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0019098",
       "meta" : {
@@ -9844,28 +9567,17 @@
       "type" : "CLASS",
       "lbl" : "molecular function regulator"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/fbbt#expressionslim_flybase_ribbon",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "FlyBase ribbon terms"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/FBbt_00005321",
       "meta" : {
         "definition" : {
           "val" : "A collective term for stages 9-12.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "DEPRECATION WARNING" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#deprecated" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "DEPRECATION WARNING"
         } ]
       },
       "type" : "CLASS",
@@ -9877,13 +9589,11 @@
           "val" : "A collective term for stages 6-8, during which complex morphogenetic movements result in the formation of the three germ layers; ectoderm, mesoderm and endoderm.",
           "xrefs" : [ "FBC:DOS", "FBC:GG" ]
         },
+        "comments" : [ "DEPRECATION WARNING" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#deprecated" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "DEPRECATION WARNING"
         } ]
       },
       "type" : "CLASS",
@@ -9966,6 +9676,7 @@
           "val" : "Any process that modulates the frequency, rate or extent of transferase activity, the catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2.",
           "xrefs" : [ "EC:2.-.-.-", "GOC:ai" ]
         },
+        "comments" : [ "This term is useful for grouping, but is too general for manual annotation. Please use a child term instead." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -9975,9 +9686,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term is useful for grouping, but is too general for manual annotation. Please use a child term instead."
         } ]
       },
       "type" : "CLASS",
@@ -10001,21 +9709,13 @@
       "type" : "CLASS",
       "lbl" : "biological entity"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#scalar_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Scalar slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0051347",
       "meta" : {
         "definition" : {
           "val" : "Any process that activates or increases the frequency, rate or extent of transferase activity, the catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from a donor compound to an acceptor.",
           "xrefs" : [ "GOC:ai" ]
         },
+        "comments" : [ "This term is useful for grouping, but is too general for manual annotation. Please use a child term instead." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate" ],
         "synonyms" : [ {
           "pred" : "hasNarrowSynonym",
@@ -10043,9 +9743,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term is useful for grouping, but is too general for manual annotation. Please use a child term instead."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -10059,6 +9756,7 @@
           "val" : "Any process that stops or reduces the rate of transferase activity, the catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from a donor compound to an acceptor.",
           "xrefs" : [ "GOC:ai" ]
         },
+        "comments" : [ "This term is useful for grouping, but is too general for manual annotation. Please use a child term instead." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -10084,9 +9782,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term is useful for grouping, but is too general for manual annotation. Please use a child term instead."
         } ]
       },
       "type" : "CLASS",
@@ -10120,15 +9815,6 @@
       },
       "type" : "CLASS",
       "lbl" : "regulation of circadian rhythm"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/go#goslim_drosophila",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Drosophila GO slim"
-        } ]
-      },
-      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/FBbt_00001061",
       "meta" : {
@@ -10378,7 +10064,7 @@
       "id" : "http://purl.obolibrary.org/obo/FBbt_00005413",
       "meta" : {
         "definition" : {
-          "val" : "\"anlagen in statu nascendi\" are domains that do not yet coincide 1:1 with a later organ. Anlagen in statu nascendi are typically defined for the early blastoderm by the expression domains of genes which, in the late blastoderm or later, are expressed in specific anlagen, but initially come on in larger domains.",
+          "val" : "Domain that does not yet coincide 1:1 with a later organ. Anlagen in statu nascendi are typically defined for the early blastoderm by the expression domains of genes which, in the late blastoderm or later, are expressed in specific anlagen, but initially come on in larger domains.",
           "xrefs" : [ "FlyBase:FBrf0155831", "FlyBase:FBrf0178740" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#cur", "http://purl.obolibrary.org/obo/fbbt#EmbDevSlim" ],
@@ -10501,6 +10187,7 @@
           "val" : "Behavior in a fully developed and mature organism.",
           "xrefs" : [ "GOC:mah", "ISBN:0877797099" ]
         },
+        "comments" : [ "See also the biological process term 'behavior ; GO:0007610'." ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "adult behavioral response to stimulus",
@@ -10517,9 +10204,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "See also the biological process term 'behavior ; GO:0007610'."
         } ]
       },
       "type" : "CLASS",
@@ -10590,15 +10274,6 @@
       "type" : "CLASS",
       "lbl" : "optokinetic behavior"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/fbbt#EmbDevSlim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "EmbDevSlim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0007632",
       "meta" : {
         "definition" : {
@@ -10632,6 +10307,7 @@
           "val" : "Behavior associated with the intake of food.",
           "xrefs" : [ "GOC:mah" ]
         },
+        "comments" : [ "See also the biological process term 'behavior ; GO:0007610'." ],
         "xrefs" : [ {
           "val" : "Wikipedia:List_of_feeding_behaviours"
         } ],
@@ -10706,9 +10382,6 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
           "val" : "https://github.com/geneontology/go-ontology/issues/18547"
         }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "See also the biological process term 'behavior ; GO:0007610'."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "GO:0044370"
         }, {
@@ -10743,6 +10416,7 @@
           "val" : "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome).",
           "xrefs" : [ "GOC:pdt", "NIF_Subcellular:sao1337158144" ]
         },
+        "comments" : [ "Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_generic", "http://purl.obolibrary.org/obo/go#goslim_yeast", "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_candida", "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_plant" ],
         "xrefs" : [ {
           "val" : "NIF_Subcellular:sao1337158144"
@@ -10766,9 +10440,6 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "cellular_component"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this."
         } ]
       },
       "type" : "CLASS",
@@ -10914,15 +10585,13 @@
           "val" : "a core relation that holds between a whole and its part",
           "xrefs" : [ ]
         },
+        "comments" : [ "We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'." ],
         "xrefs" : [ {
           "val" : "OBO_REL:has_part"
         }, {
           "val" : "BFO:0000051"
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'."
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."
         }, {
@@ -11036,6 +10705,7 @@
           "val" : "Interacting selectively and non-covalently with one or more specific sites on a receptor molecule, a macromolecule that undergoes combination with a hormone, neurotransmitter, drug or intracellular messenger to initiate a change in cell function.",
           "xrefs" : [ "GOC:bf", "GOC:ceb", "ISBN:0198506732" ]
         },
+        "comments" : [ "Where appropriate, also consider annotating to 'receptor agonist activity ; GO:0048018'." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_agr", "http://purl.obolibrary.org/obo/go#goslim_mouse", "http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon" ],
         "xrefs" : [ {
           "val" : "Wikipedia:Ligand_(biochemistry)"
@@ -11054,9 +10724,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Where appropriate, also consider annotating to 'receptor agonist activity ; GO:0048018'."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "molecular_function"
         } ]
@@ -11503,6 +11170,7 @@
           "val" : "The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity.",
           "xrefs" : [ "GOC:ems", "GOC:jl", "ISBN:0395448956", "PMID:20160973" ]
         },
+        "comments" : [ "1. Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation reviews.\n2. While a broader definition of behavior encompassing plants and single cell organisms would be justified on the basis of some usage (see PMID:20160973 for discussion), GO uses a tight definition that limits behavior to animals and to responses involving the nervous system, excluding plant responses that GO classifies under development, and responses of unicellular organisms that has general classifications for covering the responses of cells in multicellular organisms (e.g. cell chemotaxis)." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon", "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate", "http://purl.obolibrary.org/obo/go#goslim_agr" ],
         "xrefs" : [ {
           "val" : "Wikipedia:Behavior"
@@ -11530,9 +11198,6 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "GO:0023032"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "1. Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation reviews.\n2. While a broader definition of behavior encompassing plants and single cell organisms would be justified on the basis of some usage (see PMID:20160973 for discussion), GO uses a tight definition that limits behavior to animals and to responses involving the nervous system, excluding plant responses that GO classifies under development, and responses of unicellular organisms that has general classifications for covering the responses of cells in multicellular organisms (e.g. cell chemotaxis)."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2012-09-20T14:06:08Z"
@@ -11702,11 +11367,9 @@
           "val" : "Any process that modulates the frequency, rate or extent of a response to stress. Response to stress is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).",
           "xrefs" : [ "GOC:dhl" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         }, {
@@ -11726,11 +11389,9 @@
           "val" : "Imaginal disc that, in the adults, gives rise to the eye, antenna, head capsule (including all bristles and external membranes) and the maxillary palps (Cohen, 1993).",
           "xrefs" : [ "FlyBase:FBrf0064789" ]
         },
+        "comments" : [ "Figure 12 from Cohen (1993, Bate, Martinez Arias, 1993: 747--841) provides a fate map of the eye-antennal disc." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#EmbDevSlim", "http://purl.obolibrary.org/obo/fbbt#cur" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Figure 12 from Cohen (1993, Bate, Martinez Arias, 1993: 747--841) provides a fate map of the eye-antennal disc."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
         } ]
@@ -11768,15 +11429,13 @@
           "val" : "A reproduction process that creates a new organism by combining the genetic material of two gametes, which may come from two organisms or from a single organism, in the case of self-fertilizing hermaphrodites, e.g. C. elegans, or self-fertilization in plants. It occurs both in eukaryotes and prokaryotes: in multicellular eukaryotic organisms, an individual is created anew; in prokaryotes, the initial cell has additional or transformed genetic material. In a process called genetic recombination, genetic material (DNA) originating from two gametes join up so that homologous sequences are aligned with each other, and this is followed by exchange of genetic information. After the new recombinant chromosome is formed, it is passed on to progeny.",
           "xrefs" : [ "GOC:jl", "GOC:kmv", "GOC:krc", "GOC:tb", "ISBN:0387520546", "Wikipedia:Sexual_reproduction" ]
         },
+        "comments" : [ "Sexual reproduction may be seen as the regular alternation, in the life cycle of haplontic, diplontic and diplohaplontic organisms, of meiosis and fertilization which provides for the production offspring. In diplontic organisms there is a life cycle in which the products of meiosis behave directly as gametes, fusing to form a zygote from which the diploid, or sexually reproductive polyploid, adult organism will develop. In diplohaplontic organisms a haploid phase (gametophyte) exists in the life cycle between meiosis and fertilization (e.g. higher plants, many algae and Fungi); the products of meiosis are spores that develop as haploid individuals from which haploid gametes develop to form a diploid zygote; diplohaplontic organisms show an alternation of haploid and diploid generations. In haplontic organisms meiosis occurs in the zygote, giving rise to four haploid cells (e.g. many algae and protozoa), only the zygote is diploid and this may form a resistant spore, tiding organisms over hard times." ],
         "xrefs" : [ {
           "val" : "Wikipedia:Sexual_reproduction"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Sexual reproduction may be seen as the regular alternation, in the life cycle of haplontic, diplontic and diplohaplontic organisms, of meiosis and fertilization which provides for the production offspring. In diplontic organisms there is a life cycle in which the products of meiosis behave directly as gametes, fusing to form a zygote from which the diploid, or sexually reproductive polyploid, adult organism will develop. In diplohaplontic organisms a haploid phase (gametophyte) exists in the life cycle between meiosis and fertilization (e.g. higher plants, many algae and Fungi); the products of meiosis are spores that develop as haploid individuals from which haploid gametes develop to form a diploid zygote; diplohaplontic organisms show an alternation of haploid and diploid generations. In haplontic organisms meiosis occurs in the zygote, giving rise to four haploid cells (e.g. many algae and protozoa), only the zygote is diploid and this may form a resistant spore, tiding organisms over hard times."
         } ]
       },
       "type" : "CLASS",
@@ -11829,11 +11488,9 @@
           "val" : "Anterior, bulbous portion of the eye-antennal disc that gives rise to the eye as well as contributing to the head capsule (Cohen, 1993).",
           "xrefs" : [ "FlyBase:FBrf0064789" ]
         },
+        "comments" : [ "Figure 12 from Cohen (1993, Bate, Martinez Arias, 1993: 747--841) provides a fate map of the eye-antennal disc." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbbt#cur" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Figure 12 from Cohen (1993, Bate, Martinez Arias, 1993: 747--841) provides a fate map of the eye-antennal disc."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "fly_anatomy.ontology"
         } ]
@@ -11966,15 +11623,6 @@
       },
       "type" : "CLASS",
       "lbl" : "positive regulation of catalytic activity"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/go#goslim_yeast",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Yeast GO slim"
-        } ]
-      },
-      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0007626",
       "meta" : {
@@ -12314,6 +11962,7 @@
           "val" : "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t",
           "xrefs" : [ ]
         },
+        "comments" : [ "Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant" ],
         "xrefs" : [ {
           "val" : "BFO:0000066"
         } ],
@@ -12336,9 +11985,6 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "unfolds in"
         }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "external"
         } ]
@@ -12352,12 +11998,10 @@
           "val" : "[copied from inverse property 'occurs in'] b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t",
           "xrefs" : [ ]
         },
+        "comments" : [ "Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
           "val" : "http://purl.obolibrary.org/obo/bfo.owl"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "site of"
@@ -12365,6 +12009,10 @@
       },
       "type" : "PROPERTY",
       "lbl" : "contains process"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000700",
+      "type" : "PROPERTY",
+      "lbl" : "has ontology root term"
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000062",
       "meta" : {
@@ -12408,15 +12056,6 @@
       "type" : "PROPERTY",
       "lbl" : "precedes"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "FlyBase Drosophila GO ribbon slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000019",
       "type" : "CLASS",
       "lbl" : "quality"
@@ -12443,6 +12082,7 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002090",
       "meta" : {
+        "comments" : [ "X immediately_precedes_Y iff: end(X) simultaneous_with start(Y)" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -12450,9 +12090,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "meets"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "X immediately_precedes_Y iff: end(X) simultaneous_with start(Y)"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/RO_0002575",
           "val" : "http://purl.obolibrary.org/obo/BFO_0000063"
@@ -12519,11 +12156,9 @@
           "val" : "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus. The process begins with detection of the stimulus by a cell and ends with a change in state or activity or the cell.",
           "xrefs" : [ "GOC:bf", "GOC:jl" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -12627,6 +12262,7 @@
           "val" : "Catalysis of the transfer of a phosphate group, usually from ATP, to a substrate molecule.",
           "xrefs" : [ "ISBN:0198506732" ]
         },
+        "comments" : [ "Note that this term encompasses all activities that transfer a single phosphate group; although ATP is by far the most common phosphate donor, reactions using other phosphate donors are included in this term." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_drosophila", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_yeast", "http://purl.obolibrary.org/obo/go#goslim_generic" ],
         "xrefs" : [ {
           "val" : "Reactome:R-HSA-6788855"
@@ -12639,9 +12275,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term encompasses all activities that transfer a single phosphate group; although ATP is by far the most common phosphate donor, reactions using other phosphate donors are included in this term."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "molecular_function"
         } ]
@@ -12690,15 +12323,6 @@
       },
       "type" : "CLASS",
       "lbl" : "male courtship behavior, veined wing vibration"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/pato#mpath_slim",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Pathology slim"
-        } ]
-      },
-      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_2000026",
       "meta" : {
@@ -12946,13 +12570,11 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002086",
       "meta" : {
+        "comments" : [ "X ends_after Y iff: end(Y) before_or_simultaneous_with end(X)" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "David Osumi-Sutherland"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "X ends_after Y iff: end(Y) before_or_simultaneous_with end(X)"
         } ]
       },
       "type" : "PROPERTY",
@@ -12960,12 +12582,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002087",
       "meta" : {
+        "comments" : [ "X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "David Osumi-Sutherland"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "starts_at_end_of"
@@ -13285,23 +12905,12 @@
       "type" : "CLASS",
       "lbl" : "cellular quality"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/go#goslim_candida",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Candida GO slim"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000068",
       "meta" : {
+        "comments" : [ "TODO: define this or obsolete it and move children somewhere else." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "TODO: define this or obsolete it and move children somewhere else."
         } ]
       },
       "type" : "CLASS",
@@ -13321,15 +12930,6 @@
       },
       "type" : "CLASS",
       "lbl" : "anterior ectoderm"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/go#goslim_pir",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "PIR GO slim"
-        } ]
-      },
-      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/FBbt_00005806",
       "meta" : {
@@ -13399,6 +12999,7 @@
           "val" : "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus. The process begins with detection of the stimulus and ends with a change in state or activity or the cell or organism.",
           "xrefs" : [ "GOC:ai", "GOC:bf" ]
         },
+        "comments" : [ "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate", "http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon", "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_mouse", "http://purl.obolibrary.org/obo/go#goslim_agr" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -13408,9 +13009,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "GO:0051869"
@@ -13556,6 +13154,7 @@
           "val" : "The entirety of a process in which information is transmitted within a biological system. This process begins with an active signal and ends when a cellular response has been triggered.",
           "xrefs" : [ "GOC:mtg_signal", "GOC:mtg_signaling_feb11", "GOC:signaling" ]
         },
+        "comments" : [ "Note that a signal is any variable property or parameter that serves to convey information, and may be a physical entity such as a gene product or small molecule, a photon, or a change in state such as movement or voltage change." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_yeast", "http://purl.obolibrary.org/obo/go#goslim_mouse", "http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon", "http://purl.obolibrary.org/obo/go#goslim_pombe", "http://purl.obolibrary.org/obo/go#goslim_agr" ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
@@ -13587,9 +13186,6 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2010-02-16T09:30:50Z"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that a signal is any variable property or parameter that serves to convey information, and may be a physical entity such as a gene product or small molecule, a photon, or a change in state such as movement or voltage change."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "jl"
@@ -13755,14 +13351,12 @@
           "val" : "Catalysis of the transfer of a phosphorus-containing group from one compound (donor) to another (acceptor).",
           "xrefs" : [ "GOC:jl", "ISBN:0198506732" ]
         },
+        "comments" : [ "Note that this term encompasses all kinase activities, as well as activities that transfer other phosphorus-containing groups such as diphosphate or nucleotides." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_chembl" ],
         "xrefs" : [ {
           "val" : "EC:2.7"
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term encompasses all kinase activities, as well as activities that transfer other phosphorus-containing groups such as diphosphate or nucleotides."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "molecular_function"
         } ]
@@ -13939,13 +13533,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051649"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0051100",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0005488"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0044237",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0009987"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0051100",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0005488"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002334",
       "pred" : "subPropertyOf",
@@ -14207,12 +13801,12 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002596"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0023056",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0023052"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0023057",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0023052"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0023056",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
       "obj" : "http://purl.obolibrary.org/obo/GO_0023052"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0040013",
@@ -14275,13 +13869,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0048522"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002333",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0000057"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0010647",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0010646"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002333",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000057"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0009416",
       "pred" : "is_a",
@@ -14387,13 +13981,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0048519"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0004033",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002264"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0030534",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0032501"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0004033",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002264"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0009966",
       "pred" : "is_a",
@@ -14487,13 +14081,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBbt_00025991"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002578",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002412"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FBbt_00003010",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBbt_00000007"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002578",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002412"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0022414",
       "pred" : "is_a",
@@ -14507,12 +14101,12 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0009967",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0007165"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0009968",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0007165"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0009967",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007165"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0000052",
@@ -14567,13 +14161,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051241"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002430",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002428"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0006970",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0009628"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002430",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002428"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0031325",
       "pred" : "is_a",
@@ -14879,13 +14473,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050794"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0044237",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0008152"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0031644",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0044057"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0044237",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0008152"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0009648",
       "pred" : "is_a",
@@ -15195,13 +14789,13 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002202",
       "obj" : "http://purl.obolibrary.org/obo/FBbt_00000110"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FBbt_00001768",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002202",
-      "obj" : "http://purl.obolibrary.org/obo/FBbt_00105515"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FBbt_01000119",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBbt_00005426"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBbt_00001768",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002202",
+      "obj" : "http://purl.obolibrary.org/obo/FBbt_00105515"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0023051",
       "pred" : "is_a",
@@ -15575,10 +15169,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0008150"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_1902435",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0043900"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0032388",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0048522"
@@ -15711,6 +15301,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0008150"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0016301",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0016310"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0010647",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007154"
@@ -15718,10 +15312,6 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0010648",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007154"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0016301",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0016310"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051348",
       "pred" : "is_a",
@@ -15743,12 +15333,12 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
       "obj" : "http://purl.obolibrary.org/obo/GO_0046907"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0090326",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0031987"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0090327",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0031987"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0090326",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
       "obj" : "http://purl.obolibrary.org/obo/GO_0031987"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002432",
@@ -15863,10 +15453,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000068"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0005622",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0005575"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051093",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
       "obj" : "http://purl.obolibrary.org/obo/GO_0032502"
@@ -15890,10 +15476,6 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0060089",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0003674"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0045805",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0051094"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002578",
       "pred" : "subPropertyOf",
@@ -15943,13 +15525,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007165"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002412",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002411"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FBbt_00001732",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBbt_00000006"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002412",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002411"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0042327",
       "pred" : "is_a",
@@ -16011,13 +15593,13 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002202",
       "obj" : "http://purl.obolibrary.org/obo/FBbt_00005301"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FBbt_00001649",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-      "obj" : "http://purl.obolibrary.org/obo/FBbt_00005331"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000141",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBbt_00001649",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/FBbt_00005331"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0042326",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
@@ -16119,10 +15701,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBbt_00007006"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_1902437",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0043902"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0022414",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/GO_0000003"
@@ -16147,13 +15725,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000069"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0040017",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0048518"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0031323",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0044237"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0040017",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0048518"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBbt_00003007",
       "pred" : "is_a",
@@ -16223,13 +15801,13 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0003008"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0016772",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0016740"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FBbt_00000002",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBbt_00057001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0016772",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0016740"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002523",
       "pred" : "subPropertyOf",
@@ -16358,10 +15936,6 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0032388",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
       "obj" : "http://purl.obolibrary.org/obo/GO_0046907"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_1902436",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0043901"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_1902531",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
@@ -16679,10 +16253,6 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002328"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_1902435",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0051239"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_1902436",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_1902435"
@@ -16699,13 +16269,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0031324"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FBbt_00001760",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-      "obj" : "http://purl.obolibrary.org/obo/FBbt_00001727"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FBbt_00025991",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002202",
       "obj" : "http://purl.obolibrary.org/obo/FBbt_00000119"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBbt_00001760",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/FBbt_00001727"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBbt_00004113",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -16783,10 +16353,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FBbt_00005515",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-      "obj" : "http://purl.obolibrary.org/obo/FBbt_00004450"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0010563",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
       "obj" : "http://purl.obolibrary.org/obo/GO_0006793"
@@ -16794,6 +16360,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0010562",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
       "obj" : "http://purl.obolibrary.org/obo/GO_0006793"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBbt_00005515",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/FBbt_00004450"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002385",
       "pred" : "subPropertyOf",
@@ -16855,13 +16425,13 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002328"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FBbt_00001059",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBbt_00025991"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0010562",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0031325"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBbt_00001059",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBbt_00025991"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBbt_00001761",
       "pred" : "is_a",
@@ -16959,13 +16529,13 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007631"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0033673",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0043549"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0009968",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0048585"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0033673",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0043549"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002411",
       "pred" : "subPropertyOf",
@@ -16987,13 +16557,13 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002264"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0033673",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0051348"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_1902437",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_1902435"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0033673",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0051348"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBbt_00000119",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -17075,13 +16645,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0009991"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002353",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0000056"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0046903",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0006810"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002353",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000056"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0032106",
       "pred" : "is_a",
@@ -17134,6 +16704,10 @@
       "sub" : "http://purl.obolibrary.org/obo/RO_0002387",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002384"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0005622",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0110165"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0003824",
       "pred" : "is_a",
@@ -17499,13 +17073,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0048511"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0032109",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0031667"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0007563",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_2000026"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0032109",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0031667"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0032879",
       "pred" : "is_a",
@@ -17531,13 +17105,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0009987"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_1902437",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_2000243"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FBbt_00002952",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002202",
       "obj" : "http://purl.obolibrary.org/obo/FBbt_00001727"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_1902437",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_2000243"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002404",
       "pred" : "subPropertyOf",
@@ -17891,13 +17465,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0019098"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002015",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002013"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0033555",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0006950"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002015",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002013"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0045804",
       "pred" : "is_a",
@@ -17996,7 +17570,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/dpo/releases/2020-08-14/imports/fbbt_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/dpo/releases/2020-10-20/imports/fbbt_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ {
@@ -18259,17 +17833,17 @@
         "fillerId" : "http://purl.obolibrary.org/obo/FBbt_00003004"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0048520",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0007610"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0048521",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0007610"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0048520",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0007610"
       } ]
     }, {
@@ -18574,18 +18148,18 @@
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0050877"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/FBbt_00000006",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/FBbt_00000003" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000050",
-        "fillerId" : "http://purl.obolibrary.org/obo/FBbt_00000004"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/FBbt_00047735",
       "genusIds" : [ "http://purl.obolibrary.org/obo/FBbt_00007278" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002215",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0050953"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/FBbt_00000006",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/FBbt_00000003" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000050",
+        "fillerId" : "http://purl.obolibrary.org/obo/FBbt_00000004"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0065009",
@@ -18721,17 +18295,17 @@
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0006950"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0042754",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0007623"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0042753",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0007623"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0042754",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0007623"
       } ]
     }, {
@@ -19329,33 +18903,33 @@
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "allValuesFromEdges" : [ {
-        "sub" : "http://purl.obolibrary.org/obo/BFO_0000004",
-        "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-        "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
-      }, {
         "sub" : "http://purl.obolibrary.org/obo/BFO_0000031",
         "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
         "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
       }, {
-        "sub" : "http://purl.obolibrary.org/obo/BFO_0000002",
+        "sub" : "http://purl.obolibrary.org/obo/BFO_0000004",
         "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-        "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
+        "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
       }, {
         "sub" : "http://purl.obolibrary.org/obo/BFO_0000019",
         "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
         "obj" : "http://purl.obolibrary.org/obo/BFO_0000019"
       }, {
-        "sub" : "http://purl.obolibrary.org/obo/BFO_0000003",
+        "sub" : "http://purl.obolibrary.org/obo/BFO_0000017",
         "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-        "obj" : "http://purl.obolibrary.org/obo/BFO_0000003"
+        "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+      }, {
+        "sub" : "http://purl.obolibrary.org/obo/BFO_0000002",
+        "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+        "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
       }, {
         "sub" : "http://purl.obolibrary.org/obo/BFO_0000020",
         "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
         "obj" : "http://purl.obolibrary.org/obo/BFO_0000020"
       }, {
-        "sub" : "http://purl.obolibrary.org/obo/BFO_0000017",
+        "sub" : "http://purl.obolibrary.org/obo/BFO_0000003",
         "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-        "obj" : "http://purl.obolibrary.org/obo/BFO_0000017"
+        "obj" : "http://purl.obolibrary.org/obo/BFO_0000003"
       } ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0002506",

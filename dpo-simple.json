@@ -7,13 +7,11 @@
           "val" : "A phenotype that is survival to mature adulthood, where mature is defined as after adult stage A3 (FBdv:00006012).",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "Note, this term should not be used with the qualifier 'partially'. Use semi-viable or semi-lethal instead." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note, this term should not be used with the qualifier 'partially'. Use semi-viable or semi-lethal instead."
         } ]
       },
       "type" : "CLASS",
@@ -69,13 +67,11 @@
           "val" : "A phenotype of a population that is the death of all animals in that population at some stage or stages prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).",
           "xrefs" : [ "FBC:DOS", "FBC:KM" ]
         },
+        "comments" : [ "Note on usage: lethal is appropriate in cases where escaper adults are very rare. The lethal phase prior to becoming a mature adult may be further specified using children terms which specify stage." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#lethal_phase" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note on usage: lethal is appropriate in cases where escaper adults are very rare. The lethal phase prior to becoming a mature adult may be further specified using children terms which specify stage."
         } ]
       },
       "type" : "CLASS",
@@ -87,6 +83,7 @@
           "val" : "A phenotype of a population that is the death of a majority of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).",
           "xrefs" : [ "FBC:DOS", "FBC:KM", "FBC:NB" ]
         },
+        "comments" : [ "Stages during which there is significant death prior to mature adulthood can be indicated using one or more stage qualifiers." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#lethal_phase" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -94,9 +91,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Stages during which there is significant death prior to mature adulthood can be indicated using one or more stage qualifiers."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -110,11 +104,9 @@
           "val" : "A phenotype that is a failure of mutant cells to survive.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "Typically, this phenotype is assayed in clones of cells." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Typically, this phenotype is assayed in clones of cells."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -323,6 +315,7 @@
           "val" : "Phenotype that is a defect in establishment of planar polarity (GO:0001736). 'establishment of planar polarity' is defined as: 'Coordinated organization of groups of cells in the plane of an epithelium, such that they all orient to similar coordinates.'",
           "xrefs" : [ "GOC:dph" ]
         },
+        "comments" : [ "For apical-basal polarity phenotypes of epithelia, the appropriate term is 'cell polarity defective'." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons" ],
         "synonyms" : [ {
           "pred" : "hasBroadSynonym",
@@ -332,9 +325,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "For apical-basal polarity phenotypes of epithelia, the appropriate term is 'cell polarity defective'."
         } ]
       },
       "type" : "CLASS",
@@ -451,12 +441,10 @@
           "val" : "Dominant phenotype consisting of short slender bristles and delayed development. Homozygotes are cell lethal.",
           "xrefs" : [ "FlyBase:FBrf0066905" ]
         },
+        "comments" : [ "The phenotype may be a general result of mutations in essential components of the protein synthesis pathway, as a number of Minutes encode ribosomal proteins. In an animal that is heterozygous for a Minute mutation, cells with two wild-type alleles of the affected gene have a growth advantage. Many developmental studies take advantage of this fact to give somatic clones a growth advantage. The term 'Minute' should not be used to annotate the resulting phenotypes." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "The phenotype may be a general result of mutations in essential components of the protein synthesis pathway, as a number of Minutes encode ribosomal proteins. In an animal that is heterozygous for a Minute mutation, cells with two wild-type alleles of the affected gene have a growth advantage. Many developmental studies take advantage of this fact to give somatic clones a growth advantage. The term 'Minute' should not be used to annotate the resulting phenotypes."
         } ]
       },
       "type" : "CLASS",
@@ -468,13 +456,11 @@
           "val" : "Phenotype that is a defect in axis specification (GO:0009798). 'axis specification' is defined as: 'The establishment, maintenance and elaboration of a pattern along a line or around a point.'",
           "xrefs" : [ "FBC:DOS", "GOC:dph", "GOC:go_curators", "GOC:isa_complete" ]
         },
+        "comments" : [ "This phenotypic class does not encompass planar polarity." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This phenotypic class does not encompass planar polarity."
         } ]
       },
       "type" : "CLASS",
@@ -538,13 +524,11 @@
           "val" : "A phenotype that is an expansion of the developing embryonic nervous system at the expense of developing ventral epidermis.",
           "xrefs" : [ "FlyBase:FBrf0040185" ]
         },
+        "comments" : [ "Typically this is caused by and expansion of the population of neuroblasts at the expense of prospective epidermis, both of which originate in the ventral ectoderm." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "djs93"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Typically this is caused by and expansion of the population of neuroblasts at the expense of prospective epidermis, both of which originate in the ventral ectoderm."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
@@ -562,6 +546,7 @@
           "val" : "Phenotype characterized by the formation of lumps of melanotic tissue inside the body in the absence of foreign bodies.",
           "xrefs" : [ "FlyBase:FBrf0094387", "FlyBase:FBrf0194475" ]
         },
+        "comments" : [ "Melanotic capsules are formed around foreign bodies in wild-type animals as part of the immune response, for example as a protection against parasitoid wasps. Some, but not all melanotic mass phenotypes involve ectopic activation of this immune response. While melanotic masses are commonly referred to as melanotic tumors in the historical literature, this is a misnomer as they are rarely neoplastic." ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "melanotic 'tumor'",
@@ -570,9 +555,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Melanotic capsules are formed around foreign bodies in wild-type animals as part of the immune response, for example as a protection against parasitoid wasps. Some, but not all melanotic mass phenotypes involve ectopic activation of this immune response. While melanotic masses are commonly referred to as melanotic tumors in the historical literature, this is a misnomer as they are rarely neoplastic."
         } ]
       },
       "type" : "CLASS",
@@ -598,13 +580,11 @@
           "val" : "Phenotype that is a change in the rate of some developmental process (GO:0032502) taking place prior to mature adulthood (defined as adult stage A3), compared to wild-type. Note, developmental processes include stages in development of the whole animal (e.g.- larval development) as well as specific sub-processes, such as dorsal closure.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "A more complete formalization would require a clause specifying stage. It might be possible to do this in OWL using the same system as we are using for lethal phase." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "A more complete formalization would require a clause specifying stage. It might be possible to do this in OWL using the same system as we are using for lethal phase."
         } ]
       },
       "type" : "CLASS",
@@ -630,13 +610,11 @@
           "val" : "A phenotype that is a disruption in the wild-type pattern of segments or parasegments of the embryo or larva.",
           "xrefs" : [ "FlyBase:FBrf0035438" ]
         },
+        "comments" : [ "Commonly assayed on the basis of phenotypic effects on segmentally repeated cuticular patterns." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Commonly assayed on the basis of phenotypic effects on segmentally repeated cuticular patterns."
         } ]
       },
       "type" : "CLASS",
@@ -648,12 +626,10 @@
           "val" : "Embryonic/larval segmentation phenotype that is the complete or partial loss of alternate segments or parasegments.",
           "xrefs" : [ "FlyBase:FBrf0035438" ]
         },
+        "comments" : [ "Commonly assayed on the basis of phenotypic effects on segmentally repeated cuticular patterns." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Commonly assayed on the basis of phenotypic effects on segmentally repeated cuticular patterns."
         } ]
       },
       "type" : "CLASS",
@@ -687,15 +663,6 @@
       "type" : "CLASS",
       "lbl" : "copulation defective"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/fbcv#lethal_phase",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "lethal phase terms"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/FBcv_0000380",
       "meta" : {
         "definition" : {
@@ -716,10 +683,8 @@
           "val" : "Genotype g1 is a suppressor of variegation if, and only if, some genotype g2 has a variegated phenotype and the degree of variegation caused by g1g2 is less than that caused by to g2 alone.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "Typically, g2 is a chromosomal aberration or an insertion." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Typically, g2 is a chromosomal aberration or an insertion."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -762,12 +727,10 @@
           "val" : "Phenotype that is a defect in oviposition (GO:0007620). 'oviposition' is defined as: 'The deposition of eggs (either fertilized or not) upon a surface or into a medium such as water.'.",
           "xrefs" : [ "FBC:TEMJ", "GOC:ems" ]
         },
+        "comments" : [ "This term should only be used to report defects specifically in oviposition, as opposed to an overall loss of fertility. If a difference in \"oviposition rate\" is measured by authors as a proxy for sterility/fertility, it would be better to use the terms \"sterile\", \"semi-sterile\", or \"semi-fertile\", as appropriate." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term should only be used to report defects specifically in oviposition, as opposed to an overall loss of fertility. If a difference in \"oviposition rate\" is measured by authors as a proxy for sterility/fertility, it would be better to use the terms \"sterile\", \"semi-sterile\", or \"semi-fertile\", as appropriate."
         } ]
       },
       "type" : "CLASS",
@@ -826,10 +789,8 @@
           "val" : "Embryonic/larval segmentation phenotype that is the complete or partial loss of odd segments.",
           "xrefs" : [ "FlyBase:FBrf0035438" ]
         },
+        "comments" : [ "Commonly assayed on the basis of phenotypic effects on segmentally repeated cuticular patterns." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Commonly assayed on the basis of phenotypic effects on segmentally repeated cuticular patterns."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -843,10 +804,8 @@
           "val" : "Embryonic/larval segmentation phenotype in which some fraction of each segment (along the anterior-posterior axis) is deleted and replaced by a mirror image duplication of the remaining part of the segment.",
           "xrefs" : [ "FlyBase:FBrf0035438" ]
         },
+        "comments" : [ "Commonly assayed on the basis of phenotypic effects on segmentally repeated cuticular patterns." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Commonly assayed on the basis of phenotypic effects on segmentally repeated cuticular patterns."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -860,12 +819,10 @@
           "val" : "Embryonic/larval segmentation phenotype that is the complete loss of a contiguous stretch of 2 or more segments.",
           "xrefs" : [ "FlyBase:FBrf0035438" ]
         },
+        "comments" : [ "Commonly assayed on the basis of phenotypic effects on segmentally repeated cuticular patterns." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Commonly assayed on the basis of phenotypic effects on segmentally repeated cuticular patterns."
         } ]
       },
       "type" : "CLASS",
@@ -1038,6 +995,7 @@
           "val" : "Phenotype that is a change in the strong tendency, seen in wild-type Drosophila melanogaster, to climb - a behavior otherwise known as negative gravitaxis (GO:0048060 ; movement away from the source of gravity).",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "Note, this term should not be used when flies have climbing defects purely as a consequence of locomotion defects, use 'locomotor behavior defective' instead." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons" ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
@@ -1049,9 +1007,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note, this term should not be used when flies have climbing defects purely as a consequence of locomotion defects, use 'locomotor behavior defective' instead."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -1080,12 +1035,10 @@
           "val" : "Embryonic/larval segmentation phenotype that is the complete or partial loss of even segments.",
           "xrefs" : [ "FlyBase:FBrf0035438" ]
         },
+        "comments" : [ "Commonly assayed on the basis of phenotypic effects on segmentally repeated cuticular patterns." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Commonly assayed on the basis of phenotypic effects on segmentally repeated cuticular patterns."
         } ]
       },
       "type" : "CLASS",
@@ -1343,6 +1296,7 @@
           "val" : "Phenotype that is a decrease in the size of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type. This phenotype is not necessarily accompanied by decreased growth of a tissue - there may be more cells in an otherwise normal volume of tissue.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "Note that defects in cell size are not necessarily the result of defects in cell growth. A change in the rate of cell division in the absence of any change in cell growth rate can result in smaller or larger cells." ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "reduced cell size",
@@ -1351,9 +1305,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that defects in cell size are not necessarily the result of defects in cell growth. A change in the rate of cell division in the absence of any change in cell growth rate can result in smaller or larger cells."
         } ]
       },
       "type" : "CLASS",
@@ -1379,10 +1330,8 @@
           "val" : "Phenotype that is an increase in the number of cells in a whole animal or in some specific organ, tissue or clone of cells compared to wild-type.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "This phenotype is not necessarily accompanied by overgrowth of a tissue - there may be more cells in an otherwise normal volume of tissue. It is not necessarily due to an increase in cell growth -it may be the result of an increase in the division rate at normal growth rates. It may not even be due to an increase in the cell division rate - a reduced rate of cell death while the division rate is normal could also achieve it." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This phenotype is not necessarily accompanied by overgrowth of a tissue - there may be more cells in an otherwise normal volume of tissue. It is not necessarily due to an increase in cell growth -it may be the result of an increase in the division rate at normal growth rates. It may not even be due to an increase in the cell division rate - a reduced rate of cell death while the division rate is normal could also achieve it."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -1434,18 +1383,9 @@
           "val" : "has member is a mereological relation between a collection and an item.",
           "xrefs" : [ ]
         },
-        "xrefs" : [ {
-          "val" : "RO:0002351"
-        } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/RO_0001900",
           "val" : "http://purl.obolibrary.org/obo/RO_0001901"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "has_member"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
           "val" : "SIO"
@@ -1480,12 +1420,10 @@
           "val" : "Phenotype that is an increase in the size of cells compared to wild-type.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "May be due to an increase in the cell growth rate or to a reduced rate of cell division along with a normal rate of cell growth." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "May be due to an increase in the cell growth rate or to a reduced rate of cell division along with a normal rate of cell growth."
         } ]
       },
       "type" : "CLASS",
@@ -1497,11 +1435,9 @@
           "val" : "A phenotype that is the inability to produce a zygote.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "The cause of sterility may be physical or behavioral. Note, this term should not be used with the qualifier 'partially'. Use semi-sterile or semi-fertile instead." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "The cause of sterility may be physical or behavioral. Note, this term should not be used with the qualifier 'partially'. Use semi-sterile or semi-fertile instead."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -1553,12 +1489,10 @@
           "val" : "A phenotype that is the inability of females to mate and produce fertilized offspring.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "The cause of sterility may be physical or behavioral. Note: this term should not be used with the qualifier 'partially' - use semi-sterile or semi-fertile instead." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "The cause of sterility may be physical or behavioral. Note: this term should not be used with the qualifier 'partially' - use semi-sterile or semi-fertile instead."
         } ]
       },
       "type" : "CLASS",
@@ -1639,25 +1573,14 @@
       "type" : "CLASS",
       "lbl" : "female semi-fertile"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "fbcvsubset_mgiribbons"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/FBcv_0000370",
       "meta" : {
         "definition" : {
           "val" : "A phenotype that is the inability of males to mate and produce fertilized offspring.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "The cause of sterility may be physical or behavioral. Note - this term should not be used with the qualifier 'partially' - use semi-sterile or semi-fertile instead." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "The cause of sterility may be physical or behavioral. Note - this term should not be used with the qualifier 'partially' - use semi-sterile or semi-fertile instead."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -1718,11 +1641,9 @@
           "val" : "A phenotype that is the ability to mate and as a result produce fertilized eggs.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "Note, this term should not be used with the qualifier 'partially'. Use semi-sterile or semi-fertile instead." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note, this term should not be used with the qualifier 'partially'. Use semi-sterile or semi-fertile instead."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -1751,10 +1672,8 @@
           "val" : "A phenotype that is the ability of males to mate and as a result produce fertilized eggs.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "Note - this term should not be used with the qualifier 'partially' - use male semi-sterile or male semi-fertile instead." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note - this term should not be used with the qualifier 'partially' - use male semi-sterile or male semi-fertile instead."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -1768,12 +1687,10 @@
           "val" : "A phenotype that is the ability of females to mate and as a result produce fertilized eggs.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "Note - this term should not be used with the qualifier 'partially' - use female semi-sterile or female semi-fertile instead." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note - this term should not be used with the qualifier 'partially' - use female semi-sterile or female semi-fertile instead."
         } ]
       },
       "type" : "CLASS",
@@ -1785,6 +1702,7 @@
           "val" : "A defect in or loss of some anatomical structure or biological process compared to wild-type.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "The subclasses of this term classify Drosophila phenotypes into different common categories. They have been chosen by FlyBase to reflect phenotype terms most often reported by Drosophila researchers in the published literature." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#do_not_annotate" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -1792,9 +1710,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "The subclasses of this term classify Drosophila phenotypes into different common categories. They have been chosen by FlyBase to reflect phenotype terms most often reported by Drosophila researchers in the published literature."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -1823,12 +1738,10 @@
           "val" : "Genotype g1 is an enhancer of variegation if, and only if, some genotype g2 has a variegated phenotype and the degree of variegation caused by g1g2 is greater than that caused by g2 alone.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "Typically, g2 is a chromosomal aberration or an insertion." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Typically, g2 is a chromosomal aberration or an insertion."
         } ]
       },
       "type" : "CLASS",
@@ -1855,6 +1768,7 @@
           "val" : "A phenotype of a population that is the death of all animals in that population at some stage or stages prior to eclosion from the pupal case (the end of the P-stage).",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "As the P-Stage and the 'pharate adult stage' have the same end, there is no need for a separate term for 'lethal - all die before end of pharate adult stage." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#lethal_phase" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -1862,9 +1776,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "As the P-Stage and the 'pharate adult stage' have the same end, there is no need for a separate term for 'lethal - all die before end of pharate adult stage."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -1946,6 +1857,9 @@
           "pred" : "http://purl.obolibrary.org/obo/RO_0040042",
           "val" : "http://purl.obolibrary.org/obo/BFO_0000031"
         }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other."
         }, {
@@ -1967,9 +1881,6 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime"
         }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "protein"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/RO_0001900",
           "val" : "http://purl.obolibrary.org/obo/RO_0001901"
         }, {
@@ -1984,9 +1895,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'."
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
         } ]
       },
       "type" : "PROPERTY",
@@ -2013,6 +1921,7 @@
           "val" : "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the larval stage.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "As the larval stage and third instar larval stage have the same end, there is no need for a separate term for 'lethal - all die before end of third instar larval stage'." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#lethal_phase" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -2022,9 +1931,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "As the larval stage and third instar larval stage have the same end, there is no need for a separate term for 'lethal - all die before end of third instar larval stage'."
         } ]
       },
       "type" : "CLASS",
@@ -2032,15 +1938,13 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/FBdv_00018001",
       "meta" : {
+        "comments" : [ "Creating this relation as a temporary fix, pending adding the axiom occurent_part_of subpropertyof happens_during to RO" ],
         "xrefs" : [ {
           "val" : "FBdv:00018001"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "relationship"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Creating this relation as a temporary fix, pending adding the axiom occurent_part_of subpropertyof happens_during to RO"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
           "val" : "substage_of"
@@ -2085,6 +1989,7 @@
           "val" : "a core relation that holds between a whole and its part",
           "xrefs" : [ ]
         },
+        "comments" : [ "We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'." ],
         "xrefs" : [ {
           "val" : "OBO_REL:has_part"
         }, {
@@ -2097,11 +2002,11 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
         }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'."
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "chebi_ontology"
@@ -2118,9 +2023,6 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
           "val" : "this year has part this day (occurrent parthood)"
         }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "protein"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/RO_0001900",
           "val" : "http://purl.obolibrary.org/obo/RO_0001901"
         }, {
@@ -2135,9 +2037,6 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#is_cyclic",
           "val" : "false"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "has part"
@@ -2363,12 +2262,10 @@
           "val" : "Phenotype that is a reduction in size of an organ or tissue compared to wild-type due to reduced numbers of cells being produced during its development or growth.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "This term should not be used where an organ or tissue is reduced in size due to the wasting away of existing cells." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term should not be used where an organ or tissue is reduced in size due to the wasting away of existing cells."
         } ]
       },
       "type" : "CLASS",
@@ -2445,7 +2342,7 @@
       "id" : "http://purl.obolibrary.org/obo/BFO_0000062",
       "meta" : {
         "definition" : {
-          "val" : "X preceded_by Y iff: end(Y) before_or_simultaneous_with start(X)",
+          "val" : "x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.",
           "xrefs" : [ ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
@@ -2453,15 +2350,6 @@
           "val" : "OBO_REL:preceded_by"
         }, {
           "val" : "BFO:0000062"
-        } ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "takes place after",
-          "xrefs" : [ "Allen:precedes" ]
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "is preceded by",
-          "xrefs" : [ "SIO:000249" ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -2482,14 +2370,14 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "preceded by"
         }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "djs93"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
           "val" : "preceded_by"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "preceded_by"
@@ -2505,18 +2393,12 @@
           "xrefs" : [ ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
-        "xrefs" : [ {
-          "val" : "BFO:0000063"
-        } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+          "val" : "http://purl.obolibrary.org/obo/bfo.owl"
+        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "precedes"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "precedes"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
         } ]
       },
       "type" : "PROPERTY",
@@ -2630,11 +2512,9 @@
           "val" : "Phenotype that is a defect in cell growth (GO:0016049). 'cell growth' is defined as: 'The process in which a cell irreversibly increases in size over time by accretion and biosynthetic production of matter similar to that already present.'",
           "xrefs" : [ "FBC:DOS", "GOC:ai" ]
         },
+        "comments" : [ "Note that defects in cell size are not necessarily the result of defects in cell growth. A change in the rate of cell division in the absence of any change in cell growth rate can result in smaller or larger cells." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that defects in cell size are not necessarily the result of defects in cell growth. A change in the rate of cell division in the absence of any change in cell growth rate can result in smaller or larger cells."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -2697,15 +2577,13 @@
           "val" : "Phenotype that is reduction in or loss of a stereotypical behavioral response to touch.",
           "xrefs" : [ "FlyBase:FBrf0073546" ]
         },
+        "comments" : [ "This phenotype is commonly assayed by scoring larval avoidance responses following stroking of the thoracic segments (see Kernan et al., 1994). On its own, this is not sufficient evidence for a defect in sensory perception of touch, as motor defects can also cause this phenotype." ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "touch sensitivity defective",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This phenotype is commonly assayed by scoring larval avoidance responses following stroking of the thoracic segments (see Kernan et al., 1994). On its own, this is not sufficient evidence for a defect in sensory perception of touch, as motor defects can also cause this phenotype."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -2867,19 +2745,15 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/FBcv_0000437",
       "meta" : {
+        "comments" : [ "This term was obsoleted because it was felt that the evidence provided in papers is not enough to annotate with this term. mc161014" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         }, {
-          "pred" : "http://www.w3.org/2002/07/owl#deprecated",
-          "val" : "true"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term was obsoleted because it was felt that the evidence provided in papers is not enough to annotate with this term. mc161014"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
           "val" : "FBcv:0000436"
-        } ]
+        } ],
+        "deprecated" : true
       },
       "type" : "CLASS",
       "lbl" : "dosage compensation defective"
@@ -3546,6 +3420,7 @@
           "val" : "Phenotype that is a defect in flight (GO:0060361). 'flight' is defined as: 'Self-propelled movement of an organism from one location to another through the air, usually by means of active wing movement.'",
           "xrefs" : [ "FBC:DOS", "GOC:dph" ]
         },
+        "comments" : [ "This term is agnostic as to the causes of defects in flight. An animal's flight may be defective for mechanical, behavioral or sensory reasons." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons" ],
         "synonyms" : [ {
           "pred" : "hasNarrowSynonym",
@@ -3553,9 +3428,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term is agnostic as to the causes of defects in flight. An animal's flight may be defective for mechanical, behavioral or sensory reasons."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -3569,25 +3441,14 @@
           "val" : "Phenotype that is the absence of flight (GO:0060361). 'flight' is defined as: 'Self-propelled movement of an organism from one location to another through the air, usually by means of active wing movement.'",
           "xrefs" : [ "FBC:DOS", "GOC:dph" ]
         },
+        "comments" : [ "This term is agnostic as to the causes of flightlessness. An animal may be flightless for mechanical or behavioral reasons." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term is agnostic as to the causes of flightlessness. An animal may be flightless for mechanical or behavioral reasons."
         } ]
       },
       "type" : "CLASS",
       "lbl" : "flightless"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/fbcv#do_not_annotate",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "do not annotate"
-        } ]
-      },
-      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/FBcv_0000419",
       "meta" : {
@@ -3673,11 +3534,9 @@
           "val" : "A phenotype of a population that is the death of the majority of animals in that population during the embryonic stage.",
           "xrefs" : [ "FBC:DOS" ]
         },
+        "comments" : [ "This term is agnostic about whether any survive to adulthood." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#lethal_phase" ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term is agnostic about whether any survive to adulthood."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "phenotypic_class"
         } ]
@@ -3830,10 +3689,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBcv_0002021"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FBcv_0000717",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0000427"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0000724",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBcv_0000357"
@@ -3841,6 +3696,10 @@
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0000721",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBcv_0000387"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0000717",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0000427"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0002024",
       "pred" : "is_a",
@@ -4418,13 +4277,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBcv_0002007"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/FBcv_0002013",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0002022"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0002014",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBcv_0002012"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0002013",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0002022"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0000435",
       "pred" : "is_a",
@@ -4666,6 +4525,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBcv_0000414"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0000421",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0000387"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0000325",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBcv_0001347"
@@ -4673,10 +4536,6 @@
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0000418",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBcv_0000417"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/FBcv_0000421",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0000387"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0000426",
       "pred" : "is_a",
@@ -4767,12 +4626,12 @@
         "val" : "https://creativecommons.org/licenses/by/3.0/"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "14:08:2020 09:27"
+        "val" : "20:10:2020 15:17"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#default-namespace",
         "val" : "FlyBase miscellaneous CV"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/dpo/releases/2020-08-14/dpo-simple.json"
+      "version" : "http://purl.obolibrary.org/obo/dpo/releases/2020-10-20/dpo-simple.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

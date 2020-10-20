@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2020-08-14/imports/fbdv_import.owl
+data-version: dpo/releases/2020-10-20/imports/fbdv_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -1484,6 +1484,7 @@ name: mitotic cell cycle
 namespace: biological_process
 alt_id: GO:0007067
 def: "Progression through the phases of the mitotic cell cycle, the most common eukaryotic cell cycle, which canonically comprises four successive phases called G1, S, G2, and M and includes replication of the genome and the subsequent segregation of chromosomes into daughter cells. In some variant cell cycles nuclear replication or nuclear division may not be followed by cell division, or G1 and G2 phases may be absent." [GOC:mah, ISBN:0815316194, Reactome:69278]
+comment: Note that this term should not be confused with 'GO:0140014 ; mitotic nuclear division'. 'GO:0000278 ; mitotic cell cycle represents the entire mitotic cell cycle, while 'GO:0140014 ; mitotic nuclear division' specifically represents the actual nuclear division step of the mitotic cell cycle.
 subset: goslim_chembl
 subset: goslim_drosophila
 subset: goslim_generic
@@ -1791,7 +1792,6 @@ synonym: "regulation of embryonic mitotic cell cycle" EXACT [GOC:dph, GOC:tb]
 synonym: "regulation of embryonic mitotic cell cycle progression" EXACT []
 synonym: "regulation of progression through embryonic mitotic cell cycle" EXACT []
 is_a: GO:0007346 ! regulation of mitotic cell cycle
-is_a: GO:0045995 ! regulation of embryonic development
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0045448 ! mitotic cell cycle, embryonic
 relationship: regulates GO:0045448 ! mitotic cell cycle, embryonic
@@ -2630,7 +2630,6 @@ synonym: "up regulation of mitosis" EXACT []
 synonym: "up-regulation of mitosis" EXACT []
 synonym: "upregulation of mitosis" EXACT []
 is_a: GO:0007088 ! regulation of mitotic nuclear division
-is_a: GO:0045931 ! positive regulation of mitotic cell cycle
 is_a: GO:0051785 ! positive regulation of nuclear division
 is_a: GO:0090068 ! positive regulation of cell cycle process
 intersection_of: GO:0008150 ! biological_process
@@ -2719,7 +2718,6 @@ synonym: "negative regulation of embryonic mitotic cell cycle progression" EXACT
 synonym: "negative regulation of progression through embryonic mitotic cell cycle" EXACT [GOC:dph, GOC:tb]
 is_a: GO:0009794 ! regulation of mitotic cell cycle, embryonic
 is_a: GO:0045930 ! negative regulation of mitotic cell cycle
-is_a: GO:0045992 ! negative regulation of embryonic development
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0045448 ! mitotic cell cycle, embryonic
 relationship: negatively_regulates GO:0045448 ! mitotic cell cycle, embryonic
@@ -2738,7 +2736,6 @@ synonym: "up regulation of mitotic cell cycle, embryonic" EXACT []
 synonym: "up-regulation of mitotic cell cycle, embryonic" EXACT []
 synonym: "upregulation of mitotic cell cycle, embryonic" EXACT []
 is_a: GO:0009794 ! regulation of mitotic cell cycle, embryonic
-is_a: GO:0040019 ! positive regulation of embryonic development
 is_a: GO:0045931 ! positive regulation of mitotic cell cycle
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0045448 ! mitotic cell cycle, embryonic
@@ -3364,10 +3361,12 @@ namespace: biological_process
 def: "A mitotic cell cycle process comprising the steps by which the nucleus of a eukaryotic cell divides; the process involves condensation of chromosomal DNA into a highly compacted form. Canonically, mitosis produces two daughter nuclei whose chromosome complement is identical to that of the mother cell." [ISBN:0198547684]
 subset: goslim_chembl
 subset: goslim_generic
+synonym: "mitosis" EXACT []
 is_a: GO:0000280 ! nuclear division
 is_a: GO:1903047 ! mitotic cell cycle process
 intersection_of: GO:0000280 ! nuclear division
 intersection_of: part_of GO:0000278 ! mitotic cell cycle
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/19910 xsd:anyURI
 created_by: pg
 creation_date: 2017-03-23T14:44:23Z
 
@@ -4836,7 +4835,7 @@ comment: Creating this relation as a temporary fix, pending adding the axiom occ
 xref: FBdv:00018001
 is_transitive: true
 is_a: happens_during ! happens during
-is_a: occurent_part_of ! occurent part of
+is_a: occurent_part_of ! occurent_part_of
 
 [Typedef]
 id: term_tracker_item

@@ -10,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2020-08-14/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2020-10-20/imports/go_import.owl"/>
     </owl:Ontology>
     
 
@@ -585,6 +585,7 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
+        <rdfs:comment>Note that this term should not be confused with &apos;GO:0140014 ; mitotic nuclear division&apos;. &apos;GO:0000278 ; mitotic cell cycle represents the entire mitotic cell cycle, while &apos;GO:0140014 ; mitotic nuclear division&apos; specifically represents the actual nuclear division step of the mitotic cell cycle.</rdfs:comment>
         <rdfs:label>mitotic cell cycle</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1038,7 +1039,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1197,7 +1198,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1337158144</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -1212,10 +1213,12 @@
     <!-- http://purl.obolibrary.org/obo/GO_0005622 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005622">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <obo:IAO_0000115>The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
+        <obo:IAO_0000115>A component of a cell contained within (but not including) the plasma membrane. In eukaryotes it includes the nucleus and cytoplasm.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/17776</obo:IAO_0000233>
         <oboInOwl:hasDbXref>Wikipedia:Intracellular</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>internal to cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>intracellular</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>protoplasm</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>nucleocytoplasm</oboInOwl:hasRelatedSynonym>
@@ -1226,12 +1229,12 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
-        <rdfs:label>intracellular</rdfs:label>
+        <rdfs:label>intracellular anatomical structure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005622"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.</owl:annotatedTarget>
+        <owl:annotatedTarget>A component of a cell contained within (but not including) the plasma membrane. In eukaryotes it includes the nucleus and cytoplasm.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -3027,7 +3030,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3528,7 +3531,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007346"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045995"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
@@ -3608,7 +3610,7 @@
         <owl:annotatedTarget>Morphogenesis of an animal organ. An organ is defined as a tissue or set of tissues that work together to perform a specific function or functions. Morphogenesis is the process in which anatomical structures are generated and organized. Organs are commonly observed as visibly distinct structures, but may also exist as loosely associated clusters of cells that work together to perform a specific function or functions.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dgh</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0471245208</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0471245208</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0721662544</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -3635,7 +3637,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009888"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The process whose specific outcome is the progression of a tissue over time, from its formation to the mature structure.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ISBN:0471245208</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0471245208</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9497,7 +9499,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007563"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051094"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051240"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -9754,7 +9755,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007088"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045931"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051785"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0090068"/>
         <rdfs:subClassOf>
@@ -10249,7 +10249,6 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009794"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045930"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045992"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
@@ -10308,7 +10307,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009794"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0040019"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045931"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -10624,14 +10622,14 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:kv</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:molecular_function_refactoring</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:molecular_function_refactoring</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0048018"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>receptor agonist activity</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:molecular_function_refactoring</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:molecular_function_refactoring</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13279,6 +13277,7 @@
         <oboInOwl:id>GO:0051321</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
+        <rdfs:comment>Note that this term should not be confused with &apos;GO:0140013 ; meiotic nuclear division&apos;. &apos;GO:0051321 ; meiotic cell cycle represents the entire mitotic cell cycle, while &apos;GO:0140013 meiotic nuclear division&apos; specifically represents the actual nuclear division step of the mitotic cell cycle.</rdfs:comment>
         <rdfs:label>meiotic cell cycle</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14141,7 +14140,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A compound molecular function in which an effector function is controlled by one or more regulatory components.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15031,7 +15030,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1905330"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -15459,8 +15457,10 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0000280"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1903046"/>
         <obo:IAO_0000115>One of the two nuclear divisions that occur as part of the meiotic cell cycle.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/19910</obo:IAO_0000233>
         <oboInOwl:created_by>pg</oboInOwl:created_by>
         <oboInOwl:creation_date>2017-03-23T09:40:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>meiosis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0140013</oboInOwl:id>
         <rdfs:label>meiotic nuclear division</rdfs:label>
@@ -15491,8 +15491,10 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0000280"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1903047"/>
         <obo:IAO_0000115>A mitotic cell cycle process comprising the steps by which the nucleus of a eukaryotic cell divides; the process involves condensation of chromosomal DNA into a highly compacted form. Canonically, mitosis produces two daughter nuclei whose chromosome complement is identical to that of the mother cell.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/19910</obo:IAO_0000233>
         <oboInOwl:created_by>pg</oboInOwl:created_by>
         <oboInOwl:creation_date>2017-03-23T14:44:23Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>mitosis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0140014</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
@@ -16073,9 +16075,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043900"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050795"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051239"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2000241"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -16114,7 +16114,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043901"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048521"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051241"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1902435"/>
@@ -16184,7 +16183,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043902"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048520"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051240"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1902435"/>
@@ -18819,7 +18817,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022603"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2000026"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>

@@ -17,15 +17,13 @@
           "val" : "An individual member of a clade of cellular organisms.",
           "xrefs" : [ ]
         },
+        "comments" : [ "A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of 'anatomical structure', meaning that an organism must be a connected structure. For example, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms. " ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "mah"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_creation_date",
           "val" : "7.16.2011"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of 'anatomical structure', meaning that an organism must be a connected structure. For example, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms. "
         } ]
       },
       "type" : "CLASS",
@@ -81,10 +79,8 @@
           "val" : "A cell that is found in a natural setting, which includes multicellular organism cells 'in vivo' (i.e. part of an organism), and unicellular organisms 'in environment' (i.e. part of a natural environment).",
           "xrefs" : [ ]
         },
+        "comments" : [ "To accommodate unicellular organisms better, 'cell in vivo' has been re-labeled 'native cell' to better represent its intended meaning - that is, that it is a cell in the context of a multicellular organism or in a natural environment. 'Native' is intended to contrast with 'in vitro', which refers to cells or other biological entities that have been intentionally placed in a controlled, non-natural setting for the purpose of study or manipulation. (MAH 1.12.12)." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "To accommodate unicellular organisms better, 'cell in vivo' has been re-labeled 'native cell' to better represent its intended meaning - that is, that it is a cell in the context of a multicellular organism or in a natural environment. 'Native' is intended to contrast with 'in vitro', which refers to cells or other biological entities that have been intentionally placed in a controlled, non-natural setting for the purpose of study or manipulation. (MAH 1.12.12)."
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
           "val" : "http://purl.obolibrary.org/obo/cl.owl"
         } ]
@@ -355,24 +351,6 @@
       "type" : "PROPERTY",
       "lbl" : "has_narrow_synonym"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/caro#core",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "CARO2 core class"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/caro#plus",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "CARO2 plus class"
-        } ]
-      },
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/NCBITaxon_10239",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -397,12 +375,10 @@
           "val" : "Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end.",
           "xrefs" : [ ]
         },
+        "comments" : [ "Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. Note that when this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code ND, no data, is used to indicate this." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "biological process"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. Note that when this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code ND, no data, is used to indicate this."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
           "val" : "http://purl.obolibrary.org/obo/go.owl"
@@ -480,10 +456,7 @@
           "val" : "A material entity that consists of two or more organisms, viruses, or viroids.",
           "xrefs" : [ ]
         },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "May be of the same or different species."
-        } ]
+        "comments" : [ "May be of the same or different species." ]
       },
       "type" : "CLASS",
       "lbl" : "collection of organisms"
@@ -601,6 +574,7 @@
           "val" : "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t",
           "xrefs" : [ ]
         },
+        "comments" : [ "Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant" ],
         "xrefs" : [ {
           "val" : "BFO:0000066"
         } ],
@@ -610,9 +584,6 @@
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "unfolds_in"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
           "val" : "http://purl.obolibrary.org/obo/bfo.owl"
@@ -640,15 +611,13 @@
           "val" : "[copied from inverse property 'occurs in'] b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t",
           "xrefs" : [ ]
         },
+        "comments" : [ "Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
           "val" : "site of"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
           "val" : "http://purl.obolibrary.org/obo/bfo.owl"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant"
         } ]
       },
       "type" : "PROPERTY",
@@ -664,10 +633,7 @@
           "val" : "A part of a cellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex.  Or, a substance produced by a cellular organism with granularity above the level of a protein complex.",
           "xrefs" : [ "CAROC:Brownsville2014" ]
         },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Following BFO, material anatomical entities may have immaterial parts (the lumen of your stomach is part of your stomach).  The granularity limit follows the limits set by the Gene Ontology on the granularity limit for GO:cellular_component. Note that substances produced by an organism (sweat, feaces, urine) do not need to be part of an organism to qualify as an anatomical structure."
-        } ]
+        "comments" : [ "Following BFO, material anatomical entities may have immaterial parts (the lumen of your stomach is part of your stomach).  The granularity limit follows the limits set by the Gene Ontology on the granularity limit for GO:cellular_component. Note that substances produced by an organism (sweat, feaces, urine) do not need to be part of an organism to qualify as an anatomical structure." ]
       },
       "type" : "CLASS",
       "lbl" : "anatomical entity"
@@ -678,11 +644,8 @@
           "val" : "Material anatomical entity that is a single connected structure with inherent 3D shape generated by coordinated expression of the organism's own genome.",
           "xrefs" : [ ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/caro#core" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that the definition does not say 'generated exclusively by the co-ordinated expression of the organism's own genome', so this is still valid for cases where normal morphogenesis requires the actions of a facultative symbiont, or some looser dependency such as the a requirement for the presence of gut flora for normal gut development."
-        } ]
+        "comments" : [ "Note that the definition does not say 'generated exclusively by the co-ordinated expression of the organism's own genome', so this is still valid for cases where normal morphogenesis requires the actions of a facultative symbiont, or some looser dependency such as the a requirement for the presence of gut flora for normal gut development." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/caro#core" ]
       },
       "type" : "CLASS",
       "lbl" : "connected anatomical structure"
@@ -739,10 +702,7 @@
           "val" : "An Immaterial anatomical entity of three dimensions, that is generated by morphogenetic or other physiologic processes and that is bounded by an anatomical surface.",
           "xrefs" : [ ]
         },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Original definition: \"Non-material anatomical entity of three dimensions, that is generated by morphogenetic or other physiologic processes; is surrounded by one or more anatomical structures; contains one or more organism substances or anatomical structures.\"  The last clause. \"contains one or more organism substances or anatomical structures\" was dropped from the definition because it was an unnecessary restriction."
-        } ]
+        "comments" : [ "Original definition: \"Non-material anatomical entity of three dimensions, that is generated by morphogenetic or other physiologic processes; is surrounded by one or more anatomical structures; contains one or more organism substances or anatomical structures.\"  The last clause. \"contains one or more organism substances or anatomical structures\" was dropped from the definition because it was an unnecessary restriction." ]
       },
       "type" : "CLASS",
       "lbl" : "anatomical space"
@@ -763,6 +723,7 @@
           "val" : "Material anatomical entity in a gaseous, liquid, semisolid or solid state; produced by anatomical structures or derived from inhaled and ingested substances that have been modified by anatomical structures as they pass through the body and that does not have inherent 3D shape generated by coordinated expression of the organism's own genome.",
           "xrefs" : [ ]
         },
+        "comments" : [ "Note - CARO explicitly declares organisms substances to be part of (some) organism." ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "portion of organism substance",
@@ -771,9 +732,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
           "val" : "Examples include feces, urine, blood, blood plasma, lymph, hemolymph, cerbro-spinal fluid.  This class does not encompass anatomical entities with inherent 3D structure such as dentine and arthropod cuticle."
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note - CARO explicitly declares organisms substances to be part of (some) organism."
         } ]
       },
       "type" : "CLASS",
@@ -951,10 +909,7 @@
           "val" : "Anatomical structure that is an individual member of a clade and, at some point in its life-cycle, consists of more than one cell.",
           "xrefs" : [ ]
         },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "MH: Can't define this class based on 2 or more cells because most multi cellular organisms (if not all) have only a single cell at some point in life history. \n\nMH: sexual subtypes should probably be logically defined based on sexual processes or sex qualities."
-        } ]
+        "comments" : [ "MH: Can't define this class based on 2 or more cells because most multi cellular organisms (if not all) have only a single cell at some point in life history. \n\nMH: sexual subtypes should probably be logically defined based on sexual processes or sex qualities." ]
       },
       "type" : "CLASS",
       "lbl" : "multicellular organism"
@@ -965,10 +920,8 @@
           "val" : "Anatomical structure that is part of a cell and that has a granularity level equal to that of a protein complex or higher.",
           "xrefs" : [ ]
         },
+        "comments" : [ "This is declared equivalent with GO:0044464. The definition should be co-ordinated with GO. We could obsolete the CARO class and just use the GO class." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This is declared equivalent with GO:0044464. The definition should be co-ordinated with GO. We could obsolete the CARO class and just use the GO class."
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "cell component"
         } ]
@@ -982,14 +935,11 @@
           "val" : "An anatomical structure that has as its parts a maximally connected cell compartment surrounded by a plasma membrane.",
           "xrefs" : [ ]
         },
+        "comments" : [ "deprecate and replace with CL or GO term?" ],
         "xrefs" : [ {
           "val" : "GO:0005623"
         }, {
           "val" : "CL:0000000"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "deprecate and replace with CL or GO term?"
         } ]
       },
       "type" : "CLASS",
@@ -1523,10 +1473,7 @@
           "val" : "Entity that is, is part of, or derived from an organism, virus, or viroid or a collection of them.",
           "xrefs" : [ ]
         },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Important for alignment with Darwin Core class \"Organism\"."
-        } ]
+        "comments" : [ "Important for alignment with Darwin Core class \"Organism\"." ]
       },
       "type" : "CLASS",
       "lbl" : "biological entity"
@@ -1566,13 +1513,11 @@
           "val" : "A structure consisting of multiple cell components but which is not itself a cell and does not have (complete) cells as a part.",
           "xrefs" : [ ]
         },
+        "comments" : [ "Examples: a bundle of neuron projections in the brain; a region neuropil in an arthropod central nervous system; a region of cortex (preikaryal rind) in an arthropod brain." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/caro#core" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "multi-cell-component structure"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Examples: a bundle of neuron projections in the brain; a region neuropil in an arthropod central nervous system; a region of cortex (preikaryal rind) in an arthropod brain."
         } ]
       },
       "type" : "CLASS",
@@ -1712,15 +1657,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002180",
       "meta" : {
+        "comments" : [ "Use: http://purl.obolibrary.org/obo/BFO_0000073 'has cardinal part' ?", "For use in recording has_part with a cardinality constraint." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Use: http://purl.obolibrary.org/obo/BFO_0000073 'has cardinal part' ?"
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "For use in recording has_part with a cardinality constraint."
         } ]
       },
       "type" : "PROPERTY",
@@ -1973,10 +1913,7 @@
           "val" : "An anatomical structure that has no cells or cell parts as a part.",
           "xrefs" : [ ]
         },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Example.  Insect cuticle, eggshell, hair."
-        } ]
+        "comments" : [ "Example.  Insect cuticle, eggshell, hair." ]
       },
       "type" : "CLASS",
       "lbl" : "acellular anatomical structure"
@@ -1987,11 +1924,8 @@
           "val" : "A multicellular anatomical structure that is associated with an embryo and derived from the zygote from which it develops, but which does not contribute to the embryo proper or to structures that are part of the same organism after embryogenesis.",
           "xrefs" : [ ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/caro#plus" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "MH: define as not part of embryo, or will not develop into embryo? MH: changed def to exclude cells so this class could be included in gross anatomical part. DOS: Changed to something that I think works for both vertebrates and invertebrates and that keeps the restriction to multicellular structures.  Old def: \"Anatomical structure that is contiguous with the embryo and is comprised of portions of tissue that will not contribute to the embryo.\".  One remaining question - perhaps zygote is too restrictive given that some organisms have parthenogenesis e.g. aphids?\n"
-        } ]
+        "comments" : [ "MH: define as not part of embryo, or will not develop into embryo? MH: changed def to exclude cells so this class could be included in gross anatomical part. DOS: Changed to something that I think works for both vertebrates and invertebrates and that keeps the restriction to multicellular structures.  Old def: \"Anatomical structure that is contiguous with the embryo and is comprised of portions of tissue that will not contribute to the embryo.\".  One remaining question - perhaps zygote is too restrictive given that some organisms have parthenogenesis e.g. aphids?\n" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/caro#plus" ]
       },
       "type" : "CLASS",
       "lbl" : "extraembryonic structure"
@@ -2173,13 +2107,13 @@
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0000053"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001993",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001992"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002350",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002351"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001993",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001992"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0010000",
       "pred" : "is_a",
@@ -2386,7 +2320,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/dpo/releases/2020-08-14/imports/caro_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/dpo/releases/2020-10-20/imports/caro_import.owl"
     },
     "equivalentNodesSets" : [ {
       "nodeIds" : [ "http://purl.obolibrary.org/obo/GO_0044464", "http://purl.obolibrary.org/obo/CARO_0000014" ]

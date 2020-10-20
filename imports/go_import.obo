@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: dpo/releases/2020-08-14/imports/go_import.owl
+data-version: dpo/releases/2020-10-20/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -40,6 +40,7 @@ name: mitotic cell cycle
 namespace: biological_process
 alt_id: GO:0007067
 def: "Progression through the phases of the mitotic cell cycle, the most common eukaryotic cell cycle, which canonically comprises four successive phases called G1, S, G2, and M and includes replication of the genome and the subsequent segregation of chromosomes into daughter cells. In some variant cell cycles nuclear replication or nuclear division may not be followed by cell division, or G1 and G2 phases may be absent." [GOC:mah, ISBN:0815316194, Reactome:69278]
+comment: Note that this term should not be confused with 'GO:0140014 ; mitotic nuclear division'. 'GO:0000278 ; mitotic cell cycle represents the entire mitotic cell cycle, while 'GO:0140014 ; mitotic nuclear division' specifically represents the actual nuclear division step of the mitotic cell cycle.
 subset: goslim_chembl
 subset: goslim_drosophila
 subset: goslim_generic
@@ -303,20 +304,22 @@ xref: NIF_Subcellular:sao1337158144
 
 [Term]
 id: GO:0005622
-name: intracellular
+name: intracellular anatomical structure
 namespace: cellular_component
-def: "The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
+def: "A component of a cell contained within (but not including) the plasma membrane. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
 subset: gocheck_do_not_annotate
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_metagenomics
 subset: goslim_plant
 synonym: "internal to cell" EXACT []
+synonym: "intracellular" EXACT []
 synonym: "nucleocytoplasm" RELATED [GOC:mah]
 synonym: "protoplasm" EXACT []
 synonym: "protoplast" RELATED [GOC:mah]
 xref: Wikipedia:Intracellular
-is_a: GO:0005575 ! cellular_component
+is_a: GO:0110165 ! cellular anatomical entity
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/17776 xsd:anyURI
 
 [Term]
 id: GO:0005623
@@ -1386,7 +1389,6 @@ synonym: "regulation of embryonic mitotic cell cycle" EXACT [GOC:dph, GOC:tb]
 synonym: "regulation of embryonic mitotic cell cycle progression" EXACT []
 synonym: "regulation of progression through embryonic mitotic cell cycle" EXACT []
 is_a: GO:0007346 ! regulation of mitotic cell cycle
-is_a: GO:0045995 ! regulation of embryonic development
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0045448 ! mitotic cell cycle, embryonic
 relationship: regulates GO:0045448 ! mitotic cell cycle, embryonic
@@ -2840,8 +2842,8 @@ synonym: "signal transduction via intracellular signaling cascade" RELATED []
 synonym: "signal transmission via intracellular cascade" NARROW []
 is_a: GO:0007165 ! signal transduction
 intersection_of: GO:0007165 ! signal transduction
-intersection_of: occurs_in GO:0005622 ! intracellular
-relationship: occurs_in GO:0005622 ! intracellular
+intersection_of: occurs_in GO:0005622 ! intracellular anatomical structure
+relationship: occurs_in GO:0005622 ! intracellular anatomical structure
 created_by: bf
 creation_date: 2010-05-14T01:14:37Z
 
@@ -3250,8 +3252,8 @@ def: "Organized structure of distinctive morphology and function, occurring with
 subset: goslim_pir
 is_a: GO:0043226 ! organelle
 intersection_of: GO:0043226 ! organelle
-intersection_of: part_of GO:0005622 ! intracellular
-relationship: part_of GO:0005622 ! intracellular
+intersection_of: part_of GO:0005622 ! intracellular anatomical structure
+relationship: part_of GO:0005622 ! intracellular anatomical structure
 
 [Term]
 id: GO:0043231
@@ -3599,7 +3601,6 @@ synonym: "up regulation of eclosion" EXACT []
 synonym: "up-regulation of eclosion" EXACT []
 synonym: "upregulation of eclosion" EXACT []
 is_a: GO:0007563 ! regulation of eclosion
-is_a: GO:0051094 ! positive regulation of developmental process
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0007562 ! eclosion
@@ -3706,7 +3707,6 @@ synonym: "up regulation of mitosis" EXACT []
 synonym: "up-regulation of mitosis" EXACT []
 synonym: "upregulation of mitosis" EXACT []
 is_a: GO:0007088 ! regulation of mitotic nuclear division
-is_a: GO:0045931 ! positive regulation of mitotic cell cycle
 is_a: GO:0051785 ! positive regulation of nuclear division
 is_a: GO:0090068 ! positive regulation of cell cycle process
 intersection_of: GO:0008150 ! biological_process
@@ -3894,7 +3894,6 @@ synonym: "negative regulation of embryonic mitotic cell cycle progression" EXACT
 synonym: "negative regulation of progression through embryonic mitotic cell cycle" EXACT [GOC:dph, GOC:tb]
 is_a: GO:0009794 ! regulation of mitotic cell cycle, embryonic
 is_a: GO:0045930 ! negative regulation of mitotic cell cycle
-is_a: GO:0045992 ! negative regulation of embryonic development
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0045448 ! mitotic cell cycle, embryonic
 relationship: negatively_regulates GO:0045448 ! mitotic cell cycle, embryonic
@@ -3913,7 +3912,6 @@ synonym: "up regulation of mitotic cell cycle, embryonic" EXACT []
 synonym: "up-regulation of mitotic cell cycle, embryonic" EXACT []
 synonym: "upregulation of mitotic cell cycle, embryonic" EXACT []
 is_a: GO:0009794 ! regulation of mitotic cell cycle, embryonic
-is_a: GO:0040019 ! positive regulation of embryonic development
 is_a: GO:0045931 ! positive regulation of mitotic cell cycle
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0045448 ! mitotic cell cycle, embryonic
@@ -3988,8 +3986,8 @@ is_a: GO:0006810 ! transport
 is_a: GO:0051641 ! cellular localization
 is_a: GO:0051649 ! establishment of localization in cell
 intersection_of: GO:0006810 ! transport
-intersection_of: occurs_in GO:0005622 ! intracellular
-relationship: occurs_in GO:0005622 ! intracellular
+intersection_of: occurs_in GO:0005622 ! intracellular anatomical structure
+relationship: occurs_in GO:0005622 ! intracellular anatomical structure
 created_by: jl
 creation_date: 2013-12-18T14:04:50Z
 
@@ -5007,6 +5005,7 @@ name: meiotic cell cycle
 namespace: biological_process
 alt_id: GO:0007126
 def: "Progression through the phases of the meiotic cell cycle, in which canonically a cell replicates to produce four offspring with half the chromosomal content of the progenitor cell via two nuclear divisions." [GOC:ai]
+comment: Note that this term should not be confused with 'GO:0140013 ; meiotic nuclear division'. 'GO:0051321 ; meiotic cell cycle represents the entire mitotic cell cycle, while 'GO:0140013 meiotic nuclear division' specifically represents the actual nuclear division step of the mitotic cell cycle.
 subset: goslim_drosophila
 subset: goslim_yeast
 synonym: "meiosis" RELATED []
@@ -5660,7 +5659,6 @@ id: GO:0090175
 name: regulation of establishment of planar polarity
 namespace: biological_process
 def: "Any process that modulates the rate, frequency or extent of the establishment of planar polarity, the coordinated organization of groups of cells in a tissue, such that they all orient to similar coordinates." [GOC:ascb_2009, GOC:dph, GOC:tb]
-is_a: GO:1905330 ! regulation of morphogenesis of an epithelium
 is_a: GO:2000027 ! regulation of animal organ morphogenesis
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0001736 ! establishment of planar polarity
@@ -5811,10 +5809,12 @@ id: GO:0140013
 name: meiotic nuclear division
 namespace: biological_process
 def: "One of the two nuclear divisions that occur as part of the meiotic cell cycle." [PMID:9334324]
+synonym: "meiosis" EXACT []
 is_a: GO:0000280 ! nuclear division
 is_a: GO:1903046 ! meiotic cell cycle process
 intersection_of: GO:0000280 ! nuclear division
 intersection_of: part_of GO:0051321 ! meiotic cell cycle
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/19910 xsd:anyURI
 created_by: pg
 creation_date: 2017-03-23T09:40:00Z
 
@@ -5825,10 +5825,12 @@ namespace: biological_process
 def: "A mitotic cell cycle process comprising the steps by which the nucleus of a eukaryotic cell divides; the process involves condensation of chromosomal DNA into a highly compacted form. Canonically, mitosis produces two daughter nuclei whose chromosome complement is identical to that of the mother cell." [ISBN:0198547684]
 subset: goslim_chembl
 subset: goslim_generic
+synonym: "mitosis" EXACT []
 is_a: GO:0000280 ! nuclear division
 is_a: GO:1903047 ! mitotic cell cycle process
 intersection_of: GO:0000280 ! nuclear division
 intersection_of: part_of GO:0000278 ! mitotic cell cycle
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/19910 xsd:anyURI
 created_by: pg
 creation_date: 2017-03-23T14:44:23Z
 
@@ -5977,9 +5979,7 @@ id: GO:1902435
 name: regulation of male mating behavior
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of male mating behavior." [GOC:TermGenie, PMID:24089208]
-is_a: GO:0043900 ! regulation of multi-organism process
 is_a: GO:0050795 ! regulation of behavior
-is_a: GO:0051239 ! regulation of multicellular organismal process
 is_a: GO:2000241 ! regulation of reproductive process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0060179 ! male mating behavior
@@ -5996,7 +5996,6 @@ synonym: "down regulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "down-regulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "downregulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "inhibition of male mating behavior" NARROW [GOC:TermGenie]
-is_a: GO:0043901 ! negative regulation of multi-organism process
 is_a: GO:0048521 ! negative regulation of behavior
 is_a: GO:0051241 ! negative regulation of multicellular organismal process
 is_a: GO:1902435 ! regulation of male mating behavior
@@ -6016,7 +6015,6 @@ synonym: "activation of male mating behavior" NARROW [GOC:TermGenie]
 synonym: "up regulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "up-regulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "upregulation of male mating behavior" EXACT [GOC:TermGenie]
-is_a: GO:0043902 ! positive regulation of multi-organism process
 is_a: GO:0048520 ! positive regulation of behavior
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
 is_a: GO:1902435 ! regulation of male mating behavior
@@ -6588,7 +6586,6 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of animal organ morphogenesis." [GOC:obol]
 synonym: "regulation of histogenesis and organogenesis" RELATED [GOC:obol]
 is_a: GO:0022603 ! regulation of anatomical structure morphogenesis
-is_a: GO:2000026 ! regulation of multicellular organismal development
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0009887 ! animal organ morphogenesis
 relationship: regulates GO:0009887 ! animal organ morphogenesis
