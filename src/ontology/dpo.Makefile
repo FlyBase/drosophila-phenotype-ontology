@@ -84,8 +84,7 @@ remove_patternised_classes: $(SRC) patternised_classes.txt
 # Simple is overwritten to strip out duplicate names and definitions.
 $(ONT)-simple.obo: $(ONT)-simple.owl
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
-	sed -i '/subset[:] ro[-]eco/d' $@.tmp &&\
+	cat $@.tmp.obo | grep -v ^owl-axioms | grep -v 'subset[:][ ]ro[-]eco' > $@.tmp &&\
 	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
 	rm -f $@.tmp.obo $@.tmp
 
@@ -93,8 +92,7 @@ $(ONT)-simple.obo: $(ONT)-simple.owl
 $(ONT).obo: $(ONT)-simple.owl
 	$(ROBOT)  annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
 	convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
-	sed -i '/subset[:] ro[-]eco/d' $@.tmp &&\
+	cat $@.tmp.obo | grep -v ^owl-axioms | grep -v 'subset[:][ ]ro[-]eco' > $@.tmp &&\
 	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
 	rm -f $@.tmp.obo $@.tmp
 
@@ -208,9 +206,7 @@ tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_gener
 	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA source_xref
 
 pre_release: $(ONT)-edit.owl all_imports tmp/auto_generated_definitions_dot.owl tmp/auto_generated_definitions_sub.owl #components/lethal_class_hierarchy.owl
-	cp $(ONT)-edit.owl tmp/$(ONT)-edit-release.owl
-	sed -i '/AnnotationAssertion[(]obo[:]IAO[_]0000115.*\"[.]\"/d' tmp/$(ONT)-edit-release.owl
-	sed -i '/sub_/d' tmp/$(ONT)-edit-release.owl
+	cat $(ONT)-edit.owl | grep -v 'AnnotationAssertion[(]obo[:]IAO[_]0000115.*\"[.]\"' | grep -v 'sub_' > tmp/$(ONT)-edit-release.owl
 	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_dot.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $(ONT)-edit-release.ofn && mv $(ONT)-edit-release.ofn $(ONT)-edit-release.owl
 	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
 	
