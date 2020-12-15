@@ -47,6 +47,14 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001">
+        <rdfs:label>term replaced by</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0002161 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002161"/>
@@ -790,7 +798,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003008"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A multicellular organismal process carried out by any of the organs or tissues in an organ system. An organ system is a regularly interacting or interdependent group of organs or tissues that work together to carry out a biological objective.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mtg_cardio</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_cardio</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1713,6 +1721,65 @@
         <owl:annotatedTarget>The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0007614 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007614">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007613"/>
+        <obo:IAO_0000115>The memory process that deals with the storage, retrieval and modification of information received a short time (up to about 30 minutes) ago. This type of memory is typically dependent on direct, transient effects of second messenger activation.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>Wikipedia:Short-term_memory</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0007614</oboInOwl:id>
+        <rdfs:label>short-term memory</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007614"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The memory process that deals with the storage, retrieval and modification of information received a short time (up to about 30 minutes) ago. This type of memory is typically dependent on direct, transient effects of second messenger activation.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://hebb.mit.edu/courses/9.03/lecture4.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0007615 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007615">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007613"/>
+        <obo:IAO_0000115>The memory process that results in the formation of consolidated memory resistant to disruption of the patterned activity of the brain, without requiring protein synthesis.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0007615</oboInOwl:id>
+        <rdfs:label>anesthesia-resistant memory</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007615"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The memory process that results in the formation of consolidated memory resistant to disruption of the patterned activity of the brain, without requiring protein synthesis.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:15143285</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:17088531</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0007616 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007616">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007613"/>
+        <obo:IAO_0000115>The memory process that deals with the storage, retrieval and modification of information a long time (typically weeks, months or years) after receiving that information. This type of memory is typically dependent on gene transcription regulated by second messenger activation.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>Wikipedia:Long-term_memory</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0007616</oboInOwl:id>
+        <rdfs:label>long-term memory</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007616"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The memory process that deals with the storage, retrieval and modification of information a long time (typically weeks, months or years) after receiving that information. This type of memory is typically dependent on gene transcription regulated by second messenger activation.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://hebb.mit.edu/courses/9.03/lecture4.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3405,7 +3472,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0030431"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process in which an organism enters and maintains a periodic, readily reversible state of reduced awareness and metabolic activity. Usually accompanied by physical relaxation, the onset of sleep in humans and other mammals is marked by a change in the electrical activity of the brain.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0192800981</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0192800981</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4312,7 +4379,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The directed movement of a motile cell or organism in response to light.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0192800981</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0192800981</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5335,7 +5402,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A organ system process carried out by any of the organs or tissues of neurological system.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:mtg_cardio</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_cardio</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6552,6 +6619,42 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>cellular component organisation or biogenesis at cellular level</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0072375 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0072375">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007613"/>
+        <obo:IAO_0000115>The memory process that deals with the storage, retrieval and modification of information received at a time ago that is intermediate between that of short and long term memory (30min - 7hrs in Drosophila melanogaster).</obo:IAO_0000115>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
+        <oboInOwl:creation_date>2010-11-22T11:26:54Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>middle-term memory</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>MTM</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0072375</oboInOwl:id>
+        <rdfs:label>medium-term memory</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0072375"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The memory process that deals with the storage, retrieval and modification of information received at a time ago that is intermediate between that of short and long term memory (30min - 7hrs in Drosophila melanogaster).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:sart</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:14659098</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:7923375</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0072375"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>middle-term memory</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:sart</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0072375"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>MTM</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:sart</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
