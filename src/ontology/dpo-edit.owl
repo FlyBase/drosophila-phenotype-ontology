@@ -257,6 +257,11 @@ Declaration(Class(obo:FBcv_0007500))
 Declaration(Class(obo:FBcv_0007501))
 Declaration(Class(obo:FBcv_0007502))
 Declaration(Class(obo:FBcv_0007503))
+Declaration(Class(obo:FBcv_0007504))
+Declaration(Class(obo:FBcv_0007505))
+Declaration(Class(obo:FBcv_0007506))
+Declaration(Class(obo:FBcv_0007507))
+Declaration(Class(obo:FBcv_0007508))
 Declaration(Class(obo:OBI_0100026))
 Declaration(ObjectProperty(obo:FBcv_0008000))
 Declaration(ObjectProperty(fbcv:has_role))
@@ -719,13 +724,14 @@ AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0000357 fbcv:fbcvsubset_mgiribbon
 AnnotationAssertion(rdfs:label obo:FBcv_0000357 "abnormal size"^^xsd:string)
 SubClassOf(obo:FBcv_0000357 obo:FBcv_0001347)
 
-# Class: obo:FBcv_0000358 (small body)
+# Class: obo:FBcv_0000358 (decreased body size)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO_0000115 obo:FBcv_0000358 "Phenotype that is a decrease in body size compared to identically raised wild-type controls."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000358 "small body"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000358 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000358 "FBcv:0000358"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:FBcv_0000358 "small body"^^xsd:string)
-SubClassOf(obo:FBcv_0000358 obo:FBcv_0000665)
+AnnotationAssertion(rdfs:label obo:FBcv_0000358 "decreased body size")
+SubClassOf(obo:FBcv_0000358 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000359 (decreased cell number)
 
@@ -746,13 +752,14 @@ AnnotationAssertion(rdfs:comment obo:FBcv_0000360 "Note that defects in cell siz
 AnnotationAssertion(rdfs:label obo:FBcv_0000360 "decreased cell size"^^xsd:string)
 SubClassOf(obo:FBcv_0000360 obo:FBcv_0001347)
 
-# Class: obo:FBcv_0000361 (large body)
+# Class: obo:FBcv_0000361 (increased body size)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO_0000115 obo:FBcv_0000361 "Phenotype that is an increase in body size compared to identically raised wild-type controls."^^xsd:string)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000361 "large body"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000361 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000361 "FBcv:0000361"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:FBcv_0000361 "large body"^^xsd:string)
-SubClassOf(obo:FBcv_0000361 obo:FBcv_0000665)
+AnnotationAssertion(rdfs:label obo:FBcv_0000361 "increased body size")
+SubClassOf(obo:FBcv_0000361 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000362 (increased cell number)
 
@@ -950,7 +957,7 @@ SubClassOf(obo:FBcv_0000383 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000384 (abnormal aging)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:PO_curators"^^xsd:string) obo:IAO_0000115 obo:FBcv_0000384 "Phenotype that is any abnormality in aging (GO:0007568). 'aging' is defined as: '$sub_GO:0007568'"^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:PO_curators") obo:IAO_0000115 obo:FBcv_0000384 "Phenotype that is any abnormality in aging (GO:0007568). 'aging' is defined as: '$sub_GO:0007568'"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000384 "aging defective"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000384 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000384 "FBcv:0000384"^^xsd:string)
@@ -1544,8 +1551,8 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000444 "hyperplastic"^^xs
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000444 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000444 "FBcv:0000444"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000444 "hyperplasia"^^xsd:string)
-SubClassOf(obo:FBcv_0000444 obo:FBcv_0000357)
 SubClassOf(obo:FBcv_0000444 obo:FBcv_0000362)
+SubClassOf(obo:FBcv_0000444 obo:FBcv_0007507)
 SubClassOf(obo:FBcv_0000444 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:PATO_0000644 ObjectSomeValuesFrom(obo:RO_0000052 obo:FBbt_00100313))))
 
 # Class: obo:FBcv_0000445 (tumorigenic)
@@ -2465,6 +2472,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:FBcv_0007500 "Phenotype that is any abno
 AnnotationAssertion(oboInOwl:created_by obo:FBcv_0007500 <http://orcid.org/0000-0002-1373-1705>)
 AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0007500 "2020-12-15T14:46:41Z"^^xsd:dateTime)
 AnnotationAssertion(rdfs:label obo:FBcv_0007500 "abnormal anesthesia-resistant memory"@en)
+SubClassOf(obo:FBcv_0007500 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0007501 (abnormal short-term memory)
 
@@ -2472,6 +2480,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:FBcv_0007501 "Phenotype that is any abno
 AnnotationAssertion(oboInOwl:created_by obo:FBcv_0007501 <http://orcid.org/0000-0002-1373-1705>)
 AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0007501 "2020-12-15T14:50:19Z"^^xsd:dateTime)
 AnnotationAssertion(rdfs:label obo:FBcv_0007501 "abnormal short-term memory"@en)
+SubClassOf(obo:FBcv_0007501 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0007502 (abnormal medium-term memory)
 
@@ -2479,6 +2488,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:FBcv_0007502 "Phenotype that is any abno
 AnnotationAssertion(oboInOwl:created_by obo:FBcv_0007502 <http://orcid.org/0000-0002-1373-1705>)
 AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0007502 "2020-12-15T14:51:08Z"^^xsd:dateTime)
 AnnotationAssertion(rdfs:label obo:FBcv_0007502 "abnormal medium-term memory"@en)
+SubClassOf(obo:FBcv_0007502 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0007503 (abnormal long-term memory)
 
@@ -2486,6 +2496,49 @@ AnnotationAssertion(obo:IAO_0000115 obo:FBcv_0007503 "Phenotype that is any abno
 AnnotationAssertion(oboInOwl:created_by obo:FBcv_0007503 <http://orcid.org/0000-0002-1373-1705>)
 AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0007503 "2020-12-15T14:51:45Z"^^xsd:dateTime)
 AnnotationAssertion(rdfs:label obo:FBcv_0007503 "abnormal long-term memory"@en)
+SubClassOf(obo:FBcv_0007503 obo:FBcv_0001347)
+
+# Class: obo:FBcv_0007504 (abnormal body weight)
+
+AnnotationAssertion(oboInOwl:created_by obo:FBcv_0007504 <http://orcid.org/0000-0002-1373-1705>)
+AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0007504 "2020-12-15T15:47:07Z"^^xsd:dateTime)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:CP"^^xsd:string) rdfs:comment obo:FBcv_0007504 "Phenotype that is any abnormality in body weight compared to identically raised wild-type controls.")
+AnnotationAssertion(rdfs:label obo:FBcv_0007504 "abnormal body weight"@en)
+SubClassOf(obo:FBcv_0007504 obo:FBcv_0001347)
+
+# Class: obo:FBcv_0007505 (increased body weight)
+
+AnnotationAssertion(oboInOwl:created_by obo:FBcv_0007505 <http://orcid.org/0000-0002-1373-1705>)
+AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0007505 "2020-12-15T15:50:18Z"^^xsd:dateTime)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:CP"^^xsd:string) rdfs:comment obo:FBcv_0007505 "Phenotype that is an increase in body weight compared to identically raised wild-type controls.")
+AnnotationAssertion(rdfs:label obo:FBcv_0007505 "increased body weight"@en)
+SubClassOf(obo:FBcv_0007505 obo:FBcv_0001347)
+
+# Class: obo:FBcv_0007506 (decreased body weight)
+
+AnnotationAssertion(oboInOwl:created_by obo:FBcv_0007506 <http://orcid.org/0000-0002-1373-1705>)
+AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0007506 "2020-12-15T15:50:44Z"^^xsd:dateTime)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:CP"^^xsd:string) rdfs:comment obo:FBcv_0007506 "Phenotype that is a decrease in body weight compared to identically raised wild-type controls.")
+AnnotationAssertion(rdfs:label obo:FBcv_0007506 "decreased body weight"@en)
+SubClassOf(obo:FBcv_0007506 obo:FBcv_0001347)
+
+# Class: obo:FBcv_0007507 (increased size)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:CP"^^xsd:string) obo:IAO_0000115 obo:FBcv_0007507 "A phenotype that is an increase in the size of the whole body or some body part compared to wild-type."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:FBcv_0007507 <http://orcid.org/0000-0002-1373-1705>)
+AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0007507 "2020-12-15T15:52:00Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0007507 "phenotypic_class"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:FBcv_0007507 "increased size"@en)
+SubClassOf(obo:FBcv_0007507 obo:FBcv_0001347)
+
+# Class: obo:FBcv_0007508 (decreased size)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:CP"^^xsd:string) obo:IAO_0000115 obo:FBcv_0007508 "A phenotype that is a decrease in the size of the whole body or some body part compared to wild-type."^^xsd:string)
+AnnotationAssertion(oboInOwl:created_by obo:FBcv_0007508 <http://orcid.org/0000-0002-1373-1705>)
+AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0007508 "2020-12-15T15:52:59Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0007508 "phenotypic_class"^^xsd:string)
+AnnotationAssertion(rdfs:label obo:FBcv_0007508 "decreased size"@en)
+SubClassOf(obo:FBcv_0007508 obo:FBcv_0001347)
 
 
 AnnotationAssertion(rdfs:label obo:IAO_0000589 "OBO Foundry Uniquename"^^xsd:string)
