@@ -48,6 +48,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalFertil
 Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoAbnormalRateOfDevelopmentBeforeStage.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/dpo/patterns/dpoFertilityAndViabilityOfWholeOrganism.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/odk/example.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalAbsenceOfBehavior.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalAbsenceOfBiologicalProcess.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalBehavior.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalBiologicalProcess.yaml>))
@@ -119,6 +120,13 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/dpo/patterns/dpoFertilityAndVi
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/odk/example.yaml> "example"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/odk/example.yaml> "Part of 'example'"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/odk/example.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> owl:Thing))
+
+# Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalAbsenceOfBehavior.yaml> (absent 'behavior process')
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalAbsenceOfBehavior.yaml> "Absence of 'behavior process'."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalAbsenceOfBehavior.yaml> "abnormalAbsenceOfBehavior"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalAbsenceOfBehavior.yaml> "absent 'behavior process'"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalAbsenceOfBehavior.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000462> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/NBO_0000313>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002573> <http://purl.obolibrary.org/obo/PATO_0000460>))))
 
 # Class: <http://purl.obolibrary.org/obo/upheno/patterns-dev/abnormalAbsenceOfBiologicalProcess.yaml> (absent 'biological process')
 
