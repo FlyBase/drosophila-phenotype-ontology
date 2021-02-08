@@ -192,8 +192,8 @@ tmp/auto_generated_definitions_seed_sub.txt: $(SRC)
 	cat $@.tmp | sort | uniq >  $@
 	rm -f $@.tmp
 
-mirror/chebi.owl: $(SRC)
-	wget http://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl.gz -O mirror/chebi.owl.gz && $(ROBOT) convert -i mirror/chebi.owl.gz -o $@.tmp.owl && mv $@.tmp.owl $@
+mirror/chebi.owl: mirror/chebi.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then wget http://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl.gz -O mirror/chebi.owl.gz && $(ROBOT) convert -i mirror/chebi.owl.gz -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 tmp/merged-source-pre.owl: $(SRC) mirror/chebi.owl
 	$(ROBOT) merge -i $(SRC) -i mirror/chebi.owl --output $@
