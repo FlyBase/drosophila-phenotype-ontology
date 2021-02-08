@@ -20,6 +20,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo/imports/fbbt_import.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2021-02-08/imports/fbbt_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2021-01-14/fbbt.owl"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-08</owl:versionInfo>
     </owl:Ontology>
     
@@ -1116,7 +1117,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/RO_0002131 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002131">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
@@ -1342,7 +1342,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/RO_0002216 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002216">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002500"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002215"/>
@@ -1448,7 +1447,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/RO_0002258 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002258">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002324"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002286"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
@@ -1541,7 +1539,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/RO_0002314 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002314">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002502"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0000052"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
@@ -1567,29 +1564,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         </owl:annotatedTarget>
         <obo:RO_0002582 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</obo:RO_0002582>
     </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002323 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002323">
-        <obo:IAO_0000115>A mereological relationship or a topological relationship</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000232>Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving parthood or connectivity relationships</obo:IAO_0000232>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <rdfs:label xml:lang="en">mereotopologically related to</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002324 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002324">
-        <obo:IAO_0000115>A relationship that holds between entities participating in some developmental process (GO:0032502)</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000232>Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving organismal development</obo:IAO_0000232>
-        <rdfs:label xml:lang="en">developmentally related to</rdfs:label>
-    </owl:ObjectProperty>
     
 
 
@@ -1621,42 +1595,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002328 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002328">
-        <obo:IAO_0000115>A grouping relationship for any relationship directly involving a function, or that holds because of a function of one of the related entities.</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000232>This is a grouping relation that collects relations used for the purpose of connecting structure and function</obo:IAO_0000232>
-        <rdfs:label xml:lang="en">functionally related to</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002329 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002329">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002215"/>
-        </owl:propertyChainAxiom>
-        <obo:IAO_0000115>this relation holds between c and p when c is part of some c&apos;, and c&apos; is capable of p.</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">part of structure that is capable of</rdfs:label>
-    </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002329"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#propertyChainAxiom"/>
-        <owl:annotatedTarget rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002215"/>
-        </owl:annotatedTarget>
-        <obo:RO_0002581 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</obo:RO_0002581>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0002331 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002331">
@@ -1684,7 +1622,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002333">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
         <obo:IAO_0000115>inverse of enables</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
@@ -1737,7 +1674,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002352">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
         <obo:IAO_0000115>inverse of has input</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/RO_0002259"/>
@@ -1750,7 +1686,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/RO_0002384 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002384">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002324"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
@@ -1820,33 +1755,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <rdfs:label xml:lang="en">immediately causally downstream of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002410 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002410">
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115>This relation groups causal relations between material entities and causal relations between processes</obo:IAO_0000115>
-        <obo:IAO_0000116>This branch of the ontology deals with causal relations between entities. It is divided into two branches: causal relations between occurrents/processes, and causal relations between material entities. We take an &apos;activity flow-centric approach&apos;, with the former as primary, and define causal relations between material entities in terms of causal relations between occurrents.
-
-To define causal relations in an activity-flow type network, we make use of 3 primitives:
-
- * Temporal: how do the intervals of the two occurrents relate? 
- * Is the causal relation regulatory?
- * Is the influence positive or negative
-
-The first of these can be formalized in terms of the Allen Interval Algebra. Informally, the 3 bins we care about are &apos;direct&apos;, &apos;indirect&apos; or overlapping. Note that all causal relations should be classified under a RO temporal relation (see the branch under &apos;temporally related to&apos;). Note that all causal relations are temporal, but not all temporal relations are causal. Two occurrents can be related in time without being causally connected. We take causal influence to be primitive, elucidated as being such that has the upstream changed, some qualities of the donwstream would necessarily be modified.
-
-For the second, we consider a relationship to be regulatory if the system in which the activities occur is capable of altering the relationship to achieve some objective. This could include changing the rate of production of a molecule.
-
-For the third, we consider the effect of the upstream process on the output(s) of the downstream process. If the level of output is increased, or the rate of production of the output is increased, then the direction is increased. Direction can be positive, negative or neutral or capable of either direction. Two positives in succession yield a positive, two negatives in succession yield a positive, otherwise the default assumption is that the net effect is canceled and the influence is neutral.
-
-Each of these 3 primitives can be composed to yield a cross-product of different relation types.</obo:IAO_0000116>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000232>Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect.</obo:IAO_0000232>
-        <rdfs:label xml:lang="en">causally related to</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1975,7 +1883,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002431">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002264"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002500"/>
         <obo:IAO_0000115>c involved in or regulates p if and only if either (i) c is involved in p or (ii) c is involved in regulation of p</obo:IAO_0000115>
         <obo:IAO_0000116>OWL does not allow defining object properties via a Union</obo:IAO_0000116>
@@ -1990,7 +1897,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002432">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002327"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000066"/>
@@ -2137,16 +2043,6 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002464 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002464">
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000232>This property or its subproperties is not to be used directly. These properties exist as helper properties that are used to support OWL reasoning.</obo:IAO_0000232>
-        <rdfs:label>helper property (not for use in curation)</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0002479 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002479">
@@ -2173,16 +2069,6 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002481 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002481">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002564"/>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <rdfs:label>is kinase activity</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0002500 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002500">
@@ -2198,7 +2084,6 @@ For example, A and B may be gene products and binding of B by A positively regul
     <!-- http://purl.obolibrary.org/obo/RO_0002501 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002501">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002410"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
         <obo:IAO_0000115>p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one of direct activation or direct inhibition. p may be upstream, downstream, part of or a container of q.</obo:IAO_0000115>
@@ -2210,20 +2095,9 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002502 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002502">
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <rdfs:label>depends on</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/BFO_0000169"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0002506 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002506">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002410"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <obo:IAO_0000116>The intent is that the process branch of the causal property hierarchy is primary (causal relations hold between occurrents/processes), and that the material branch is defined in terms of the process branch</obo:IAO_0000116>
@@ -2244,28 +2118,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
         <obo:IAO_0000589>causally influenced by (entity-centric)</obo:IAO_0000589>
         <rdfs:label>causally influenced by</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002563 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002563">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002464"/>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <rdfs:label>interaction relation helper property</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:N-Ary_Relation_Pattern_%28OWL_2%29"/>
-        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/oborel/obo-relations/wiki/InteractionRelations</foaf:page>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002564 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002564">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002563"/>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <rdfs:label>molecular interaction relation helper property</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2332,7 +2184,6 @@ For example, A and B may be gene products and binding of B by A positively regul
     <!-- http://purl.obolibrary.org/obo/RO_0002584 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002584">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002595"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2349,7 +2200,6 @@ For example, A and B may be gene products and binding of B by A positively regul
     <!-- http://purl.obolibrary.org/obo/RO_0002595 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002595">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002410"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <obo:IAO_0000115>A relationship that holds between a material entity and a process in which causality is involved, with either the material entity or some part of the material entity exerting some influence over the process, or the process influencing some aspect of the material entity.</obo:IAO_0000115>
@@ -2411,7 +2261,6 @@ For example, A and B may be gene products and binding of B by A positively regul
     <!-- http://purl.obolibrary.org/obo/RO_0002608 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002608">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002410"/>
         <obo:IAO_0000115>Inverse of &apos;causal agent in process&apos;</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
         <rdfs:label>process has causal agent</rdfs:label>
@@ -2449,22 +2298,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
         <rdfs:label>directly negatively regulates</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0004031 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004031">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002327"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        </owl:propertyChainAxiom>
-        <obo:IAO_0000115>Holds between an entity and an process P where the entity enables some larger compound process, and that larger process has-part P.</obo:IAO_0000115>
-        <oboInOwl:created_by>cjm</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T23:20:13Z</oboInOwl:creation_date>
-        <rdfs:label>enables subfunction</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -3306,13 +3139,13 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Primordium of the early extended germ band embryo that will give rise to the larval Bolwig organ, larval optic anlage and adult eye. It is a dorsoposterior strip of the embryonic procephalon that invaginates at stages 12-13. It can be subdivided into 4 different regions. The most anterior gives rise to the embryonic primordium of adult eye. Posterior to it, the anterior lip develops into the embryonic inner optic lobe primordium, that will give rise to the larval inner optic anlage. Posteriorly, the posterior lip develops into the embryonic outer optic lobe primordium, that will give rise to the larval outer optic anlage. The most posterior region will develop into the Bolwig organ primordium.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0089570</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0151275</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0151275</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00001059"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>optic lobe placode</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0151275</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0151275</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00001059"/>
@@ -4009,7 +3842,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00002952"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The prepupa is the name given to the organism at the period of the life cycle that begins at puparium formation and ends when larval/pupal apolysis is complete, as indicated by the completion of imaginal head sac eversion and the expulsion of the oral armature of the larva. Duration at 25 degrees C is approximately 12 hours. It occurs 120-132.2 hours after egg laying, and is the period of 0-12.2 hours after puparium formation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -4038,7 +3871,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00002953"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The pupa is the name given to the organism at the period of the life cycle that begins once larval/pupal apolysis is complete, as indicated by the expulsion of the larval armature. Early in this stage the legs and wings reach full extension along the abdomen. The stage ends when the pupal cuticle separates from the underlying epidermis (pupal/adult apolysis), and the eye cup becomes yellow at its periphery. The duration of this stage is approximately 32 hours at 25 degrees C, and spans from 132.2-164.3 hours after egg laying, or is the period of 12.2-44.3 hours after puparium formation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0048355</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -4067,7 +3900,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_00003004"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0036849</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0036849</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5202,7 +5035,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:VH</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0089570</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0151275</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0151275</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6161,7 +5994,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:VH</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0089570</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0151275</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0151275</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6265,7 +6098,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Primordium of the embryo that will give rise to the adult eye. It corresponds to the most anterior region that develops from the visual primordium.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0089570</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase:FBrf0151275</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0151275</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_10005249"/>
@@ -6460,7 +6293,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ems</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ems</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:isa_complete</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -6687,7 +6520,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ems</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ems</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0395448956</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:20160973</oboInOwl:hasDbXref>
@@ -6729,8 +6562,8 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007612"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process in an organism in which a relatively long-lasting adaptive behavioral change occurs as the result of experience.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0721662544</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0721662544</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6749,8 +6582,8 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007613"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6769,7 +6602,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007616"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The memory process that deals with the storage, retrieval and modification of information a long time (typically weeks, months or years) after receiving that information. This type of memory is typically dependent on gene transcription regulated by second messenger activation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://hebb.mit.edu/courses/9.03/lecture4.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -6871,7 +6704,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007620"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The act of sexual union between male and female, involving the transfer of sperm.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0721662544</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0721662544</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7222,7 +7055,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009266"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a temperature stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7264,7 +7097,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a light stimulus, electromagnetic radiation of wavelengths classified as infrared, visible or ultraviolet light.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7284,7 +7117,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009581"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The series of events in which an external stimulus is received by a cell and converted into a molecular signal.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7304,7 +7137,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009582"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The series of events in which an (non-living) abiotic stimulus is received by a cell and converted into a molecular signal.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7369,7 +7202,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009605"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an external stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7393,7 +7226,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009628"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an abiotic (not derived from living organisms) stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7412,7 +7245,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009629"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a gravitational stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7485,12 +7318,6 @@ For example, A and B may be gene products and binding of B by A positively regul
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016301">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016772"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002481"/>
-                <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label>kinase activity</rdfs:label>
     </owl:Class>
     
@@ -7554,7 +7381,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0018991"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The deposition of eggs (either fertilized or not) upon a surface or into a medium such as water.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ems</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ems</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7616,8 +7443,8 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A reproduction process that creates a new organism by combining the genetic material of two gametes, which may come from two organisms or from a single organism, in the case of self-fertilizing hermaphrodites, e.g. C. elegans, or self-fertilization in plants. It occurs both in eukaryotes and prokaryotes: in multicellular eukaryotic organisms, an individual is created anew; in prokaryotes, the initial cell has additional or transformed genetic material. In a process called genetic recombination, genetic material (DNA) originating from two gametes join up so that homologous sequences are aligned with each other, and this is followed by exchange of genetic information. After the new recombinant chromosome is formed, it is passed on to progeny.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:kmv</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:krc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:kmv</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:krc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0387520546</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Sexual_reproduction</oboInOwl:hasDbXref>
@@ -8294,7 +8121,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0032501"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any biological process, occurring at the level of a multicellular organism, pertinent to its function.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:isa_complete</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
@@ -8420,7 +8247,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0040012"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of locomotion of a cell or organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ems</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ems</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10473,7 +10300,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that modulates the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:kmv</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:kmv</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10514,7 +10341,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that increases the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:kmv</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:kmv</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10555,7 +10382,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that decreases the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:kmv</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:kmv</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10611,7 +10438,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that stops, prevents or reduces the frequency, rate or extent of oviposition.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:kmv</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:kmv</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901045"/>
@@ -10750,7 +10577,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that activates or increases the frequency, rate or extent of oviposition.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:kmv</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:kmv</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901046"/>
@@ -11372,7 +11199,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11403,7 +11230,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000069"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the whether the bearer differs from normal or average.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11429,7 +11256,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s deviation from normal or average.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11459,7 +11286,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality which inheres in a continuant.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
