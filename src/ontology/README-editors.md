@@ -18,7 +18,7 @@ First, clone the repository:
 
 `git clone https://github.com/FlyBase/drosophila-phenotype-ontology.git`
 
-Make sure you have an ID range in the [ID ranges file](https://github.com/FlyBase/flybase-controlled-vocabulary/blob/master/src/ontology/fbcv-idranges.owl) (see below).
+Make sure you have an ID range in the [idranges file](https://github.com/FlyBase/flybase-controlled-vocabulary/blob/master/src/ontology/fbcv-idranges.owl) (see below).
 
 The editors' version is [dpo-edit.owl](dpo-edit.owl), [../../dpo.owl](../../dpo.owl) is the release version.
 
