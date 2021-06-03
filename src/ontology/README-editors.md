@@ -58,21 +58,21 @@ We use design patterns from the [upheno project](https://github.com/obophenotype
 
 You can automate (class) term generation from design patterns by placing DOSDP yaml file and tsv files under src/patterns. Any pair of files in this folder that share a name (apart from the extension) are assumed to be a DOSDP design pattern and a corresponding tsv specifying terms to add.
 
-Design patterns can be used to maintain and generate complete terms (names, definitions, synonyms etc) or to generate logical axioms only, with other axioms being maintained in editors' file.  This can be specified on a per-term basis in the TSV file.
+Design patterns can be used to maintain and generate complete terms (names, definitions, synonyms etc) or to generate logical axioms only, with other axioms being maintained in editors' file. This can be specified on a per-term basis in the TSV file. For DPO, we use patterns to generate logical definitions only.
 
-Design pattern docs are checked for validity via Travis, but can be tested locally using
+To patternise a term, add its iri to the defined_class column of the appropriate tsv (make a new tsv if this is the first time using a given pattern) and add the iris for the pattern variables to the appropriate columns (see existing tsv/yaml files for examples). You can also add labels for the term/variables for reference, but these are not used for compiling definitions. If using a new pattern, add its iri to `src/patterns/dosdp-patterns/external.txt`. Running the commands below will then test the patterns and compile the new definition(s).
+
+Design pattern docs are checked for validity via Travis, but can be tested locally using:
 
 `sh run.sh make patterns`
 
 In addition to running standard tests, this command generates an owl file (`src/patterns/pattern.owl`), which demonstrates the relationships between design patterns.
 
-(At the time of writing, the following import statements need to be added to `src/patterns/pattern.owl` for all imports generated in `src/imports/*_import.owl`.   This will be automated in a future release.')
-
 To compile design patterns to terms run:
 
 `sh run.sh make ../patterns/definitions.owl`
 
-This generates a file (`src/patterns/definitions.owl`).  You then need to add an import statement to the editor's file to import the definitions file.
+This generates a file (`src/patterns/definitions.owl`), which is imported into the editor's file.
 
 ## Releases
 
