@@ -51,6 +51,12 @@
 
 #original_patterns: $(PATTERNDIR)/definitions_original.owl
 
+.PHONY: clean_imports
+clean_imports:  all_imports
+	for import in $(IMPORT_OWL_FILES) ; do \
+		$(ROBOT) merge -i $$import unmerge -i components/excluded-axioms.owl -o $$import ; \
+	done
+
 tmp/all_patternised_classes.txt:
 	$(ROBOT) query --use-graphs false -f csv -i $(PATTERNDIR)/definitions.owl --query ../sparql/dpo-equivalent-classes.sparql $@.tmp
 	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
@@ -206,7 +212,7 @@ tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_gener
 tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_sub.txt
 	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA source_xref
 
-pre_release: $(ONT)-edit.owl all_imports tmp/auto_generated_definitions_dot.owl tmp/auto_generated_definitions_sub.owl #components/lethal_class_hierarchy.owl
+pre_release: $(ONT)-edit.owl clean_imports tmp/auto_generated_definitions_dot.owl tmp/auto_generated_definitions_sub.owl #components/lethal_class_hierarchy.owl
 	cat $(ONT)-edit.owl | grep -v 'AnnotationAssertion[(]obo[:]IAO[_]0000115.*\"[.]\"' | grep -v 'sub_' > tmp/$(ONT)-edit-release.owl
 	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_dot.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $(ONT)-edit-release.ofn && mv $(ONT)-edit-release.ofn $(ONT)-edit-release.owl
 	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
