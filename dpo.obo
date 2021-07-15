@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: dpo/releases/2021-07-09
-date: 09:07:2021 13:09
+data-version: dpo/releases/2021-07-15
+date: 15:07:2021 11:24
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -44,7 +44,7 @@ property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-00
 property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0001-5948-3092 xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0002-0027-0858 xsd:string
 property_value: IAO:0000700 FBcv:0000347
-property_value: owl:versionInfo "2021-07-09" xsd:string
+property_value: owl:versionInfo "2021-07-15" xsd:string
 
 [Term]
 id: FBcv:0000002
@@ -1962,10 +1962,9 @@ is_transitive: true
 
 [Typedef]
 id: RO:0002314
-name: inheres in part of
-def: "q inheres in part of w if and only if there exists some p such that q inheres in p and p part of w." []
+name: characteristic of part of
+def: "q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w." []
 property_value: IAO:0000116 "Because part_of is transitive, inheres in is a sub-relation of characteristic of part of" xsd:string
-property_value: IAO:0000116 "Because part_of is transitive, inheres in is a sub-relation of inheres in part of" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "inheres in part of" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
@@ -1995,9 +1994,8 @@ property_value: IAO:0000232 "This relation is intended to be used in combination
 [Typedef]
 id: characteristic_of
 name: characteristic_of
-name: inheres in
 namespace: fly_anatomy.ontology
-def: "a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence" []
+def: "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence." []
 comment: Note that this relation was previously called "inheres in", but was changed to be called "characteristic of" because BFO2 uses "inheres in" in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing.
 xref: RO:0000052
 property_value: IAO:0000111 "inheres in" xsd:string
@@ -2009,7 +2007,7 @@ property_value: IAO:0000116 "A dependent inheres in its bearer at all times for 
 property_value: IAO:0000118 "inheres_in" xsd:string
 property_value: RO:0001900 RO:0001901
 is_functional: true
-is_a: RO:0002314 ! inheres in part of
+is_a: RO:0002314 ! characteristic of part of
 
 [Typedef]
 id: dc-description

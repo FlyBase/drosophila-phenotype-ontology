@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: dpo/releases/2021-07-09/dpo-non-classified.owl
-date: 09:07:2021 13:10
+data-version: dpo/releases/2021-07-15/dpo-non-classified.owl
+date: 15:07:2021 11:25
 subsetdef: 3_STAR ""
 subsetdef: abnormal_slim ""
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -83,7 +83,7 @@ property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-00
 property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0001-5948-3092 xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0002-0027-0858 xsd:string
 property_value: IAO:0000700 FBcv:0000347
-property_value: owl:versionInfo "2021-07-09" xsd:string
+property_value: owl:versionInfo "2021-07-15" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -567,9 +567,7 @@ property_value: IAO:0000117 "djs93" xsd:string
 [Term]
 id: CARO:0010004
 name: cellular organism
-name: organism
 def: "An individual member of a clade of cellular organisms." []
-def: "An individual member of a clade." []
 comment: A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of 'anatomical structure', meaning that an organism must be a connected structure.  So, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms.
 comment: A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of 'anatomical structure', meaning that an organism must be a connected structure. For example, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms. 
 is_a: CARO:0000003 ! connected anatomical structure
@@ -2967,7 +2965,6 @@ namespace: phenotypic_class
 def: "Phenotype that is an increase in size of a tissue or organ due to increased numbers of cells, where the affected tissue or organ maintains its normal form." [ISBN:9780198506737]
 synonym: "hyperplastic" EXACT []
 is_a: FBcv:0000362 ! increased cell number
-is_a: FBcv:0007507 ! increased size
 
 [Term]
 id: FBcv:0000445
@@ -11302,7 +11299,7 @@ property_value: IAO:0000116 "A bearer can have many functions, and its functions
 property_value: IAO:0000118 "has_function" xsd:string
 domain: BFO:0000004 ! independent continuant
 range: BFO:0000034 ! function
-is_a: has_characteristic ! bearer of
+is_a: has_characteristic ! has_characteristic
 
 [Typedef]
 id: RO:0000091
@@ -11310,7 +11307,7 @@ name: has disposition
 def: "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence" []
 domain: BFO:0000004 ! independent continuant
 range: BFO:0000016 ! disposition
-is_a: has_characteristic ! bearer of
+is_a: has_characteristic ! has_characteristic
 inverse_of: RO:0000092 ! disposition of
 
 [Typedef]
@@ -11614,11 +11611,8 @@ is_a: RO:0004046 ! causally upstream of or within, negative effect
 [Typedef]
 id: RO:0002314
 name: characteristic of part of
-name: inheres in part of
 def: "q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w." []
-def: "q inheres in part of w if and only if there exists some p such that q inheres in p and p part of w." []
 property_value: IAO:0000116 "Because part_of is transitive, inheres in is a sub-relation of characteristic of part of" xsd:string
-property_value: IAO:0000116 "Because part_of is transitive, inheres in is a sub-relation of inheres in part of" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "inheres in part of" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
@@ -12343,10 +12337,8 @@ expand_expression_to: "RO_0000053 some (RO_0000054 only (BFO_0000050 some ?Y))" 
 id: characteristic_of
 name: characteristic of
 name: characteristic_of
-name: inheres in
 namespace: fly_anatomy.ontology
 def: "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence." []
-def: "a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence" []
 comment: Note that this relation was previously called "inheres in", but was changed to be called "characteristic of" because BFO2 uses "inheres in" in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing.
 xref: RO:0000052
 property_value: IAO:0000111 "inheres in" xsd:string
@@ -12358,8 +12350,8 @@ property_value: IAO:0000116 "A dependent inheres in its bearer at all times for 
 property_value: IAO:0000118 "inheres_in" xsd:string
 property_value: RO:0001900 RO:0001901
 is_functional: true
-is_a: RO:0002314 ! inheres in part of
-inverse_of: has_characteristic ! bearer of
+is_a: RO:0002314 ! characteristic of part of
+inverse_of: has_characteristic ! has_characteristic
 
 [Typedef]
 id: correlates_with
@@ -12501,12 +12493,10 @@ is_a: RO:0002091 ! starts during
 
 [Typedef]
 id: has_characteristic
-name: bearer of
 name: has characteristic
 name: has_characteristic
 namespace: fly_anatomy.ontology
 namespace: uberon
-def: "a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence" []
 def: "Inverse of characteristic_of" []
 xref: RO:0000053
 property_value: IAO:0000111 "bearer of" xsd:string
@@ -12593,7 +12583,7 @@ property_value: IAO:0000116 "A bearer can have many qualities, and its qualities
 property_value: IAO:0000118 "has_quality" xsd:string
 range: BFO:0000019 ! quality
 is_transitive: false
-is_a: has_characteristic ! bearer of
+is_a: has_characteristic ! has_characteristic
 
 [Typedef]
 id: has_role
@@ -12608,7 +12598,7 @@ domain: BFO:0000004 ! independent continuant
 range: BFO:0000023 ! role
 is_cyclic: false
 is_transitive: false
-is_a: has_characteristic ! bearer of
+is_a: has_characteristic ! has_characteristic
 
 [Typedef]
 id: immediately_preceded_by
@@ -12873,7 +12863,6 @@ name: preceded_by
 namespace: relationship
 namespace: uberon
 def: "x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." []
-def: "X preceded_by Y iff: end(Y) before_or_simultaneous_with start(X)" []
 subset: ro-eco
 synonym: "is preceded by" EXACT [SIO:000249]
 synonym: "takes place after" EXACT [Allen:precedes]
@@ -12924,7 +12913,6 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
 id: regulates
 name: regulates
 namespace: external
-def: "process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2." []
 def: "process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
@@ -12975,5 +12963,5 @@ comment: Creating this relation as a temporary fix, pending adding the axiom occ
 xref: FBdv:00018001
 is_transitive: true
 is_a: happens_during ! happens during
-is_a: occurent_part_of ! occurent_part_of
+is_a: occurent_part_of ! occurent part of
 

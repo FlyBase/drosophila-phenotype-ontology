@@ -3464,11 +3464,6 @@
           "sub": "http://purl.obolibrary.org/obo/FBcv_0002050"
         },
         {
-          "obj": "http://purl.obolibrary.org/obo/FBcv_0007507",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/FBcv_0000444"
-        },
-        {
           "obj": "http://purl.obolibrary.org/obo/FBdv_00000000",
           "pred": "http://purl.obolibrary.org/obo/FBdv_00018001",
           "sub": "http://purl.obolibrary.org/obo/FBdv_00007012"
@@ -13129,7 +13124,7 @@
           },
           {
             "pred": "http://www.geneontology.org/formats/oboInOwl#date",
-            "val": "09:07:2021 13:10"
+            "val": "15:07:2021 11:25"
           },
           {
             "pred": "http://www.geneontology.org/formats/oboInOwl#default-namespace",
@@ -13137,11 +13132,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-07-09"
+            "val": "2021-07-15"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/dpo/releases/2021-07-09/dpo-non-classified.json",
+        "version": "http://purl.obolibrary.org/obo/dpo/releases/2021-07-15/dpo-non-classified.json",
         "xrefs": []
       },
       "nodes": [
@@ -14910,7 +14905,7 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/CARO_0010004",
-          "lbl": "organism",
+          "lbl": "cellular organism",
           "meta": {
             "basicPropertyValues": [
               {
@@ -39651,14 +39646,6 @@
                 "val": "definition"
               },
               {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000111",
-                "val": "definition"
-              },
-              {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000111",
-                "val": "textual definition"
-              },
-              {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000114",
                 "val": "http://purl.obolibrary.org/obo/IAO_0000122"
               },
@@ -39680,7 +39667,7 @@
               }
             ],
             "definition": {
-              "val": "The official OBI definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.",
+              "val": "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.",
               "xrefs": []
             }
           },
@@ -44282,7 +44269,7 @@
               "Note that this relation was previously called \"inheres in\", but was changed to be called \"characteristic of\" because BFO2 uses \"inheres in\" in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing."
             ],
             "definition": {
-              "val": "a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence",
+              "val": "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.",
               "xrefs": []
             },
             "xrefs": [
@@ -44295,7 +44282,7 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/RO_0000053",
-          "lbl": "bearer of",
+          "lbl": "has_characteristic",
           "meta": {
             "basicPropertyValues": [
               {
@@ -45088,10 +45075,6 @@
                 "val": "immediately_preceded_by"
               },
               {
-                "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
-                "val": "starts_at_end_of"
-              },
-              {
                 "pred": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
                 "val": "http://purl.obolibrary.org/obo/ro.owl"
               },
@@ -45186,6 +45169,10 @@
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
                 "val": "ends_at_start_of"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
+                "val": "immediately_precedes"
               },
               {
                 "pred": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
@@ -46359,16 +46346,12 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/RO_0002314",
-          "lbl": "inheres in part of",
+          "lbl": "characteristic of part of",
           "meta": {
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000116",
                 "val": "Because part_of is transitive, inheres in is a sub-relation of characteristic of part of"
-              },
-              {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000116",
-                "val": "Because part_of is transitive, inheres in is a sub-relation of inheres in part of"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
