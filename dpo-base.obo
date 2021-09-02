@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: dpo/releases/2021-07-15/dpo-base.owl
-date: 15:07:2021 11:25
+data-version: dpo/releases/2021-09-02/dpo-base.owl
+date: 02:09:2021 11:58
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -40,7 +40,7 @@ property_value: http://purl.org/dc/elements/1.1/title "Drosophila Phenotype Onto
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
 property_value: IAO:0000700 FBcv:0000347
-property_value: owl:versionInfo "2021-07-15" xsd:string
+property_value: owl:versionInfo "2021-09-02" xsd:string
 
 [Term]
 id: FBcv:0000002
@@ -1092,7 +1092,6 @@ name: abnormal touch perception
 namespace: phenotypic_class
 def: "Phenotype that is any abnormality in sensory perception of touch (GO:0050975). 'sensory perception of touch' is defined as: 'The series of events required for an organism to receive a touch stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process. The perception of touch in animals is mediated by mechanoreceptors in the skin and mucous membranes and is the sense by which contact with objects gives evidence as to certain of their qualities. Different types of touch can be perceived (for example, light, coarse, pressure and tickling) and the stimulus may be external or internal (e.g. the feeling of a full stomach).'" [FBC:DOS, GOC:ai]
 synonym: "touch perception defective" EXACT []
-synonym: "touch perception defective" RELATED []
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -1920,6 +1919,106 @@ def: "Phenotype that is a decrease in the total amount or frequency of feeding b
 is_a: FBcv:0001347 ! phenotype
 created_by: http://orcid.org/0000-0002-1373-1705
 creation_date: 2020-12-16T12:16:19Z
+
+[Term]
+id: FBcv:0007517
+name: increased memory
+namespace: phenotypic_class
+def: "Phenotype that is an increase in the efficacy of memory (GO:0007613) relative to controls. 'memory' is defined as: 'The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).'" [FBC:CP, GOC:curators, ISBN:0582227089]
+comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with memory formation.
+is_a: FBcv:0001347 ! phenotype
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T11:45:09Z
+
+[Term]
+id: FBcv:0007518
+name: decreased memory
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in the efficacy of memory (GO:0007613) relative to controls. 'memory' is defined as: 'The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).'" [FBC:CP, GOC:curators, ISBN:0582227089]
+comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with memory formation.
+is_a: FBcv:0001347 ! phenotype
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T11:55:18Z
+
+[Term]
+id: FBcv:0007519
+name: increased short-term memory
+namespace: phenotypic_class
+def: "Phenotype that is an increase in the efficacy of short-term memory (GO:0007614) relative to controls. 'short-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information received a short time (up to about 30 minutes) ago. This type of memory is typically dependent on direct, transient effects of second messenger activation.'" [FBC:CP, http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
+comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with short-term memory formation.
+is_a: FBcv:0001347 ! phenotype
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T11:56:41Z
+
+[Term]
+id: FBcv:0007520
+name: decreased short-term memory
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in the efficacy of short-term memory (GO:0007614) relative to controls. 'short-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information received a short time (up to about 30 minutes) ago. This type of memory is typically dependent on direct, transient effects of second messenger activation.'" [FBC:CP, http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
+comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with short-term memory formation.
+is_a: FBcv:0001347 ! phenotype
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T11:57:17Z
+
+[Term]
+id: FBcv:0007521
+name: increased long-term memory
+namespace: phenotypic_class
+def: "Phenotype that is an increase in the efficacy of long-term memory (GO:0007616) relative to controls. 'long-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information a long time (typically weeks, months or years) after receiving that information. This type of memory is typically dependent on gene transcription regulated by second messenger activation.'" [FBC:CP, http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
+comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with long-term memory formation.
+is_a: FBcv:0001347 ! phenotype
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T12:02:59Z
+
+[Term]
+id: FBcv:0007522
+name: decreased long-term memory
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in the efficacy of long-term memory (GO:0007616) relative to controls. 'long-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information a long time (typically weeks, months or years) after receiving that information. This type of memory is typically dependent on gene transcription regulated by second messenger activation.'" [FBC:CP, http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
+comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with long-term memory formation.
+is_a: FBcv:0001347 ! phenotype
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T12:04:30Z
+
+[Term]
+id: FBcv:0007523
+name: increased anesthesia-resistant memory
+namespace: phenotypic_class
+def: "Phenotype that is an increase in the efficacy of anesthesia-resistant memory (GO:0007615) relative to controls. 'anesthesia-resistant memory' is defined as: 'The memory process that results in the formation of consolidated memory resistant to disruption of the patterned activity of the brain, without requiring protein synthesis.'" [FBC:CP, PMID:15143285, PMID:17088531]
+comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with anesthesia-resistant memory formation.
+is_a: FBcv:0001347 ! phenotype
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T12:08:22Z
+
+[Term]
+id: FBcv:0007524
+name: decreased anesthesia-resistant memory
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in the efficacy of anesthesia-resistant memory (GO:0007615) relative to controls. 'anesthesia-resistant memory' is defined as: 'The memory process that results in the formation of consolidated memory resistant to disruption of the patterned activity of the brain, without requiring protein synthesis.'" [FBC:CP, PMID:15143285, PMID:17088531]
+comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with anesthesia-resistant memory formation.
+is_a: FBcv:0001347 ! phenotype
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T12:10:03Z
+
+[Term]
+id: FBcv:0007525
+name: increased medium-term memory
+namespace: phenotypic_class
+def: "Phenotype that is an increase in the efficacy of medium-term memory (GO:0072375) relative to controls. 'medium-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information received at a time ago that is intermediate between that of short and long term memory (30min - 7hrs in Drosophila melanogaster).'" [FBC:CP, GOC:sart, PMID:14659098, PMID:7923375]
+comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with medium-term memory formation.
+is_a: FBcv:0001347 ! phenotype
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T12:11:31Z
+
+[Term]
+id: FBcv:0007526
+name: decreased medium-term memory
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in the efficacy of medium-term memory (GO:0072375) relative to controls. 'medium-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information received at a time ago that is intermediate between that of short and long term memory (30min - 7hrs in Drosophila melanogaster).'" [FBC:CP, GOC:sart, PMID:14659098, PMID:7923375]
+comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with medium-term memory formation.
+is_a: FBcv:0001347 ! phenotype
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T12:12:48Z
 
 [Typedef]
 id: FBcv:0008000

@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: dpo/releases/2021-07-15/dpo-full.owl
-date: 15:07:2021 11:24
+data-version: dpo/releases/2021-09-02/dpo-full.owl
+date: 02:09:2021 11:58
 subsetdef: 3_STAR ""
 subsetdef: abnormal_slim ""
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -13,12 +13,14 @@ subsetdef: camcur "camcur"
 subsetdef: cell_quality ""
 subsetdef: cell_quality "cell_quality"
 subsetdef: core ""
+subsetdef: cumbo ""
 subsetdef: cur ""
 subsetdef: cur "cur"
 subsetdef: deprecated ""
 subsetdef: deprecated "warning of impending obsoletion"
 subsetdef: disposition_slim ""
 subsetdef: do_not_annotate "do not annotate"
+subsetdef: early_development ""
 subsetdef: efo_slim ""
 subsetdef: EmbDevSlim ""
 subsetdef: EmbDevSlim "EmbDevSlim"
@@ -27,6 +29,7 @@ subsetdef: FB_gloss ""
 subsetdef: fbcvsubset_mgiribbons "fbcvsubset_mgiribbons"
 subsetdef: FlyTed "Testis slim"
 subsetdef: FT_new "FlyTed temp subset for edit tracking purposes"
+subsetdef: functional_classification ""
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -42,16 +45,19 @@ subsetdef: goslim_pir ""
 subsetdef: goslim_plant ""
 subsetdef: goslim_pombe ""
 subsetdef: goslim_yeast ""
+subsetdef: grouping_class ""
 subsetdef: hidden_assertion ""
 subsetdef: hpo_slim ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
+subsetdef: inconsistent_with_fma ""
 subsetdef: larval_OF ""
 subsetdef: larval_OF "larval olfactory system"
 subsetdef: lethal_phase "lethal phase terms"
 subsetdef: mpath_slim ""
+subsetdef: pheno_slim ""
 subsetdef: plus ""
 subsetdef: RD "terms for rd test ontology"
 subsetdef: relational_slim ""
@@ -59,10 +65,12 @@ subsetdef: relational_slim "Relational slim: types of quality that require an ad
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
 subsetdef: scalar_slim ""
+subsetdef: uberon_slim ""
 subsetdef: ubprop:upper_level ""
 subsetdef: upper_level ""
 subsetdef: value_slim ""
 subsetdef: value_slim "Value slim"
+subsetdef: vertebrate_core ""
 synonymtypedef: BRAIN_NAME_ABV "BrainName official abbreviation"
 synonymtypedef: BRAND_NAME "BRAND NAME"
 synonymtypedef: FORMULA "FORMULA"
@@ -83,7 +91,7 @@ property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-00
 property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0001-5948-3092 xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0002-0027-0858 xsd:string
 property_value: IAO:0000700 FBcv:0000347
-property_value: owl:versionInfo "2021-07-15" xsd:string
+property_value: owl:versionInfo "2021-09-02" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -143,7 +151,6 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 id: BFO:0000004
 name: independent continuant
 def: "A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything." []
-def: "b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/017-002"}
 is_a: BFO:0000002 ! continuant
 disjoint_from: BFO:0000020 ! specifically dependent continuant
 disjoint_from: BFO:0000020 ! specifically dependent continuant
@@ -172,7 +179,6 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 id: BFO:0000015
 name: process
 def: "An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t." []
-def: "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/083-003"}
 is_a: BFO:0000003 ! occurrent
 property_value: BFO:0000179 "process" xsd:string
 property_value: BFO:0000180 "Process" xsd:string
@@ -248,8 +254,6 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 [Term]
 id: BFO:0000020
 name: specifically dependent continuant
-def: "A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same." []
-def: "b is a relational specifically dependent continuant = Def. b is a specifically dependent continuant and there are n &gt; 1 independent continuants c1, … cn which are not spatial regions are such that for all 1  i &lt; j  n, ci  and cj share no common parts, are such that for each 1  i  n, b s-depends_on ci at every time t during the course of b’s existence (axiom label in BFO2 Reference: [131-004])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/131-004"}
 def: "b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/050-003"}
 is_a: BFO:0000002 ! continuant
 disjoint_from: BFO:0000031 ! generically dependent continuant
@@ -328,7 +332,6 @@ is_a: BFO:0000040 ! material entity
 id: BFO:0000031
 name: generically dependent continuant
 def: "A continuant that is dependent on one or other independent continuant bearers. For every instance of A requires some instance of (an independent continuant type) B but which instance of B serves can change from time to time." []
-def: "b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/074-001"}
 is_a: BFO:0000002 ! continuant
 property_value: BFO:0000179 "gdc" xsd:string
 property_value: BFO:0000180 "GenericallyDependentContinuant" xsd:string
@@ -481,8 +484,8 @@ id: CARO:0000014
 name: cell part
 def: "Anatomical structure that is part of a cell and that has a granularity level equal to that of a protein complex or higher." []
 comment: This is declared equivalent with GO:0044464. The definition should be co-ordinated with GO. We could obsolete the CARO class and just use the GO class.
-is_a: GO:0044464 ! cell part
-equivalent_to: GO:0044464 ! cell part
+is_a: GO:0044464 ! obsolete cell part
+equivalent_to: GO:0044464 ! obsolete cell part
 disjoint_from: CARO:0000040 ! acellular anatomical structure
 disjoint_from: CARO:0000042 ! extraembryonic structure
 disjoint_from: CARO:0001000 ! multi-cell-part structure
@@ -700,7 +703,6 @@ name: germ layer derivative
 namespace: fly_anatomy.ontology
 subset: cur
 subset: EmbDevSlim
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00004208 ! developing embryonic structure
 relationship: develops_from FBbt:00000110 ! germ layer
 
@@ -822,7 +824,6 @@ def: "The outermost germ layer of the embryo." [FBC:GG]
 subset: cur
 subset: EmbDevSlim
 subset: FB_gloss
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00000110 ! germ layer
 relationship: develops_from FBbt:00005427 ! ectoderm anlage
 
@@ -833,7 +834,6 @@ namespace: fly_anatomy.ontology
 def: "The region of the ectoderm anterior to the cephalic furrow." [FBC:DOS]
 subset: cur
 subset: EmbDevSlim
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00100313 ! multicellular structure
 relationship: develops_from FBbt:01000119 ! anterior ectoderm anlage
 relationship: part_of FBbt:00000111 ! ectoderm
@@ -989,7 +989,6 @@ def: "Population of contiguous, morphologically distinct cells of the embryo tha
 subset: cur
 subset: EmbDevSlim
 synonym: "imaginal disc specific anlage" RELATED []
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00001648 ! embryonic imaginal tissue
 is_a: FBbt:00005495 ! primordium
 relationship: develops_from FBbt:00005533 ! ventral epidermis primordium
@@ -1014,7 +1013,6 @@ namespace: fly_anatomy.ontology
 subset: cur
 subset: FB_gloss
 subset: larval_OF
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00000001 ! organism
 relationship: develops_from FBbt:00000052 ! embryo
 
@@ -1036,7 +1034,6 @@ namespace: fly_anatomy.ontology
 def: "Any segment (FBbt:00000003) that is part of some larva (FBbt:00001727)." [FBC:Autogenerated]
 subset: cur
 subset: larval_OF
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00000003 ! segment
 intersection_of: FBbt:00000003 ! segment
 intersection_of: part_of FBbt:00001727 ! larva
@@ -1100,7 +1097,6 @@ def: "Imaginal tissue that is found in the larva and will develop into an adult 
 subset: cur
 synonym: "embryonic/larval imaginal precursor" EXACT []
 synonym: "larval imaginal precursor" EXACT []
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00047552 ! imaginal tissue
 intersection_of: FBbt:00047552 ! imaginal tissue
 intersection_of: part_of FBbt:00001727 ! larva
@@ -1190,7 +1186,6 @@ def: "The prepupa is the name given to the organism at the period of the life cy
 subset: cur
 subset: FB_gloss
 synonym: "PP" RELATED []
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00000001 ! organism
 relationship: develops_from FBbt:00001727 ! larva
 
@@ -1202,7 +1197,6 @@ def: "The pupa is the name given to the organism at the period of the life cycle
 subset: cur
 subset: FB_gloss
 synonym: "P" RELATED []
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00000001 ! organism
 relationship: develops_from FBbt:00002952 ! prepupa
 
@@ -1214,7 +1208,6 @@ def: "." [FlyBase:FBrf0036849]
 subset: cur
 subset: FB_gloss
 synonym: "imago" RELATED []
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00000001 ! organism
 relationship: develops_from FBbt:00006011 ! pharate adult
 
@@ -1460,7 +1453,6 @@ namespace: fly_anatomy.ontology
 def: "Nuclear divisions 3-8. The egg cytoplasm contracts producing a clear separation from the vitelline membrane and empty spaces at the anterior and posterior. The cleavage nuclei migrate towards the periphery. Duration at 25 degrees C approximately 40 minutes (25-65 minutes AEL)." [FlyBase:FBrf0089570]
 comment: DEPRECATION WARNING.
 subset: deprecated
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00000054 ! cleavage stage embryo
 is_a: FBbt:00005290 ! pre-blastoderm embryo
 relationship: develops_from FBbt:00005291 ! stage 1 embryo
@@ -1472,7 +1464,6 @@ namespace: fly_anatomy.ontology
 def: "Nuclear division 9. The cleavage nuclei complete there migration to the periphery. Polar buds form at the posterior pole and divide once. Duration at 25 degrees C: approximately 15 minutes (65-80 minutes after egg laying)." [FlyBase:FBrf0089570]
 comment: DEPRECATION WARNING.
 subset: deprecated
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00000054 ! cleavage stage embryo
 is_a: FBbt:00005305 ! syncytial blastoderm embryo
 relationship: develops_from FBbt:00005293 ! stage 2 embryo
@@ -1503,7 +1494,6 @@ namespace: fly_anatomy.ontology
 def: "Nuclear division 10-13. Polar buds divide twice and become tightly grouped at the posterior pole by the end of this stage. Nuclei visible at the rim of the embryo. Stage 4 ends with the beginning of cellularization. Duration at 25 degrees C: approximately 50 minutes (80-130 minutes after egg laying)." [FlyBase:FBrf0089570]
 comment: DEPRECATION WARNING.
 subset: deprecated
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00000054 ! cleavage stage embryo
 is_a: FBbt:00005305 ! syncytial blastoderm embryo
 relationship: develops_from FBbt:00005301 ! stage 3 embryo
@@ -1516,7 +1506,6 @@ def: "Stage 5 begins when cellularization starts. Near the end of this stage the
 comment: DEPRECATION WARNING.
 subset: deprecated
 synonym: "cellular blastoderm embryo" RELATED []
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00005304 ! blastoderm embryo
 relationship: develops_from FBbt:00005306 ! stage 4 embryo
 
@@ -1527,7 +1516,6 @@ namespace: fly_anatomy.ontology
 def: "A collective term for stages 6-8, during which complex morphogenetic movements result in the formation of the three germ layers; ectoderm, mesoderm and endoderm." [FBC:DOS, FBC:GG]
 comment: DEPRECATION WARNING.
 subset: deprecated
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00000052 ! embryo
 relationship: develops_from FBbt:00005304 ! blastoderm embryo
 
@@ -1538,7 +1526,6 @@ namespace: fly_anatomy.ontology
 def: "A collective term for stages 9-12." [FBC:DOS]
 comment: DEPRECATION WARNING.
 subset: deprecated
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00000052 ! embryo
 relationship: develops_from FBbt:00005317 ! gastrula embryo
 
@@ -1551,7 +1538,6 @@ comment: DEPRECATION WARNING.
 subset: deprecated
 synonym: "contracted germ band embryo" RELATED []
 synonym: "head involution embryo" RELATED []
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00000052 ! embryo
 relationship: develops_from FBbt:00004450 ! late extended germ band embryo
 
@@ -1562,7 +1548,6 @@ namespace: fly_anatomy.ontology
 def: "A collective term for stages 16 and 17." [FBC:DOS]
 comment: DEPRECATION WARNING.
 subset: deprecated
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00000052 ! embryo
 relationship: develops_from FBbt:00005331 ! dorsal closure embryo
 
@@ -1618,7 +1603,6 @@ subset: cur
 subset: EmbDevSlim
 synonym: "A VisSys" EXACT [FBC:DOS]
 synonym: "AVis" RELATED []
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00004208 ! developing embryonic structure
 is_a: FBbt:00005426 ! anlage
 relationship: develops_from FBbt:00005425 ! visual anlage in statu nascendi
@@ -1698,7 +1682,6 @@ namespace: fly_anatomy.ontology
 def: "The developing adult after pupal-adult apolysis, i.e. from stage P8 (when yellow eye color first becomes visible through the pupal case), to eclosion." [FlyBase:FBrf0049147]
 subset: cur
 subset: FB_gloss
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:00000001 ! organism
 relationship: develops_from FBbt:00002953 ! pupa
 
@@ -2025,7 +2008,6 @@ namespace: fly_anatomy.ontology
 def: "Primordium of the late embryo that develops from the early primordium, and will give rise to the adult eye." [FBC:DOS, FBC:VH, FlyBase:FBrf0089570, FlyBase:FBrf0151275]
 subset: cur
 synonym: "adult eye primordium late" EXACT []
-is_a: BFO:0000004 ! independent continuant
 is_a: FBbt:10005249 ! embryonic primordium of adult eye
 relationship: develops_from FBbt:00005515 ! early embryonic primordium of adult eye
 relationship: part_of FBbt:00005333 ! late embryo
@@ -2062,7 +2044,11 @@ subset: cur
 subset: EmbDevSlim
 subset: larval_OF
 synonym: "Drosophila" RELATED []
+is_a: CARO:0000000 ! anatomical entity
+intersection_of: CARO:0000000 ! anatomical entity
+intersection_of: part_of NCBITaxon:7227
 disjoint_from: PATO:0000001 ! quality
+relationship: part_of NCBITaxon:7227
 
 [Term]
 id: FBbt:10005249
@@ -3135,7 +3121,6 @@ name: abnormal touch perception
 namespace: phenotypic_class
 def: "Phenotype that is any abnormality in sensory perception of touch (GO:0050975). 'sensory perception of touch' is defined as: 'The series of events required for an organism to receive a touch stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process. The perception of touch in animals is mediated by mechanoreceptors in the skin and mucous membranes and is the sense by which contact with objects gives evidence as to certain of their qualities. Different types of touch can be perceived (for example, light, coarse, pressure and tickling) and the stimulus may be external or internal (e.g. the feeling of a full stomach).'" [FBC:DOS, GOC:ai]
 synonym: "touch perception defective" EXACT []
-synonym: "touch perception defective" RELATED []
 is_a: FBcv:0000681 ! abnormal sensory perception
 
 [Term]
@@ -3989,6 +3974,114 @@ created_by: http://orcid.org/0000-0002-1373-1705
 creation_date: 2020-12-16T12:16:19Z
 
 [Term]
+id: FBcv:0007517
+name: increased memory
+namespace: phenotypic_class
+def: "Phenotype that is an increase in the efficacy of memory (GO:0007613) relative to controls. 'memory' is defined as: 'The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).'" [FBC:CP, GOC:curators, ISBN:0582227089]
+comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with memory formation.
+is_a: FBcv:0000398 ! abnormal memory
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T11:45:09Z
+
+[Term]
+id: FBcv:0007518
+name: decreased memory
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in the efficacy of memory (GO:0007613) relative to controls. 'memory' is defined as: 'The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).'" [FBC:CP, GOC:curators, ISBN:0582227089]
+comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with memory formation.
+is_a: FBcv:0000398 ! abnormal memory
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T11:55:18Z
+
+[Term]
+id: FBcv:0007519
+name: increased short-term memory
+namespace: phenotypic_class
+def: "Phenotype that is an increase in the efficacy of short-term memory (GO:0007614) relative to controls. 'short-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information received a short time (up to about 30 minutes) ago. This type of memory is typically dependent on direct, transient effects of second messenger activation.'" [FBC:CP, http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
+comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with short-term memory formation.
+is_a: FBcv:0007501 ! abnormal short-term memory
+is_a: FBcv:0007517 ! increased memory
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T11:56:41Z
+
+[Term]
+id: FBcv:0007520
+name: decreased short-term memory
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in the efficacy of short-term memory (GO:0007614) relative to controls. 'short-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information received a short time (up to about 30 minutes) ago. This type of memory is typically dependent on direct, transient effects of second messenger activation.'" [FBC:CP, http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
+comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with short-term memory formation.
+is_a: FBcv:0007501 ! abnormal short-term memory
+is_a: FBcv:0007518 ! decreased memory
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T11:57:17Z
+
+[Term]
+id: FBcv:0007521
+name: increased long-term memory
+namespace: phenotypic_class
+def: "Phenotype that is an increase in the efficacy of long-term memory (GO:0007616) relative to controls. 'long-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information a long time (typically weeks, months or years) after receiving that information. This type of memory is typically dependent on gene transcription regulated by second messenger activation.'" [FBC:CP, http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
+comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with long-term memory formation.
+is_a: FBcv:0007503 ! abnormal long-term memory
+is_a: FBcv:0007517 ! increased memory
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T12:02:59Z
+
+[Term]
+id: FBcv:0007522
+name: decreased long-term memory
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in the efficacy of long-term memory (GO:0007616) relative to controls. 'long-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information a long time (typically weeks, months or years) after receiving that information. This type of memory is typically dependent on gene transcription regulated by second messenger activation.'" [FBC:CP, http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
+comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with long-term memory formation.
+is_a: FBcv:0007503 ! abnormal long-term memory
+is_a: FBcv:0007518 ! decreased memory
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T12:04:30Z
+
+[Term]
+id: FBcv:0007523
+name: increased anesthesia-resistant memory
+namespace: phenotypic_class
+def: "Phenotype that is an increase in the efficacy of anesthesia-resistant memory (GO:0007615) relative to controls. 'anesthesia-resistant memory' is defined as: 'The memory process that results in the formation of consolidated memory resistant to disruption of the patterned activity of the brain, without requiring protein synthesis.'" [FBC:CP, PMID:15143285, PMID:17088531]
+comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with anesthesia-resistant memory formation.
+is_a: FBcv:0007500 ! abnormal anesthesia-resistant memory
+is_a: FBcv:0007517 ! increased memory
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T12:08:22Z
+
+[Term]
+id: FBcv:0007524
+name: decreased anesthesia-resistant memory
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in the efficacy of anesthesia-resistant memory (GO:0007615) relative to controls. 'anesthesia-resistant memory' is defined as: 'The memory process that results in the formation of consolidated memory resistant to disruption of the patterned activity of the brain, without requiring protein synthesis.'" [FBC:CP, PMID:15143285, PMID:17088531]
+comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with anesthesia-resistant memory formation.
+is_a: FBcv:0007500 ! abnormal anesthesia-resistant memory
+is_a: FBcv:0007518 ! decreased memory
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T12:10:03Z
+
+[Term]
+id: FBcv:0007525
+name: increased medium-term memory
+namespace: phenotypic_class
+def: "Phenotype that is an increase in the efficacy of medium-term memory (GO:0072375) relative to controls. 'medium-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information received at a time ago that is intermediate between that of short and long term memory (30min - 7hrs in Drosophila melanogaster).'" [FBC:CP, GOC:sart, PMID:14659098, PMID:7923375]
+comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with medium-term memory formation.
+is_a: FBcv:0007502 ! abnormal medium-term memory
+is_a: FBcv:0007517 ! increased memory
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T12:11:31Z
+
+[Term]
+id: FBcv:0007526
+name: decreased medium-term memory
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in the efficacy of medium-term memory (GO:0072375) relative to controls. 'medium-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information received at a time ago that is intermediate between that of short and long term memory (30min - 7hrs in Drosophila melanogaster).'" [FBC:CP, GOC:sart, PMID:14659098, PMID:7923375]
+comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with medium-term memory formation.
+is_a: FBcv:0007502 ! abnormal medium-term memory
+is_a: FBcv:0007518 ! decreased memory
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2021-08-06T12:12:48Z
+
+[Term]
 id: FBdv:00000000
 name: Drosophila life
 namespace: FlyBase_development_CV
@@ -4324,9 +4417,9 @@ namespace: FlyBase_development_CV
 def: "The stage of the Drosophila life-cycle from fertilization to hatching." [FBC:DOS]
 comment: Temporal ordering number - 20.
 is_a: FBdv:00007012 ! life stage
-relationship: ends_at_start_of FBdv:00005336 ! larval stage
-relationship: ends_at_start_of FBdv:00005337 ! first instar larval stage
 relationship: immediately_preceded_by FBdv:00005287 ! unfertilized egg stage
+relationship: immediately_precedes FBdv:00005336 ! larval stage
+relationship: immediately_precedes FBdv:00005337 ! first instar larval stage
 
 [Term]
 id: FBdv:00005290
@@ -4684,11 +4777,11 @@ namespace: FlyBase_development_CV
 def: "The stage of the Drosophila life-cycle from hatching to the beginning of puparium formation." [FBC:DOS]
 comment: Temporal ordering number - 400.
 is_a: FBdv:00007012 ! life stage
-relationship: ends_at_start_of FBdv:00005342 ! prepupal stage
-relationship: ends_at_start_of FBdv:00007001 ! P-stage
 relationship: immediately_preceded_by FBdv:00005289 ! embryonic stage
 relationship: immediately_preceded_by FBdv:00005335 ! embryonic stage 17
 relationship: immediately_preceded_by FBdv:00007018 ! embryonic stage 17(iv)
+relationship: immediately_precedes FBdv:00005342 ! prepupal stage
+relationship: immediately_precedes FBdv:00007001 ! P-stage
 
 [Term]
 id: FBdv:00005337
@@ -4700,11 +4793,11 @@ synonym: "first instar larva" EXACT []
 synonym: "L1" EXACT []
 xref: UBERON:8000000
 is_a: FBdv:00007012 ! life stage
-relationship: ends_at_start_of FBdv:00005338 ! second instar larval stage
 relationship: immediately_preceded_by FBdv:00005289 ! embryonic stage
 relationship: immediately_preceded_by FBdv:00005333 ! late embryonic stage
 relationship: immediately_preceded_by FBdv:00005335 ! embryonic stage 17
 relationship: immediately_preceded_by FBdv:00007018 ! embryonic stage 17(iv)
+relationship: immediately_precedes FBdv:00005338 ! second instar larval stage
 relationship: substage_of FBdv:00005336 ! larval stage
 
 [Term]
@@ -4717,8 +4810,8 @@ synonym: "L2" EXACT []
 synonym: "second instar larva" EXACT []
 xref: UBERON:8000001
 is_a: FBdv:00007012 ! life stage
-relationship: ends_at_start_of FBdv:00005339 ! third instar larval stage
 relationship: immediately_preceded_by FBdv:00005337 ! first instar larval stage
+relationship: immediately_precedes FBdv:00005339 ! third instar larval stage
 relationship: substage_of FBdv:00005336 ! larval stage
 
 [Term]
@@ -4731,9 +4824,9 @@ synonym: "L3" EXACT []
 synonym: "third instar larva" RELATED []
 xref: UBERON:8000002
 is_a: FBdv:00007012 ! life stage
-relationship: ends_at_start_of FBdv:00005342 ! prepupal stage
-relationship: ends_at_start_of FBdv:00007001 ! P-stage
 relationship: immediately_preceded_by FBdv:00005338 ! second instar larval stage
+relationship: immediately_precedes FBdv:00005342 ! prepupal stage
+relationship: immediately_precedes FBdv:00007001 ! P-stage
 relationship: substage_of FBdv:00005336 ! larval stage
 
 [Term]
@@ -4769,11 +4862,11 @@ namespace: FlyBase_development_CV
 def: "The prepupal stage begins at puparium formation and ends when larval/pupal apolysis is complete, as indicated by the completion of imaginal head sac eversion and the expulsion of the oral armature of the larva. Duration at 25 degrees C: approximately 12 hours. (120-132.2 hours after egg laying; 0-12.2 hours after puparium formation)." [FlyBase:FBrf0036849, FlyBase:FBrf0048355]
 comment: Temporal ordering number - 500.
 is_a: FBdv:00007012 ! life stage
-relationship: ends_at_start_of FBdv:00005349 ! pupal stage
 relationship: immediately_preceded_by FBdv:00005336 ! larval stage
 relationship: immediately_preceded_by FBdv:00005339 ! third instar larval stage
 relationship: immediately_preceded_by FBdv:00007005 ! third instar larval stage L2
 relationship: immediately_preceded_by FBdv:00007007 ! late third instar larval stage
+relationship: immediately_precedes FBdv:00005349 ! pupal stage
 relationship: substage_of FBdv:00007001 ! P-stage
 
 [Term]
@@ -4862,8 +4955,8 @@ def: "The pupal stage starts once larval/pupal apolysis is complete as indicated
 comment: Temporal ordering number - 570. DISAMBIGUATION: In Drosophila lab vernacular, the term 'pupal stage' is often used to refer to the entire period from formation of the puparium to eclosion. However, this does not correspond to the standard usage of 'pupal stage' for Cyclorrhaphous flies (for discussion see: FBrf0087128). Briefly: formation of the puparium (hardening of the larval cuticle) marks the beginning of the pre-pupal stage. The pupal stage begins following pupal/larval apolysis - detachment of the larval epidermis from the puparium. In Drosophila, the outward sign of the completion of apolysis is the eversion of the head and expulsion of the larval mouthparts (FBrf0036849). We use P-stage to refer to the stage from pupariation to eclosion, and restrict pupal stage to its standard usage.
 synonym: "phanerocephalic pupa" EXACT [FlyBase:FBrf0036849]
 is_a: FBdv:00007012 ! life stage
-relationship: ends_at_start_of FBdv:00006011 ! pharate adult stage
 relationship: immediately_preceded_by FBdv:00005342 ! prepupal stage
+relationship: immediately_precedes FBdv:00006011 ! pharate adult stage
 relationship: substage_of FBdv:00007001 ! P-stage
 
 [Term]
@@ -5114,10 +5207,10 @@ def: "Newly eclosed adult stage. Animal free of pupal case. Runs rapidly to find
 comment: Temporal ordering number - 785. The time at which eclosed flies settle down for wing expansion can vary greatly. If they fail to find a suitable site then expansion can be delayed by several hours.
 synonym: "adult stage I" RELATED []
 is_a: FBdv:00005259 ! developmental stage
-relationship: ends_at_start_of FBdv:00005371 ! adult stage A2
 relationship: immediately_preceded_by FBdv:00005368 ! pharate adult stage P15(ii)
 relationship: immediately_preceded_by FBdv:00006011 ! pharate adult stage
 relationship: immediately_preceded_by FBdv:00007001 ! P-stage
+relationship: immediately_precedes FBdv:00005371 ! adult stage A2
 relationship: substage_of FBdv:00007025 ! immature adult stage
 
 [Term]
@@ -5129,8 +5222,8 @@ def: "Stage, shortly after eclosion, during which the wings expand. During wing 
 comment: Temporal ordering number - 790.
 synonym: "adult stage II" RELATED []
 is_a: FBdv:00005259 ! developmental stage
-relationship: ends_at_start_of FBdv:00006012 ! adult stage A3
 relationship: immediately_preceded_by FBdv:00005370 ! adult stage A1
+relationship: immediately_precedes FBdv:00006012 ! adult stage A3
 relationship: substage_of FBdv:00007025 ! immature adult stage
 
 [Term]
@@ -5140,11 +5233,11 @@ namespace: FlyBase_development_CV
 def: "The developing adult after pupal-adult apolysis, i.e.- from stage P8 (when yellow eye color first becomes visible through the pupal case), to eclosion. Duration at 25 degrees C: approximately 55.7 hours (164.3-220 hours after egg laying; 44.3-100 hours after puparium formation)." [FlyBase:FBrf0036849, FlyBase:FBrf0048355, FlyBase:FBrf0049147]
 comment: Temporal ordering number - 625.
 is_a: FBdv:00007012 ! life stage
-relationship: ends_at_start_of FBdv:00005369 ! adult stage
-relationship: ends_at_start_of FBdv:00005370 ! adult stage A1
-relationship: ends_at_start_of FBdv:00007025 ! immature adult stage
 relationship: immediately_preceded_by FBdv:00005349 ! pupal stage
 relationship: immediately_preceded_by FBdv:00005354 ! pupal stage P7
+relationship: immediately_precedes FBdv:00005369 ! adult stage
+relationship: immediately_precedes FBdv:00005370 ! adult stage A1
+relationship: immediately_precedes FBdv:00007025 ! immature adult stage
 relationship: substage_of FBdv:00007001 ! P-stage
 
 [Term]
@@ -5156,8 +5249,8 @@ def: "Adult stage immediately after wing expansion, during which tanning of the 
 comment: Temporal ordering number - 800.
 synonym: "adult stage III" RELATED []
 is_a: FBdv:00005259 ! developmental stage
-relationship: ends_at_start_of FBdv:00007026 ! mature adult stage
 relationship: immediately_preceded_by FBdv:00005371 ! adult stage A2
+relationship: immediately_precedes FBdv:00007026 ! mature adult stage
 relationship: substage_of FBdv:00007025 ! immature adult stage
 
 [Term]
@@ -5169,13 +5262,13 @@ comment: Temporal ordering number - 490. DISAMBIGUATION: In Drosophila lab verna
 synonym: "metamorphosis" BROAD []
 synonym: "pupal stage" RELATED []
 is_a: FBdv:00007012 ! life stage
-relationship: ends_at_start_of FBdv:00005369 ! adult stage
-relationship: ends_at_start_of FBdv:00005370 ! adult stage A1
-relationship: ends_at_start_of FBdv:00007025 ! immature adult stage
 relationship: immediately_preceded_by FBdv:00005336 ! larval stage
 relationship: immediately_preceded_by FBdv:00005339 ! third instar larval stage
 relationship: immediately_preceded_by FBdv:00007005 ! third instar larval stage L2
 relationship: immediately_preceded_by FBdv:00007007 ! late third instar larval stage
+relationship: immediately_precedes FBdv:00005369 ! adult stage
+relationship: immediately_precedes FBdv:00005370 ! adult stage A1
+relationship: immediately_precedes FBdv:00007025 ! immature adult stage
 created_by: david
 creation_date: 2008-06-05T04:51:40Z
 
@@ -5354,9 +5447,9 @@ namespace: FlyBase_development_CV
 def: "The developmental stage that lasts from eclosion of the adult from the pupal case until tanning is complete (the end of adult stage A3)." [FBC:DOS]
 comment: Temporal ordering number - 782.
 is_a: FBdv:00007012 ! life stage
-relationship: ends_at_start_of FBdv:00007026 ! mature adult stage
 relationship: immediately_preceded_by FBdv:00006011 ! pharate adult stage
 relationship: immediately_preceded_by FBdv:00007001 ! P-stage
+relationship: immediately_precedes FBdv:00007026 ! mature adult stage
 relationship: substage_of FBdv:00007075 ! day 0 of adulthood
 created_by: djs93
 creation_date: 2013-01-08T20:06:59Z
@@ -5472,6 +5565,41 @@ intersection_of: regulates GO:0016049 ! cell growth
 relationship: regulates GO:0016049 ! cell growth
 
 [Term]
+id: GO:0001667
+name: ameboidal-type cell migration
+namespace: biological_process
+def: "Cell migration that is accomplished by extension and retraction of a pseudopodium." [GOC:dph]
+comment: Note that this term refers to a mode of migration rather than to any particular cell type.
+synonym: "ameboid cell migration" EXACT []
+synonym: "amoeboid cell migration" EXACT []
+synonym: "amoeboidal cell migration" EXACT []
+is_a: GO:0016477 ! cell migration
+
+[Term]
+id: GO:0001704
+name: formation of primary germ layer
+is_a: GO:0048646 ! anatomical structure formation involved in morphogenesis
+relationship: part_of GO:0007369 ! gastrulation
+
+[Term]
+id: GO:0001705
+name: ectoderm formation
+is_a: GO:0001704 ! formation of primary germ layer
+relationship: part_of GO:0007398 ! ectoderm development
+
+[Term]
+id: GO:0001706
+name: endoderm formation
+is_a: GO:0001704 ! formation of primary germ layer
+relationship: part_of GO:0007492 ! endoderm development
+
+[Term]
+id: GO:0001707
+name: mesoderm formation
+is_a: GO:0001704 ! formation of primary germ layer
+relationship: part_of GO:0048332 ! mesoderm morphogenesis
+
+[Term]
 id: GO:0001736
 name: establishment of planar polarity
 namespace: biological_process
@@ -5487,6 +5615,18 @@ namespace: biological_process
 def: "The morphogenetic process in which the anatomical structures of a polarized epithelium are generated and organized. A polarized epithelium is an epithelium where the epithelial sheet is oriented with respect to the planar axis." [GOC:dph]
 synonym: "epithelial polarization" EXACT [GOC:dph]
 is_a: GO:0002009 ! morphogenesis of an epithelium
+
+[Term]
+id: GO:0001838
+name: embryonic epithelial tube formation
+is_a: GO:0072175 ! epithelial tube formation
+relationship: part_of GO:0016331 ! morphogenesis of embryonic epithelium
+
+[Term]
+id: GO:0001841
+name: neural tube formation
+is_a: GO:0001838 ! embryonic epithelial tube formation
+relationship: part_of GO:0021915 ! neural tube development
 
 [Term]
 id: GO:0002009
@@ -5583,7 +5723,6 @@ name: cellular_component
 namespace: cellular_component
 alt_id: GO:0008372
 def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao1337158144]
-def: "The part of a cell or its extracellular environment in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together." [GOC:go_curators]
 comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. Note that when this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code ND, no data, is used to indicate this.
 comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_aspergillus
@@ -5645,7 +5784,7 @@ xref: NIF_Subcellular:sao1702920020
 xref: Wikipedia:Cell_nucleus
 is_a: CARO:0000014 ! cell part
 is_a: GO:0043231 ! intracellular membrane-bounded organelle
-is_a: GO:0044464 ! cell part
+is_a: GO:0044464 ! obsolete cell part
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 
 [Term]
@@ -5666,7 +5805,6 @@ relationship: part_of GO:0012505 ! endomembrane system
 id: GO:0005737
 name: cytoplasm
 namespace: cellular_component
-def: "All of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures." [ISBN:0198547684]
 def: "The contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures." [ISBN:0198547684]
 subset: goslim_candida
 subset: goslim_chembl
@@ -6020,6 +6158,14 @@ intersection_of: regulates GO:0000278 ! mitotic cell cycle
 relationship: regulates GO:0000278 ! mitotic cell cycle
 
 [Term]
+id: GO:0007369
+name: gastrulation
+is_a: GO:0048598 ! embryonic morphogenesis
+relationship: has_part GO:0001705 ! ectoderm formation
+relationship: has_part GO:0001706 ! endoderm formation
+relationship: has_part GO:0001707 ! mesoderm formation
+
+[Term]
 id: GO:0007389
 name: pattern specification process
 namespace: biological_process
@@ -6029,6 +6175,26 @@ synonym: "pattern biosynthesis" RELATED []
 synonym: "pattern formation" RELATED []
 is_a: GO:0032501 ! multicellular organismal process
 relationship: part_of GO:0007275 ! multicellular organism development
+
+[Term]
+id: GO:0007398
+name: ectoderm development
+is_a: GO:0009888 ! tissue development
+
+[Term]
+id: GO:0007399
+name: nervous system development
+is_a: GO:0048731 ! system development
+
+[Term]
+id: GO:0007492
+name: endoderm development
+is_a: GO:0009888 ! tissue development
+
+[Term]
+id: GO:0007498
+name: mesoderm development
+is_a: GO:0009888 ! tissue development
 
 [Term]
 id: GO:0007530
@@ -6390,7 +6556,6 @@ alt_id: GO:0000004
 alt_id: GO:0007582
 alt_id: GO:0044699
 def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
-def: "Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end." []
 comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. Note that when this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code ND, no data, is used to indicate this.
 comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_aspergillus
@@ -6647,6 +6812,17 @@ xref: Wikipedia:Embryogenesis
 is_a: GO:0007275 ! multicellular organism development
 
 [Term]
+id: GO:0009791
+name: post-embryonic development
+is_a: GO:0032501 ! multicellular organismal process
+relationship: part_of GO:0007275 ! multicellular organism development
+
+[Term]
+id: GO:0009792
+name: embryo development ending in birth or egg hatching
+is_a: GO:0009790 ! embryo development
+
+[Term]
 id: GO:0009798
 name: axis specification
 namespace: biological_process
@@ -6825,6 +7001,12 @@ is_a: GO:0016772 ! transferase activity, transferring phosphorus-containing grou
 property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
 
 [Term]
+id: GO:0016331
+name: morphogenesis of embryonic epithelium
+is_a: GO:0002009 ! morphogenesis of an epithelium
+is_a: GO:0048598 ! embryonic morphogenesis
+
+[Term]
 id: GO:0016477
 name: cell migration
 namespace: biological_process
@@ -6930,6 +7112,14 @@ comment: Sexual reproduction may be seen as the regular alternation, in the life
 xref: Wikipedia:Sexual_reproduction
 is_a: GO:0000003 ! reproduction
 is_a: GO:0044703 ! multi-organism reproductive process
+
+[Term]
+id: GO:0021915
+name: neural tube development
+is_a: GO:0035295 ! tube development
+is_a: GO:0060429 ! epithelium development
+relationship: part_of GO:0007399 ! nervous system development
+relationship: part_of GO:0043009 ! chordate embryonic development
 
 [Term]
 id: GO:0022402
@@ -7319,6 +7509,7 @@ namespace: biological_process
 alt_id: GO:0044707
 alt_id: GO:0050874
 def: "Any biological process, occurring at the level of a multicellular organism, pertinent to its function." [GOC:curators, GOC:dph, GOC:isa_complete, GOC:tb]
+subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "organismal physiological process" EXACT []
 synonym: "single-multicellular organism process" RELATED []
@@ -7406,6 +7597,12 @@ is_a: GO:0006807 ! nitrogen compound metabolic process
 is_a: GO:0044237 ! cellular metabolic process
 
 [Term]
+id: GO:0035148
+name: tube formation
+is_a: GO:0048646 ! anatomical structure formation involved in morphogenesis
+relationship: part_of GO:0035239 ! tube morphogenesis
+
+[Term]
 id: GO:0035187
 name: hatching behavior
 namespace: biological_process
@@ -7421,6 +7618,22 @@ name: hatching
 namespace: biological_process
 def: "The emergence of an immature organism from a protective structure." [GOC:dgh, GOC:isa_complete, ISBN:0198612001]
 is_a: GO:0071684 ! organism emergence from protective structure
+relationship: part_of GO:0007275 ! multicellular organism development
+
+[Term]
+id: GO:0035239
+name: tube morphogenesis
+namespace: biological_process
+def: "The process in which the anatomical structures of a tube are generated and organized. Epithelial and endothelial tubes transport gases, liquids and cells from one site to another and form the basic structure of many organs and tissues, with tube shape and organization varying from the single-celled excretory organ in Caenorhabditis elegans to the branching trees of the mammalian kidney and insect tracheal system." [GOC:bf, PMID:14624839]
+is_a: GO:0009653 ! anatomical structure morphogenesis
+relationship: part_of GO:0035295 ! tube development
+
+[Term]
+id: GO:0035295
+name: tube development
+namespace: biological_process
+def: "The process whose specific outcome is the progression of a tube over time, from its initial formation to a mature structure. Epithelial and endothelial tubes transport gases, liquids and cells from one site to another and form the basic structure of many organs and tissues including lung and trachea, kidney, the mammary gland, the vascular system and the gastrointestinal and urinary-genital tracts." [PMID:12526790]
+is_a: GO:0048856 ! anatomical structure development
 relationship: part_of GO:0007275 ! multicellular organism development
 
 [Term]
@@ -7498,6 +7711,12 @@ intersection_of: negatively_regulates GO:0040011 ! locomotion
 relationship: negatively_regulates GO:0040011 ! locomotion
 
 [Term]
+id: GO:0040016
+name: embryonic cleavage
+is_a: GO:0051301 ! cell division
+relationship: part_of GO:0009790 ! embryo development
+
+[Term]
 id: GO:0040017
 name: positive regulation of locomotion
 namespace: biological_process
@@ -7534,6 +7753,14 @@ def: "The series of events that restore integrity to a damaged tissue, following
 xref: Wikipedia:Wound_healing
 is_a: GO:0009611 ! response to wounding
 relationship: has_part GO:0042246 ! tissue regeneration
+
+[Term]
+id: GO:0042074
+name: cell migration involved in gastrulation
+is_a: GO:0001667 ! ameboidal-type cell migration
+intersection_of: GO:0016477 ! cell migration
+intersection_of: part_of GO:0007369 ! gastrulation
+relationship: part_of GO:0007369 ! gastrulation
 
 [Term]
 id: GO:0042221
@@ -7648,6 +7875,11 @@ is_a: GO:0048519 ! negative regulation of biological process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0007623 ! circadian rhythm
 relationship: negatively_regulates GO:0007623 ! circadian rhythm
+
+[Term]
+id: GO:0043009
+name: chordate embryonic development
+is_a: GO:0009792 ! embryo development ending in birth or egg hatching
 
 [Term]
 id: GO:0043052
@@ -7771,9 +8003,8 @@ is_a: GO:0044237 ! cellular metabolic process
 
 [Term]
 id: GO:0044464
-name: cell part
+name: obsolete cell part
 is_a: CARO:0000014 ! cell part
-property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 
 [Term]
 id: GO:0044703
@@ -7919,6 +8150,12 @@ def: "The creation of two or more organelles by division of one organelle." [GOC
 subset: goslim_pir
 subset: goslim_yeast
 is_a: GO:0006996 ! organelle organization
+
+[Term]
+id: GO:0048332
+name: mesoderm morphogenesis
+is_a: GO:0048729 ! tissue morphogenesis
+relationship: part_of GO:0007498 ! mesoderm development
 
 [Term]
 id: GO:0048511
@@ -8071,6 +8308,12 @@ is_a: GO:0032502 ! developmental process
 is_a: GO:0040007 ! growth
 
 [Term]
+id: GO:0048598
+name: embryonic morphogenesis
+is_a: GO:0009653 ! anatomical structure morphogenesis
+relationship: part_of GO:0009790 ! embryo development
+
+[Term]
 id: GO:0048609
 name: multicellular organismal reproductive process
 namespace: biological_process
@@ -8090,6 +8333,18 @@ is_a: GO:0050793 ! regulation of developmental process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0048589 ! developmental growth
 relationship: regulates GO:0048589 ! developmental growth
+
+[Term]
+id: GO:0048646
+name: anatomical structure formation involved in morphogenesis
+namespace: biological_process
+def: "The developmental process pertaining to the initial formation of an anatomical structure from unspecified parts. This process begins with the specific processes that contribute to the appearance of the discrete structure and ends when the structural rudiment is recognizable. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome." [GOC:dph, GOC:jid, GOC:tb]
+comment: Note that, for example, the formation of a pseudopod in an amoeba would not be considered formation involved in morphogenesis because it would not be thought of as the formation of an anatomical structure that was part of the shaping of the amoeba during its development. The formation of an axon from a neuron would be considered the formation of an anatomical structure involved in morphogenesis because it contributes to the creation of the form of the neuron in a developmental sense.
+subset: goslim_chembl
+subset: goslim_generic
+synonym: "formation of an anatomical structure involved in morphogenesis" EXACT [GOC:dph, GOC:tb]
+is_a: GO:0032502 ! developmental process
+relationship: part_of GO:0009653 ! anatomical structure morphogenesis
 
 [Term]
 id: GO:0048729
@@ -8719,6 +8974,12 @@ created_by: dph
 creation_date: 2009-04-28T08:42:53Z
 
 [Term]
+id: GO:0060562
+name: epithelial tube morphogenesis
+is_a: GO:0002009 ! morphogenesis of an epithelium
+is_a: GO:0035239 ! tube morphogenesis
+
+[Term]
 id: GO:0061024
 name: membrane organization
 namespace: biological_process
@@ -8818,6 +9079,12 @@ subset: goslim_flybase_ribbon
 is_a: GO:0110165 ! cellular anatomical entity
 created_by: mah
 creation_date: 2010-10-04T01:51:47Z
+
+[Term]
+id: GO:0072175
+name: epithelial tube formation
+is_a: GO:0035148 ! tube formation
+relationship: part_of GO:0060562 ! epithelial tube morphogenesis
 
 [Term]
 id: GO:0072375
@@ -9491,6 +9758,21 @@ property_value: http://purl.org/dc/elements/1.1/date 2011-04-05T09:53:10Z xsd:st
 created_by: George Gkoutos
 
 [Term]
+id: NBO:0000316
+name: auditory behavior
+namespace: behavior_ontology
+def: "\"Behavior related to the actions or reactions of an organism in response to a sound.\" [GO:0031223]" []
+synonym: "hearing behaviour" EXACT []
+xref: GO:0031223
+is_a: NBO:0000308 ! sensation behavior
+intersection_of: NBO:0000308 ! sensation behavior
+intersection_of: in_response_to GO:0007605 ! sensory perception of sound
+relationship: by_means UBERON:0002105 ! vestibulo-auditory system
+relationship: in_response_to GO:0007605 ! sensory perception of sound
+property_value: http://purl.org/dc/elements/1.1/date 2011-04-05T10:38:17Z xsd:string
+created_by: George Gkoutos
+
+[Term]
 id: NBO:0000317
 name: vestibular behavior
 namespace: behavior_ontology
@@ -9508,6 +9790,25 @@ def: "\"Behavior related to the sensations arising from the skin and from the mu
 comment: Sensations arising from the internal organs (the viscera), such as pain or the sense of fullness of the stomach or bladder, may therefore be included, although they are usually considered separately as visceral sensations. Pain arising from the viscera is often felt as though it comes from some part of the body surface or underlying tissue.
 is_a: NBO:0000751 ! perception behavior by means
 property_value: http://purl.org/dc/elements/1.1/date 2011-04-05T11:01:08Z xsd:string
+created_by: George Gkoutos
+
+[Term]
+id: NBO:0000330
+name: cutaneous sensation behavior
+namespace: behavior_ontology
+is_a: NBO:0000327 ! somatic sensation related behavior
+property_value: http://purl.org/dc/elements/1.1/date 2011-04-05T11:11:48Z xsd:string
+created_by: George Gkoutos
+
+[Term]
+id: NBO:0000332
+name: touch related behavior
+namespace: behavior_ontology
+is_a: NBO:0000330 ! cutaneous sensation behavior
+intersection_of: NBO:0000330 ! cutaneous sensation behavior
+intersection_of: in_response_to GO:0050975 ! sensory perception of touch
+relationship: in_response_to GO:0050975 ! sensory perception of touch
+property_value: http://purl.org/dc/elements/1.1/date 2011-04-05T11:36:23Z xsd:string
 created_by: George Gkoutos
 
 [Term]
@@ -9570,6 +9871,7 @@ name: root
 namespace: ncbi_taxonomy
 synonym: "all" RELATED synonym []
 xref: GC_ID:1
+is_a: BFO:0000040 ! material entity
 
 [Term]
 id: NCBITaxon:10239
@@ -9593,18 +9895,88 @@ is_a: CARO:0010004 ! cellular organism
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
+id: NCBITaxon:2
+name: Bacteria
+is_a: CARO:0010004 ! cellular organism
+is_a: NCBITaxon:131567 ! cellular organisms
+is_a: OBI:0100026 ! organism
+
+[Term]
+id: NCBITaxon:2157
+name: Archaea
+is_a: OBI:0100026 ! organism
+
+[Term]
+id: NCBITaxon:2759
+name: Eukaryota
+namespace: ncbi_taxonomy
+synonym: "Eucarya" RELATED synonym []
+synonym: "Eucaryotae" RELATED synonym []
+synonym: "eucaryotes" EXACT genbank_common_name []
+synonym: "euk-" RELATED PRO-short-label [PRO:DAN]
+synonym: "Eukarya" RELATED synonym []
+synonym: "Eukaryotae" RELATED synonym []
+synonym: "eukaryotes" EXACT common_name []
+synonym: "eukaryotes" RELATED blast_name []
+xref: GC_ID:1
+xref: PMID:23020233
+xref: PMID:30257078
+is_a: CARO:0010004 ! cellular organism
+is_a: NCBITaxon:131567 ! cellular organisms
+is_a: OBI:0100026 ! organism
+relationship: in_taxon NCBITaxon:2759 ! Eukaryota
+property_value: has_rank NCBITaxon:superkingdom
+
+[Term]
+id: NCBITaxon:33154
+name: Opisthokonta
+namespace: ncbi_taxonomy
+synonym: "Fungi/Metazoa group" RELATED synonym []
+synonym: "opisthokonts" RELATED synonym []
+xref: GC_ID:1
+is_a: NCBITaxon:2759 ! Eukaryota
+relationship: in_taxon NCBITaxon:33154 ! Opisthokonta
+property_value: has_rank NCBITaxon:clade
+
+[Term]
+id: NCBITaxon:33208
+name: Metazoa
+namespace: ncbi_taxonomy
+synonym: "Animalia" RELATED synonym []
+synonym: "animals" RELATED blast_name []
+synonym: "metazoan-" RELATED PRO-short-label [PRO:DAN]
+synonym: "metazoans" EXACT genbank_common_name []
+synonym: "multicellular animals" EXACT common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:33154 ! Opisthokonta
+relationship: in_taxon NCBITaxon:33208 ! Metazoa
+property_value: has_rank NCBITaxon:kingdom
+
+[Term]
+id: NCBITaxon:6072
+name: Eumetazoa
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:33208 ! Metazoa
+relationship: in_taxon NCBITaxon:6072 ! Eumetazoa
+property_value: has_rank NCBITaxon:clade
+
+[Term]
 id: OBI:0100026
 name: organism
 namespace: obi
 comment: Category=external.
 is_a: BFO:0000030 ! object
+union_of: NCBITaxon:10239 ! Viruses
+union_of: NCBITaxon:2 ! Bacteria
+union_of: NCBITaxon:2157 ! Archaea
+union_of: NCBITaxon:2759 ! Eukaryota
 
 [Term]
 id: PATO:0000001
 name: quality
 namespace: quality
 alt_id: PATO:0000072
-def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
 def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities." [PATOC:GVG]
 synonym: "trait" EXACT []
 is_a: BFO:0000020 ! specifically dependent continuant
@@ -9629,7 +10001,6 @@ name: morphology
 namespace: quality
 def: "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure." [PATOC:GVG]
 subset: attribute_slim
-is_a: BFO:0000019 ! quality
 is_a: PATO:0001241 ! physical object quality
 
 [Term]
@@ -10136,6 +10507,7 @@ synonym: "quality of a single physical entity" EXACT []
 synonym: "quality of an object" EXACT []
 synonym: "quality of continuant" EXACT []
 xref: snap:Quality
+is_a: BFO:0000019 ! quality
 is_a: PATO:0000001 ! quality
 property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
 
@@ -10836,6 +11208,41 @@ name: disconnected
 is_a: PATO:0000141 ! structure
 
 [Term]
+id: PATO:0015002
+name: process efficacy
+namespace: quality
+def: "The ability of a process to produce its output." [PATOC:PortlandMeetingFeb2015]
+subset: attribute_slim
+is_a: PATO:0001236 ! process quality
+created_by: cjm
+
+[Term]
+id: PATO:0015003
+name: decreased efficacy
+namespace: quality
+def: "A decrease in the ability of a process to produce its output." [PATOC:PortlandMeetingFeb2015]
+subset: value_slim
+is_a: PATO:0002302 ! decreased process quality
+is_a: PATO:0015002 ! process efficacy
+intersection_of: PATO:0015002 ! process efficacy
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0015004
+created_by: cjm
+
+[Term]
+id: PATO:0015004
+name: increased efficacy
+namespace: quality
+def: "A increase in the ability of a process to produce its output." [PATOC:PortlandMeetingFeb2015]
+subset: value_slim
+is_a: PATO:0002304 ! increased process quality
+is_a: PATO:0015002 ! process efficacy
+intersection_of: PATO:0015002 ! process efficacy
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0015003
+created_by: cjm
+
+[Term]
 id: PCO:0000000
 name: collection of organisms
 def: "A material entity that consists of two or more organisms, viruses, or viroids." []
@@ -10912,7 +11319,124 @@ name: processual entity
 namespace: uberon
 def: "An occurrent [span:Occurrent] that exists in time by occurring or happening, has temporal parts and always involves and depends on some entity." [span:ProcessualEntity]
 subset: upper_level
+is_a: BFO:0000003 ! occurrent
 disjoint_from: UBERON:0001062 ! anatomical entity
+
+[Term]
+id: UBERON:0000010
+name: peripheral nervous system
+namespace: uberon
+def: "A major division of the nervous system that contains nerves which connect the central nervous system (CNS) with sensory organs, other organs, muscles, blood vessels and glands." [GO:0007422]
+subset: cumbo
+subset: efo_slim
+subset: pheno_slim
+subset: uberon_slim
+subset: vertebrate_core
+synonym: "pars peripherica" EXACT LATIN [FMA:9903, FMA:TA, http://en.wikipedia.org/wiki/Peripheral_nervous_system]
+synonym: "PNS" BROAD ABBREVIATION []
+synonym: "systema nervosum periphericum" EXACT LATIN [FMA:9903, FMA:TA, http://en.wikipedia.org/wiki/Peripheral_nervous_system]
+xref: AAO:0000429
+xref: BAMS:PNS
+xref: BILA:0000081
+xref: BIRNLEX:1111
+xref: BTO:0001028
+xref: CALOHA:TS-0808
+xref: EFO:0000891
+xref: EHDAA2:0001445
+xref: EHDAA:2893
+xref: EMAPA:16665
+xref: EV:0100335
+xref: FBbt:00005098
+xref: FMA:9903
+xref: GAID:715
+xref: http://braininfo.rprc.washington.edu/centraldirectory.aspx?ID=3232
+xref: http://en.wikipedia.org/wiki/Peripheral_nervous_system
+xref: http://linkedlifedata.com/resource/umls/id/C0206417
+xref: http://linkedlifedata.com/resource/umls/id/C1305921
+xref: http://www.snomedbrowser.com/Codes/Details/362292005
+xref: MA:0000218
+xref: MAT:0000338
+xref: MESH:D017933
+xref: MIAA:0000338
+xref: NCIT:C12465
+xref: TAO:0000142
+xref: UMLS:C0206417 {source="ncithesaurus:Peripheral_Nervous_System"}
+xref: UMLS:C0206417 {source="BIRNLEX:1111"}
+xref: UMLS:C1305921 {source="BIRNLEX:1111"}
+xref: VHOG:0000399
+xref: XAO:0000178
+xref: ZFA:0000142
+is_a: CARO:0000000 ! anatomical entity
+is_a: UBERON:0011216 {source="cjm"} ! organ system subdivision
+relationship: part_of UBERON:0001016 ! nervous system
+property_value: depicted:by http://upload.wikimedia.org/wikipedia/commons/b/ba/Nervous_system_diagram.png xsd:anyURI
+property_value: UBPROP:0000001 "Nervous structures including ganglia outside of the central nervous system. Kimmel et al, 1995.[TAO]" xsd:string {date_retrieved="2012-08-14", external_class="TAO:0000142", ontology="TAO", source="ZFIN:curator"}
+property_value: UBPROP:0000001 "Part of nervous system in which nerves extend throughout the body outside of the brain and spinal cord.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000429", ontology="AAO", source="AAO:BJB"}
+property_value: UBPROP:0000001 "The peripheral nervous system (PNS) is the part of the nervous system connected to the CNS which contains cranial nerves III - XII, spinal, peripheral and autonomic nerves. (CUMBO)" xsd:string {source="Cumbo:terms"}
+property_value: UBPROP:0000003 "(...) specific vertebrate traits within the chordate phylum such as skeletal tissues, PNS, and spectacular head and brain development, are linked to the NC (neural crest) and its derivatives.[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000399", ontology="VHOG", source="http://bgee.unil.ch/", source="DOI:10.1007/978-0-387-46954-6_6 Dupin E, Creuzet S, Le Douarin NM, The contribution of the neural crest to the vertebrate body. Advances in experimental medicine and biology (2006)"}
+
+[Term]
+id: UBERON:0000061
+name: anatomical structure
+namespace: uberon
+def: "Material anatomical entity that is a single connected structure with inherent 3D shape generated by coordinated expression of the organism's own genome." [CARO:0000003]
+subset: upper_level
+synonym: "biological structure" EXACT []
+synonym: "connected biological structure" EXACT [CARO:0000003]
+xref: AAO:0010825
+xref: AEO:0000003
+xref: BILA:0000003
+xref: CARO:0000003
+xref: EHDAA2:0003003
+xref: EMAPA:0
+xref: FBbt:00007001
+xref: FMA:305751
+xref: FMA:67135
+xref: GAID:781
+xref: HAO:0000003
+xref: http://dbpedia.org/ontology/AnatomicalStructure
+xref: http://www.snomedbrowser.com/Codes/Details/362889002
+xref: MA:0003000
+xref: MESH:D000825
+xref: TAO:0000037
+xref: TGMA:0001823
+xref: VHOG:0001759
+xref: XAO:0003000
+xref: ZFA:0000037
+is_a: UBERON:0000465 ! material anatomical entity
+relationship: existence_ends_during_or_before UBERON:0000071 ! death stage
+relationship: existence_starts_during_or_after UBERON:0000106 ! zygote stage
+
+[Term]
+id: UBERON:0000062
+name: organ
+namespace: uberon
+def: "Anatomical structure that performs a specific function or group of functions [WP]." [http://en.wikipedia.org/wiki/Organ_(anatomy)]
+subset: upper_level
+synonym: "anatomical unit" RELATED []
+synonym: "body organ" RELATED []
+synonym: "element" RELATED [http://orcid.org/0000-0002-6601-2165]
+xref: BIRNLEX:4
+xref: CARO:0020004
+xref: EFO:0000634
+xref: EMAPA:35949
+xref: ENVO:01000162
+xref: FMA:67498
+xref: http://linkedlifedata.com/resource/umls/id/C0178784
+xref: http://www.snomedbrowser.com/Codes/Details/272625005
+xref: MA:0003001
+xref: NCIT:C13018
+xref: OpenCyc:Mx4rv5XMb5wpEbGdrcN5Y29ycA
+xref: OpenCyc:Mx4rwP3iWpwpEbGdrcN5Y29ycA
+xref: Organ:(anatomy)
+xref: UMLS:C0178784 {source="ncithesaurus:Organ"}
+xref: WBbt:0003760
+is_a: UBERON:0010000 ! multicellular anatomical structure
+relationship: existence_starts_during_or_after UBERON:0000111 ! organogenesis stage
+relationship: has_boundary UBERON:0006984 ! anatomical surface
+relationship: part_of UBERON:0000467 ! anatomical system
+property_value: UBPROP:0000001 "Organs are commonly observed as visibly distinct structures, but may also exist as loosely associated clusters of cells that work together to perform a specific function or functions." xsd:string {source="GO:0048513"}
+property_value: UBPROP:0000012 "CARO v1 does not include a generic 'organ' class, only simple and compound organ. CARO v2 may include organ, see https://github.com/obophenotype/caro/issues/4" xsd:string
 
 [Term]
 id: UBERON:0000066
@@ -10929,7 +11453,6 @@ xref: EFO:0001272
 xref: FBdv:00005369
 xref: WBls:0000041
 xref: XtroDO:0000084
-is_a: BFO:0000003 ! occurrent
 is_a: UBERON:0000105 ! life cycle stage
 relationship: part_of UBERON:0000092 ! post-embryonic stage
 relationship: preceded_by UBERON:0000111 ! organogenesis stage
@@ -10952,15 +11475,17 @@ xref: http://www.snomedbrowser.com/Codes/Details/296280003
 xref: MmusDv:0000002
 xref: OGES:000000
 xref: OGES:000022
+xref: SCTID:296280003
 xref: WBls:0000003
 xref: WBls:0000092
 xref: WBls:0000102
 xref: XAO:1000012
-is_a: BFO:0000003 ! occurrent
 is_a: UBERON:0000105 ! life cycle stage
 disjoint_from: UBERON:0000092 ! post-embryonic stage
+relationship: part_of GO:0009790 ! embryo development
 relationship: precedes UBERON:0000066 ! fully formed stage
 relationship: precedes UBERON:0000092 ! post-embryonic stage
+relationship: simultaneous_with GO:0009790 ! embryo development
 
 [Term]
 id: UBERON:0000071
@@ -10989,9 +11514,10 @@ xref: OGES:000024
 xref: WBls:0000022
 xref: WBls:0000093
 xref: WBls:0000103
-is_a: BFO:0000003 ! occurrent
 is_a: UBERON:0000105 ! life cycle stage
+relationship: part_of GO:0009791 ! post-embryonic development
 relationship: preceded_by UBERON:0000068 ! embryo stage
+relationship: simultaneous_with GO:0009791 ! post-embryonic development
 property_value: seeAlso https://github.com/obophenotype/uberon/issues/344 xsd:anyURI
 property_value: UBPROP:0000008 "In birds, the postnatal stage begins when the beak penetrates the shell (i.e., external pipping) (Brown et al. 1997)" xsd:string
 
@@ -11049,6 +11575,7 @@ id: UBERON:0000106
 name: zygote stage
 namespace: uberon
 def: "A stage at which the organism is a single cell produced by means of sexual reproduction." [http://en.wikipedia.org/wiki/Zygote]
+def: "A stage at which the organism is a single cell produced by means of sexual reproduction." [Wikipedia:Zygote]
 subset: efo_slim
 synonym: "1-cell stage" EXACT []
 synonym: "fertilized egg stage" EXACT [BTO:0000854]
@@ -11057,6 +11584,7 @@ synonym: "one cell stage" EXACT []
 synonym: "one-cell stage" RELATED [VHOG:0000745]
 synonym: "zygote" RELATED [VHOG:0000745]
 synonym: "zygotum" RELATED LATIN [http://en.wikipedia.org/wiki/Zygote]
+synonym: "zygotum" RELATED LATIN [Wikipedia:Zygote]
 xref: BilaDO:0000005
 xref: BILS:0000106
 xref: EFO:0001322
@@ -11066,13 +11594,14 @@ xref: http://en.wikipedia.org/wiki/Zygote
 xref: NCIT:C12601
 xref: PdumDv:0000100
 xref: VHOG:0000745
+xref: Wikipedia:Zygote
 xref: XAO:1000001
 xref: ZFS:0000001
-is_a: BFO:0000003 ! occurrent
 is_a: UBERON:0000105 ! life cycle stage
 relationship: part_of UBERON:0000068 ! embryo stage
 relationship: starts UBERON:0000104 ! life cycle
 property_value: seeAlso EMAPA:16033
+property_value: UBPROP:0000003 "As in all metazoans, eumetazoan development begins with a fertilized egg, or zygote.[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000745", ontology="VHOG", source="ISBN:978-0030259821 Ruppert EE, Fox RS, Barnes RD, Invertebrate zoology: a functional evolutionary approach (2003) p.107", source="http://bgee.unil.ch/"}
 property_value: UBPROP:0000003 "As in all metazoans, eumetazoan development begins with a fertilized egg, or zygote.[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000745", ontology="VHOG", source="http://bgee.unil.ch/", source="ISBN:978-0030259821 Ruppert EE, Fox RS, Barnes RD, Invertebrate zoology: a functional evolutionary approach (2003) p.107"}
 
 [Term]
@@ -11080,6 +11609,7 @@ id: UBERON:0000107
 name: cleavage stage
 namespace: uberon
 def: "The first few specialized divisions of an activated animal egg; Stage consisting of division of cells in the early embryo. The zygotes of many species undergo rapid cell cycles with no significant growth, producing a cluster of cells the same size as the original zygote. The different cells derived from cleavage are called blastomeres and form a compact mass called the morula. Cleavage ends with the formation of the blastula." [GO:0040016, http://en.wikipedia.org/wiki/Cleavage_(embryo)]
+def: "The first few specialized divisions of an activated animal egg; Stage consisting of division of cells in the early embryo. The zygotes of many species undergo rapid cell cycles with no significant growth, producing a cluster of cells the same size as the original zygote. The different cells derived from cleavage are called blastomeres and form a compact mass called the morula. Cleavage ends with the formation of the blastula." [GO:0040016, Wikipedia:Cleavage_(embryo)]
 subset: efo_slim
 xref: BilaDO:0000006
 xref: BILS:0000107
@@ -11091,17 +11621,22 @@ xref: MmusDv:0000004
 xref: OGES:000015
 xref: OGES:000020
 xref: PdumDv:0000200
+xref: Wikipedia:Cleavage_(embryo)
 xref: XAO:1000004
 xref: ZFS:0000046
-is_a: BFO:0000003 ! occurrent
 is_a: UBERON:0000105 ! life cycle stage
+intersection_of: UBERON:0000105 ! life cycle stage
+intersection_of: simultaneous_with GO:0040016 ! embryonic cleavage
 relationship: immediately_preceded_by UBERON:0000106 ! zygote stage
+relationship: part_of GO:0040016 ! embryonic cleavage
 relationship: part_of UBERON:0000068 ! embryo stage
+relationship: simultaneous_with GO:0040016 ! embryonic cleavage
 
 [Term]
 id: UBERON:0000108
 name: blastula stage
 namespace: uberon
+def: "An early stage of embryonic development in animals. It is produced by cleavage of a fertilized ovum and consists of a spherical layer of around 128 cells surrounding a central fluid-filled cavity called the blastocoel. The blastula follows the morula and precedes the gastrula in the developmental sequence." [Wikipedia:Blastula]
 def: "An early stage of embryonic development in animals. It is produced by cleavage of a fertilized ovum and consists of a spherical layer of around 128 cells surrounding a central fluid-filled cavity called the blastocoel. The blastula follows the morula and precedes the gastrula in the developmental sequence." [http://en.wikipedia.org/wiki/Blastula]
 subset: efo_slim
 xref: BilaDO:0000007
@@ -11115,9 +11650,9 @@ xref: OGES:000016
 xref: OGES:000021
 xref: OpenCyc:Mx4rEetFnKP2EdqAAAACs4vPlg
 xref: WBls:0000005
+xref: Wikipedia:Blastula
 xref: XAO:1000003
 xref: ZFS:0000045
-is_a: BFO:0000003 ! occurrent
 is_a: UBERON:0000105 ! life cycle stage
 relationship: part_of UBERON:0000068 ! embryo stage
 relationship: preceded_by UBERON:0000107 ! cleavage stage
@@ -11147,10 +11682,12 @@ xref: OGES:000019
 xref: WBls:0000010
 xref: XAO:1000005
 xref: ZFS:0000047
-is_a: BFO:0000003 ! occurrent
 is_a: UBERON:0000105 ! life cycle stage
+relationship: only_in_taxon NCBITaxon:6072 ! Eumetazoa
+relationship: part_of GO:0007369 ! gastrulation
 relationship: part_of UBERON:0000068 ! embryo stage
 relationship: preceded_by UBERON:0000108 {source="BILS"} ! blastula stage
+relationship: simultaneous_with GO:0007369 ! gastrulation
 
 [Term]
 id: UBERON:0000110
@@ -11162,10 +11699,12 @@ xref: BILS:0000110
 xref: HsapDv:0000012
 xref: MmusDv:0000017
 xref: XAO:1000006
-is_a: BFO:0000003 ! occurrent
 is_a: UBERON:0000105 ! life cycle stage
+relationship: only_in_taxon NCBITaxon:6072 ! Eumetazoa
+relationship: part_of GO:0001841 ! neural tube formation
 relationship: part_of UBERON:0000068 ! embryo stage
 relationship: preceded_by UBERON:0000109 ! gastrula stage
+relationship: simultaneous_with GO:0001841 ! neural tube formation
 property_value: seeAlso https://github.com/obophenotype/uberon/issues/343 xsd:anyURI
 
 [Term]
@@ -11173,6 +11712,7 @@ id: UBERON:0000111
 name: organogenesis stage
 namespace: uberon
 def: "A stage at which the ectoderm, endoderm, and mesoderm develop into the internal organs of the organism." [http://en.wikipedia.org/wiki/Organogenesis]
+def: "A stage at which the ectoderm, endoderm, and mesoderm develop into the internal organs of the organism." [Wikipedia:Organogenesis]
 synonym: "segmentation stage" RELATED []
 xref: BilaDO:0000010
 xref: BILS:0000111
@@ -11181,11 +11721,491 @@ xref: http://en.wikipedia.org/wiki/Organogenesis
 xref: MmusDv:0000018
 xref: OGES:000005
 xref: OGES:000032
-is_a: BFO:0000003 ! occurrent
+xref: Wikipedia:Organogenesis
 is_a: UBERON:0000105 ! life cycle stage
+relationship: only_in_taxon NCBITaxon:6072 ! Eumetazoa
+relationship: part_of GO:0048513 ! animal organ development
 relationship: part_of UBERON:0000068 ! embryo stage
 relationship: preceded_by UBERON:0000110 ! neurula stage
+relationship: simultaneous_with GO:0048513 ! animal organ development
 property_value: seeAlso https://github.com/obophenotype/uberon/issues/533 xsd:anyURI
+
+[Term]
+id: UBERON:0000307
+name: blastula
+namespace: uberon
+alt_id: UBERON:0007011
+def: "Organism at the blastula stage - an early stage of embryonic development in animals. It is produced by cleavage of a fertilized ovum and consists of a spherical layer of around 128 cells surrounding a central fluid-filled cavity called the blastocoel. The blastula follows the morula and precedes the gastrula in the developmental sequence." [http://en.wikipedia.org/wiki/Blastula]
+subset: inconsistent_with_fma
+synonym: "blastosphere" RELATED [http://en.wikipedia.org/wiki/Blastula]
+synonym: "blastula embryo" EXACT [BILA:0000059]
+xref: BILA:0000059
+xref: BTO:0000128
+xref: GAID:1294
+xref: http://en.wikipedia.org/wiki/Blastula
+xref: MESH:A16.254.270.274
+xref: OGEM:000006
+xref: OpenCyc:Mx4rEetFnKP2EdqAAAACs4vPlg
+is_a: CARO:0000000 ! anatomical entity
+is_a: UBERON:0000922 ! embryo
+intersection_of: UBERON:0000468 ! multicellular organism
+intersection_of: existence_starts_and_ends_during UBERON:0000108 ! blastula stage
+relationship: develops_from UBERON:0007010 ! cleaving embryo
+relationship: existence_starts_and_ends_during UBERON:0000108 ! blastula stage
+property_value: depicted:by http://upload.wikimedia.org/wikipedia/commons/c/c6/Blastulation.png xsd:anyURI
+property_value: IAO:0000116 "TODO - check relationship with epiblast. Note in FMA this is not a subclass of embryo, but in uberon embryo is the whole organism from zygote onwards and thus includes the blastula" xsd:string
+
+[Term]
+id: UBERON:0000465
+name: material anatomical entity
+namespace: uberon
+def: "Anatomical entity that has mass." [http://orcid.org/0000-0001-9114-8737]
+subset: upper_level
+xref: AAO:0010264
+xref: AEO:0000006
+xref: BILA:0000006
+xref: CARO:0000006
+xref: EHDAA2:0003006
+xref: FBbt:00007016
+xref: FMA:67165
+xref: HAO:0000006
+xref: TAO:0001836
+xref: TGMA:0001826
+xref: VHOG:0001721
+is_a: UBERON:0001062 ! anatomical entity
+
+[Term]
+id: UBERON:0000466
+name: immaterial anatomical entity
+namespace: uberon
+def: "Anatomical entity that has no mass." [http://orcid.org/0000-0001-9114-8737]
+subset: upper_level
+synonym: "immaterial physical anatomical entity" EXACT [FMA:67112]
+xref: AAO:0010265
+xref: AEO:0000007
+xref: BILA:0000007
+xref: CARO:0000007
+xref: EHDAA2:0003007
+xref: FBbt:00007015
+xref: FMA:67112
+xref: HAO:0000007
+xref: TAO:0001835
+xref: TGMA:0001827
+xref: VHOG:0001727
+is_a: UBERON:0001062 ! anatomical entity
+
+[Term]
+id: UBERON:0000467
+name: anatomical system
+namespace: uberon
+def: "Multicellular, connected anatomical structure that has multiple organs as parts and whose parts work together to achieve some shared function." [CARO:0000011]
+subset: pheno_slim
+subset: uberon_slim
+subset: upper_level
+synonym: "anatomical systems" RELATED PLURAL [ZFA:0001439]
+synonym: "body system" EXACT [BIRNLEX:14]
+synonym: "connected anatomical system" EXACT [CARO:0000011]
+synonym: "organ system" EXACT []
+synonym: "system" BROAD [GO:0048731]
+xref: AAO:0000007
+xref: AEO:0000011
+xref: BILA:0000011
+xref: BIRNLEX:14
+xref: BSA:0000049
+xref: CALOHA:TS-2088
+xref: CARO:0000011
+xref: EHDAA2:0003011
+xref: EHDAA:392
+xref: EMAPA:16103
+xref: EV:0100000
+xref: FBbt:00004856
+xref: FMA:7149
+xref: galen:AnatomicalSystem
+xref: HAO:0000011
+xref: http://linkedlifedata.com/resource/umls/id/C0460002
+xref: http://www.snomedbrowser.com/Codes/Details/278195005
+xref: MA:0000003
+xref: NCIT:C12919
+xref: OpenCyc:Mx4rCWM0QCtDEdyAAADggVbxzQ
+xref: Organ:system
+xref: TAO:0001439
+xref: TGMA:0001831
+xref: UMLS:C0460002 {source="ncithesaurus:Organ_System"}
+xref: VHOG:0001725
+xref: WBbt:0005746
+xref: WBbt:0005763
+xref: XAO:0003002
+xref: ZFA:0001439
+is_a: UBERON:0000061 ! anatomical structure
+relationship: existence_starts_during_or_after UBERON:0000111 ! organogenesis stage
+relationship: has_part UBERON:0000062 ! organ
+relationship: part_of UBERON:0000468 ! multicellular organism
+property_value: seeAlso EHDAA2:0001330
+
+[Term]
+id: UBERON:0000468
+name: multicellular organism
+namespace: uberon
+def: "Anatomical structure that is an individual member of a species and consists of more than one cell." [CARO:0000012, http://en.wikipedia.org/wiki/Multi-cellular_organism, http://orcid.org/0000-0001-9114-8737]
+subset: efo_slim
+subset: pheno_slim
+subset: uberon_slim
+subset: upper_level
+synonym: "animal" NARROW [BTO:0000042]
+synonym: "body" RELATED [AEO:0000103, BIRNLEX:18, FMA:256135, NCIT:C13041]
+synonym: "Koerper" RELATED [BTO:0001489]
+synonym: "multi-cellular organism" EXACT [CARO:0000012]
+synonym: "organism" BROAD [FBbt:00000001, VHOG:0000671, WBbt:0007833]
+synonym: "whole body" RELATED [BTO:0001489]
+synonym: "whole organism" RELATED [FBbt:00000001]
+xref: AAO:0010026
+xref: AEO:0000191
+xref: BILA:0000012
+xref: BIRNLEX:18
+xref: BSA:0000038
+xref: BTO:0000042
+xref: CARO:0000012
+xref: EFO:0002906
+xref: EHDAA2:0003103
+xref: EHDAA2:0003191
+xref: EHDAA:1
+xref: EMAPA:25765
+xref: EV:0100016
+xref: FBbt:00000001
+xref: FMA:256135
+xref: galen:Organism
+xref: HAO:0000012
+xref: http://www.snomedbrowser.com/Codes/Details/243928005
+xref: Multi-cellular:organism
+xref: NCIT:C13041
+xref: ncithesaurus:Whole_Organism
+xref: TADS:0000001
+xref: TAO:0001094
+xref: TGMA:0001832
+xref: VHOG:0000671
+xref: WBbt:0007833
+xref: XAO:0003004
+xref: ZFA:0001094
+is_a: UBERON:0010000 ! multicellular anatomical structure
+property_value: IAO:0000116 "TODO - split body and mc organism? body continues after death stage" xsd:string
+property_value: UBPROP:0000007 "organismal" xsd:string
+
+[Term]
+id: UBERON:0000479
+name: tissue
+namespace: uberon
+def: "Multicellular anatomical structure that consists of many cells of one or a few types, arranged in an extracellular matrix such that their long-range organisation is at least partly a repetition of their short-range organisation." [CARO:0000043]
+subset: pheno_slim
+subset: upper_level
+synonym: "portion of tissue" EXACT [CARO:0000043]
+synonym: "simple tissue" NARROW [AEO:0000043]
+synonym: "tissue portion" EXACT []
+xref: AAO:0000607
+xref: AAO:0010054
+xref: AEO:0000043
+xref: BILA:0000043
+xref: BIRNLEX:19
+xref: CALOHA:TS-2090
+xref: CARO:0000043
+xref: EHDAA2:0003043
+xref: EMAPA:35868
+xref: FBbt:00007003
+xref: FMA:9637
+xref: galen:Tissue
+xref: HAO:0000043
+xref: http://linkedlifedata.com/resource/umls/id/C0040300
+xref: MA:0003002
+xref: MESH:D014024
+xref: NCIT:C12801
+xref: TAO:0001477
+xref: TGMA:0001844
+xref: UMLS:C0040300 {source="ncithesaurus:Tissue"}
+xref: VHOG:0001757
+xref: WBbt:0005729
+xref: XAO:0003040
+xref: ZFA:0001477
+is_a: UBERON:0010000 {source="CARO"} ! multicellular anatomical structure
+relationship: part_of UBERON:0000468 ! multicellular organism
+property_value: IAO:0000116 "changed label and definition to reflect CARO2" xsd:string
+
+[Term]
+id: UBERON:0000922
+name: embryo
+namespace: uberon
+def: "Anatomical entity that comprises the organism in the early stages of growth and differentiation that are characterized by cleavage, the laying down of fundamental tissues, and the formation of primitive organs and organ systems. For example, for mammals, the process would begin with zygote formation and end with birth. For insects, the process would begin at zygote formation and end with larval hatching. For plant zygotic embryos, this would be from zygote formation to the end of seed dormancy. For plant vegetative embryos, this would be from the initial determination of the cell or group of cells to form an embryo until the point when the embryo becomes independent of the parent plant." [BTO:0000379, FB:FBrf0039741, FB:FBrf0041814, GO:0009790, http://en.wikipedia.org/wiki/Embryo]
+subset: efo_slim
+subset: pheno_slim
+subset: uberon_slim
+subset: vertebrate_core
+synonym: "developing organism" RELATED [BILA:0000056]
+synonym: "developmental tissue" RELATED []
+synonym: "embryonic organism" EXACT [BILA:0000056]
+xref: AAO:0011035
+xref: AEO:0000169
+xref: BILA:0000056
+xref: BSA:0000039
+xref: BTO:0000379
+xref: CALOHA:TS-0229
+xref: Category:Embryonic\:organism
+xref: EFO:0001367
+xref: EHDAA2:0000002
+xref: EHDAA2_RETIRED:0003236
+xref: EHDAA:38
+xref: EMAPA:16039
+xref: FBbt:00000052
+xref: FMA:69068
+xref: GAID:963
+xref: http://en.wikipedia.org/wiki/Embryo
+xref: http://linkedlifedata.com/resource/umls/id/C0013935
+xref: http://www.snomedbrowser.com/Codes/Details/57991002
+xref: MAT:0000226
+xref: MESH:D004622
+xref: MIAA:0000019
+xref: NCIT:C28147
+xref: OGEM:000001
+xref: OpenCyc:Mx4rwP1ceZwpEbGdrcN5Y29ycA
+xref: UMLS:C0013935 {source="ncithesaurus:Embryo"}
+xref: VHOG:0001766
+xref: XAO:0000113
+xref: ZFA:0000103
+is_a: UBERON:0000468 ! multicellular organism
+intersection_of: UBERON:0000468 ! multicellular organism
+intersection_of: existence_ends_with UBERON:0000068 ! embryo stage
+intersection_of: existence_starts_with UBERON:0000068 ! embryo stage
+relationship: existence_ends_with UBERON:0000068 ! embryo stage
+relationship: existence_starts_with UBERON:0000068 ! embryo stage
+property_value: depicted:by Wrinkledfrog:embryos.jpg xsd:anyURI
+property_value: seeAlso https://github.com/obophenotype/uberon/issues/503 xsd:anyURI
+property_value: UBPROP:0000007 "embryonic" xsd:string
+property_value: UBPROP:0000012 "Obsoleted in ZFA. Note that embryo is not classified as an embryonic structure - an embryonic structure is only the parts of an embryo" xsd:string {external_ontology="ZFA"}
+
+[Term]
+id: UBERON:0000923
+name: germ layer
+namespace: uberon
+def: "A layer of cells produced during the process of gastrulation during the early development of the animal embryo, which is distinct from other such layers of cells, as an early step of cell differentiation. The three types of germ layers are the endoderm, ectoderm, and mesoderm." [http://en.wikipedia.org/wiki/Germ_layer, https://github.com/obophenotype/uberon/issues/203]
+comment: Classically the germ layers are ectoderm, mesoderm and endoderm. Alternatively: primary = ectoderm, endoderm; secondary=mesoderm; tertiary=dorsal mesoderm, NC[https://github.com/obophenotype/uberon/wiki/The-neural-crest]
+subset: uberon_slim
+subset: vertebrate_core
+synonym: "embryonic germ layer" RELATED []
+synonym: "embryonic germ layers" RELATED []
+synonym: "embryonic tissue" BROAD [FMA:69069]
+synonym: "germinal layer" EXACT [ncithesaurus:Germinal_Layer]
+synonym: "primary germ layer" NARROW [GO:0001704, ZFA:0001122]
+xref: AAO:0000480
+xref: BILA:0000035
+xref: BTO:0000556
+xref: EMAPA:36033
+xref: FBbt:00000110
+xref: FMA:69069
+xref: GAID:1303
+xref: Germ:layer
+xref: http://linkedlifedata.com/resource/umls/id/C0920502
+xref: http://linkedlifedata.com/resource/umls/id/C1708239
+xref: MESH:A16.254.425
+xref: NCIT:C12950
+xref: NCIT:C54105
+xref: TAO:0001122
+xref: UMLS:C0920502 {source="ncithesaurus:Embryonic_Tissue"}
+xref: UMLS:C1708239 {source="ncithesaurus:Germinal_Layer"}
+xref: VHOG:0001223
+xref: XAO:0003011
+xref: ZFA:0001122
+is_a: UBERON:0010316 ! germ layer / neural crest
+property_value: UBPROP:0000003 "The Bilateria are triploblastic (with true endoderm, mesoderm, and ectoderm) (...).[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0001223", ontology="VHOG", source="http://bgee.unil.ch/", source="ISBN:978-0878932504 Gilbert SF, Developmental Biology (2006) Limb development and evolution, p.722"}
+
+[Term]
+id: UBERON:0000924
+name: ectoderm
+namespace: uberon
+def: "Primary germ layer that is the outer of the embryo's three germ layers and gives rise to epidermis and neural tissue." [http://en.wikipedia.org/wiki/Ectoderm]
+subset: efo_slim
+subset: pheno_slim
+subset: uberon_slim
+subset: vertebrate_core
+synonym: "embryonic ectoderm" EXACT [VHOG:0000153]
+xref: AAO:0000137
+xref: BILA:0000036
+xref: BTO:0000315
+xref: CALOHA:TS-0216
+xref: EFO:0000414
+xref: EHDAA2:0000428
+xref: EMAPA:16069
+xref: EV:0100003
+xref: FBbt:00000111
+xref: FMA:69070
+xref: GAID:1304
+xref: http://en.wikipedia.org/wiki/Ectoderm
+xref: http://linkedlifedata.com/resource/umls/id/C0013574
+xref: http://www.snomedbrowser.com/Codes/Details/362851007
+xref: MAT:0000155
+xref: MAT:0000173
+xref: MESH:A16.254.425.273
+xref: MIAA:0000173
+xref: NCIT:C12703
+xref: TAO:0000016
+xref: UMLS:C0013574 {source="ncithesaurus:Ectoderm"}
+xref: VHOG:0000153
+xref: XAO:0000001
+xref: ZFA:0000016
+is_a: UBERON:0000923 ! germ layer
+relationship: develops_from UBERON:0006601 ! presumptive ectoderm
+relationship: immediate_transformation_of UBERON:0006601 {source="Bgee:AN"} ! presumptive ectoderm
+property_value: depicted:by http://upload.wikimedia.org/wikipedia/commons/1/19/Gray32.png xsd:anyURI
+property_value: UBPROP:0000001 "Primary germ layer that is the outer of the embryonic germ layers and gives rise to epidermis and neural tissue.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000137", ontology="AAO", source="AAO:EJS"}
+property_value: UBPROP:0000003 "The Bilateria are triploblastic (with true endoderm, mesoderm, and ectoderm) (...).[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000153", ontology="VHOG", source="http://bgee.unil.ch/", source="ISBN:978-0878932504 Gilbert SF, Developmental Biology (2006) Limb development and evolution, p.722"}
+property_value: UBPROP:0000007 "ectodermal" xsd:string
+
+[Term]
+id: UBERON:0001016
+name: nervous system
+namespace: uberon
+def: "The nervous system is an organ system containing predominantly neuron and glial cells. In bilaterally symmetrical organism, it is arranged in a network of tree-like structures connected to a central body. The main functions of the nervous system are to regulate and control body functions, and to receive sensory input, process this information, and generate behavior [CUMBO]." [BIRNLEX:844, http://en.wikipedia.org/wiki/Nervous_system, ISBN:0-14-051288-8, ISBN:3110148986, NLM:nervous+system, WB:rynl, ZFIN:curator]
+subset: cumbo
+subset: efo_slim
+subset: pheno_slim
+subset: uberon_slim
+subset: vertebrate_core
+synonym: "nerve net" NARROW [http://en.wikipedia.org/wiki/Nerve_net]
+synonym: "neurological system" EXACT [GO:0050877]
+synonym: "systema nervosum" RELATED LATIN [http://en.wikipedia.org/wiki/Nervous_system]
+xref: AAO:0000324
+xref: BILA:0000079
+xref: BIRNLEX:844
+xref: BTO:0001484
+xref: CALOHA:TS-1313
+xref: EFO:0000802
+xref: EHDAA2:0001246
+xref: EHDAA:826
+xref: EMAPA:16469
+xref: EV:0100162
+xref: FBbt:00005093
+xref: FMA:7157
+xref: GAID:466
+xref: http://braininfo.rprc.washington.edu/centraldirectory.aspx?ID=3236
+xref: http://linkedlifedata.com/resource/umls/id/C0027763
+xref: http://www.snomedbrowser.com/Codes/Details/278196006
+xref: MA:0000016
+xref: MAT:0000026
+xref: MESH:D009420
+xref: MIAA:0000026
+xref: NCIT:C12755
+xref: Nervous:system
+xref: OpenCyc:Mx4rvViT_pwpEbGdrcN5Y29ycA
+xref: TAO:0000396
+xref: UMLS:C0027763 {source="ncithesaurus:Nervous_System"}
+xref: VHOG:0000402
+xref: WBbt:0005735
+xref: XAO:0000177
+xref: ZFA:0000396
+is_a: CARO:0000000 ! anatomical entity
+is_a: UBERON:0000467 ! anatomical system
+disjoint_from: UBERON:0004456 ! entire sense organ system
+relationship: develops_from UBERON:0016880 ! future nervous system
+relationship: existence_ends_during UBERON:0000066 ! fully formed stage
+relationship: immediate_transformation_of UBERON:0016880 {source="Bgee:AN"} ! future nervous system
+property_value: depicted:by http://upload.wikimedia.org/wikipedia/commons/b/b2/TE-Nervous_system_diagram.svg xsd:anyURI
+property_value: depicted:by http://upload.wikimedia.org/wikipedia/commons/b/ba/Nervous_system_diagram.png xsd:anyURI
+property_value: UBPROP:0000001 "A regulatory system of the body that consists of neurons and neuroglial cells. The nervous system is divided into two parts, the central nervous system (CNS) and the peripheral nervous system (PNS). (Source: BioGlossary, www.Biology-Text.com)[TAO]" xsd:string {date_retrieved="2012-08-14", external_class="TAO:0000396", ontology="TAO", source="ZFIN:curator"}
+property_value: UBPROP:0000001 "Anatomical system consisting of nerve bodies and nerve fibers which regulate the response of the body to external and internal stimuli.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000324", ontology="AAO", source="AAO:BJB"}
+property_value: UBPROP:0000003 "Nervous systems evolved in the ancestor of Eumetazoa.[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000402", ontology="VHOG", source="http://bgee.unil.ch/", source="ISBN:978-0198566694 Schmidt-Rhaesa A, The evolution of organ systems (2007) p.117"}
+property_value: UBPROP:0000007 "nervous" xsd:string
+property_value: UBPROP:0000007 "neural" xsd:string
+
+[Term]
+id: UBERON:0001017
+name: central nervous system
+namespace: uberon
+def: "The central nervous system is the core nervous system that serves an integrating and coordinating function. In vertebrates it consists of the neural tube derivatives: the brain and spinal cord. In invertebrates it includes central ganglia plus nerve cord." [GO:0021551, http://www.frontiersinzoology.com/content/7/1/29, https://sourceforge.net/p/geneontology/ontology-requests/11422/]
+subset: cumbo
+subset: efo_slim
+subset: pheno_slim
+subset: uberon_slim
+subset: vertebrate_core
+synonym: "cerebrospinal axis" NARROW [FMA:55675]
+synonym: "CNS" EXACT ABBREVIATION []
+synonym: "neuraxis" RELATED [FMA:55675]
+synonym: "systema nervosum centrale" EXACT LATIN [FMA:55675, FMA:TA]
+xref: AAO:0000090
+xref: BAMS:CNS
+xref: BILA:0000080
+xref: BIRNLEX:1099
+xref: BTO:0000227
+xref: CALOHA:TS-0150
+xref: EFO:0000908
+xref: EHDAA2:0000225
+xref: EHDAA:828
+xref: EMAPA:16470
+xref: EMAPA:16754
+xref: EV:0100163
+xref: FBbt:00005094
+xref: FMA:55675
+xref: GAID:570
+xref: http://braininfo.rprc.washington.edu/centraldirectory.aspx?ID=854
+xref: http://en.wikipedia.org/wiki/Central_nervous_system
+xref: http://linkedlifedata.com/resource/umls/id/C0927232
+xref: http://www.snomedbrowser.com/Codes/Details/278199004
+xref: MA:0000167
+xref: MAT:0000457
+xref: MESH:D002490
+xref: NCIT:C12438
+xref: OpenCyc:Mx4rvzYt3pwpEbGdrcN5Y29ycA
+xref: TAO:0000012
+xref: UMLS:C0927232 {source="ncithesaurus:Central_Nervous_System"}
+xref: UMLS:C0927232 {source="BIRNLEX:1099"}
+xref: VHOG:0000293
+xref: XAO:0000215
+xref: ZFA:0000012
+is_a: UBERON:0004121 ! ectoderm-derived structure
+is_a: UBERON:0011216 {source="FBbt", source="cjm"} ! organ system subdivision
+relationship: develops_from UBERON:0016879 ! future central nervous system
+relationship: immediate_transformation_of UBERON:0016879 {source="Bgee:AN"} ! future central nervous system
+relationship: part_of UBERON:0001016 ! nervous system
+property_value: UBPROP:0000001 "Part of the nervous system which includes the brain and spinal cord.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000090", ontology="AAO", source="AAO:BJB"}
+property_value: UBPROP:0000001 "The brain and spinal cord. Kimmel et al, 1995.[TAO]" xsd:string {date_retrieved="2012-08-14", external_class="TAO:0000012", ontology="TAO", source="ZFIN:curator"}
+property_value: UBPROP:0000001 "The central nervous system (CNS) is the part of the nervous system which includes the brain, spinal cord, and nerve cell layer of the retina (CUMBO)." xsd:string {source="BIRNLEX:1099"}
+property_value: UBPROP:0000003 "(...) at some stage of its development, every chordate exhibits five uniquely derived characters or synapomorphies of the group: (...) (4) a single, tubular nerve cord that is located dorsal to the notochord (...) (reference 1); The neural tube is destined to differentiate into the brain and spinal cord (the central nervous system) (reference 2); Taken together, our data make a very strong case that the complex molecular mediolateral architecture of the developing trunk CNS (central nervous system), as shared between Platynereis and vertebrates, was already present in their last common ancestor, Urbilateria. The concept of bilaterian nervous system centralization implies that neuron types concentrate on one side of the trunk, as is the case in vertebrates and many invertebrates including Platynereis, where they segregate and become spatially organized (as opposed to a diffuse nerve net). Our data reveal that a large part of the spatial organization of the annelid and vertebrate CNS was already present in their last common ancestor, which implies that Urbilateria had already possessed a CNS (reference 3).[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000293", ontology="VHOG", source="http://bgee.unil.ch/", source="ISBN:978-0030223693 Liem KF, Bemis WE, Walker WF, Grande L, Functional Anatomy of the Vertebrates: An Evolutionary Perspective (2001) p.28 (reference 1), ISBN:978-0072528305 Kardong KV, Vertebrates: Comparative Anatomy, Function, Evolution (2006) p.165 (reference 2), DOI:10.1016/j.cell.2007.02.040 Denes AS, Jekely G, Steinmetz PRH, Raible F, Snyman H, Prud'homme B, Ferrier DEK, Balavoine G and Arendt D, Molecular architecture of annelid nerve cord supports common origin of nervous system centralization in Bilateria. Cell (2007) (reference 3)"}
+
+[Term]
+id: UBERON:0001032
+name: sensory system
+namespace: uberon
+def: "Anatomical system that overlaps the nervous system and is responsible for receiving and processing sensory information." [http://en.wikipedia.org/wiki/Sensory_system]
+subset: efo_slim
+subset: uberon_slim
+subset: vertebrate_core
+synonym: "organa sensuum" EXACT LATIN [FMA:75259, FMA:TA]
+synonym: "organa sensuum" RELATED LATIN [http://en.wikipedia.org/wiki/Sensory_system]
+synonym: "sense organ subsystem" EXACT []
+synonym: "sense organs" EXACT [FMA:75259]
+synonym: "sense organs set" EXACT [FMA:75259]
+synonym: "sensory organ system" RELATED []
+synonym: "sensory subsystem" EXACT []
+synonym: "sensory systems" EXACT PLURAL [TAO:0000282]
+synonym: "set of sense organs" RELATED [FMA:75259]
+xref: AAO:0000555
+xref: BAMS:SEN
+xref: BILA:0000099
+xref: EFO:0000805
+xref: EHDAA2:0003094
+xref: EMAPA:16192
+xref: FBbt:00007692
+xref: FMA:75259
+xref: MA:0002442
+xref: MAT:0000031
+xref: MIAA:0000031
+xref: NLXANAT:090816
+xref: Sensory:system
+xref: TAO:0000282
+xref: VHOG:0001674
+xref: XAO:0003194
+xref: ZFA:0000282
+is_a: CARO:0000000 ! anatomical entity
+is_a: UBERON:0000467 ! anatomical system
+relationship: part_of UBERON:0004456 ! entire sense organ system
+property_value: depicted:by http://upload.wikimedia.org/wikipedia/commons/c/c0/Gray722.png xsd:anyURI
+property_value: UBPROP:0000003 "An early step in the evolution of neural crest, therefore, may have been the origin of a specific dorsal neural cell population contributing to sensory processing; this would predate the divergence of the amphioxus and vertebrate lineages.[well established][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0001674", ontology="VHOG", source="http://bgee.unil.ch/", source="DOI:10.1073/pnas.97.9.4449 Shimeld SM and Holland PW. Vertebrate innovations. PNAS (2000)"}
+property_value: UBPROP:0000012 "note the distinct between entire sensory system and individual system. this reconciles is_a and part_of distinctions between ssAOs" xsd:string
 
 [Term]
 id: UBERON:0001062
@@ -11212,14 +12232,367 @@ xref: UMLS:C1515976 {source="ncithesaurus:Anatomic_Structure_System_or_Substance
 xref: WBbt:0000100
 xref: XAO:0000000
 xref: ZFA:0100000
+is_a: BFO:0000004 ! independent continuant
 
-[Typedef]
-id: BFO:0000067
-name: contains process
-def: "[copied from inverse property 'occurs in'] b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
-comment: Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant
-property_value: IAO:0000111 "site of" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+[Term]
+id: UBERON:0002050
+name: embryonic structure
+namespace: uberon
+def: "Anatomical structure that is part of an embryo." [BTO:0000174, ZFIN:curator]
+subset: efo_slim
+subset: inconsistent_with_fma
+subset: vertebrate_core
+synonym: "developing embryonic structure" EXACT [FBbt:00004208]
+synonym: "developing structure" RELATED []
+synonym: "embryonale Struktur" RELATED [BTO:0000174]
+synonym: "embryonic anatomical structure" EXACT [RETIRED_EHDAA2:0003169]
+synonym: "embryonic structures" RELATED PLURAL [ZFA:0001105]
+xref: AAO:0000138
+xref: BILA:0000034
+xref: BTO:0000174
+xref: CALOHA:TS-2110
+xref: EFO:0000461
+xref: FBbt:00004208
+xref: FMA:69067
+xref: GAID:407
+xref: http://linkedlifedata.com/resource/umls/id/C0013948
+xref: http://www.snomedbrowser.com/Codes/Details/667009
+xref: MESH:D004628
+xref: NCIT:C13229
+xref: RETIRED_EHDAA2:0003169
+xref: TAO:0001105
+xref: UMLS:C0013948 {source="ncithesaurus:Embryonic_Structure"}
+xref: VSAO:0000178
+xref: XAO:0003042
+xref: ZFA:0001105
+is_a: UBERON:0005423 ! developing anatomical structure
+intersection_of: UBERON:0005423 ! developing anatomical structure
+intersection_of: part_of UBERON:0000922 ! embryo
+relationship: part_of UBERON:0000922 ! embryo
+property_value: UBPROP:0000001 "Anatomical structure that is part of the embryo and is comprised of portions of tissue or cells.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000138", ontology="AAO", source="AAO:BJB"}
+property_value: UBPROP:0000001 "Anatomical structure that is part of the embryo and is comprised of portions of tissue or cells.[TAO]" xsd:string {date_retrieved="2012-08-14", external_class="TAO:0001105", ontology="TAO", source="ZFIN:curator"}
+property_value: UBPROP:0000001 "Anatomical structure that is part of the embryo and is comprised of portions of tissue or cells.[VSAO]" xsd:string {date_retrieved="2012-08-14", external_class="VSAO:0000178", ontology="VSAO", source="ZFIN:curator"}
+property_value: UBPROP:0000012 "in FMA embryo is_a embryonic structure" xsd:string {external_ontology="FMA"}
+
+[Term]
+id: UBERON:0002105
+name: vestibulo-auditory system
+namespace: uberon
+def: "Sensory system responsible for the perception of spatial orientation and auditory stimuli." [ZFA:0001138]
+subset: functional_classification
+subset: pheno_slim
+subset: uberon_slim
+subset: vertebrate_core
+synonym: "auditory organ system" EXACT []
+synonym: "auditory system" RELATED []
+synonym: "auditory/vestibular system" RELATED []
+synonym: "vestibuloauditory system" EXACT []
+synonym: "vestibuloauditory system" RELATED []
+xref: AAO:0000631
+xref: EMAPA:36002
+xref: EMAPA:37985 {source="MA:th"}
+xref: FMA:78500
+xref: TAO:0001138
+xref: XAO:0003195
+xref: ZFA:0001138
+is_a: UBERON:0001032 ! sensory system
+property_value: depicted:by http://upload.wikimedia.org/wikipedia/commons/d/d2/Anatomy_of_the_Human_Ear.svg xsd:anyURI
+property_value: UBPROP:0000001 "The sensory system used for balance and hearing.[AAO]" xsd:string {date_retrieved="2012-06-20", external_class="AAO:0000631", ontology="AAO", source="AAO:EJS"}
+
+[Term]
+id: UBERON:0002532
+name: epiblast (generic)
+namespace: uberon
+def: "In amniote animal embryology, the epiblast is a tissue type derived either from the inner cell mass in mammals or the blastodisc in birds and reptiles. It lies above the hypoblast. In mammalian embryogenesis, the columnar cells of the epiblast are adjacent to the trophoblast, while the cuboidal cells of the hypoblast are closer to the blastocoele. The epiblast, whilst referred to as the primary ectoderm, differentiates to form all three layers of the trilaminar germ disc in a process called gastrulation[WP]. The outer of the two layers of the blastoderm that form during gastrulation, corresponding to primitive ectoderm during gastrulation and to the definitive ectoderm after gastrulation[ZFA]" [http://en.wikipedia.org/wiki/Epiblast, ZFIN:curator]
+subset: early_development
+subset: grouping_class
+subset: uberon_slim
+subset: vertebrate_core
+synonym: "blastocyst" RELATED []
+synonym: "ectoblast" RELATED [MP:0003886]
+synonym: "epiblast" EXACT [VHOG:0000243]
+synonym: "epiblastus" RELATED LATIN [http://en.wikipedia.org/wiki/Epiblast]
+synonym: "primitive ectoderm" RELATED [VHOG:0000243]
+xref: BTO:0004593
+xref: FMA:296704
+xref: http://en.wikipedia.org/wiki/Epiblast
+xref: MAT:0000067
+xref: MIAA:0000067
+xref: VHOG:0000243
+is_a: UBERON:0002050 ! embryonic structure
+property_value: depicted:by http://upload.wikimedia.org/wikipedia/commons/e/e3/Gray21.png xsd:anyURI
+property_value: IAO:0000116 "MP says - tissue that gives rise to the ectoderm, endoderm and mesoderm of the embryo proper. In HOG, epiblast is part of primitive streak/blastpore, which is inconsistent with the MP definition of primitive streak as a ridge of the epiblast. Note that these terms, epiblast and hypoblast, are also used to describe layers of the avian embryonic blastoderm, but the layers so-named seem to be altogether different in these two kinds of vertebrate embryos(CVS). Consider obsoleting this as a grouping class" xsd:string
+property_value: UBPROP:0000003 "In pregastrula zebrafish embryos, the epiblast is an inverted cup of cells that sits on top of a large yolk cell. (...) In amniote embryos (mammals and birds), gastrulation initiates in an epithelial layer called the epiblast. Cells in the epiblast undergo an epithelial to mesenchymal transition (EMT), migrate through the primitive streak (PS), and incorporate in the middle (mesoderm) or outer (endoderm) layer. The presumptive definitive endoderm (DE) cells invade and displace an outer layer of extraembryonic tissue cells, the hypoblast in chick and the visceral endoderm (VE) in mouse, which form supporting structures such as the yolk sac.[uncertain][VHOG]" xsd:string {date_retrieved="2012-09-17", external_class="VHOG:0000243", ontology="VHOG", source="http://bgee.unil.ch/", source="DOI:10.1146/annurev.cellbio.042308.113344 Zorn AM, Wells JM, Vertebrate endoderm development and organ formation. Annual Review of Cell Developmental Biology (2009)"}
+
+[Term]
+id: UBERON:0004121
+name: ectoderm-derived structure
+namespace: uberon
+def: "An anatomical structure that develops (entirely or partially) from the ectoderm." [https://orcid.org/0000-0002-6601-2165]
+subset: grouping_class
+synonym: "ectodermal deriviative" EXACT [FBbt:00025990]
+xref: FBbt:00025990
+is_a: CARO:0000000 ! anatomical entity
+is_a: UBERON:0000061 ! anatomical structure
+intersection_of: UBERON:0000061 ! anatomical structure
+intersection_of: develops_from UBERON:0000924 ! ectoderm
+relationship: develops_from UBERON:0000924 ! ectoderm
+property_value: IAO:0000232 "Grouping term for query purposes" xsd:string
+
+[Term]
+id: UBERON:0004455
+name: neurula embryo
+namespace: uberon
+alt_id: UBERON:0007013
+def: "An embryo at the neurula stage." [http://orcid.org/0000-0002-6601-2165]
+synonym: "neurula" EXACT [BTO:0001766]
+xref: BILA:0000061
+xref: BTO:0001766
+xref: http://linkedlifedata.com/resource/umls/id/C1518306
+xref: NCIT:C34229
+xref: UMLS:C1518306 {source="ncithesaurus:Neurula"}
+is_a: CARO:0000000 ! anatomical entity
+is_a: UBERON:0000922 ! embryo
+intersection_of: UBERON:0000468 ! multicellular organism
+intersection_of: existence_starts_and_ends_during UBERON:0000110 ! neurula stage
+relationship: develops_from UBERON:0004734 ! gastrula
+relationship: existence_starts_and_ends_during UBERON:0000110 ! neurula stage
+
+[Term]
+id: UBERON:0004456
+name: entire sense organ system
+namespace: uberon
+def: "Sum of all sensory systems in an organism." [http://orcid.org/0000-0002-6601-2165]
+subset: uberon_slim
+synonym: "sense organ system" EXACT [FMA:78499]
+xref: FMA:78499
+is_a: CARO:0000000 ! anatomical entity
+is_a: UBERON:0000467 ! anatomical system
+relationship: existence_ends_during UBERON:0000066 ! fully formed stage
+property_value: UBPROP:0000012 "note the distinct between entire sensory system and individual system. this reconciles is_a and part_of distinctions between ssAOs" xsd:string
+
+[Term]
+id: UBERON:0004734
+name: gastrula
+namespace: uberon
+alt_id: UBERON:0007012
+def: "Organism at the gastrula stage." [http://en.wikipedia.org/wiki/Gastrula, http://en.wikipedia.org/wiki/Trilaminar_blastocyst]
+subset: pheno_slim
+synonym: "blastocystis trilaminaris" RELATED [https://orcid.org/0000-0002-6601-2165]
+synonym: "gastrula embryo" EXACT [BILA:0000060]
+synonym: "tri-laminar disc" RELATED [https://orcid.org/0000-0002-6601-2165]
+synonym: "tri-laminar disk" RELATED [https://orcid.org/0000-0002-6601-2165]
+synonym: "trilaminar blastocyst" RELATED [https://orcid.org/0000-0002-6601-2165]
+synonym: "trilaminar blastoderm" RELATED [https://orcid.org/0000-0002-6601-2165]
+synonym: "trilaminar disc" RELATED [https://orcid.org/0000-0002-6601-2165]
+synonym: "trilaminar disk" RELATED [https://orcid.org/0000-0002-6601-2165]
+synonym: "trilaminar germ" RELATED [https://orcid.org/0000-0002-6601-2165]
+xref: BILA:0000060
+xref: BTO:0001403
+xref: FBbt:00005317
+xref: FMA:293108
+xref: GAID:1302
+xref: http://en.wikipedia.org/wiki/Gastrula
+xref: http://linkedlifedata.com/resource/umls/id/C0017199
+xref: http://linkedlifedata.com/resource/umls/id/C1284022
+xref: MESH:A16.254.412
+xref: MIAA:0000179
+xref: NCIT:C34057
+xref: NCIT:C34058
+xref: Trilaminar:blastocyst
+xref: UMLS:C0017199 {source="ncithesaurus:Gastrula"}
+xref: UMLS:C1284022 {source="ncithesaurus:Trilaminar_Embryonic_Disc"}
+is_a: CARO:0000000 ! anatomical entity
+is_a: UBERON:0000922 ! embryo
+intersection_of: UBERON:0000468 ! multicellular organism
+intersection_of: existence_starts_and_ends_during UBERON:0000109 ! gastrula stage
+relationship: develops_from UBERON:0000307 ! blastula
+relationship: existence_starts_and_ends_during UBERON:0000109 ! gastrula stage
+property_value: UBPROP:0000012 "We explicitly merge the NCITA terms here" xsd:string {external_ontology="NCIT"}
+
+[Term]
+id: UBERON:0005291
+name: embryonic tissue
+namespace: uberon
+def: "A portion of tissue that is part of an embryo." [OBOL:automatic]
+subset: pheno_slim
+subset: upper_level
+synonym: "developing tissue" RELATED []
+synonym: "portion of embryonic tissue" EXACT [OBOL:automatic]
+xref: CALOHA:TS-2100
+is_a: UBERON:0000479 ! tissue
+intersection_of: UBERON:0000479 ! tissue
+intersection_of: part_of UBERON:0000922 ! embryo
+relationship: part_of UBERON:0002050 ! embryonic structure
+
+[Term]
+id: UBERON:0005423
+name: developing anatomical structure
+namespace: uberon
+synonym: "developing structure" RELATED []
+synonym: "developmental structure" RELATED []
+synonym: "developmental tissue" RELATED [MIAA:0000019]
+xref: AEO:0000125
+xref: CALOHA:TS-2122
+xref: EHDAA2:0003125
+xref: FBbt:00007006
+xref: FMA:292313
+xref: MIAA:0000019
+is_a: UBERON:0000465 ! material anatomical entity
+
+[Term]
+id: UBERON:0006598
+name: presumptive structure
+namespace: uberon
+def: "Portion of embryonic tissue determined by fate mapping to become a structure." [GOC:CVS, GOC:YMB, ZFA:0001116]
+synonym: "future structure" EXACT []
+synonym: "presumptive structures" EXACT [ZFA:0001116]
+xref: AAO:0000479
+xref: TAO:0001116
+xref: ZFA:0001116
+is_a: CARO:0000000 ! anatomical entity
+is_a: UBERON:0002050 ! embryonic structure
+intersection_of: UBERON:0005423 ! developing anatomical structure
+intersection_of: has_potential_to_develop_into UBERON:0000061 ! anatomical structure
+intersection_of: part_of UBERON:0000922 ! embryo
+relationship: has_potential_to_develop_into UBERON:0000061 ! anatomical structure
+property_value: IAO:0000116 "Consider merging with anlage" xsd:string
+
+[Term]
+id: UBERON:0006601
+name: presumptive ectoderm
+namespace: uberon
+def: "Presumptive structure of the blastula that will develop into ectoderm." [http://orcid.org/0000-0002-6601-2165]
+subset: efo_slim
+synonym: "presumptive epidermis" RELATED [ZFA:0001376]
+xref: AAO:0000470
+xref: EFO:0003466
+xref: TAO:0001376
+xref: XAO:0004132
+xref: ZFA:0001376
+is_a: UBERON:0006598 ! presumptive structure
+intersection_of: UBERON:0006598 ! presumptive structure
+intersection_of: has_potential_to_develop_into UBERON:0000924 ! ectoderm
+intersection_of: part_of UBERON:0000307 ! blastula
+relationship: has_potential_to_develop_into UBERON:0000924 ! ectoderm
+relationship: part_of UBERON:0000307 ! blastula
+
+[Term]
+id: UBERON:0006984
+name: anatomical surface
+namespace: uberon
+def: "A two dimensional anatomical structure that is the boundary between an anatomical structure and an anatomical substance, an anatomical space or the organism's environment. Examples include the surface of your skin, the surface of the lining of your gut; the surface of the endothelium of you aorta that is in contact with blood.n" [CARO:0001002]
+comment: Old definition: 'Non-material anatomical entity of two dimensions, that is demarcated by anatomical lines or points on the external or internal surfaces of anatomical structures.' Note, in the new definition, the space referred to is not necessarily an anatomical space. It may be the outside of an organism.
+subset: upper_level
+xref: BILA:0000010
+xref: CARO:0001002
+xref: EHDAA2_RETIRED:0003192
+xref: FMA:24137
+xref: http://linkedlifedata.com/resource/umls/id/C1515977
+xref: NCIT:C34022
+xref: UMLS:C1515977 {source="ncithesaurus:Anatomic_Surface"}
+is_a: UBERON:0010199 {notes="via morphological boundary in CARO"} ! bona-fide anatomical boundary
+
+[Term]
+id: UBERON:0007010
+name: cleaving embryo
+namespace: uberon
+def: "Organism at the cleavage stage." [OBOL:automatic]
+xref: BILA:0000058
+is_a: UBERON:0000922 ! embryo
+intersection_of: UBERON:0000468 ! multicellular organism
+intersection_of: existence_ends_with UBERON:0000107 ! cleavage stage
+intersection_of: existence_starts_with UBERON:0000107 ! cleavage stage
+relationship: existence_ends_with UBERON:0000107 ! cleavage stage
+relationship: existence_starts_with UBERON:0000107 ! cleavage stage
+
+[Term]
+id: UBERON:0009953
+name: post-embryonic organism
+namespace: uberon
+def: "A multicellular organism that existence_starts_with a post-embryonic stage." [OBOL:automatic]
+synonym: "post-hatching organism" NARROW [https://orcid.org/0000-0002-6601-2165]
+synonym: "post-natal organism" NARROW [https://orcid.org/0000-0002-6601-2165]
+synonym: "postnatal mouse" NARROW [MA:0002405]
+synonym: "postnatal organism" EXACT []
+synonym: "TS28 mouse" NARROW [MA:0002405]
+xref: MA:0002405
+is_a: UBERON:0000468 ! multicellular organism
+intersection_of: UBERON:0000468 ! multicellular organism
+intersection_of: existence_starts_with UBERON:0000092 ! post-embryonic stage
+relationship: existence_starts_with UBERON:0000092 ! post-embryonic stage
+property_value: seeAlso https://github.com/obophenotype/uberon/issues/667 xsd:anyURI
+
+[Term]
+id: UBERON:0010000
+name: multicellular anatomical structure
+namespace: uberon
+def: "An anatomical structure that has more than one cell as a part." [CARO:0010000]
+subset: upper_level
+synonym: "multicellular structure" EXACT [FBbt:00100313]
+xref: CARO:0010000
+xref: FBbt:00100313
+is_a: UBERON:0000061 ! anatomical structure
+
+[Term]
+id: UBERON:0010199
+name: bona-fide anatomical boundary
+namespace: uberon
+def: "An anatomical boundary that corresponds to some physical discontinuity." [CARO:0001004]
+comment: One might argue that all boundaries are actually fiat in the sense that there must be some fiat element at a fine enough scale of granularity. This ontology choses to ignore this issue as below the level of granularity relevant to anatomy. (DOS121102)
+subset: upper_level
+xref: CARO:0001004
+is_a: UBERON:0000466 {source="CARO"} ! immaterial anatomical entity
+
+[Term]
+id: UBERON:0010316
+name: germ layer / neural crest
+namespace: uberon
+is_a: CARO:0000000 ! anatomical entity
+is_a: UBERON:0002050 ! embryonic structure
+is_a: UBERON:0005291 ! embryonic tissue
+relationship: develops_from UBERON:0002532 ! epiblast (generic)
+
+[Term]
+id: UBERON:0011216
+name: organ system subdivision
+namespace: uberon
+def: "A subdivision of an anatomical system." [http://orcid.org/0000-0002-6601-2165]
+subset: upper_level
+xref: FBbt:00007330
+xref: FMA:67509
+xref: http://www.snomedbrowser.com/Codes/Details/91690000
+is_a: UBERON:0010000 {source="FBbt"} ! multicellular anatomical structure
+relationship: part_of UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0016879
+name: future central nervous system
+namespace: uberon
+alt_id: UBERON:3000469
+def: "Primordium that develops into the central nervous system" [http://orcid.org/0000-0002-6601-2165]
+synonym: "future CNS" EXACT []
+synonym: "presumptive central nervous system" EXACT []
+is_a: UBERON:0006598 ! presumptive structure
+intersection_of: UBERON:0006598 ! presumptive structure
+intersection_of: has_potential_to_develop_into UBERON:0001017 ! central nervous system
+relationship: develops_from UBERON:0000924 ! ectoderm
+relationship: has_potential_to_develop_into UBERON:0001017 ! central nervous system
+relationship: part_of UBERON:0016880 ! future nervous system
+
+[Term]
+id: UBERON:0016880
+name: future nervous system
+namespace: uberon
+alt_id: UBERON:3000477
+def: "Primordium that develops into the nervous system" [http://orcid.org/0000-0002-6601-2165]
+synonym: "presumptive nervous system" EXACT [AAO:0000477]
+xref: AAO:0000477
+is_a: UBERON:0006598 ! presumptive structure
+intersection_of: UBERON:0006598 ! presumptive structure
+intersection_of: has_potential_to_develop_into UBERON:0001016 ! nervous system
+relationship: existence_starts_during_or_after UBERON:0000111 ! organogenesis stage
+relationship: has_potential_to_develop_into UBERON:0001016 ! nervous system
 
 [Typedef]
 id: FBcv:0008000
@@ -11254,7 +12627,7 @@ property_value: IAO:0000116 "A function inheres in its bearer at all times for w
 property_value: IAO:0000118 "function_of" xsd:string
 property_value: IAO:0000118 "is function of" xsd:string
 domain: BFO:0000034 ! function
-is_a: characteristic_of ! characteristic_of
+is_a: characteristic_of ! characteristic of
 inverse_of: RO:0000085 ! has function
 
 [Typedef]
@@ -11266,7 +12639,7 @@ property_value: IAO:0000112 "this red color is a quality of this apple" xsd:stri
 property_value: IAO:0000116 "A quality inheres in its bearer at all times for which the quality exists." xsd:string
 property_value: IAO:0000118 "is quality of" xsd:string
 property_value: IAO:0000118 "quality_of" xsd:string
-is_a: characteristic_of ! characteristic_of
+is_a: characteristic_of ! characteristic of
 inverse_of: has_quality ! has quality
 
 [Typedef]
@@ -11278,7 +12651,7 @@ property_value: IAO:0000112 "this investigator role is a role of this person" xs
 property_value: IAO:0000116 "A role inheres in its bearer at all times for which the role exists, however the role need not be realized at all the times that the role exists." xsd:string
 property_value: IAO:0000118 "is role of" xsd:string
 property_value: IAO:0000118 "role_of" xsd:string
-is_a: characteristic_of ! characteristic_of
+is_a: characteristic_of ! characteristic of
 inverse_of: has_role ! has role
 
 [Typedef]
@@ -11307,7 +12680,7 @@ name: disposition of
 def: "inverse of has disposition" []
 comment: This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.
 subset: RO:0002259
-is_a: characteristic_of ! characteristic_of
+is_a: characteristic_of ! characteristic of
 
 [Typedef]
 id: RO:0002013
@@ -11420,7 +12793,7 @@ comment: Previously had ID  http://purl.obolibrary.org/obo/RO_0002122 in test fi
 subset: ro-eco
 property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
 is_a: RO:0002222 ! temporally related to
-inverse_of: ends_during ! ends_during
+inverse_of: ends_during ! ends during
 
 [Typedef]
 id: RO:0002085
@@ -11464,20 +12837,6 @@ range: BFO:0000003 ! occurrent
 is_a: RO:0002222 ! temporally related to
 
 [Typedef]
-id: RO:0002203
-name: develops into
-def: "inverse of develops from" []
-subset: RO:0002259
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
-property_value: IAO:0000117 "Terry Meehan" xsd:string
-is_transitive: true
-is_a: RO:0002286 ! developmentally succeeded by
-is_a: RO:0002387 ! has potential to develop into
-is_a: RO:0002388 ! has potential to directly develop into
-
-[Typedef]
 id: RO:0002222
 name: temporally related to
 comment: A relation that holds between two occurrents. This is a grouping relation that collects together all the Allen relations.
@@ -11490,6 +12849,24 @@ property_value: IAO:0000232 "Do not use this relation directly. It is ended as a
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 domain: BFO:0000003 ! occurrent
 range: BFO:0000003 ! occurrent
+
+[Typedef]
+id: RO:0002231
+name: has start location
+def: "x 'has starts location' y if and only if there exists some process z such that x 'starts with' z and z 'occurs in' y" []
+domain: BFO:0000015 ! process
+range: BFO:0000004 ! independent continuant
+holds_over_chain: starts_with occurs_in
+is_a: RO:0002479 ! has part that occurs in
+
+[Typedef]
+id: RO:0002232
+name: has end location
+def: "x 'has end location' y if and only if there exists some process z such that x 'ends with' z and z 'occurs in' y" []
+domain: BFO:0000015 ! process
+range: BFO:0000004 ! independent continuant
+holds_over_chain: ends_with occurs_in
+is_a: RO:0002479 ! has part that occurs in
 
 [Typedef]
 id: RO:0002233
@@ -11505,32 +12882,9 @@ property_value: IAO:0000118 "consumes" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 domain: BFO:0000015 ! process
 range: BFO:0000040 ! material entity
+holds_over_chain: starts_with RO:0002233
 is_a: RO:0000057 ! has participant
-inverse_of: RO:0002352 ! input of
-
-[Typedef]
-id: RO:0002254
-name: has developmental contribution from
-def: "x has developmental contribution from y iff x has some part z such that z develops from y" []
-property_value: IAO:0000112 "Mammalian thymus has developmental contribution from some pharyngeal pouch 3; Mammalian thymus has developmental contribution from some pharyngeal pouch 4 [Kardong]" xsd:string
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-domain: CARO:0000000 ! anatomical entity
-range: CARO:0000000 ! anatomical entity
-holds_over_chain: has_part develops_from
-is_a: RO:0002258 ! developmentally preceded by
-inverse_of: RO:0002255 ! developmentally contributes to
-
-[Typedef]
-id: RO:0002255
-name: developmentally contributes to
-def: "inverse of has developmental contribution from" []
-subset: RO:0002259
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-holds_over_chain: RO:0002203 part_of
-is_a: RO:0002286 ! developmentally succeeded by
-is_a: RO:0002385 ! has potential to developmentally contribute to
+inverse_of: input_of ! input of
 
 [Typedef]
 id: RO:0002258
@@ -11604,6 +12958,7 @@ id: RO:0002314
 name: characteristic of part of
 def: "q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w." []
 property_value: IAO:0000116 "Because part_of is transitive, inheres in is a sub-relation of characteristic of part of" xsd:string
+property_value: IAO:0000116 "Because part_of is transitive, inheres in is a sub-relation of inheres in part of" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "inheres in part of" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
@@ -11612,7 +12967,7 @@ property_value: seeAlso "defining-property-chains-involving-reflexivity"
 property_value: seeAlso http://purl.obolibrary.org/obo/ro/docs/reflexivity/
 holds_over_chain: characteristic_of part_of {http://purl.obolibrary.org/obo/RO_0002582="true"}
 is_a: RO:0002502 ! depends on
-transitive_over: part_of ! part_of
+transitive_over: part_of ! part of
 
 [Typedef]
 id: RO:0002320
@@ -11651,9 +13006,9 @@ property_value: IAO:0000118 "is executing" xsd:string
 property_value: IAO:0000232 "This relation differs from the parent relation 'capable of' in that the parent is weaker and only expresses a capability that may not be actually realized, whereas this relation is always realized." xsd:string
 property_value: IAO:0000232 "This relation is currently used experimentally by the Gene Ontology Consortium. It may not be stable and may be obsoleted at some future time." xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-is_a: capable_of ! capable_of
+is_a: capable_of ! capable of
 inverse_of: RO:0002333 ! enabled by
-transitive_over: has_part ! has_part
+transitive_over: has_part ! has part
 transitive_over: RO:0002017 ! has component activity
 
 [Typedef]
@@ -11667,7 +13022,7 @@ property_value: seeAlso Involved:in
 holds_over_chain: RO:0002327 part_of
 is_a: participates_in ! participates in
 is_a: RO:0002431 ! involved in or involved in regulation of
-transitive_over: part_of ! part_of
+transitive_over: part_of ! part of
 
 [Typedef]
 id: RO:0002333
@@ -11711,17 +13066,6 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 is_a: RO:0002334 ! regulated by
 
 [Typedef]
-id: RO:0002352
-name: input of
-def: "inverse of has input" []
-subset: ro-eco
-subset: RO:0002259
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates in
-
-[Typedef]
 id: RO:0002384
 name: has developmental potential involving
 def: "x has developmental potential involving y iff x is capable of a developmental process with output y. y may be the successor of x, or may be a different structure in the vicinity (as for example in the case of developmental induction)." []
@@ -11732,28 +13076,12 @@ range: CARO:0000000 ! anatomical entity
 is_a: RO:0002324 ! developmentally related to
 
 [Typedef]
-id: RO:0002385
-name: has potential to developmentally contribute to
-def: "x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y" []
-property_value: IAO:0000114 IAO:0000428
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-is_a: RO:0002384 ! has developmental potential involving
-
-[Typedef]
-id: RO:0002387
-name: has potential to develop into
-def: "x has the potential to develop into y iff x develops into y or if x is capable of developing into y" []
-property_value: IAO:0000114 IAO:0000428
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-is_a: RO:0002384 ! has developmental potential involving
-
-[Typedef]
 id: RO:0002388
 name: has potential to directly develop into
 def: "x has potential to directly develop into y iff x directly develops into y or x is capable of directly developing into y" []
 property_value: IAO:0000114 IAO:0000428
 property_value: IAO:0000117 "Chris Mungall" xsd:string
-is_a: RO:0002387 ! has potential to develop into
+is_a: has_potential_to_develop_into ! has potential to develop into
 
 [Typedef]
 id: RO:0002404
@@ -11762,7 +13090,7 @@ def: "inverse of upstream of" []
 property_value: IAO:0000114 IAO:0000428
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-is_a: preceded_by ! preceded_by
+is_a: preceded_by ! preceded by
 is_a: RO:0002427 ! causally downstream of or within
 inverse_of: RO:0002411 ! causally upstream of
 
@@ -11807,7 +13135,7 @@ property_value: IAO:0000114 IAO:0000428
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: RO:0002575 RO:0002411
-is_a: ends_at_start_of ! immediately precedes
+is_a: immediately_precedes ! immediately precedes
 is_a: RO:0002411 ! causally upstream of
 
 [Typedef]
@@ -12282,9 +13610,12 @@ range: BFO:0000040 ! material entity
 is_a: RO:0002566 ! causally influences
 
 [Typedef]
+id: by_means
+name: by_means
+
+[Typedef]
 id: capable_of
 name: capable of
-name: capable_of
 namespace: fly_anatomy.ontology
 namespace: protein
 namespace: uberon
@@ -12302,14 +13633,13 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 domain: BFO:0000004 ! independent continuant
 range: BFO:0000015 ! process
 is_transitive: false
-is_a: capable_of_part_of ! capable_of_part_of
+is_a: capable_of_part_of ! capable of part of
 is_a: functionally_related_to ! functionally related to
 expand_expression_to: "RO_0000053 some (RO_0000054 only ?Y)" []
 
 [Typedef]
 id: capable_of_part_of
 name: capable of part of
-name: capable_of_part_of
 namespace: fly_anatomy.ontology
 namespace: uberon
 def: "c stands in this relationship to p if and only if there exists some p' such that c is capable_of p', and p' is part_of p." []
@@ -12327,7 +13657,6 @@ expand_expression_to: "RO_0000053 some (RO_0000054 only (BFO_0000050 some ?Y))" 
 [Typedef]
 id: characteristic_of
 name: characteristic of
-name: characteristic_of
 namespace: fly_anatomy.ontology
 def: "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence." []
 comment: Note that this relation was previously called "inheres in", but was changed to be called "characteristic of" because BFO2 uses "inheres in" in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing.
@@ -12343,6 +13672,16 @@ property_value: RO:0001900 RO:0001901
 is_functional: true
 is_a: RO:0002314 ! characteristic of part of
 inverse_of: has_characteristic ! has characteristic
+
+[Typedef]
+id: contains_process
+name: contains process
+namespace: uberon
+def: "[copied from inverse property 'occurs in'] b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
+comment: Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant
+xref: BFO:0000067
+property_value: IAO:0000111 "site of" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Typedef]
 id: correlates_with
@@ -12383,10 +13722,23 @@ is_transitive: true
 is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
 
 [Typedef]
+id: developmentally_contributes_to
+name: developmentally contributes to
+namespace: uberon
+def: "inverse of has developmental contribution from" []
+subset: RO:0002259
+xref: RO:0002255
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+holds_over_chain: develops_into part_of
+is_a: has_potential_to_developmentally_contribute_to ! has potential to developmentally contribute to
+is_a: RO:0002286 ! developmentally succeeded by
+
+[Typedef]
 id: develops_from
 name: develops from
-name: develops_from
 namespace: fly_anatomy.ontology
+namespace: uberon
 def: "x develops from y if and only if either (a) x directly develops from y or (b) there exists some z such that x directly develops from z and z develops from y" []
 comment: This is the transitive form of the develops from relation
 xref: RO:0002202
@@ -12397,9 +13749,29 @@ property_value: IAO:0000117 "Melissa Haendel" xsd:string
 property_value: IAO:0000117 "Terry Meehan" xsd:string
 domain: BFO:0000004 ! independent continuant
 range: BFO:0000004 ! independent continuant
+holds_over_chain: part_of develops_from
 is_transitive: true
+is_a: has_developmental_contribution_from ! has developmental contribution from
 is_a: RO:0002258 ! developmentally preceded by
-inverse_of: RO:0002203 ! develops into
+inverse_of: develops_into ! develops into
+transitive_over: part_of ! part of
+
+[Typedef]
+id: develops_into
+name: develops into
+namespace: fly_anatomy.ontology
+namespace: uberon
+def: "inverse of develops from" []
+subset: RO:0002259
+xref: RO:0002203
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000117 "Terry Meehan" xsd:string
+is_transitive: true
+is_a: has_potential_to_develop_into ! has potential to develop into
+is_a: RO:0002286 ! developmentally succeeded by
+is_a: RO:0002388 ! has potential to directly develop into
 
 [Typedef]
 id: different_in_magnitude_relative_to
@@ -12414,30 +13786,16 @@ range: PATO:0000001 ! quality
 id: ends
 name: ends
 namespace: uberon
-def: "Relation between occurrents, shares an end boundary with." [Allen:starts, https://orcid.org/0000-0002-6601-2165, ZFS:finishes]
+def: "inverse of ends with" []
 synonym: "finishes" EXACT []
 xref: RO:0002229
-is_a: part_of ! part_of
-
-[Typedef]
-id: ends_at_start_of
-name: ends_at_start_of
-name: immediately precedes
-namespace: FlyBase_development_CV
-comment: X immediately_precedes_Y iff: end(X) simultaneous_with start(Y)
-subset: ro-eco
-xref: RO:0002090
-property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
-property_value: IAO:0000118 "ends_at_start_of" xsd:string
-property_value: IAO:0000118 "meets" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-property_value: RO:0002575 BFO:0000063
-is_a: precedes ! precedes
+is_a: part_of ! part of
+is_a: RO:0002222 ! temporally related to
+inverse_of: ends_with ! ends with
 
 [Typedef]
 id: ends_during
 name: ends during
-name: ends_during
 namespace: external
 comment: X ends_during Y iff: ((start(Y) before_or_simultaneous_with end(X)) AND end(X) before_or_simultaneous_with end(Y). 
 subset: ro-eco
@@ -12451,9 +13809,73 @@ is_a: RO:0002222 ! temporally related to
 id: ends_with
 name: ends with
 namespace: uberon
+def: "x ends with y if and only if x has part y and the time point at which x ends is equivalent to the time point at which y ends. Formally: α(y) > α(x) ∧ ω(y) = ω(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." []
 xref: RO:0002230
 is_transitive: true
-is_a: has_part ! has_part
+is_a: has_part ! has part
+is_a: RO:0002222 ! temporally related to
+
+[Typedef]
+id: existence_ends_during
+name: existence ends during
+namespace: uberon
+def: "Relation between continuant c and occurrent s, such that every instance of c ceases to exist during some s, if it does not die prematurely." [https://orcid.org/0000-0002-6601-2165]
+synonym: "ceases_to_exist_during" EXACT []
+xref: RO:0002492
+is_a: existence_ends_during_or_before ! existence ends during or before
+transitive_over: part_of ! part of
+
+[Typedef]
+id: existence_ends_during_or_before
+name: existence ends during or before
+namespace: uberon
+xref: RO:0002497
+holds_over_chain: part_of existence_ends_during_or_before
+transitive_over: part_of ! part of
+transitive_over: precedes ! precedes
+
+[Typedef]
+id: existence_ends_with
+name: existence ends with
+namespace: uberon
+def: "Relation between continuant and occurrent, such that c ceases to exist at the end of p." [https://orcid.org/0000-0002-6601-2165]
+xref: RO:0002493
+is_a: existence_ends_during ! existence ends during
+
+[Typedef]
+id: existence_starts_and_ends_during
+name: existence starts and ends during
+namespace: uberon
+xref: RO:0002491
+is_a: existence_ends_during ! existence ends during
+is_a: existence_starts_during ! existence starts during
+
+[Typedef]
+id: existence_starts_during
+name: existence starts during
+namespace: uberon
+def: "Relation between continuant c and occurrent s, such that every instance of c comes into existing during some s." [https://orcid.org/0000-0002-6601-2165]
+synonym: "begins_to_exist_during" EXACT []
+xref: RO:0002488
+is_a: existence_starts_during_or_after ! existence starts during or after
+transitive_over: part_of ! part of
+
+[Typedef]
+id: existence_starts_during_or_after
+name: existence starts during or after
+namespace: uberon
+xref: RO:0002496
+holds_over_chain: part_of existence_starts_during_or_after
+transitive_over: part_of ! part of
+transitive_over: preceded_by ! preceded by
+
+[Typedef]
+id: existence_starts_with
+name: existence starts with
+namespace: uberon
+def: "Relation between continuant and occurrent, such that c comes into existence at the start of p." [https://orcid.org/0000-0002-6601-2165]
+xref: RO:0002489
+is_a: existence_starts_during ! existence starts during
 
 [Typedef]
 id: functionally_related_to
@@ -12479,13 +13901,18 @@ property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
 property_value: IAO:0000118 "d" xsd:string
 property_value: IAO:0000118 "during" xsd:string
 is_transitive: true
-is_a: ends_during ! ends_during
+is_a: ends_during ! ends during
 is_a: RO:0002091 ! starts during
+
+[Typedef]
+id: has_boundary
+name: has boundary
+namespace: uberon
+xref: RO:0002002
 
 [Typedef]
 id: has_characteristic
 name: has characteristic
-name: has_characteristic
 namespace: fly_anatomy.ontology
 namespace: uberon
 def: "Inverse of characteristic_of" []
@@ -12503,7 +13930,6 @@ is_inverse_functional: true
 [Typedef]
 id: has_component
 name: has component
-name: has_component
 namespace: protein
 namespace: uberon
 def: "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." []
@@ -12517,7 +13943,23 @@ property_value: IAO:0000232 "For use in recording has_part with a cardinality co
 property_value: RO:0001900 RO:0001901
 property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:Componency
 is_transitive: false
-is_a: has_part ! has_part
+is_a: has_part ! has part
+
+[Typedef]
+id: has_developmental_contribution_from
+name: has developmental contribution from
+namespace: uberon
+def: "x has developmental contribution from y iff x has some part z such that z develops from y" []
+xref: RO:0002254
+property_value: IAO:0000112 "Mammalian thymus has developmental contribution from some pharyngeal pouch 3; Mammalian thymus has developmental contribution from some pharyngeal pouch 4 [Kardong]" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+domain: CARO:0000000 ! anatomical entity
+range: CARO:0000000 ! anatomical entity
+holds_over_chain: has_part develops_from
+is_transitive: true
+is_a: RO:0002258 ! developmentally preceded by
+inverse_of: developmentally_contributes_to ! developmentally contributes to
 
 [Typedef]
 id: has_member
@@ -12527,12 +13969,11 @@ def: "has member is a mereological relation between a collection and an item." [
 xref: RO:0002351
 property_value: IAO:0000119 "SIO" xsd:string
 property_value: RO:0001900 RO:0001901
-is_a: has_part ! has_part
+is_a: has_part ! has part
 
 [Typedef]
 id: has_part
 name: has part
-name: has_part
 namespace: chebi_ontology
 namespace: external
 namespace: protein
@@ -12540,7 +13981,6 @@ namespace: quality
 namespace: relationship
 namespace: uberon
 def: "a core relation that holds between a whole and its part" []
-def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
 comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
@@ -12548,13 +13988,22 @@ subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: BFO:0000051
 xref: OBO_REL:has_part
 property_value: IAO:0000111 "has part" xsd:string
+property_value: IAO:0000111 "has part" xsd:string
+property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
 property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
 property_value: IAO:0000112 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
+property_value: IAO:0000112 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
+property_value: IAO:0000112 "this year has part this day (occurrent parthood)" xsd:string
 property_value: IAO:0000112 "this year has part this day (occurrent parthood)" xsd:string
 property_value: IAO:0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
+property_value: IAO:0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
 property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
 property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
 property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
+property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
+property_value: IAO:0000118 "has_part" xsd:string
 property_value: IAO:0000118 "has_part" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/BFO
 property_value: RO:0001900 RO:0001901
@@ -12563,10 +14012,30 @@ is_transitive: true
 is_a: overlaps ! overlaps
 
 [Typedef]
+id: has_potential_to_develop_into
+name: has potential to develop into
+namespace: uberon
+def: "x has the potential to develop into y iff x develops into y or if x is capable of developing into y" []
+xref: RO:0002387
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+is_a: RO:0002384 ! has developmental potential involving
+
+[Typedef]
+id: has_potential_to_developmentally_contribute_to
+name: has potential to developmentally contribute to
+namespace: uberon
+def: "x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y" []
+xref: RO:0002385
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+is_a: RO:0002384 ! has developmental potential involving
+
+[Typedef]
 id: has_quality
 name: has quality
-name: has_quality
 namespace: protein
+namespace: uberon
 def: "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence" []
 xref: RO:0000086
 property_value: IAO:0000112 "this apple has quality this red color" xsd:string
@@ -12592,9 +14061,18 @@ is_transitive: false
 is_a: has_characteristic ! has characteristic
 
 [Typedef]
+id: immediate_transformation_of
+name: immediate transformation of
+namespace: uberon
+synonym: "direct_transformation_of" EXACT [https://orcid.org/0000-0002-6601-2165]
+synonym: "immediately transforms from" EXACT [SIO:000658]
+xref: RO:0002495
+property_value: seeAlso SIO:000658
+is_a: transformation_of ! transformation of
+
+[Typedef]
 id: immediately_preceded_by
 name: immediately preceded by
-name: immediately_preceded_by
 namespace: FlyBase_development_CV
 namespace: uberon
 def: "X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)" []
@@ -12609,8 +14087,27 @@ property_value: IAO:0000118 "starts_at_end_of" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: seeAlso SIO:000251
 property_value: UBPROP:0000001 "A non-transitive temporal relation in which one process immediately precedes another process, such that there is no interval of time between the two processes[SIO:000251]." xsd:string {source="SIO:000251"}
-is_a: preceded_by ! preceded_by
-inverse_of: ends_at_start_of ! immediately precedes
+holds_over_chain: starts_with ends_with
+is_a: preceded_by ! preceded by
+inverse_of: immediately_precedes ! immediately precedes
+
+[Typedef]
+id: immediately_precedes
+name: immediately precedes
+comment: X immediately_precedes_Y iff: end(X) simultaneous_with start(Y)
+subset: ro-eco
+xref: RO:0002090
+property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000118 "ends_at_start_of" xsd:string
+property_value: IAO:0000118 "meets" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0002575 BFO:0000063
+holds_over_chain: ends_with starts_with
+is_a: precedes ! precedes
+
+[Typedef]
+id: in_response_to
+name: in_response_to
 
 [Typedef]
 id: in_taxon
@@ -12629,6 +14126,7 @@ property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Taxon-constr
 range: CARO:0001010 ! organism or virus or viroid
 holds_over_chain: capable_of in_taxon
 holds_over_chain: has_part in_taxon
+holds_over_chain: overlaps in_taxon
 holds_over_chain: part_of in_taxon
 is_a: RO:0002320 ! evolutionarily related to
 
@@ -12645,6 +14143,19 @@ is_transitive: true
 is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
 
 [Typedef]
+id: input_of
+name: input of
+namespace: uberon
+def: "inverse of has input" []
+subset: ro-eco
+subset: RO:0002259
+xref: RO:0002352
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: functionally_related_to ! functionally related to
+is_a: participates_in ! participates in
+
+[Typedef]
 id: member_of
 name: member of
 namespace: uberon
@@ -12655,7 +14166,7 @@ property_value: IAO:0000118 "is member of" xsd:string
 property_value: IAO:0000118 "member part of" xsd:string
 property_value: IAO:0000119 "SIO" xsd:string
 property_value: RO:0001900 RO:0001901
-is_a: part_of ! part_of
+is_a: part_of ! part of
 inverse_of: has_member ! has member
 
 [Typedef]
@@ -12673,6 +14184,7 @@ property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relati
 property_value: IAO:0000589 "negatively regulates (process to process)" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: RO:0004050 RO:0002211
+holds_over_chain: ends_with negatively_regulates
 is_a: regulates ! regulates
 is_a: RO:0002305 ! causally upstream of, negative effect
 inverse_of: RO:0002335 ! negatively regulated by
@@ -12680,13 +14192,12 @@ inverse_of: RO:0002335 ! negatively regulated by
 [Typedef]
 id: occurent_part_of
 name: occurent part of
-name: occurent_part_of
 namespace: FlyBase_development_CV
 def: "A part of relation that applies only between occurents." []
 xref: RO:0002012
 domain: BFO:0000003 ! occurrent
 range: BFO:0000003 ! occurrent
-is_a: part_of ! part_of
+is_a: part_of ! part of
 is_a: RO:0002418 ! causally upstream of or within
 
 [Typedef]
@@ -12707,17 +14218,14 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 domain: BFO:0000003 ! occurrent
 range: BFO:0000004 ! independent continuant
 holds_over_chain: part_of occurs_in
-inverse_of: BFO:0000067 ! contains process
-transitive_over: part_of ! part_of
+inverse_of: contains_process ! contains process
+transitive_over: part_of ! part of
 
 [Typedef]
 id: only_in_taxon
 name: only in taxon
-name: only_in_taxon
 namespace: protein
 namespace: uberon
-def: "S only_in_taxon T iff: S SubClassOf in_taxon only T" [http://www.ncbi.nlm.nih.gov/pubmed/20973947]
-def: "U only_in_taxon T: U is a feature found in only in organisms of species of taxon T. The feature cannot be found in an organism of any species outside of (not subsumed by) that taxon. Down-propagates in U hierarchy, up-propagates in T hierarchy (species taxonomy). Implies applicable_to_taxon." [ROC:Waclaw]
 def: "x only in taxon y if and only if x is in taxon y, and there is no other organism z such that y!=z a and x is in taxon z." []
 comment: Down-propagates. The original name for this in the paper is 'specific_to'. Applicable to genes because some genes are lost in sub-species (strains) of a species.
 synonym: "never_outside_taxon" EXACT []
@@ -12738,7 +14246,7 @@ is_a: in_taxon ! in taxon
 id: overlaps
 name: overlaps
 namespace: fly_anatomy.ontology
-namespace: FlyBase_development_CV
+namespace: uberon
 def: "x overlaps y if and only if there exists some z such that x has part z and z part of y" []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
@@ -12751,13 +14259,13 @@ holds_over_chain: has_part overlaps
 holds_over_chain: has_part part_of {http://purl.obolibrary.org/obo/RO_0002582="true"}
 holds_over_chain: part_of part_of
 is_a: RO:0002323 ! mereotopologically related to
-transitive_over: part_of ! part_of
+transitive_over: part_of ! part of
+expand_expression_to: "BFO_0000051 some (BFO_0000050 some ?Y)" []
 expand_expression_to: "http://purl.obolibrary.org/obo/BFO_0000051 some (http://purl.obolibrary.org/obo/BFO_0000050 some ?Y)" []
 
 [Typedef]
 id: part_of
 name: part of
-name: part_of
 namespace: external
 namespace: protein
 namespace: quality
@@ -12772,13 +14280,22 @@ synonym: "part_of" EXACT []
 xref: BFO:0000050
 xref: OBO_REL:part_of
 property_value: IAO:0000111 "is part of" xsd:string
+property_value: IAO:0000111 "is part of" xsd:string
+property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string
 property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string
 property_value: IAO:0000112 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
+property_value: IAO:0000112 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
+property_value: IAO:0000112 "this day is part of this year (occurrent parthood)" xsd:string
 property_value: IAO:0000112 "this day is part of this year (occurrent parthood)" xsd:string
 property_value: IAO:0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other." xsd:string
+property_value: IAO:0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
 property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
 property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
 property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'." xsd:string
+property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'." xsd:string
+property_value: IAO:0000118 "part_of" xsd:string
 property_value: IAO:0000118 "part_of" xsd:string
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/BFO
 property_value: RO:0001900 RO:0001901
@@ -12794,7 +14311,7 @@ property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartO
 property_value: seeAlso http://www.obofoundry.org/ro/#OBO_REL:part_of xsd:string
 is_transitive: true
 is_a: overlaps ! overlaps
-inverse_of: has_part ! has_part
+inverse_of: has_part ! has part
 
 [Typedef]
 id: part_of_structure_that_is_capable_of
@@ -12810,7 +14327,6 @@ is_a: functionally_related_to ! functionally related to
 [Typedef]
 id: participates_in
 name: participates in
-name: participates_in
 namespace: protein
 namespace: uberon
 def: "a relation between a continuant and a process, in which the continuant is somehow involved in the process" []
@@ -12841,6 +14357,7 @@ property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relati
 property_value: IAO:0000589 "positively regulates (process to process)" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: RO:0004049 RO:0002211
+holds_over_chain: ends_with positively_regulates
 holds_over_chain: negatively_regulates negatively_regulates
 is_transitive: true
 is_a: regulates ! regulates
@@ -12850,8 +14367,6 @@ inverse_of: RO:0002336 ! positively regulated by
 [Typedef]
 id: preceded_by
 name: preceded by
-name: preceded_by
-namespace: relationship
 namespace: uberon
 def: "x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." []
 subset: ro-eco
@@ -12923,6 +14438,7 @@ property_value: IAO:0000600 "false" xsd:boolean
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 domain: BFO:0000015 ! process
 range: BFO:0000015 ! process
+holds_over_chain: ends_with regulates
 holds_over_chain: RO:0002578 RO:0002578
 is_transitive: true
 is_a: RO:0002411 ! causally upstream of
@@ -12930,21 +14446,37 @@ inverse_of: RO:0002334 ! regulated by
 transitive_over: RO:0002025 ! has effector activity
 
 [Typedef]
+id: simultaneous_with
+name: simultaneous with
+namespace: uberon
+def: "Relation between occurrents, shares start and end boundaries." [Allen:is_equal_to, https://orcid.org/0000-0002-6601-2165]
+synonym: "coincides_with" EXACT []
+synonym: "is_equal_to" EXACT []
+xref: RO:0002082
+is_transitive: true
+is_a: ends ! ends
+is_a: RO:0002081 ! before or simultaneous with
+is_a: starts ! starts
+
+[Typedef]
 id: starts
 name: starts
 namespace: uberon
-def: "Relation between occurrents, shares a start boundary with." [Allen:starts, https://orcid.org/0000-0002-6601-2165]
+def: "inverse of starts with" []
 xref: RO:0002223
-is_a: part_of ! part_of
+is_a: part_of ! part of
+is_a: RO:0002222 ! temporally related to
 inverse_of: starts_with ! starts with
 
 [Typedef]
 id: starts_with
 name: starts with
 namespace: uberon
+def: "x starts with y if and only if x has part y and the time point at which x starts is equivalent to the time point at which y starts. Formally: α(y) = α(x) ∧ ω(y) < ω(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." []
 xref: RO:0002224
 is_transitive: true
-is_a: has_part ! has_part
+is_a: has_part ! has part
+is_a: RO:0002222 ! temporally related to
 
 [Typedef]
 id: substage_of
@@ -12954,5 +14486,15 @@ comment: Creating this relation as a temporary fix, pending adding the axiom occ
 xref: FBdv:00018001
 is_transitive: true
 is_a: happens_during ! happens during
-is_a: occurent_part_of ! occurent_part_of
+is_a: occurent_part_of ! occurent part of
+
+[Typedef]
+id: transformation_of
+name: transformation of
+namespace: uberon
+synonym: "transforms from" EXACT [SIO:000657]
+xref: RO:0002494
+property_value: seeAlso SIO:000657
+is_transitive: true
+is_a: develops_from ! develops from
 
