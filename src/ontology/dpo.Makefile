@@ -217,6 +217,10 @@ pre_release: $(ONT)-edit.owl clean_imports tmp/auto_generated_definitions_dot.ow
 	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_dot.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $(ONT)-edit-release.ofn && mv $(ONT)-edit-release.ofn $(ONT)-edit-release.owl
 	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
 	
+post_release: obo_qc
+	mv obo_qc_$(ONT).obo.txt reports/obo_qc_$(ONT).obo.txt
+	mv obo_qc_$(ONT).owl.txt reports/obo_qc_$(ONT).owl.txt
+	
 
 ########################
 ##    TRAVIS       #####
