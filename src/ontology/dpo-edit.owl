@@ -529,10 +529,6 @@ AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym"^
 
 AnnotationAssertion(rdfs:label oboInOwl:hasScope "has_scope"^^xsd:string)
 
-# Annotation Property: oboInOwl:inSubset (in_subset)
-
-AnnotationAssertion(rdfs:label oboInOwl:inSubset "in_subset"^^xsd:string)
-
 # Annotation Property: oboInOwl:shorthand (shorthand)
 
 AnnotationAssertion(rdfs:label oboInOwl:shorthand "shorthand"^^xsd:string)
@@ -975,7 +971,7 @@ SubClassOf(obo:FBcv_0000383 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0000384 (abnormal aging)
 
-AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:PO_curators"^^xsd:string) obo:IAO_0000115 obo:FBcv_0000384 "Phenotype that is any abnormality in aging (GO:0007568). 'aging' is defined as: '$sub_GO:0007568'"^^xsd:string)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "GOC:PO_curators") obo:IAO_0000115 obo:FBcv_0000384 "Phenotype that is any abnormality in aging (GO:0007568). 'aging' is defined as: '$sub_GO:0007568'"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000384 "aging defective"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000384 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000384 "FBcv:0000384"^^xsd:string)
@@ -1737,7 +1733,6 @@ SubClassOf(obo:FBcv_0000681 obo:FBcv_0001347)
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:DOS"^^xsd:string) obo:IAO_0000115 obo:FBcv_0000682 "Phenotype that is any abnormality in sensory perception of touch (GO:0050975). 'sensory perception of touch' is defined as: '$sub_GO:0050975'"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FBcv_0000682 "touch perception defective"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0000682 "phenotypic_class"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:FBcv_0000682 "touch perception defective"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0000682 "FBcv:0000682"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0000682 "abnormal touch perception"^^xsd:string)
 SubClassOf(obo:FBcv_0000682 obo:FBcv_0001347)
@@ -2038,7 +2033,7 @@ AnnotationAssertion(oboInOwl:id obo:FBcv_0001347 "FBcv:0001347"^^xsd:string)
 AnnotationAssertion(oboInOwl:inSubset obo:FBcv_0001347 fbcv:do_not_annotate)
 AnnotationAssertion(rdfs:comment obo:FBcv_0001347 "The subclasses of this term classify Drosophila phenotypes into different common categories. They have been chosen by FlyBase to reflect phenotype terms most often reported by Drosophila researchers in the published literature."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:FBcv_0001347 "phenotype"^^xsd:string)
-EquivalentClasses(obo:FBcv_0001347 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:BFO_0000019 ObjectSomeValuesFrom(obo:RO_0002314 owl:Thing))))
+EquivalentClasses(obo:FBcv_0001347 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:BFO_0000019 ObjectSomeValuesFrom(obo:RO_0002314 owl:Thing) ObjectSomeValuesFrom(obo:RO_0002573 obo:PATO_0000460))))
 SubClassOf(obo:FBcv_0001347 obo:FBcv_0000347)
 
 # Class: obo:FBcv_0002000 (lethal - all die before end of P-stage)
@@ -2724,7 +2719,7 @@ AnnotationAssertion(rdfs:comment obo:FBcv_0007522 "This will usually be measured
 AnnotationAssertion(rdfs:label obo:FBcv_0007522 "decreased long-term memory"@en)
 SubClassOf(obo:FBcv_0007522 obo:FBcv_0001347)
 
-# Class: obo:FBcv_0007523 (increased anethesia-resistant memory)
+# Class: obo:FBcv_0007523 (increased anesthesia-resistant memory)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:CP"^^xsd:string) obo:IAO_0000115 obo:FBcv_0007523 "Phenotype that is an increase in the efficacy of anesthesia-resistant memory (GO:0007615) relative to controls. 'anesthesia-resistant memory' is defined as: '$sub_GO:0007615'"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:FBcv_0007523 <http://orcid.org/0000-0002-1373-1705>)
@@ -2732,10 +2727,10 @@ AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0007523 "2021-08-06T12:08:22
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0007523 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0007523 "FBcv:0007523"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:FBcv_0007523 "This will usually be measured as an increased magnitude/rate of a behavioral output associated with anesthesia-resistant memory formation.")
-AnnotationAssertion(rdfs:label obo:FBcv_0007523 "increased anethesia-resistant memory"@en)
+AnnotationAssertion(rdfs:label obo:FBcv_0007523 "increased anesthesia-resistant memory"@en)
 SubClassOf(obo:FBcv_0007523 obo:FBcv_0001347)
 
-# Class: obo:FBcv_0007524 (decreased anethesia-resistant memory)
+# Class: obo:FBcv_0007524 (decreased anesthesia-resistant memory)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FBC:CP"^^xsd:string) obo:IAO_0000115 obo:FBcv_0007524 "Phenotype that is a decrease in the efficacy of anesthesia-resistant memory (GO:0007615) relative to controls. 'anesthesia-resistant memory' is defined as: '$sub_GO:0007615'"^^xsd:string)
 AnnotationAssertion(oboInOwl:created_by obo:FBcv_0007524 <http://orcid.org/0000-0002-1373-1705>)
@@ -2743,7 +2738,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:FBcv_0007524 "2021-08-06T12:10:03
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:FBcv_0007524 "phenotypic_class"^^xsd:string)
 AnnotationAssertion(oboInOwl:id obo:FBcv_0007524 "FBcv:0007524"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:FBcv_0007524 "This will usually be measured as a decreased magnitude/rate of a behavioral output associated with anesthesia-resistant memory formation.")
-AnnotationAssertion(rdfs:label obo:FBcv_0007524 "decreased anethesia-resistant memory"@en)
+AnnotationAssertion(rdfs:label obo:FBcv_0007524 "decreased anesthesia-resistant memory"@en)
 SubClassOf(obo:FBcv_0007524 obo:FBcv_0001347)
 
 # Class: obo:FBcv_0007525 (increased medium-term memory)
@@ -2769,6 +2764,5 @@ AnnotationAssertion(rdfs:label obo:FBcv_0007526 "decreased medium-term memory"@e
 SubClassOf(obo:FBcv_0007526 obo:FBcv_0001347)
 
 
-AnnotationAssertion(rdfs:label obo:IAO_0000589 "OBO Foundry Uniquename"^^xsd:string)
 AnnotationAssertion(rdfs:label oboInOwl:Subset "subset_oio"^^xsd:string)
 )
