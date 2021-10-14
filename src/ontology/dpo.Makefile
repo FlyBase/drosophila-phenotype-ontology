@@ -184,9 +184,9 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 #####################################################################################
 ### Regenerate placeholder definitions                                            ###
 #####################################################################################
-# There are two types of definitions that FBCV uses: "." (DOT-) definitions are those for which the formal 
-# definition is translated into a human readable definitions. "$sub_" (SUB-) definitions are those that have 
-# special placeholder string to substitute in definitions from external ontologies, mostly CHEBI
+# There are two types of definitions that FB ontologies use: "." (DOT-) definitions are those for which the formal 
+# definition is translated into a human readable definitions (not used in dpo). "$sub_" (SUB-) definitions are those that have 
+# special placeholder string to substitute in definitions from external ontologies, mostly GO
 
 tmp/auto_generated_definitions_seed_dot.txt: $(SRC)
 	$(ROBOT) query --use-graphs false -f csv -i $(SRC) --query ../sparql/dot-definitions.sparql $@.tmp &&\
@@ -207,14 +207,15 @@ tmp/merged-source-pre.owl: $(SRC) mirror/chebi.owl
 	$(ROBOT) merge -i $(SRC) -i mirror/chebi.owl --output $@
 
 tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_dot.txt
-	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_dot.txt flybase $@ NA add_dot_refs
+	java -Xmx3G -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_dot.txt flybase $@ NA add_dot_refs
 
 tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_sub.txt
-	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA source_xref
+	java -Xmx3G -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA source_xref
 
-pre_release: $(ONT)-edit.owl clean_imports tmp/auto_generated_definitions_dot.owl tmp/auto_generated_definitions_sub.owl #components/lethal_class_hierarchy.owl
+# only sub definitions, no dot
+pre_release: $(ONT)-edit.owl clean_imports tmp/auto_generated_definitions_sub.owl #tmp/auto_generated_definitions_dot.owl #components/lethal_class_hierarchy.owl
 	cat $(ONT)-edit.owl | grep -v 'AnnotationAssertion[(]obo[:]IAO[_]0000115.*\"[.]\"' | grep -v 'sub_' > tmp/$(ONT)-edit-release.owl
-	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_dot.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $(ONT)-edit-release.ofn && mv $(ONT)-edit-release.ofn $(ONT)-edit-release.owl
+	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $(ONT)-edit-release.ofn && mv $(ONT)-edit-release.ofn $(ONT)-edit-release.owl
 	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
 	
 post_release: obo_qc
