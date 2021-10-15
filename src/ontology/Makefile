@@ -262,7 +262,7 @@ PAT=true # Global parameter to bypass pattern generation
 mirror/fbdv.trigger: $(SRC)
 
 mirror/fbdv.owl: mirror/fbdv.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I https://raw.githubusercontent.com/FlyBase/drosophila-developmental-ontology/master/fbdv.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/fbdv.owl --create-dirs -o mirror/fbdv.owl --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/fbdv.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/fbdv.owl
 
 
@@ -334,7 +334,7 @@ mirror/ro.owl: mirror/ro.trigger
 mirror/chebi.trigger: $(SRC)
 
 mirror/chebi.owl: mirror/chebi.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/chebi.owl.gz -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/chebi.owl.gz --create-dirs -o mirror/chebi.owl.gz --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/chebi.owl.gz -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/chebi.owl
 
 

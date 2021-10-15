@@ -21,7 +21,6 @@ export_formats:
 import_group:
   products:
     - id: fbdv
-      mirror_from: https://raw.githubusercontent.com/FlyBase/drosophila-developmental-ontology/master/fbdv.owl
     - id: fbbt
     - id: cl
     - id: pco
@@ -30,10 +29,10 @@ import_group:
     - id: go
     - id: ro
     - id: chebi
-      mirror_from: http://purl.obolibrary.org/obo/chebi.owl.gz
+      use_gzipped: TRUE
     - id: pato
     - id: nbo
-robot_java_args: '-Xmx8G'
+robot_java_args: '-Xmx12G'
 allow_equivalents: all
 release_date: TRUE
 public_release: "github_curl"
