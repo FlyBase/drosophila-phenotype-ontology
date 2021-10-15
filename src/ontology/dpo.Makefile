@@ -19,10 +19,10 @@
 #.PRECIOUS: imports/fbdv_import.owl
 
 .PHONY: clean_imports
-clean_imports:  all_imports
-	for import in $(IMPORT_OWL_FILES) ; do \
+clean_imports:  $(IMPORT_FILES)
+	if [ $(IMP) = true ]; then for import in $(IMPORT_OWL_FILES) ; do \
 		$(ROBOT) merge -i $$import unmerge -i components/excluded-axioms.owl -o $$import ; \
-	done
+	done; fi
 
 tmp/all_patternised_classes.txt:
 	$(ROBOT) query --use-graphs false -f csv -i $(PATTERNDIR)/definitions.owl --query ../sparql/dpo-equivalent-classes.sparql $@.tmp
@@ -134,14 +134,8 @@ reports/chado_load_check_simple.txt: $(ONT)-simple.obo install_flybase_scripts
 	../scripts/chado_load_checks.pl $(ONT)-simple.obo > $@
 
 all_reports: all_reports_onestep $(REPORT_FILES)
-
-ASSETS = \
-  clean_imports \
-  $(MAIN_FILES) \
-  $(REPORT_FILES) \
-  $(SUBSET_FILES)
 		
-prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
+prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES) clean_imports
 	rsync -R $(ASSETS) $(RELEASEDIR) &&\
   mkdir -p $(RELEASEDIR)/patterns &&\
   cp $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
