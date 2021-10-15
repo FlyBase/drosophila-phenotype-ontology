@@ -18,44 +18,11 @@
 #		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 #.PRECIOUS: imports/fbdv_import.owl
 
-###############################################################
-########### Manage ORIGINAL DOSDP patterns! ###################
-# This is an isolated bit of code that can be deleted once the transition to the new pattern based system is complete.
-
-#original_tsvs := $(patsubst %.yaml, $(PATTERNDIR)/data/original/%.tsv, $(notdir $(wildcard $(PATTERNDIR)/dosdp-patterns/dpo*.yaml)))
-#pattern_term_lists_original := $(patsubst %.tsv, $(PATTERNDIR)/data/original/%.txt, $(notdir $(wildcard $(PATTERNDIR)/data/original/*.tsv)))
-#individual_patterns_original := $(patsubst %.tsv, $(PATTERNDIR)/data/original/%.ofn, $(notdir $(wildcard $(PATTERNDIR)/data/original/*.tsv)))
-
-#$(PATTERNDIR)/data/original/%.txt: $(PATTERNDIR)/dosdp-patterns/%.yaml $(PATTERNDIR)/data/original/%.tsv .FORCE
-#	dosdp-tools terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@
-
-#$(PATTERNDIR)/data/original/%.tsv:
-#	dosdp-tools query --ontology=$(SRC) --reasoner=elk --template=../patterns/dosdp-patterns/$*.yaml --obo-prefixes=true --outfile=$@
-
-#$(PATTERNDIR)/data/original/%.ofn: $(PATTERNDIR)/data/original/%.tsv $(PATTERNDIR)/dosdp-patterns/%.yaml $(SRC)
-#	dosdp-tools generate --catalog=catalog-v001.xml --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true --restrict-axioms-to=logical --outfile=$@
-
-#$(PATTERNDIR)/definitions_original.owl: $(individual_patterns_original)
-#	$(ROBOT) merge $(addprefix -i , $(individual_patterns_original)) \
-#	annotate --ontology-iri $(ONTBASE)/patterns/definitions_original.owl  --version-iri $(ONTBASE)/releases/$(TODAY)/patterns/definitions.owl -o definitions.ofn &&\
-#	mv definitions.ofn $@
-
-#prepare_patterns_orig:	
-#	touch $(pattern_term_lists_original) &&\
-#	touch $(individual_patterns_original)
-
-#$(PATTERNDIR)/data/to_do/%.ofn: $(PATTERNDIR)/data/to_do/%.tsv $(PATTERNDIR)/dosdp-patterns/%.yaml $(SRC)
-#	dosdp-tools generate --catalog=catalog-v001.xml --infile=$< --template=$(word 2, $^) --ontology=$(word 3, $^) --obo-prefixes=true --outfile=$@
-
-#test_xref_pattern: $(PATTERNDIR)/data/to_do/dpoAbnormalEntityTestXref.ofn
-
-#original_patterns: $(PATTERNDIR)/definitions_original.owl
-
 .PHONY: clean_imports
-clean_imports:  all_imports
-	for import in $(IMPORT_OWL_FILES) ; do \
+clean_imports:  $(IMPORT_FILES)
+	if [ $(IMP) = true ]; then for import in $(IMPORT_OWL_FILES) ; do \
 		$(ROBOT) merge -i $$import unmerge -i components/excluded-axioms.owl -o $$import ; \
-	done
+	done; fi
 
 tmp/all_patternised_classes.txt:
 	$(ROBOT) query --use-graphs false -f csv -i $(PATTERNDIR)/definitions.owl --query ../sparql/dpo-equivalent-classes.sparql $@.tmp
@@ -167,8 +134,8 @@ reports/chado_load_check_simple.txt: $(ONT)-simple.obo install_flybase_scripts
 	../scripts/chado_load_checks.pl $(ONT)-simple.obo > $@
 
 all_reports: all_reports_onestep $(REPORT_FILES)
-
-prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
+		
+prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES) clean_imports
 	rsync -R $(ASSETS) $(RELEASEDIR) &&\
   mkdir -p $(RELEASEDIR)/patterns &&\
   cp $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
@@ -187,6 +154,7 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 # There are two types of definitions that FB ontologies use: "." (DOT-) definitions are those for which the formal 
 # definition is translated into a human readable definitions (not used in dpo). "$sub_" (SUB-) definitions are those that have 
 # special placeholder string to substitute in definitions from external ontologies, mostly GO
+# dpo only uses SUB definitions
 
 tmp/auto_generated_definitions_seed_dot.txt: $(SRC)
 	$(ROBOT) query --use-graphs false -f csv -i $(SRC) --query ../sparql/dot-definitions.sparql $@.tmp &&\
@@ -198,13 +166,8 @@ tmp/auto_generated_definitions_seed_sub.txt: $(SRC)
 	cat $@.tmp | sort | uniq >  $@
 	rm -f $@.tmp
 
-mirror/chebi.owl: mirror/chebi.trigger
-	curl -L http://purl.obolibrary.org/obo/chebi.owl.gz --create-dirs -o mirror/chebi.owl.gz --retry 4 --max-time 120 &&\
-	$(ROBOT) convert -i mirror/chebi.owl.gz -o $@.tmp.owl &&\
-	mv $@.tmp.owl $@
-
-tmp/merged-source-pre.owl: $(SRC) mirror/chebi.owl
-	$(ROBOT) merge -i $(SRC) -i mirror/chebi.owl --output $@
+tmp/merged-source-pre.owl: $(SRC)
+	$(ROBOT) merge -i $(SRC) --output $@
 
 tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_dot.txt
 	java -Xmx3G -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_dot.txt flybase $@ NA add_dot_refs
@@ -213,7 +176,7 @@ tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_gener
 	java -Xmx3G -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA source_xref
 
 # only sub definitions, no dot
-pre_release: $(ONT)-edit.owl clean_imports tmp/auto_generated_definitions_sub.owl #tmp/auto_generated_definitions_dot.owl #components/lethal_class_hierarchy.owl
+pre_release: $(ONT)-edit.owl tmp/auto_generated_definitions_sub.owl #tmp/auto_generated_definitions_dot.owl #components/lethal_class_hierarchy.owl # clean_imports
 	cat $(ONT)-edit.owl | grep -v 'AnnotationAssertion[(]obo[:]IAO[_]0000115.*\"[.]\"' | grep -v 'sub_' > tmp/$(ONT)-edit-release.owl
 	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $(ONT)-edit-release.ofn && mv $(ONT)-edit-release.ofn $(ONT)-edit-release.owl
 	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
