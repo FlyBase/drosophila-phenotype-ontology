@@ -135,7 +135,7 @@ reports/chado_load_check_simple.txt: $(ONT)-simple.obo install_flybase_scripts
 
 all_reports: all_reports_onestep $(REPORT_FILES)
 		
-prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES) clean_imports
+prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 	rsync -R $(ASSETS) $(RELEASEDIR) &&\
   mkdir -p $(RELEASEDIR)/patterns &&\
   cp $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
@@ -176,7 +176,7 @@ tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_gener
 	java -Xmx3G -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA source_xref
 
 # only sub definitions, no dot
-pre_release: $(ONT)-edit.owl tmp/auto_generated_definitions_sub.owl #tmp/auto_generated_definitions_dot.owl #components/lethal_class_hierarchy.owl # clean_imports
+pre_release: $(ONT)-edit.owl tmp/auto_generated_definitions_sub.owl clean_imports #tmp/auto_generated_definitions_dot.owl #components/lethal_class_hierarchy.owl
 	cat $(ONT)-edit.owl | grep -v 'AnnotationAssertion[(]obo[:]IAO[_]0000115.*\"[.]\"' | grep -v 'sub_' > tmp/$(ONT)-edit-release.owl
 	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $(ONT)-edit-release.ofn && mv $(ONT)-edit-release.ofn $(ONT)-edit-release.owl
 	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
