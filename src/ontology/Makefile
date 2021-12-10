@@ -240,6 +240,15 @@ imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
 
 .PRECIOUS: imports/%_import.owl
 
+## Module for ontology: chebi
+
+imports/chebi_import.owl: mirror/chebi.owl imports/chebi_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) extract  -i $< -T imports/chebi_terms_combined.txt --force true --method BOT \
+		remove --base-iri $(URIBASE)/CHEBI --axioms external --preserve-structure false --trim false \
+		query --update ../sparql/inject-subset-declaration.ru \
+		remove $(patsubst %, --term %, $(ANNOTATION_PROPERTIES)) -T imports/chebi_terms_combined.txt --select complement --select "classes individuals annotation-properties" \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
 .PHONY: refresh-imports
 refresh-imports:
 	make IMP=true MIR=true PAT=false IMP_LARGE=true all_imports -B
