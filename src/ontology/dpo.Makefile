@@ -2,21 +2,17 @@
 ## 
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
-#FBDVPURL=http://purl.obolibrary.org/obo/FBdv_
-#OTHER_SRC:= $(OTHER_SRC) components/lethal_class_hierarchy.owl
 
-#imports/fbdv_filter_seed.txt: $(SRC) #$(ONTOLOGYTERMS) #prepare_patterns
-#	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/object-properties.sparql $@_prop.tmp &&\
-#	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/terms.sparql $@_fbdv.tmp &&\
-#	grep -Eo '($(FBDVPURL))[^[:space:]"]+' $@_fbdv.tmp | sort | uniq > $@_fbdv_red.tmp &&\
-#	cat $@_fbdv_red.tmp $@_prop.tmp | sort | uniq > $@ &&\
-#	rm $@_prop.tmp $@_fbdv.tmp $@_fbdv_red.tmp 
+# Using .SECONDEXPANSION to include custom FlyBase files in $(ASSETS). Also rsyncing $(IMPORTS) and $(REPORT_FILES).
+.SECONDEXPANSION:
+.PHONY: prepare_release
+prepare_release: $$(ASSETS) all_reports
+	rsync -R $(RELEASE_ASSETS) $(REPORT_FILES) $(FLYBASE_REPORTS) $(IMPORT_FILES) $(RELEASEDIR) &&\
+	mkdir -p $(RELEASEDIR)/patterns && cp -rf $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
+	rm -f $(CLEANFILES)
+	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
 
-#imports/fbdv_import.owl: mirror/fbdv.owl imports/fbdv_terms_combined.txt imports/fbdv_filter_seed.txt
-#	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T imports/fbdv_terms_combined.txt --method BOT \
-#		filter --term-file imports/fbdv_filter_seed.txt --trim true --select "annotations anonymous parents self" --preserve-structure false \
-#		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-#.PRECIOUS: imports/fbdv_import.owl
+CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS))
 
 .PHONY: clean_imports
 clean_imports:  $(IMPORT_FILES)
@@ -98,7 +94,14 @@ components/lethal_class_hierarchy.owl: $(SRC) tmp/lethal_terms.txt
 ### Code for generating additional FlyBase reports ###
 ######################################################
 
-REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt reports/onto_metrics_calc.txt reports/robot_simple_diff.txt reports/chado_load_check_simple.txt
+FLYBASE_REPORTS = reports/obo_qc_dpo.obo.txt reports/obo_qc_dpo.owl.txt reports/obo_track_new_simple.txt reports/robot_simple_diff.txt reports/onto_metrics_calc.txt reports/chado_load_check_simple.txt
+
+.PHONY: flybase_reports
+flybase_reports: $(FLYBASE_REPORTS)
+
+.PHONY: all_reports
+all_reports: custom_reports robot_reports flybase_reports
+
 
 SIMPLE_PURL = http://purl.obolibrary.org/obo/dpo/dpo-simple.obo
 LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
@@ -132,21 +135,12 @@ reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
 	
 reports/chado_load_check_simple.txt: $(ONT)-simple.obo install_flybase_scripts
 	../scripts/chado_load_checks.pl $(ONT)-simple.obo > $@
-
-all_reports: all_reports_onestep $(REPORT_FILES)
-		
-prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
-	rsync -R $(ASSETS) $(RELEASEDIR) &&\
-  mkdir -p $(RELEASEDIR)/patterns &&\
-  cp $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
-  echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on github"
 	
-# Simple is overwritten to strip out duplicate names and definitions.
-
-#simple_obo:
-#	$(ROBOT) convert --input dpo-simple.owl --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-#	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
-#	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\nname[:]/def:/g; print' > dpo-simple.obo
+reports/obo_qc_%.obo.txt:
+	$(ROBOT) report -i $*.obo --profile qc-profile.txt --fail-on ERROR --print 5 -o $@
+	
+reports/obo_qc_%.owl.txt:
+	$(ROBOT) report -i $*.owl --profile qc-profile.txt --fail-on None --print 5 -o $@
 
 #####################################################################################
 ### Regenerate placeholder definitions                                            ###
@@ -154,55 +148,20 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 # There are two types of definitions that FB ontologies use: "." (DOT-) definitions are those for which the formal 
 # definition is translated into a human readable definitions (not used in dpo). "$sub_" (SUB-) definitions are those that have 
 # special placeholder string to substitute in definitions from external ontologies, mostly GO
-# dpo only uses SUB definitions
+# dpo only uses SUB definitions - to use DOT, copy code and sparql from FBcv.
 
-tmp/auto_generated_definitions_seed_dot.txt: $(SRC)
-	$(ROBOT) query --use-graphs false -f csv -i $(SRC) --query ../sparql/dot-definitions.sparql $@.tmp &&\
-	cat $@.tmp | sort | uniq >  $@
-	rm -f $@.tmp
-	
-tmp/auto_generated_definitions_seed_sub.txt: $(SRC)
-	$(ROBOT) query --use-graphs false -f csv -i $(SRC) --query ../sparql/classes-with-placeholder-definitions.sparql $@.tmp &&\
-	cat $@.tmp | sort | uniq >  $@
-	rm -f $@.tmp
-
-tmp/merged-source-pre.owl: $(SRC)
+tmp/merged-source-pre.owl: $(SRC) clean_imports $(PATTERN_RELEASE_FILES)
 	$(ROBOT) merge -i $(SRC) --output $@
 
-tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_dot.txt
-	java -Xmx3G -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_dot.txt flybase $@ NA add_dot_refs
+tmp/auto_generated_definitions_seed_sub.txt: tmp/merged-source-pre.owl
+	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/classes-with-placeholder-definitions.sparql $@.tmp &&\
+	cat $@.tmp | sort | uniq >  $@
+	rm -f $@.tmp
 
 tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_sub.txt
 	java -Xmx3G -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA source_xref
 
-# only sub definitions, no dot
-pre_release: $(ONT)-edit.owl tmp/auto_generated_definitions_sub.owl clean_imports #tmp/auto_generated_definitions_dot.owl #components/lethal_class_hierarchy.owl
-	cat $(ONT)-edit.owl | grep -v 'AnnotationAssertion[(]obo[:]IAO[_]0000115.*\"[.]\"' | grep -v 'sub_' > tmp/$(ONT)-edit-release.owl
+pre_release: test $(SRC) tmp/auto_generated_definitions_sub.owl #components/lethal_class_hierarchy.owl
+	cat $(SRC) | grep -v 'sub_' > tmp/$(ONT)-edit-release.owl
 	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $(ONT)-edit-release.ofn && mv $(ONT)-edit-release.ofn $(ONT)-edit-release.owl
 	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
-	
-post_release: obo_qc
-	mv obo_qc_$(ONT).obo.txt reports/obo_qc_$(ONT).obo.txt
-	mv obo_qc_$(ONT).owl.txt reports/obo_qc_$(ONT).owl.txt
-	
-
-########################
-##    TRAVIS       #####
-########################
-
-obo_qc_%:
-	$(ROBOT) report -i $* --profile qc-profile.txt --fail-on ERROR --print 5 -o $@.txt
-	
-obo_qc_dpo.owl:
-	$(ROBOT) report -i dpo.owl --profile qc-profile.txt --fail-on None --print 5 -o $@.txt
-
-obo_qc: obo_qc_$(ONT).obo obo_qc_$(ONT).owl
-
-# All this removing is necessary to avoid problems with remove --term CARO:0000013 remove --term GO:0005623 
-flybase_qc.owl: odkversion obo_qc
-	$(ROBOT) merge -i $(ONT)-full.owl -i components/qc_assertions.owl -o $@
-
-flybase_qc: flybase_qc.owl
-	$(ROBOT) reason -i $< --reasoner ELK  --equivalent-classes-allowed asserted-only -o test.owl &&\
-	rm test.owl && echo "Success"
-	
