@@ -140,7 +140,7 @@ reports/obo_qc_%.obo.txt:
 	$(ROBOT) report -i $*.obo --profile qc-profile.txt --fail-on ERROR --print 5 -o $@
 	
 reports/obo_qc_%.owl.txt:
-	$(ROBOT) report -i $*.owl --profile qc-profile.txt --fail-on None --print 5 -o $@
+	$(ROBOT) report -i $*.owl --profile qc-profile.txt --fail-on ERROR --print 5 -o $@
 
 #####################################################################################
 ### Regenerate placeholder definitions                                            ###
