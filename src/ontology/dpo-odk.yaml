@@ -5,10 +5,10 @@ repo: drosophila-phenotype-ontology
 report_fail_on: none
 use_dosdps: TRUE
 dosdp_tools_options: "--obo-prefixes=true --restrict-axioms-to=logical"
-namespaces: 
+namespaces:
   - http://purl.obolibrary.org/obo/FBcv_
   - http://purl.obolibrary.org/obo/fbcv_
-release_artefacts: 
+release_artefacts:
   - base
   - simple
   - non-classified
@@ -20,6 +20,9 @@ export_formats:
   - json
 import_group:
   products:
+    - id: chebi
+      use_gzipped: TRUE
+      module_type: minimal
     - id: fbdv
     - id: fbbt
     - id: cl
@@ -28,9 +31,6 @@ import_group:
     - id: bfo
     - id: go
     - id: ro
-    - id: chebi
-      use_gzipped: TRUE
-      module_type: minimal
     - id: pato
     - id: nbo
 robot_java_args: '-Xmx12G'
