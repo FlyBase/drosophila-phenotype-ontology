@@ -1,5 +1,5 @@
 ## Customize Makefile settings for dpo
-## 
+##
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
@@ -27,7 +27,7 @@ tmp/all_patternised_classes.txt:
 tmp/all_defined_classes.txt: $(SRC)
 	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dpo-equivalent-classes.sparql $@.tmp
 	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
-	
+
 tmp/remaining_classes.txt: tmp/all_patternised_classes.txt tmp/all_defined_classes.txt
 	comm -13 $^ > $@
 
@@ -47,7 +47,7 @@ remove_patternised_classes: $(SRC) patternised_classes.txt
 	sed -i -r "/^EquivalentClasses[(].*($(shell cat patternised_classes.txt | xargs | sed -e 's/ /\|/g'))/d" $<
 
 ######################################################
-### Overwriting some default aretfacts ###
+### Overwriting some default artefacts ###
 ######################################################
 
 # Simple is overwritten to strip out duplicate names and definitions.
@@ -75,7 +75,7 @@ tmp/lethal_terms.txt: $(SRC)
 
 #tmp/lethal_terms_tsv.txt: $(SRC)
 #	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dpo-lethal-tsv.sparql $@.tmp
-#	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp	
+#	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
 # $(ROBOT) remove --input $< --select imports \
 
 #tmp/lethal_module.owl: $(SRC) tmp/lethal_terms.txt
@@ -129,24 +129,24 @@ reports/obo_track_new_simple.txt: $(LAST_DEPLOYED_SIMPLE) install_flybase_script
 
 reports/robot_simple_diff.txt: $(ONT)-simple.obo $(LAST_DEPLOYED_SIMPLE)
 	$(ROBOT) diff --left $(ONT)-simple.obo --right $(LAST_DEPLOYED_SIMPLE) --output $@
-	
+
 reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
 	../scripts/onto_metrics_calc.pl 'phenotypic_class' $(ONT)-simple.obo > $@
-	
+
 reports/chado_load_check_simple.txt: $(ONT)-simple.obo install_flybase_scripts
 	../scripts/chado_load_checks.pl $(ONT)-simple.obo > $@
-	
+
 reports/obo_qc_%.obo.txt:
 	$(ROBOT) report -i $*.obo --profile qc-profile.txt --fail-on ERROR --print 5 -o $@
-	
+
 reports/obo_qc_%.owl.txt:
 	$(ROBOT) report -i $*.owl --profile qc-profile.txt --fail-on ERROR --print 5 -o $@
 
 #####################################################################################
 ### Regenerate placeholder definitions                                            ###
 #####################################################################################
-# There are two types of definitions that FB ontologies use: "." (DOT-) definitions are those for which the formal 
-# definition is translated into a human readable definitions (not used in dpo). "$sub_" (SUB-) definitions are those that have 
+# There are two types of definitions that FB ontologies use: "." (DOT-) definitions are those for which the formal
+# definition is translated into a human readable definitions (not used in dpo). "$sub_" (SUB-) definitions are those that have
 # special placeholder string to substitute in definitions from external ontologies, mostly GO
 # dpo only uses SUB definitions - to use DOT, copy code and sparql from FBcv.
 
