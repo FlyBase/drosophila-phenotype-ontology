@@ -6,7 +6,7 @@
 # Using .SECONDEXPANSION to include custom FlyBase files in $(ASSETS). Also rsyncing $(IMPORTS) and $(REPORT_FILES).
 .SECONDEXPANSION:
 .PHONY: prepare_release
-prepare_release: $$(ASSETS) all_reports
+prepare_release: $$(ASSETS) release_reports
 	rsync -R $(RELEASE_ASSETS) $(REPORT_FILES) $(FLYBASE_REPORTS) $(IMPORT_FILES) $(RELEASEDIR) &&\
 	mkdir -p $(RELEASEDIR)/patterns && cp -rf $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
 	rm -f $(CLEANFILES)
@@ -102,6 +102,8 @@ flybase_reports: $(FLYBASE_REPORTS)
 .PHONY: all_reports
 all_reports: custom_reports robot_reports flybase_reports
 
+.PHONY: release_reports
+release_reports: robot_reports flybase_reports
 
 SIMPLE_PURL = http://purl.obolibrary.org/obo/dpo/dpo-simple.obo
 LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
