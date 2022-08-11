@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: dpo/releases/2022-06-09/dpo-simple.owl
-date: 09:06:2022 14:19
+data-version: dpo/releases/2022-08-11/dpo-simple.owl
+date: 11:08:2022 12:43
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -39,12 +39,12 @@ property_value: attributionURL http://dx.doi.org/10.1186/2041-1480-4-30 xsd:stri
 property_value: dc-description "An ontology for the description of Drosophila melanogaster phenotypes." xsd:string
 property_value: dc-title "Drosophila Phenotype Ontology (DPO)" xsd:string
 property_value: dcterms-license https://creativecommons.org/licenses/by/4.0/ xsd:string
+property_value: has_ontology_root_term FBcv:0000347
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-1373-1705 xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-7073-9172 xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0001-5948-3092 xsd:string
 property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0002-0027-0858 xsd:string
-property_value: IAO:0000700 FBcv:0000347
-property_value: owl:versionInfo "2022-06-09" xsd:string
+property_value: owl:versionInfo "2022-08-11" xsd:string
 
 [Term]
 id: FBcv:0000002
@@ -106,8 +106,8 @@ def: "A phenotype that is an expansion of the developing embryonic nervous syste
 comment: Typically this is caused by and expansion of the population of neuroblasts at the expense of prospective epidermis, both of which originate in the ventral ectoderm.
 subset: fbcvsubset_mgiribbons
 is_a: FBcv:0001347 ! phenotype
-created_by: djs93
-creation_date: 2011-09-13T02:42:10Z
+relationship: dc-contributor http://orcid.org/0000-0002-7073-9172
+property_value: http://purl.org/dc/terms/date 2011-09-13T02:42:10Z xsd:dateTime
 
 [Term]
 id: FBcv:0000347
@@ -1076,8 +1076,8 @@ def: "Phenotype that is any abnormality in circadian behavior (GO:0048512). 'cir
 synonym: "circadian behavior defective" EXACT []
 is_a: FBcv:0000387 ! abnormal behavior
 is_a: FBcv:0000394 ! abnormal circadian rhythm
-created_by: djs93
-creation_date: 2009-11-30T11:06:35Z
+relationship: dc-contributor http://orcid.org/0000-0002-7073-9172
+property_value: http://purl.org/dc/terms/date 2009-11-30T11:06:35Z xsd:dateTime
 
 [Term]
 id: FBcv:0000680
@@ -1095,8 +1095,8 @@ def: "Phenotype that is any abnormality in sensory perception (GO:0007600). 'sen
 subset: fbcvsubset_mgiribbons
 synonym: "sensory perception defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-created_by: djs93
-creation_date: 2010-02-23T12:28:26Z
+relationship: dc-contributor http://orcid.org/0000-0002-7073-9172
+property_value: http://purl.org/dc/terms/date 2010-02-23T12:28:26Z xsd:dateTime
 
 [Term]
 id: FBcv:0000682
@@ -1114,8 +1114,8 @@ def: "Phenotype that is any abnormality in response to temperature stimulus (GO:
 subset: fbcvsubset_mgiribbons
 synonym: "temperature response defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-created_by: djs93
-creation_date: 2010-02-23T12:51:02Z
+relationship: dc-contributor http://orcid.org/0000-0002-7073-9172
+property_value: http://purl.org/dc/terms/date 2010-02-23T12:51:02Z xsd:dateTime
 
 [Term]
 id: FBcv:0000684
@@ -1125,8 +1125,8 @@ def: "Phenotype that is any abnormality in response to cold (GO:0009409). 'respo
 synonym: "cold stress response defective" EXACT []
 is_a: FBcv:0000408 ! abnormal stress response
 is_a: FBcv:0000683 ! abnormal temperature response
-created_by: djs93
-creation_date: 2010-02-23T02:11:27Z
+relationship: dc-contributor http://orcid.org/0000-0002-7073-9172
+property_value: http://purl.org/dc/terms/date 2010-02-23T02:11:27Z xsd:dateTime
 
 [Term]
 id: FBcv:0000686
@@ -1195,8 +1195,8 @@ def: "Phenotype that is any abnormality in sleep (GO:0030431). 'sleep' is define
 subset: fbcvsubset_mgiribbons
 synonym: "sleep defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-created_by: djs93
-creation_date: 2010-09-20T12:06:13Z
+relationship: dc-contributor http://orcid.org/0000-0002-7073-9172
+property_value: http://purl.org/dc/terms/date 2010-09-20T12:06:13Z xsd:dateTime
 
 [Term]
 id: FBcv:0000706
@@ -1205,8 +1205,8 @@ namespace: phenotypic_class
 def: "Phenotype that is any abnormality in entry into diapause (GO:0055115). 'entry into diapause' is defined as: 'The dormancy process that results in entry into diapause. Diapause is a neurohormonally mediated, dynamic state of low metabolic activity. Associated characteristics of this form of dormancy include reduced morphogenesis, increased resistance to environmental extremes, and altered or reduced behavioral activity. Full expression develops in a species-specific manner, usually in response to a number of environmental stimuli that precede unfavorable conditions. Once diapause has begun, metabolic activity is suppressed even if conditions favorable for development prevail. Once initiated, only certain stimuli are capable of releasing the organism from this state, and this characteristic is essential in distinguishing diapause from hibernation.'" [FBC:DOS, GOC:ds, GOC:jid, GOC:mah]
 synonym: "diapause defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
-created_by: djs93
-creation_date: 2010-09-20T12:06:28Z
+relationship: dc-contributor http://orcid.org/0000-0002-7073-9172
+property_value: http://purl.org/dc/terms/date 2010-09-20T12:06:28Z xsd:dateTime
 
 [Term]
 id: FBcv:0000707
@@ -1215,8 +1215,8 @@ namespace: phenotypic_class
 def: "Phenotype that is any abnormality in entry into reproductive diapause (GO:0055116). 'entry into reproductive diapause' is defined as: 'The dormancy process that results in entry into reproductive diapause. Reproductive diapause is a form of diapause where the organism itself will remain fully active, including feeding and other routine activities, but the reproductive organs experience a tissue-specific reduction in metabolism, with characteristic triggering and releasing stimuli.'" [FBC:DOS, GOC:ds, GOC:jid, GOC:mah]
 synonym: "reproductive diapause defective" EXACT []
 is_a: FBcv:0000706 ! abnormal diapause
-created_by: djs93
-creation_date: 2010-09-20T12:21:29Z
+relationship: dc-contributor http://orcid.org/0000-0002-7073-9172
+property_value: http://purl.org/dc/terms/date 2010-09-20T12:21:29Z xsd:dateTime
 
 [Term]
 id: FBcv:0000708
@@ -1241,8 +1241,8 @@ name: jumpless
 namespace: phenotypic_class
 def: "Phenotype that is a inability to jump. This may be due to neurological or muscular defects." [FBC:DOS]
 is_a: FBcv:0000415 ! abnormal jumping
-created_by: djs93
-creation_date: 2011-03-10T04:57:06Z
+relationship: dc-contributor http://orcid.org/0000-0002-7073-9172
+property_value: http://purl.org/dc/terms/date 2011-03-10T04:57:06Z xsd:dateTime
 
 [Term]
 id: FBcv:0000716
@@ -1273,8 +1273,8 @@ name: atrophy
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in size of an initially normally sized organ or tissue due to wasting away of cells." [FBC:DOS]
 is_a: FBcv:0007508 ! decreased size
-created_by: djs93
-creation_date: 2011-03-10T05:59:04Z
+relationship: dc-contributor http://orcid.org/0000-0002-7073-9172
+property_value: http://purl.org/dc/terms/date 2011-03-10T05:59:04Z xsd:dateTime
 
 [Term]
 id: FBcv:0000720
@@ -1284,8 +1284,8 @@ def: "Phenotype that is any abnormality or in or absence of a jump response (GO:
 synonym: "jump response defective" EXACT []
 is_a: FBcv:0000414 ! abnormal locomotor behavior
 is_a: FBcv:0000415 ! abnormal jumping
-created_by: djs93
-creation_date: 2011-03-11T08:03:28Z
+relationship: dc-contributor http://orcid.org/0000-0002-7073-9172
+property_value: http://purl.org/dc/terms/date 2011-03-11T08:03:28Z xsd:dateTime
 
 [Term]
 id: FBcv:0000721
@@ -1331,8 +1331,8 @@ name: terminal phenotype
 namespace: phenotypic_class
 def: "Embryonic/larval segmentation phenotype that is the complete or partial loss of terminal regions of the embryo/larva: the acron, telson and immediately adjacent segments." [FBC:DOS]
 is_a: FBcv:0000698 ! embryonic/larval segmentation phenotype
-created_by: djs93
-creation_date: 2011-09-13T02:31:53Z
+relationship: dc-contributor http://orcid.org/0000-0002-7073-9172
+property_value: http://purl.org/dc/terms/date 2011-09-13T02:31:53Z xsd:dateTime
 
 [Term]
 id: FBcv:0000791
@@ -1799,8 +1799,8 @@ name: abnormal anesthesia-resistant memory
 namespace: phenotypic_class
 def: "Phenotype that is any abnormality in anesthesia-resistant memory (GO:0007615). 'anesthesia-resistant memory' is defined as: 'The memory process that results in the formation of consolidated memory resistant to disruption of the patterned activity of the brain, without requiring protein synthesis.'" [PMID:15143285, PMID:17088531]
 is_a: FBcv:0000398 ! abnormal memory
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-15T14:46:41Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-15T14:46:41Z xsd:dateTime
 
 [Term]
 id: FBcv:0007501
@@ -1808,8 +1808,8 @@ name: abnormal short-term memory
 namespace: phenotypic_class
 def: "Phenotype that is any abnormality in short-term memory (GO:0007614). 'short-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information received a short time (up to about 30 minutes) ago. This type of memory is typically dependent on direct, transient effects of second messenger activation.'" [http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
 is_a: FBcv:0000398 ! abnormal memory
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-15T14:50:19Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-15T14:50:19Z xsd:dateTime
 
 [Term]
 id: FBcv:0007502
@@ -1817,8 +1817,8 @@ name: abnormal medium-term memory
 namespace: phenotypic_class
 def: "Phenotype that is any abnormality in medium-term memory (GO:0072375). 'medium-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information received at a time ago that is intermediate between that of short and long term memory (30min - 7hrs in Drosophila melanogaster).'" [GOC:sart, PMID:14659098, PMID:7923375]
 is_a: FBcv:0000398 ! abnormal memory
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-15T14:51:08Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-15T14:51:08Z xsd:dateTime
 
 [Term]
 id: FBcv:0007503
@@ -1826,8 +1826,8 @@ name: abnormal long-term memory
 namespace: phenotypic_class
 def: "Phenotype that is any abnormality in long-term memory (GO:0007616). 'long-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information a long time (typically weeks, months or years) after receiving that information. This type of memory is typically dependent on gene transcription regulated by second messenger activation.'" [http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
 is_a: FBcv:0000398 ! abnormal memory
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-15T14:51:45Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-15T14:51:45Z xsd:dateTime
 
 [Term]
 id: FBcv:0007504
@@ -1835,8 +1835,8 @@ name: abnormal body weight
 namespace: phenotypic_class
 def: "Phenotype that is any abnormality in body weight compared to identically raised wild-type controls." [FBC:CP]
 is_a: FBcv:0001347 ! phenotype
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-15T15:47:07Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-15T15:47:07Z xsd:dateTime
 
 [Term]
 id: FBcv:0007505
@@ -1844,8 +1844,8 @@ name: increased body weight
 namespace: phenotypic_class
 def: "Phenotype that is an increase in body weight compared to identically raised wild-type controls." [FBC:CP]
 is_a: FBcv:0007504 ! abnormal body weight
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-15T15:50:18Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-15T15:50:18Z xsd:dateTime
 
 [Term]
 id: FBcv:0007506
@@ -1853,8 +1853,8 @@ name: decreased body weight
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in body weight compared to identically raised wild-type controls." [FBC:CP]
 is_a: FBcv:0007504 ! abnormal body weight
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-15T15:50:44Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-15T15:50:44Z xsd:dateTime
 
 [Term]
 id: FBcv:0007507
@@ -1862,8 +1862,8 @@ name: increased size
 namespace: phenotypic_class
 def: "A phenotype that is an increase in the size of the whole body or some body part compared to wild-type." [FBC:CP]
 is_a: FBcv:0000357 ! abnormal size
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-15T15:52:00Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-15T15:52:00Z xsd:dateTime
 
 [Term]
 id: FBcv:0007508
@@ -1871,8 +1871,8 @@ name: decreased size
 namespace: phenotypic_class
 def: "A phenotype that is a decrease in the size of the whole body or some body part compared to wild-type." [FBC:CP]
 is_a: FBcv:0000357 ! abnormal size
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-15T15:52:59Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-15T15:52:59Z xsd:dateTime
 
 [Term]
 id: FBcv:0007509
@@ -1880,8 +1880,8 @@ name: increased rate of phototaxis
 namespace: phenotypic_class
 def: "Phenotype that is an increase in the rate of phototaxis (GO:0042331). 'phototaxis' is defined as: 'The directed movement of a motile cell or organism in response to light.'" [FBC:CP, GOC:jl, ISBN:0192800981]
 is_a: FBcv:0000413 ! abnormal phototaxis
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-16T09:10:39Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-16T09:10:39Z xsd:dateTime
 
 [Term]
 id: FBcv:0007510
@@ -1889,8 +1889,8 @@ name: decreased rate of phototaxis
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in the rate of phototaxis (GO:0042331). 'phototaxis' is defined as: 'The directed movement of a motile cell or organism in response to light.'" [FBC:CP, GOC:jl, ISBN:0192800981]
 is_a: FBcv:0000413 ! abnormal phototaxis
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-16T09:20:20Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-16T09:20:20Z xsd:dateTime
 
 [Term]
 id: FBcv:0007511
@@ -1898,8 +1898,8 @@ name: increased rate of cell adhesion
 namespace: phenotypic_class
 def: "Phenotype that is an increase in the rate of cell adhesion (GO:0007155). 'cell adhesion' is defined as: 'The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.'" [FBC:CP, GOC:hb, GOC:pf]
 is_a: FBcv:0000668 ! abnormal cell adhesion
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-16T09:21:22Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-16T09:21:22Z xsd:dateTime
 
 [Term]
 id: FBcv:0007512
@@ -1907,8 +1907,8 @@ name: decreased rate of cell adhesion
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in the rate of cell adhesion (GO:0007155). 'cell adhesion' is defined as: 'The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.'" [FBC:CP, GOC:hb, GOC:pf]
 is_a: FBcv:0000668 ! abnormal cell adhesion
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-16T09:22:22Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-16T09:22:22Z xsd:dateTime
 
 [Term]
 id: FBcv:0007513
@@ -1916,8 +1916,8 @@ name: increased sleep
 namespace: phenotypic_class
 def: "Phenotype that is an increase in the total amount or frequency of sleep (GO:0030431) over a given time interval, compared to wild-type. 'sleep' is defined as: 'Any process in which an organism enters and maintains a periodic, readily reversible state of reduced awareness and metabolic activity. Usually accompanied by physical relaxation, the onset of sleep in humans and other mammals is marked by a change in the electrical activity of the brain.'" [FBC:CP, ISBN:0192800981]
 is_a: FBcv:0000705 ! abnormal sleep
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-16T12:02:45Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-16T12:02:45Z xsd:dateTime
 
 [Term]
 id: FBcv:0007514
@@ -1925,8 +1925,8 @@ name: decreased sleep
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in the total amount or frequency of sleep (GO:0030431) over a given time interval, compared to wild-type. 'sleep' is defined as: 'Any process in which an organism enters and maintains a periodic, readily reversible state of reduced awareness and metabolic activity. Usually accompanied by physical relaxation, the onset of sleep in humans and other mammals is marked by a change in the electrical activity of the brain.'" [FBC:CP, ISBN:0192800981]
 is_a: FBcv:0000705 ! abnormal sleep
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-16T12:12:40Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-16T12:12:40Z xsd:dateTime
 
 [Term]
 id: FBcv:0007515
@@ -1934,8 +1934,8 @@ name: increased feeding behavior
 namespace: phenotypic_class
 def: "Phenotype that is an increase in the total amount or frequency of feeding behavior (GO:0007631) over a given time interval, compared to wild-type. 'feeding behavior' is defined as: 'Behavior associated with the intake of food.'" [FBC:DOS, GOC:mah]
 is_a: FBcv:0000419 ! abnormal feeding behavior
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-16T12:14:26Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-16T12:14:26Z xsd:dateTime
 
 [Term]
 id: FBcv:0007516
@@ -1943,8 +1943,8 @@ name: decreased feeding behavior
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in the total amount or frequency of feeding behavior (GO:0007631) over a given time interval, compared to wild-type. 'feeding behavior' is defined as: 'Behavior associated with the intake of food.'" [FBC:DOS, GOC:mah]
 is_a: FBcv:0000419 ! abnormal feeding behavior
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2020-12-16T12:16:19Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2020-12-16T12:16:19Z xsd:dateTime
 
 [Term]
 id: FBcv:0007517
@@ -1953,8 +1953,8 @@ namespace: phenotypic_class
 def: "Phenotype that is an increase in the efficacy of memory (GO:0007613) relative to controls. 'memory' is defined as: 'The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).'" [FBC:CP, GOC:curators, ISBN:0582227089]
 comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with memory formation.
 is_a: FBcv:0000398 ! abnormal memory
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2021-08-06T11:45:09Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2021-08-06T11:45:09Z xsd:dateTime
 
 [Term]
 id: FBcv:0007518
@@ -1963,8 +1963,8 @@ namespace: phenotypic_class
 def: "Phenotype that is a decrease in the efficacy of memory (GO:0007613) relative to controls. 'memory' is defined as: 'The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).'" [FBC:CP, GOC:curators, ISBN:0582227089]
 comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with memory formation.
 is_a: FBcv:0000398 ! abnormal memory
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2021-08-06T11:55:18Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2021-08-06T11:55:18Z xsd:dateTime
 
 [Term]
 id: FBcv:0007519
@@ -1974,8 +1974,8 @@ def: "Phenotype that is an increase in the efficacy of short-term memory (GO:000
 comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with short-term memory formation.
 is_a: FBcv:0007501 ! abnormal short-term memory
 is_a: FBcv:0007517 ! increased memory
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2021-08-06T11:56:41Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2021-08-06T11:56:41Z xsd:dateTime
 
 [Term]
 id: FBcv:0007520
@@ -1985,8 +1985,8 @@ def: "Phenotype that is a decrease in the efficacy of short-term memory (GO:0007
 comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with short-term memory formation.
 is_a: FBcv:0007501 ! abnormal short-term memory
 is_a: FBcv:0007518 ! decreased memory
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2021-08-06T11:57:17Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2021-08-06T11:57:17Z xsd:dateTime
 
 [Term]
 id: FBcv:0007521
@@ -1996,8 +1996,8 @@ def: "Phenotype that is an increase in the efficacy of long-term memory (GO:0007
 comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with long-term memory formation.
 is_a: FBcv:0007503 ! abnormal long-term memory
 is_a: FBcv:0007517 ! increased memory
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2021-08-06T12:02:59Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2021-08-06T12:02:59Z xsd:dateTime
 
 [Term]
 id: FBcv:0007522
@@ -2007,8 +2007,8 @@ def: "Phenotype that is a decrease in the efficacy of long-term memory (GO:00076
 comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with long-term memory formation.
 is_a: FBcv:0007503 ! abnormal long-term memory
 is_a: FBcv:0007518 ! decreased memory
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2021-08-06T12:04:30Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2021-08-06T12:04:30Z xsd:dateTime
 
 [Term]
 id: FBcv:0007523
@@ -2018,8 +2018,8 @@ def: "Phenotype that is an increase in the efficacy of anesthesia-resistant memo
 comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with anesthesia-resistant memory formation.
 is_a: FBcv:0007500 ! abnormal anesthesia-resistant memory
 is_a: FBcv:0007517 ! increased memory
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2021-08-06T12:08:22Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2021-08-06T12:08:22Z xsd:dateTime
 
 [Term]
 id: FBcv:0007524
@@ -2029,8 +2029,8 @@ def: "Phenotype that is a decrease in the efficacy of anesthesia-resistant memor
 comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with anesthesia-resistant memory formation.
 is_a: FBcv:0007500 ! abnormal anesthesia-resistant memory
 is_a: FBcv:0007518 ! decreased memory
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2021-08-06T12:10:03Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2021-08-06T12:10:03Z xsd:dateTime
 
 [Term]
 id: FBcv:0007525
@@ -2040,8 +2040,8 @@ def: "Phenotype that is an increase in the efficacy of medium-term memory (GO:00
 comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with medium-term memory formation.
 is_a: FBcv:0007502 ! abnormal medium-term memory
 is_a: FBcv:0007517 ! increased memory
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2021-08-06T12:11:31Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2021-08-06T12:11:31Z xsd:dateTime
 
 [Term]
 id: FBcv:0007526
@@ -2051,8 +2051,8 @@ def: "Phenotype that is a decrease in the efficacy of medium-term memory (GO:007
 comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with medium-term memory formation.
 is_a: FBcv:0007502 ! abnormal medium-term memory
 is_a: FBcv:0007518 ! decreased memory
-created_by: http://orcid.org/0000-0002-1373-1705
-creation_date: 2021-08-06T12:12:48Z
+relationship: dc-contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2021-08-06T12:12:48Z xsd:dateTime
 
 [Typedef]
 id: FBcv:0008000
@@ -2118,6 +2118,13 @@ is_functional: true
 is_a: RO:0002314 ! characteristic of part of
 
 [Typedef]
+id: dc-contributor
+name: contributor
+namespace: uberon
+xref: http://purl.org/dc/terms/contributor
+is_metadata_tag: true
+
+[Typedef]
 id: dc-description
 name: description
 namespace: uberon
@@ -2147,6 +2154,16 @@ xref: RO:0002351
 property_value: IAO:0000119 "SIO" xsd:string
 property_value: RO:0001900 RO:0001901
 is_a: has_part ! has part
+
+[Typedef]
+id: has_ontology_root_term
+name: has ontology root term
+namespace: uberon
+def: "Ontology annotation property. Relates an ontology to a term that is a designated root term of the ontology. Display tools like OLS can use terms annotated with this property as the starting point for rendering the ontology class hierarchy. There can be more than one root." []
+xref: IAO:0000700
+property_value: IAO:0000111 "has ontology root term" xsd:string
+property_value: IAO:0000117 "Nicolas Matentzoglu" xsd:string
+is_metadata_tag: true
 
 [Typedef]
 id: has_part
