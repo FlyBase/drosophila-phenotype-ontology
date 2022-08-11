@@ -9,6 +9,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:caro="http://purl.obolibrary.org/obo/caro#"
+     xmlns:fbbt="http://purl.obolibrary.org/obo/fbbt#"
      xmlns:pato="http://purl.obolibrary.org/obo/pato#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
@@ -17,15 +18,16 @@
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:chebi2="http://purl.obolibrary.org/obo/chebi#3"
-     xmlns:chebi3="http://purl.obolibrary.org/obo/chebi#1"
+     xmlns:chebi2="http://purl.obolibrary.org/obo/chebi#"
+     xmlns:chebi3="http://purl.obolibrary.org/obo/chebi#3"
+     xmlns:chebi4="http://purl.obolibrary.org/obo/chebi#1"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:oboInOwl1="ttp://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo/imports/caro_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2022-06-09/imports/caro_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2022-08-11/imports/caro_import.owl"/>
         <dc:source rdf:resource="http://purl.obolibrary.org/obo/caro/releases/2022-02-18/caro.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-06-09</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-08-11</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -270,6 +272,14 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/chebi#IUPAC_NAME -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi#IUPAC_NAME">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/chebi#1_STAR -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi#1_STAR">
@@ -325,6 +335,14 @@
     <!-- http://purl.obolibrary.org/obo/chebi/smiles -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi/smiles"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/fbbt#IUPAC_NAME -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/fbbt#IUPAC_NAME">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    </owl:AnnotationProperty>
     
 
 
