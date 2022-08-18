@@ -69,26 +69,25 @@ $(ONT).obo: $(ONT)-simple.owl
 ### Code for generating class hierarchy for lethal terms ###
 ############################################################
 
-tmp/lethal_terms.txt: $(SRC)
-	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dpo-lethal.sparql $@.tmp
+$(TMPDIR)/lethal_terms.txt: $(SRC)
+	$(ROBOT) query --use-graphs false -f csv -i $< --query $(SPARQLDIR)/dpo-lethal.sparql $@.tmp
 	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
 
-#tmp/lethal_terms_tsv.txt: $(SRC)
-#	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dpo-lethal-tsv.sparql $@.tmp
-#	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
-# $(ROBOT) remove --input $< --select imports \
+$(TMPDIR)/lethal_extract.owx: $(SRC) $(TMPDIR)/lethal_terms.txt
+	grep -v "lethal_class_hierarchy.owl" $< > $(TMPDIR)/dpo-tmp.ofn &&\
+	grep -v "lethal_class_hierarchy.owl" catalog-v001.xml > catalog-tmp.xml &&\
+	robot --catalog catalog-tmp.xml merge --input $(TMPDIR)/dpo-tmp.ofn \
+	remove --term FBcv:0000347 --select "self descendants" --exclude-terms $(TMPDIR)/lethal_terms.txt --exclude-term FBcv:0001347 --exclude-term FBcv:0000349 --trim true \
+	remove --select "UBERON:* CHEBI:* GO:*" \
+	extract --term-file $(TMPDIR)/lethal_terms.txt --force true --method STAR \
+	convert --output $@ &&\
+	rm catalog-tmp.xml $(TMPDIR)/dpo-tmp.ofn
 
-#tmp/lethal_module.owl: $(SRC) tmp/lethal_terms.txt
-#	$(ROBOT) extract --input $< -T tmp/lethal_terms.txt --force true --imports exclude --method STAR \
-#		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@;
-
-components/lethal_class_hierarchy.owl: $(SRC) tmp/lethal_terms.txt
-	rm $@ && touch $@
-	$(ROBOT) merge --input $< \
-		convert --output tmp/edit.owx
-	Konclude classification -i tmp/edit.owx -o tmp/konclude-edit.owx
-	$(ROBOT) filter -i tmp/konclude-edit.owx -T tmp/lethal_terms.txt --trim false \
-	annotate --ontology-iri $(ONTBASE)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
+$(COMPONENTSDIR)/lethal_class_hierarchy.owl: $(TMPDIR)/lethal_extract.owx $(TMPDIR)/lethal_terms.txt
+	Konclude classification -i $< -o $(TMPDIR)/konclude-edit.owx &&\
+	$(ROBOT) filter -i $(TMPDIR)/konclude-edit.owx -T $(TMPDIR)/lethal_terms.txt --trim false \
+	annotate --ontology-iri $(ONTBASE)/$@ --output $@ &&\
+	rm $< $(TMPDIR)/konclude-edit.owx
 
 ######################################################
 ### Code for generating additional FlyBase reports ###
