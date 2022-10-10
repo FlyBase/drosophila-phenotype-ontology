@@ -17,9 +17,9 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo/imports/fbdv_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2022-08-15/imports/fbdv_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/fbdv/releases/2022-08-10/fbdv.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-08-15</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2022-10-10/imports/fbdv_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/fbdv/releases/2022-08-17/fbdv.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-10-10</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1112,9 +1112,14 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000118>ends_at_start_of</obo:IAO_0000118>
         <obo:IAO_0000118>meets</obo:IAO_0000118>
         <obo:RO_0002575 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000063"/>
+        <oboInOwl:hasDbXref>RO:0002090</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>FlyBase_development_CV</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>immediately_precedes</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
+        <oboInOwl:shorthand>immediately_precedes</oboInOwl:shorthand>
         <rdfs:comment xml:lang="en">X immediately_precedes_Y iff: end(X) simultaneous_with start(Y)</rdfs:comment>
         <rdfs:label xml:lang="en">immediately precedes</rdfs:label>
+        <rdfs:label>immediately_precedes</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -3636,6 +3641,18 @@ For example, A and B may be gene products and binding of B by A positively regul
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005287"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005336"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005337"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The stage of the Drosophila life-cycle from fertilization to hatching.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>FlyBase_development_CV</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBdv:00005289</oboInOwl:id>
@@ -4785,6 +4802,18 @@ For example, A and B may be gene products and binding of B by A positively regul
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007018"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005342"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The stage of the Drosophila life-cycle from hatching to the beginning of puparium formation.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>FlyBase_development_CV</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBdv:00005336</oboInOwl:id>
@@ -4834,6 +4863,12 @@ For example, A and B may be gene products and binding of B by A positively regul
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007018"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005338"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The first larval instar begins at hatching and ends at the first larval molt. Anterior spiracles are not yet present; posterior spiracles have two openings each. Salivary glands are very small and all cells are uniform in size. Mouth hooks typically have one tooth. Duration at 25 degrees C: approximately 25 hours (24-49 hours after egg laying; 0-25 hours after hatching).</obo:IAO_0000115>
         <oboInOwl:hasDbXref>UBERON:8000000</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>L1</oboInOwl:hasExactSynonym>
@@ -4868,6 +4903,12 @@ For example, A and B may be gene products and binding of B by A positively regul
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005337"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005339"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The second larval instar begins at the first larval molt and ends at the second larval molt. Larvae are actively feeding and crawling in the food. Distinct anterior spiracles are present as enlargements at the end of the tracheal trunk, but not open to the outside; posterior spiracles have three openings each, and four groups of small unbranched hairs. The salivary glands extend to the first abdominal segment, and have cells that are uniform in size. Mouth hooks typically have two or three teeth. Duration at 25 degrees C: approximately 23 hours (49-72 hours after egg laying; 25-48 hours after hatching).</obo:IAO_0000115>
         <oboInOwl:hasDbXref>UBERON:8000001</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>L2</oboInOwl:hasExactSynonym>
@@ -4900,6 +4941,18 @@ For example, A and B may be gene products and binding of B by A positively regul
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005338"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005342"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The third larval instar begins at the second larval molt and ends at puparium formation. Anterior spiracles are open to the outside; posterior spiracles have three openings each, and four groups of large branched hairs. The salivary glands extend to the second abdominal segment, with cells larger in the posterior than in the anterior of the gland. Mouth hooks typically have 9-12 teeth. About 24 hours before pupariation (at 25 degree C), larvae stop feeding and climb away from their food. Duration at 25 degrees C: approximately 48 hours (72-120 hours after egg laying; 48-96 hours after hatching).</obo:IAO_0000115>
@@ -5020,6 +5073,12 @@ For example, A and B may be gene products and binding of B by A positively regul
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005349"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The prepupal stage begins at puparium formation and ends when larval/pupal apolysis is complete, as indicated by the completion of imaginal head sac eversion and the expulsion of the oral armature of the larva. Duration at 25 degrees C: approximately 12 hours. (120-132.2 hours after egg laying; 0-12.2 hours after puparium formation).</obo:IAO_0000115>
@@ -5331,6 +5390,12 @@ For example, A and B may be gene products and binding of B by A positively regul
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005342"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00006011"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The pupal stage starts once larval/pupal apolysis is complete as indicated by the expulsion of the larval armature. Early in this stage, the legs and wings reach full extension along the abdomen. The stage ends when the pupal cuticle separates from the underlying epidermis (pupal/adult apolysis), and the eye cup becomes yellow at its periphery. Duration at 25 degrees C: approximately 32 hours. (132.2-164.3 hours after egg laying; 12.2-44.3 hours after puparium formation).</obo:IAO_0000115>
@@ -6202,6 +6267,12 @@ For example, A and B may be gene products and binding of B by A positively regul
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005371"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>Newly eclosed adult stage. Animal free of pupal case. Runs rapidly to find site for wing expansion. Wings are folded back and black against a very pale abdomen.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>FBdv:00005373</oboInOwl:hasAlternativeId>
         <oboInOwl:hasOBONamespace>FlyBase_development_CV</oboInOwl:hasOBONamespace>
@@ -6233,6 +6304,12 @@ For example, A and B may be gene products and binding of B by A positively regul
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005370"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00006012"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Stage, shortly after eclosion, during which the wings expand. During wing expansion, the abdomen pulsates and the hind legs stroke the wings vigorously for several minutes at a time. The stage ends when the wings are folded down over the abdomen, which has become broader and shorter, and the wing cuticle has lost its folds. The stage lasts around 15 minutes at 25&apos;C.</obo:IAO_0000115>
@@ -6274,6 +6351,24 @@ For example, A and B may be gene products and binding of B by A positively regul
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005354"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005369"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005370"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007025"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The developing adult after pupal-adult apolysis, i.e.- from stage P8 (when yellow eye color first becomes visible through the pupal case), to eclosion. Duration at 25 degrees C: approximately 55.7 hours (164.3-220 hours after egg laying; 44.3-100 hours after puparium formation).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>FlyBase_development_CV</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBdv:00006011</oboInOwl:id>
@@ -6305,6 +6400,12 @@ For example, A and B may be gene products and binding of B by A positively regul
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005371"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007026"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Adult stage immediately after wing expansion, during which tanning of the cuticle is completed. This stage lasts approximately 45 minutes at 25&apos;C.</obo:IAO_0000115>
@@ -6350,6 +6451,24 @@ For example, A and B may be gene products and binding of B by A positively regul
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005369"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00005370"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007025"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The stage of the Drosophila life-cycle from the formation of the puparium (beginning of the prepupal stage) to eclosion.</obo:IAO_0000115>
@@ -6846,6 +6965,12 @@ For example, A and B may be gene products and binding of B by A positively regul
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBdv_00007026"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The developmental stage that lasts from eclosion of the adult from the pupal case until tanning is complete (the end of adult stage A3).</obo:IAO_0000115>
