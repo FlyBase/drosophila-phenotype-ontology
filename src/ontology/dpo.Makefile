@@ -77,7 +77,6 @@ $(TMPDIR)/lethal_extract.owx: $(SRC) $(TMPDIR)/lethal_terms.txt
 	grep -v "lethal_class_hierarchy.owl" $< > $(TMPDIR)/dpo-tmp.ofn &&\
 	grep -v "lethal_class_hierarchy.owl" catalog-v001.xml > catalog-tmp.xml &&\
 	robot --catalog catalog-tmp.xml merge --input $(TMPDIR)/dpo-tmp.ofn \
-	remove --term FBcv:0000347 --select "self descendants" --exclude-terms $(TMPDIR)/lethal_terms.txt --exclude-term FBcv:0001347 --exclude-term FBcv:0000349 --trim true \
 	remove --select "UBERON:* CHEBI:* GO:*" \
 	extract --term-file $(TMPDIR)/lethal_terms.txt --force true --method STAR \
 	convert --output $@ &&\
