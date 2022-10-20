@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: dpo/releases/2022-08-11/dpo-base.owl
-date: 11:08:2022 12:43
+data-version: dpo/releases/2022-10-20/dpo-base.owl
+date: 20:10:2022 11:02
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -40,7 +40,7 @@ property_value: http://purl.org/dc/elements/1.1/title "Drosophila Phenotype Onto
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/4.0/ xsd:string
 property_value: IAO:0000700 FBcv:0000347
-property_value: owl:versionInfo "2022-08-11" xsd:string
+property_value: owl:versionInfo "2022-10-20" xsd:string
 
 [Term]
 id: FBcv:0000002
@@ -137,6 +137,7 @@ subset: lethal_phase
 synonym: "semi-viable" EXACT []
 is_a: FBcv:0000349 ! viable
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002015 ! partially lethal
 
 [Term]
 id: FBcv:0000351
@@ -146,6 +147,7 @@ def: "A phenotype of a population that is the death of all animals in that popul
 comment: Note on usage: lethal is appropriate in cases where escaper adults are very rare. The lethal phase prior to becoming a mature adult may be further specified using children terms which specify stage.
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002019 ! increased mortality during development
 
 [Term]
 id: FBcv:0000352
@@ -156,6 +158,7 @@ comment: Stages during which there is significant death prior to mature adulthoo
 subset: lethal_phase
 synonym: "semi-lethal" EXACT []
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002015 ! partially lethal
 
 [Term]
 id: FBcv:0000353
@@ -423,6 +426,7 @@ def: "Phenotype that is a shorter adult life-span than wild-type." [FBC:DOS]
 subset: lethal_phase
 synonym: "increased adult mortality" EXACT []
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002004 ! increased mortality
 
 [Term]
 id: FBcv:0000386
@@ -466,10 +470,11 @@ is_a: FBcv:0001347 ! phenotype
 
 [Term]
 id: FBcv:0000390
-name: hypoactive
+name: decreased rate of movement
 namespace: phenotypic_class
-def: "A phenotype consisting of decreased frequency of `multicellular organismal movement` (GO:0050879) compared to wild-type." [FBC:DOS]
+def: "A phenotype consisting of an decrease in any kind of rate (e.g. speed, frequency) of `multicellular organismal movement` (GO:0050879) compared to wild-type." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
+synonym: "hypoactive" EXACT []
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -482,10 +487,11 @@ is_a: FBcv:0000389 ! paralytic
 
 [Term]
 id: FBcv:0000392
-name: hyperactive
+name: increased rate of movement
 namespace: phenotypic_class
-def: "A phenotype consisting of increased frequency of `multicellular organismal movement` (GO:0050879) compared to wild-type." [FBC:DOS]
+def: "A phenotype consisting of an increase in any kind of rate (e.g. speed, frequency) of `multicellular organismal movement` (GO:0050879) compared to wild-type." [FBC:DOS]
 subset: fbcvsubset_mgiribbons
+synonym: "hyperactive" EXACT []
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -574,9 +580,10 @@ is_a: FBcv:0001347 ! phenotype
 
 [Term]
 id: FBcv:0000403
-name: abnormal chemosensitive behavior
+name: abnormal chemosensory behavior
 namespace: phenotypic_class
-def: "Phenotype that is any abnormality in chemosensory behavior (GO:0007635). 'chemosensory behavior' is defined as: 'Behavior that is dependent upon the sensation of chemicals.'.'" [FBC:DOS, GOC:go_curators]
+def: "Phenotype that is any abnormality in chemosensory behavior (GO:0007635). 'chemosensory behavior' is defined as: 'Behavior that is dependent upon the sensation of chemicals.'." [FBC:DOS, GOC:go_curators]
+synonym: "abnormal chemosensitive behavior" EXACT []
 synonym: "chemosensitive behavior defective" EXACT []
 synonym: "chemosensitive behaviour defective" EXACT []
 is_a: FBcv:0001347 ! phenotype
@@ -990,7 +997,7 @@ is_a: FBcv:0001347 ! phenotype
 id: FBcv:0000450
 name: abnormal developmental rate
 namespace: phenotypic_class
-def: "Phenotype that is a change in the rate of some developmental process (GO:0032502) taking place prior to mature adulthood (defined as adult stage A3), compared to wild-type. Note, developmental processes include stages in development of the whole animal (e.g.- larval development) as well as specific sub-processes, such as dorsal closure." [FBC:DOS]
+def: "Phenotype that is a change in any kind of rate (e.g. speed, frequency) of any developmental process (GO:0032502) taking place prior to mature adulthood (defined as adult stage A3), compared to wild-type. Note, developmental processes include stages in development of the whole animal (e.g. larval development) as well as specific sub-processes, such as dorsal closure." [FBC:DOS]
 comment: A more complete formalization would require a clause specifying stage. It might be possible to do this in OWL using the same system as we are using for lethal phase.
 subset: fbcvsubset_mgiribbons
 synonym: "developmental rate defective" EXACT []
@@ -1242,16 +1249,16 @@ is_a: FBcv:0001347 ! phenotype
 
 [Term]
 id: FBcv:0000717
-name: increased cell growth
+name: increased cell growth rate
 namespace: phenotypic_class
-def: "Phenotype that is an increase in the rate of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type." [FBC:DOS]
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type." [FBC:DOS]
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
 id: FBcv:0000718
-name: decreased cell growth
+name: decreased cell growth rate
 namespace: phenotypic_class
-def: "Phenotype that is an decrease in the rate of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type." [FBC:DOS]
+def: "Phenotype that is an decrease in any kind of rate (e.g. speed, frequency) of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type." [FBC:DOS]
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -1322,16 +1329,18 @@ property_value: http://purl.org/dc/terms/date 2011-09-13T02:31:53Z xsd:dateTime
 
 [Term]
 id: FBcv:0000791
-name: delayed aging
+name: decreased speed of aging
 namespace: phenotypic_class
 def: "A phenotype in which the aging process (GO:0007568) is slower than in wild-type." [FBC:DOC]
+synonym: "delayed aging" RELATED []
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
 id: FBcv:0000792
-name: premature aging
+name: increased speed of aging
 namespace: phenotypic_class
 def: "A phenotype in which the aging process (GO:0007568) is accelerated compared to wild-type." [FBC:DOC]
+synonym: "premature aging" RELATED []
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -1371,6 +1380,7 @@ comment: As the P-Stage and the 'pharate adult stage' have the same end, there i
 subset: lethal_phase
 synonym: "lethal - all die before end of pharate adult stage" EXACT []
 synonym: "pupal lethal" BROAD []
+is_a: FBcv:0000351 ! lethal
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
@@ -1380,6 +1390,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the first instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002003 ! lethal - all die before end of second instar larval stage
 
 [Term]
 id: FBcv:0002002
@@ -1391,6 +1402,7 @@ subset: lethal_phase
 synonym: "larval lethal" BROAD []
 synonym: "lethal - all die before end of third instar larval stage" EXACT []
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002026 ! lethal - all die before end of prepupal stage
 
 [Term]
 id: FBcv:0002003
@@ -1399,6 +1411,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the second instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002002 ! lethal - all die before end of larval stage
 
 [Term]
 id: FBcv:0002004
@@ -1417,6 +1430,8 @@ def: "A phenotype of a population that is the death of all animals in that popul
 subset: lethal_phase
 synonym: "pupal lethal" BROAD []
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002000 ! lethal - all die before end of P-stage
+is_a: FBcv:0002010 ! majority die during P-stage
 
 [Term]
 id: FBcv:0002006
@@ -1425,6 +1440,9 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the first instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002001 ! lethal - all die before end of first instar larval stage
+is_a: FBcv:0002007 ! lethal - all die during larval stage
+is_a: FBcv:0002011 ! majority die during first instar larval stage
 
 [Term]
 id: FBcv:0002007
@@ -1434,6 +1452,8 @@ def: "A phenotype of a population that is the death of all animals in that popul
 subset: lethal_phase
 synonym: "larval lethal" BROAD []
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002002 ! lethal - all die before end of larval stage
+is_a: FBcv:0002012 ! majority die during larval stage
 
 [Term]
 id: FBcv:0002008
@@ -1442,6 +1462,9 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the second instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002003 ! lethal - all die before end of second instar larval stage
+is_a: FBcv:0002007 ! lethal - all die during larval stage
+is_a: FBcv:0002013 ! majority die during second instar larval stage
 
 [Term]
 id: FBcv:0002009
@@ -1450,6 +1473,8 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the third instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002007 ! lethal - all die during larval stage
+is_a: FBcv:0002014 ! majority die during third instar larval stage
 
 [Term]
 id: FBcv:0002010
@@ -1458,6 +1483,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the P-stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002020 ! some die during P-stage
 
 [Term]
 id: FBcv:0002011
@@ -1466,6 +1492,8 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the first instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002012 ! majority die during larval stage
+is_a: FBcv:0002021 ! some die during first instar larval stage
 
 [Term]
 id: FBcv:0002012
@@ -1474,6 +1502,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002023 ! some die during larval stage
 
 [Term]
 id: FBcv:0002013
@@ -1482,6 +1511,8 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the second instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002012 ! majority die during larval stage
+is_a: FBcv:0002022 ! some die during second instar larval stage
 
 [Term]
 id: FBcv:0002014
@@ -1490,6 +1521,8 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the third instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002012 ! majority die during larval stage
+is_a: FBcv:0002024 ! some die during third instar larval stage
 
 [Term]
 id: FBcv:0002015
@@ -1498,6 +1531,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of some significant proportion of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012)." [FBC:DOS, FBC:KM]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002019 ! increased mortality during development
 
 [Term]
 id: FBcv:0002019
@@ -1506,6 +1540,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012)." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002004 ! increased mortality
 
 [Term]
 id: FBcv:0002020
@@ -1514,6 +1549,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the P-stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002019 ! increased mortality during development
 
 [Term]
 id: FBcv:0002021
@@ -1522,6 +1558,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the first instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002023 ! some die during larval stage
 
 [Term]
 id: FBcv:0002022
@@ -1530,6 +1567,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the second instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002023 ! some die during larval stage
 
 [Term]
 id: FBcv:0002023
@@ -1538,6 +1576,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002019 ! increased mortality during development
 
 [Term]
 id: FBcv:0002024
@@ -1546,6 +1585,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the third instar larval stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002023 ! some die during larval stage
 
 [Term]
 id: FBcv:0002025
@@ -1554,6 +1594,8 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the pharate adult stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002005 ! lethal - all die during P-stage
+is_a: FBcv:0002036 ! majority die during pharate adult stage
 
 [Term]
 id: FBcv:0002026
@@ -1562,6 +1604,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the prepupal stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002027 ! lethal - all die before end of pupal stage
 
 [Term]
 id: FBcv:0002027
@@ -1571,6 +1614,7 @@ def: "A phenotype of a population that is the death of all animals in that popul
 subset: lethal_phase
 synonym: "pupal lethal" BROAD []
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002000 ! lethal - all die before end of P-stage
 
 [Term]
 id: FBcv:0002030
@@ -1580,6 +1624,9 @@ def: "A phenotype of a population that is the death of all animals in that popul
 subset: lethal_phase
 synonym: "pupal lethal" BROAD []
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002005 ! lethal - all die during P-stage
+is_a: FBcv:0002027 ! lethal - all die before end of pupal stage
+is_a: FBcv:0002034 ! majority die during pupal stage
 
 [Term]
 id: FBcv:0002031
@@ -1588,6 +1635,9 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population during the prepupal stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002005 ! lethal - all die during P-stage
+is_a: FBcv:0002026 ! lethal - all die before end of prepupal stage
+is_a: FBcv:0002035 ! majority die during prepupal stage
 
 [Term]
 id: FBcv:0002032
@@ -1606,6 +1656,8 @@ def: "A phenotype of a population that is the death of all animals in that popul
 subset: lethal_phase
 synonym: "embryonic lethal" EXACT []
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002001 ! lethal - all die before end of first instar larval stage
+is_a: FBcv:0002037 ! majority die during embryonic stage
 
 [Term]
 id: FBcv:0002034
@@ -1614,6 +1666,8 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the pupal stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002010 ! majority die during P-stage
+is_a: FBcv:0002039 ! some die during pupal stage
 
 [Term]
 id: FBcv:0002035
@@ -1622,6 +1676,8 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the prepupal stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002010 ! majority die during P-stage
+is_a: FBcv:0002040 ! some die during prepupal stage
 
 [Term]
 id: FBcv:0002036
@@ -1630,6 +1686,8 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population during the pharate adult stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002010 ! majority die during P-stage
+is_a: FBcv:0002038 ! some die during pharate adult stage
 
 [Term]
 id: FBcv:0002037
@@ -1639,6 +1697,7 @@ def: "A phenotype of a population that is the death of the majority of animals i
 comment: This term is agnostic about whether any survive to adulthood.
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002041 ! some die during embryonic stage
 
 [Term]
 id: FBcv:0002038
@@ -1647,6 +1706,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the pharate adult stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002020 ! some die during P-stage
 
 [Term]
 id: FBcv:0002039
@@ -1655,6 +1715,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the pupal stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002020 ! some die during P-stage
 
 [Term]
 id: FBcv:0002040
@@ -1663,6 +1724,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the prepupal stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002020 ! some die during P-stage
 
 [Term]
 id: FBcv:0002041
@@ -1671,6 +1733,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of a significant proportion of animals in that population during the embryonic stage." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002019 ! increased mortality during development
 
 [Term]
 id: FBcv:0002042
@@ -1678,7 +1741,9 @@ name: lethal - all die during immature adult stage
 namespace: phenotypic_class
 def: "A phenotype of a population that is the death of all animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012))." [FBC:DOS]
 subset: lethal_phase
+is_a: FBcv:0000351 ! lethal
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002050 ! majority die during immature adult stage
 
 [Term]
 id: FBcv:0002050
@@ -1687,6 +1752,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of the majority of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012))." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002051 ! some die during immature adult stage
 
 [Term]
 id: FBcv:0002051
@@ -1695,6 +1761,7 @@ namespace: phenotypic_class
 def: "A phenotype of a population that is the death of some significant number of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012))." [FBC:DOS]
 subset: lethal_phase
 is_a: FBcv:0001347 ! phenotype
+is_a: FBcv:0002019 ! increased mortality during development
 
 [Term]
 id: FBcv:0004000
@@ -1852,7 +1919,7 @@ property_value: http://purl.org/dc/terms/date 2020-12-15T15:52:59Z xsd:dateTime
 id: FBcv:0007509
 name: increased rate of phototaxis
 namespace: phenotypic_class
-def: "Phenotype that is an increase in the rate of phototaxis (GO:0042331). 'phototaxis' is defined as: 'The directed movement of a motile cell or organism in response to light.'" [FBC:CP, GOC:jl, ISBN:0192800981]
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of phototaxis (GO:0042331). 'phototaxis' is defined as: 'The directed movement of a motile cell or organism in response to light.'" [FBC:CP, GOC:jl, ISBN:0192800981]
 is_a: FBcv:0001347 ! phenotype
 property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date 2020-12-16T09:10:39Z xsd:dateTime
@@ -1861,7 +1928,7 @@ property_value: http://purl.org/dc/terms/date 2020-12-16T09:10:39Z xsd:dateTime
 id: FBcv:0007510
 name: decreased rate of phototaxis
 namespace: phenotypic_class
-def: "Phenotype that is a decrease in the rate of phototaxis (GO:0042331). 'phototaxis' is defined as: 'The directed movement of a motile cell or organism in response to light.'" [FBC:CP, GOC:jl, ISBN:0192800981]
+def: "Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of phototaxis (GO:0042331). 'phototaxis' is defined as: 'The directed movement of a motile cell or organism in response to light.'" [FBC:CP, GOC:jl, ISBN:0192800981]
 is_a: FBcv:0001347 ! phenotype
 property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date 2020-12-16T09:20:20Z xsd:dateTime
@@ -1870,7 +1937,7 @@ property_value: http://purl.org/dc/terms/date 2020-12-16T09:20:20Z xsd:dateTime
 id: FBcv:0007511
 name: increased rate of cell adhesion
 namespace: phenotypic_class
-def: "Phenotype that is an increase in the rate of cell adhesion (GO:0007155). 'cell adhesion' is defined as: 'The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.'" [FBC:CP, GOC:hb, GOC:pf]
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of cell adhesion (GO:0007155). 'cell adhesion' is defined as: 'The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.'" [FBC:CP, GOC:hb, GOC:pf]
 is_a: FBcv:0001347 ! phenotype
 property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date 2020-12-16T09:21:22Z xsd:dateTime
@@ -1879,7 +1946,7 @@ property_value: http://purl.org/dc/terms/date 2020-12-16T09:21:22Z xsd:dateTime
 id: FBcv:0007512
 name: decreased rate of cell adhesion
 namespace: phenotypic_class
-def: "Phenotype that is a decrease in the rate of cell adhesion (GO:0007155). 'cell adhesion' is defined as: 'The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.'" [FBC:CP, GOC:hb, GOC:pf]
+def: "Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of cell adhesion (GO:0007155). 'cell adhesion' is defined as: 'The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.'" [FBC:CP, GOC:hb, GOC:pf]
 is_a: FBcv:0001347 ! phenotype
 property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date 2020-12-16T09:22:22Z xsd:dateTime
@@ -1904,7 +1971,7 @@ property_value: http://purl.org/dc/terms/date 2020-12-16T12:12:40Z xsd:dateTime
 
 [Term]
 id: FBcv:0007515
-name: increased feeding behavior
+name: increased rate of feeding behavior
 namespace: phenotypic_class
 def: "Phenotype that is an increase in the total amount or frequency of feeding behavior (GO:0007631) over a given time interval, compared to wild-type. 'feeding behavior' is defined as: 'Behavior associated with the intake of food.'" [FBC:DOS, GOC:mah]
 is_a: FBcv:0001347 ! phenotype
@@ -1913,7 +1980,7 @@ property_value: http://purl.org/dc/terms/date 2020-12-16T12:14:26Z xsd:dateTime
 
 [Term]
 id: FBcv:0007516
-name: decreased feeding behavior
+name: decreased rate of feeding behavior
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in the total amount or frequency of feeding behavior (GO:0007631) over a given time interval, compared to wild-type. 'feeding behavior' is defined as: 'Behavior associated with the intake of food.'" [FBC:DOS, GOC:mah]
 is_a: FBcv:0001347 ! phenotype
@@ -1922,27 +1989,30 @@ property_value: http://purl.org/dc/terms/date 2020-12-16T12:16:19Z xsd:dateTime
 
 [Term]
 id: FBcv:0007517
-name: increased memory
+name: increased efficacy of memory
 namespace: phenotypic_class
 def: "Phenotype that is an increase in the efficacy of memory (GO:0007613) relative to controls. 'memory' is defined as: 'The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).'" [FBC:CP, GOC:curators, ISBN:0582227089]
 comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with memory formation.
+synonym: "improved memory" EXACT []
 is_a: FBcv:0001347 ! phenotype
 property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date 2021-08-06T11:45:09Z xsd:dateTime
 
 [Term]
 id: FBcv:0007518
-name: decreased memory
+name: decreased efficacy of memory
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in the efficacy of memory (GO:0007613) relative to controls. 'memory' is defined as: 'The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).'" [FBC:CP, GOC:curators, ISBN:0582227089]
 comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with memory formation.
+synonym: "impaired memory" EXACT []
+synonym: "reduced efficacy of memory" EXACT []
 is_a: FBcv:0001347 ! phenotype
 property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date 2021-08-06T11:55:18Z xsd:dateTime
 
 [Term]
 id: FBcv:0007519
-name: increased short-term memory
+name: increased efficacy of short-term memory
 namespace: phenotypic_class
 def: "Phenotype that is an increase in the efficacy of short-term memory (GO:0007614) relative to controls. 'short-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information received a short time (up to about 30 minutes) ago. This type of memory is typically dependent on direct, transient effects of second messenger activation.'" [FBC:CP, http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
 comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with short-term memory formation.
@@ -1952,7 +2022,7 @@ property_value: http://purl.org/dc/terms/date 2021-08-06T11:56:41Z xsd:dateTime
 
 [Term]
 id: FBcv:0007520
-name: decreased short-term memory
+name: decreased efficacy of short-term memory
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in the efficacy of short-term memory (GO:0007614) relative to controls. 'short-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information received a short time (up to about 30 minutes) ago. This type of memory is typically dependent on direct, transient effects of second messenger activation.'" [FBC:CP, http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
 comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with short-term memory formation.
@@ -1962,7 +2032,7 @@ property_value: http://purl.org/dc/terms/date 2021-08-06T11:57:17Z xsd:dateTime
 
 [Term]
 id: FBcv:0007521
-name: increased long-term memory
+name: increased efficacy of long-term memory
 namespace: phenotypic_class
 def: "Phenotype that is an increase in the efficacy of long-term memory (GO:0007616) relative to controls. 'long-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information a long time (typically weeks, months or years) after receiving that information. This type of memory is typically dependent on gene transcription regulated by second messenger activation.'" [FBC:CP, http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
 comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with long-term memory formation.
@@ -1972,7 +2042,7 @@ property_value: http://purl.org/dc/terms/date 2021-08-06T12:02:59Z xsd:dateTime
 
 [Term]
 id: FBcv:0007522
-name: decreased long-term memory
+name: decreased efficacy of long-term memory
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in the efficacy of long-term memory (GO:0007616) relative to controls. 'long-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information a long time (typically weeks, months or years) after receiving that information. This type of memory is typically dependent on gene transcription regulated by second messenger activation.'" [FBC:CP, http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
 comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with long-term memory formation.
@@ -1982,7 +2052,7 @@ property_value: http://purl.org/dc/terms/date 2021-08-06T12:04:30Z xsd:dateTime
 
 [Term]
 id: FBcv:0007523
-name: increased anesthesia-resistant memory
+name: increased efficacy of anesthesia-resistant memory
 namespace: phenotypic_class
 def: "Phenotype that is an increase in the efficacy of anesthesia-resistant memory (GO:0007615) relative to controls. 'anesthesia-resistant memory' is defined as: 'The memory process that results in the formation of consolidated memory resistant to disruption of the patterned activity of the brain, without requiring protein synthesis.'" [FBC:CP, PMID:15143285, PMID:17088531]
 comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with anesthesia-resistant memory formation.
@@ -1992,7 +2062,7 @@ property_value: http://purl.org/dc/terms/date 2021-08-06T12:08:22Z xsd:dateTime
 
 [Term]
 id: FBcv:0007524
-name: decreased anesthesia-resistant memory
+name: decreased efficacy of anesthesia-resistant memory
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in the efficacy of anesthesia-resistant memory (GO:0007615) relative to controls. 'anesthesia-resistant memory' is defined as: 'The memory process that results in the formation of consolidated memory resistant to disruption of the patterned activity of the brain, without requiring protein synthesis.'" [FBC:CP, PMID:15143285, PMID:17088531]
 comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with anesthesia-resistant memory formation.
@@ -2002,7 +2072,7 @@ property_value: http://purl.org/dc/terms/date 2021-08-06T12:10:03Z xsd:dateTime
 
 [Term]
 id: FBcv:0007525
-name: increased medium-term memory
+name: increased efficacy of medium-term memory
 namespace: phenotypic_class
 def: "Phenotype that is an increase in the efficacy of medium-term memory (GO:0072375) relative to controls. 'medium-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information received at a time ago that is intermediate between that of short and long term memory (30min - 7hrs in Drosophila melanogaster).'" [FBC:CP, GOC:sart, PMID:14659098, PMID:7923375]
 comment: This will usually be measured as an increased magnitude/rate of a behavioral output associated with medium-term memory formation.
@@ -2012,13 +2082,278 @@ property_value: http://purl.org/dc/terms/date 2021-08-06T12:11:31Z xsd:dateTime
 
 [Term]
 id: FBcv:0007526
-name: decreased medium-term memory
+name: decreased efficacy of medium-term memory
 namespace: phenotypic_class
 def: "Phenotype that is a decrease in the efficacy of medium-term memory (GO:0072375) relative to controls. 'medium-term memory' is defined as: 'The memory process that deals with the storage, retrieval and modification of information received at a time ago that is intermediate between that of short and long term memory (30min - 7hrs in Drosophila melanogaster).'" [FBC:CP, GOC:sart, PMID:14659098, PMID:7923375]
 comment: This will usually be measured as a decreased magnitude/rate of a behavioral output associated with medium-term memory formation.
 is_a: FBcv:0001347 ! phenotype
 property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date 2021-08-06T12:12:48Z xsd:dateTime
+
+[Term]
+id: FBcv:0007527
+name: abnormal adult walking behavior
+namespace: phenotypic_class
+def: "Any abnormality in adult walking behavior (GO:0007628), which is defined as 'The behavior of an adult relating to the progression of that organism along the ground by the process of lifting and setting down each leg.'." [GO:0007628, GOC:jid, GOC:pr, ISBN:0198606907]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T08:45:06Z xsd:dateTime
+
+[Term]
+id: FBcv:0007528
+name: abnormal larval locomotory behavior
+namespace: phenotypic_class
+def: "Any abnormality in larval locomotory behavior (GO:0008345), which is defined as 'Locomotory behavior in a larval (immature) organism.'." [GO:0008345, GOC:ai]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T08:46:33Z xsd:dateTime
+
+[Term]
+id: FBcv:0007529
+name: abnormal adult locomotory behavior
+namespace: phenotypic_class
+def: "Any abnormality in adult locomotory behavior (GO:0008344), which is defined as 'Locomotory behavior in a fully developed and mature organism.'." [GO:0008344, GOC:ai]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T08:50:44Z xsd:dateTime
+
+[Term]
+id: FBcv:0007530
+name: increased efficacy of learning
+namespace: phenotypic_class
+def: "Phenotype that is an increase in the efficacy of learning (GO:0007612), relative to controls. 'learning' is defined as: 'Any process in an organism in which a relatively long-lasting adaptive behavioral change occurs as the result of experience.'" [ISBN:0582227089, ISBN:0721662544]
+synonym: "improved learning" EXACT []
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T08:57:36Z xsd:dateTime
+
+[Term]
+id: FBcv:0007531
+name: decreased efficacy of learning
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in the efficacy of learning (GO:0007612), relative to controls. 'learning' is defined as: 'Any process in an organism in which a relatively long-lasting adaptive behavioral change occurs as the result of experience.'" [ISBN:0582227089, ISBN:0721662544]
+synonym: "impaired learning" EXACT []
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T09:06:29Z xsd:dateTime
+
+[Term]
+id: FBcv:0007532
+name: increased rate of chemosensory behavior
+namespace: phenotypic_class
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of chemosensory behavior (GO:0007635). 'chemosensory behavior' is defined as: 'Behavior that is dependent upon the sensation of chemicals.'." [GO:0007635, GOC:go_curators]
+synonym: "increased rate of chemosensitive behavior" EXACT []
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:04:22Z xsd:dateTime
+
+[Term]
+id: FBcv:0007533
+name: increased rate of proboscis extension reflex
+namespace: phenotypic_class
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of proboscis extension reflex (GO:0007637). 'proboscis extension reflex' is defined as: 'The extension, through direct muscle actions, of the proboscis (the trunk-like extension of the mouthparts on the adult external head) in response to a nutritional stimulus.'." [FB:FBrf0044924, GO:0007637, GOC:jid]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:14:45Z xsd:dateTime
+
+[Term]
+id: FBcv:0007534
+name: increased rate of grooming behavior
+namespace: phenotypic_class
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of grooming behavior (GO:0007625). 'grooming behavior' is defined as: 'The specific behavior of an organism relating to grooming, cleaning and brushing to remove dirt and parasites.'." [GO:0007625, GOC:jl, GOC:pr]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:16:08Z xsd:dateTime
+
+[Term]
+id: FBcv:0007535
+name: increased rate of locomotory behavior
+namespace: phenotypic_class
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of locomotory behavior (GO:0007626). 'locomotory behavior' is defined as: 'The specific movement from place to place of an organism in response to external or internal stimuli. Locomotion of a whole organism in a manner dependent upon some combination of that organism's internal state and external conditions.'." [GO:0007626, GOC:dph]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:19:14Z xsd:dateTime
+
+[Term]
+id: FBcv:0007536
+name: increased rate of adult walking behavior
+namespace: phenotypic_class
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of adult walking behavior (GO:0007628). 'adult walking behavior' is defined as: 'The behavior of an adult relating to the progression of that organism along the ground by the process of lifting and setting down each leg.'." [GO:0007628, GOC:jid, GOC:pr, ISBN:0198606907]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:20:31Z xsd:dateTime
+
+[Term]
+id: FBcv:0007537
+name: increased rate of larval locomotory behavior
+namespace: phenotypic_class
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of larval locomotory behavior (GO:0008345). 'larval locomotory behavior' is defined as: 'Locomotory behavior in a larval (immature) organism.'." [GO:0008345, GOC:ai]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:21:27Z xsd:dateTime
+
+[Term]
+id: FBcv:0007538
+name: increased rate of adult locomotory behavior
+namespace: phenotypic_class
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of adult locomotory behavior (GO:0008344). 'adult locomotory behavior' is defined as: 'Locomotory behavior in a fully developed and mature organism.'." [GO:0008344, GOC:ai]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:22:30Z xsd:dateTime
+
+[Term]
+id: FBcv:0007539
+name: increased rate of mating behavior
+namespace: phenotypic_class
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of mating behavior (GO:0007617). 'mating behavior' is defined as: 'The behavioral interactions between organisms for the purpose of mating, or sexual reproduction resulting in the formation of zygotes.'." [GO:0007617, GOC:ai, GOC:dph]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:23:15Z xsd:dateTime
+
+[Term]
+id: FBcv:0007540
+name: increased rate of courtship behavior
+namespace: phenotypic_class
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of courtship behavior (GO:0007619). 'courtship behavior' is defined as: 'The behavior of an organism for the purpose of attracting sexual partners.'." [GO:0007619, GOC:ai, GOC:dph]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:23:56Z xsd:dateTime
+
+[Term]
+id: FBcv:0007541
+name: increased rate of flight behavior
+namespace: phenotypic_class
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of flight behavior (GO:0007629). 'flight behavior' is defined as: 'The response to external or internal stimuli that results in the locomotory process of flight. Flight is the self-propelled movement of an organism through the air.'." [GO:0007629, GOC:jid, ISBN:0198606907]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:25:01Z xsd:dateTime
+
+[Term]
+id: FBcv:0007542
+name: increased rate of jump response
+namespace: phenotypic_class
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of jump response (GO:0007630). 'jump response' is defined as: 'The sudden, usually upward, movement off the ground or other surface through sudden muscular effort in the legs, following exposure to an external stimulus.'." [GO:0007630, GOC:jid, ISBN:0198606907]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:25:43Z xsd:dateTime
+
+[Term]
+id: FBcv:0007543
+name: increased rate of copulation
+namespace: phenotypic_class
+def: "Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of copulation (GO:0007620). 'copulation' is defined as: 'The act of sexual union between male and female, involving the transfer of sperm.'." [GO:0007620, ISBN:0721662544]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:26:28Z xsd:dateTime
+
+[Term]
+id: FBcv:0007544
+name: decreased rate of chemosensory behavior
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of chemosensory behavior (GO:0007635). 'chemosensory behavior' is defined as: 'Behavior that is dependent upon the sensation of chemicals.'." [GO:0007635, GOC:go_curators]
+synonym: "decreased rate of chemosensitive behavior" EXACT []
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:30:08Z xsd:dateTime
+
+[Term]
+id: FBcv:0007545
+name: decreased rate of proboscis extension reflex
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of proboscis extension reflex (GO:0007637). 'proboscis extension reflex' is defined as: 'The extension, through direct muscle actions, of the proboscis (the trunk-like extension of the mouthparts on the adult external head) in response to a nutritional stimulus.'." [FB:FBrf0044924, GO:0007637, GOC:jid]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:30:42Z xsd:dateTime
+
+[Term]
+id: FBcv:0007546
+name: decreased rate of grooming behavior
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of grooming behavior (GO:0007625). 'grooming behavior' is defined as: 'The specific behavior of an organism relating to grooming, cleaning and brushing to remove dirt and parasites.'." [GO:0007625, GOC:jl, GOC:pr]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:31:07Z xsd:dateTime
+
+[Term]
+id: FBcv:0007547
+name: decreased rate of locomotory behavior
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of locomotory behavior (GO:0007626). 'locomotory behavior' is defined as: 'The specific movement from place to place of an organism in response to external or internal stimuli. Locomotion of a whole organism in a manner dependent upon some combination of that organism's internal state and external conditions.'." [GO:0007626, GOC:dph]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:31:37Z xsd:dateTime
+
+[Term]
+id: FBcv:0007548
+name: decreased rate of adult walking behavior
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of adult walking behavior (GO:0007628). 'adult walking behavior' is defined as: 'The behavior of an adult relating to the progression of that organism along the ground by the process of lifting and setting down each leg.'." [GO:0007628, GOC:jid, GOC:pr, ISBN:0198606907]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:31:54Z xsd:dateTime
+
+[Term]
+id: FBcv:0007549
+name: decreased rate of larval locomotory behavior
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of larval locomotory behavior (GO:0008345). 'larval locomotory behavior' is defined as: 'Locomotory behavior in a larval (immature) organism.'." [GO:0008345, GOC:ai]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:32:11Z xsd:dateTime
+
+[Term]
+id: FBcv:0007550
+name: decreased rate of adult locomotory behavior
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of adult locomotory behavior (GO:0008344). 'adult locomotory behavior' is defined as: 'Locomotory behavior in a fully developed and mature organism.'." [GO:0008344, GOC:ai]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:32:30Z xsd:dateTime
+
+[Term]
+id: FBcv:0007551
+name: decreased rate of mating behavior
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of mating behavior (GO:0007617). 'mating behavior' is defined as: 'The behavioral interactions between organisms for the purpose of mating, or sexual reproduction resulting in the formation of zygotes.'." [GO:0007617, GOC:ai, GOC:dph]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:32:56Z xsd:dateTime
+
+[Term]
+id: FBcv:0007552
+name: decreased rate of courtship behavior
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of courtship behavior (GO:0007619). 'courtship behavior' is defined as: 'The behavior of an organism for the purpose of attracting sexual partners.'." [GO:0007619, GOC:ai, GOC:dph]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:33:17Z xsd:dateTime
+
+[Term]
+id: FBcv:0007553
+name: decreased rate of flight behavior
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of flight behavior (GO:0007629). 'flight behavior' is defined as: 'The response to external or internal stimuli that results in the locomotory process of flight. Flight is the self-propelled movement of an organism through the air.'." [GO:0007629, GOC:jid, ISBN:0198606907]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:33:37Z xsd:dateTime
+
+[Term]
+id: FBcv:0007554
+name: decreased rate of jump response
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of jump response (GO:0007630). 'jump response' is defined as: 'The sudden, usually upward, movement off the ground or other surface through sudden muscular effort in the legs, following exposure to an external stimulus.'." [GO:0007630, GOC:jid, ISBN:0198606907]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:33:59Z xsd:dateTime
+
+[Term]
+id: FBcv:0007555
+name: decreased rate of copulation
+namespace: phenotypic_class
+def: "Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of copulation (GO:0007620). 'copulation' is defined as: 'The act of sexual union between male and female, involving the transfer of sperm.'." [GO:0007620, ISBN:0721662544]
+is_a: FBcv:0001347 ! phenotype
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date 2022-08-12T10:34:20Z xsd:dateTime
 
 [Typedef]
 id: FBcv:0008000
