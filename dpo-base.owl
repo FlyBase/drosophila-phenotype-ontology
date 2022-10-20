@@ -14,7 +14,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/dpo/dpo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2022-08-11/dpo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/dpo/releases/2022-10-20/dpo-base.owl"/>
         <ns:attributionURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://dx.doi.org/10.1186/2041-1480-4-30</ns:attributionURL>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000347"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0002-1373-1705</dc:creator>
@@ -25,9 +25,9 @@
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drosophila Phenotype Ontology (DPO)</dc:title>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/4.0/</terms:license>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11:08:2022 12:43</oboInOwl:date>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20:10:2022 11:02</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FlyBase miscellaneous CV</oboInOwl:default-namespace>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-08-11</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-10-20</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -310,6 +310,12 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Value slim</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
@@ -1140,6 +1146,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000349"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002015"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of some significant proportion of animals in that population, but less that half, prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-viable</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -1232,6 +1239,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002019"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000351</oboInOwl:id>
@@ -1328,6 +1336,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002015"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a majority of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-lethal</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -2396,7 +2405,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000384"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is any abnormality in aging (GO:0007568). &apos;aging&apos; is defined as: &apos;A developmental process that is a deterioration and loss of function over time. Aging includes loss of functions such as resistance to disease, homeostasis, and fertility, as well as wear and tear. Aging includes cellular senescence, but is more inclusive. May precede death and may succeed developmental maturation (GO:0021700).&apos;</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:PO_curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:PO_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2477,6 +2486,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a shorter adult life-span than wild-type.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>increased adult mortality</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -2664,16 +2674,17 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype consisting of decreased frequency of `multicellular organismal movement` (GO:0050879) compared to wild-type.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype consisting of an decrease in any kind of rate (e.g. speed, frequency) of `multicellular organismal movement` (GO:0050879) compared to wild-type.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>hypoactive</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000390</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypoactive</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased rate of movement</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000390"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype consisting of decreased frequency of `multicellular organismal movement` (GO:0050879) compared to wild-type.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype consisting of an decrease in any kind of rate (e.g. speed, frequency) of `multicellular organismal movement` (GO:0050879) compared to wild-type.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2728,16 +2739,17 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype consisting of increased frequency of `multicellular organismal movement` (GO:0050879) compared to wild-type.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype consisting of an increase in any kind of rate (e.g. speed, frequency) of `multicellular organismal movement` (GO:0050879) compared to wild-type.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>hyperactive</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000392</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyperactive</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased rate of movement</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000392"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype consisting of increased frequency of `multicellular organismal movement` (GO:0050879) compared to wild-type.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype consisting of an increase in any kind of rate (e.g. speed, frequency) of `multicellular organismal movement` (GO:0050879) compared to wild-type.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -3196,17 +3208,18 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is any abnormality in chemosensory behavior (GO:0007635). &apos;chemosensory behavior&apos; is defined as: &apos;Behavior that is dependent upon the sensation of chemicals.&apos;.&apos;</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is any abnormality in chemosensory behavior (GO:0007635). &apos;chemosensory behavior&apos; is defined as: &apos;Behavior that is dependent upon the sensation of chemicals.&apos;.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal chemosensitive behavior</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemosensitive behavior defective</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemosensitive behaviour defective</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000403</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal chemosensitive behavior</rdfs:label>
+        <rdfs:label>abnormal chemosensory behavior</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000403"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is any abnormality in chemosensory behavior (GO:0007635). &apos;chemosensory behavior&apos; is defined as: &apos;Behavior that is dependent upon the sensation of chemicals.&apos;.&apos;</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is any abnormality in chemosensory behavior (GO:0007635). &apos;chemosensory behavior&apos; is defined as: &apos;Behavior that is dependent upon the sensation of chemicals.&apos;.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:go_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -4281,6 +4294,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is any abnormality in the asymmetric distribution of components within a cell. For example an epithelial cell is &apos;cell polarity defective&apos; if it lacks the normal asymmetric distribution of proteins or cell components such as junctions or villi along its apical-basal axis.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell polarity defective</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>FBcv:0000430</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal cell polarity</rdfs:label>
     </owl:Class>
@@ -4412,7 +4426,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is any abnormality in cytokinesis (GO:0000910). &apos;cytokinesis&apos; is defined as: &apos;The division of the cytoplasm and the plasma membrane of a cell and its partitioning into two daughter cells.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:mtg_cell_cycle</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_cell_cycle</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4957,7 +4971,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a change in the rate of some developmental process (GO:0032502) taking place prior to mature adulthood (defined as adult stage A3), compared to wild-type. Note, developmental processes include stages in development of the whole animal (e.g.- larval development) as well as specific sub-processes, such as dorsal closure.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a change in any kind of rate (e.g. speed, frequency) of any developmental process (GO:0032502) taking place prior to mature adulthood (defined as adult stage A3), compared to wild-type. Note, developmental processes include stages in development of the whole animal (e.g. larval development) as well as specific sub-processes, such as dorsal closure.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developmental rate defective</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000450</oboInOwl:id>
@@ -4968,7 +4982,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000450"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a change in the rate of some developmental process (GO:0032502) taking place prior to mature adulthood (defined as adult stage A3), compared to wild-type. Note, developmental processes include stages in development of the whole animal (e.g.- larval development) as well as specific sub-processes, such as dorsal closure.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a change in any kind of rate (e.g. speed, frequency) of any developmental process (GO:0032502) taking place prior to mature adulthood (defined as adult stage A3), compared to wild-type. Note, developmental processes include stages in development of the whole animal (e.g. larval development) as well as specific sub-processes, such as dorsal closure.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -5090,7 +5104,7 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is any abnormality in cell adhesion (GO:0007155). &apos;cell adhesion&apos; is defined as: &apos;The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:pf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pf</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5218,7 +5232,7 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is any abnormality in cell cycle (GO:0007049). &apos;cell cycle&apos; is defined as: &apos;The progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events. Canonically, the cell cycle comprises the replication and segregation of genetic material followed by the division of the cell, but in endocycles or syncytial cells nuclear replication or nuclear division may not be followed by cell division.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:go_curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:mtg_cell_cycle</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_cell_cycle</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5759,7 +5773,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is any abnormality in entry into diapause (GO:0055115). &apos;entry into diapause&apos; is defined as: &apos;The dormancy process that results in entry into diapause. Diapause is a neurohormonally mediated, dynamic state of low metabolic activity. Associated characteristics of this form of dormancy include reduced morphogenesis, increased resistance to environmental extremes, and altered or reduced behavioral activity. Full expression develops in a species-specific manner, usually in response to a number of environmental stimuli that precede unfavorable conditions. Once diapause has begun, metabolic activity is suppressed even if conditions favorable for development prevail. Once initiated, only certain stimuli are capable of releasing the organism from this state, and this characteristic is essential in distinguishing diapause from hibernation.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:ds</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ds</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:jid</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -5803,7 +5817,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is any abnormality in entry into reproductive diapause (GO:0055116). &apos;entry into reproductive diapause&apos; is defined as: &apos;The dormancy process that results in entry into reproductive diapause. Reproductive diapause is a form of diapause where the organism itself will remain fully active, including feeding and other routine activities, but the reproductive organs experience a tissue-specific reduction in metabolism, with characteristic triggering and releasing stimuli.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:ds</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ds</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:jid</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -5969,7 +5983,7 @@
         <oboInOwl:hasDbXref>GOC:cjm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:dph</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:ems</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:pf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pf</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Cell_migration</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -5999,15 +6013,15 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in the rate of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000717</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased cell growth</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased cell growth rate</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000717"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in the rate of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -6037,15 +6051,15 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an decrease in the rate of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an decrease in any kind of rate (e.g. speed, frequency) of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000718</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased cell growth</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased cell growth rate</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000718"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an decrease in the rate of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an decrease in any kind of rate (e.g. speed, frequency) of cell growth (GO:0016049) in a whole animal or in some specific organ tissue or clone of cells compared to wild-type.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:DOS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -6328,7 +6342,7 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000911"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0055006"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
                                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007568"/>
@@ -6345,8 +6359,9 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype in which the aging process (GO:0007568) is slower than in wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>delayed aging</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000791</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">delayed aging</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased speed of aging</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000791"/>
@@ -6366,7 +6381,7 @@
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000912"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0055005"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
                                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007568"/>
@@ -6383,8 +6398,9 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype in which the aging process (GO:0007568) is accelerated compared to wild-type.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>premature aging</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0000792</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">premature aging</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased speed of aging</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000792"/>
@@ -6545,11 +6561,13 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000351"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages prior to eclosion from the pupal case (the end of the P-stage).</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pupal lethal</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>lethal - all die before end of pharate adult stage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002000</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:comment>As the P-Stage and the &apos;pharate adult stage&apos; have the same end, there is no need for a separate term for &apos;lethal - all die before end of pharate adult stage.</rdfs:comment>
         <rdfs:label xml:lang="en">lethal - all die before end of P-stage</rdfs:label>
@@ -6639,8 +6657,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002003"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002001</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die before end of first instar larval stage</rdfs:label>
     </owl:Class>
@@ -6729,10 +6749,12 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002026"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">larval lethal</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>lethal - all die before end of third instar larval stage</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002002</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:comment>As the larval stage and third instar larval stage have the same end, there is no need for a separate term for &apos;lethal - all die before end of third instar larval stage&apos;.</rdfs:comment>
         <rdfs:label xml:lang="en">lethal - all die before end of larval stage</rdfs:label>
@@ -6822,8 +6844,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002002"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002003</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die before end of second instar larval stage</rdfs:label>
     </owl:Class>
@@ -6870,6 +6894,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
         <obo:IAO_0000115>A phenotype that is an increase in the rate of death in a population at any stage of life (during development or adulthood), over the rate seen in a wild type control population.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002004</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#fbcvsubset_mgiribbons"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased mortality</rdfs:label>
@@ -6959,9 +6984,12 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002010"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pupal lethal</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002005</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during P-stage</rdfs:label>
     </owl:Class>
@@ -7050,8 +7078,12 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002007"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002011"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002006</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during first instar larval stage</rdfs:label>
     </owl:Class>
@@ -7140,9 +7172,12 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002002"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002012"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">larval lethal</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002007</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during larval stage</rdfs:label>
     </owl:Class>
@@ -7231,8 +7266,12 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002007"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002013"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002008</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during second instar larval stage</rdfs:label>
     </owl:Class>
@@ -7321,8 +7360,11 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002007"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002014"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002009</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during third instar larval stage</rdfs:label>
     </owl:Class>
@@ -7411,8 +7453,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002020"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002010</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during P-stage</rdfs:label>
     </owl:Class>
@@ -7501,8 +7545,11 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002012"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002021"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002011</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during first instar larval stage</rdfs:label>
     </owl:Class>
@@ -7591,8 +7638,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002023"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002012</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during larval stage</rdfs:label>
     </owl:Class>
@@ -7681,8 +7730,11 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002012"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002022"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002013</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during second instar larval stage</rdfs:label>
     </owl:Class>
@@ -7771,8 +7823,11 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002012"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002024"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002014</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during third instar larval stage</rdfs:label>
     </owl:Class>
@@ -7864,8 +7919,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002019"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of some significant proportion of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002015</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">partially lethal</rdfs:label>
     </owl:Class>
@@ -7955,8 +8012,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002004"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population prior to becoming a mature adult, where mature is defined as after adult stage A3 (FBdv:00006012).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002019</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased mortality during development</rdfs:label>
     </owl:Class>
@@ -8045,8 +8104,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002019"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the P-stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002020</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during P-stage</rdfs:label>
     </owl:Class>
@@ -8135,8 +8196,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002023"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the first instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002021</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during first instar larval stage</rdfs:label>
     </owl:Class>
@@ -8225,8 +8288,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002023"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the second instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002022</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during second instar larval stage</rdfs:label>
     </owl:Class>
@@ -8315,8 +8380,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002019"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002023</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during larval stage</rdfs:label>
     </owl:Class>
@@ -8405,8 +8472,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002023"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the third instar larval stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002024</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during third instar larval stage</rdfs:label>
     </owl:Class>
@@ -8495,8 +8564,11 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002036"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002025</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during pharate adult stage</rdfs:label>
     </owl:Class>
@@ -8585,8 +8657,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002027"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002026</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die before end of prepupal stage</rdfs:label>
     </owl:Class>
@@ -8675,9 +8749,11 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002000"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population at some stage or stages before the end of the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pupal lethal</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002027</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die before end of pupal stage</rdfs:label>
     </owl:Class>
@@ -8766,9 +8842,13 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002027"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002034"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pupal lethal</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002030</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during pupal stage</rdfs:label>
     </owl:Class>
@@ -8857,8 +8937,12 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002026"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002035"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002031</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during prepupal stage</rdfs:label>
     </owl:Class>
@@ -8966,9 +9050,12 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002037"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">embryonic lethal</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002033</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during embryonic stage</rdfs:label>
     </owl:Class>
@@ -9134,8 +9221,11 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002010"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002039"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002034</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during pupal stage</rdfs:label>
     </owl:Class>
@@ -9224,8 +9314,11 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002010"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002040"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002035</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during prepupal stage</rdfs:label>
     </owl:Class>
@@ -9314,8 +9407,11 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002010"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002038"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002036</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during pharate adult stage</rdfs:label>
     </owl:Class>
@@ -9404,8 +9500,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002041"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002037</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:comment>This term is agnostic about whether any survive to adulthood.</rdfs:comment>
         <rdfs:label xml:lang="en">majority die during embryonic stage</rdfs:label>
@@ -9495,8 +9593,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002020"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the pharate adult stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002038</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during pharate adult stage</rdfs:label>
     </owl:Class>
@@ -9585,8 +9685,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002020"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the pupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002039</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during pupal stage</rdfs:label>
     </owl:Class>
@@ -9675,8 +9777,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002020"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the prepupal stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002040</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during prepupal stage</rdfs:label>
     </owl:Class>
@@ -9765,8 +9869,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002019"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of a significant proportion of animals in that population during the embryonic stage.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002041</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during embryonic stage</rdfs:label>
     </owl:Class>
@@ -9854,9 +9960,12 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0000351"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002050"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of all animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002042</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">lethal - all die during immature adult stage</rdfs:label>
     </owl:Class>
@@ -9945,8 +10054,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002051"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of the majority of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002050</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">majority die during immature adult stage</rdfs:label>
     </owl:Class>
@@ -10035,8 +10146,10 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0002019"/>
         <obo:IAO_0000115>A phenotype of a population that is the death of some significant number of animals in that population as immature adults (after eclosion but before the end of adult stage A3 (FBdv:00006012)).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0002051</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/fbcv#lethal_phase"/>
         <rdfs:label xml:lang="en">some die during immature adult stage</rdfs:label>
     </owl:Class>
@@ -10224,6 +10337,8 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000001"/>
+        <oboInOwl:hasOBONamespace>FlyBase miscellaneous CV</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>FBcv:0006003</oboInOwl:id>
         <rdfs:label xml:lang="en">population of Drosophila</rdfs:label>
     </owl:Class>
     
@@ -10373,6 +10488,8 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <oboInOwl:hasOBONamespace>FlyBase miscellaneous CV</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>FBcv:0006007</oboInOwl:id>
         <rdfs:label xml:lang="en">population of cells</rdfs:label>
     </owl:Class>
     
@@ -10767,7 +10884,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in the rate of phototaxis (GO:0042331). &apos;phototaxis&apos; is defined as: &apos;The directed movement of a motile cell or organism in response to light.&apos;</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of phototaxis (GO:0042331). &apos;phototaxis&apos; is defined as: &apos;The directed movement of a motile cell or organism in response to light.&apos;</obo:IAO_0000115>
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-16T09:10:39Z</terms:date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -10777,7 +10894,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007509"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in the rate of phototaxis (GO:0042331). &apos;phototaxis&apos; is defined as: &apos;The directed movement of a motile cell or organism in response to light.&apos;</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of phototaxis (GO:0042331). &apos;phototaxis&apos; is defined as: &apos;The directed movement of a motile cell or organism in response to light.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:CP</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0192800981</oboInOwl:hasDbXref>
@@ -10809,7 +10926,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in the rate of phototaxis (GO:0042331). &apos;phototaxis&apos; is defined as: &apos;The directed movement of a motile cell or organism in response to light.&apos;</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of phototaxis (GO:0042331). &apos;phototaxis&apos; is defined as: &apos;The directed movement of a motile cell or organism in response to light.&apos;</obo:IAO_0000115>
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-16T09:20:20Z</terms:date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -10819,7 +10936,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007510"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in the rate of phototaxis (GO:0042331). &apos;phototaxis&apos; is defined as: &apos;The directed movement of a motile cell or organism in response to light.&apos;</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of phototaxis (GO:0042331). &apos;phototaxis&apos; is defined as: &apos;The directed movement of a motile cell or organism in response to light.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:CP</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0192800981</oboInOwl:hasDbXref>
@@ -10851,7 +10968,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in the rate of cell adhesion (GO:0007155). &apos;cell adhesion&apos; is defined as: &apos;The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.&apos;</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of cell adhesion (GO:0007155). &apos;cell adhesion&apos; is defined as: &apos;The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.&apos;</obo:IAO_0000115>
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-16T09:21:22Z</terms:date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -10861,10 +10978,10 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007511"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in the rate of cell adhesion (GO:0007155). &apos;cell adhesion&apos; is defined as: &apos;The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.&apos;</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of cell adhesion (GO:0007155). &apos;cell adhesion&apos; is defined as: &apos;The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:CP</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:pf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pf</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10893,7 +11010,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in the rate of cell adhesion (GO:0007155). &apos;cell adhesion&apos; is defined as: &apos;The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.&apos;</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of cell adhesion (GO:0007155). &apos;cell adhesion&apos; is defined as: &apos;The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.&apos;</obo:IAO_0000115>
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-16T09:22:22Z</terms:date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
@@ -10903,10 +11020,10 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007512"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in the rate of cell adhesion (GO:0007155). &apos;cell adhesion&apos; is defined as: &apos;The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.&apos;</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of cell adhesion (GO:0007155). &apos;cell adhesion&apos; is defined as: &apos;The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules.&apos;</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBC:CP</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:hb</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:pf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pf</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11022,7 +11139,7 @@
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-16T12:14:26Z</terms:date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBcv:0007515</oboInOwl:id>
-        <rdfs:label xml:lang="en">increased feeding behavior</rdfs:label>
+        <rdfs:label xml:lang="en">increased rate of feeding behavior</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007515"/>
@@ -11063,7 +11180,7 @@
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-16T12:16:19Z</terms:date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id>FBcv:0007516</oboInOwl:id>
-        <rdfs:label xml:lang="en">decreased feeding behavior</rdfs:label>
+        <rdfs:label xml:lang="en">decreased rate of feeding behavior</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007516"/>
@@ -11102,10 +11219,11 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in the efficacy of memory (GO:0007613) relative to controls. &apos;memory&apos; is defined as: &apos;The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).&apos;</obo:IAO_0000115>
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-06T11:45:09Z</terms:date>
+        <oboInOwl:hasExactSynonym>improved memory</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007517</oboInOwl:id>
         <rdfs:comment>This will usually be measured as an increased magnitude/rate of a behavioral output associated with memory formation.</rdfs:comment>
-        <rdfs:label xml:lang="en">increased memory</rdfs:label>
+        <rdfs:label xml:lang="en">increased efficacy of memory</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007517"/>
@@ -11145,10 +11263,12 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in the efficacy of memory (GO:0007613) relative to controls. &apos;memory&apos; is defined as: &apos;The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).&apos;</obo:IAO_0000115>
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-06T11:55:18Z</terms:date>
+        <oboInOwl:hasExactSynonym>impaired memory</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>reduced efficacy of memory</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007518</oboInOwl:id>
         <rdfs:comment>This will usually be measured as a decreased magnitude/rate of a behavioral output associated with memory formation.</rdfs:comment>
-        <rdfs:label xml:lang="en">decreased memory</rdfs:label>
+        <rdfs:label xml:lang="en">decreased efficacy of memory</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007518"/>
@@ -11191,7 +11311,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007519</oboInOwl:id>
         <rdfs:comment>This will usually be measured as an increased magnitude/rate of a behavioral output associated with short-term memory formation.</rdfs:comment>
-        <rdfs:label xml:lang="en">increased short-term memory</rdfs:label>
+        <rdfs:label xml:lang="en">increased efficacy of short-term memory</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007519"/>
@@ -11234,7 +11354,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007520</oboInOwl:id>
         <rdfs:comment>This will usually be measured as a decreased magnitude/rate of a behavioral output associated with short-term memory formation.</rdfs:comment>
-        <rdfs:label xml:lang="en">decreased short-term memory</rdfs:label>
+        <rdfs:label xml:lang="en">decreased efficacy of short-term memory</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007520"/>
@@ -11277,7 +11397,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007521</oboInOwl:id>
         <rdfs:comment>This will usually be measured as an increased magnitude/rate of a behavioral output associated with long-term memory formation.</rdfs:comment>
-        <rdfs:label xml:lang="en">increased long-term memory</rdfs:label>
+        <rdfs:label xml:lang="en">increased efficacy of long-term memory</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007521"/>
@@ -11320,7 +11440,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007522</oboInOwl:id>
         <rdfs:comment>This will usually be measured as a decreased magnitude/rate of a behavioral output associated with long-term memory formation.</rdfs:comment>
-        <rdfs:label xml:lang="en">decreased long-term memory</rdfs:label>
+        <rdfs:label xml:lang="en">decreased efficacy of long-term memory</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007522"/>
@@ -11363,7 +11483,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007523</oboInOwl:id>
         <rdfs:comment>This will usually be measured as an increased magnitude/rate of a behavioral output associated with anesthesia-resistant memory formation.</rdfs:comment>
-        <rdfs:label xml:lang="en">increased anesthesia-resistant memory</rdfs:label>
+        <rdfs:label xml:lang="en">increased efficacy of anesthesia-resistant memory</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007523"/>
@@ -11406,7 +11526,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007524</oboInOwl:id>
         <rdfs:comment>This will usually be measured as a decreased magnitude/rate of a behavioral output associated with anesthesia-resistant memory formation.</rdfs:comment>
-        <rdfs:label xml:lang="en">decreased anesthesia-resistant memory</rdfs:label>
+        <rdfs:label xml:lang="en">decreased efficacy of anesthesia-resistant memory</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007524"/>
@@ -11449,7 +11569,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007525</oboInOwl:id>
         <rdfs:comment>This will usually be measured as an increased magnitude/rate of a behavioral output associated with medium-term memory formation.</rdfs:comment>
-        <rdfs:label xml:lang="en">increased medium-term memory</rdfs:label>
+        <rdfs:label xml:lang="en">increased efficacy of medium-term memory</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007525"/>
@@ -11493,7 +11613,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007526</oboInOwl:id>
         <rdfs:comment>This will usually be measured as a decreased magnitude/rate of a behavioral output associated with medium-term memory formation.</rdfs:comment>
-        <rdfs:label xml:lang="en">decreased medium-term memory</rdfs:label>
+        <rdfs:label xml:lang="en">decreased efficacy of medium-term memory</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007526"/>
@@ -11503,6 +11623,1217 @@
         <oboInOwl:hasDbXref>GOC:sart</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:14659098</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:7923375</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007527 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007527">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001236"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007628"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any abnormality in adult walking behavior (GO:0007628), which is defined as &apos;The behavior of an adult relating to the progression of that organism along the ground by the process of lifting and setting down each leg.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T08:45:06Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007527</oboInOwl:id>
+        <rdfs:label xml:lang="en">abnormal adult walking behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007527"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any abnormality in adult walking behavior (GO:0007628), which is defined as &apos;The behavior of an adult relating to the progression of that organism along the ground by the process of lifting and setting down each leg.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007628</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jid</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pr</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0198606907</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007528 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007528">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001236"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0008345"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any abnormality in larval locomotory behavior (GO:0008345), which is defined as &apos;Locomotory behavior in a larval (immature) organism.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T08:46:33Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007528</oboInOwl:id>
+        <rdfs:label xml:lang="en">abnormal larval locomotory behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007528"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any abnormality in larval locomotory behavior (GO:0008345), which is defined as &apos;Locomotory behavior in a larval (immature) organism.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0008345</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007529 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007529">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001236"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0008344"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any abnormality in adult locomotory behavior (GO:0008344), which is defined as &apos;Locomotory behavior in a fully developed and mature organism.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T08:50:44Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007529</oboInOwl:id>
+        <rdfs:label xml:lang="en">abnormal adult locomotory behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007529"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any abnormality in adult locomotory behavior (GO:0008344), which is defined as &apos;Locomotory behavior in a fully developed and mature organism.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0008344</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007530 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007530">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0015004"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007612"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in the efficacy of learning (GO:0007612), relative to controls. &apos;learning&apos; is defined as: &apos;Any process in an organism in which a relatively long-lasting adaptive behavioral change occurs as the result of experience.&apos;</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T08:57:36Z</terms:date>
+        <oboInOwl:hasExactSynonym>improved learning</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007530</oboInOwl:id>
+        <rdfs:label xml:lang="en">increased efficacy of learning</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007530"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in the efficacy of learning (GO:0007612), relative to controls. &apos;learning&apos; is defined as: &apos;Any process in an organism in which a relatively long-lasting adaptive behavioral change occurs as the result of experience.&apos;</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0721662544</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007531 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007531">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0015003"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007612"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in the efficacy of learning (GO:0007612), relative to controls. &apos;learning&apos; is defined as: &apos;Any process in an organism in which a relatively long-lasting adaptive behavioral change occurs as the result of experience.&apos;</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T09:06:29Z</terms:date>
+        <oboInOwl:hasExactSynonym>impaired learning</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007531</oboInOwl:id>
+        <rdfs:label xml:lang="en">decreased efficacy of learning</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007531"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in the efficacy of learning (GO:0007612), relative to controls. &apos;learning&apos; is defined as: &apos;Any process in an organism in which a relatively long-lasting adaptive behavioral change occurs as the result of experience.&apos;</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0721662544</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007532 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007532">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000912"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007635"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of chemosensory behavior (GO:0007635). &apos;chemosensory behavior&apos; is defined as: &apos;Behavior that is dependent upon the sensation of chemicals.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:04:22Z</terms:date>
+        <oboInOwl:hasExactSynonym>increased rate of chemosensitive behavior</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007532</oboInOwl:id>
+        <rdfs:label xml:lang="en">increased rate of chemosensory behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007532"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of chemosensory behavior (GO:0007635). &apos;chemosensory behavior&apos; is defined as: &apos;Behavior that is dependent upon the sensation of chemicals.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007635</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:go_curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007533 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007533">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000912"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007637"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of proboscis extension reflex (GO:0007637). &apos;proboscis extension reflex&apos; is defined as: &apos;The extension, through direct muscle actions, of the proboscis (the trunk-like extension of the mouthparts on the adult external head) in response to a nutritional stimulus.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:14:45Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007533</oboInOwl:id>
+        <rdfs:label xml:lang="en">increased rate of proboscis extension reflex</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007533"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of proboscis extension reflex (GO:0007637). &apos;proboscis extension reflex&apos; is defined as: &apos;The extension, through direct muscle actions, of the proboscis (the trunk-like extension of the mouthparts on the adult external head) in response to a nutritional stimulus.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FB:FBrf0044924</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GO:0007637</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jid</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007534 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007534">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000912"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007625"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of grooming behavior (GO:0007625). &apos;grooming behavior&apos; is defined as: &apos;The specific behavior of an organism relating to grooming, cleaning and brushing to remove dirt and parasites.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:16:08Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007534</oboInOwl:id>
+        <rdfs:label xml:lang="en">increased rate of grooming behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007534"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of grooming behavior (GO:0007625). &apos;grooming behavior&apos; is defined as: &apos;The specific behavior of an organism relating to grooming, cleaning and brushing to remove dirt and parasites.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007625</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007535 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007535">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000912"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007626"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of locomotory behavior (GO:0007626). &apos;locomotory behavior&apos; is defined as: &apos;The specific movement from place to place of an organism in response to external or internal stimuli. Locomotion of a whole organism in a manner dependent upon some combination of that organism&apos;s internal state and external conditions.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:19:14Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007535</oboInOwl:id>
+        <rdfs:label xml:lang="en">increased rate of locomotory behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007535"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of locomotory behavior (GO:0007626). &apos;locomotory behavior&apos; is defined as: &apos;The specific movement from place to place of an organism in response to external or internal stimuli. Locomotion of a whole organism in a manner dependent upon some combination of that organism&apos;s internal state and external conditions.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007626</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:dph</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007536 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007536">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000912"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007628"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of adult walking behavior (GO:0007628). &apos;adult walking behavior&apos; is defined as: &apos;The behavior of an adult relating to the progression of that organism along the ground by the process of lifting and setting down each leg.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:20:31Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007536</oboInOwl:id>
+        <rdfs:label xml:lang="en">increased rate of adult walking behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007536"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of adult walking behavior (GO:0007628). &apos;adult walking behavior&apos; is defined as: &apos;The behavior of an adult relating to the progression of that organism along the ground by the process of lifting and setting down each leg.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007628</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jid</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pr</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0198606907</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007537 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007537">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000912"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0008345"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of larval locomotory behavior (GO:0008345). &apos;larval locomotory behavior&apos; is defined as: &apos;Locomotory behavior in a larval (immature) organism.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:21:27Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007537</oboInOwl:id>
+        <rdfs:label xml:lang="en">increased rate of larval locomotory behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007537"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of larval locomotory behavior (GO:0008345). &apos;larval locomotory behavior&apos; is defined as: &apos;Locomotory behavior in a larval (immature) organism.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0008345</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007538 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007538">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000912"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0008344"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of adult locomotory behavior (GO:0008344). &apos;adult locomotory behavior&apos; is defined as: &apos;Locomotory behavior in a fully developed and mature organism.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:22:30Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007538</oboInOwl:id>
+        <rdfs:label xml:lang="en">increased rate of adult locomotory behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007538"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of adult locomotory behavior (GO:0008344). &apos;adult locomotory behavior&apos; is defined as: &apos;Locomotory behavior in a fully developed and mature organism.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0008344</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007539 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007539">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000912"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007617"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of mating behavior (GO:0007617). &apos;mating behavior&apos; is defined as: &apos;The behavioral interactions between organisms for the purpose of mating, or sexual reproduction resulting in the formation of zygotes.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:23:15Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007539</oboInOwl:id>
+        <rdfs:label xml:lang="en">increased rate of mating behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007539"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of mating behavior (GO:0007617). &apos;mating behavior&apos; is defined as: &apos;The behavioral interactions between organisms for the purpose of mating, or sexual reproduction resulting in the formation of zygotes.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007617</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:dph</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007540 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007540">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000912"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007619"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of courtship behavior (GO:0007619). &apos;courtship behavior&apos; is defined as: &apos;The behavior of an organism for the purpose of attracting sexual partners.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:23:56Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007540</oboInOwl:id>
+        <rdfs:label xml:lang="en">increased rate of courtship behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007540"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of courtship behavior (GO:0007619). &apos;courtship behavior&apos; is defined as: &apos;The behavior of an organism for the purpose of attracting sexual partners.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007619</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:dph</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007541 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007541">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000912"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007629"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of flight behavior (GO:0007629). &apos;flight behavior&apos; is defined as: &apos;The response to external or internal stimuli that results in the locomotory process of flight. Flight is the self-propelled movement of an organism through the air.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:25:01Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007541</oboInOwl:id>
+        <rdfs:label xml:lang="en">increased rate of flight behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007541"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of flight behavior (GO:0007629). &apos;flight behavior&apos; is defined as: &apos;The response to external or internal stimuli that results in the locomotory process of flight. Flight is the self-propelled movement of an organism through the air.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007629</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jid</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0198606907</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007542 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007542">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000912"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007630"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of jump response (GO:0007630). &apos;jump response&apos; is defined as: &apos;The sudden, usually upward, movement off the ground or other surface through sudden muscular effort in the legs, following exposure to an external stimulus.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:25:43Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007542</oboInOwl:id>
+        <rdfs:label xml:lang="en">increased rate of jump response</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007542"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of jump response (GO:0007630). &apos;jump response&apos; is defined as: &apos;The sudden, usually upward, movement off the ground or other surface through sudden muscular effort in the legs, following exposure to an external stimulus.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007630</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jid</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0198606907</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007543 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007543">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000912"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007620"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of copulation (GO:0007620). &apos;copulation&apos; is defined as: &apos;The act of sexual union between male and female, involving the transfer of sperm.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:26:28Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007543</oboInOwl:id>
+        <rdfs:label xml:lang="en">increased rate of copulation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007543"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is an increase in any kind of rate (e.g. speed, frequency) of copulation (GO:0007620). &apos;copulation&apos; is defined as: &apos;The act of sexual union between male and female, involving the transfer of sperm.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007620</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0721662544</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007544 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007544">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000911"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007635"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of chemosensory behavior (GO:0007635). &apos;chemosensory behavior&apos; is defined as: &apos;Behavior that is dependent upon the sensation of chemicals.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:30:08Z</terms:date>
+        <oboInOwl:hasExactSynonym>decreased rate of chemosensitive behavior</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007544</oboInOwl:id>
+        <rdfs:label xml:lang="en">decreased rate of chemosensory behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007544"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of chemosensory behavior (GO:0007635). &apos;chemosensory behavior&apos; is defined as: &apos;Behavior that is dependent upon the sensation of chemicals.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007635</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:go_curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007545 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007545">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000911"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007637"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of proboscis extension reflex (GO:0007637). &apos;proboscis extension reflex&apos; is defined as: &apos;The extension, through direct muscle actions, of the proboscis (the trunk-like extension of the mouthparts on the adult external head) in response to a nutritional stimulus.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:30:42Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007545</oboInOwl:id>
+        <rdfs:label xml:lang="en">decreased rate of proboscis extension reflex</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007545"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of proboscis extension reflex (GO:0007637). &apos;proboscis extension reflex&apos; is defined as: &apos;The extension, through direct muscle actions, of the proboscis (the trunk-like extension of the mouthparts on the adult external head) in response to a nutritional stimulus.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FB:FBrf0044924</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GO:0007637</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jid</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007546 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007546">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000911"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007625"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of grooming behavior (GO:0007625). &apos;grooming behavior&apos; is defined as: &apos;The specific behavior of an organism relating to grooming, cleaning and brushing to remove dirt and parasites.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:31:07Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007546</oboInOwl:id>
+        <rdfs:label xml:lang="en">decreased rate of grooming behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007546"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of grooming behavior (GO:0007625). &apos;grooming behavior&apos; is defined as: &apos;The specific behavior of an organism relating to grooming, cleaning and brushing to remove dirt and parasites.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007625</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007547 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007547">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000911"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007626"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of locomotory behavior (GO:0007626). &apos;locomotory behavior&apos; is defined as: &apos;The specific movement from place to place of an organism in response to external or internal stimuli. Locomotion of a whole organism in a manner dependent upon some combination of that organism&apos;s internal state and external conditions.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:31:37Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007547</oboInOwl:id>
+        <rdfs:label xml:lang="en">decreased rate of locomotory behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007547"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of locomotory behavior (GO:0007626). &apos;locomotory behavior&apos; is defined as: &apos;The specific movement from place to place of an organism in response to external or internal stimuli. Locomotion of a whole organism in a manner dependent upon some combination of that organism&apos;s internal state and external conditions.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007626</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:dph</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007548 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007548">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000911"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007628"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of adult walking behavior (GO:0007628). &apos;adult walking behavior&apos; is defined as: &apos;The behavior of an adult relating to the progression of that organism along the ground by the process of lifting and setting down each leg.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:31:54Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007548</oboInOwl:id>
+        <rdfs:label xml:lang="en">decreased rate of adult walking behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007548"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of adult walking behavior (GO:0007628). &apos;adult walking behavior&apos; is defined as: &apos;The behavior of an adult relating to the progression of that organism along the ground by the process of lifting and setting down each leg.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007628</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jid</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pr</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0198606907</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007549 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007549">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000911"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0008345"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of larval locomotory behavior (GO:0008345). &apos;larval locomotory behavior&apos; is defined as: &apos;Locomotory behavior in a larval (immature) organism.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:32:11Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007549</oboInOwl:id>
+        <rdfs:label xml:lang="en">decreased rate of larval locomotory behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007549"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of larval locomotory behavior (GO:0008345). &apos;larval locomotory behavior&apos; is defined as: &apos;Locomotory behavior in a larval (immature) organism.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0008345</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007550 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007550">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000911"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0008344"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of adult locomotory behavior (GO:0008344). &apos;adult locomotory behavior&apos; is defined as: &apos;Locomotory behavior in a fully developed and mature organism.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:32:30Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007550</oboInOwl:id>
+        <rdfs:label xml:lang="en">decreased rate of adult locomotory behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007550"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of adult locomotory behavior (GO:0008344). &apos;adult locomotory behavior&apos; is defined as: &apos;Locomotory behavior in a fully developed and mature organism.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0008344</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007551 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007551">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000911"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007617"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of mating behavior (GO:0007617). &apos;mating behavior&apos; is defined as: &apos;The behavioral interactions between organisms for the purpose of mating, or sexual reproduction resulting in the formation of zygotes.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:32:56Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007551</oboInOwl:id>
+        <rdfs:label xml:lang="en">decreased rate of mating behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007551"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of mating behavior (GO:0007617). &apos;mating behavior&apos; is defined as: &apos;The behavioral interactions between organisms for the purpose of mating, or sexual reproduction resulting in the formation of zygotes.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007617</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:dph</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007552 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007552">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000911"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007619"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of courtship behavior (GO:0007619). &apos;courtship behavior&apos; is defined as: &apos;The behavior of an organism for the purpose of attracting sexual partners.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:33:17Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007552</oboInOwl:id>
+        <rdfs:label xml:lang="en">decreased rate of courtship behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007552"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of courtship behavior (GO:0007619). &apos;courtship behavior&apos; is defined as: &apos;The behavior of an organism for the purpose of attracting sexual partners.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007619</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:dph</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007553 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007553">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000911"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007629"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of flight behavior (GO:0007629). &apos;flight behavior&apos; is defined as: &apos;The response to external or internal stimuli that results in the locomotory process of flight. Flight is the self-propelled movement of an organism through the air.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:33:37Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007553</oboInOwl:id>
+        <rdfs:label xml:lang="en">decreased rate of flight behavior</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007553"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of flight behavior (GO:0007629). &apos;flight behavior&apos; is defined as: &apos;The response to external or internal stimuli that results in the locomotory process of flight. Flight is the self-propelled movement of an organism through the air.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007629</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jid</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0198606907</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007554 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007554">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000911"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007630"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of jump response (GO:0007630). &apos;jump response&apos; is defined as: &apos;The sudden, usually upward, movement off the ground or other surface through sudden muscular effort in the legs, following exposure to an external stimulus.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:33:59Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007554</oboInOwl:id>
+        <rdfs:label xml:lang="en">decreased rate of jump response</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007554"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of jump response (GO:0007630). &apos;jump response&apos; is defined as: &apos;The sudden, usually upward, movement off the ground or other surface through sudden muscular effort in the legs, following exposure to an external stimulus.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007630</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:jid</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0198606907</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0007555 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBcv_0007555">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000911"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007620"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBcv_0001347"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of copulation (GO:0007620). &apos;copulation&apos; is defined as: &apos;The act of sexual union between male and female, involving the transfer of sperm.&apos;.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-12T10:34:20Z</terms:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic_class</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FBcv:0007555</oboInOwl:id>
+        <rdfs:label xml:lang="en">decreased rate of copulation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBcv_0007555"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenotype that is a decrease in any kind of rate (e.g. speed, frequency) of copulation (GO:0007620). &apos;copulation&apos; is defined as: &apos;The act of sexual union between male and female, involving the transfer of sperm.&apos;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GO:0007620</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0721662544</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11771,6 +13102,18 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0007628 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007628"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0007629 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007629"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0007630 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007630"/>
@@ -11816,6 +13159,18 @@
     <!-- http://purl.obolibrary.org/obo/GO_0008219 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008219"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0008344 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008344"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0008345 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008345"/>
     
 
 
@@ -12308,6 +13663,18 @@
     <!-- http://purl.obolibrary.org/obo/PATO_0015004 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0015004"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0055005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0055005"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0055006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0055006"/>
     
 
 
