@@ -1,14 +1,10 @@
 # Running the DPO release pipeline
 
-# 1. First, lets make sure the ODK is up to date (I comment this out because I use even newer version)
-#docker pull obolibrary/odkfull
+# Updating and cleaning the imports needs to be done in a separate step.
+# This is because the preprocessing step (EDIT_PREPROCESSED) is
+# dependent on the imports, but the imports are themselves dependent
+# on the pre-processed file.
+sh run.sh make PAT=false clean_imports -B
 
-# 2. Next lets run the preprocessing. This involves creating creating the definitions (essentially substitution of the ones containing the $sub_GO:001 macro)
-# This process results in an updated source file dpo-edit-release.owl
-# It also updates imports
-sh run.sh make pre_release -B
-
-# 3. Now lets run the proper release. Note that here, we are overwriting the SRC variable to be the newly created dpo-edit-release.owl
-# This process generates everything from the simple and basic releases to the various flybase reports
-# All deviations from the standard OBO process can be found in the dpo.Makefile file
-sh run.sh make SRC=dpo-edit-release.owl MIR=FALSE IMP=FALSE PAT=FALSE prepare_release -B
+# Now we can run the release pipeline. No need to update the imports again.
+sh run.sh make IMP=false prepare_release -B

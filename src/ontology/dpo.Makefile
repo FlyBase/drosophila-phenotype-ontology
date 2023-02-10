@@ -150,8 +150,8 @@ reports/obo_qc_%.owl.txt:
 # special placeholder string to substitute in definitions from external ontologies, mostly GO
 # dpo only uses SUB definitions - to use DOT, copy code and sparql from FBcv.
 
-tmp/merged-source-pre.owl: $(SRC) clean_imports $(PATTERN_RELEASE_FILES)
-	$(ROBOT) merge -i $(SRC) --output $@
+tmp/merged-source-pre.owl: $(SRC)
+	$(ROBOT) merge -i $< --output $@
 
 tmp/auto_generated_definitions_seed_sub.txt: tmp/merged-source-pre.owl
 	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/classes-with-placeholder-definitions.sparql $@.tmp &&\
@@ -161,7 +161,6 @@ tmp/auto_generated_definitions_seed_sub.txt: tmp/merged-source-pre.owl
 tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_sub.txt
 	java -Xmx3G -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA source_xref
 
-pre_release: test $(SRC) tmp/auto_generated_definitions_sub.owl #components/lethal_class_hierarchy.owl
+$(EDIT_PREPROCESSED): $(SRC) tmp/auto_generated_definitions_sub.owl
 	cat $(SRC) | grep -v 'sub_' > tmp/$(ONT)-edit-release.owl
-	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $(ONT)-edit-release.ofn && mv $(ONT)-edit-release.ofn $(ONT)-edit-release.owl
-	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
+	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $@
