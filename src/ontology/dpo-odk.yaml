@@ -19,20 +19,44 @@ export_formats:
   - obo
   - json
 import_group:
+  use_base_merging: TRUE
+  exclude_iri_patterns:
+    - <http://purl.obolibrary.org/obo/UBERON_*>
+    - <http://purl.obolibrary.org/obo/OBI_*>
+    - <http://purl.obolibrary.org/obo/SO_*>
+    - <http://purl.obolibrary.org/obo/NCBITaxon_*>
   products:
     - id: chebi
-      use_gzipped: TRUE
-      module_type: minimal
+      make_base: TRUE
+      mirror_from: https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/main/chebi_slim.owl
     - id: fbdv
+      use_base: TRUE
     - id: fbbt
+      make_base: TRUE
+      base_iris:
+        - http://purl.obolibrary.org/obo/FBbt_
     - id: cl
+      use_base: TRUE
     - id: pco
+      make_base: TRUE
     - id: caro
+      make_base: TRUE
     - id: bfo
+      make_base: TRUE
     - id: go
+      make_base: TRUE
+      base_iris:
+        - http://purl.obolibrary.org/obo/GOCHE_
+        - http://purl.obolibrary.org/obo/GO_
+        - http://purl.obolibrary.org/obo/GOREL_
     - id: ro
+      use_base: TRUE
     - id: pato
+      make_base: TRUE
     - id: nbo
+      use_base: TRUE
+    - id: envo
+      make_base: TRUE
 components:
   products:
     - filename: lethal_class_hierarchy.owl
