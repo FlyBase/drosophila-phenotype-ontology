@@ -14,12 +14,6 @@ prepare_release: $$(ASSETS) release_reports
 
 CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS))
 
-.PHONY: clean_imports
-clean_imports:  $(IMPORT_FILES)
-	if [ $(IMP) = true ]; then for import in $(IMPORT_OWL_FILES) ; do \
-		$(ROBOT) merge -i $$import unmerge -i components/excluded-axioms.owl -o $$import ; \
-	done; fi
-
 tmp/all_patternised_classes.txt:
 	$(ROBOT) query --use-graphs false -f csv -i $(PATTERNDIR)/definitions.owl --query ../sparql/dpo-equivalent-classes.sparql $@.tmp
 	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
@@ -33,6 +27,47 @@ tmp/remaining_classes.txt: tmp/all_patternised_classes.txt tmp/all_defined_class
 
 tmp/remaining_definitions.owl: $(SRC) tmp/remaining_classes.txt
 	$(ROBOT) filter -i $< -T tmp/remaining_classes.txt --axioms "equivalent annotation" --trim false -o $@
+
+##################################
+##### Custom mirroring rules #####
+##################################
+
+# FBdv defines "shorthands" for some RO relations, which leads to
+# "duplicate label" violations. In theory we could use 'make_base' to
+# automatically get rid of those duplicated labels, but doing so has the
+# the side-effect of removing the "Transitive" characteristic on
+# FBdv:0018001, which in turn prevents the correct classification of
+# lethal terms.
+# So here, we take a softer approach, in which we simply remove from
+# FBdv's base the annotations on the RO relations for which we have
+# defined shorthands.
+# (Whether it is a good idea to have those shorthands defined in FBdv
+#  in the first place is another question.)
+mirror-fbdv: | $(TMPDIR)
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then \
+		curl -L $(OBOBASE)/fbdv/fbdv-base.owl --create-dirs \
+		  -o $(TMPDIR)/fbdv.owl --retry 4 --max-time 200 && \
+		$(ROBOT) remove -i $(TMPDIR)/fbdv.owl \
+		  --term RO:0002012 --term RO:0002087 --term RO:0002090 \
+		  --axioms annotation \
+		  convert -o $@.tmp.owl && mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
+
+# RO's base contains duplicated definitions for several BFO classes that
+# presumably do *not* belong in RO. And here, using 'make_base' is not
+# an option since RO also happens to contain terms that have a BFO
+# prefix but actually *do* belong in RO (if that sounds insane, it's
+# because it is), so a blanket filter based on prefixes won't work.
+# So again, we use a precision approach in which we just remove the
+# annotations of the offending classes.
+mirror-ro: | $(TMPDIR)
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then \
+		curl -L $(OBOBASE)/ro/ro-base.owl --create-dirs \
+		  -o $(TMPDIR)/ro.owl --retry 4 --max-time 200 && \
+		$(ROBOT) remove -i $(TMPDIR)/ro.owl \
+		  --term BFO:0000004 --term BFO:0000015 --term BFO:0000020 \
+		  --axioms annotation \
+		  convert -o $@.tmp.owl && mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
+
 
 #######################################################
 ##### Code for removing patternised classes ###########
