@@ -747,49 +747,7 @@ $(ONT)-simple.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(SIMPLESEED) $(IMPORT_FILE
 
 explain_unsat: $(EDIT_PREPROCESSED) 
 	$(ROBOT) explain -i $< -M unsatisfiability --unsatisfiable random:10 --explanation $(TMPDIR)/$@.md
-# ----------------------------------------
-# GitHub release (HIGHLY experimental)
-# ----------------------------------------
 
-RELEASEFILES=$(ASSETS)
-TAGNAME=v$(TODAY)
-
-
-
-USER=unknown
-GH_ASSETS = $(patsubst %, $(TMPDIR)/gh_release_asset_%.txt, $(RELEASEFILES))
-GITHUB_REPO=FlyBase/drosophila-phenotype-ontology
-
-$(TMPDIR)/release_get.txt: | $(TMPDIR)
-	curl -s https://api.github.com/repos/${GITHUB_REPO}/releases/tags/${TAGNAME} > $@
-
-$(TMPDIR)/release_op.txt: $(TMPDIR)/release_get.txt | $(TMPDIR)
-	$(eval RELEASEID=$(shell cat $(TMPDIR)/release_get.txt | jq '.id'))
-	if ! [ "$(RELEASEID)" -eq "$(RELEASEID)" ] ; then \
-		curl -s -X POST \
-			https://api.github.com/repos/${GITHUB_REPO}/releases \
-			-H 'Accept: */*' \
-			-H 'Content-Type: application/json' \
-			-u ${USER} \
-			-d '{ "tag_name": "${TAGNAME}", "target_commitish": "master", "name": "${TAGNAME}", "body": "Ontology release ${TODAY}", "draft": false, "prerelease": false }' > $@; \
-	else \
-		cp $< $@; \
-	fi;
-
-$(TMPDIR)/gh_release_id.txt: $(TMPDIR)/release_op.txt | $(TMPDIR)
-	echo $(shell cat $(TMPDIR)/release_op.txt | jq '.id') > $@;
-
-$(TMPDIR)/gh_release_asset_%.txt: $(TMPDIR)/gh_release_id.txt % | $(TMPDIR)
-	curl -X POST \
-		"https://uploads.github.com/repos/${GITHUB_REPO}/releases/$(shell cat $(TMPDIR)/gh_release_id.txt)/assets?name=$*&label=$*" \
-		--data-binary @$* \
-		-u ${USER} \
-		-H 'Accept: */*' \
-		-H 'Cache-Control: no-cache' \
-		-H 'Connection: keep-alive' \
-		-H 'Content-Type: application/octet-stream' > $@
-
-public_release: $(TMPDIR)/gh_release_id.txt $(GH_ASSETS) | $(TMPDIR)
 
 
 RELEASE_ASSETS_AFTER_RELEASE=$(foreach n,$(RELEASE_ASSETS), ../../$(n))
