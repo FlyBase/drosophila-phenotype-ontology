@@ -49,7 +49,7 @@ mirror-fbdv: | $(TMPDIR)
 		  -o $(TMPDIR)/fbdv.owl --retry 4 --max-time 200 && \
 		$(ROBOT) remove -i $(TMPDIR)/fbdv.owl \
 		  --term RO:0002012 --term RO:0002087 --term RO:0002090 \
-		  --axioms annotation \
+		  --term RO:0002092 --axioms annotation \
 		  convert -o $@.tmp.owl && mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
 
 # RO's base contains duplicated definitions for several BFO classes that
