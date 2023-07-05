@@ -48,24 +48,8 @@ mirror-fbdv: | $(TMPDIR)
 		curl -L $(OBOBASE)/fbdv/fbdv-base.owl --create-dirs \
 		  -o $(TMPDIR)/fbdv.owl --retry 4 --max-time 200 && \
 		$(ROBOT) remove -i $(TMPDIR)/fbdv.owl \
-		  --term RO:0002012 --term RO:0002087 --term RO:0002090 \
+		  --term RO:0002087 --term RO:0002090 \
 		  --term RO:0002092 --axioms annotation \
-		  convert -o $@.tmp.owl && mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
-
-# RO's base contains duplicated definitions for several BFO classes that
-# presumably do *not* belong in RO. And here, using 'make_base' is not
-# an option since RO also happens to contain terms that have a BFO
-# prefix but actually *do* belong in RO (if that sounds insane, it's
-# because it is), so a blanket filter based on prefixes won't work.
-# So again, we use a precision approach in which we just remove the
-# annotations of the offending classes.
-mirror-ro: | $(TMPDIR)
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then \
-		curl -L $(OBOBASE)/ro/ro-base.owl --create-dirs \
-		  -o $(TMPDIR)/ro.owl --retry 4 --max-time 200 && \
-		$(ROBOT) remove -i $(TMPDIR)/ro.owl \
-		  --term BFO:0000004 --term BFO:0000015 --term BFO:0000020 \
-		  --axioms annotation \
 		  convert -o $@.tmp.owl && mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
 
 
