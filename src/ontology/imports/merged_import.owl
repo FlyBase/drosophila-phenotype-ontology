@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/dpo/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/dpo/releases/2023-07-05/imports/merged_import.owl>
-Annotation(owl:versionInfo "2023-07-05")
+<http://purl.obolibrary.org/obo/dpo/releases/2023-08-02/imports/merged_import.owl>
+Annotation(owl:versionInfo "2023-08-02")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -12454,11 +12454,13 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0008152> <http://purl.obolibrary.o
 # Class: <http://purl.obolibrary.org/obo/GO_0008219> (cell death)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mtg_apoptosis") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:25236395") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0008219> "Any biological process that results in permanent cessation of all vital functions of a cell. A cell should be considered dead when any one of the following molecular or morphological criteria is met: (1) the cell has lost the integrity of its plasma membrane; (2) the cell, including its nucleus, has undergone complete fragmentation into discrete bodies (frequently referred to as apoptotic bodies). The cell corpse (or its fragments) may be engulfed by an adjacent cell in vivo, but engulfment of whole cells should not be considered a strict criteria to define cell death as, under some circumstances, live engulfed cells can be released from phagosomes (see PMID:18045538).")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0008219> "https://github.com/geneontology/go-ontology/issues/24680"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0008219> "biological_process")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0008219> "accidental cell death")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0008219> "necrosis")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0008219> "GO:0008219")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0008219> "This term should not be used for direct annotation. The only exception should be when experimental data (e.g., staining with trypan blue or propidium iodide) show that cell death has occurred, but fail to provide details on death modality (accidental versus programmed). When information is provided on the cell death mechanism, annotations should be made to the appropriate descendant of 'cell death' (such as, but not limited to, GO:0097300 'programmed necrotic cell death' or GO:0006915 'apoptotic process'). Also, if experimental data suggest that a gene product influences cell death indirectly, rather than being involved in the death process directly, consider annotating to a 'regulation' term.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0008219> <http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate>)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0008219> "This term should not be used for direct annotation, it is currently kept in GO as a placeholder for describing cell death phenotypes in uPHENO.  When information is provided on a programmed cell death mechanism, annotations should be made to the appropriate descendant of 'cell death' (such as, but not limited to, GO:0097300 'programmed necrotic cell death' or GO:0006915 'apoptotic process'). Unintentional cell death, i.e. cell death caused by injury, ageing, or cell phenotypes observed as a result of a pathological mutation in an essential gene should NOT be annotated using GO terms.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0008219> "cell death")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0008219> <http://purl.obolibrary.org/obo/GO_0009987>)
 
