@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/dpo/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/dpo/releases/2023-08-02/imports/merged_import.owl>
-Annotation(owl:versionInfo "2023-08-02")
+<http://purl.obolibrary.org/obo/dpo/releases/2023-10-19/imports/merged_import.owl>
+Annotation(owl:versionInfo "2023-10-19")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -188,6 +188,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_78017>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_78295>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_78433>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000219>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0001061>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0001063>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00000097>))
@@ -1325,7 +1326,6 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0015007>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0015008>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0015012>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0017001>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0017003>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0019000>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0019001>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0019002>))
@@ -1739,6 +1739,10 @@ AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#has
 
 AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "has_related_synonym")
 
+# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#id> (id)
+
+AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#id> "id")
+
 # Annotation Property: <http://www.geneontology.org/formats/oboInOwl#inSubset> (in_subset)
 
 AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#inSubset> "in_subset")
@@ -1820,7 +1824,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/BFO_0000062> "An example is: translation preceded_by transcription; aging preceded_by development (not however death preceded_by aging). Where derives_from links classes of continuants, preceded_by links classes of processes. Clearly, however, these two relations are not independent of each other. Thus if cells of type C1 derive_from cells of type C, then any cell division involving an instance of C1 in a given lineage is preceded_by cellular processes involving an instance of C.    The assertion P preceded_by P1 tells us something about Ps in general: that is, it tells us something about what happened earlier, given what we know about what happened later. Thus it does not provide information pointing in the opposite direction, concerning instances of P1 in general; that is, that each is such as to be succeeded by some instance of P. Note that an assertion to the effect that P preceded_by P1 is rather weak; it tells us little about the relations between the underlying instances in virtue of which the preceded_by relation obtains. Typically we will be interested in stronger relations, for example in the relation immediately_preceded_by, or in relations which combine preceded_by with a condition to the effect that the corresponding instances of P and P1 share participants, or that their participants are connected by relations of derivation, or (as a first step along the road to a treatment of causality) that the one process in some way affects (for example, initiates or regulates) the other."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/BFO_0000062> "is preceded by"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/BFO_0000062> "preceded_by"@en)
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/BFO_0000062> "http://www.obofoundry.org/ro/#OBO_REL:preceded_by")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://purl.obolibrary.org/obo/BFO_0000062> "http://www.obofoundry.org/ro/#OBO_REL:preceded_by")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/BFO_0000062> <http://purl.obolibrary.org/obo/ro/subsets#ro-eco>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000062> "preceded by"@en)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BFO_0000062> <http://purl.obolibrary.org/obo/RO_0002086>)
@@ -1874,10 +1878,8 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01003004> "d
 # Object Property: <http://purl.obolibrary.org/obo/FBdv_00018001> (substage of)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DPG") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBdv_00018001> "A relation between a developmental stage and another, larger developmental stage during which it happens.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBdv_00018001> "FBdv:00018001")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBdv_00018001> "relationship")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBdv_00018001> "substage_of")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/FBdv_00018001> "substage_of")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBdv_00018001> "FBdv:00018001")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/FBdv_00018001> "Creating this relation as a temporary fix, pending adding the axiom occurrent_part_of subproperty of happens_during to RO.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBdv_00018001> "substage of")
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/FBdv_00018001> <http://purl.obolibrary.org/obo/RO_0002012>)
@@ -1934,7 +1936,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000057> "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/RO_0000057> "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0000057> "has_participant"@en)
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/RO_0000057> "http://www.obofoundry.org/ro/#OBO_REL:has_participant")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://purl.obolibrary.org/obo/RO_0000057> "http://www.obofoundry.org/ro/#OBO_REL:has_participant")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000057> "has participant"@en)
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/BFO_0000003>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/BFO_0000002>)
@@ -2047,10 +2049,6 @@ ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0002007> <http://purl.obo
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002012> (occurrent part of)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002012> "A part of relation that applies only between occurrents.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/RO_0002012> "RO:0002012")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/RO_0002012> "FlyBase_development_CV")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/RO_0002012> "occurrent_part_of")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/RO_0002012> "occurrent_part_of")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002012> "occurrent part of")
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002012> <http://purl.obolibrary.org/obo/BFO_0000050>)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002012> <http://purl.obolibrary.org/obo/RO_0002418>)
@@ -3435,19 +3433,9 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0017001> <https://orcid.org/0000-0003-2620-0345>)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> <http://purl.obolibrary.org/obo/RO_0017001> "A diagnostic testing device utilizes a specimen means that the diagnostic testing device is capable of an assay, and this assay a specimen as its input.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> <http://purl.obolibrary.org/obo/RO_0017001> "See github ticket https://github.com/oborel/obo-relations/issues/497")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/RO_0017001> "2021-11-08T12:00:00Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/RO_0017001> "2021-11-08T12:00:00Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/RO_0017001> "utilizes")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0017001> "device utilizes material"@en)
-
-# Object Property: <http://purl.obolibrary.org/obo/RO_0017003> (positively correlated with)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0017003> "A relation between entities in which one increases or decreases as the other does the same."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0017003> "directly correlated with"@en)
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/RO_0017003> <https://orcid.org/0000-0003-1909-9269>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0017003> "positively correlated with"@en)
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0017003> <http://purl.obolibrary.org/obo/RO_0002610>)
-SymmetricObjectProperty(<http://purl.obolibrary.org/obo/RO_0017003>)
-ReflexiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0017003>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0019000> (regulates characteristic)
 
@@ -6223,6 +6211,12 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CL_0000000> "The definition of cell is intended to represent all cells, and thus a cell is defined as a material entity and not an anatomical structure, which implies that it is part of an organism (or the entirety of one).")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000000> "cell")
 
+# Class: <http://purl.obolibrary.org/obo/CL_0000219> (motile cell)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FB:ma") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000219> "A cell that moves by its own activities.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000219> "motile cell")
+EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000219> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0048870>)))
+
 # Class: <http://purl.obolibrary.org/obo/CL_0001061> (abnormal cell)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:add") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:cg") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:wdd") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0001061> "A cell found in an organism or derived from an organism exhibiting a phenotype that deviates from the expected phenotype of any native cell type of that organism. Abnormal cells are typically found in disease states or disease models.")
@@ -8466,7 +8460,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00000000> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00000001> (organism)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00000001> "An individual member of the species Drosophila melanogaster.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00000001> "An individual member of the species Drosophila melanogaster.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00000001> "CARO:0000012")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00000001> "NCBITaxon:7227")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00000001> "UBERON:0000468")
@@ -8511,8 +8505,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00000003> <http://purl.obolibrar
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00000004> (head)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:CP") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00000004> "Anterior part of the organism, including mouthparts, some sensory structures and the brain.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00000004> "UBERON:0000033")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-1373-1705") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00000004> "Anterior part of the organism, including mouthparts, some sensory structures and the brain.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00000004> "UBERON:6000004")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00000004> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00000004> "FBbt:00000004")
@@ -8552,7 +8545,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00000007> <http://purl.obolibrar
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00000009> (antennal segment)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00000009> "Segment anterior to the intercalary segment. In the adult it bears the antennae.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00000009> "Segment anterior to the intercalary segment. In the adult it bears the antennae.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00000009> "UBERON:6000009")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00000009> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00000009> "FBbt:00000009")
@@ -8573,7 +8566,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00000052> <http://purl.obolibrar
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00000054> (cleavage stage embryo)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00000054> "A collective term for stages 1-4.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00000054> "A collective term for stages 1-4.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00000054> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00000054> "FBbt:00000054")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00000054> <http://purl.obolibrary.org/obo/fbbt#deprecated>)
@@ -8610,7 +8603,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00000111> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00000119> (anterior ectoderm)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00000119> "The region of the ectoderm anterior to the cephalic furrow.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00000119> "The region of the ectoderm anterior to the cephalic furrow.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00000119> "UBERON:6000119")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00000119> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00000119> "FBbt:00000119")
@@ -8713,7 +8706,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0151275") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_00001059> "optic lobe placode")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_00001059> "optic lobe primordium")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00001059> "fly_anatomy.ontology")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00001059> "P2 VisSys")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00001059> "P2 VisSys")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00001059> "FBbt:00001059")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00001059> <http://purl.obolibrary.org/obo/fbbt#EmbDevSlim>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00001059> <http://purl.obolibrary.org/obo/fbbt#cur>)
@@ -9128,7 +9121,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00004208> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00004450> (late extended germ band embryo)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00004450> "A collective term for stages 11 and 12.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00004450> "A collective term for stages 11 and 12.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00004450> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00004450> "FBbt:00004450")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00004450> <http://purl.obolibrary.org/obo/fbbt#cur>)
@@ -9138,7 +9131,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00004450> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00004508> (eye)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00004508> "A bilaterally paired compound sense organ of the adult head that functions in visual perception.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00004508> "A bilaterally paired compound sense organ of the adult head that functions in visual perception.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00004508> "UBERON:0000018")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00004508> "VFB:FBbt_00004508")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00004508> "fly_anatomy.ontology")
@@ -9182,7 +9175,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005093> <http://purl.obolibrar
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005155> (sense organ)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005155> "Multicellular anatomical structure with largely bona fide boundary that transduces some sensory stimulus to the nervous system.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005155> "Multicellular anatomical structure with largely bona fide boundary that transduces some sensory stimulus to the nervous system.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00005155> "UBERON:0000020")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00005155> "VFB:FBbt_00005155")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005155> "fly_anatomy.ontology")
@@ -9274,7 +9267,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005301> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005304> (blastoderm embryo)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005304> "A collective term for stages 3-5.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005304> "A collective term for stages 3-5.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005304> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00005304> "FBbt:00005304")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00005304> <http://purl.obolibrary.org/obo/fbbt#deprecated>)
@@ -9284,7 +9277,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005304> <http://purl.obolibrar
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005305> (syncytial blastoderm embryo)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:GG") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005305> "A blastoderm embryo prior to cellularization (corresponds to embryonic stages 3 and 4).")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:GG") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005305> "A blastoderm embryo prior to cellularization (corresponds to embryonic stages 3 and 4).")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005305> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00005305> "FBbt:00005305")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00005305> <http://purl.obolibrary.org/obo/fbbt#cur>)
@@ -9307,7 +9300,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005306> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005311> (stage 5 embryo)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:MA") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0089570") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005311> "Stage 5 begins when cellularization starts. Near the end of this stage the pole cells begin to migrate dorsally and ventral midline cells acquire an irregular, wavy appearance. Stage 5 ends when ventral furrow formation becomes apparent. Duration at 25 degrees C: approximately 40 minutes (130-170 minutes after egg laying).")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:MA") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0089570") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005311> "Stage 5 begins when cellularization starts. Near the end of this stage the pole cells begin to migrate dorsally and ventral midline cells acquire an irregular, wavy appearance. Stage 5 ends when ventral furrow formation becomes apparent. Duration at 25 degrees C: approximately 40 minutes (130-170 minutes after egg laying).")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005311> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00005311> "cellular blastoderm embryo")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00005311> "FBbt:00005311")
@@ -9319,7 +9312,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005311> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005317> (gastrula embryo)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:GG") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005317> "A collective term for stages 6-8, during which complex morphogenetic movements result in the formation of the three germ layers; ectoderm, mesoderm and endoderm.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:GG") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005317> "A collective term for stages 6-8, during which complex morphogenetic movements result in the formation of the three germ layers; ectoderm, mesoderm and endoderm.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00005317> "UBERON:0004734")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005317> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00005317> "FBbt:00005317")
@@ -9331,7 +9324,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005317> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005321> (extended germ band embryo)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005321> "A collective term for stages 9-12.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005321> "A collective term for stages 9-12.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005321> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00005321> "FBbt:00005321")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00005321> <http://purl.obolibrary.org/obo/fbbt#deprecated>)
@@ -9342,7 +9335,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005321> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005331> (dorsal closure embryo)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005331> "A collective term for stages 13-15.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005331> "A collective term for stages 13-15.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005331> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00005331> "contracted germ band embryo")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00005331> "head involution embryo")
@@ -9355,7 +9348,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005331> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005333> (late embryo)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005333> "A collective term for stages 16 and 17.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005333> "A collective term for stages 16 and 17.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00005333> "UBERON:0000323")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005333> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00005333> "FBbt:00005333")
@@ -9368,7 +9361,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005333> ObjectSomeValuesFrom(<
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005413> (anlage in statu nascendi)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0155831") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0178740") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005413> "Domain that does not yet coincide 1:1 with a later organ. Anlagen in statu nascendi are typically defined for the early blastoderm by the expression domains of genes which, in the late blastoderm or later, are expressed in specific anlagen, but initially come on in larger domains.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00005413> "UBERON:6005413")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005413> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00005413> "A0")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00005413> "FBbt:00005413")
@@ -9380,7 +9372,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005413> <http://purl.obolibrar
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005425> (visual anlage in statu nascendi)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:VH") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005425> "Anlage in statu nascendi of the visual system in a stage 5 embryo that will give rise to the visual system anlage.")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_00005425> "Asn VisSys")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_00005425> "Asn VisSys")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005425> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00005425> "A0Vis")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00005425> "FBbt:00005425")
@@ -9420,8 +9412,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005427> <http://purl.obolibrar
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005434> (visual anlage)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:VH") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005434> "Anlage of the visual system in the gastrula embryo that will give rise to the visual primordium.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00005434> "UBERON:6005434")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_00005434> "A VisSys")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_00005434> "A VisSys")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005434> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00005434> "AVis")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00005434> "FBbt:00005434")
@@ -9452,7 +9443,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005495> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005515> (early embryonic primordium of adult eye)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:VH") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0089570") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0151275") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005515> "Early primordium of the late extended germ band and dorsal closure embryo that will give rise to the adult eye. It develops from the visual primordium.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:VH") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0089570") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0151275") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005515> "Early primordium of the late extended germ band and dorsal closure embryo that will give rise to the adult eye. It develops from the visual primordium.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_00005515> "adult eye primordium early")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005515> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00005515> "FBbt:00005515")
@@ -9469,7 +9460,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005515> ObjectSomeValuesFrom(<
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00005533> "UBERON:6005533")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005533> "fly_anatomy.ontology")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00005533> "P2 iVenEp")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00005533> "P2 iVenEp")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00005533> "venEpiP2")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00005533> "FBbt:00005533")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00005533> <http://purl.obolibrary.org/obo/fbbt#EmbDevSlim>)
@@ -9485,7 +9476,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005533> ObjectSomeValuesFrom(<
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0089570") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005558> ".")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00005558> "UBERON:6005558")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005558> "fly_anatomy.ontology")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00005558> "P2 VenEc")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00005558> "P2 VenEc")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00005558> "venEc")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00005558> "FBbt:00005558")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00005558> <http://purl.obolibrary.org/obo/fbbt#EmbDevSlim>)
@@ -9522,7 +9513,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00006011> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007001> (anatomical structure)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "CARO:MAH") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007001> "Material anatomical entity that has inherent 3D shape, whose parts are all connected and that is generated by coordinated expression of the organism's own genome.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0001-9114-8737") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007001> "Material anatomical entity that has inherent 3D shape, whose parts are all connected and that is generated by coordinated expression of the organism's own genome.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007001> "CARO:0000003")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007001> "UBERON:0000061")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007001> "fly_anatomy.ontology")
@@ -9535,7 +9526,7 @@ DisjointClasses(<http://purl.obolibrary.org/obo/FBbt_00007001> <http://purl.obol
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007002> (cell)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "CARO:MAH") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007002> "Anatomical structure that has as its parts a maximally connected cell compartment surrounded by a plasma membrane.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0001-9114-8737") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007002> "Anatomical structure that has as its parts a maximally connected cell compartment surrounded by a plasma membrane.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007002> "CARO:0000013")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007002> "CL:0000000")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007002> "fly_anatomy.ontology")
@@ -9549,7 +9540,7 @@ DisjointClasses(<http://purl.obolibrary.org/obo/FBbt_00007002> <http://purl.obol
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007003> (portion of tissue)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "CARO:MAH") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007003> "Anatomical structure, that consists of similar cells and intercellular matrix, aggregated according to genetically determined spatial relationships.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0001-9114-8737") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007003> "Anatomical structure, that consists of similar cells and intercellular matrix, aggregated according to genetically determined spatial relationships.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007003> "CARO:0000043")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007003> "UBERON:0000479")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007003> "fly_anatomy.ontology")
@@ -9562,7 +9553,7 @@ DisjointClasses(<http://purl.obolibrary.org/obo/FBbt_00007003> <http://purl.obol
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007005> (epithelium)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "CARO:MAH") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007005> "Portion of tissue, that consists of one or more layers of cells with distinct apical-basal polarity, connected to each other by cell junctions.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0001-9114-8737") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007005> "Portion of tissue, that consists of one or more layers of cells with distinct apical-basal polarity, connected to each other by cell junctions.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007005> "CARO:0000066")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007005> "UBERON:0000483")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007005> "fly_anatomy.ontology")
@@ -9582,7 +9573,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007006> <http://purl.obolibrar
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007009> (organism subdivision)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "CARO:MAH") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007009> "Anatomical structure that is a primary subdivision of whole organism. The mereological sum of these is the whole organism.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0001-9114-8737") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007009> "Anatomical structure that is a primary subdivision of whole organism. The mereological sum of these is the whole organism.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007009> "CARO:0000032")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007009> "UBERON:0000475")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007009> "fly_anatomy.ontology")
@@ -9595,7 +9586,7 @@ DisjointClasses(<http://purl.obolibrary.org/obo/FBbt_00007009> <http://purl.obol
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007010> (multi-tissue structure)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "CARO:MAH") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007010> "Anatomical structure that has as its parts two or more portions of tissue of at least two different types and which, through specific morphogenetic processes, forms a single distinct structural unit demarcated by bona fide boundaries from other distinct structural units of different types.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0001-9114-8737") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007010> "Anatomical structure that has as its parts two or more portions of tissue of at least two different types and which, through specific morphogenetic processes, forms a single distinct structural unit demarcated by bona fide boundaries from other distinct structural units of different types.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007010> "CARO:0000055")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007010> "UBERON:0000481")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007010> "fly_anatomy.ontology")
@@ -9619,7 +9610,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007016> <http://purl.obolibrar
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007045> (trunk ectoderm)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007045> "The region of the ectoderm posterior to the cephalic furrow.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007045> "The region of the ectoderm posterior to the cephalic furrow.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007045> "UBERON:6007045")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007045> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00007045> "FBbt:00007045")
@@ -9629,8 +9620,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007045> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007230> (compound cell cluster organ)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007230> "An anatomical structure consisting of multiple cell cluster organs and which does not contain portions of tissue.")
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00007230> <http://orcid.org/0000-0002-7073-9172>)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007230> "An anatomical structure consisting of multiple cell cluster organs and which does not contain portions of tissue.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00007230> <https://orcid.org/0000-0002-7073-9172>)
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/FBbt_00007230> "2008-10-21T12:20:23Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007230> "UBERON:0014732")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007230> "fly_anatomy.ontology")
@@ -9641,7 +9632,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007230> <http://purl.obolibrar
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007234> (compound sense organ)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:Autogenerated") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007234> "Any compound cell cluster organ (FBbt:00007230) that capable of some detection of stimulus involved in sensory perception (GO:0050906).")
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00007234> <http://orcid.org/0000-0002-7073-9172>)
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00007234> <https://orcid.org/0000-0002-7073-9172>)
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/FBbt_00007234> "2008-10-21T02:09:38Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/FBbt_00007234> "FBbt:00002653")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007234> "VFB:FBbt_00007234")
@@ -9656,7 +9647,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007234> <http://purl.obolibrar
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007235> (external compound sense organ)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0089570") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007235> "Compound sense organ that is located within the epidermis.")
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00007235> <http://orcid.org/0000-0002-7073-9172>)
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00007235> <https://orcid.org/0000-0002-7073-9172>)
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/FBbt_00007235> "2008-10-21T02:23:08Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007235> "VFB:FBbt_00007235")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007235> "fly_anatomy.ontology")
@@ -9667,8 +9658,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007235> <http://purl.obolibrar
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007276> (disconnected anatomical group)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007276> "Material anatomical entity generated by coordinated expression of the organism's own genome and whose component parts are not all continuous with each other.")
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00007276> <http://orcid.org/0000-0002-7073-9172>)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007276> "Material anatomical entity generated by coordinated expression of the organism's own genome and whose component parts are not all continuous with each other.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00007276> <https://orcid.org/0000-0002-7073-9172>)
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/FBbt_00007276> "2008-11-04T03:09:28Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007276> "UBERON:0034923")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007276> "fly_anatomy.ontology")
@@ -9678,8 +9669,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007276> <http://purl.obolibrar
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007278> (non-connected functional system)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007278> "An anatomical group whose component structures share a common function.")
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00007278> <http://orcid.org/0000-0002-7073-9172>)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007278> "An anatomical group whose component structures share a common function.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00007278> <https://orcid.org/0000-0002-7073-9172>)
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/FBbt_00007278> "2008-11-04T03:18:01Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007278> "UBERON:0015203")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007278> "fly_anatomy.ontology")
@@ -9690,7 +9681,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007278> <http://purl.obolibrar
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007280> (embryonic/larval head sense organ)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:Autogenerated") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007280> "Any sense organ (FBbt:00005155) that is part of some larval head (FBbt:00001730).")
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00007280> <http://orcid.org/0000-0002-7073-9172>)
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00007280> <https://orcid.org/0000-0002-7073-9172>)
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/FBbt_00007280> "2008-11-05T10:34:14Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007280> "UBERON:6007280")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007280> "VFB:FBbt_00007280")
@@ -9704,7 +9695,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007280> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007685> (auditory system)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007685> "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception of sound.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007685> "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception of sound.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007685> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00007685> "FBbt:00007685")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00007685> "auditory system")
@@ -9714,7 +9705,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007685> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007687> (mechanosensory system)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007687> "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception of mechanical stimuli.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007687> "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception of mechanical stimuli.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007687> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00007687> "FBbt:00007687")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00007687> "mechanosensory system")
@@ -9724,7 +9715,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007687> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007688> (olfactory system)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007688> "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception of smell.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007688> "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception of smell.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007688> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00007688> "FBbt:00007688")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00007688> "olfactory system")
@@ -9734,7 +9725,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007688> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007689> (chemosensory system)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007689> "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception of chemical stimuli.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007689> "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception of chemical stimuli.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007689> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00007689> "FBbt:00007689")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00007689> "chemosensory system")
@@ -9744,7 +9735,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007689> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007690> (gustatory system)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007690> "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception of taste.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007690> "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception of taste.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007690> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00007690> "FBbt:00007690")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00007690> "gustatory system")
@@ -9754,7 +9745,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007690> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007692> (sensory system)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007692> "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007692> "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00007692> "UBERON:0001032")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007692> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00007692> "FBbt:00007692")
@@ -9769,7 +9760,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007692> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00014201> (early extended germ band embryo)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00014201> "A collective term for stages 9 and 10.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00014201> "A collective term for stages 9 and 10.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00014201> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00014201> "FBbt:00014201")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00014201> <http://purl.obolibrary.org/obo/fbbt#cur>)
@@ -9778,7 +9769,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00014201> <http://purl.obolibrar
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00025990> (ectodermal derivative)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00025990> "Any developing embryonic structure (FBbt:00004208) that develops from some ectoderm (FBbt:00000111).")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00025990> "Any developing embryonic structure (FBbt:00004208) that develops from some ectoderm (FBbt:00000111).")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/FBbt_00025990> "FBbt:00005253")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00025990> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00025990> "FBbt:00025990")
@@ -9790,7 +9781,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00025990> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00025991> (anterior ectoderm derivative)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00025991> ".")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00025991> ".")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00025991> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00025991> "FBbt:00025991")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00025991> <http://purl.obolibrary.org/obo/fbbt#cur>)
@@ -9800,7 +9791,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00025991> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00025993> (ventral ectoderm derivative)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00025993> ".")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00025993> ".")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00025993> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00025993> "FBbt:00025993")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00025993> <http://purl.obolibrary.org/obo/fbbt#cur>)
@@ -9811,7 +9802,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00025993> ObjectSomeValuesFrom(<
 # Class: <http://purl.obolibrary.org/obo/FBbt_00047552> (imaginal tissue)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0064789") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00047552> "Any group of similar imaginal cells, such as an imaginal disc, imaginal ring or imaginal island, or a precursor tissue that forms one of them. These tissues develop separately from other embryonic and larval tissues and they generate adult structures during metamorphosis.")
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00047552> <http://orcid.org/0000-0002-1373-1705>)
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00047552> <https://orcid.org/0000-0002-1373-1705>)
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/FBbt_00047552> "2018-08-15T09:31:08Z"^^xsd:dateTime)
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0053815") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_00047552> "imaginal structure")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00047552> "fly_anatomy.ontology")
@@ -9822,8 +9813,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00047552> <http://purl.obolibrar
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00047735> (visual system)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:CP") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00047735> "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception of light.")
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00047735> <http://orcid.org/0000-0002-1373-1705>)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-1373-1705") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00047735> "An anatomical system consisting of all of the anatomical entities that function in some part of the sensory perception of light.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00047735> <https://orcid.org/0000-0002-1373-1705>)
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/FBbt_00047735> "2018-09-18T13:08:28Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00047735> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00047735> "FBbt:00047735")
@@ -9834,7 +9825,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00047735> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00057001> (anterior-posterior subdivision of organism)
 
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00057001> <http://orcid.org/0000-0002-7073-9172>)
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00057001> <https://orcid.org/0000-0002-7073-9172>)
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/FBbt_00057001> "2008-06-30T04:15:23Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00057001> "UBERON:6057001")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00057001> "fly_anatomy.ontology")
@@ -9845,8 +9836,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00057001> <http://purl.obolibrar
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00100313> (multicellular structure)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00100313> "Anatomical structure that has multiple cells as parts.")
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00100313> <http://orcid.org/0000-0002-7073-9172>)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00100313> "Anatomical structure that has multiple cells as parts.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00100313> <https://orcid.org/0000-0002-7073-9172>)
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/FBbt_00100313> "2010-11-02T02:25:04Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00100313> "UBERON:0010000")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00100313> "fly_anatomy.ontology")
@@ -9856,7 +9847,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00100313> <http://purl.obolibrar
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00105515> (late embryonic primordium of adult eye)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:VH") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0089570") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0151275") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00105515> "Primordium of the late embryo that develops from the early primordium, and will give rise to the adult eye.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:VH") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0089570") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0151275") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00105515> "Primordium of the late embryo that develops from the early primordium, and will give rise to the adult eye.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_00105515> "adult eye primordium late")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00105515> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00105515> "FBbt:00105515")
@@ -9869,8 +9860,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00105515> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00110192> (pupal nervous system)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:MMC") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00110192> "Nervous system of the pupa.")
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00110192> <http://orcid.org/0000-0001-5948-3092>)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0001-5948-3092") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00110192> "Nervous system of the pupa.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00110192> <https://orcid.org/0000-0001-5948-3092>)
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/FBbt_00110192> "2013-01-04T10:01:28Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00110192> "VFB:FBbt_00110192")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00110192> "fly_anatomy.ontology")
@@ -9893,7 +9884,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_01000119> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_10000000> (anatomical entity)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "CARO:MAH") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_10000000> "Anatomical entity which is part_of Drosophila melanogaster.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0001-9114-8737") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_10000000> "Anatomical entity which is part_of Drosophila melanogaster.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/FBbt_10000000> "FBbt_root:00000000")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_10000000> "UBERON:0001062")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_10000000> "fly_anatomy.ontology")
@@ -9909,7 +9900,7 @@ DisjointClasses(<http://purl.obolibrary.org/obo/FBbt_10000000> <http://purl.obol
 # Class: <http://purl.obolibrary.org/obo/FBbt_10005249> (embryonic primordium of adult eye)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0089570") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0151275") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_10005249> "Primordium of the embryo that will give rise to the adult eye. It corresponds to the most anterior region that develops from the visual primordium.")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:DOS") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_10005249> "P1 Eye")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_10005249> "P1 Eye")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_10005249> "adult eye primordium")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_10005249> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_10005249> "FBbt:10005249")
@@ -14752,6 +14743,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0048512> <http://purl.obolibrary.o
 # Class: <http://purl.obolibrary.org/obo/GO_0048513> (animal organ development)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:jid") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0048513> "Development of a tissue or tissues that work together to perform a specific function or functions. Development pertains to the process whose specific outcome is the progression of a structure over time, from its formation to the mature structure. Organs are commonly observed as visibly distinct structures, but may also exist as loosely associated clusters of cells that work together to perform a specific function or functions.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0048513> "https://github.com/geneontology/go-ontology/issues/25943"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0048513> "Wikipedia:Organogenesis")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0048513> "development of an organ")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0048513> "organogenesis")
