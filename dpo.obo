@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: dpo/releases/2023-08-02
-date: 02:08:2023 15:47
+data-version: dpo/releases/2023-10-19
+date: 19:10:2023 10:30
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -44,7 +44,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology for the
 property_value: http://purl.org/dc/elements/1.1/title "Drosophila Phenotype Ontology (DPO)" xsd:string
 property_value: http://purl.org/dc/terms/license "https://creativecommons.org/licenses/by/4.0/" xsd:string
 property_value: IAO:0000700 FBcv:0000347
-property_value: owl:versionInfo "2023-08-02" xsd:string
+property_value: owl:versionInfo "2023-10-19" xsd:string
 
 [Term]
 id: FBcv:0000002
@@ -2433,6 +2433,15 @@ name: has_age
 is_functional: true
 
 [Typedef]
+id: FBdv:00018001
+name: substage of
+namespace: relationship
+def: "A relation between a developmental stage and another, larger developmental stage during which it happens." [FBC:DPG]
+comment: Creating this relation as a temporary fix, pending adding the axiom occurrent_part_of subproperty of happens_during to RO.
+is_transitive: true
+is_a: BFO:0000050 ! part of
+
+[Typedef]
 id: RO:0000052
 name: characteristic of
 def: "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence." []
@@ -2490,14 +2499,4 @@ subset: ro-eco
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
 property_value: IAO:0000232 "This relation is intended to be used in combination with PATO, to be able to refine PATO quality classes using modifiers such as 'abnormal' and 'normal'. It has yet to be formally aligned into an ontological framework; it's not clear what the ontological status of the \"modifiers\" are." xsd:string
-
-[Typedef]
-id: substage_of
-name: substage of
-namespace: relationship
-def: "A relation between a developmental stage and another, larger developmental stage during which it happens." [FBC:DPG]
-comment: Creating this relation as a temporary fix, pending adding the axiom occurrent_part_of subproperty of happens_during to RO.
-xref: FBdv:00018001
-is_transitive: true
-is_a: BFO:0000050 ! part of
 
