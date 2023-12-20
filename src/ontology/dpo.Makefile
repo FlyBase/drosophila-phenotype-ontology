@@ -170,17 +170,11 @@ reports/obo_qc_%.owl.txt:
 # special placeholder string to substitute in definitions from external ontologies, mostly GO
 # dpo only uses SUB definitions - to use DOT, copy code and sparql from FBcv.
 
-tmp/merged-source-pre.owl: $(SRC)
-	$(ROBOT) merge -i $< --output $@
+export ROBOT_PLUGINS_DIRECTORY = $(TMPDIR)/plugins
 
-tmp/auto_generated_definitions_seed_sub.txt: tmp/merged-source-pre.owl
-	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/classes-with-placeholder-definitions.sparql $@.tmp &&\
-	cat $@.tmp | sort | uniq >  $@
-	rm -f $@.tmp
+$(ROBOT_PLUGINS_DIRECTORY)/flybase.jar:
+	mkdir -p $(ROBOT_PLUGINS_DIRECTORY)
+	curl -L -o $@ https://github.com/FlyBase/flybase-robot-plugin/releases/download/flybase-robot-plugin-0.1.0/flybase.jar
 
-tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_sub.txt
-	java -Xmx3G -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ NA source_xref
-
-$(EDIT_PREPROCESSED): $(SRC) tmp/auto_generated_definitions_sub.owl
-	cat $(SRC) | grep -v 'sub_' > tmp/$(ONT)-edit-release.owl
-	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $@
+$(EDIT_PREPROCESSED): $(SRC) $(ROBOT_PLUGINS_DIRECTORY)/flybase.jar
+	$(ROBOT) flybase:rewrite-def -i $< --sub-definitions --filter-prefix FBcv -o $@
