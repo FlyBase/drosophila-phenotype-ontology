@@ -20,7 +20,7 @@ WARN	annotation_whitespace	BFO:0000023	IAO:0000602	(forall (x) (if (Role x) (Rea
 WARN	annotation_whitespace	BFO:0000024	IAO:0000602	(forall (x) (if (FiatObjectPart x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y) (and (Object y) (properContinuantPartOfAt x y t)))))))) // axiom label in BFO2 CLIF: [027-004] 
 WARN	annotation_whitespace	BFO:0000027	IAO:0000116	An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects 
 WARN	annotation_whitespace	BFO:0000027	IAO:0000602	(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] 
-WARN	annotation_whitespace	BFO:0000029	IAO:0000602	(forall (x) (if (Site x) (ImmaterialEntity x))) // axiom label in BFO2 CLIF: [034-002] 
+WARN	annotation_whitespace	BFO:0000031	IAO:0000602	(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] 
 WARN	annotation_whitespace	BFO:0000034	IAO:0000602	(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] 
 WARN	annotation_whitespace	BFO:0000040	IAO:0000602	(forall (x) (if (MaterialEntity x) (IndependentContinuant x))) // axiom label in BFO2 CLIF: [019-002] 
 WARN	annotation_whitespace	BFO:0000040	IAO:0000602	(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt x y t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [021-002] 
@@ -47,11 +47,13 @@ WARN	duplicate_definition	FBbt:00000054	IAO:0000115	A collective term for stages
 WARN	duplicate_definition	FBdv:00000054	IAO:0000115	A collective term for stages 1-4.
 WARN	duplicate_definition	FBbt:00000052	IAO:0000115	.
 WARN	duplicate_definition	FBbt:00003004	IAO:0000115	.
-WARN	duplicate_definition	FBbt:00005558	IAO:0000115	.
-WARN	duplicate_definition	FBbt:00025991	IAO:0000115	.
-WARN	duplicate_definition	FBbt:00025993	IAO:0000115	.
+WARN	duplicate_definition	FBbt:00105220	IAO:0000115	.
 WARN	duplicate_exact_synonym	GO:0007632	oboInOwl:hasExactSynonym	visual behaviour
 WARN	duplicate_exact_synonym	NBO:0000314	oboInOwl:hasExactSynonym	visual behaviour
+WARN	duplicate_exact_synonym	FBbt:00051069	oboInOwl:hasExactSynonym	SPZ
+WARN	duplicate_exact_synonym	FBbt:00110638	oboInOwl:hasExactSynonym	SPZ
+WARN	duplicate_exact_synonym	FBbt:00051068	oboInOwl:hasExactSynonym	SEZ
+WARN	duplicate_exact_synonym	FBbt:00110639	oboInOwl:hasExactSynonym	SEZ
 WARN	duplicate_exact_synonym	GO:0007632	oboInOwl:hasExactSynonym	behavioural response to visual stimulus
 WARN	duplicate_exact_synonym	NBO:0000314	oboInOwl:hasExactSynonym	behavioural response to visual stimulus
 WARN	duplicate_exact_synonym	GO:0007610	oboInOwl:hasExactSynonym	behaviour
@@ -105,6 +107,8 @@ WARN	duplicate_label	CL:0000000	rdfs:label	cell
 WARN	duplicate_label	FBbt:00007002	rdfs:label	cell
 WARN	duplicate_label	CARO:0000000	rdfs:label	anatomical entity
 WARN	duplicate_label	FBbt:10000000	rdfs:label	anatomical entity
+WARN	duplicate_label	CARO:0000040	rdfs:label	acellular anatomical structure
+WARN	duplicate_label	FBbt:00007013	rdfs:label	acellular anatomical structure
 WARN	duplicate_label_synonym	CHEBI:10545	oboInOwl:hasExactSynonym	electron
 WARN	duplicate_label_synonym	CHEBI:15022	oboInOwl:hasExactSynonym	electron donor
 WARN	duplicate_label_synonym	CHEBI:15377	oboInOwl:hasExactSynonym	water
@@ -220,11 +224,12 @@ WARN	missing_definition	CHEBI:52625	IAO:0000115
 WARN	missing_definition	ENVO:00000344	IAO:0000115	
 WARN	missing_definition	FBbt:00001727	IAO:0000115	
 WARN	missing_definition	FBbt:00005290	IAO:0000115	
-WARN	missing_definition	FBbt:00005533	IAO:0000115	
 WARN	missing_definition	FBbt:00007006	IAO:0000115	
+WARN	missing_definition	FBbt:00007013	IAO:0000115	
 WARN	missing_definition	FBbt:00007016	IAO:0000115	
+WARN	missing_definition	FBbt:00007330	IAO:0000115	
 WARN	missing_definition	FBbt:00057001	IAO:0000115	
-WARN	missing_definition	FBbt:01000119	IAO:0000115	
+WARN	missing_definition	FBbt:00100318	IAO:0000115	
 WARN	missing_definition	FBcv:0000347	IAO:0000115	
 WARN	missing_definition	FBcv:0006003	IAO:0000115	
 WARN	missing_definition	FBcv:0006007	IAO:0000115	
@@ -274,6 +279,7 @@ WARN	missing_definition	RO:0004033	IAO:0000115
 WARN	missing_definition	RO:0004046	IAO:0000115	
 WARN	missing_definition	RO:0004047	IAO:0000115	
 WARN	missing_definition	obo:chebi#IUPAC_NAME	IAO:0000115	
+WARN	missing_definition	obo:fbbt#BRAIN_NAME_ABV	IAO:0000115	
 WARN	missing_definition	obo:fbcv#BRAIN_NAME_ABV	IAO:0000115	
 WARN	missing_definition	obo:fbcv#BRAND_NAME	IAO:0000115	
 WARN	missing_definition	obo:fbcv#FORMULA	IAO:0000115	
@@ -301,6 +307,7 @@ WARN	missing_definition	oboInOwl:id	IAO:0000115
 WARN	missing_definition	oboInOwl:inSubset	IAO:0000115	
 WARN	missing_definition	oboInOwl:shorthand	IAO:0000115	
 WARN	missing_label	obo:chebi#IUPAC_NAME	rdfs:label	
+WARN	missing_label	obo:fbbt#BRAIN_NAME_ABV	rdfs:label	
 WARN	missing_superclass	BFO:0000001	rdfs:subClassOf	
 WARN	missing_superclass	CHEBI:24431	rdfs:subClassOf	
 WARN	missing_superclass	CHEBI:36342	rdfs:subClassOf	
@@ -315,8 +322,8 @@ INFO	lowercase_definition	BFO:0000020	IAO:0000115	b is a specifically dependent 
 INFO	lowercase_definition	BFO:0000023	IAO:0000600	b is a role means: b is a realizable entity & b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be& b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed. (axiom label in BFO2 Reference: [061-001])@en
 INFO	lowercase_definition	BFO:0000024	IAO:0000600	b is a fiat object part = Def. b is a material entity which is such that for all times t, if b exists at t then there is some object c such that b proper continuant_part of  c at t and c is demarcated from the remainder of c by a two-dimensional continuant fiat boundary. (axiom label in BFO2 Reference: [027-004])@en
 INFO	lowercase_definition	BFO:0000027	IAO:0000600	b is an object aggregate means: b is a material entity consisting exactly of a plurality of objects as member_parts at all times at which b exists. (axiom label in BFO2 Reference: [025-004])@en
-INFO	lowercase_definition	BFO:0000029	IAO:0000600	b is a site means: b is a three-dimensional immaterial entity that is (partially or wholly) bounded by a material entity or it is a three-dimensional immaterial part thereof. (axiom label in BFO2 Reference: [034-002])@en
 INFO	lowercase_definition	BFO:0000030	IAO:0000600	b is an object means: b is a material entity which manifests causal unity of one or other of the types CUn listed above & is of a type (a material universal) instances of which are maximal relative to this criterion of causal unity. (axiom label in BFO2 Reference: [024-001])@en
+INFO	lowercase_definition	BFO:0000031	IAO:0000115	b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])@en
 INFO	lowercase_definition	BFO:0000050	IAO:0000115	a core relation that holds between a part and its whole@en
 INFO	lowercase_definition	BFO:0000051	IAO:0000115	a core relation that holds between a whole and its part@en
 INFO	lowercase_definition	BFO:0000062	IAO:0000115	x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.@en
@@ -325,9 +332,7 @@ INFO	lowercase_definition	BFO:0000066	IAO:0000115	b occurs_in c =def b is a proc
 INFO	lowercase_definition	BFO:0000067	IAO:0000115	[copied from inverse property 'occurs in'] b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t@en
 INFO	lowercase_definition	FBbt:00000052	IAO:0000115	.
 INFO	lowercase_definition	FBbt:00003004	IAO:0000115	.
-INFO	lowercase_definition	FBbt:00005558	IAO:0000115	.
-INFO	lowercase_definition	FBbt:00025991	IAO:0000115	.
-INFO	lowercase_definition	FBbt:00025993	IAO:0000115	.
+INFO	lowercase_definition	FBbt:00105220	IAO:0000115	.
 INFO	lowercase_definition	NBO:0000016	IAO:0000115	"\""Behavior relate to the usually upward movement off the ground or other surface through sudden muscular effort in the legs.\"" [GO:0007630]"
 INFO	lowercase_definition	NBO:0000313	IAO:0000115	"\""The action, reaction, or performance of an organism in response to external or internal stimuli.\"" [GO:GO\:0007610]"
 INFO	lowercase_definition	NBO:0000314	IAO:0000115	"\""Behavior related to the actions or reactions of an organism in response to a visual stimulus.\"" [GO:0007632]"
@@ -348,9 +353,12 @@ INFO	lowercase_definition	RO:0000091	IAO:0000115	a relation between an independe
 INFO	lowercase_definition	RO:0000092	IAO:0000115	inverse of has disposition
 INFO	lowercase_definition	RO:0002018	IAO:0000115	w 'has process component' p if p and w are processes,  w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type.
 INFO	lowercase_definition	RO:0002131	IAO:0000115	x overlaps y if and only if there exists some z such that x has part z and z part of y
+INFO	lowercase_definition	RO:0002170	IAO:0000115	a is connected to b if and only if a and b are discrete structure, and there exists some connecting structure c, such that c connects a and b
+INFO	lowercase_definition	RO:0002177	IAO:0000115	a is attached to part of b if a is attached to b, or a is attached to some p, where p is part of b.
 INFO	lowercase_definition	RO:0002180	IAO:0000115	w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type.
 INFO	lowercase_definition	RO:0002202	IAO:0000115	x develops from y if and only if either (a) x directly develops from y or (b) there exists some z such that x directly develops from z and z develops from y
 INFO	lowercase_definition	RO:0002203	IAO:0000115	inverse of develops from
+INFO	lowercase_definition	RO:0002206	IAO:0000115	x expressed in y if and only if there is a gene expression process (GO:0010467) that occurs in y, and one of the following holds: (i) x is a gene, and x is transcribed into a transcript as part of the gene expression process (ii) x is a transcript, and the transcription of x is part of the gene expression process (iii) x is a mature gene product such as a protein, and x was translated or otherwise processes from a transcript that was transcribed as part of this gene expression process
 INFO	lowercase_definition	RO:0002211	IAO:0000115	p regulates q iff p is causally upstream of q, the execution of p is not constant and varies according to specific conditions, and p influences the rate or magnitude of execution of q due to an effect either on some enabler of q or some enabler of a part of q.
 INFO	lowercase_definition	RO:0002212	IAO:0000115	p negatively regulates q iff p regulates q, and p decreases the rate or magnitude of execution of q.
 INFO	lowercase_definition	RO:0002213	IAO:0000115	p positively regulates q iff p regulates q, and p increases the rate or magnitude of execution of q.
@@ -364,12 +372,14 @@ INFO	lowercase_definition	RO:0002254	IAO:0000115	x has developmental contributio
 INFO	lowercase_definition	RO:0002255	IAO:0000115	inverse of has developmental contribution from
 INFO	lowercase_definition	RO:0002263	IAO:0000115	c acts upstream of p if and only if c enables some f that is involved in p' and p' occurs chronologically before p, is not part of p, and affects the execution of p. c is a material entity and f, p, p' are processes.
 INFO	lowercase_definition	RO:0002264	IAO:0000115	c acts upstream of or within p if c is enables f, and f is causally upstream of or within p. c is a material entity and p is an process.
+INFO	lowercase_definition	RO:0002292	IAO:0000115	y expresses x if and only if there is a gene expression process (GO:0010467) that occurs in y, and one of the following holds: (i) x is a gene, and x is transcribed into a transcript as part of the gene expression process (ii) x is a transcript, and x was transcribed from a gene as part of the gene expression process (iii) x is a mature gene product (protein or RNA), and x was translated or otherwise processed from a transcript that was transcribed as part of the gene expression process.
 INFO	lowercase_definition	RO:0002295	IAO:0000115	p results in the developmental progression of s iff p is a developmental process and s is an anatomical entity and p causes s to undergo a change in state at some point along its natural developmental cycle (this cycle starts with its formation, through the mature structure, and ends with its loss).
 INFO	lowercase_definition	RO:0002304	IAO:0000115	p is causally upstream of, positive effect q iff p is casually upstream of q, and the execution of p is required for the execution of q.
 INFO	lowercase_definition	RO:0002305	IAO:0000115	p is causally upstream of, negative effect q iff p is casually upstream of q, and the execution of p decreases the execution of q.
 INFO	lowercase_definition	RO:0002314	IAO:0000115	q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w.
 INFO	lowercase_definition	RO:0002327	IAO:0000115	c enables p iff c is capable of p and c acts to execute p.
 INFO	lowercase_definition	RO:0002329	IAO:0000115	this relation holds between c and p when c is part of some c', and c' is capable of p.
+INFO	lowercase_definition	RO:0002330	IAO:0000115	holds between two entities when some genome-level process such as gene expression is involved. This includes transcriptional, spliceosomal events. These relations can be used between either macromolecule entities (such as regions of nucleic acid) or between their abstract informational counterparts.
 INFO	lowercase_definition	RO:0002331	IAO:0000115	c involved_in p if and only if c enables some process p', and p' is part of p
 INFO	lowercase_definition	RO:0002333	IAO:0000115	inverse of enables
 INFO	lowercase_definition	RO:0002334	IAO:0000115	inverse of regulates
@@ -379,6 +389,7 @@ INFO	lowercase_definition	RO:0002350	IAO:0000115	is member of is a mereological 
 INFO	lowercase_definition	RO:0002351	IAO:0000115	has member is a mereological relation between a collection and an item.
 INFO	lowercase_definition	RO:0002352	IAO:0000115	inverse of has input
 INFO	lowercase_definition	RO:0002353	IAO:0000115	inverse of has output
+INFO	lowercase_definition	RO:0002371	IAO:0000115	a is attached to b if and only if a and b are discrete objects or object parts, and there are physical connections between a and b such that a force pulling a will move b, or a force pulling b will move a
 INFO	lowercase_definition	RO:0002384	IAO:0000115	x has developmental potential involving y iff x is capable of a developmental process with output y. y may be the successor of x, or may be a different structure in the vicinity (as for example in the case of developmental induction).@en
 INFO	lowercase_definition	RO:0002385	IAO:0000115	x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y@en
 INFO	lowercase_definition	RO:0002387	IAO:0000115	x has the potential to develop into y iff x develops into y or if x is capable of developing into y@en
