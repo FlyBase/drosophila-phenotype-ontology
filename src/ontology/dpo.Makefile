@@ -153,7 +153,6 @@ reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
 	../scripts/onto_metrics_calc.pl 'phenotypic_class' $(ONT)-simple.obo > $@
 
 reports/chado_load_check_simple.txt: $(ONT)-simple.obo install_flybase_scripts
-	apt-get install -y --no-install-recommends libbusiness-isbn-perl
 	../scripts/chado_load_checks.pl $(ONT)-simple.obo > $@
 
 reports/obo_qc_%.obo.txt:
@@ -170,11 +169,5 @@ reports/obo_qc_%.owl.txt:
 # special placeholder string to substitute in definitions from external ontologies, mostly GO
 # dpo only uses SUB definitions - to use DOT, copy code and sparql from FBcv.
 
-export ROBOT_PLUGINS_DIRECTORY = $(TMPDIR)/plugins
-
-$(ROBOT_PLUGINS_DIRECTORY)/flybase.jar:
-	mkdir -p $(ROBOT_PLUGINS_DIRECTORY)
-	curl -L -o $@ https://github.com/FlyBase/flybase-robot-plugin/releases/download/flybase-robot-plugin-0.1.0/flybase.jar
-
-$(EDIT_PREPROCESSED): $(SRC) $(ROBOT_PLUGINS_DIRECTORY)/flybase.jar
+$(EDIT_PREPROCESSED): $(SRC) all_robot_plugins
 	$(ROBOT) flybase:rewrite-def -i $< --sub-definitions --filter-prefix FBcv -o $@
