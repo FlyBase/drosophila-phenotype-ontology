@@ -1,38 +1,10 @@
 Level	Rule Name	Subject	Property	Value
-WARN	annotation_whitespace	BFO:0000002	IAO:0000602	(forall (x y) (if (and (Continuant x) (exists (t) (continuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [009-002] 
-WARN	annotation_whitespace	BFO:0000002	IAO:0000602	(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] 
-WARN	annotation_whitespace	BFO:0000002	IAO:0000602	(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] 
-WARN	annotation_whitespace	BFO:0000002	IAO:0000602	(forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002] 
-WARN	annotation_whitespace	BFO:0000003	IAO:0000602	(forall (x) (if (Occurrent x) (exists (r) (and (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion x r))))) // axiom label in BFO2 CLIF: [108-001] 
-WARN	annotation_whitespace	BFO:0000003	IAO:0000602	(forall (x) (iff (Occurrent x) (and (Entity x) (exists (y) (temporalPartOf y x))))) // axiom label in BFO2 CLIF: [079-001] 
-WARN	annotation_whitespace	BFO:0000004	IAO:0000602	(forall (x t) (if (IndependentContinuant x) (exists (r) (and (SpatialRegion r) (locatedInAt x r t))))) // axiom label in BFO2 CLIF: [134-001] 
-WARN	annotation_whitespace	BFO:0000004	IAO:0000602	(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] 
-WARN	annotation_whitespace	BFO:0000004	IAO:0000602	(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] 
-WARN	annotation_whitespace	BFO:0000015	IAO:0000602	(iff (Process a) (and (Occurrent a) (exists (b) (properTemporalPartOf b a)) (exists (c t) (and (MaterialEntity c) (specificallyDependsOnAt a c t))))) // axiom label in BFO2 CLIF: [083-003] 
-WARN	annotation_whitespace	BFO:0000016	IAO:0000602	(forall (x t) (if (and (RealizableEntity x) (existsAt x t)) (exists (y) (and (MaterialEntity y) (specificallyDepends x y t))))) // axiom label in BFO2 CLIF: [063-002] 
-WARN	annotation_whitespace	BFO:0000016	IAO:0000602	(forall (x) (if (Disposition x) (and (RealizableEntity x) (exists (y) (and (MaterialEntity y) (bearerOfAt x y t)))))) // axiom label in BFO2 CLIF: [062-002] 
-WARN	annotation_whitespace	BFO:0000017	IAO:0000602	(forall (x t) (if (RealizableEntity x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (bearerOfAt y x t))))) // axiom label in BFO2 CLIF: [060-002] 
-WARN	annotation_whitespace	BFO:0000017	IAO:0000602	(forall (x) (if (RealizableEntity x) (and (SpecificallyDependentContinuant x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (inheresIn x y)))))) // axiom label in BFO2 CLIF: [058-002] 
-WARN	annotation_whitespace	BFO:0000019	IAO:0000602	(forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001] 
-WARN	annotation_whitespace	BFO:0000019	IAO:0000602	(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] 
-WARN	annotation_whitespace	BFO:0000020	IAO:0000602	(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] 
-WARN	annotation_whitespace	BFO:0000023	IAO:0000602	(forall (x) (if (Role x) (RealizableEntity x))) // axiom label in BFO2 CLIF: [061-001] 
-WARN	annotation_whitespace	BFO:0000024	IAO:0000602	(forall (x) (if (FiatObjectPart x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y) (and (Object y) (properContinuantPartOfAt x y t)))))))) // axiom label in BFO2 CLIF: [027-004] 
-WARN	annotation_whitespace	BFO:0000027	IAO:0000116	An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects 
-WARN	annotation_whitespace	BFO:0000027	IAO:0000602	(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] 
-WARN	annotation_whitespace	BFO:0000031	IAO:0000602	(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] 
-WARN	annotation_whitespace	BFO:0000034	IAO:0000602	(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] 
-WARN	annotation_whitespace	BFO:0000040	IAO:0000602	(forall (x) (if (MaterialEntity x) (IndependentContinuant x))) // axiom label in BFO2 CLIF: [019-002] 
-WARN	annotation_whitespace	BFO:0000040	IAO:0000602	(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt x y t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [021-002] 
-WARN	annotation_whitespace	BFO:0000040	IAO:0000602	(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] 
 WARN	annotation_whitespace	CARO:0000042	rdfs:comment	"MH: define as not part of embryo, or will not develop into embryo? MH: changed def to exclude cells so this class could be included in gross anatomical part. DOS: Changed to something that I think works for both vertebrates and invertebrates and that keeps the restriction to multicellular structures.  Old def: \""Anatomical structure that is contiguous with the embryo and is comprised of portions of tissue that will not contribute to the embryo.\"".  One remaining question - perhaps zygote is too restrictive given that some organisms have parthenogenesis e.g. aphids?
 "
 WARN	annotation_whitespace	CARO:0001008	IAO:0000115	Anatomical structure that is part of a multicellular organism and is at the gross anatomical level, e.g. above the level of a cell.  Included are portions of organism substances such as blood, multi-cell-part structures such as axon tracts, acellular anatomical structures such as hair, and organism subdivisions such as head. Excluded is the whole organism and more granular parts of the organism, such as atoms, molecules, macromolecular complexes and cells. 
 WARN	annotation_whitespace	CARO:0010004	rdfs:comment	A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of 'anatomical structure', meaning that an organism must be a connected structure. For example, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms. 
 WARN	annotation_whitespace	RO:0002093	rdfs:comment	X ends_during Y iff: ((start(Y) before_or_simultaneous_with end(X)) AND end(X) before_or_simultaneous_with end(Y). @en
-WARN	annotation_whitespace	RO:0002163	IAO:0000116	There are two ways to encode this as a shortcut relation. The other possibility to use an annotation assertion between two classes, and expand this to a disjointness axiom. @en
 WARN	annotation_whitespace	RO:0002215	IAO:0000115	A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. 
-WARN	deprecated_class_reference	blank node	owl:someValuesFrom	GO:0007568
 WARN	duplicate_definition	FBbt:00005293	IAO:0000115	Nuclear divisions 3-8. The egg cytoplasm contracts producing a clear separation from the vitelline membrane and empty spaces at the anterior and posterior. The cleavage nuclei migrate towards the periphery. Duration at 25 degrees C approximately 40 minutes (25-65 minutes AEL).
 WARN	duplicate_definition	FBdv:00005293	IAO:0000115	Nuclear divisions 3-8. The egg cytoplasm contracts producing a clear separation from the vitelline membrane and empty spaces at the anterior and posterior. The cleavage nuclei migrate towards the periphery. Duration at 25 degrees C approximately 40 minutes (25-65 minutes AEL).
 WARN	duplicate_definition	FBbt:00005306	IAO:0000115	Nuclear division 10-13. Polar buds divide twice and become tightly grouped at the posterior pole by the end of this stage. Nuclei visible at the rim of the embryo. Stage 4 ends with the beginning of cellularization. Duration at 25 degrees C: approximately 50 minutes (80-130 minutes after egg laying).
@@ -50,10 +22,6 @@ WARN	duplicate_definition	FBbt:00003004	IAO:0000115	.
 WARN	duplicate_definition	FBbt:00105220	IAO:0000115	.
 WARN	duplicate_exact_synonym	GO:0007632	oboInOwl:hasExactSynonym	visual behaviour
 WARN	duplicate_exact_synonym	NBO:0000314	oboInOwl:hasExactSynonym	visual behaviour
-WARN	duplicate_exact_synonym	FBbt:00051069	oboInOwl:hasExactSynonym	SPZ
-WARN	duplicate_exact_synonym	FBbt:00110638	oboInOwl:hasExactSynonym	SPZ
-WARN	duplicate_exact_synonym	FBbt:00051068	oboInOwl:hasExactSynonym	SEZ
-WARN	duplicate_exact_synonym	FBbt:00110639	oboInOwl:hasExactSynonym	SEZ
 WARN	duplicate_exact_synonym	GO:0007632	oboInOwl:hasExactSynonym	behavioural response to visual stimulus
 WARN	duplicate_exact_synonym	NBO:0000314	oboInOwl:hasExactSynonym	behavioural response to visual stimulus
 WARN	duplicate_exact_synonym	GO:0007610	oboInOwl:hasExactSynonym	behaviour
@@ -110,28 +78,13 @@ WARN	duplicate_label	FBbt:10000000	rdfs:label	anatomical entity
 WARN	duplicate_label	CARO:0000040	rdfs:label	acellular anatomical structure
 WARN	duplicate_label	FBbt:00007013	rdfs:label	acellular anatomical structure
 WARN	duplicate_label_synonym	CHEBI:10545	oboInOwl:hasExactSynonym	electron
-WARN	duplicate_label_synonym	CHEBI:15022	oboInOwl:hasExactSynonym	electron donor
-WARN	duplicate_label_synonym	CHEBI:15377	oboInOwl:hasExactSynonym	water
-WARN	duplicate_label_synonym	CHEBI:15379	oboInOwl:hasExactSynonym	dioxygen
-WARN	duplicate_label_synonym	CHEBI:16234	oboInOwl:hasExactSynonym	hydroxide
-WARN	duplicate_label_synonym	CHEBI:16526	oboInOwl:hasExactSynonym	carbon dioxide
-WARN	duplicate_label_synonym	CHEBI:17997	oboInOwl:hasExactSynonym	dinitrogen
 WARN	duplicate_label_synonym	CHEBI:22695	oboInOwl:hasExactSynonym	base
-WARN	duplicate_label_synonym	CHEBI:23367	oboInOwl:hasExactSynonym	molecular entity
 WARN	duplicate_label_synonym	CHEBI:24431	oboInOwl:hasExactSynonym	chemical entity
-WARN	duplicate_label_synonym	CHEBI:24433	oboInOwl:hasExactSynonym	group
-WARN	duplicate_label_synonym	CHEBI:25212	oboInOwl:hasExactSynonym	metabolite
 WARN	duplicate_label_synonym	CHEBI:25367	oboInOwl:hasExactSynonym	molecule
 WARN	duplicate_label_synonym	CHEBI:25741	oboInOwl:hasExactSynonym	oxide
 WARN	duplicate_label_synonym	CHEBI:25806	oboInOwl:hasExactSynonym	oxygen molecular entity
-WARN	duplicate_label_synonym	CHEBI:29412	oboInOwl:hasExactSynonym	oxonium
-WARN	duplicate_label_synonym	CHEBI:29793	oboInOwl:hasExactSynonym	hydridodioxygen(1+)
-WARN	duplicate_label_synonym	CHEBI:30099	oboInOwl:hasExactSynonym	diazynediium
-WARN	duplicate_label_synonym	CHEBI:30102	oboInOwl:hasExactSynonym	diazynium
-WARN	duplicate_label_synonym	CHEBI:33250	oboInOwl:hasExactSynonym	atom
 WARN	duplicate_label_synonym	CHEBI:33253	oboInOwl:hasExactSynonym	nucleon
 WARN	duplicate_label_synonym	CHEBI:33302	oboInOwl:hasExactSynonym	pnictogen molecular entity
-WARN	duplicate_label_synonym	CHEBI:33303	oboInOwl:hasExactSynonym	chalcogen
 WARN	duplicate_label_synonym	CHEBI:33304	oboInOwl:hasExactSynonym	chalcogen molecular entity
 WARN	duplicate_label_synonym	CHEBI:33465	oboInOwl:hasExactSynonym	elemental pnictogen
 WARN	duplicate_label_synonym	CHEBI:33582	oboInOwl:hasExactSynonym	carbon group molecular entity
@@ -139,49 +92,30 @@ WARN	duplicate_label_synonym	CHEBI:33583	oboInOwl:hasExactSynonym	noble gas mole
 WARN	duplicate_label_synonym	CHEBI:33674	oboInOwl:hasExactSynonym	s-block molecular entity
 WARN	duplicate_label_synonym	CHEBI:33679	oboInOwl:hasExactSynonym	helium molecular entity
 WARN	duplicate_label_synonym	CHEBI:33693	oboInOwl:hasExactSynonym	oxygen hydride
-WARN	duplicate_label_synonym	CHEBI:33839	oboInOwl:hasExactSynonym	macromolecule
-WARN	duplicate_label_synonym	CHEBI:33893	oboInOwl:hasExactSynonym	reagent
 WARN	duplicate_label_synonym	CHEBI:35881	oboInOwl:hasExactSynonym	pnictogen hydride
-WARN	duplicate_label_synonym	CHEBI:36340	oboInOwl:hasExactSynonym	fermion
-WARN	duplicate_label_synonym	CHEBI:36347	oboInOwl:hasExactSynonym	nuclear particle
 WARN	duplicate_label_synonym	CHEBI:36902	oboInOwl:hasExactSynonym	chalcogen hydride
 WARN	duplicate_label_synonym	CHEBI:36908	oboInOwl:hasExactSynonym	argon molecular entity
 WARN	duplicate_label_synonym	CHEBI:36962	oboInOwl:hasExactSynonym	organochalcogen compound
 WARN	duplicate_label_synonym	CHEBI:36963	oboInOwl:hasExactSynonym	organooxygen compound
-WARN	duplicate_label_synonym	CHEBI:37527	oboInOwl:hasExactSynonym	acid
-WARN	duplicate_label_synonym	CHEBI:38867	oboInOwl:hasExactSynonym	anaesthetic
-WARN	duplicate_label_synonym	CHEBI:39141	oboInOwl:hasExactSynonym	Bronsted acid
-WARN	duplicate_label_synonym	CHEBI:39142	oboInOwl:hasExactSynonym	Bronsted base
 WARN	duplicate_label_synonym	CHEBI:43176	oboInOwl:hasExactSynonym	hydroxy group
 WARN	duplicate_label_synonym	CHEBI:46662	oboInOwl:hasExactSynonym	mineral
-WARN	duplicate_label_synonym	CHEBI:48354	oboInOwl:hasExactSynonym	polar solvent
-WARN	duplicate_label_synonym	CHEBI:48359	oboInOwl:hasExactSynonym	protophilic solvent
-WARN	duplicate_label_synonym	CHEBI:48360	oboInOwl:hasExactSynonym	amphiprotic solvent
-WARN	duplicate_label_synonym	CHEBI:48706	oboInOwl:hasExactSynonym	antagonist
 WARN	duplicate_label_synonym	FBcv:0000347	oboInOwl:hasExactSynonym	phenotypic class
 WARN	duplicate_label_synonym	FBcv:0000444	oboInOwl:hasExactSynonym	hyperplasia
 WARN	duplicate_label_synonym	FBcv:0000724	oboInOwl:hasExactSynonym	hypoplasia
 WARN	duplicate_label_synonym	FBdv:00007024	oboInOwl:hasExactSynonym	biological process
 WARN	duplicate_label_synonym	GO:0007610	oboInOwl:hasExactSynonym	behavior
 WARN	duplicate_label_synonym	PATO:0000644	oboInOwl:hasExactSynonym	hyperplastic
-WARN	duplicate_scoped_synonym	CHEBI:25555	oboInOwl:hasExactSynonym	nitrogen
-WARN	duplicate_scoped_synonym	CHEBI:25555	oboInOwl:hasRelatedSynonym	nitrogen
-WARN	duplicate_scoped_synonym	CHEBI:25585	oboInOwl:hasExactSynonym	nonmetal
-WARN	duplicate_scoped_synonym	CHEBI:25585	oboInOwl:hasRelatedSynonym	nonmetal
-WARN	duplicate_scoped_synonym	CHEBI:25805	oboInOwl:hasExactSynonym	oxygen
-WARN	duplicate_scoped_synonym	CHEBI:25805	oboInOwl:hasRelatedSynonym	oxygen
-WARN	duplicate_scoped_synonym	CHEBI:27594	oboInOwl:hasExactSynonym	carbon
-WARN	duplicate_scoped_synonym	CHEBI:27594	oboInOwl:hasRelatedSynonym	carbon
-WARN	duplicate_scoped_synonym	CHEBI:30217	oboInOwl:hasExactSynonym	helium
-WARN	duplicate_scoped_synonym	CHEBI:30217	oboInOwl:hasRelatedSynonym	helium
-WARN	duplicate_scoped_synonym	CHEBI:33309	oboInOwl:hasExactSynonym	noble gas
-WARN	duplicate_scoped_synonym	CHEBI:33309	oboInOwl:hasRelatedSynonym	noble gas
-WARN	duplicate_scoped_synonym	CHEBI:49475	oboInOwl:hasExactSynonym	argon
-WARN	duplicate_scoped_synonym	CHEBI:49475	oboInOwl:hasRelatedSynonym	argon
-WARN	duplicate_scoped_synonym	CHEBI:49637	oboInOwl:hasExactSynonym	hydrogen
-WARN	duplicate_scoped_synonym	CHEBI:49637	oboInOwl:hasRelatedSynonym	hydrogen
-WARN	duplicate_scoped_synonym	CHEBI:50313	oboInOwl:hasExactSynonym	onium cations
-WARN	duplicate_scoped_synonym	CHEBI:50313	oboInOwl:hasRelatedSynonym	onium cations
+WARN	missing_definition	BFO:0000001	IAO:0000115	
+WARN	missing_definition	BFO:0000004	IAO:0000115	
+WARN	missing_definition	BFO:0000015	IAO:0000115	
+WARN	missing_definition	BFO:0000016	IAO:0000115	
+WARN	missing_definition	BFO:0000019	IAO:0000115	
+WARN	missing_definition	BFO:0000020	IAO:0000115	
+WARN	missing_definition	BFO:0000024	IAO:0000115	
+WARN	missing_definition	BFO:0000027	IAO:0000115	
+WARN	missing_definition	BFO:0000030	IAO:0000115	
+WARN	missing_definition	BFO:0000031	IAO:0000115	
+WARN	missing_definition	BFO:0000034	IAO:0000115	
 WARN	missing_definition	BFO:0000141	IAO:0000115	
 WARN	missing_definition	CHEBI:15379	IAO:0000115	
 WARN	missing_definition	CHEBI:16234	IAO:0000115	
@@ -222,6 +156,7 @@ WARN	missing_definition	CHEBI:51143	IAO:0000115
 WARN	missing_definition	CHEBI:52211	IAO:0000115	
 WARN	missing_definition	CHEBI:52625	IAO:0000115	
 WARN	missing_definition	ENVO:00000344	IAO:0000115	
+WARN	missing_definition	ENVO:01001782	IAO:0000115	
 WARN	missing_definition	FBbt:00001727	IAO:0000115	
 WARN	missing_definition	FBbt:00005290	IAO:0000115	
 WARN	missing_definition	FBbt:00007006	IAO:0000115	
@@ -235,11 +170,14 @@ WARN	missing_definition	FBcv:0006003	IAO:0000115
 WARN	missing_definition	FBcv:0006007	IAO:0000115	
 WARN	missing_definition	FBcv:0008000	IAO:0000115	
 WARN	missing_definition	IAO:0000115	IAO:0000115	
-WARN	missing_definition	IAO:0000700	IAO:0000115	
-WARN	missing_definition	IAO:0100001	IAO:0000115	
 WARN	missing_definition	NBO:0000002	IAO:0000115	
+WARN	missing_definition	NBO:0000308	IAO:0000115	
+WARN	missing_definition	NBO:0000317	IAO:0000115	
+WARN	missing_definition	NBO:0000327	IAO:0000115	
 WARN	missing_definition	NBO:0000330	IAO:0000115	
 WARN	missing_definition	NBO:0000332	IAO:0000115	
+WARN	missing_definition	NBO:0000359	IAO:0000115	
+WARN	missing_definition	NBO:0000607	IAO:0000115	
 WARN	missing_definition	NBO:0000751	IAO:0000115	
 WARN	missing_definition	PATO:0000068	IAO:0000115	
 WARN	missing_definition	PATO:0001760	IAO:0000115	
@@ -278,8 +216,6 @@ WARN	missing_definition	RO:0004032	IAO:0000115
 WARN	missing_definition	RO:0004033	IAO:0000115	
 WARN	missing_definition	RO:0004046	IAO:0000115	
 WARN	missing_definition	RO:0004047	IAO:0000115	
-WARN	missing_definition	obo:chebi#IUPAC_NAME	IAO:0000115	
-WARN	missing_definition	obo:fbbt#BRAIN_NAME_ABV	IAO:0000115	
 WARN	missing_definition	obo:fbcv#BRAIN_NAME_ABV	IAO:0000115	
 WARN	missing_definition	obo:fbcv#BRAND_NAME	IAO:0000115	
 WARN	missing_definition	obo:fbcv#FORMULA	IAO:0000115	
@@ -293,7 +229,6 @@ WARN	missing_definition	obo:nbo#in_response_to	IAO:0000115
 WARN	missing_definition	oboInOwl:Subset	IAO:0000115	
 WARN	missing_definition	oboInOwl:SubsetProperty	IAO:0000115	
 WARN	missing_definition	oboInOwl:SynonymTypeProperty	IAO:0000115	
-WARN	missing_definition	oboInOwl:consider	IAO:0000115	
 WARN	missing_definition	oboInOwl:hasAlternativeId	IAO:0000115	
 WARN	missing_definition	oboInOwl:hasBroadSynonym	IAO:0000115	
 WARN	missing_definition	oboInOwl:hasDbXref	IAO:0000115	
@@ -303,27 +238,16 @@ WARN	missing_definition	oboInOwl:hasOBOFormatVersion	IAO:0000115
 WARN	missing_definition	oboInOwl:hasOBONamespace	IAO:0000115	
 WARN	missing_definition	oboInOwl:hasRelatedSynonym	IAO:0000115	
 WARN	missing_definition	oboInOwl:hasScope	IAO:0000115	
-WARN	missing_definition	oboInOwl:id	IAO:0000115	
 WARN	missing_definition	oboInOwl:inSubset	IAO:0000115	
 WARN	missing_definition	oboInOwl:shorthand	IAO:0000115	
-WARN	missing_label	obo:chebi#IUPAC_NAME	rdfs:label	
-WARN	missing_label	obo:fbbt#BRAIN_NAME_ABV	rdfs:label	
 WARN	missing_superclass	BFO:0000001	rdfs:subClassOf	
 WARN	missing_superclass	CHEBI:24431	rdfs:subClassOf	
 WARN	missing_superclass	CHEBI:36342	rdfs:subClassOf	
 WARN	missing_superclass	CL:0000000	rdfs:subClassOf	
 WARN	missing_superclass	GO:0003674	rdfs:subClassOf	
+WARN	missing_superclass	GO:0007568	rdfs:subClassOf	
 WARN	missing_superclass	GO:0008150	rdfs:subClassOf	
-INFO	lowercase_definition	BFO:0000004	IAO:0000115	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
-INFO	lowercase_definition	BFO:0000015	IAO:0000115	p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])@en
-INFO	lowercase_definition	BFO:0000016	IAO:0000600	b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])@en
-INFO	lowercase_definition	BFO:0000019	IAO:0000600	a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. (axiom label in BFO2 Reference: [055-001])@en
-INFO	lowercase_definition	BFO:0000020	IAO:0000115	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
-INFO	lowercase_definition	BFO:0000023	IAO:0000600	b is a role means: b is a realizable entity & b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be& b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed. (axiom label in BFO2 Reference: [061-001])@en
-INFO	lowercase_definition	BFO:0000024	IAO:0000600	b is a fiat object part = Def. b is a material entity which is such that for all times t, if b exists at t then there is some object c such that b proper continuant_part of  c at t and c is demarcated from the remainder of c by a two-dimensional continuant fiat boundary. (axiom label in BFO2 Reference: [027-004])@en
-INFO	lowercase_definition	BFO:0000027	IAO:0000600	b is an object aggregate means: b is a material entity consisting exactly of a plurality of objects as member_parts at all times at which b exists. (axiom label in BFO2 Reference: [025-004])@en
-INFO	lowercase_definition	BFO:0000030	IAO:0000600	b is an object means: b is a material entity which manifests causal unity of one or other of the types CUn listed above & is of a type (a material universal) instances of which are maximal relative to this criterion of causal unity. (axiom label in BFO2 Reference: [024-001])@en
-INFO	lowercase_definition	BFO:0000031	IAO:0000115	b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])@en
+WARN	misused_obsolete_label	GO:0007568	rdfs:label	obsolete aging
 INFO	lowercase_definition	BFO:0000050	IAO:0000115	a core relation that holds between a part and its whole@en
 INFO	lowercase_definition	BFO:0000051	IAO:0000115	a core relation that holds between a whole and its part@en
 INFO	lowercase_definition	BFO:0000062	IAO:0000115	x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.@en
