@@ -6,7 +6,7 @@ git_main_branch: master
 use_env_file_docker: True
 report_fail_on: none
 use_dosdps: TRUE
-dosdp_tools_options: "--obo-prefixes=true --restrict-axioms-to=logical"
+dosdp_tools_options: "--prefixes=../patterns/prefixes.yaml --restrict-axioms-to=logical"
 robot_plugins:
   plugins:
     - name: flybase
@@ -67,6 +67,11 @@ import_group:
       use_base: TRUE
     - id: envo
       make_base: TRUE
+    - id: efo
+      make_base: TRUE
+      mirror_from: http://www.ebi.ac.uk/efo/efo.owl
+      base_iris:
+        - http://www.ebi.ac.uk/efo/EFO_
 components:
   products:
     - filename: lethal_class_hierarchy.owl
