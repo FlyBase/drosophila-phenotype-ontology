@@ -28,6 +28,24 @@ tmp/remaining_classes.txt: tmp/all_patternised_classes.txt tmp/all_defined_class
 tmp/remaining_definitions.owl: $(SRC) tmp/remaining_classes.txt
 	$(ROBOT) filter -i $< -T tmp/remaining_classes.txt --axioms "equivalent annotation" --trim false -o $@
 
+##########################
+##### Pattern labels #####
+##########################
+
+# all filenames for pattern tsvs
+ALL_DOSDP_TSVs = $(wildcard $(PATTERNDIR)/data/default/*.tsv)
+
+$(TMPDIR)/$(ONT)-merged.db: $(SRC)
+	$(ROBOT) merge -i $< -o $(TMPDIR)/$(ONT)-merged.owl
+	semsql make $@
+
+update_pattern_labels: $(TMPDIR)/$(ONT)-merged.db
+	wget -O $(SCRIPTSDIR)/update_term_labels_in_file.py https://raw.githubusercontent.com/FlyBase/flybase-ontology-scripts/master/update_term_labels_in_file/src/update_term_labels_in_file.py
+	for file in $(ALL_DOSDP_TSVs) ; do \
+    python3 $(SCRIPTSDIR)/update_term_labels_in_file.py -f $$file -i auto -c $< ; \
+	done
+
+
 ##################################
 ##### Custom mirroring rules #####
 ##################################
