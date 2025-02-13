@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: dpo/releases/2024-12-05
-date: 05:12:2024 12:49
+data-version: dpo/releases/2025-02-13
+date: 13:02:2025 11:13
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -40,7 +40,7 @@ idspace: terms http://purl.org/dc/terms/
 ontology: dpo.obo
 property_value: IAO:0000700 FBcv:0000347
 property_value: ns:attributionURL "http://dx.doi.org/10.1186/2041-1480-4-30" xsd:string
-property_value: owl:versionInfo "2024-12-05" xsd:string
+property_value: owl:versionInfo "2025-02-13" xsd:string
 property_value: terms:creator "http://orcid.org/0000-0002-1373-1705" xsd:string
 property_value: terms:creator "http://orcid.org/0000-0002-7073-9172" xsd:string
 property_value: terms:creator "https://orcid.org/0000-0001-5948-3092" xsd:string
@@ -972,9 +972,12 @@ replaced_by: FBcv:0000723
 id: FBcv:0000446
 name: melanotic mass phenotype
 namespace: phenotypic_class
-def: "Phenotype characterized by the formation of lumps of melanotic tissue inside the body in the absence of foreign bodies." [FlyBase:FBrf0094387, FlyBase:FBrf0194475]
-comment: Melanotic capsules are formed around foreign bodies in wild-type animals as part of the immune response, for example as a protection against parasitoid wasps. Some, but not all melanotic mass phenotypes involve ectopic activation of this immune response. While melanotic masses are commonly referred to as melanotic tumors in the historical literature, this is a misnomer as they are rarely neoplastic.
-synonym: "melanotic 'tumor'" EXACT []
+def: "Phenotype characterized by the formation of lumps of melanotic tissue inside the body in the absence of foreign bodies or wounding." [FlyBase:FBrf0094387, FlyBase:FBrf0194475]
+comment: Melanotic capsules are formed around wounds and foreign bodies in wild-type animals as part of the immune response, for example as a protection against parasitoid wasps. For the wild-type structure, consider FBbt:00005064. Some, but not all melanotic mass phenotypes involve ectopic activation of the same immune response. Melanotic masses caused by genetic manipulations are sometimes referred to as 'melanotic tumors' or 'pseudotumors', but this is a misnomer as they are rarely neoplastic (Minakhina and Steward, 2006).
+synonym: "melanization" NARROW [FlyBase:FBrf0194475]
+synonym: "melanotic nodule" NARROW [FlyBase:FBrf0194475]
+synonym: "melanotic tumor" RELATED [FlyBase:FBrf0194475]
+synonym: "pseudotumor" RELATED [FlyBase:FBrf0194475]
 is_a: FBcv:0001347 ! phenotype
 
 [Term]
