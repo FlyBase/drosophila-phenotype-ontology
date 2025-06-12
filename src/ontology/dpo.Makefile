@@ -3,17 +3,6 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
-# Using .SECONDEXPANSION to include custom FlyBase files in $(ASSETS). Also rsyncing $(IMPORTS) and $(REPORT_FILES).
-.SECONDEXPANSION:
-.PHONY: prepare_release
-prepare_release: $$(ASSETS) release_reports
-	rsync -R $(RELEASE_ASSETS) $(REPORT_FILES) $(FLYBASE_REPORTS) $(IMPORT_FILES) $(RELEASEDIR) &&\
-	mkdir -p $(RELEASEDIR)/patterns && cp -rf $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
-	rm -f $(CLEANFILES)
-	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
-
-CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS))
-
 tmp/all_patternised_classes.txt:
 	$(ROBOT) query --use-graphs false -f csv -i $(PATTERNDIR)/definitions.owl --query ../sparql/dpo-equivalent-classes.sparql $@.tmp
 	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
@@ -87,20 +76,12 @@ remove_patternised_classes: $(SRC) patternised_classes.txt
 ### Overwriting some default artefacts ###
 ######################################################
 
-# Simple is overwritten to strip out duplicate names and definitions.
-$(ONT)-simple.obo: $(ONT)-simple.owl
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-	cat $@.tmp.obo | grep -v ^owl-axioms > $@.tmp &&\
-	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
-	rm -f $@.tmp.obo $@.tmp
-
 # We want the OBO release to be based on the simple release. It needs to be annotated however in the way map releases (fbbt.owl) are annotated.
 $(ONT).obo: $(ONT)-simple.owl
-	$(ROBOT)  annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
-	convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-	cat $@.tmp.obo | grep -v ^owl-axioms > $@.tmp &&\
-	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
-	rm -f $@.tmp.obo $@.tmp
+	$(ROBOT)  annotate --input $< \
+		           --ontology-iri $(URIBASE)/$@ \
+		           --version-iri $(ONTBASE)/releases/$(TODAY) \
+		  convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@
 
 ############################################################
 ### Code for generating class hierarchy for lethal terms ###
