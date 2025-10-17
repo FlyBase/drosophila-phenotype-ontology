@@ -17,6 +17,16 @@ tmp/remaining_classes.txt: tmp/all_patternised_classes.txt tmp/all_defined_class
 tmp/remaining_definitions.owl: $(SRC) tmp/remaining_classes.txt
 	$(ROBOT) filter -i $< -T tmp/remaining_classes.txt --axioms "equivalent annotation" --trim false -o $@
 
+# temporary workaround to strip assertion of rdf:type as an AP from ENVO - https://github.com/EnvironmentOntology/envo/issues/1646
+mirror-envo: | $(TMPDIR)
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then \
+		curl -L $(OBOBASE)/envo.owl --create-dirs \
+		  -o $(TMPDIR)/envo.owl --retry 4 --max-time 200 && \
+		$(ROBOT) remove -i $(TMPDIR)/envo.owl --select complement \
+		  --drop-axiom-annotations rdf:type \
+		  remove --term rdf:type --select annotation-properties \
+		  -o $(TMPDIR)/$@.owl ; fi
+
 ##########################
 ##### Pattern labels #####
 ##########################
@@ -135,6 +145,7 @@ obo_track_new=$(flybase_script_base)obo_track_new.pl
 auto_def_sub=$(flybase_script_base)auto_def_sub.pl
 
 export PERL5LIB := ${realpath ../scripts}
+
 install_flybase_scripts:
 	wget -O ../scripts/OboModel.pm $(obo_model)
 	wget -O ../scripts/onto_metrics_calc.pl $(onto_metrics_calc) && chmod +x ../scripts/onto_metrics_calc.pl
