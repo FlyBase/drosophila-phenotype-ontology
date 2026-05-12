@@ -97,24 +97,17 @@ $(ONT).obo: $(ONT)-simple.owl
 ### Code for generating class hierarchy for lethal terms ###
 ############################################################
 
-$(TMPDIR)/lethal_terms.txt: $(SRC)
-	$(ROBOT) query --use-graphs false -f csv -i $< --query $(SPARQLDIR)/dpo-lethal.sparql $@.tmp
-	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
+LETHAL_TABLE = ../patterns/data/default/dpoIncreasedMortality.tsv
 
-$(TMPDIR)/lethal_extract.owx: $(SRC) $(TMPDIR)/lethal_terms.txt
-	grep -v "lethal_class_hierarchy.owl" $< > $(TMPDIR)/dpo-tmp.ofn &&\
-	grep -v "lethal_class_hierarchy.owl" catalog-v001.xml > catalog-tmp.xml &&\
-	robot --catalog catalog-tmp.xml merge --input $(TMPDIR)/dpo-tmp.ofn \
-	remove --select "UBERON:* CHEBI:* GO:*" \
-	extract --term-file $(TMPDIR)/lethal_terms.txt --force true --method STAR \
-	convert --output $@ &&\
-	rm catalog-tmp.xml $(TMPDIR)/dpo-tmp.ofn
-
-$(COMPONENTSDIR)/lethal_class_hierarchy.owl: $(TMPDIR)/lethal_extract.owx $(TMPDIR)/lethal_terms.txt
-	Konclude classification -i $< -o $(TMPDIR)/konclude-edit.owx &&\
-	$(ROBOT) filter -i $(TMPDIR)/konclude-edit.owx -T $(TMPDIR)/lethal_terms.txt --trim false \
-	annotate --ontology-iri $(ONTBASE)/$@ --output $@ &&\
-	rm $< $(TMPDIR)/konclude-edit.owx
+# build_lethal_hierarchy.py computes the inferred lethal-term hierarchy
+# from the table + FBdv stage graph, plus two hardcoded parent links
+# (FBcv:0001347 on top-level terms, FBcv:0000349 on FBcv:0000350) — see
+# script docstring.
+$(COMPONENTSDIR)/lethal_class_hierarchy.owl: $(LETHAL_TABLE) $(MIRRORDIR)/fbdv.owl $(MIRRORDIR)/ro.owl ../scripts/build_lethal_hierarchy.py
+	python3 ../scripts/build_lethal_hierarchy.py $(LETHAL_TABLE) $(MIRRORDIR)/fbdv.owl $(MIRRORDIR)/ro.owl $(TMPDIR)/lethal_class_hierarchy_template.tsv &&\
+	$(ROBOT) template --template $(TMPDIR)/lethal_class_hierarchy_template.tsv \
+		--ontology-iri $(ONTBASE)/$@ --output $@ &&\
+	rm $(TMPDIR)/lethal_class_hierarchy_template.tsv
 
 ######################################################
 ### Code for generating additional FlyBase reports ###
