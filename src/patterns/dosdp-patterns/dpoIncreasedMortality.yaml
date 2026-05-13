@@ -1,0 +1,22 @@
+pattern_name: dpoIncreasedMortality
+pattern_iri: http://purl.obolibrary.org/obo/dpo/patterns/dpoIncreasedMortality.yaml
+description: "Pattern for increased mortality terms."
+
+classes:
+  population_of_drosophila: FBcv:0006003
+
+relations:
+  has_part: BFO:0000051
+  characteristic_of: RO:0000052
+
+dataProperties:
+  age_specific_mortality_rate: RO:0002029
+
+data_vars:
+  rate_min: xsd:short
+
+logical_axioms:
+  - axiom_type: equivalentTo
+    text: "'has_part' some (('characteristic_of' some 'population_of_drosophila') and ('age_specific_mortality_rate' some xsd:short[>= %s]))"
+    vars: 
+      - rate_min
