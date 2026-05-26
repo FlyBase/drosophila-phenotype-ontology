@@ -124,7 +124,9 @@ def make_stage_oracle(fbdv_path, ro_path):
 
 def load_table(path):
     """Parse the TSV into per-term dicts. `during` and `during_substage`
-    merge into one field; rel/stage derived for use by stage_subsumes."""
+    merge into one field; rel/stage derived for use by stage_subsumes.
+    rate_max_exclusive is the real upper bound; rate_max_inclusive=100
+    is the sentinel for "no upper bound" and treated as None here."""
     rows = []
     with open(path) as f:
         for r in csv.DictReader(f, delimiter="\t"):
@@ -139,7 +141,7 @@ def load_table(path):
                 "rel": "during" if during else "before" if before else None,
                 "stage": during or before,
                 "rate_min": int(r["rate_min"]) if r["rate_min"] else None,
-                "rate_max": int(r["rate_max"]) if r["rate_max"] else None,
+                "rate_max": int(r["rate_max_exclusive"]) if r["rate_max_exclusive"] else None,
             })
     return rows
 
