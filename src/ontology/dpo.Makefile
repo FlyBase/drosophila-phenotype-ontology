@@ -46,12 +46,12 @@ update_pattern_labels: $(TMPDIR)/$(ONT)-merged.db
 
 # Skip pattern validation (doesn't allow ' ' as sep in lethal stage pattern)
 # and don't make pattern.owl
-# Note that this doesn't work with ODK yet - use dosdp-tools 0.20.0
-.PHONY: patterns
-patterns dosdp:
-	echo "Building $(PATTERNDIR)/definitions.owl"
-	$(MAKE) $(PATTERNDIR)/definitions.owl
+# Note that patterns don't work with latest ODK yet - use dev
+$(TMPDIR)/pattern_schema_checks:
+	touch $@
 
+$(PATTERNDIR)/pattern.owl:
+	touch $@
 
 ##################################
 ##### Custom mirroring rules #####
