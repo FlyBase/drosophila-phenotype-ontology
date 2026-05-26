@@ -1,22 +1,66 @@
 pattern_name: dpoIncreasedMortality
 pattern_iri: http://purl.obolibrary.org/obo/dpo/patterns/dpoIncreasedMortality.yaml
-description: "Pattern for increased mortality terms."
+description: >
+  Pattern for lethal_phase phenotype terms (increased mortality rate of a
+  Drosophila population).
+
+  Stage columns (1 optional): One of `before`, `during`, or `during_substage` may be used to specify a developmental stage for each phenotype. `before` specifies that there is an increase in mortality before the stage entered in the column. `during` and `during_substage` specify that there is an increase in mortality during the stage entered in the column, or during some substage of it, respectively.
+
+  Rate columns (2 required): `rate_min` is used to specifiy the minimum increase in mortality rate for each phenotype, and one `rate_max_` column per row should be used to specify the maximum. `rate_max_inclusive` (generates <=) is always set to 100 (the upper bound of the property range) and only used for terms with no maximum mortality rate. Terms with a max mortality < 100, should use `rate_max_exclusive` (generates <) instead.
 
 classes:
   population_of_drosophila: FBcv:0006003
+  multicellular_organism: CARO:0000012
+  life_stage: FBdv_00007012
 
 relations:
   has_part: BFO:0000051
   characteristic_of: RO:0000052
+  has_member: RO:0002351
+  has_age: FBcv:0008000
+  precedes: BFO:0000063
+  part_of: BFO:0000050
+  substage_of: FBdv:00018001
 
 dataProperties:
   age_specific_mortality_rate: RO:0002029
 
+vars:
+  before: life_stage
+  during: life_stage
+  during_substage: life_stage
+
 data_vars:
   rate_min: xsd:short
+  rate_max_exclusive: xsd:short
+  rate_max_inclusive: xsd:short
+
 
 logical_axioms:
   - axiom_type: equivalentTo
-    text: "'has_part' some (('characteristic_of' some 'population_of_drosophila') and (age_specific_mortality_rate some xsd:short[>= %s]))"
-    vars: 
-      - rate_min
+    multi_clause:
+      sep: ' '
+      clauses:
+        - text: "'has_part' some (('characteristic_of' some ('population_of_drosophila'"
+        - text: "and ('has_member' some ('multicellular_organism' and ('has_age' some ('precedes' some %s)))) and ('has_member' only ('multicellular_organism' and ('has_age' some ('precedes' some %s))))"
+          vars:
+            - before
+            - before
+        - text: "and ('has_member' some ('multicellular_organism' and ('has_age' some ('part_of' some %s)))) and ('has_member' only ('multicellular_organism' and ('has_age' some ('part_of' some %s))))"
+          vars:
+            - during
+            - during
+        - text: "and ('has_member' some ('multicellular_organism' and ('has_age' some ('substage_of' some %s)))) and ('has_member' only ('multicellular_organism' and ('has_age' some ('substage_of' some %s))))"
+          vars:
+            - during_substage
+            - during_substage
+        - text: "))"
+        - text: "and (age_specific_mortality_rate some xsd:short[>= %s, <= %s])"
+          vars:
+            - rate_min
+            - rate_max_inclusive
+        - text: "and (age_specific_mortality_rate some xsd:short[>= %s, < %s])"
+          vars:
+            - rate_min
+            - rate_max_exclusive
+        - text: ")"
