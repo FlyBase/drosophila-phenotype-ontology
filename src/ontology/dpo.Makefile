@@ -44,6 +44,14 @@ update_pattern_labels: $(TMPDIR)/$(ONT)-merged.db
     python3 $(SCRIPTSDIR)/update_term_labels_in_file.py -f $$file -i auto -c $< ; \
 	done
 
+# Skip pattern validation (doesn't allow ' ' as sep in lethal stage pattern)
+# and don't make pattern.owl
+# Note that this doesn't work with ODK yet - use dosdp-tools 0.20.0
+.PHONY: patterns
+patterns dosdp:
+	echo "Building $(PATTERNDIR)/definitions.owl"
+	$(MAKE) $(PATTERNDIR)/definitions.owl
+
 
 ##################################
 ##### Custom mirroring rules #####
