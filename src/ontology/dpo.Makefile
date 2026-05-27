@@ -44,6 +44,14 @@ update_pattern_labels: $(TMPDIR)/$(ONT)-merged.db
     python3 $(SCRIPTSDIR)/update_term_labels_in_file.py -f $$file -i auto -c $< ; \
 	done
 
+# Skip pattern validation (doesn't allow ' ' as sep in lethal stage pattern)
+# and don't make pattern.owl
+# Note that patterns don't work with latest ODK yet - use dev
+$(TMPDIR)/pattern_schema_checks:
+	touch $@
+
+$(PATTERNDIR)/pattern.owl:
+	touch $@
 
 ##################################
 ##### Custom mirroring rules #####
@@ -97,24 +105,26 @@ $(ONT).obo: $(ONT)-simple.owl
 ### Code for generating class hierarchy for lethal terms ###
 ############################################################
 
-$(TMPDIR)/lethal_terms.txt: $(SRC)
-	$(ROBOT) query --use-graphs false -f csv -i $< --query $(SPARQLDIR)/dpo-lethal.sparql $@.tmp
-	cat $@.tmp | sort | uniq >  $@ && rm -f $@.tmp
+LETHAL_TABLE = ../patterns/data/default/dpoIncreasedMortality.tsv
 
-$(TMPDIR)/lethal_extract.owx: $(SRC) $(TMPDIR)/lethal_terms.txt
-	grep -v "lethal_class_hierarchy.owl" $< > $(TMPDIR)/dpo-tmp.ofn &&\
-	grep -v "lethal_class_hierarchy.owl" catalog-v001.xml > catalog-tmp.xml &&\
-	robot --catalog catalog-tmp.xml merge --input $(TMPDIR)/dpo-tmp.ofn \
-	remove --select "UBERON:* CHEBI:* GO:*" \
-	extract --term-file $(TMPDIR)/lethal_terms.txt --force true --method STAR \
-	convert --output $@ &&\
-	rm catalog-tmp.xml $(TMPDIR)/dpo-tmp.ofn
+# build_lethal_hierarchy.py computes the inferred lethal-term hierarchy
+# from the table + FBdv stage graph (substage_of + RO precedes family),
+# plus two hardcoded parent links (FBcv:0001347 on top-level terms,
+# FBcv:0000349 on FBcv:0000350) — see script docstring.
+#
+# We read stage relations and the precedes property hierarchy from the
+# committed imports/merged_import.owl rather than the (gitignored) mirror
+# files, so this rule works in CI without MIR=true. ROBOT converts the
+# OFN-encoded merged_import to RDF/XML once so the OAK pronto adapter
+# (which doesn't parse OFN) can read it.
+$(TMPDIR)/merged_import_rdfxml.owl: $(IMPORTDIR)/merged_import.owl
+	$(ROBOT) convert -i $< -o $@
 
-$(COMPONENTSDIR)/lethal_class_hierarchy.owl: $(TMPDIR)/lethal_extract.owx $(TMPDIR)/lethal_terms.txt
-	Konclude classification -i $< -o $(TMPDIR)/konclude-edit.owx &&\
-	$(ROBOT) filter -i $(TMPDIR)/konclude-edit.owx -T $(TMPDIR)/lethal_terms.txt --trim false \
-	annotate --ontology-iri $(ONTBASE)/$@ --output $@ &&\
-	rm $< $(TMPDIR)/konclude-edit.owx
+$(COMPONENTSDIR)/lethal_class_hierarchy.owl: $(LETHAL_TABLE) $(TMPDIR)/merged_import_rdfxml.owl ../scripts/build_lethal_hierarchy.py
+	python3 ../scripts/build_lethal_hierarchy.py $(LETHAL_TABLE) $(TMPDIR)/merged_import_rdfxml.owl $(TMPDIR)/merged_import_rdfxml.owl $(TMPDIR)/lethal_class_hierarchy_template.tsv &&\
+	$(ROBOT) template --template $(TMPDIR)/lethal_class_hierarchy_template.tsv \
+		--ontology-iri $(ONTBASE)/$@ --output $@ &&\
+	rm $(TMPDIR)/lethal_class_hierarchy_template.tsv
 
 ######################################################
 ### Code for generating additional FlyBase reports ###

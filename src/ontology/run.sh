@@ -72,7 +72,11 @@ if [ -n "$TAG_IN_IMAGE" ]; then
   ODK_TAG=$TAG_IN_IMAGE
   ODK_IMAGE=$(echo $ODK_IMAGE | awk -F':' '{ print $1 }')
 fi
-ODK_TAG=${ODK_TAG:-latest}
+# Default to :dev because the lethal_phase DOSDP pattern relies on
+# dosdp-tools 0.20.0 (multi_clause gating on empty data_vars). The
+# :latest ODK image still ships 0.19.3. Ok to revert this via update_repo
+# once :latest is updated.
+ODK_TAG=${ODK_TAG:-dev}
 
 ODK_JAVA_OPTS=${ODK_JAVA_OPTS:--Xmx12G}
 
