@@ -112,19 +112,26 @@ LETHAL_TABLE = ../patterns/data/default/dpoIncreasedMortality.tsv
 # plus two hardcoded parent links (FBcv:0001347 on top-level terms,
 # FBcv:0000349 on FBcv:0000350) — see script docstring.
 #
-# We read stage relations and the precedes property hierarchy from the
-# committed imports/merged_import.owl rather than the (gitignored) mirror
-# files, so this rule works in CI without MIR=true. ROBOT converts the
-# OFN-encoded merged_import to RDF/XML once so the OAK pronto adapter
-# (which doesn't parse OFN) can read it.
-$(TMPDIR)/merged_import_rdfxml.owl: $(IMPORTDIR)/merged_import.owl
-	$(ROBOT) convert -i $< -o $@
-
-$(COMPONENTSDIR)/lethal_class_hierarchy.owl: $(LETHAL_TABLE) $(TMPDIR)/merged_import_rdfxml.owl ../scripts/build_lethal_hierarchy.py
-	python3 ../scripts/build_lethal_hierarchy.py $(LETHAL_TABLE) $(TMPDIR)/merged_import_rdfxml.owl $(TMPDIR)/merged_import_rdfxml.owl $(TMPDIR)/lethal_class_hierarchy_template.tsv &&\
+# The stage/precedes data is read from the FBdv and RO mirror files. Those are
+# upstream of the import seed, so the lethal component can be a normal input to
+# the edit file (and thus to the seed) without creating the cycle
+#   seed.txt -> pre_seed.txt -> SRCMERGED -> lethal_class_hierarchy.owl
+#            -> merged_import.owl -> seed.txt
+# that arises if the component is instead derived from merged_import.owl.
+#
+# This rule is only defined when MIR=true (mirrors are being built, e.g. a full
+# release). When MIR=false (e.g. CI, which runs MIR=false and has no mirror
+# files) the generic ODK component rule takes over and the committed
+# components/lethal_class_hierarchy.owl is used as-is. The component is thus
+# regenerated during mirror-building releases and committed — the normal ODK
+# component lifecycle.
+ifeq ($(MIR),true)
+$(COMPONENTSDIR)/lethal_class_hierarchy.owl: $(LETHAL_TABLE) $(MIRRORDIR)/fbdv.owl $(MIRRORDIR)/ro.owl ../scripts/build_lethal_hierarchy.py
+	python3 ../scripts/build_lethal_hierarchy.py $(LETHAL_TABLE) $(MIRRORDIR)/fbdv.owl $(MIRRORDIR)/ro.owl $(TMPDIR)/lethal_class_hierarchy_template.tsv &&\
 	$(ROBOT) template --template $(TMPDIR)/lethal_class_hierarchy_template.tsv \
 		--ontology-iri $(ONTBASE)/$@ --output $@ &&\
 	rm $(TMPDIR)/lethal_class_hierarchy_template.tsv
+endif
 
 ######################################################
 ### Code for generating additional FlyBase reports ###
