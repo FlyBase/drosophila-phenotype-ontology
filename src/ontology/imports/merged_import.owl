@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/dpo/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/dpo/releases/2026-04-03/imports/merged_import.owl>
-Annotation(owl:versionInfo "2026-04-03")
+<http://purl.obolibrary.org/obo/dpo/releases/2026-07-10/imports/merged_import.owl>
+Annotation(owl:versionInfo "2026-07-10")
 
 Declaration(Class(<http://flybase.org/reports/FBgn0011723>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
@@ -245,6 +245,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000219>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0001061>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0001063>))
 Declaration(Class(<http://purl.obolibrary.org/obo/COB_0000022>))
+Declaration(Class(<http://purl.obolibrary.org/obo/COB_0000502>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00000012>))
@@ -1119,6 +1120,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0090325>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0090659>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0140013>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0140014>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0160108>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_1902435>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_1902882>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_1903034>))
@@ -1304,6 +1306,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PCO_0000031>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PCO_0001000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/RO_0002577>))
 Declaration(Class(<http://www.ebi.ac.uk/efo/EFO_0022597>))
+Declaration(Class(<http://www.geneontology.org/formats/oboInOwl#ObsoleteClass>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000062>))
@@ -2861,6 +2864,7 @@ DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000016> <http://purl.obolib
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BFO_0000017> "A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000017> "realizable entity"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000017> <http://purl.obolibrary.org/obo/BFO_0000020>)
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000017> <http://purl.obolibrary.org/obo/COB_0000502>)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000017> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000017>))
 DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000017> <http://purl.obolibrary.org/obo/BFO_0000019>)
 
@@ -2872,7 +2876,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000019> ObjectAllValuesFrom(<htt
 
 # Class: <http://purl.obolibrary.org/obo/BFO_0000020> (specifically dependent continuant)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BFO_0000020> "b is a relational specifically dependent continuant = Def. b is a specifically dependent continuant and there are n &gt; 1 independent continuants c1, … cn which are not spatial regions are such that for all 1  i &lt; j  n, ci  and cj share no common parts, are such that for each 1  i  n, b s-depends_on ci at every time t during the course of b’s existence (axiom label in BFO2 Reference: [131-004])"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000020> "specifically dependent continuant"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000020> <http://purl.obolibrary.org/obo/BFO_0000002>)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000020> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000020>))
@@ -2886,7 +2889,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000023> <http://purl.obolibrary.
 
 # Class: <http://purl.obolibrary.org/obo/BFO_0000024> (fiat object part)
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000024> "fiat object"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000024> "fiat object part"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000024> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
@@ -5705,6 +5707,15 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0001063> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0001063> <http://purl.obolibrary.org/obo/CL_0001061>)
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0001063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0002011>))
 
+# Class: <http://purl.obolibrary.org/obo/COB_0000022> (organism)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/COB_0000022> "A material entity that is a maximal functionally integrated unit that develops from a program encoded in a genome"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/COB_0000022> "organism"@en)
+
+# Class: <http://purl.obolibrary.org/obo/COB_0000502> (characteristic)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/COB_0000502> "characteristic"@en)
+
 # Class: <http://purl.obolibrary.org/obo/ENVO_00000000> (geographic feature)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_00000000> "An astrononmical body part which delimited by physical discontinuities with its surroundings."@en)
@@ -7168,8 +7179,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000982> ObjectSomeValuesFrom(<
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Manufacturing") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01000993> "A planned process during which raw or recycled materials are transformed into products for use or sale using labour and machines, tools, chemical and biological processing, or formulation.")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Manufacturing") rdfs:comment <http://purl.obolibrary.org/obo/ENVO_01000993> "The term may refer to a range of human activity, from handicraft to high tech, but is most commonly applied to industrial production, in which raw materials are transformed into finished goods on a large scale.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01000993> "manufacturing process"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000993> <http://purl.obolibrary.org/obo/BFO_0000015>)
-SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000993> <http://purl.obolibrary.org/obo/ENVO_02500027>)
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000993> <http://purl.obolibrary.org/obo/BFO_0000003>)
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000993> <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass>)
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000993> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000952>))
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000993> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002234> <http://purl.obolibrary.org/obo/ENVO_00003074>))
 
@@ -9327,13 +9338,14 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00001060> <http://purl.obolibrar
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00001060> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00001056>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00001060> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/FBbt_00001058>))
 
-# Class: <http://purl.obolibrary.org/obo/FBbt_00001061> (ventral neurectoderm)
+# Class: <http://purl.obolibrary.org/obo/FBbt_00001061> (ventral neuroectoderm)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0076117") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0089570") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00001061> "The ventrally/medially located ectodermal region of the trunk from which neuroblasts delaminate to form the ventral nerve cord and gnathal ganglia. This region becomes distinct during stage 8 when its cells become enlarged compared to those in the adjacent dorsal ectoderm.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/FBbt_00001061> "FBbt:00000113")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_00001061> "P2 VenEc")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_00001061> "VenEc")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0090460") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_00001061> "vNR")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_00001061> "ventral neurectoderm")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0090460") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FBbt_00001061> "ventral neurogenic region")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00001061> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00001061> "neurectoderm")
@@ -9341,7 +9353,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00001061> "FBbt:00001061")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00001061> <http://purl.obolibrary.org/obo/fbbt#EmbDevSlim>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00001061> <http://purl.obolibrary.org/obo/fbbt#cur>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00001061> "ventral neurectoderm")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00001061> "ventral neuroectoderm")
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00001061> <http://purl.obolibrary.org/obo/FBbt_00001057>)
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00001061> <http://purl.obolibrary.org/obo/FBbt_00007005>)
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00001061> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00005558>))
@@ -10104,7 +10116,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00004508> <http://purl.obolibrar
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00004508> <http://purl.obolibrary.org/obo/FBbt_00025993>)
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00004508> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00003007>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00004508> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/FBbt_00001768>))
-SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00004508> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0050908>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00004508> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009583> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0007601>))))
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00004856> (organ system)
 
@@ -10283,11 +10295,11 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00005155> <http://purl.obolibrary.org/obo/fbbt#hidden_assertion>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00005155> <http://purl.obolibrary.org/obo/fbbt#larval_OF>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00005155> "sense organ")
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00005155> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00100313> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0050906>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00005155> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00100313> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0051606> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0007600>)))))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005155> <http://purl.obolibrary.org/obo/BFO_0000040>)
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005155> <http://purl.obolibrary.org/obo/FBbt_00100313>)
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005155> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00007692>))
-SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005155> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0050906>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005155> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0051606> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0007600>))))
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005162> (photoreceptor)
 
@@ -10299,10 +10311,10 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00005162> <http://purl.obolibrary.org/obo/fbbt#FB_gloss>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00005162> <http://purl.obolibrary.org/obo/fbbt#cur>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00005162> "photoreceptor")
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00005162> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005155> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0050962>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00005162> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005155> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009583> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0007600>)))))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005162> <http://purl.obolibrary.org/obo/FBbt_00005155>)
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005162> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00047735>))
-SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005162> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0050962>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005162> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009583> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0007600>))))
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005168> (external sensory organ)
 
@@ -10617,7 +10629,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005515> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005533> (ventral epidermis primordium)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:Autogenerated") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005533> "A(n) primordium that develops into some denticle field anlage and some anal pad primordium and some embryonic ventral epidermis and some imaginal disc primordium and some ventral apodeme anlage and some ventral trunk epidermis primordium. It develops from some ventral neurectoderm.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:Autogenerated") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00005533> "A(n) primordium that develops into some denticle field anlage and some anal pad primordium and some embryonic ventral epidermis and some imaginal disc primordium and some ventral apodeme anlage and some ventral trunk epidermis primordium. It develops from some ventral neuroectoderm.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FBbt_00005533> "UBERON:6005533")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00005533> "fly_anatomy.ontology")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-7073-9172") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00005533> "P2 iVenEp")
@@ -10727,7 +10739,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005805> <http://purl.obolibrar
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005805> <http://purl.obolibrary.org/obo/FBbt_00025991>)
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005805> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00005333>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005805> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/FBbt_00005830>))
-SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005805> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0050908>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00005805> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0009583> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0007601>))))
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005806> (antennal sense organ)
 
@@ -10971,7 +10983,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00007152> <http://purl.obolibrary.org/obo/fbbt#FB_gloss>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/FBbt_00007152> <http://purl.obolibrary.org/obo/fbbt#larval_OF>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00007152> "sensillum")
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00007152> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00007229> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0050906>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00007152> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00007229> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0051606> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0007600>)))))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007152> <http://purl.obolibrary.org/obo/FBbt_00005155>)
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007152> <http://purl.obolibrary.org/obo/FBbt_00007229>)
 
@@ -11015,7 +11027,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007233> <http://purl.obolibrar
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00007234> (compound sense organ)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:Autogenerated") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007234> "Any compound cell cluster organ (FBbt:00007230) that is capable of some detection of stimulus involved in sensory perception (GO:0050906).")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBC:Autogenerated") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FBbt_00007234> "Any compound cell cluster organ that is capable of some detection of stimulus that is part of sensory perception.")
 AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/FBbt_00007234> <https://orcid.org/0000-0002-7073-9172>)
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/FBbt_00007234> "2008-10-21T02:09:38Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/FBbt_00007234> "FBbt:00002653")
@@ -11023,7 +11035,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/FBbt_00007234> "fly_anatomy.ontology")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/FBbt_00007234> "FBbt:00007234")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00007234> "compound sense organ")
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00007234> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00007230> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0050906>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00007234> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00007230> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0051606> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0007600>)))))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007234> <http://purl.obolibrary.org/obo/FBbt_00005155>)
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00007234> <http://purl.obolibrary.org/obo/FBbt_00007230>)
 
@@ -14423,6 +14435,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0009790> <http://purl.obolibrary.org/obo/go#goslim_plant>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0009790> "embryo development")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0009790> <http://purl.obolibrary.org/obo/GO_0007275>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0009790> <http://purl.obolibrary.org/obo/GO_0160108>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0009794> (regulation of mitotic cell cycle, embryonic)
 
@@ -14469,7 +14482,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0009888> "biological_process")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0009888> "GO:0009888")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0009888> "tissue development")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0009888> <http://purl.obolibrary.org/obo/GO_0048856>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0009888> <http://purl.obolibrary.org/obo/GO_0160108>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0009950> (dorsal/ventral axis specification)
 
@@ -15045,6 +15058,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0042246> "tissue regeneration")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0042246> <http://purl.obolibrary.org/obo/GO_0031099>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0042246> <http://purl.obolibrary.org/obo/GO_0048589>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0042246> <http://purl.obolibrary.org/obo/GO_0160108>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0042330> (taxis)
 
@@ -15322,7 +15336,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0048513> "biological_process")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0048513> "GO:0048513")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0048513> "animal organ development")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0048513> <http://purl.obolibrary.org/obo/GO_0048856>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0048513> <http://purl.obolibrary.org/obo/GO_0160108>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0048583> (regulation of response to stimulus)
 
@@ -16081,6 +16095,15 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/GO_0140014> ObjectIntersection
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0140014> <http://purl.obolibrary.org/obo/GO_0000280>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0140014> <http://purl.obolibrary.org/obo/GO_1903047>)
 
+# Class: <http://purl.obolibrary.org/obo/GO_0160108> (animal gross anatomical part developmental process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:pg") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0160108> "A developmental process whose specific outcome is the progression of a gross anatomical part of an animal over time from an initial condition to a later condition.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0160108> "biological_process")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0160108> "animal development")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0160108> "GO:0160108")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0160108> "animal gross anatomical part developmental process")
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0160108> <http://purl.obolibrary.org/obo/GO_0048856>)
+
 # Class: <http://purl.obolibrary.org/obo/GO_1902435> (regulation of male mating behavior)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:TermGenie") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:24089208") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_1902435> "Any process that modulates the frequency, rate or extent of male mating behavior.")
@@ -16362,6 +16385,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0000001> "PATO:0000001")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0000001> "quality")
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000001> <http://purl.obolibrary.org/obo/BFO_0000020>)
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000001> <http://purl.obolibrary.org/obo/COB_0000502>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0000014> (color)
 
@@ -18081,6 +18105,7 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PCO_0000000> "M
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PCO_0000000> "collection of organisms"@en)
 EquivalentClasses(<http://purl.obolibrary.org/obo/PCO_0000000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000027> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> <http://purl.obolibrary.org/obo/CARO_0001010>) ObjectMinCardinality(2 <http://purl.obolibrary.org/obo/RO_0002351> <http://purl.obolibrary.org/obo/CARO_0001010>)))
 SubClassOf(<http://purl.obolibrary.org/obo/PCO_0000000> <http://purl.obolibrary.org/obo/BFO_0000027>)
+SubClassOf(<http://purl.obolibrary.org/obo/PCO_0000000> <http://purl.obolibrary.org/obo/BFO_0000040>)
 SubClassOf(<http://purl.obolibrary.org/obo/PCO_0000000> <http://purl.obolibrary.org/obo/PCO_0000031>)
 SubClassOf(<http://purl.obolibrary.org/obo/PCO_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> <http://purl.obolibrary.org/obo/CARO_0001010>))
 SubClassOf(<http://purl.obolibrary.org/obo/PCO_0000000> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> <http://purl.obolibrary.org/obo/CARO_0001010>))
@@ -18092,7 +18117,7 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PCO_0000001> "I
 
 Classes for population already  exist in IDO ('organism population', IDO_0000509) and OBI ('population', OBI_0000181). The definitions should be standardized across OBO Foundry ontologies and only one term used."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PCO_0000001> "population of organisms"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/PCO_0000001> <http://purl.obolibrary.org/obo/BFO_0000040>)
+SubClassOf(<http://purl.obolibrary.org/obo/PCO_0000001> <http://purl.obolibrary.org/obo/COB_0000022>)
 SubClassOf(<http://purl.obolibrary.org/obo/PCO_0000001> <http://purl.obolibrary.org/obo/PCO_0000018>)
 SubClassOf(<http://purl.obolibrary.org/obo/PCO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002303> <http://purl.obolibrary.org/obo/ENVO_01000739>))
 
@@ -18143,6 +18168,10 @@ SubClassOf(<http://purl.obolibrary.org/obo/RO_0002577> <http://purl.obolibrary.o
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://www.ebi.ac.uk/efo/EFO_0022597> "SNOMED:248280005")
 AnnotationAssertion(rdfs:label <http://www.ebi.ac.uk/efo/EFO_0022597> "aging"@en)
 SubClassOf(<http://www.ebi.ac.uk/efo/EFO_0022597> <http://purl.obolibrary.org/obo/GO_0032502>)
+
+# Class: <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> (Obsolete Class)
+
+AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> "Obsolete Class")
 
 
 ############################
@@ -18518,7 +18547,6 @@ SubClassOf(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_10000000> O
 SubClassOf(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_10000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_10000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00000119>)))) <http://purl.obolibrary.org/obo/FBbt_00025991>)
 SubClassOf(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_10000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_10000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00005558>)))) <http://purl.obolibrary.org/obo/FBbt_00025993>)
 SubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002566> <http://purl.obolibrary.org/obo/BFO_0000040>) ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/BFO_0000015>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/BFO_0000015>)))))
-DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/BFO_0000020> <http://purl.obolibrary.org/obo/BFO_0000031>)
 DisjointClasses(<http://purl.obolibrary.org/obo/CARO_0000003> <http://purl.obolibrary.org/obo/CARO_0000004> <http://purl.obolibrary.org/obo/CARO_0020000>)
 DisjointClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0010000>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0010001>))
 DisjointClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002131> <http://purl.obolibrary.org/obo/FBbt_00001727>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002131> <http://purl.obolibrary.org/obo/FBbt_00003004>))
